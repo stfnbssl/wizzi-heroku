@@ -8,24 +8,31 @@ const tslib_1 = require("tslib");
 */
 const express_1 = tslib_1.__importDefault(require("express"));
 const index_1 = require("./features/config/index");
+const mongodb_1 = require("./services/mongodb");
 const index_2 = require("./site/index");
-const index_3 = require("./middlewares/index");
+const index_3 = require("./features/blog/index");
+const index_4 = require("./middlewares/index");
 function startServices(config) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        let modelBuilders = [
+            ...index_3.blogModelBuilders
+        ];
+        yield (0, mongodb_1.mongodbStart)(config, modelBuilders);
         return {};
     });
 }
 function getInitValues(config, startedServices) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         let middlewaresPre = [
-            ...index_3.appMiddlewaresPre
+            ...index_4.appMiddlewaresPre
         ];
         let middlewaresPost = [
-            ...index_3.appMiddlewaresPost
+            ...index_4.appMiddlewaresPost
         ];
         let apis = [];
         let controllers = [
-            ...index_2.siteControllers
+            ...index_2.siteControllers,
+            ...index_3.blogControllers
         ];
         const appInitializer = {
             config,

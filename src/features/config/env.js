@@ -16,6 +16,10 @@ function validateEnv() {
         SESSION_SECRET: (0, envalid_1.str)(),
         NO_CACHE: (0, envalid_1.bool)(),
         CORS_CLIENT_ORIGIN: (0, envalid_1.str)(),
+        MONGO_HOST: (0, envalid_1.str)(),
+        MONGO_USER: (0, envalid_1.str)(),
+        MONGO_PASSWORD: (0, envalid_1.str)(),
+        MONGO_PATH: (0, envalid_1.str)(),
         IS_WIZZI_DEV: (0, envalid_1.bool)(),
         WIZZI_BASE_PATH: (0, envalid_1.str)()
     });
@@ -33,6 +37,11 @@ function create() {
             sessionSecret: checkedEnv.SESSION_SECRET,
             noCache: checkedEnv.NO_CACHE,
             corsClientOrigin: checkedEnv.CORS_CLIENT_ORIGIN,
+            mongoHost: checkedEnv.MONGO_HOST,
+            mongoUser: checkedEnv.MONGO_USER,
+            mongoPassword: checkedEnv.MONGO_PASSWORD,
+            mongoPath: checkedEnv.MONGO_PATH,
+            mongoConnectUrl: "",
             isWizziDev: checkedEnv.IS_WIZZI_DEV,
             wizziBasePath: checkedEnv.WIZZI_BASE_PATH,
             ittfPath: __ittfPath,
@@ -41,6 +50,14 @@ function create() {
             metaFolderIttfPath: path_1.default.join(__ittfPath, 'meta', 'folder', 'index.html.ittf'),
             metaHtmlTextPath: path_1.default.join(__ittfPath, 'meta', 'text', 'index.html.ittf')
         };
+        const { mongoHost, mongoUser, mongoPassword, mongoPath } = config;
+        if (mongoUser && mongoUser.length > 0 && mongoPassword && mongoPassword.length > 0 && mongoHost && mongoHost.length > 0) {
+            config.mongoConnectUrl = `${mongoHost}://${mongoUser}:${mongoPassword}${mongoPath}`;
+        }
+        // example 'mongodb://localhost/test'
+        else {
+            config.mongoConnectUrl = `${mongoPath}`;
+        }
         Object.keys(config).forEach((element) => {
             if (element.indexOf("Pass") < 0 && element.indexOf("Secr") < 0) {
                 console.log('Created config', element, config[element]);
