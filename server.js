@@ -4,4 +4,4 @@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\root\server.js.ittf
 */
 'use strict';
-var server = require("./src/index");
+var server = require("./src/index"); 
