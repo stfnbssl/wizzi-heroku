@@ -20,5 +20,3 @@ html
         div
             a Demo wizzi ittf static
                 href /ittf/demo.wizzi.html.ittf
-        div 
-            + version 1

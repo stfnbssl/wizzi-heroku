@@ -17,12 +17,10 @@ function createFilesystemFactory(globalContext) {
             },
             plugins: {
                 items: [
-                    './wizzi-core/index.js',
-                    './wizzi-js/index.js',
-                    './wizzi-web/index.js',
-                    './wizzi-meta/index.js'
-                ],
-                pluginsBaseFolder: 'C:/My/wizzi/stfnbssl/wizzi/packages'
+                    'wizzi-core',
+                    'wizzi-js',
+                    'wizzi-web'
+                ]
             },
             globalContext: Object.assign({}, gc, globalContext || {})
         }, function (err, wf) {
