@@ -1,0 +1,22 @@
+html
+    $
+        var md = {
+            title: 'Hello home'
+        }
+    demo_layout(&md)
+        . w3-container
+            $if locals.user
+                h4 You are logged in!
+            $else
+                h4 You are not logged in! Please 
+                    a Log In 
+                        href /account/login
+                    + to continue.
+        h1 Hello from a Wizzi generated Html document
+        p I am generated on the fly and served by the 'wizziViewEngine' middleware, from a views folder.
+        div
+            a Demo wizzi router
+                href /demo/wizzi
+        div
+            a Demo wizzi ittf static
+                href /ittf/demo.wizzi.html.ittf

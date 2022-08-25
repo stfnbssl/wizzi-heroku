@@ -1,0 +1,4 @@
+html
+    body
+        h1 Hello from a Wizzi generated Html document
+        p I am generated on the fly and served by the 'ittfStatic' middleware, from the "ittf" static folder.

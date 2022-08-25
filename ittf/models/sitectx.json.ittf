@@ -1,0 +1,7 @@
+{
+    name "wizzi-heroku"
+    version "0.0.1"
+    description "wizzi-heroku"
+    { author
+        name "Stefano Bassoli"
+        email "stfn.bssl@gmail.com"
