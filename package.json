@@ -28,9 +28,9 @@
         "wizzi.proto": "^0.0.1",
         "wizzi-tools": "^0.7.4",
         "wizzi-utils": "^0.7.19",
-        "wizzi-core": "^0.7.6",
+        "wizzi-core": "^0.7.7",
         "wizzi-web": "^0.7.14",
-        "wizzi-js": "^0.7.9"
+        "wizzi-js": "^0.7.11"
     },
     "engines": {
         "node": "^16.2.0"
