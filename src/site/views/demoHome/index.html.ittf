@@ -23,3 +23,6 @@ html
         div
             a Demo public folder
                 href /public/pure.html
+        div
+            a Ittf site
+                href /ittf/site/index.html.ittf

@@ -1,7 +1,24 @@
 {
-    name "wizzi-heroku"
+    name "Wizzi"
     version "0.0.1"
-    description "wizzi-heroku"
+    title "The meta programming platform. You program the production of, documents, data structures ... and any textual artifact"
+    [ subtitles
+        "A single machinery, many productions"
+        "Language agnostic"
+        "Productions are managed by plugins"
     { author
         name "Stefano Bassoli"
         email "stfn.bssl@gmail.com"
+    [ demos
+        {
+            title "Pure html"
+            href "/public/pure.html"
+        {
+            title "Wizzi generated on the fly"
+            href "/ittf/demo.wizzi.html.ittf"
+        {
+            title "Ittf site"
+            href "/ittf/site/index.html.ittf"
+        {
+            title "Webapi"
+            href "/ittf/site/webapi/index.html.ittf"
