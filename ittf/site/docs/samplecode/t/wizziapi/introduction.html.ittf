@@ -1,4 +1,4 @@
-﻿$group
+$group
     $
         var sect = {
             title: 'Wizzi API'

@@ -1,4 +1,4 @@
-﻿$group
+$group
 
 	set String.prototype.replaceAll
 		function

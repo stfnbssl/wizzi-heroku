@@ -1,4 +1,4 @@
-﻿$group
+$group
 
 	# Credit to Douglas Crockford for this bind method​
 	if !(Function.prototype.bind)

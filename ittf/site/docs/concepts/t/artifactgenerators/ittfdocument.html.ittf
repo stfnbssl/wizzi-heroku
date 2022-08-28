@@ -1,4 +1,4 @@
-﻿$group
+$group
     $
         var sect = {
             title: '"ittf/document" builtin artifact'

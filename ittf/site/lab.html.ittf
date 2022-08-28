@@ -6,7 +6,7 @@ html
         }
         var ca = 'm-s color-header font-x font-w-s';
 
-    html/layouts/site( &opt )
+    layouts/site( &opt )
     
         . container-70 m-100
             . flex-column space-between $$ bg-color-header color-header

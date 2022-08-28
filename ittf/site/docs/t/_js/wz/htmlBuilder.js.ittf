@@ -1,4 +1,4 @@
-﻿$group
+$group
 
     function wzNodeRemove
         param item

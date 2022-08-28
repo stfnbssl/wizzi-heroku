@@ -1,4 +1,4 @@
-﻿$group
+$group
 
 	class wz_global : wz.EventTarget
 	set wz.global = new wz_global()

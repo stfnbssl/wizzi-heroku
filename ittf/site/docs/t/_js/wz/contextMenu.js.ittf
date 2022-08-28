@@ -1,4 +1,4 @@
-﻿$group
+$group
 
 	if !window.wz
 		set window.wz = {}

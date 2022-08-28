@@ -3,7 +3,7 @@ html
         var opt = {
             title: 'Hello home'
         }
-    html/layouts/site( &opt )
+    layouts/site( &opt )
         $if true
             pre
                 code

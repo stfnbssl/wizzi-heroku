@@ -1,4 +1,4 @@
-﻿$group
+$group
     $
         var sect = {
             title: 'Ittf documents as code units'

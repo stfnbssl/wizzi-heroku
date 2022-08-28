@@ -2,7 +2,7 @@
     name "Wizzi"
     version "0.0.1"
     title "The artifact meta generation platform."
-    title2 "With Wizzi you set up model driven productions of code, document and data artifacts."
+    title2 "With Wizzi you set up model driven productions of code, packages, documents and data files."
     [ subtitles
         "A single machinery, many productions."
         "Language agnostic."

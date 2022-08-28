@@ -12,7 +12,7 @@ $group
             stickyNavLogo: 'logo',
         }
     
-    html/layouts/site( &opt )
+    layouts/site( &opt )
 
         $append head-styles-2
             css /ittf/site/docs/styles/docs.css.ittf

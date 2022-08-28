@@ -1,4 +1,4 @@
-﻿$group
+$group
     $
         var sect = {
             title: 'Xml built-in schema'

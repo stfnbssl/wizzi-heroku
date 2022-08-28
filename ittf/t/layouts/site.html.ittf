@@ -92,45 +92,45 @@ $group
         . flex-row space-between bg-color-header color-header align-items-center
             id __main_navbar
             . flex-row
-                html/a( , /, ${ca2}
+                a( , /, ${ca2}
                     div
                         style width: 80px; margin-top: 5px; margin-left: 20px;
-                        html/images/logo(#efefef, #434343)
+                        images/logo(#efefef, #434343)
             . flex-row
                 $if locals.user
                     $if opt.section != 'Starter'
-                        html/a( Starter, /ittf/site/starter.html.ittf, ${ca}
+                        a( Starter, /ittf/site/starter.html.ittf, ${ca}
                     $else
                         . ${ca_inverse}
                             + Starter
                     $if opt.section != 'Lab'
-                        html/a( Lab, /ittf/site/lab.html.ittf, ${ca}
+                        a( Lab, /ittf/site/lab.html.ittf, ${ca}
                     $else
                         . ${ca_inverse}
                             + Lab
                     $if opt.section != 'Productions'
-                        html/a( Productions, /ittf/site/productions.html.ittf, ${ca}
+                        a( Productions, /ittf/site/productions.html.ittf, ${ca}
                     $else
                         . ${ca_inverse}
                             + Productions
                     $if opt.section != 'Project'
-                        html/a( Project, /ittf/site/project.html.ittf, ${ca}
+                        a( Project, /ittf/site/project.html.ittf, ${ca}
                     $else
                         . ${ca_inverse}
                             + Project
             . flex-row
                 $if opt.section != 'Docs'
-                    html/a( Docs, /ittf/site/docs/concepts/overview.html.ittf, ${ca}
+                    a( Docs, /ittf/site/docs/concepts/overview.html.ittf, ${ca}
                 $else
                     . ${ca_inverse}
                         + Docs
-                html/a( Github, https://github.com/stfnbssl/wizzi, ${ca}
+                a( Github, https://github.com/stfnbssl/wizzi, ${ca}
             . flex-row m-r-x
                 $if locals.user
-                    html/a( Profile, /account/profile, ${ca}
-                    html/a( Log Out, /account/logout, ${ca}
+                    a( Profile, /account/profile, ${ca}
+                    a( Log Out, /account/logout, ${ca}
                 $else
-                    html/a( Log In, /account/login, ${ca}
+                    a( Log In, /account/login, ${ca}
         $hook
         $hook body-scripts-0
         $if opt.isWizziStudio && !opt.useFirebase

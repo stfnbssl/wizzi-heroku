@@ -1,4 +1,4 @@
-﻿$group
+$group
 	$params l:float, t:float, ratio:float, &opt
 	
 	polyline

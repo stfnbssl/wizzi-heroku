@@ -1,4 +1,4 @@
-﻿$group
+$group
 
 	class wzCssRule
 		ctor

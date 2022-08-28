@@ -7,4 +7,4 @@ div
         href /
         div
             style width: 80px; margin-top: 5px; margin-left: 20px;
-            html/images/logo(#efefef, #494949)
+            images/logo(#efefef, #494949)

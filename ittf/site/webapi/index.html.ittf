@@ -6,7 +6,7 @@ html
             var api = wzCtx.webapis[i];
             api._id = api.method + _.replace(_.replace(api.url, ':', '_'), '/', '_');
         }
-    html/layouts/site( &opt )
+    layouts/site( &opt )
         $append head-styles-2
             style
                 < body

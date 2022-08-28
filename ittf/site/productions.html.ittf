@@ -9,7 +9,7 @@ html
         }
         var ca = 'm-s font-x font-w-s';
 
-    html/layouts/site( &opt )
+    layouts/site( &opt )
         $append head-styles-2
             style
                 . t-grid 
@@ -25,11 +25,11 @@ html
         . flex-row space-between m-t-xxl width-full
             id stickyNavbar
             . flex-row justify-center m-0-auto
-                html/a( Artifacts, /productions/artifacts, ${ca}
-                html/a( Packages, /productions/packages, ${ca}
-                html/a( Plugins, /productions/plugins, ${ca}
-                html/a( Metas, /productions/metas, ${ca}
-                html/a( tFolders, /productions/tfolders, ${ca}
+                a( Artifacts, /productions/artifacts, ${ca}
+                a( Packages, /productions/packages, ${ca}
+                agins, /productions/plugins, ${ca}
+                a( Metas, /productions/metas, ${ca}
+                a( tFolders, /productions/tfolders, ${ca}
 
         . m-200 t-grid
             . t-item-l

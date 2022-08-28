@@ -1,4 +1,4 @@
-﻿$group
+$group
     $
         var sect = {
             title: 'Json built-in schema'

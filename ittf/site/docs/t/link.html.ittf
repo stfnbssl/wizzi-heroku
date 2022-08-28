@@ -1,4 +1,4 @@
-﻿$group
+$group
     $params title, href
     div
         style text-align: left

@@ -1,4 +1,4 @@
-﻿module
+module
     kind react
 
     $include js/wz/core
