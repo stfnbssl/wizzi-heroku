@@ -1,0 +1,15 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Core plugins',
+            id: 'coreplugins'
+        };
+
+    section(&sect)
+
+		p The Wizzi Factory is a content agnostic data processor and is not aimed at any particular domain.
+			\b The plugins are domain specific and content aware. The plugins do the real work.
+
+		p Anyhow the Wizzi Factory has one core plugin, the `
+            to-plugin( wizzi-core )
+            span ` plugin, that is integrated in its API.

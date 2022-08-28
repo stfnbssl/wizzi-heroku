@@ -1,0 +1,26 @@
+﻿$group
+    $
+        var sect = {
+            title: 'mTrees'
+        };
+
+    section(&sect)
+
+        table-doc()
+            tr( The ITTF Document finder, wizzi-repo, lib/repo/ittfDocumentFinder.js.ittf, lib/repo/ittfDocumentFinder.js )
+                p This is where an ITTF Source Unit is searched in the Virtual File System, 
+                    \b during an mTree loading.
+            
+            tr( The mTreeBrick class, wizzi-mtree, /lib/loader/mTreeBrick.js.ittf, /lib/loader/mTreeBrick.js )
+                p An instance of this class represents an ITTF Source Unit loaded in memory,
+                    \b that can be composed passing parameters.
+            
+            tr( The mTree Loader, wizzi-mtree, lib/loader/index.js.ittf, lib/loader/index.js )
+                p The mTree Loader orchestrates the loading of an ITTF Documento into an mTree.
+            
+            tr( An mTree Pre-processor, wizzi-web, lib/wizzi/models/html-mtree-preprocessor.g.js.ittf, lib/wizzi/models/html-mtree-preprocessor.g.js )
+                p This is an example of an mTree Pre-processor implemented by the
+                    to-plugin( wizzi-web ) 
+                    + core plugin for the schema
+                    high-code( html )
+                    + . It is executed by the Wizzi Model Loader before loading the mTree into a Wizzi Model Instance.

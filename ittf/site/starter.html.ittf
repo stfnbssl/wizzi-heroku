@@ -1,0 +1,16 @@
+html
+
+    $
+        var opt = {
+            section: 'Starter',
+        }
+        var ca = 'm-s color-header font-x font-w-s';
+
+    html/layouts/site( &opt )
+
+        . flex-row space-between bg-color-header color-header
+            . flex-row
+                html/a( Artifacts, /productions/artifacts, ${ca}
+                html/a( Packages, /productions/packages, ${ca}
+                html/a( Metas, /productions/metas, ${ca}
+                html/a( tFolders, /productions/tfolders, ${ca}

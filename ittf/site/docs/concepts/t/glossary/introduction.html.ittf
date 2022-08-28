@@ -1,0 +1,401 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Glossary'
+        };
+
+    section(&sect)
+
+		table-doc( glo )
+
+            glo-item( $fragment command )
+                span
+                    + The $fragment command is an ITTF Template Command for declaring
+                        \b an inlined ITTF Fragment.
+
+            glo-item( $include command )
+                span
+                    + The $include command is an ITTF Template Command for including
+                        \b an ITTF Fragment in the node position of the command.
+
+            glo-item( *__copy folders )
+                span
+                    + When mass generating artifacts using a 
+                    high-code( glob )
+                    + pattern, folders having a name ending with 
+                    high-code( __copy )
+                    + are not generated but simply copied as is.
+
+            glo-item( Artifact Generator )
+                span
+                    + An Artifact Generator is a javascript module exported by a Wizzi Plugin
+                        \b that takes as input a Wizzi Model Instance and, 
+                        \b optionally, a context object, and writes a software artifact.
+                        \b An Artifact Generation is the final action of a Wizzi Production.
+
+            glo-item( Included ITTF Fragment )
+                span
+                    + An Included ITTF Fragment is a reusable fragment of an ITTF Document, contained in its own file
+                        \b or inlined,
+                        \b that has been incuded in an includer, without passing of parameters, using an $include command.
+
+            glo-item( ITTF Document )
+                span
+                    + ITTF, Indented Text Tree Format, is a document format for
+                        \b declaring a textual representation of
+                        \b a tree data structure of name-valued nodes.
+                        \b It is the source format of Wizzi Models.
+                        \b It consists of one ITTF Main Document and,
+                        \b optionally, one or more ITTF Fragments mixed or included.
+
+            glo-item( ITTF Document path resolution )
+                span Include commands and mix actions declare the path of the ITTF Document
+                    \b that must be mixed or included. At first the path to match is built
+                    \b joining the current folder path of the includer document and the declared path
+                    \b of the included document. If this match fails, then the 't' folder rule is applied,
+                    \b starting from the current folder path and going up on the folder tree.
+                    \b See 't folder'.
+            
+            glo-item( ITTF Main Document )
+                span
+                    + An ITTF Main Document is the root branch node of an ITTF Document.
+                        \b It is the entry point of an mTree Loading action.
+                        \b It must be contained in a text file and may include and mix
+                        \b ITTF Fragments. The ITTF Root Node of an ITTF Main Document
+                        \b may not be the root node of the mTree resulting after ITTF Processing,
+                        \b because an ITTF Root Node can be a Mix Action that append its childs
+                        \b to a node that is child of the ITTF Root Node of the mixed ITTF Fragment.
+
+            glo-item( ITTF Node )
+                span
+                    + An ITTF Node is a node of the tree structure of an ITTF Document.
+                        \b It is a logical line of code that can be broken in many
+                        \b phisical lines with line continuations chars. 
+                        \b It is a name value pair of text strings, with children ITTF Nodes, and
+                        \b one parent ITTF Node. The ITTF Root Node has no parent nodes.
+            
+            glo-item( ITTF Node Name)
+                span
+                    + An ITTF Node Name is the name part of an ITTF Node.
+
+            glo-item( ITTF Node Value)
+                span
+                    + An ITTF Node Value is the value part of an ITTF Node.
+
+            glo-item( ITTF Fragment )
+                span
+                    + An ITTF Fragment is a branch ITTF Node that can be included or mixed
+                        \b in an ITTF Main Document or in another ITTF Fragment.
+                        \b It can be defined in a separate file, and retrieved using
+                        \b the ITTF Document path resolution or can be inlined, 
+                        \b using the Template Command
+                    high-code( $fragment fragment-name )
+                    + , and referenced by name.
+
+            glo-item( ITTF Processing )
+                span
+                    + The ITTF Processing of an ITTF Document is the parsing of the
+                        \b source documents, the resolution of references to ITTF Fragments, 
+                        \b their inclusion or mix, the execution of ITTF Template Commands and JsWizzi expressions,
+                        \b and, at the end, the build up of the resulting node structure that will be loaded into an mTree instance.
+
+            glo-item( ITTF Root Node )
+                span
+                    + An ITTF Root Node is the root node of an ITTF Source Unit
+
+            glo-item( ITTF Scan Feature )
+                span
+                    + The ITTF Scan Feature is a Wizzi Feature for 
+                        \b keeping tracks and easily retrieve the dependencies of mixed and included ITTF Fragments.
+
+            glo-item( ITTF Source Unit )
+                span
+                    + An ITTF Source Unit is an ITTF Node branch with a name,
+                        \b that can be referenced in a Wizzi Action.
+                        \b ITTF Main Documents (files) and ITTF Fragments (files or inlined) are
+                        \b the ITTF Source Units of Wizzi. An ITTF Source Unit must have a single ITTF Root Node.
+                        \b You can define an ITTF Fragment with many root nodes using the convenience
+                        \b ITTF Template Command \b
+                        high-code( $group )
+                    + \b as ITTF Root Node.
+
+            glo-item( ITTF Template Command )
+                span
+                    + An ITTF Template Command is an instruction for the ITTF Template Engine.
+                        \b It is an ITTF Node with a name starting with the \b
+                    high-code( $ )
+                    + \b char. It can modify variables in the JsWizzi Evaluation Context or 
+                        \b manipulate the node structure of the ITTF Document, merging nodes with context data,
+                        \b including and excluding node branches, etc...
+
+            glo-item( ITTF Template Engine )
+                span 
+                    + The ITTF Template Engine is a Wizzi Kernel Feature that allow
+                        \b an ITTF Document to contain template commands and JsWizzi expressions
+                        \b that can merge ITTF Nodes with context data.
+
+            glo-item( JsWizzi )
+                span 
+                    + JsWizzi is the script engine used by the ITTF Template Engine of Wizzi.
+                        \b It is a sandboxed subset of javascript. Expressions in ITTF Node Values
+                        \b and ITTF Template Commands are written in JsWizzi.
+
+            glo-item( JsWizzi Evaluation Context )
+                span 
+                    + The JsWizzi Evaluation Context is the evaluation context of JsWizzi during
+                        \b an ITTF Processing. Each ITTF Source Unit has its own evaluation context.
+                        \b There is also a global evaluation context.
+
+            glo-item( Language Artifact Generator )
+                span 
+                    + A Language Artifact Generator is an Artifact Generator that generates 
+                        \b a generic code file written in a Programming Language (PL).
+                        \b For example the
+                    high-code( js/module )
+                    + ,
+                    high-code( ts/module )
+                    + Artifact Generators
+
+            glo-item( Language Wizzi Schema )
+                span 
+                    + A Language Wizzi Schema is a Wizzi Schema that defines an ITTF Document Type
+                        \b that an artifact generator can transform in a Programming Language (PL) code file.
+
+            glo-item( Mix Action )
+                span
+                    + A Mix Action merges a Mixed ITTF Fragment into a mixer ITTF Document.
+
+            glo-item( Mixed ITTF Fragment )
+                span
+                    + A Mixed ITTF Fragment is a reusable fragment of an ITTF Document, 
+                        \b that has ben merged in a mixer document, with passing of parameters, using a Mix Action.
+                        \b The ITTF Nodes of a Mixed ITTF Fragment mantain the JsWizzi Evaluation Context of
+                        \b their original ITTF Source Unit.
+
+            glo-item( Model Transformer )
+                span 
+                    + A Model Trasformer is a javascript module exported by a Wizzi Plugin
+                        \b that takes as input a Wizzi Model Instance and, 
+                        \b optionally, a context object, and gives as output
+                        \b a modified Wizzi Model Instance or a new POJO object.
+
+            glo-item( mTree )
+                span 
+                    + An mTree is the result of the mTree Loading of an ITTF Document.
+                        \b mTrees are tree data structures, in-memory objects that are not persisted.
+                        \b mTrees are verified and loaded into Wizzi Model Instances.
+                        \b A Wizzi Model Loader, optionally, can pre-process an mTree before loading it.
+
+            glo-item( mTree Loader)
+                span
+                    + An mTree Loader executes the ITTF Processing of an ITTF Document and
+                        \b loads the result into an mTree.
+
+            glo-item( mTree Pre-processor)
+                span
+                    + An mTree Pre-processor can modify an mTree after its loading and
+                        \b before it is passed to a Wizzi Model Loader.
+                        \b It must be declared in a Wizzi Schema and must be written
+                        \b in the 'lib\wizzi\models' folder of a Wizzi Plugin.
+
+            glo-item( t folder )
+                span Folders named 't' have special rules for the path resolution
+                    \b of mixed and included ITTF Documents. In the folder structure
+                    \b of a Wizzi Package, ITTF Documents contained in a 't' folder,
+                    \b can be referenced with the same rules that apply to NodeJs packages
+                    \b in 'node_modules' folders. They are searched up on the folder tree, until the  
+                    \b relative path of the mix or include call is matched or the path resolution fails.
+
+            glo-item( Virtual Store System )
+                span 
+                    + The store system of Wizzi is virtualized. 
+                        \b When instantiating a
+                    high-code( WizziFactory )
+                    + instance you can select the Store Kind. Disk file system is the default.
+                        \b Virtual Store Systems are implemented by the
+                    to-wizzi-package( wizzi-repo )
+                    + core package. Available store kinds are:
+                    high-code( filesystem )
+                    + ,
+                    high-code( mongodb )
+                    + and 
+                    high-code( json )
+                    + .
+
+            glo-item( Wizzi Action )
+                span 
+                    + Wizzi Actions are the steps of a Wizzi Production.
+                    + The main Wizzi Actions are: ITTF Processing, mTree Loading, mTree pre-processing, Wizzi Model Loading,
+                        \b Model Transformation, Artifact Generation.
+                    + Wizzi Action are orchestrated by Wizzi Jobs, or programmatically using the Wizzi API.
+
+            glo-item( Wizzi API )
+                span
+                    + It is an API for executing programmatically the productions of the Wizzi Factory.
+                        \b It is implemented by an instance of the
+                    high-code( WizziFactory )
+                    + class, exported by the
+                    to-wizzi-package( wizzi )
+                    + package.
+
+            glo-item( Wizzi CLI )
+                span
+                    + The Wizzi command line interface (CLI). It is used to perform basic functionality, 
+                        \b such as executing a Wizzi Production, 
+                        \b creating a new Wizzi Package based on a starter, 
+                        \b wizzifying an existing artifact or a folder of artifacts.
+
+            glo-item( Wizzi Core Package )
+                span
+                    + The Wizzi Core Packages are the
+                    to-wizzi-package( wizzi )
+                    + ,
+                    to-wizzi-package( wizzi-utils )
+                    + ,
+                    to-wizzi-package( wizzi-mtree )
+                    + ,
+                    to-wizzi-package( wizzi-repo )
+                    + packages.
+
+            glo-item( Wizzi Core Plugin )
+                span
+                    + The Wizzi Core Plugins are the
+                    to-plugin( wizzi-core )
+                    + ,
+                    to-plugin( wizzi-js )
+                    + ,
+                    to-plugin( wizzi-web )
+                    + packages.
+
+            
+            glo-item( Wizzi Factory )
+                span
+                    + It is the set of Wizzi features for producing artifacts.
+                        \b Wizzi is a software factory!
+
+            glo-item( Wizzi Job )
+                span
+                    + The Wizzi Job is the Task Manager of Wizzi. It is implemented as
+                        \b a Wizzi Kernel Schema of type \b
+                    high-code( wfjob )
+                    + \b where you can define Wizzi Productions. A Wizzi Job can be executed
+                        \b using the \b
+                    high-code( wizzi )
+                    + \b command of the Wizzi CLI or, programmatically, using the Wizzi API.
+
+            glo-item( Wizzi Kernel Feature )
+                span
+                    + A feature implemented by a Wizzi Core Package or a Wizzi Core Plugin.
+            
+            glo-item( Wizzi Package Production )
+                span
+                    + A Wizzi Package Production is a series of Wizzi Productions 
+                        \b for creating a new Wizzi Package.
+                        \b It is executed by the Wizzi CLI after selecting a Wizzi Package Starter.
+
+            glo-item( Wizzi Model DOM )
+                span
+                    + A Wizzi Model DOM is an object model implemented in a javascript module
+                        \b generate from a Wizzi Schema. The Wizzi Model DOM generation is
+                        \b a kernel feature of the \b\
+                    to-plugin( wizzi-core )
+                    + \b plugin and the class structure of the DOM is a Wizzi feature but
+                        \b class methods of schema elements can be user defined in the Wizzi Schema.
+
+            glo-item( Wizzi Model Instance )
+                span 
+                    + A Wizzi Model Instance is an istance of a Wizzi Model DOM created by a
+                        \b Wizzi Model Loading. It is the main context object used
+                        \b by Wizzi Actions.
+
+            glo-item( Wizzi Model Loading )
+                span
+                    + The Wizzi Model Loading is the feature implemented by the Wizzi Model Factories 
+                        \b and by the Wizzi Model Doms generated from a Wizzi Schema.
+                        \b It creates a Wizzi Model Instance and loads in it an mTree,
+                        \b validates the mTree nodes, instantiates the classes of the DOM
+                        \b and executes the \b
+                    high-code( verify )
+                    + \b and \b
+                    high-code( initialize )
+                    + methods. The result is a Wizzi Model Instance ready for use as a context object
+                        \b in others Wizzi Actions.
+
+            glo-item( Wizzi Package )
+                span
+                    + A Wizzi Package is a package that uses Wizzi for generating some, or all, of its artifacts.
+                        \b It must contain a \b
+                    high-code( .wizzi )
+                    + folder.
+            
+            glo-item( Wizzi Package Starter )
+                span
+                    + A Wizzi Package Starter is a template of a Wizzi Package,
+                        \b containing some domain specific Wizzi Productions,
+                        \b that is used by the Wizzi CLI
+                        \b as a starter for a new Wizzi Package.
+                        \b Examples of available starters are: \b
+                    high-code(static-website)
+                    + , \b 
+                    high-code(express-server)
+                    + , \b 
+                    high-code(wizzi-plugin)
+                    + .
+
+            glo-item( Wizzi Plugin )
+                span
+                    + A Wizzi Plugin implements one or more Wizzi Schemas, and their Model Transformers and
+                        \b Artifact Generators, for a specific domain.
+                        \b It must be a NodeJS package, and must export a Wizzi Plugin Interface.
+
+            glo-item( Wizzi Plugin Interface)
+                span
+                    + A Wizzi Plugin Interface is the interface that a Wizzi Pugin must export
+                        \b in its index file, so that the Wizzi Plugin Manager can retrieve
+                        \b Wizzi Model Loaders, Model Transformers and Artifact Generators implemnted
+                        \b by the plugin.
+
+            glo-item( Wizzi Production )
+                span
+                    + A Wizzi Production is a series of Wizzi Actions 
+                        \b for generating one or more software artifacts.
+
+            glo-item( Wizzi Schema )
+                span 
+                    + Wizzi Schemas are the core modeling tool of Wizzi.
+                        \b In a Wizzi Schema you can define an object model of 
+                        \b named and typed elements and attributes
+                        \b that map the ITTF Nodes of an ITTF Document.
+                        \b From a Wizzi Schema is generated a Wizzi Model DOM, a javascript
+                        \b module that implements the schema object model. Wizzi Model Instances can
+                        \b validate and load mTrees data.
+                        \b Typed elements become javascript classes and in a Wizzi Schema
+                        \b you can write methods of the element classes of a Wizzi Model DOM,
+                        \b for retrieving and manipulating the loaded data.
+
+            glo-item( Wizzi Store System )
+                span 
+                    + A Wizzi Store System implements a Virtual File System
+                        \b for retrieving ITTF Documents. Currently there are three 
+                        \b Wizzi Store System: filesystem, mongodb and json.
+
+            glo-item( wizzifier )
+                span
+                    + A wizzifier is a tool for converting an artifact to its ITTF Document source.
+                        \b It is available for some common code languages and data structures ( \b
+                    high-code( js )
+                    + , \b
+                    high-code( html )
+                    + , \b
+                    high-code( css )
+                    + , \b
+                    high-code( json )
+                    + , \b
+                    high-code( xml )
+                    + \b and others).
+
+            glo-item( wizzify )
+                span
+                    + To wizzify means to executes a 
+                    high-code( wizzifier )
+                    + . It converts an artifact to its ITTF Document source.

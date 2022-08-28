@@ -1,0 +1,17 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Npm plugins',
+            id: 'npmplugins'
+        };
+
+    section(&sect)
+        p Npm plugins are public Wizzi Plugins published in the npm registry.
+        p They should be prefixed with
+            high-code( wizzi-plugin- )
+            span .
+        p Create your first Wizzi Plugin using the
+            to-starter( wizzi-plugin )
+            span starter.
+
+

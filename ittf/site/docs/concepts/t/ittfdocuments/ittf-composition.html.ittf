@@ -1,0 +1,38 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Ittf documents composition'
+        };
+
+    section(&sect)
+
+		p An ITTF Document, when loaded, becomes a javascript object called `mTreeBrick`.
+		
+		p mTreeBricks are composition units. They can mix, or include, other bricks and can
+			\b be mixed, or included. 
+			\b The mix or include operation is declared on a node of the mixer or includer brick,
+			\b that will be replaced from the nodes of the mixed or included one. 
+
+		p An mTree loading begins loading a primary ITTF Document, that become the primary
+			\b mTreeBrick, the starting point of the composition. Included and mixed
+			\b ITTF Documents become composed
+			\b mTreeBricks.
+
+		p A single mTreeBrick can be composed many times in different positions of
+			\b the builded mTree. It is loaded once, and cloned for composition.
+			
+		p Include and mix operations have a different behaviour. When included, cloned mTreeBricks,
+			\b become part of the includer brick and their nodes acquire its brick key and
+			\b its brick evaluation context. Instead, mixed mTreeBricks, are inserted in the 
+			\b node structure of the mixer, but each of them mantains its original brick key
+			\b and brick evaluation context. When coding an ITTF Document, that will become a 
+			\b mixed mTreeBrick, created variables will have a scope limited to the nodes declared 
+			\b in the document, even if they will be merged in the mixer brick.
+
+		p Summarizing: primary and fragment mTreeBricks have their own evaluation context, included
+			\b mTreeBricks use the evaluation context of their includer.
+
+		p In case of a mixed mTreeBrick the mixer node can have children nodes that in turn
+			\b can replace 'hook' nodes of the mixed brick. See the '$hook' and '$append'
+			\b ittf command nodes for the composition rules of a mix operation.
+

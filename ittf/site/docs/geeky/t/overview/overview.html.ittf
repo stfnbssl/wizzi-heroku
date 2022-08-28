@@ -1,0 +1,11 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Overview'
+        };
+
+    section(&sect)
+
+        p This section is an helper for those interested to find the source code
+            \b of the features of Wizzi.
+        p You will be redirected to the source ITTF Documents and to the generated modules.

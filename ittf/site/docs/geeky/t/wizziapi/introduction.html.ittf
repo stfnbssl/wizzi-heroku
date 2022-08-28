@@ -1,0 +1,15 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi API'
+        };
+
+    section(&sect)
+
+        table-doc()
+            tr( The WizziFactory class, wizzi, lib/services, lib/services/wizziFactory.js )
+            tr( The ProductionContext class, wizzi, lib/production/context.js.ittf, lib/production/context.js )
+            tr( The ProductionManager class, wizzi, lib/production/manager.js.ittf, lib/production/manager.js )
+            
+
+		

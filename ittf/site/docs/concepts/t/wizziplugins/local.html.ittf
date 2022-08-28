@@ -1,0 +1,43 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Local plugins',
+            id: 'localplugins'
+        };
+
+    section(&sect)
+
+		p Local plugins can be located anywhere on the user drive and the plugin folder path is declared to the Wizzi factory
+			\b instead of the plugin name.
+
+        p The 
+            high-code( package.json )
+            span file is not required. The plugin interface must be exposed in the
+            high-code( index.js )
+            span file located in the plugin folder.
+
+		ittf-panel
+            title Sample Wizzi factory instantiation with local plugins
+            ittf
+                ...
+                    _ wizzi.fsFactory
+                        { plugins
+                            [ items
+                                @ './packages/wizzi-core/index.js'
+                                @ './packages/wizzi-js/index.js'
+                                @ './packages/wizzi-web/index.js'
+                            @ pluginsBaseFolder
+                                _ path.resolve
+                                    @ __dirname
+                                    @ '..'
+                                    @ '..'
+                                    @ '..'
+                        @ globalContext: globalContext || {}
+                        =>
+                            param err
+                            param wizziFactory
+                            if err
+                                throw ...
+                            _ wizziFactory.loadModelAndGenerateArtifact
+                                ...
+

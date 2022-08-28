@@ -1,0 +1,25 @@
+﻿html
+    $global
+        var dollar = '$';
+    $
+        var art = {
+            section: 'Concepts',
+            title: 'Ittf Documents'
+        };
+    
+    _layouts/concepts(&art)
+
+        $include ./ittfdocuments/introduction
+        $include ./ittfdocuments/ittf-notation
+        $include ./ittfdocuments/xml-comparision
+        $*
+        $include ./ittfdocuments/ittf-composition
+        $include ./ittfdocuments/ittf-commandnodes
+        $include ./ittfdocuments/ittf-templates
+        
+        
+        
+        
+        
+        $include ./ittfdocuments/ittf-codeunits
+        *$

@@ -1,0 +1,95 @@
+﻿$group
+    $
+        var sect = {
+            title: 'How to install Wizzi'
+        };
+
+    section(&sect)
+
+        p You need these tools:
+        ul
+            class css-0
+            li
+                class css-0
+                a 
+                    href #nodejs
+                    class css-0
+                    + Node.js
+                + (v14.15 or newer)
+            li
+                class css-0
+                a 
+                    href #wizzi-cli
+                    class css-0
+                    + Wizzi CLI
+            li
+                class css-0
+                a 
+                    href #vscode
+                    class css-0
+                    + VsCode
+            li
+                class css-0
+                a 
+                    href #ittf-highlighter
+                    class css-0
+                    + The Ittf sinthax highlighter for VsCode
+
+        . doc-title-2
+            id nodejs
+            style position:relative
+            + Node.js
+        p Wizzi is built with Node.js 
+            \b and you’ll need to have Node.js version 14.00 (or newer) installed on your computer.
+        p Bundled with Node.js is the npm package manager, that you’ll use to add Wizzi Plugins and other packages onto your project.
+        p Download and install the latest Node.js version from \b
+            a
+                href https://nodejs.org/en/
+                class css-0
+                + the official Node.js website
+            + .
+
+        . doc-title-2
+            id nodejs
+            style position:relative
+            + Wizzi CLI
+        p You need the Wizzi CLI to create a new Wizzi Package based on a starter,
+            \b to execute a Wizzi Production or 
+            \b to wizzify an existing artifact or a folder of artifacts.            
+
+        bash-panel
+            title Install the Wizzi CLI
+            ittf
+                git npm i wizzi-cli -g
+
+        bash-panel
+            title Check the Wizzi CLI version
+            ittf
+                git wizzi -version
+
+        bash-panel
+            title See the Wizzi CLI help
+            ittf
+                git wizzi --help
+
+
+        . doc-title-2
+            id nodejs
+            style position:relative
+            + VsCode
+        p Wizzi is developed with VsCode.
+            \b If you don’t have a preferred code editor yet, download the version for your platform.
+
+        . doc-title-2
+            id nodejs
+            style position:relative
+            + The Ittf sinthax highlighter for VsCode
+
+        bash-panel
+            title Install the Wizzi IttfHighlighter for VsCode
+            ittf
+                rem download the theme from github
+                rem in a temp folder execute
+                git clone https://github.com/stfnbssl/vscode-ittf.git
+                rem copy the vscode-ittf folder into the VsCode Extensions folder
+                rem in windows %USERPROFILE%\.vscode\extensions

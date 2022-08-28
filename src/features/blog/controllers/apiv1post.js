@@ -23,16 +23,12 @@ class ApiV1PostController {
             this.router.post('/:owner/:name', this.postPost);
             this.router.delete('/:id', this.deletePost);
         };
-        this.getPostList = 
-        // loog 'getPostList.request.params', request.params
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getPostList = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, post_1.getListPost)({
                 query: {
                     owner: request.params.owner
                 }
-            }).then(
-            // loog 'getPostList.result', result
-            (result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
+            }).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 console.log('getPostList.error', err, __filename);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
@@ -50,12 +46,8 @@ class ApiV1PostController {
                 }, 501);
             });
         });
-        this.getPost = 
-        // loog 'getPost.request.params', request.params
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            return (0, post_1.getPost)(request.params.owner, request.params.name).then(
-            // loog 'getPost.result', result
-            (result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
+        this.getPost = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            return (0, post_1.getPost)(request.params.owner, request.params.name).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 console.log('getPost.error', err, __filename);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err

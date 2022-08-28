@@ -1,0 +1,18 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Plugins'
+        };
+
+    section(&sect)
+
+        table-doc()
+            tr( The PluginsManager class, lib/services/pluginsManager.js.ittf, lib/services/pluginsManager.js )
+                p An instance of this class is used by the
+                    high-code( WizziFactory )
+                    + class, for retrieving components of plugins.
+
+            tr( A Wizzi Plugin Interface, wizzi-web, root/index.js.ittf, index.js )
+                p This is the Wizzi Plugin Interface implemented by the
+                    to-plugin( wizzi-web ) 
+                    + core plugin.

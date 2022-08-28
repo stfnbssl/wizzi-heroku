@@ -26,9 +26,7 @@ function resolveContexts(contextItems) {
             return reject(err);
         }))));
         console.log(myname + '.resolveContexts.promises', promises.length, __filename);
-        return new Promise((resolve, reject) => Promise.all(promises).then(
-        // loog myname + '.resolveContexts.all.items', items
-        (items) => {
+        return new Promise((resolve, reject) => Promise.all(promises).then((items) => {
             var context = {};
             items.map((value) => {
                 if (value.name && value.name.length > 0) {

@@ -1,11 +1,12 @@
 {
     name "Wizzi"
     version "0.0.1"
-    title "The meta programming platform. You program the production of, documents, data structures ... and any textual artifact"
+    title "The artifact meta generation platform."
+    title2 "With Wizzi you set up model driven productions of code, document and data artifacts."
     [ subtitles
-        "A single machinery, many productions"
-        "Language agnostic"
-        "Productions are managed by plugins"
+        "A single machinery, many productions."
+        "Language agnostic."
+        "All productions are managed by plugins."
     { author
         name "Stefano Bassoli"
         email "stfn.bssl@gmail.com"

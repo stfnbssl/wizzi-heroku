@@ -1,0 +1,50 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi factory plugin package'
+        };
+
+    section(&sect)
+
+		p ArtifactProductions are packaged in node.js/npm modules
+			\b containing:
+		ul
+			li WizziSchemas
+			li WizziModels
+			li WizziModelFactories
+			li WizziModelTransformers
+			li ArtifactGenerators
+
+		p A Wizzi factory plugin package has this folder structure
+		ittf-panel
+            ittf
+                node_modules
+                    &lt;package-name&gt
+                        lib
+                            artifacts
+                                &lt;wfschema-name&gt
+                                    &lt;artifact-name&gt
+                                        gen
+                                            ittf
+                                                [0..n]&lt;ittfdocument-name&gt.&lt;language-wizzi-schema&gt.ittf
+                                            main.js
+                                            [0..n]&lt;helper-module&gt.js
+                                    &lt;transformer-name&gt
+                                        trans
+                                            main.js
+                                            [0..n]&lt;helper-module&gt.js
+                            wizzi
+                                models
+                                    &lt;wfschema-name&gt;-model.js
+                                    &lt;wfschema-name&gt;-factory.js
+                                schemas
+                                    &lt;wfschema-name&gt;.wfschema.ittf
+                        index.js
+
+		p The index.js module of the package exports the functions:
+			li getWizziModelFactory(wizziSchemaName) 
+			li getModelTransformer(transformerPath) 
+			li getArtifactGenerator(artifactPath) 
+
+
+		

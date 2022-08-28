@@ -1,0 +1,41 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Xml built-in schema'
+        };
+
+    section(&sect)
+
+		ittf-panel
+            title Sample xml ITTF Document
+            ittf
+                profile
+                    @ name ${'$'}{user.name}
+                    @ age ${'$'}{user.age}
+                    friends
+                        ${'$'}foreach friend in user.friends
+
+                            friend
+                                @ name ${'$'}{friend.name}
+                                @ age ${'$'}{friend.age}
+                    address
+                        @ street ${'$'}{user.street}
+                        @ city ${'$'}{user.city}
+		
+		div
+            + Coding Rules
+            ul
+                li Ittf node names may contain
+                    ul
+                        li element names for elements
+                        li simbol @ for attributes
+                li Ittf node values may contain
+                    ul
+                        li nothing for elements
+                        li name and value separated by a blank for attributes
+
+		p ( It is assumed that one knows
+			a xml format rules
+				href https://google.github.io/styleguide/xmlstyle.html
+			span )
+

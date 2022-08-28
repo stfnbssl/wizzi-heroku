@@ -1,0 +1,21 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Template engine'
+        };
+
+    section(&sect)
+
+        p An ITTF Document is a scripteable template and can be merged and interpolated with context data.
+        ittf-panel
+            schema html
+            ittf
+                ...
+                    ul
+                        ${'$'}foreach item in site.TopMenu.items
+                            li
+                                a ${'$'}{item.label}
+                                    href ${'$'}{item.url}
+
+        p Nodes whose name is a template command are called template nodes. 
+            \b Any other node is said a semantic node and must be defined by an element or attribute of a Wizzi Schema.

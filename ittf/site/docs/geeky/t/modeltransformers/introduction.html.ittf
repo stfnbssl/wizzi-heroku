@@ -1,0 +1,17 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Model transformers'
+        };
+
+    section(&sect)
+
+        table-doc()
+            tr( A Model Transformer, wizzi-core, lib/artifacts/wfschema/json_docs/trans/main.js.ittf, lib/artifacts/wfschema/json_docs/trans/main.js )
+                p This is an example of a Model Transformer implemented by the
+                    to-plugin( wizzi-core ) 
+                    + core plugin for the schema
+                    high-code( wfschema )
+                    + . A Model Transformer can be executed by the Wizzi Job Executor or programmatically using the Wizzi API.
+
+		

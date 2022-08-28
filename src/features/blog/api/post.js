@@ -9,9 +9,7 @@ function validatePost(owner, name) {
         const Post = (0, post_1.GetPostModel)();
         return new Promise((resolve, reject) => {
             let query = { owner: owner, name: name };
-            Post.find(query, 
-            // loog myname, 'validatePost', 'Post.find', 'error', err
-            (err, result) => {
+            Post.find(query, (err, result) => {
                 if (err) {
                     return reject(err);
                 }
@@ -42,9 +40,7 @@ function getListPost(options) {
             if (options.sort) {
                 query.sort(options.sort);
             }
-            query.find(
-            // loog myname, 'getListPost', 'Post.find', 'Object.keys(result)', Object.keys(result)
-            (err, result) => {
+            query.find((err, result) => {
                 if (err) {
                     console.log(myname, 'getListPost', 'Post.find', 'error', err, __filename);
                     return reject(err);
@@ -212,9 +208,7 @@ function updatePost(id, owner, name, title, content, state, pubblished_at) {
                 update['pubblished_at'] = pubblished_at;
             }
             update['updated_at'] = new Date();
-            Post.findOneAndUpdate(query, update, {}, 
-            // loog myname, 'updatePost', 'Post.findOneAndUpdate', 'result', result
-            (err, result) => {
+            Post.findOneAndUpdate(query, update, {}, (err, result) => {
                 if (err) {
                     console.log(myname, 'updatePost', 'Post.findOneAndUpdate', 'error', err, __filename);
                     return reject(err);
@@ -237,9 +231,7 @@ function deletePost(id, owner, name, title, content, state, pubblished_at) {
             let query = {
                 _id: id
             };
-            Post.deleteOne(query, 
-            // loog myname, 'deletePost', 'Post.deleteOne'
-            (err) => {
+            Post.deleteOne(query, (err) => {
                 if (err) {
                     console.log(myname, 'deletePost', 'Post.deleteOne', 'error', err, __filename);
                     return reject(err);

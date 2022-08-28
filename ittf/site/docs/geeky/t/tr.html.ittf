@@ -1,0 +1,14 @@
+$group
+    $params title, xpackage, ittf, generated|@@null
+    tr
+        td
+            div ${title}
+        td
+            to-wizzi-ittf( ${xpackage}, ${ittf} )
+        td
+            to-wizzi-generated( ${xpackage}, ${generated} )
+    tr
+        td
+            colspan 3
+            div
+                $hook

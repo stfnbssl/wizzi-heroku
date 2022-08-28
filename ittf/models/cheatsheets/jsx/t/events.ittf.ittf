@@ -1,0 +1,41 @@
+element react
+	tag _
+	ast 
+	category react
+	
+	item
+		title class
+		ittf
+			react MyComponent
+				render
+					return
+						div
+                            @ onClick 
+                                =>
+                                    _ this.handleClose()
+                            h1 Hello world
+
+	item
+		title var
+		ittf
+			var Hello
+				div
+					p sicut amet nequi abisse
+
+	item
+		title full component
+		ittf
+			react MyComponent
+                state
+                    @ open false
+                did-mount
+                    _ window.addEventListener('scroll', this.handlePaperScroll)
+                will-unmount
+                    _ window.removeEventListener('scroll', this.handlePaperScroll)
+                render
+                    prop jsonData
+                    const 
+                        { 
+                            @ open
+                        = this.state
+

@@ -1,0 +1,12 @@
+﻿html
+    $global
+        var dollar = '$';
+    $
+        var art = {
+            section: 'Geeky',
+            title: 'JsWizzi'
+        };
+    
+    _layouts/geeky(&art)
+    
+        $include ./jswizzi/introduction

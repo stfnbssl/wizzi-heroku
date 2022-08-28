@@ -1,0 +1,24 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Virtual Store System'
+        };
+
+    section(&sect)
+
+        p 
+            + The store system of Wizzi is virtualized. 
+                \b When instantiating a
+            high-code( WizziFactory )
+            + instance you can select the Store Kind. 
+                \b Virtual Store Systems are implemented by the
+            to-wizzi-package( wizzi-repo )
+            + core package. Available store kinds are:
+            high-code( filesystem )
+            + (default),
+            high-code( mongodb )
+            + and 
+            high-code( json )
+            + .
+
+

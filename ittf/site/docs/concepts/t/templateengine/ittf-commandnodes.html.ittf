@@ -1,0 +1,277 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Ittf commands'
+        };
+
+    section(&sect)
+
+        ittf-panel
+            title The $include command
+            ittf
+                ...
+            
+                    ${'$'}include fragment-path
+		
+		p The node value (
+            high-code( fragment-path ) 
+            + ) is the relative path to the ITTF
+			    \b Fragment that must be included. The folder uri of the 
+			    \b includer document is the base path for the path resolution
+			    \b of the included documents.
+		p The fragment will be included replacing
+			+ the $include command, and the JsWizzi expressions of its nodes will become part of the
+			    \b evaluation scope of the includer.
+		p An $include command cannot have children nodes. The included
+			+ fragment cannot have the $params node (cannot have composition parameters).
+
+
+		ittf-panel
+            title The Mix action
+            ittf
+                ...
+                    $ var comma = ','
+                    to-mix( fragment-path, arg-1 [${comma} arg-2 ... [${comma} arg-n]] )
+                        ... optional child branch nodes
+		
+        p A Mix action is recognized by the ITTF Parser when a node name 
+			\b ends with an open parenthesis. The chars before the open parenthesis
+			\b are the relative path to the mixed ITTF Document. The folder uri of 
+			\b the mixer ITTF Document is the base path.
+			\b No whitechar must separate the mixed fragment path and the open paren.
+		
+        p The mixed fragment is inserted in the mixer document replacing
+			\b the Mix action. If the mix node has children,
+			\b by default they are appended to the root node of the mixed fragment.
+			\b But if the mixed fragment has a descendant node that is a '$hook'
+			\b command of name 'default', than the children of the mix node
+			\b will replace it.
+
+		ittf-panel
+            title ITTF Fragment with an $hook command
+            ittf
+                table
+                    ${'$'}hook
+		p The hook-name when not declared, is assumed to be 'default'.
+
+
+		p The root node of a mixed ITTF Document can be a template
+            high-code( Mix action )
+            + . A fragment can mix its container and append nodes to its hooks:
+		ittf-panel
+            ittf
+                to-mix( mylayout, home
+                    ${'$'}append scripts
+                        js dialogs.js
+                    div My content
+		
+		ittf-panel
+            title The $params command
+            ittf
+                rootnode
+                    ${'$'}params param1 [,param2 [,param-n]]
+		
+		p ITTF Fragments designed to be mixed can declare composition parameters.
+			+ The `$params` node must be the first child of the root node.
+
+		p A parameter has format: [&]name[:type][|default]
+
+        table
+			tr( &    , Optional. A paramater name prededed by `&` means an object passed by reference )
+			tr( name , the name of the parameter to be used in jsWizzi expressions )
+			tr( type , the parameter type
+				p one-of: string(default), integer, float, boolean, date, object (implicit
+					+ when '&' declared), macro (implicit, detected from IttfMacro delimiters
+					+ contained in the default value)
+			tr( default, typed-value | @@null | @@undefined )
+				p warning! `title|null` becomes title = "null" (the quoted string null).
+				+ If you want title to be null then : `title|@@null`
+			tr( string, quotes are optional, example: `title|"my way"` and `title|my way` are the same )
+			tr( boolean, true | false)
+			tr( date, yyyy/mm/dd )
+			tr( macro, 
+				p an IttfMacro can be passed as a parameter to a mixin, when the parameter
+					+ is referenced we have a double macro substitution 
+        
+
+		
+		p This list item fragment, lia.html.ittf, ...
+		ittf-panel
+            ittf
+                li
+                    ${'$'}params text, href
+                    a ${'$'}{text}
+                        href ${'$'}{href}
+		
+        p .. can be mixed in this way
+		ittf-panel
+            ittf
+                ul
+                    to-mix( lia, my home page, http://hello.it )
+
+		ittf-panel
+            title The $hook command
+            ittf
+                ...
+                    ${'$'}hook name
+		p An $hook command is a named insertion point where node branches can
+			+ be appended. The name is optional, when missing its value is 'default'.
+		p It has to be replaced and must not have children nodes.
+		p See the statements `Mix` and `$append`, for how to append
+			+ node branches to an $hook node.
+
+		ittf-panel
+            title The $append command
+            ittf
+                ...
+                    ${'$'}append hook-name
+                        ... node branch ...
+		p An $append command is the root of a node branch that will be
+			+ appended to an ancestor $hook of `hook-name`.
+			+ The children nodes of $append will replace the $hook node.
+
+		ittf-panel
+            title The $group command
+			ittf
+                ${'$'}group empty-value
+                    node branch ...
+                    node branch ...
+                    ...
+		p An ITTF Document must have one and only one root node.
+		p The $group command is a convenience node that may be used as the root of 
+			+ a fragment that must have more than one root node.
+		p The $group node has no meaningful value. It disappear in the builded mTree.
+
+		ittf-panel
+            title The $if, $elif, $else commands
+            ittf
+                ...
+                    ${'$'}if jswizzi-expression
+                        ... node branch ...
+                    ${'$'}elif jswizzi-expression
+                        ... node branch ...           
+                    ${'$'}else empty-value                    
+                        ... node branch ...           
+		p Children nodes of these commands are included/excluded from the builded mTree
+			+ depending on the value of the expression.
+
+		ittf-panel
+            title The $foreach and $backeach commands
+            ittf
+                ...
+                    ${'$'}foreach item-name in collection-name
+                        ... node branch ...
+		p Descendant nodes of this command are a repeat template; item-name
+			+ is user defined and collection-name is a JsWizzi expression that evaluates
+			+ to an iterable javascript object, that must be in scope in the fragment or in the global
+			+ jsWizziContext.
+		p The var statement that declares item-name is auto-generated.
+		p Descendant nodes are repeated having item-name as a value in scope.
+		p The $backeach command iterates the collection backword.
+
+		ittf-panel
+            title The $break, $continue commands
+            ittf
+                ...
+                        ${'$'}break
+                        ...
+                        ${'$'}continue
+		p This statements have the same meaning than in javascript but operate breaking or continuing
+			+ the template repetition.
+		p A label for continuation is not implemented.
+
+		ittf-panel
+            title the $while command
+            ittf
+                ...
+                    ${'$'}while jswizzi-expression
+                        ... node branch ...
+                        ${'$'} jswizzi-exit-condition-change
+		p This is a repeat template statement where descendant nodes are repeated 
+			+ until the jswizzi-expression evaluates to false.
+		p $ or $global commands must be used to modify the context values of the exit condition.
+			+ There is a limit of 10,000 iterations to guard against accidental loops, after that an exception is raised.
+
+		p Example
+		ittf-panel 
+            ittf
+                ...
+                    ${'$'} i = 0
+                    ${'$'}while i < 256
+                        p Item ${'$'}{i}
+                        ${'$'} i++
+
+		ittf-panel
+            title The $ command - single line
+            ittf
+                ...
+                    ${'$'} jswizzi-statement
+			
+		ittf-panel
+            title The $ command - multi line
+            ittf
+                ${'$'}
+                    jswizzi-statement
+                    jswizzi-statement
+                    ...
+
+		p Descendant nodes of this command can contain JsWizzi expressions that,
+			+ during the evaluation step, are executed in the fragment scope 
+			+ to wich the command belongs.
+		p They may declare and modify variables that have fragment scope, and
+			+ modify variables that have global scope.
+			
+		ittf-panel
+            title The $global command - single line
+            ittf
+                ...
+                    ${'$'}global jswizzi-statement
+		
+		ittf-panel
+            title The $global command - multi line
+            ittf
+                ...
+                    ${'$'}global
+                        jswizzi-statement
+                        jswizzi-statement
+                        ...
+
+		p Descendant nodes of this command can contain JsWizzi expressions that,
+			+ during the evaluation step, are executed in the global scope of the jsWizziContext.
+			+ They may declare or modify variables in the global scope.
+
+		ittf-panel
+            title The text container node: ${'$'}.
+            ittf
+                ...
+                    ${'$'}.
+                        free content
+                        free content
+                        ...
+
+		ittf-panel
+            title The single line comment: ${'$'}${'$'}
+            ittf
+                ...
+                    ul
+                        ${'$'}${'$'} <rest-of-line is comment>
+                        li item ${'$'}${'$'} <rest-of-line is comment>
+		
+        ittf-panel
+            title The multiline comment: ${'$'}${'*'} ... ${'*'}${'$'}
+            ittf
+                ...
+                    ${'$'}${'*'}
+                    ul
+                        li
+                    ${'*'}${'$'}
+
+		ittf-panel
+            title The $raw command
+			ittf
+                ...
+                    ${'$'}raw execute()
+        p The $raw command is usefull when you need to write node lines skipping the template processing.
+            \b Usually you manage the $raw tag preprocessing the mTree before the Wizzi Model Loading.
+            \b TODO explain
+

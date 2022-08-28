@@ -1,0 +1,39 @@
+﻿$group
+    $
+        var sect = {
+            title: '"ittf/document" builtin artifact'
+        };
+
+    section(&sect)
+
+		p The 'ittf/document' builtin artifact exports the ittf
+			\b representation of a loaded mTree.
+			\b This allow the buildup of ITTF Documents
+			\b using the mTree loader for
+			\b merging sources and contexts.
+
+		ittf-panel
+            title Sample Wizzi Job using the 'ittf/document' artifact.
+            ittf
+                wfjob
+                    model styles
+                        src styles.json.ittf
+                        schema json
+                    model layout
+                        src layout.json.ittf
+                        schema json
+                    model optionsforms
+                        src options.form.ittf
+                        schema form
+                    line ui
+                        artifact ITTF Document of model options-page.html.ittf
+                            src options-page.html.ittf
+                            schema ittf
+                            generator ittf/document
+                            extension ittf
+                            model-ref styles
+                            model-ref layout
+                            model-ref optionsforms
+
+
+

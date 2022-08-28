@@ -1,0 +1,21 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Template engine'
+        };
+
+    section(&sect)
+        table-doc()
+            tr( The mTree build up scripter, wizzi-mtree, lib/loader/mTreeBuildupScripter.js.ittf, lib/loader/mTreeBuildupScripter.js )
+                p The Wizzi Template Engine is implemented building a JsWizzi Script that rebuilds the
+                    \b tree data structure of an ITTF Document. Template commands and expressions become
+                    \b JsWizzi statements and expressions in the build up script, that is executed by 
+                    \b the JsWizziRunner class.
+
+            tr( The ITTF Document evaluator, wizzi-mtree, lib/loader/evaluator.js.ittf, lib/loader/evaluator.js )
+                p This is where the result of an ITTF Processing is transformed in the mTree build up script,
+                    \b the script is executed and the mTree produced.
+
+
+
+

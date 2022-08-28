@@ -1,0 +1,9 @@
+$group
+    $params text, kind|@@null
+    $if kind != 'nospace'
+        span \b \b
+    code
+        class highlight-code
+        + ${text}
+    $if kind != 'nospace'
+        span \b \b

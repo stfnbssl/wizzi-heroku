@@ -1,0 +1,63 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Schemas'
+        };
+
+    section(&sect)
+
+		p A Wizzi Schema is the core modeling tool of the Wizzi factory.
+            \b In it you define the types of the node names of an
+            to-docs( mTree )
+            + .
+
+        p Wizzi Schemas are coded in ITTF Document source files of type
+            high-code( wfschema )
+            + .
+
+        ittf-panel
+            title Sample 'rdbms' Wizzi Schema
+            ittf
+                wfschema rdbms
+                    e catalog
+                        r table/s
+                    e table
+                        r column/s
+                        r index/es
+                    e column
+                        a type
+                        a caption
+                        a defaultValue
+                            tag default
+                    e index
+                        a primary
+                            type boolean
+                        a unique
+                            type boolean
+                        r column/s
+
+        ittf-panel
+            title Sample 'rdbms' ITTF Document conformant to the above wfschema
+            ittf
+                rdbms School
+                    table Student
+                        column Id
+                            type integer
+                        column Name
+                            type string
+                        index Student-PK
+                            primary true
+                            column Id
+                    table Course
+                        column Id
+                            type integer
+                        column Title
+                            type string
+                        index Student-PK
+                            primary true
+                            column Id        
+        
+        p The Wizzi Schema of type `wfschema` is 
+            \b implemented by the 
+            to-plugin( wizzi-core
+            span plugin.

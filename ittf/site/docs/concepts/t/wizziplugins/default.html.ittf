@@ -1,0 +1,23 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Default plugins',
+            id: 'defaultplugins'
+        };
+
+    section(&sect)
+
+		p Default plugins are starter plugins to help the creation of the firsts domain specific generations.
+            
+            
+        h4 Currently available default plugins
+        ul 
+            li
+                to-plugin( wizzi-js )
+            li
+                to-plugin( wizzi-web )
+            li
+                to-plugin( wizzi-lab )
+
+        p The `wizzi-js` and `wizzi-web` plugin at the moment are integrated in the Wizzi API.
+

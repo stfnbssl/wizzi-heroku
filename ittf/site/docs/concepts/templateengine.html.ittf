@@ -1,0 +1,13 @@
+﻿html
+    $global
+        var dollar = '$';
+    $
+        var art = {
+            section: 'Concepts',
+            title: 'Template Engine'
+        };
+    
+    _layouts/concepts(&art)
+    
+        $include ./templateengine/introduction
+        $include ./templateengine/ittf-commandnodes

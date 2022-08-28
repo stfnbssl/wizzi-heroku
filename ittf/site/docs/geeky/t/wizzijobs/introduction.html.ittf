@@ -1,0 +1,20 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi jobs'
+        };
+
+    section(&sect)
+
+        table-doc()
+            tr( The wfjob Wizzi Schema definition, wizzi-core, lib/wizzi/schemas/wfjob.wfschema.ittf, lib/wizzi/models )
+                p This Wizzi Schema that defines the type of a job ITTF Document is implemented by the
+                    to-plugin( wizzi-core ) 
+                    + core plugin in the schema
+                    high-code( wfjob )
+                    + .
+
+            tr( The Wizzi Job Executor, wizzi, lib/production/manager.js.ittf, lib/production/manager.js )
+                p A Wizzi Job Execution is a feature implemented by the ProductionManager class.
+
+

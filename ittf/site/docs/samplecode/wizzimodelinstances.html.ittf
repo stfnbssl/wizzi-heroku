@@ -1,0 +1,13 @@
+﻿html
+    $global
+        var dollar = '$';
+    
+    $
+        var art = {
+            section: 'Sample code',
+            title: 'Wizzi Model Instances'
+        };
+    
+    _layouts/samplecode(&art)
+
+        $include ./wizzimodelinstances/introduction

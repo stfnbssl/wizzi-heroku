@@ -1,0 +1,22 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Plugins'
+        };
+
+    section(&sect)
+
+		p Wizzi is made of a few kernel modules and an ecosystem of plugins.
+		
+		p A plugin implements one or more Wizzi Schema and their generation components:
+		ul 
+			li Wizzi Model Doms;
+			li Model transformers;
+			li Artifact generators.
+
+		p A Wizzi Plugin must have a standard folder structure and must export the \b
+			a createFactoryPlugin
+				href api.html#wizzi-plugin.createFactoryPlugin
+			+ method in its entry point. See \b
+			a Wizzi Plugins
+				href ./wizziplugins.html

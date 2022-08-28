@@ -1,0 +1,43 @@
+﻿$group
+    $
+        var sect = {
+            title: 'The production manager'
+        };
+
+    section(&sect)
+
+        p The production of complex software systems can
+            \b require a great number of model processing, transformations
+            \b and artifact generations.
+
+        p The wizzi.production.productionManager class implements an
+            \b api for scheduling complex jobs. It is the wizzi factory
+            \b task manager.
+
+        p A Wizzi Model type implemented by the 'wizzi-core' plugin , the 'wfjob' schema,
+            \b can be used to describe wizzi factory jobs. A 'wfjob' model organizes models processing
+            \b and artifact generations in production lines that are executed in 
+            \b sequence, so that a line can prepare models and artifacts for the next one.
+
+        p A job is executed calling the following method of the 
+            \b wizzi.WizziFactory instance class.
+
+        ittf-panel
+            schema js
+            ittf
+                ...
+                    m executeJob
+                        { jobRequest
+                            string name
+                                # for info and error messages
+                            string path
+                                # path to the 'wfjob' ITTF Document that the wizzi.production.productionManager will load.
+                            { productionOptions
+                                boolean verbose
+                                    # not implemented yet
+                            { globalContext
+                                optional
+                        callback
+
+
+

@@ -1,0 +1,38 @@
+$group
+    . searchbox
+        display inline-block
+        position relative
+        width 200px
+        height 32px !important
+        padding-top 1px
+        white-space nowrap
+        box-sizing border-box
+        border 0
+        border-radius 16px
+        visibility visible !important
+        & :hover
+            box-shadow inset 0 0 0 3px #b3b3b3
+            background-color ${wzCtx.Colors.c_dark}
+            color ${wzCtx.Colors.bg_dark}
+        < input
+            display inline-block
+            box-sizing border-box
+            transition box-shadow 0.4s ease, background 0.4s ease
+            box-shadow inset 0 0 0 1px #cccccc
+            background ${wzCtx.Colors.bg_dark}
+            padding 0
+            padding-right 26px
+            padding-left 32px
+            width 100%
+            height 100%
+            vertical-align middle
+            white-space normal
+            font-size 12px
+            appearance none
+            & :focus
+                outline 0
+                box-shadow inset 0 0 0 1px #aaaaaa
+                background-color ${wzCtx.Colors.c_dark}
+                color ${wzCtx.Colors.bg_dark}
+            & ::placeholder
+                color #aaaaaa

@@ -1,0 +1,11 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Virtual Store System'
+        };
+
+    section(&sect)
+        table-doc()
+            tr( Todo, Todo, Todo )
+
+		

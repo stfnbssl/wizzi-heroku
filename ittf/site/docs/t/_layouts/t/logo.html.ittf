@@ -1,0 +1,10 @@
+div 
+    id logo
+    class hidden
+    a 
+        aria-label Link to home
+        class logo-a
+        href /
+        div
+            style width: 80px; margin-top: 5px; margin-left: 20px;
+            html/images/logo(#efefef, #494949)

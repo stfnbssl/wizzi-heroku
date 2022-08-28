@@ -1,0 +1,262 @@
+﻿css
+    
+    $include models/docs/wzctx
+    
+    $include css/reset
+
+    < body
+        margin 0
+        padding 0
+        color #eee
+        background-color #494949
+        font-family roboto,verdana,arial
+    
+    < nav
+        < ul
+            list-style-type none
+        
+    < a
+        text-decoration none
+    
+    # main-container
+        width 70%
+        margin 0 auto
+        display flex
+        flex-direction column
+        font-size 16px
+        line-height 24px
+        word-spacing 1px
+        color #eee
+        background-color #515151
+
+    # header
+        border-bottom 1px solid #a0a0a0
+        display flex
+        flex-direction row
+        padding 10px 20px
+
+    # logo
+        $$ margin 16px
+
+    . logo-a
+        align-self flex-start
+        display flex
+        flex-shrink 0
+        padding 0.5rem 0.375rem
+        transform translateX(-0.375rem)
+        text-decoration none
+        font-weight 600
+        align-items center
+        margin-right 1.25rem
+        
+    # top-nav
+        display flex
+        justify-content space-between
+        list-style-type none
+        padding-top 16px
+        < ul
+            margin-bottom 0
+            < li
+                display inline-block
+                padding-right 30px
+                font-size 24px
+                color #ddd
+                < a
+                    color #eee
+                . current
+                    font-weight 700
+                    color palegoldenrod
+
+    # middle-container
+        display flex
+        flex-direction row
+
+    # content
+        margin 0 auto
+        width 80%
+        $$ display flex
+        $$ flex-direction column
+        padding 30px 30px
+        $$ line-height 24px
+        word-spacing 2px
+        $$ font-size 18px
+        
+    # left-nav
+        $$ border-right 1px solid #a0a0a0
+        padding 10px 10px
+        < li
+            margin-top 20px
+            font-size 18px
+            < a
+                color #eee
+    
+    # right-nav
+        $$ border-left 1px solid #a0a0a0
+        padding 10px 20px
+        < ul
+            margin-left 0
+            < li
+                font-size 14px
+                < a
+                    color #eee
+
+    # footer
+        $$ border-top 1px solid #a0a0a0
+        display grid
+        grid-template-columns 1fr 1fr
+        padding 20px
+
+    $include aside-right
+    
+    < article
+        background-color ${wzCtx.Colors.bg_dark_medium}
+        border-radius 10px
+        padding 20px
+        margin 0 5px 3px 5px
+        box-shadow 0 3px 5px rgba(0,0,0,0.1)
+        font-size 16px
+
+    media (min-width: 768px)
+        < article
+            padding 40px 40px 30px
+            font-size 16px
+            margin 0 10px 10px 10px
+            box-shadow 0 5px 10px rgba(0,0,0,0.1)
+    
+    . doc-container
+        margin 0 auto
+        width 60%
+        display flex
+
+    . w-1-5
+        width 20%
+    
+    . w-4-5
+        width 80%
+
+    . doc-title
+        font-size 1.4rem
+        font-weight 600
+        padding-bottom 5px
+        border-bottom 1px solid #999
+
+    . doc-title-2
+        font-size 1.2rem
+        font-weight 600
+        padding-bottom 3px
+
+    . doc-summary
+        padding 15px
+        < h4
+            color #eee
+
+    . ittf-panel
+        $$ background-color #aaa
+        $$ padding 20px
+        margin-bottom 20px
+
+    . ittf-panel-title
+        font-size 0.8rem
+        font-weight 700
+
+    . js-panel
+        margin-bottom 20px
+    
+    . js-panel-title
+        font-size 0.8rem
+        font-weight 700
+        padding-left 10px
+
+    . bash-panel
+        margin-bottom 20px
+    
+    . bash-panel-title
+        font-size 0.8rem
+        font-weight 700
+        padding-left 10px
+
+    media (min-width: 768px)
+        . ittf-panel-title
+            font-size 16px
+            font-weight 700
+            $$ margin-bottom 2px
+
+
+    . link
+        float 'right'
+        paddingLeft '10px'
+    
+    . cheatsheet
+    . cheatsheet-page
+        display flex
+        padding 25px
+        position fixed
+        height 100vh
+        width 100%
+    
+    . cheatsheet-sidebar
+        display flex
+        min-width 300px
+        margin 5px
+        flex-direction column
+        overflow auto
+
+    . cheatsheet-sidebar-schemas
+        display flex
+        flex-direction column
+        border 1px solid gray
+        margin-bottom 5px
+    
+    . cheatsheet-sidebar-element-title
+        padding-left 15px
+        font-weight 600
+
+    . cheatsheet-sidebar-items
+        border 1px solid gray
+
+    . cheatsheet-content
+        flex 1 1 auto
+        margin 5px
+        overflow auto
+
+    . cheatsheet-item
+        display flex
+        background-color #3e5a6d
+
+    . cheatsheet-ittf
+        padding 10px
+        border 1px solid gray
+        margin 5px
+        width 50%
+        < pre
+            width 100%
+            padding 10px
+
+    . cheatsheet-generated
+        padding 10px
+        border 1px solid gray
+        margin 5px
+        width 50%
+        background-color #dedede
+        < pre
+            width 100%
+            padding 10px
+
+    . cheatsheet-element-title
+        background-color #bbb
+        width 100%
+        padding 15px 5px 15px 15px
+        margin 20px 0 10px 0
+        font-size 1.2rem
+        font-weight 600
+
+    . cheatsheet-item-title
+        padding 5px 10px 0px 10px
+        font-weight 700
+    
+    $include highlight
+
+    $ var opt = wzCtx.Fonts
+    css/fonts(&opt)
+
+    $include tables

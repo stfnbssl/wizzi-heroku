@@ -1,0 +1,23 @@
+﻿$group
+    $
+        var sect = {
+            title: '"xml/export" builtin artifact'
+        };
+
+    section(&sect)
+
+		p The xml/export builtin artifact can be used in a Wizzi Job,
+			+ to save the xml representation of
+			+ a Wizzi Model instance when its Wizzi Schema 
+			+ declares the `export-to xml` element.
+
+		ittf-panel
+            title Sample wfjob artifact element using the xml/export artifact.
+            ittf
+                wfjob
+                    ...
+                    artifact xml export of model sample.form.ittf
+                        src sample.form.ittf
+                        schema form
+                        generator xml/export
+                        extension xml

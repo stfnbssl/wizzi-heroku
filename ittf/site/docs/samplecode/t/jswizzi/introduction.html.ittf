@@ -1,0 +1,10 @@
+﻿$group
+    $
+        var sect = {
+            title: 'JsWizzi'
+        };
+
+    section(&sect)
+
+        table-doc()
+            tr( Todo, Todo, Todo )

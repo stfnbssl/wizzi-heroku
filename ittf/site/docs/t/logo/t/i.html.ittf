@@ -1,0 +1,22 @@
+﻿$group
+	$params l:float, t:float, ratio:float, &opt
+
+	polyline
+		stroke ${opt.stroke}
+		fill ${opt.fill}
+		stroke-width 2
+		points ${l} ${t+opt.ybottom} 
+			\b ${l+10*opt.ratio} ${t+opt.y1+80*opt.ratio}
+			\b ${l+40*opt.ratio} ${t+opt.y1+80*opt.ratio} 
+			\b ${l+50*opt.ratio} ${t+opt.ybottom} 
+
+    path
+		stroke white
+		fill ${opt.fill}
+		stroke-width 2
+		d M${l+30*ratio}, ${t+opt.y1+20*ratio} 
+			\b C${l+60*ratio},${t+opt.y1+40*ratio} 
+			\b ${l+0*ratio},${t+opt.y1+60*ratio} 
+			\b ${l+30*ratio}, ${t+opt.y1+74*ratio}
+
+

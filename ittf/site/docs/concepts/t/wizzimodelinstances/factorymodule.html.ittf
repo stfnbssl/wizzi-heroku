@@ -1,0 +1,53 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Model factory'
+        };
+
+    section(&sect)
+
+		p The javascript module {schema-name}-factory.g.js exports the method
+			\b 'createLoadModel', that is an HOF that returns the 'loadModel' function.
+			\b It must be called passing the 'wizzi' object.
+
+        ittf-panel
+            title The {schema-name}-factory.g.js API
+            schema js
+            ittf
+                {
+                    func createLoadModel
+                        # HOF : returns the loadModel function for the given factory
+                        { wizziObject
+                            func loadMTree
+                                api-ref wizzi-mtree.loader.loadMTree
+                                # This function is prepared by the wizzi.WizziFactory instance class
+                                # and has repository access functions and load options in its closure.
+                            { file
+                                api-ref wizzi.util.file
+                            { errors
+                                api-ref wizzi.errors
+                        ...
+                        return
+                            func loadModel
+                                # This returned function require a complex 'loadContext' 
+                                # parameter with a lot of interfaces passed.
+                                # It will be called by the wizzi.WizziFactory instance and
+                                # not directly from client code.
+                                string ittfDocumentUri
+                                    # The path to the primary ITTF Document from which
+                                    # the mTree will be loaded
+                                { loadContext
+                                    { __productionManager
+                                        api-ref wizzi.production.productionManager
+                                        { productionContext
+                                            api-ref wizzi.production.productionContext
+                                            { aclstat
+                                                api-ref wizzi.production.aclstat
+                                    { __ittfDocumentStore
+                                        api-ref wizzi-repo.ittfDocumentStore
+                                    { mTreeBuildupContext
+                                        optional
+                                        | api-ref wizzi-plugin.wizziModel
+                                        | POJO
+                                callback
+

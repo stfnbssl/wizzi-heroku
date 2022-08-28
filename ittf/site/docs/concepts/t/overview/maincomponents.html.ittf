@@ -1,0 +1,23 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Main components'
+        };
+
+    section(&sect)
+
+		ul
+			li ITTF Documents
+            li Template Engine
+            li JsWizzi
+            li mTrees
+			li Wizzi Schemas
+            li Wizzi Model DOMs
+			li Wizzi Model Instances
+			li Model Transformers
+			li Artifact Generators
+			li Wizzi Jobs
+            li Wizzi Plugins
+            li Wizzi API
+            li Wizzi CLI
+            li Virtual Store System

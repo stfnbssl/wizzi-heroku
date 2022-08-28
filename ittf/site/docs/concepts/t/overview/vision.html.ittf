@@ -1,0 +1,24 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Vision'
+        };
+
+    section(&sect)
+
+		p Computing handles data structures and is itself described by data. 
+			\b A program source is a human friendly representation of an Abstract Syntax Tree (AST), a data structure that 
+			\b represents its computations. 
+			\b Programs are data produced by programmers and tools.
+
+		p Wizzi is a tool for composing data structures.
+			\b It aims at those tasks, in the development process, where programming can be driven by data.
+
+		p In Wizzi, human friendly representations of data drive artifact generations.
+			\b Wizzi uses a simple indented text format and a template processor for composing tree data structures. 
+			
+		p Domain specific schemas (
+            a Wizzi Schemas
+                href ./wizzischemas.html
+            + ) can be applied to the composed nodes, creating typed objects 
+                \b used as contexts in artifact generations or in new data compositions.

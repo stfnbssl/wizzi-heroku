@@ -1,0 +1,13 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Glossary'
+        };
+
+    section(&sect)
+
+		table
+            tbody
+                glo-item( TODO )
+                    span TODO
+

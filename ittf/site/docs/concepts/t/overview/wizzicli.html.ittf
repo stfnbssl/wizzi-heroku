@@ -1,0 +1,17 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi CLI'
+        };
+
+    section(&sect)
+
+        p The Wizzi command line interface (CLI) is used to perform basic functionality, 
+            \b such as executing a Wizzi Production, 
+            \b creating a new Wizzi Package based on a starter, 
+            \b wizzifying an existing artifact or a folder of artifacts.
+        
+        p The Wizzi CLI is available via \b
+            a npm
+                href https://www.npmjs.com/
+            + \b and should be installed globally.

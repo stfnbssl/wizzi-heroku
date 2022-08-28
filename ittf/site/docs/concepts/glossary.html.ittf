@@ -1,0 +1,12 @@
+html
+    $global
+        var dollar = '$';
+    $
+        var art= {
+            section: 'Concepts',
+            title: 'Glossary'
+        };
+    
+    _layouts/concepts(&art)
+    
+        $include ./glossary/introduction

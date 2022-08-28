@@ -1,0 +1,40 @@
+html
+
+    $
+        var opt = {
+            section: 'Lab',
+        }
+        var ca = 'm-s color-header font-x font-w-s';
+
+    html/layouts/site( &opt )
+    
+        . container-70 m-100
+            . flex-column space-between $$ bg-color-header color-header
+    
+            . flex-column
+                ul
+                    $foreach group in siteCtx.Lab.groups
+                        li
+                            class mt-8
+                            h5
+                                class px-3 mb-3 lg:mb-3 uppercase tracking-wide font-semibold text-sm lg:text-xs text-gray-900
+                                + ${group.title}
+                            ul
+                                $foreach item in group.items
+                                    li
+                                        a
+                                            class px-3 py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500
+                                            href ${item.href}
+                                            span
+                                                class rounded-md absolute inset-0 bg-cyan-50 opacity-0
+                                            span
+                                                class relative
+                                                + ${item.title}   
+            . flex-colum
+                h3 common urls
+                p Packi Editor -> [host]/~~/[a|p|m|t]/[username]/[production_name]
+                p (a: artifact production, p: package production, m: meta production, t: tFolder)
+                p Packi Editor Example -> http://localhost:5000/~~/a/stfnbssl/html.starter
+                p Site Packi Browse -> [host]/~-/[production_name]
+                p User Packi Browse -> [host]/~/[username]/[production_name]
+

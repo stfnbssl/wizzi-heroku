@@ -11,7 +11,8 @@ const index_1 = require("./features/config/index");
 const mongodb_1 = require("./services/mongodb");
 const index_2 = require("./site/index");
 const index_3 = require("./features/blog/index");
-const index_4 = require("./middlewares/index");
+const index_4 = require("./features/docs/index");
+const index_5 = require("./middlewares/index");
 function startServices(config) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         let modelBuilders = [
@@ -24,15 +25,16 @@ function startServices(config) {
 function getInitValues(config, startedServices) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         let middlewaresPre = [
-            ...index_4.appMiddlewaresPre
+            ...index_5.appMiddlewaresPre
         ];
         let middlewaresPost = [
-            ...index_4.appMiddlewaresPost
+            ...index_5.appMiddlewaresPost
         ];
         let apis = [];
         let controllers = [
             ...index_2.siteControllers,
-            ...index_3.blogControllers
+            ...index_3.blogControllers,
+            ...index_4.docsControllers
         ];
         const appInitializer = {
             config,
@@ -40,7 +42,8 @@ function getInitValues(config, startedServices) {
             globalApi: {},
             apis,
             controllers,
-            middlewaresPost
+            middlewaresPost,
+            auth0Secured: index_5.auth0Secured
         };
         return appInitializer;
     });

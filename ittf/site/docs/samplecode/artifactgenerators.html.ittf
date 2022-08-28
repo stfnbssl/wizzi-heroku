@@ -1,0 +1,12 @@
+﻿html
+    $global
+        var dollar = '$';
+    $
+        var art = {
+            section: 'Sample code',
+            title: 'Artifact Generators'
+        };
+    
+    _layouts/samplecode(&art)
+    
+        $include ./artifactgenerators/introduction

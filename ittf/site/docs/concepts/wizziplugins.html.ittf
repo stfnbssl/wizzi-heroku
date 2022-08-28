@@ -1,0 +1,18 @@
+﻿html
+    $global
+        var dollar = '$';
+    $
+        var art = {
+            section: 'Concepts',
+            title: 'Wizzi Plugins'
+        };
+    
+    _layouts/concepts(&art)
+    
+        $include ./wizziplugins/introduction
+        $include ./wizziplugins/architect
+        $include ./wizziplugins/api
+        $include ./wizziplugins/core
+        $include ./wizziplugins/default
+        $include ./wizziplugins/npm
+        $include ./wizziplugins/local

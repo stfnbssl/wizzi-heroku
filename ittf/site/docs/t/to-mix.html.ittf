@@ -1,0 +1,6 @@
+$group
+    $params name, args, args2|@@null, args3|@@null
+    $ var x = name + '('
+    $$ ${x}${args} ${iif(args2 ? ', ' + args2 : '')} ${iif(args3 ? ', ' + args3 : '')}
+    ${x}${args}, ${args2}, ${args3}
+        $hook

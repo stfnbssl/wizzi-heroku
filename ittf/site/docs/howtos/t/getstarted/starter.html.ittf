@@ -1,0 +1,21 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Starter Package'
+        };
+
+    section(&sect)
+
+        bash-panel
+            title Create the Wizzi Starter Package
+            ittf
+                git wizzi create-starter
+
+        div
+            + This Wizzi Package contains some examples to get started:
+        ul
+            li A simple static website
+            li A basic express server
+            li A simple React client App
+            li A minimal Wizzi Plugin
+            li Basic usages of the Wizzi API

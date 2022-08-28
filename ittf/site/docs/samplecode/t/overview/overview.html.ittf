@@ -1,0 +1,9 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Overview'
+        };
+
+    section(&sect)
+
+        p Samples are the best way to get started.

@@ -1,0 +1,6 @@
+$group
+    . container-70
+        width 70%
+        margin 0 auto
+    . grid
+        display grid

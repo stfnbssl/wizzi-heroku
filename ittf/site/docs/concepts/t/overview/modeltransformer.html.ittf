@@ -1,0 +1,16 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Model transformers'
+        };
+
+    section(&sect)
+
+		p Model transformations can be applied to Wizzi Model instances before using them as context objects.
+
+		p A model trasformer is an API exported by a plugin and must respect the Wizzi Plugin interface.
+			\b Its internal implementation is free. Usually the implementor is a javascript program that receives
+			\b a Wizzi Model instance, and optionally one or more context objects, as input,
+            \b and returns a transformed model or a new POJO object.
+
+		p A model transformation can be declared in a Wizzi Job or executed invoking a method of the Wizzi API.

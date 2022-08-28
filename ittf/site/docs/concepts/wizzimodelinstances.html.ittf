@@ -1,0 +1,14 @@
+﻿html
+    $global
+        var dollar = '$';
+    
+    $
+        var art = {
+            section: 'Concepts',
+            title: 'Wizzi Model Instances'
+        };
+    
+    _layouts/concepts(&art)
+
+        $include ./wizzimodelinstances/introduction
+        $include ./wizzimodelinstances/factorymodule

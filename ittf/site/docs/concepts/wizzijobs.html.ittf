@@ -1,0 +1,14 @@
+﻿html
+    $global
+        var dollar = '$';
+    $
+        var art = {
+            section: 'Concepts',
+            title: 'Wizzi Jobs'
+        };
+    
+    _layouts/concepts(&art)
+    
+        $include ./wizzijobs/introduction
+        $include ./wizzijobs/wfjob
+        $include ./wizzijobs/runnerServer

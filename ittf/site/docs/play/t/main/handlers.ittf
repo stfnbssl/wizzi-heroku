@@ -1,0 +1,41 @@
+$group
+
+    => handleGeneratedView
+        _ this.setState
+            {
+                @ resultView 'generated'
+            =>
+                _ this.execProduction
+    
+    => handleMTreeView
+        _ this.setState
+            {
+                @ resultView 'mtree'
+            =>
+                _ this.execProduction
+    
+    => handleScriptView
+        _ this.setState
+            {
+                @ resultView 'script'
+            =>
+                _ this.execProduction
+
+    => handleSelectCheatsheetName
+        param name
+        _ this.setState
+            {
+                @ selectedCheatsheetName name
+                @ selectedCheatsheetItem null
+            =>
+                _ this.loadCheatsheet
+
+    => handleSelectCheatsheetItem
+        param item
+        log 'handleSelectCheatsheetItem', item
+        _ this.setState
+            {
+                @ selectedCheatsheetItem item
+            =>
+                _ this.execProduction
+

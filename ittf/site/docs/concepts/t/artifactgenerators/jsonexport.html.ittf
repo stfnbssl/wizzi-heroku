@@ -1,0 +1,25 @@
+﻿$group
+    $
+        var sect = {
+            title: '"json/export" builtin artifact'
+        };
+
+    section(&sect)
+		
+        p The json/export builtin artifact can be used in a Wizzi Job,
+			+ to save the JSON representation of
+			+ a Wizzi Model instance, when its Wizzi Schema 
+			+ declares the `export-to json` element.
+
+		ittf-panel
+            title Sample wfjob artifact element using the json/export artifact.
+            ittf
+                wfjob
+                    ...
+                    artifact json export of model sample.form.ittf
+                        src sample.form.ittf
+                        schema form
+                        generator json/export
+                        extension json
+
+

@@ -1,0 +1,12 @@
+﻿html
+    $global
+        var dollar = '$';
+    $
+        var art = {
+            section: 'Geeky',
+            title: 'Model Transformers'
+        };
+    
+    _layouts/geeky(&art)
+    
+        $include ./modeltransformers/introduction

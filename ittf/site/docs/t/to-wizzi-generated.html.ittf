@@ -1,0 +1,5 @@
+$group
+    $params xpackage, file|@@null
+    a generated
+        href https://github.com/stfnbssl/wizzi/blob/master/packages/${xpackage}/dist/${file}
+

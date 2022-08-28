@@ -1,0 +1,20 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Built-in artifacts'
+        };
+
+    section(&sect)
+
+		div
+            + The \b
+            to-plugin( wizzi-core )
+            + plugin exports some useful artifacts:
+			ul
+				li json/document
+                li json/export
+				li xml/document
+                li xml/export
+				li text/document
+                li ittf/document
+

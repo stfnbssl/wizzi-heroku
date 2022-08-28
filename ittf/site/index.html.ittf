@@ -17,6 +17,9 @@ html
                 . text-align-center m-t-100
                     style font-size: 52px
                     + ${siteCtx.title}
+                . text-align-center
+                    style font-size: 52px
+                    + ${siteCtx.title2}
                 . text-align-center m-t-100
                     style font-size: 32px
                     $foreach item in siteCtx.subtitles

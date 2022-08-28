@@ -1,0 +1,48 @@
+﻿$group
+    $
+        var sect = {
+            title: 'The "runnerServer"'
+        };
+
+    section(&sect)
+
+		p When the Wizzi factory is used in a server application,
+			\b or in a long running process where many jobs are 
+			\b executed, it is useful to access factory
+			\b services, prepared at startup, directly from the
+			\b JsWizzi code inside ITTF documents.
+
+		p There are two JsWizzi global functions for this
+			\b purpose.
+		
+        ul
+			
+			li $.api( functionName, ... arguments ... )
+				p Allow to call a user function declared on start up.
+			
+			li $.loadModel( modelName )
+				p Allow the retrieval of a Wizzi Model preloaded on start up.
+
+		h3 The wizzifile.js
+		p ... TODO ...
+		
+		h4 Event handler wizzifile.onConfig( config )
+		p This event is raised before creating the runnerServer instance.
+			\b At this point we can call the config.get(propertyName) and
+			\b config.set(propertyName, value) methods on the config object.
+
+		h4 Event handler wizzifile.onStart( runnerServerInstance, config )
+		p This event is raised before the initialization of the wizzi factory
+			\b contained in the runner server. At this point we can call the
+			\b runnerServerInstance.registerApi(name, function) method, the
+			\b runnerServerInstance.registerPlugin(pluginNameOrPath) method
+			\b and the runnerServerInstance.registerGlobalContext(object) method.
+		
+		h4 Event handler wizzifile.onPrepare( runnerServerInstance, config )
+		p This event is raised when the wizzi factory contained in the runner server
+			\b has benn initialized. Now it is forbidden to call the
+			\b registerPlugin and registerGlobalContext methods but we 
+			\b can call the runnerServerInstance.loadModel and
+			\b runnerServerInstance.transformModel methods.
+
+

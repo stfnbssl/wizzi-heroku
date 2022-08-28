@@ -1,0 +1,6 @@
+$group
+    $params name, kind|@@null
+    $ 
+        var xname = kind != 'nospace' ? ' ' + name + ' ' : name
+    a ${xname}
+        href https://github.com/stfnbssl/wizzi/tree/master/packages/${name}/dist    

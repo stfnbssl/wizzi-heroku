@@ -1,0 +1,79 @@
+html
+
+    $
+        var opt = {
+            section: 'Project',
+            stickyNav: 'stickyNavbar',
+            stickyNavOffset: 50,
+        }
+        // var ca = 'm-s color-header font-x font-w-s';
+        var ca = 'm-s font-x font-w-s';
+
+    html/layouts/site( &opt )
+    
+        . flex-row space-between m-t-xxl width-full
+            id stickyNavbar
+            . flex-row justify-center m-0-auto
+                html/a( TODOS, /ittf/site/project/todo.html.ittf, ${ca}
+                html/a( Issues, /ittf/site/project/issues.html.ittf, ${ca}
+
+        . container-70 
+            . flex-column space-between $$ bg-color-header color-header
+                . m-l-150 m-r-150 font-x font-w-s
+
+                    h1 ISSUES
+                    p In the Packi Editor the '$' ITTF Command must be followed by a space otherwise sinthax highlighting does not work correctly.
+            
+                    h1 Core
+                    p (Ok for message, but there are unnecessary actions?) get free of crypto/endec.ENCRYPTION_KEY message/action
+                    p Is the package wizzi-helpers still used ???
+                    p wizzi-legacy-v5 can be integrated in wizzi-core? Should be documented.
+                    p A wizzi macro expression should work even if there are spaces between graphs and expression ${'$'}{ '()' }
+                    p Delete UTC time from generation headings, they produce false changes to commit.
+                    
+                    h1 Mongo Productions repository
+                    p The global context artifact 'wzctx' should be optional 
+                    p Before returning a production fron MongoDB always check its integrity
+                    
+                    h1 Packi editor
+                    p The editor must show production name and kind (artifact|package|meta|tFolder).
+                    p Make a decent splitter work between edit content and result pane.
+                    p Result pane icons should be inside the pane. And should be decent.
+                    p The 'saved' message should be: 'Not modified', or 'Not yet saved' or 'Saved x seconds|minutes|hours ago'.
+                    p SavedPacki and PackiOptions are the same
+                    p pageforms: debounce checkname 1 second
+                    p pageforms: reset checkname error color when valid
+                    p checkname maybe unnecessary in apiv1* controllers
+
+                    p
+                        .$
+                            C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen wfschema.model.main err [wzError [JsWizziError]: JsWizziRunner Error
+                            message: Missing runner for type: ThisExpression
+                            node statement: escodegen failed: Unknown node type: undefined
+                            node inspected: 'runner'
+                            parent node statement:
+                            parent node inspected: 'runner'
+                            currentModel_uri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\t\model\element.js.ittf
+                            currentModel_mixerUri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\wfschema-model.js.ittf (error calling ip, on statement: $.ip('f4', 'this.wzLoadToChildColl(child, _md.${element.acceptAnyTagId}, this.${this.element.acceptAnyTagCollectionId})', 'string', 1128, false), currentModel_uri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\t\model\element.js.ittf, currentModel_mixerUri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\wfschema-model.js.ittf)] {
+                            inner: null,
+                            shortmessage: 'JsWizziRunner Error\n' +
+                                'message: Missing runner for type: ThisExpression\n' +
+                                'node statement: escodegen failed: Unknown node type: undefined\n' +
+                                "node inspected: 'runner'\n" +
+                                'parent node statement: \n' +
+                                "parent node inspected: 'runner'\n" +
+                                'currentModel_uri: c:\\my\\wizzi\\stfnbssl\\wizzi\\packages\\wizzi-core\\lib\\artifacts\\wfschema\\model\\gen\\ittf\\t\\model\\element.js.ittf\n' +
+                                'currentModel_mixerUri: c:\\my\\wizzi\\stfnbssl\\wizzi\\packages\\wizzi-core\\lib\\artifacts\\wfschema\\model\\gen\\ittf\\wfschema-model.js.ittf',
+                            info: {
+                                method: 'wizzi-mtree.jsWizzi.jsWizziRunner.undefined',
+                                parameter: null,
+                                sourcePath: 'C:\\My\\wizzi\\stfnbssl\\wizzi\\node_modules\\wizzi-legacy-v5\\lib\\jswizzi\\jsWizziRunner.js'
+                            },
+                            ittfDocumentUri: 'C:\\My\\wizzi\\stfnbssl\\wizzi\\packages\\wizzi-core\\lib\\artifacts\\wfschema\\model\\gen\\ittf\\wfschema-model.js.ittf'
+                            }                    
+                    
+                    h1 Lorem
+                    lorem 200
+                    
+                    
+    

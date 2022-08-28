@@ -1,0 +1,12 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Get started'
+        };
+
+    section(&sect)
+
+        p How tos are a starter for creating your first Wizzi Productions.
+
+
+        

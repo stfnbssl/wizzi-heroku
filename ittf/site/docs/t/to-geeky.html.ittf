@@ -1,0 +1,34 @@
+a
+    $params name
+    $if name.toLowerCase() === 'mtree' || name.toLowerCase() === 'mtrees'
+        a ${name}
+            href ${wzCtx.Params.baseUrl}/geeky/mtrees.html
+    $elif name.toLowerCase() === 'ITTF Document' || name.toLowerCase() === 'ITTF Documents'
+        a ${name}
+            href ${wzCtx.Params.baseUrl}/geeky/ittfdocuments.html
+    $elif name === 'Template engine'
+        a ${name}
+            href ${wzCtx.Params.baseUrl}/geeky/templateengine.html
+    $elif name.toLowerCase() === 'jswizzi'
+        a ${name}
+            href ${wzCtx.Params.baseUrl}/geeky/jswizzi.html
+    $elif name.toLowerCase() === 'wizzi model' || name.toLowerCase() === 'wizzi models'
+        a ${name}
+            href ${wzCtx.Params.baseUrl}/geeky/wizzimodels.html
+    $elif name.toLowerCase() === 'wizzi schema' || name.toLowerCase() === 'wizzi schemas'
+        a ${name}
+            href ${wzCtx.Params.baseUrl}/geeky/wizzischemas.html
+    $elif name.toLowerCase() === 'wizzi model dom' || name.toLowerCase() === 'wizzi model doms'
+        a ${name}
+            href ${wzCtx.Params.baseUrl}/geeky/wizzimodeldoms.html
+    $elif name.toLowerCase() === 'model transformers'
+        a ${name}
+            href ${wzCtx.Params.baseUrl}/geeky/modeltransformers.html
+    $elif name.toLowerCase() === 'artifact generations'
+        a ${name}
+            href ${wzCtx.Params.baseUrl}/geeky/artifacts.html
+    $elif name.toLowerCase() === 'wizzi api' || name.toLowerCase() === 'wizzi.wizzifactory'
+        a ${name}
+            href ${wzCtx.Params.baseUrl}/geeky/wizziapi.html
+    $else
+        h1 ERROR to-geeky unknown ${name}

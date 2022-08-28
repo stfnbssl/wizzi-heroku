@@ -1,0 +1,139 @@
+﻿$group
+    $
+        var sect = {
+            title: 'The wizzi-plugin.FactoryPlugin API'
+        };
+
+    section(&sect)
+
+		p This api must be implemented by any Wizzi Plugin.
+		
+		p The methods of the api will be called by the
+            high-code( wizzi.PluginsManager )
+            span instance class
+			    \b  on requests received by the \b
+            to-docs( wizzi.WizziFactory )
+            span \b instance.
+		
+		ittf-panel
+            ittf
+                ...
+                    #
+                        # Retrieve a Wizzi Model factory by its schema name
+                        # Searching in this wizzi package. No search up in "node_modules" folders.
+                    m getModelFactory
+                        string schemaName
+                        ...
+                    -
+                    #
+                        # Retrieve a model transformer by its name
+                        # Searching in this wizzi package. No search up in "node_modules" folders.
+                    m getModelTransformer
+                        string transformerName
+                        ...
+                    -
+                    # 
+                        # Retrieve an artifact generator by its name
+                        # Searching in this wizzi package. No search up in "node_modules" folders.
+                    m getArtifactGenerator
+                        string generationName
+                    -
+                    #
+                        # Retrieve a wizzi schema definition in JSON format
+                        # Searching in this wizzi package. No search up in "node_modules" folders.
+                    m getSchemaDefinition
+                        string schemaName
+
+		h4 Object returned by the getModelFactory method
+
+		p This api is requested to the wizzi.PluginsManager from the
+			\b  wizzi.WizziFactory when a client needs to load a
+            to-docs( Wizzi Model )
+            span . The wizzi.WizziFactory, and not the client, will call the
+                high-code( createLoadModel )
+			    span and 
+                high-code( loadModel )
+                span functions.
+		
+		ittf-panel
+            ittf
+                {
+                    func createLoadModel
+                        # HOF : returns the loadModel function for the given factory
+                        { wizziObject
+                            func loadMTree
+                                api-ref wizzi-mtree.loader.loadMTree
+                                # This function is prepared by the wizzi.WizziFactory instance class
+                                # and has repository access functions and load options in its closure.
+                            { file
+                                api-ref wizzi.util.file
+                                # TODO this object should be a virtual file system service provided by
+                                # store implementations.
+                            { errors
+                                api-ref wizzi.errors
+                        ...
+                        return
+                            func loadModel
+                                # This function require a complex 'loadContext' 
+                                # parameter.
+                                # It will be called by the wizzi.WizziFactory instance and
+                                # not directly from client code.
+                                string ittfDocumentUri
+                                    # The path to the primary ITTF Document from which
+                                    # the mTree will be loaded
+                                { loadContext
+                                    { __productionManager
+                                        api-ref wizzi.production.productionManager
+                                        { productionContext
+                                            api-ref wizzi.production.productionContext
+                                            { aclstat
+                                                api-ref wizzi.production.aclstat
+                                    { __ittfDocumentStore
+                                        api-ref wizzi-repo.ittfDocumentStore
+                                    { mTreeBuildupContext
+                                        optional
+                                        | api-ref wizzi-plugin.wizziModel
+                                        | POJO
+                                callback
+
+		h4 Object returned by the getModelTransformer method
+        ittf-panel
+            ittf
+                {
+                    func trans
+                        { model
+                            | api-ref wizzi-plugin.wizziModel
+                            | POJO
+                        { ctx
+                            api-ref wizzi.artifact.genContext
+                        callback
+
+		h4 Object returned by the getArtifactGenerator method
+        ittf-panel
+            ittf
+                {
+                    func gen
+                        { model
+                            | api-ref wizzi-plugin.wizziModel
+                            | POJO
+                        { ctx
+                            api-ref wizzi.artifact.genContext
+                        callback
+
+		h4 Object returned by the getSchemaDefinition method
+		p The object returned is a JSON representation of the
+			\b  requested schema. See the
+            a `wfjob` JSON schema definition
+                href https://github.com/wizzifactory/wizzi/blob/master/packages/wizzi-core/dist/lib/wizzi/models/wfjob-schema.g.json
+            span .
+
+		h4 View the code
+		p Have a look at how the
+            high-code( wizzi-plugin.FactoryPlugin )
+            span API is implemented in the \b
+			a `wizzi-js` plugin
+				href https://github.com/wizzifactory/wizzi/tree/master/packages/wizzi-js/dist/index.js
+            span . See the \b
+			a ITTF source
+				href https://github.com/wizzifactory/wizzi/blob/master/packages/wizzi-js/.wizzi/ittf/root/index.js.ittf
+            span \b also.

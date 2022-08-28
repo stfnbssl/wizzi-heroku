@@ -1,0 +1,220 @@
+$group
+    < pre, code
+        white-space pre
+        $$ display inline-block
+        margin 0
+        font 14px/1.8em Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace
+        padding 0 0.5em
+
+    - ========================================
+        - WIZZI PRETTY PRINT
+        - ----------------------------------------
+    
+    . pln
+        color #F1F2F3
+
+    . tag
+        color #77f328
+
+    . str
+        color #EC7600  $$ string content
+    . kwd
+        color #f79256  $$ a keyword
+    . com
+        color #66747B  $$ a comment
+    . typ
+        color #678CB1  $$ a type name
+    . lit
+        color #FACD22  $$ a literal value
+    . mix               
+        color #ff0040  $$  mixin call
+        cursor pointer
+    . tag
+        color #77f328  $$ a markup tag name
+    . atn
+        color #E0E2E4  $$ a markup attribute name
+    . atv
+        color #EC7600  $$ a markup attribute value
+    . expr
+        color #f3e877  $$ a declaration; a variable name
+    . fun
+        color red  $$ a function name
+    . arg
+        color yellow  $$ a mixin arg
+
+    . pp-ln
+        color #999
+    . pp-pln
+        color #f1ebeb
+    . pp-str
+        color #EC7600  $$ string content
+    . pp-kwd
+        color #f79256  $$ a keyword
+    . pp-com
+        color #66747B  $$ a comment
+    . pp-typ
+        color #678CB1  $$ a type name
+    . pp-lit
+        color #FACD22  $$ a literal value
+    . pp-mix               
+        color #ff0040  $$  mixin call
+        cursor pointer
+    . pp-tag
+        color #77f328  $$ a markup tag name
+    . pp-atn
+        color #E0E2E4  $$ a markup attribute name
+    . pp-atv
+        color #EC7600  $$ a markup attribute value
+    . pp-expr
+        color #f3e877  $$ a declaration; a variable name
+    . pp-fun
+        color red  $$ a function name
+    . pp-arg
+        color yellow  $$ a mixin arg
+
+    < pre.prettyprint
+        $$ padding 0.8rem
+        $$ border-left 5px solid #999
+        $$ font-size 1rem
+        overflow auto
+        $$ background #2B3A42
+        $$ background #3e586d
+        $$ margin-bottom 1rem
+        $$ text-shadow 0 1px #888
+        font-family Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+        text-align left
+        white-space pre
+        word-spacing normal
+        word-break normal
+        word-wrap normal
+        line-height 1.3
+        tab-size 4
+        hyphens none
+
+        background-color #2b2b2b
+        color #fff
+        $$ max-width 100%
+        $$ overflow-x auto
+        vertical-align middle
+        border-radius 5px
+        box-shadow inset 0 1px 10px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(0,0,0,.5)
+
+        < ol
+            padding-left 2rem
+    
+    . L0
+        + .L1
+        + .L2
+        + .L3
+        + .L4
+        + .L5
+        + .L6
+        + .L7
+        + .L8
+        + .L9
+        color #777
+        margin-left 0.3rem
+        padding-left 0.3rem
+        list-style-type decimal
+
+    # Alternate shading for lines
+    . L1
+        + .L3
+        + .L5
+        + .L7
+        + .L9
+        $$ background #013a56
+        $$ background #2A3941
+        background-color #2f2f2f
+
+    . prettyprint-js
+        background #fff
+
+    # Alternate shading for lines
+    . J1
+        + .J3
+        + .J5
+        + .J7
+        + .J9
+        background #ddd
+
+    . linenums
+        color #fff
+
+    media screen and (max-width: 1028px)
+
+        . pp-pln
+            color #FFF
+
+        < pre.prettyprint
+                padding 1.2rem
+                border-left 5px solid #999
+                font-size 2rem
+                line-height 3rem
+                overflow auto        
+
+    $*
+    media (min-width: 768px)
+        < pre, code
+            font-size 16px
+
+    . highlight
+        + p > pre
+        + p > code
+        + p > nobr > code
+        + li > code
+        + li> pre
+        + h5 > code
+        + .note > code
+            background-color #2b2b2b
+            color #fff
+            max-width 100%
+            overflow-x auto
+            vertical-align middle
+            border-radius 5px
+            box-shadow inset 0 1px 10px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(0,0,0,.5)
+
+    . note .highlight
+        width 94%
+        < pre code
+            font-size 0.9em
+            background-color transparent
+            box-shadow none
+
+    . note code
+        background-color #333
+        background-color rgba(0,0,0,0.2)
+        margin-left 2.5px
+        margin-right 2.5px
+        font-size 0.8em
+
+    . code-block
+        margin 10px 0
+        < code
+            background none
+
+    . highlight
+        margin 1em 0
+        width 100%
+        overflow auto
+
+    < pre.highlight
+        padding 10px 0.5em
+
+    . highlighter-rouge .highlight
+        @extend .highlight
+        margin 0
+    *$
+
+    . highlight-code
+        white-space nowrap
+        padding 4px 8px 4px 0px
+        background-color #2b2b2b
+        color #fff
+        max-width 100%
+        overflow-x auto
+        vertical-align middle
+        -webkit-border-radius 5px
+        -moz-border-radius 5px
+        border-radius 5px
+        box-shadow inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5)

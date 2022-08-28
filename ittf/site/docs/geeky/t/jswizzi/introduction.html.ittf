@@ -1,0 +1,23 @@
+﻿$group
+    $
+        var sect = {
+            title: 'JsWizzi'
+        };
+
+    section(&sect)
+        
+        table-doc()
+                
+                tr( The JsWizzi context object, wizzi-mtree, lib/jswizzi/jsWizziContext.js.ittf, lib/jswizzi/jsWizziContext.js )
+                    p Here is where the evaluation context of a JsWizzi execution is managed.
+                
+                tr( The JsWizzi script coder, wizzi-mtree, lib/jswizzi/jsWizziScriptCoder.js.ittf, lib/jswizzi/jsWizziScriptCoder.js )
+                    p This is an helper module for writing programmatically a JsWizzi script.
+                        \b It is used by the mTree build up scripter, see the 
+                        to-geeky( Template engine )
+                        + .
+                
+                tr( The JsWizzi runner, wizzi-mtree, lib/jswizzi/jsWizziRunner.js.ittf, lib/jswizzi/jsWizziRunner.js )
+                    p This module is the executor of a JsWizzi script or expression.
+
+		

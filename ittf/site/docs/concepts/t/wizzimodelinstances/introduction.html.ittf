@@ -1,0 +1,18 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Model instances'
+        };
+
+    section(&sect)
+
+		p A Wizzi Model instance is an in memory javascript object 
+            \b that acts as a context object in a Wizzi Production.
+
+        p It is an instance of a Wizzi Model DOM
+            \b and is created by a Wizzi Model factory during a Wizzi Model loading operation,
+            \b after an mTree has been loaded from an ITTF Document.
+
+        p To be loaded in a Wizzi Model instance an mTree must be conformant to the \b
+            to-docs( Wizzi Schema )
+			span \b of the model.	

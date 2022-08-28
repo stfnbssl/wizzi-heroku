@@ -1,0 +1,188 @@
+$group
+
+    $
+        var _schemas = ['ittf', 'js', 'jsx', 'ts', 'html', 'css', 'scss', 'svg', 'graphql', 'json', 'xml', 'text'];
+
+    $include main/functions
+    $include main/styled
+
+    const monaco_findModel
+        =>
+            param path
+            _ monaco.editor.getModels().find
+                => 
+                    param model
+                    === 
+                        + model.uri.path
+                        `lit 
+                            + /
+                            @ path
+
+    react Main
+
+        ctor
+            set this.state
+                {
+                    [ csExplorer
+                    @ selectedCheatsheetName 'html'
+                    @ selectedCheatsheetItem null
+                    @ editorStates new Map()
+                    @ editType "html"
+                    @ resultView 'generated'
+
+        did-mount
+            _ this.loadCheatsheet
+
+        $include main/methods
+        $include main/handlers
+
+        render
+
+            log 'rendering Main', this.state
+            
+            const
+                {
+                    @ csExplorer
+                    @ selectedCheatsheetItem
+                    @ editType
+                    @ resultView
+                    @ generatedArtifact
+                    @ mTreeText
+                    @ mTreeBuildupScript
+                = this.state
+            
+            var editContent = ""
+            var productionView = ""
+            if selectedCheatsheetItem
+                set editContent = selectedCheatsheetItem.packiFilesJson[selectedCheatsheetItem.mainIttf].contents
+                if resultView == 'generated'
+                    set productionView = generatedArtifact
+                elif resultView == 'mtree'
+                    set productionView = mTreeText
+                elif resultView == 'script'
+                    set productionView = mTreeBuildupScript
+            
+            return
+                < React.Fragment
+                    div
+                        @ style
+                            {
+                                @ display "grid"
+                                @ padding "20px"
+                                @ margin "20px"
+                                $$ @ width "90%"
+                                @ height "70vh"
+                                @ border "1px solid grey"
+                                @ gridTemplateColumns "2fr 8fr 6fr 1fr"
+                        < Directory
+                            @ files {csExplorer}
+                            @ onSelect
+                                =>
+                                    param item
+                                    _ this.handleSelectCheatsheetItem
+                                        @ item
+                        div
+                            @ style
+                                {
+                                    @ display "grid"
+                                    @ padding "20px"
+                                    @ border "1px solid #0f0"
+                                    @ gridTemplateRows "40px 1fr"
+                            < FlexRow
+                                @ style
+                                    {
+                                        @ background "#777"
+
+                            < MonacoEditor
+                                @ files { selectedCheatsheetItem ? selectedCheatsheetItem.packiFilesJson : {} }
+                                @ selectedFile { selectedCheatsheetItem ? selectedCheatsheetItem.mainIttf : null }
+                                @ theme 'ittfDark'
+                                @ updateFiles
+                                    => 
+                                        param document
+                                        log 'MonacoEditor.updateFiles', document
+                                        set selectedCheatsheetItem.packiFilesJson
+                                            _ Object.assign
+                                                {
+                                                @ selectedCheatsheetItem.packiFilesJson
+                                                @ document
+                                        _ this.execProduction
+                                        $*
+                                        _ wz.production.updateItem
+                                            @ 'artifact'
+                                            @ selectedCheatsheetItem._id
+                                            @ selectedCheatsheetItem.wizziSchema
+                                            @ selectedCheatsheetItem.mainIttf
+                                            @ document
+                                            a_cb( result )
+                                                # _ alert(JSON.stringify(result, null, 4))
+                                                set selectedCheatsheetItem.packiFilesJson
+                                                    _ Object.assign
+                                                        {
+                                                        @ selectedCheatsheetItem.packiFilesJson
+                                                        @ document
+                                        *$
+                        
+                        div
+                            @ style
+                                {
+                                    @ display "grid"
+                                    @ padding "20px"
+                                    @ border "1px solid #00f"
+                                    @ gridTemplateRows "40px 1fr"
+                            < FlexRow
+                                @ style
+                                    {
+                                        @ background "#999"
+                                < FlexColumn
+                                    < Button
+                                        @ size 'h6'
+                                        @ onClick {this.handleGeneratedView}
+                                        @ title Generated artifact
+                                        + Generated
+                                < FlexColumn
+                                    < Button
+                                        @ size 'h6'
+                                        @ onClick {this.handleMTreeView}
+                                        @ title Builded mTree
+                                        + mTree
+                                < FlexColumn
+                                    < Button
+                                        @ size 'h6'
+                                        @ onClick {this.handleScriptView}
+                                        @ title mTree buildup script
+                                        + mTree buildup script
+                            div
+                                pre
+                                    code
+                                        + {productionView}
+                                style 
+                                    {
+                                        @ overflow "auto"
+                        nav
+                            div 
+                                id right-nav
+                                . aside-right
+                                    style 
+                                        {
+                                            @ position "fixed"
+                                    div
+                                        style
+                                            {
+                                                @ paddingTop "40px"
+                                    ul
+                                        $foreach item in _schemas
+                                            li
+                                                $*
+                                                $if item == cs.schema
+                                                    @ className 'current'
+                                                    . current
+                                                        + ${item}
+                                                $else
+                                                *$
+                                                a ${item}
+                                                    @ onClick
+                                                        =>
+                                                            _ this.handleSelectCheatsheetName
+                                                                @ '${item}'
+                    $include main/modals                                 

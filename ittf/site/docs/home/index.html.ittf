@@ -1,0 +1,142 @@
+html
+    head 
+        meta 
+            charset utf-8
+        meta 
+            name viewport
+			content width=device-width, initial-scale=1
+        link 
+            href https://fonts.googleapis.com/css?family=Roboto
+            rel stylesheet
+        css ${wzCtx.Params.baseUrl + '/styles/docs.css'}
+    body
+        div
+            id main-container
+            div
+                id header
+                div 
+                    id logo
+                    
+                    a 
+                        aria-label Link to home
+                        class logo-a
+                        href ${wzCtx.Params.baseUrl}
+                        logo/index( 74,0,0,#eee )
+                nav 
+                    id top-nav
+                    ul
+                        $foreach item in wzCtx.Section.items
+                            li
+                                a ${item.title}
+                                    href ${wzCtx.Params.baseUrl}${item.url}
+                        li 
+                            a 
+                                href https://github.com/stfnbssl/wizzi
+                                img
+                                    src ${wzCtx.Params.baseUrl}/images/GitHub-Mark-Light-32px.png
+
+            div 
+                id middle-container
+                nav 
+                    id left-nav
+                    ul
+                        li 
+                            a The history of Wizzi
+                        li 
+                            a The DNA myth
+                        li
+                            a Nightmares
+                div 
+                    id content
+                    . doc-title
+                        + What is Wizzi?
+
+                    . doc-summary
+                        
+                        p
+                            + Wizzi is a software factory, a tool for producing
+                                \b apps (mobile, web, desktop) and documents (html, pdf, word, presentation, ecc..).
+                        p
+                            + Software artifacts are described by text documents editable with common code editors.
+                                \b  A syntax highlighter is available for VSCODE. 
+                        p   
+                            + Wizzi is written in NodeJS, requires NodeJS version >= 10.0, 
+                                \b is open source and you can download it from NPM. 
+                        p
+                            + Wizzi is developed with Wizzi, so you can find plenty of examples browsing the source code 
+                                \b (the .ittf files in the .wizzi folders). 
+                        p
+                            + Wizzi is pluggable. The core plugins implement the most common target languages (HTML, Css, Javascript,
+                                \b Typescript) and data structures (JSON, XML, YAML), but you can write new plugins for
+                                \b your languages and data structures.
+                        p
+                            + See the \b
+                            a Documentation
+                                href ./docs/overview.html
+                            + to know the elements of a production and the \b
+                            a How To guide
+                                href ./howtos/index.html
+                            + for a starter. 
+
+                nav
+                    id right-nav
+                    div
+                        + Developed with Wizzi
+                    ul
+                        li 
+                            a PHILOS
+                                href https://github.com/stfnbssl/philos
+                        li
+                            a GEOP
+                                href https://github.com/stfnbssl/geop
+                    div
+                        + Core plugins
+                    ul
+                        li 
+                            a core
+                                href https://github.com/stfnbssl/wizzi/tree/master/packages/wizzi-core
+                        li
+                            a web
+                                href https://github.com/stfnbssl/wizzi/tree/master/packages/wizzi-web
+                        li
+                            a js
+                                href https://github.com/stfnbssl/wizzi/tree/master/packages/wizzi-js
+                    div
+                        + Core schemas
+                    ul
+                        li 
+                            a html
+                                href #
+                        li
+                            a css
+                                href #
+                        li
+                            a svg
+                                href #
+                        li
+                            a js
+                                href #
+                        li
+                            a ts
+                                href #
+                        li
+                            a pdf
+                                href #
+                        li
+                            a md
+                                href #
+                                title markdown wizzi schema
+                        li
+                            a json
+                                href #
+                        li
+                            a xml
+                                href #
+                        li
+                            a yaml
+                                href #
+                        li
+                            a text
+                                href #
+            div
+                id footer

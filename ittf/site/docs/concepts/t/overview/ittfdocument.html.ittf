@@ -1,0 +1,97 @@
+$group
+    $
+        var sect = {
+            title: 'ITTF Documents'
+        };
+
+    section(&sect)
+
+        ittf-panel
+            title ITTF Documents are the source files of a Wizzi production
+            schema html
+            ittf
+                html
+                    body
+                        ul
+                            li
+                                a The Wizzi Factory
+                                    href https://stfnbssl.github.io/wizzi
+
+        p ITTF stands for Indented Text Tree Format, 
+            \b a human-friendly text format for representing 
+            \b a tree data structure of node names and values. 
+
+        p Every line is a node consisting of a name-value pair.
+            \b The name is the first string of chars of the line and is separated
+            \b from the value by a space or a tab.
+
+        p Child nodes are indented to their parent.                    
+
+        p ITTF Document files can include or mix others ITTF Document files, 
+            \b thereon an ITTF Document may consist of one main document and many fragment documents.
+
+        p Mixed fragments can receive parameters and my have hook nodes where to append child nodes of the merger document.
+
+        ittf-panel
+            title Main document that includes a fragment.
+            schema html
+            ittf
+                html
+                    body
+                        $raw header(&page)
+                        $raw content(&page)
+                        ${'$'}include footer
+
+        p The root node can be a mix node.
+
+        ittf-panel
+            title Root node that mixes its container.
+            schema html
+            ittf
+                $ var x = 'layout('
+                ${x} Welcome to my site )
+                    ${'$'}append appbar
+                        ul
+                            ${'$'}foreach item in menulist
+                                li 
+                                    a ${'$'}{item.name}
+                                        href ${'$'}{item.path}
+                    . wrapper
+                        . content
+
+        ittf-panel
+            title Sample container
+            schema html
+            ittf
+                html
+                    head
+                    body
+                        header
+                            ${'$'}hook appbar
+                        section
+                            ${'$'}hook
+
+        
+
+        ittf-panel
+            title Sample 'mixable' fragment.
+            schema html
+            ittf
+                li
+                    ${'$'}params text, href
+                    a ${'$'}{text}
+                        href ${'$'}{href}
+
+        p Included fragments are inserted as is and cannot receive parameters.
+        ittf-panel
+            title A sample 'includeable' fragment.
+            schema html
+            ittf
+                div License MIT
+                    span copy Stefano Bassoli.
+
+
+        h4 Document file name and extension
+        p An ITTF document must have extension '.ittf' and the extension must be preceded by '.' plus the name of
+            \b the Wizzi Schema that typifies the document. For eample `index.js.ittf`.
+

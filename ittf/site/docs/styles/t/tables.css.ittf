@@ -1,0 +1,17 @@
+$group
+
+    . table-docs
+        < table
+            font-size 0.8rem
+            line-height 16px
+            < td
+                vertical-align top
+
+    . table-glo
+        < table
+            font-size 0.8rem
+            line-height 18px
+            < td
+                vertical-align top
+                . title
+                    font-weight 700

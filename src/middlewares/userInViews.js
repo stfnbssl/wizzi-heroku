@@ -1,7 +1,10 @@
-/*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\middlewares\userInViews.ts.ittf
-*/
-// <--wizzi!file!exclude-->
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserInViewMiddleware = void 0;
+//
+const UserInViewMiddleware = (app) => app.use((req, res, next) => {
+    res.locals.user = req.session.user;
+    next();
+});
+exports.UserInViewMiddleware = UserInViewMiddleware;
 //# sourceMappingURL=userInViews.js.map

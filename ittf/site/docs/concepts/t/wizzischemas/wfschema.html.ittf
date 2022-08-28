@@ -1,0 +1,312 @@
+﻿$group
+    $
+        var sect = {
+            title: 'The "wfschema" schema'
+        };
+
+    section(&sect)
+
+		p The 
+            high-code( wfschema )
+            + schema, implemented by the \b
+                to-plugin( wizzi-core )
+                + plugin, is the meta model of a Wizzi Schema.
+                    \b It models a Wizzi Schema with the same semantic with which
+                    \b a Wizzi Schema models a Wizzi Model DOM.
+		
+        div
+            + In short:
+            ul
+                li A Wizzi Schema describes a model in terms of element types, 
+                    \b with attributes, and relations between elements. 
+                    \b Elements can extend super elements. Relations, that
+                    \b do not have attributes, can be of kind parent-children (one-to-many, the default)
+                    \b or parent-singlechild (one-to-one).
+                li Elements are described in a flat list. Relations hierarchy and
+                    \b element derivations are inferred from definitions.
+                li The root element can be declared using the element attribute 'isRoot'. If
+                    \b not declared the root element is the first of the list.
+                li Elements and attributes may have an optional tag attribute that defines a
+                    \b name alias shorter or with an easier mnemonic. 
+                    high-code( wfschema )
+                    + examples:
+                    ul
+                        li 'e' for 'element'
+                        li 'a' for 'attribute'
+                        li 'r' for 'relation'
+                li Node names of \b
+                    to-docs( mTree )
+                    + nodes simply map to an element or attribute tag (or name,
+                        \b if a tag is not declared).
+
+		div
+            + The wfschema elements are
+            ul 
+                li wfschema
+                li exportTo
+                li require
+                li element
+                li attribute, string, boolean, integer, float, date
+                li relation
+                li restrict, enum, minLength, maxLength, minValue, maxValue, regexp
+                li method, function
+                li parameter
+
+		. doc-title-2
+            + wfschema element
+		p The root element of a
+            high-code( wfschema )
+		ittf-panel
+            ittf
+                e wfschema `name`
+                    r require/s
+                    r exportTo/s
+                    r element/s
+
+		. doc-title-2
+            + exportTo element
+		p An exportTo element causes the insertion in the Wizzi Model classes
+			\b of the prototype functions for exporting the tree data structure of the model in 
+			\b the requested format
+			ul
+				li toJson()
+				li toXml()
+		p The entire Wizzi Model can be exported calling this methods on the root element.
+
+		ittf-panel
+            ittf
+                ...
+                    e export-to [json|xml]
+
+		. doc-title-2
+            + require element
+		p A Wizzi Model DOM can contain user defined methods and functions,
+			\b that could need to import objects from other modules. This element 
+			\b allow to insert require statements in the generated Wizzi Model DOM module.
+		ittf-panel
+            ittf
+                e require `import-name`
+                    string declareVar `name`
+                        tag declare-var
+                        optional
+                        default `import-name`
+                    string invoke `invoke-string`
+                        optional
+                    string kind [module]
+                        # At now we have only one kind, and this attribute is superflous.
+                        # Other kinds could be added in the future.
+                        optional
+                        default module
+		
+		p The generated statement is built in this way:
+		ittf-panel
+            ittf
+    			var `declareVar` = require('`import-name`')[`invoke`]
+		
+		p Example
+		ittf-panel
+            ittf
+                ...
+                    require wizzi-utils
+                        declare-var verify
+                        invoke .verify
+                    generates:
+                        var verify = require('wizzi-utils').verify
+		
+		. doc-title-2
+            + Element element
+		p Describes an element type of the schema.
+		ittf-panel
+            ittf
+                e element `name` [: `super-element-name`]
+                    tag e
+                    string super `super-element-name`
+                    string tag `tag`
+                    string xmlTag `tag`
+                        tag xml-tag
+                    boolean isAbstract
+                        tag is-abstract
+                        default-when-declared true
+                    boolean isRoot
+                        tag is-root
+                        default-when-declared true
+                    boolean nameIsRequired
+                        tag name-is-required
+                        default-when-declared true
+                    boolean addToChildren
+                        tag add-to-children
+                        default-when-declared true
+                    r attribute/s
+                    r relation/s
+                    r method/s
+	
+		. doc-title-2
+            + Relation element
+		ittf-panel
+            ittf
+                e relation `related-element-name`[-`plural-suffix-a`]/`plural-suffix-b`
+                    # Examples
+                    #   r column/s (element: column, collection: columns)   
+                    #   r propert-y/ies (element: property, collection: properties)
+                    tag r
+                    boolean oneToOne
+                        tag one-to-one
+                        default-when-declared true
+                    boolean noGet
+                        tag no-get
+                        default-when-declared true
+		
+		p Example:
+		ittf-panel
+            ittf
+                ...
+                    e table : dbitem
+                        r column/s
+                        r propert-y/ies
+                        r displayLayout
+                            one-to-one
+		p related-element-name plus the eventual plural-suffix-a must give the name of an
+			\b element defined in the schema (that is the related element); in the
+			\b example: column, property, displayLayout.
+
+		. doc-title-2
+            + attribute element
+		p Describes an attribute of an element 
+		ittf-panel
+            ittf
+                e attribute `name`
+                    tag a
+                    string tag `tag`
+                    string xmlTag `tag`
+                        tag xml-tag
+                    string type [string|integer|float|boolean|date]
+                        default string
+                    string default `default-value`
+                    string defaultWhenDeclared `default-value` 
+                        tag default-when-declared
+                    boolean isDatatype
+                        tag is-datatype
+                        default-when-declared true
+                    boolean isRequired
+                        tag is-required
+                        default-when-declared true
+                    r restrict/s
+
+		. doc-title-2
+            + string element
+		ittf-panel
+            ittf
+    			e string `attribut-name` : attribute
+
+		. doc-title-2
+            + boolean element
+		ittf-panel
+            ittf
+    			e boolean `attribut-name` : attribute
+
+		. doc-title-2
+            + integer element
+		ittf-panel
+            ittf
+    			e integer `attribut-name` : attribute
+
+		. doc-title-2
+            + float element
+		ittf-panel
+            ittf
+    			e float `attribut-name` : attribute
+
+		. doc-title-2
+            + date element
+		ittf-panel
+            ittf
+    			e date `attribut-name` : attribute
+
+		. doc-title-2
+            + restrict element
+    	ittf-panel
+            ittf
+                e restrict
+                    is-abstract
+
+		. doc-title-2
+            + enum element
+		ittf-panel
+            ittf
+    			e enum `enum-value` : restrict 
+
+		. doc-title-2
+            + maxLength element
+		ittf-panel
+            ittf
+                e maxLength `value` : restrict 
+                    tag max-length
+
+		. doc-title-2
+            + minLength element
+		ittf-panel
+            ittf
+                e minLength `value` : restrict 
+                    tag min-length
+
+		. doc-title-2
+            + maxValue element
+		ittf-panel
+            ittf
+                e maxValue `value` : restrict 
+                    tag max-value
+
+		. doc-title-2
+            + minValue element
+        ittf-panel
+            ittf
+                e minValue `value` : restrict 
+                    tag min-value
+
+		. doc-title-2
+            + regexp element
+		ittf-panel
+            ittf
+    			e regexp `value` : restrict 
+
+		. doc-title-2
+            + method element
+		p Declares a method that will be added to the element class.
+			\b A method can access and manipulate the entire 
+			\b Wizzi Model instance, having access to the
+            high-code( this.wzRoot )
+            + method of the
+            high-code( {schema-name}Base )
+            + class.
+		ittf-panel
+            ittf
+                e method `name`
+                    tag m
+                    r param/s
+                    r statement/s
+		
+		. doc-title-2
+            + param element
+		ittf-panel
+            ittf
+    			e param `name`
+		
+		. doc-title-2
+            + statement element
+		p The statement element uses a subset of the schema
+            high-code( js )
+            + implemented by the plugin 
+            to-plugin( wizzi-js )
+            + .
+
+		. doc-title-2
+            + function element
+		p Declares a method that will be added to the module
+			\b and will be a private function for methods of the model instances.
+		ittf-panel
+            ittf
+                e function `name`
+                    tag m
+                    r param/s
+                    r statement/s
+

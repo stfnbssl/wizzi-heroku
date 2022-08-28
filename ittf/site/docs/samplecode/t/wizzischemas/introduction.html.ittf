@@ -1,0 +1,11 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Schemas'
+        };
+
+    section(&sect)
+        table-doc()
+            tr( Todo, Todo, Todo )
+
+

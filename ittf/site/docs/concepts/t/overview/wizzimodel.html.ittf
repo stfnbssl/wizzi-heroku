@@ -1,0 +1,17 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Model instances'
+        };
+
+    section(&sect)
+
+		p A Wizzi Model instance is an instance of a Wizzi Model DOM that has been loaded with the mTree (tree data structure)
+			\b of a processed ITTF Document. 
+
+		p Wizzi Model instances act as context objects during ITTF document processing, model transformations and artifact generations.
+
+		p Wizzi Models are described by Wizzi Schemas in terms of elements, attributes, methods
+			\b and relations. An element is a classifier and
+			\b a relation is a relationship between elements.
+

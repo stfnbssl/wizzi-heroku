@@ -1,0 +1,22 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Overview'
+        };
+
+    section(&sect)
+
+        p Wizzi is a general purpose artifact generator for apps components
+            \b (mobile, web, desktop) and documents (html, pdf, word, presentation, ecc..).
+        
+        p In Wizzi a software artifact is a data structure that 
+            \b can be generated processing data structures.
+            \b Its inputs are tree data structures (
+            a mTrees
+                href ./mtrees.html
+            + ) in a textual format ( \b
+            a ITTF documents
+                href ./ittfdocuments.html
+            + ).
+            
+        p It is a tool for the development environment, with no runtime.

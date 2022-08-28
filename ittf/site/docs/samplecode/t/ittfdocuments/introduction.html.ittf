@@ -1,0 +1,12 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Ittf documents'
+        };
+
+    section(&sect)
+
+        table-doc()
+            tr( Todo, Todo, Todo )
+            
+

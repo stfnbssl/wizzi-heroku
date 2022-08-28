@@ -1,0 +1,43 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Schemas'
+        };
+
+    section(&sect)
+
+		p A Wizzi Schema apply a type to an mTree.
+            \b It is a definition of a tree data structure inspired by XML Schemas.
+            \b It declares element types, attributes and relations between elements.
+		
+		p It can declare element methods to perform data manipulations or extractions.
+		
+		p From each Wizzi Schema can be generated its own Wizzi Model DOM (see below).
+
+		p A Wizzi Schema is itself described by an ITTF Document of type `wfschema`,
+			\b implemented in the `wizzi-core` core plugin.
+
+        ittf-panel
+            title Sample Wizzi Schema
+            schema wfschema
+            ittf
+                wfschema rdbms
+                    require inflect
+                    e catalog
+                        r table/s
+                    e table
+                        r column/s
+                        r index/es
+                        m getPluralName
+                            return inflect.pluralize(this.wzName)
+                    e column
+                        a type
+                        a caption
+                        a defaultValue
+                            tag default
+                    e index
+                        a primary
+                            type boolean
+                        a unique
+                            type boolean
+                        r column/s

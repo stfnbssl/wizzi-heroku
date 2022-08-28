@@ -1,0 +1,77 @@
+$group
+
+    m loadCheatsheet
+        _ wz.docs.getCheatsheet
+            @ this.state.selectedCheatsheetName
+            =>
+                param err
+                param result
+                if err
+                    log 'loadCheatsheet.err', err
+                    return
+                log 'loadCheatsheet.result', result
+                var elObjs = []
+                foreach el in result.elements
+                    var elObj
+                        {
+                            @ name el.name
+                            @ type "folder"
+                            [ items
+                    foreach item in el.items
+                        var mainIttf = item.title + '.' + result.schema + '.ittf'
+                        var itemObj
+                            {
+                                @ name item.title
+                                @ mainIttf mainIttf
+                                @ schema result.schema
+                                { packiFilesJson
+                                    { [mainIttf]
+                                        @ type 'CODE'
+                                        @ contents item.ittf
+                        _ elObj.items.push(itemObj)
+                    _ elObjs.push(elObj)
+                _ this.setState
+                    {
+                        { csExplorer
+                            @ name this.state.selectedCheatsheetName + ' cheatsheet'
+                            @ type 'folder'
+                            @ items elObjs
+
+    m execProduction
+        log 'execProduction', this.state.selectedCheatsheetItem
+        if this.state.selectedCheatsheetItem
+            var cs = this.state.selectedCheatsheetItem
+            if this.state.resultView == 'generated'
+                _ wz.wizzi.genFromText
+                    @ cs.schema
+                    @ cs.packiFilesJson[cs.mainIttf].contents
+                    =>
+                        param err
+                        param result
+                        log 'execProduction.mTreeFromText.err,result', err, result, 'content', result.artifactContent
+                        if !err
+                            _ this.setState
+                                {
+                                    @ generatedArtifact result.artifactContent
+            if this.state.resultView == 'mtree'
+                _ wz.wizzi.mTreeFromText
+                    @ cs.packiFilesJson[cs.mainIttf].contents
+                    =>
+                        param err
+                        param result
+                        log 'execProduction.mTreeFromText.err,result', err, result
+                        _ this.setState
+                            {
+                                @ mTreeText result.mTree
+            if this.state.resultView == 'script'
+                _ wz.wizzi.mTreeBuildupScriptFromText
+                    @ cs.packiFilesJson[cs.mainIttf].contents
+                    =>
+                        param err
+                        param result
+                        log 'execProduction.mTreeBuildupScriptFromText.err,result', err, result
+                        _ this.setState
+                            {
+                                @ mTreeBuildupScript result.mTreeBuildupScript || result.mTreeBuildUpScript
+
+

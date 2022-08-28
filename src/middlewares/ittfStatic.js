@@ -88,11 +88,9 @@ function ittfMiddleware(basePath, routePath) {
         const extname = path_1.default.extname(filePath);
         var queryMeta = request.query.meta;
         var queryTransform = request.query.transform;
-        // loog 'filePath do not exists', filePath
         if (fs_1.default.existsSync(filePath) === false) {
             return next();
         }
-        // loog 'filePath is directory', filePath
         if (fs_1.default.statSync(filePath).isDirectory()) {
             return sendFolderScan(filePath, basePath, queryMeta, request, response);
         }
@@ -108,7 +106,6 @@ function ittfMiddleware(basePath, routePath) {
             if (queryMeta && queryMeta === 'html') {
                 try {
                     const documentState = yield wizzi_1.wizziProds.scanIttfDocumentFs(filePath, path_1.default.dirname(basePath));
-                    // loog 'generated.meta.document', generated.artifactContent
                     const generated = yield wizzi_1.wizziProds.generateArtifactFs(config_1.config.metaHtmlIttfPath, {
                         wizzischema: 'html',
                         path: filePath,
@@ -119,7 +116,6 @@ function ittfMiddleware(basePath, routePath) {
                         },
                         siteCtx
                     });
-                    // loog 'generated.meta.document', generated.artifactContent
                     response.writeHead(200, {
                         'Content-Type': 'text/html',
                         'Content-Length': generated.artifactContent.length
@@ -140,9 +136,7 @@ function ittfMiddleware(basePath, routePath) {
                     siteCtx
                 }, {
                     generator: 'ittf/tojson'
-                }).then(
-                // loog 'generated.meta.ittf.json', filePath
-                (generated) => {
+                }).then((generated) => {
                     response.writeHead(200, {
                         'Content-Type': 'application/json',
                         'Content-Length': generated.artifactContent.length
@@ -167,9 +161,7 @@ function ittfMiddleware(basePath, routePath) {
                         },
                         siteCtx
                     });
-                    wizzi_1.wizziProds.generateArtifactFs(filePath, modelContext).then(
-                    // loog 'generated.artifactContent', generated.artifactContent
-                    (generated) => {
+                    wizzi_1.wizziProds.generateArtifactFs(filePath, modelContext).then((generated) => {
                         response.writeHead(200, {
                             'Content-Type': contentType,
                             'Content-Length': generated.artifactContent.length
@@ -188,15 +180,10 @@ function ittfMiddleware(basePath, routePath) {
 function contextLoader(resourceFilePath, request, callback) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         const contextRequest = request.query._context;
-        // loog 'contextLoader.ctxRequests', ctxRequests
         if (contextRequest && contextRequest.length > 0) {
             const ss = contextRequest.split(';');
             const ctxRequests = [];
-            ss.forEach(
-            // loog 'contextLoader exportName, type_path', element, type_path
-            // loog 'contextLoader exportName, type_path, relPath', element, type_path, ctxRequest.relPath
-            // loog 'contextLoader ctxRequest', ctxRequest
-            (element) => {
+            ss.forEach((element) => {
                 const ctxRequest = {
                     exportName: element,
                     fullPath: undefined,
@@ -261,12 +248,10 @@ function sendFolderScan(folderPath, root, meta, request, response) {
         try {
             const folderState = yield wizzi_1.wizziProds.scanIttfFolder(folderPath, path_1.default.dirname(root));
             const siteCtx = yield loadJsonIttfModel('sitectx.json.ittf');
-            // loog 'sendFolderScan', 'folderState.keys', Object.keys(folderState)
             if (meta === 'json') {
                 return sendJSONStringified(response, folderState);
             }
             else {
-                // loog 'generated.meta.document', generated.artifactContent
                 const generated = yield wizzi_1.wizziProds.generateArtifactFs(config_1.config.metaFolderIttfPath, {
                     wizzischema: 'html',
                     path: folderPath,
@@ -276,7 +261,6 @@ function sendFolderScan(folderPath, root, meta, request, response) {
                     },
                     siteCtx
                 });
-                // loog 'generated.meta.document', generated.artifactContent
                 response.writeHead(200, {
                     'Content-Type': 'text/html',
                     'Content-Length': generated.artifactContent.length

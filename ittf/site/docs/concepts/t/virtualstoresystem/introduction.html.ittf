@@ -1,0 +1,8 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Virtual Store System'
+        };
+
+    section(&sect)
+		p TODO

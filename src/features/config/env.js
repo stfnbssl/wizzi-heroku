@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.packiFilePrefix = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
@@ -20,11 +21,18 @@ function validateEnv() {
         MONGO_USER: (0, envalid_1.str)(),
         MONGO_PASSWORD: (0, envalid_1.str)(),
         MONGO_PATH: (0, envalid_1.str)(),
+        GITHUB_CLIENT_ID: (0, envalid_1.str)(),
+        GITHUB_CLIENT_SECRET: (0, envalid_1.str)(),
+        GITHUB_CALLBACK_URL: (0, envalid_1.str)(),
+        GOOGLE_CLIENT_ID: (0, envalid_1.str)(),
+        GOOGLE_CLIENT_SECRET: (0, envalid_1.str)(),
+        GOOGLE_CALLBACK_URL: (0, envalid_1.str)(),
         IS_WIZZI_DEV: (0, envalid_1.bool)(),
         WIZZI_BASE_PATH: (0, envalid_1.str)()
     });
     return checkedEnv;
 }
+exports.packiFilePrefix = 'json://';
 let config;
 function create() {
     if (config == null) {
@@ -42,6 +50,12 @@ function create() {
             mongoPassword: checkedEnv.MONGO_PASSWORD,
             mongoPath: checkedEnv.MONGO_PATH,
             mongoConnectUrl: "",
+            githubClientId: checkedEnv.GITHUB_CLIENT_ID,
+            githubClientSecret: checkedEnv.GITHUB_CLIENT_SECRET,
+            githubCallbackURL: checkedEnv.GITHUB_CALLBACK_URL,
+            googleClientId: checkedEnv.GOOGLE_CLIENT_ID,
+            googleClientSecret: checkedEnv.GOOGLE_CLIENT_SECRET,
+            googleCallbackURL: checkedEnv.GOOGLE_CALLBACK_URL,
             isWizziDev: checkedEnv.IS_WIZZI_DEV,
             wizziBasePath: checkedEnv.WIZZI_BASE_PATH,
             ittfPath: __ittfPath,

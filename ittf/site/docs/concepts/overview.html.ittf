@@ -1,0 +1,31 @@
+html
+    $global
+        var dollar = '$';
+    
+    $
+        var art= {
+            section: 'Concepts',
+            title: 'Overview'
+        };
+
+    _layouts/concepts(&art)
+
+        $include overview/overview
+        $include overview/vision
+        $include overview/maincomponents
+        $include overview/ittfdocument
+        $include overview/templateengine
+        $include overview/jswizzi
+        $include overview/mtrees
+        $include overview/wfschema
+        $include overview/wizzimodeldom
+        $include overview/languageschema
+        $include overview/wizzimodel
+        $include overview/modeltransformer
+        $include overview/artifactgenerator
+        $include overview/wizzijob
+        $include overview/wizziplugin
+        $include overview/wizziapi
+        $include overview/wizzicli
+        $include overview/virtualstoresystem
+        

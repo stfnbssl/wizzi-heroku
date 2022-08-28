@@ -1,0 +1,91 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi CLI'
+        };
+
+    section(&sect)
+
+        p The Wizzi command line interface (CLI) is used to perform basic functionality, 
+            \b such as executing a Wizzi Production, 
+            \b creating a new Wizzi Package based on a starter,
+            \b wizzifying an existing artifact or a folder of artifacts.
+        
+        p The Wizzi CLI is available via [npm](https://www.npmjs.com/) and should be installed globally 
+
+        bash-panel
+            title How to install the Wizzi CLI
+            ittf
+                npm install -g wizzi-cli
+
+        h2 CLI Commands
+        ul
+            li 
+                a generate artifacts
+                    href #generate
+            li 
+                a create package
+                    href #create
+            li 
+                a wizzify
+                    href #fy
+            li 
+                a help
+                    href #help
+
+
+        bash-panel
+            title The generate command
+            ittf 
+                + wizzi [configname]
+        
+        p Executes a Wizzi Production described in a wizzi.config[.configname].js file.
+        p The config file is searched in the current folder and its parents.
+
+        
+        bash-panel
+            title The default productions
+            ittf 
+                + wizzi
+        
+        p Tee wizzi command, with no parameters, executes the default production,
+            \b that must be defined in the wizzi.config.js file, located in the current folder or its parents.
+
+        bash-panel
+            title The create package command
+            ittf 
+                wizzi create
+
+        p Executes a Wizzi Meta Production creating a new Wizzi Package for a Wizzi Production Type.
+        
+        p An 'inquirer' dialog asks for the Wizzi Production Type and other available options.
+        ul Available starters
+            li pure js
+            li webpack
+            li webpack + react + material-ui
+            li gatsby
+            li express
+            li Wizzi Plugin
+        
+        bash-panel
+            title The wizzify command
+            ittf
+                wizzi fy --source <filepath|folderpath> --dest <filepath|folderpath>
+        
+        p The `wizzi fy` command executes the 'wizzifying' of a file or folder (for example creates a .js.ittf document from a .js file). 
+        table
+            thead
+                th Argument
+                th Description                                                                                                                                                                                                                             |
+            tbody
+                tr
+                    td --source|-s <filepath|folderpath>
+                    td The source file or folder path
+                tr
+                    td --dest|-d <filepath|folderpath>
+                    td The destination file or folder path            
+
+        bash-panel
+            title The help command
+            ittf
+                wizzi --help

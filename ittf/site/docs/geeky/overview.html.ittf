@@ -1,0 +1,13 @@
+html
+    $global
+        var dollar = '$';
+    
+    $
+        var art = {
+            section: 'Geeky',
+            title: 'Overview'
+        };
+
+    _layouts/geeky(&art)
+
+        $include overview/overview

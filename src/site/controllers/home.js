@@ -18,8 +18,8 @@ class HomeController {
         };
         this.home = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             console.log('Home controller. Received request', __filename);
-            response.render('demoHome/index.html.ittf', {
-                title: 'Hello home'
+            response.render('home/index.html.ittf', {
+                title: 'Wizzi Hub'
             });
         });
     }

@@ -1,0 +1,31 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Background Knowledge'
+        };
+
+    section(&sect)
+
+        p The foundamental background for using Wizzi is a good knowledge of 
+            high-code( javascript )
+            + , and a basic knowledge of
+            high-code( NodeJs )
+            + , 
+            high-code( NPM )
+            + and the 
+            high-code( command line )
+            + .
+
+        p All Wizzi Productions are implemented by plugins, thereon any further 
+            \b knowledge you need should only regard the target technology you are interested in.
+
+        p In practice, given that Wizzi Starters make use of some widespread technologies, as
+            high-code( HTML )
+            + and 
+            high-code( CSS )
+            + , implemented by Wizzi Core Plugins, to get started you should have a basic knowledge of them
+                \b as well as a good one of javascript.
+
+        p Once got started, if you have any further need, then you will be able to create your own Wizzi Plugins.
+
+            

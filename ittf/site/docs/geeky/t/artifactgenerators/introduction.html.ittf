@@ -1,0 +1,26 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Artifact generators'
+        };
+
+    section(&sect)
+
+        table-doc()
+            tr( The genContext class, wizzi, lib/artifact/genContext.js.ittf, lib/artifact/genContext.js )
+            tr( The Artifact Generation function, wizzi, lib/artifact/asyncArtifactGenerator.js.ittf, lib/artifact/asyncArtifactGenerator.js )
+
+        js-panel
+            title js panel
+            ittf
+                var x = 0;
+                var y = add(x + 1);
+
+        bash-panel
+            title bash panel
+            ittf
+                git clone ...
+                cd ...
+                npm install
+
+

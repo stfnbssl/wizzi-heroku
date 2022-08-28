@@ -1,0 +1,12 @@
+﻿html
+    $global
+        var dollar = '$';
+    $
+        var art = {
+            section: 'Geeky',
+            title: 'Virtual Store System'
+        };
+    
+    _layouts/geeky(&art)
+    
+        $include ./virtualstoresystem/introduction

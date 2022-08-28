@@ -1,0 +1,16 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Artifact generators'
+        };
+
+    section(&sect)
+
+		p An artifact generation transforms one or more context objects, usually Wizzi Model instances
+            \b or JSON documents, into a software artifact.
+		
+		p An artifact generator is an API exported by a plugin and must respect the Wizzi Plugin interface.
+			\b Its implementation is free and usually the implementor is a javascript program that receives
+			\b in input context objects and returns the text of the generated artifact.
+
+		p An artifact generation can be declared in a Wizzi Job or executed invoking a method of the Wizzi API.	

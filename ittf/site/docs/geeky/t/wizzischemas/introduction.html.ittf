@@ -1,0 +1,32 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Schemas'
+        };
+
+    section(&sect)
+
+        table-doc()
+            tr( The wfschema Wizzi Schema definition, wizzi-core, lib/wizzi/schemas/wfschema.wfschema.ittf, lib/wizzi/models )
+                p This Wizzi Schema that defines the type of a wfschema ITTF Document is implemented by the
+                    to-plugin( wizzi-core ) 
+                    + core plugin in the schema
+                    high-code( wfschema )
+                    + .
+
+            tr( The Model Transformer of a wfschema Wizzi Model Instance, wizzi, lib/wizzi/models/bootstrap/wfschema-boot-model.js.ittf, lib/wizzi/models/bootstrap/wfschema-boot-model.js )
+                p Here, from a loaded wfschema Wizzi Model Instance, is extracted a POJO object
+                    \b that will be the context object for the Artifact Generators of the wfschema.
+                p This Model Transformer is out of standard and is implemented in the
+                    to-wizzi-package( wizzi )
+                    + core package. It has a TODO, and should be implemented as a Model Transformer in the
+                    to-wizzi-package( wizzi-core )
+                    + core plugin.
+
+            tr( The Artifact Generator of a Wizzi Model DOM, wizzi-core, lib/artifacts/wfschema/model/gen/main.js.ittf, lib/artifacts/wfschema/model/gen/main.js )
+            tr( The Artifact Generator of a Wizzi Model Factory, wizzi-core, lib/artifacts/wfschema/factory/gen/main.js.ittf, lib/artifacts/wfschema/factory/gen/main.js )
+            tr( The Artifact Generator of a Wizzi Schema documentation, wizzi-core, lib/artifacts/wfschema/json_docs/gen/main.js.ittf, lib/artifacts/wfschema/json_docs/gen/main.js )
+
+
+    
+

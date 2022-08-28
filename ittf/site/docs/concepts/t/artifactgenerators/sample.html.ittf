@@ -1,0 +1,32 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Sample artifact generator'
+        };
+    
+    section(&sect)
+
+		h4 Code write artifact generator sample
+		ittf-panel
+            ittf
+                module
+                    kind jsfile
+                    var md = module.exports = {}
+                    var myname = 'artifact rdbms.sqltables.main';
+                    set md.gen
+                        function
+                            param model
+                            param ctx
+                            param callback
+                            if model.wzElement !== 'rdbms'
+                                return
+                                    callback
+                                        _ctx.error
+                                            @ myname + " error: the model paramater should be an 'rdbms' Wizzi Model"
+                                            @ model
+                            ${'$'}foreach table in model.tables
+                                _ ctx.a('TABLE', table.wzName)
+                                _ ctx.w('declare table TABLE')
+                                ...
+                            _ callback(null, ctx)
+

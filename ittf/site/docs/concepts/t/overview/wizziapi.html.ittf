@@ -1,0 +1,10 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi API'
+        };
+
+    section(&sect)
+
+        p All the operations of the Wizzi Factory can be executed programmaticaly
+            \b instantiating a WizziFactory object and executing its methods.

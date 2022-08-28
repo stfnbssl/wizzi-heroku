@@ -1,0 +1,46 @@
+﻿$group
+    $params svg_width:float, l:float|0, t:float|0, color|#01579b
+    
+    $
+        var ratio = svg_width / 660;
+        
+        
+        var l = l * 1.0;
+        var t = t * 1.0;
+        var x1 = 0;
+        var x2 = 270;
+        var x3 = 360;
+        var x4 = 510;
+        var x5 = 670;
+        var opt = {};
+        opt.y0 = 10 * ratio;
+        opt.y1 = 10 * ratio;
+        opt.y1a = 90 * ratio;
+        opt.y2 = 210 * ratio;
+        opt.ybottom = 250 * ratio;
+        opt.stroke = color;
+        opt.fill = color;
+        opt.ratio = ratio;
+
+    $if l > 0
+        w( ${l + x1 * ratio}, ${t}, ${ratio}, &opt )
+        i( ${l + x2 * ratio}, ${t}, ${ratio}, &opt )
+        zeta( ${l + x3 * ratio}, ${t}, ${ratio}, &opt )
+        zeta( ${l + x4 * ratio}, ${t}, ${ratio}, &opt )
+        i( ${l + x5 * ratio}, ${t}, ${ratio}, &opt )	
+    $else
+        svg
+            width ${700 * ratio}
+            height ${260 * ratio}
+            rect
+                x 0
+                y 0
+                width 700
+                height 280
+                fill none
+                stroke none
+            w( ${l + x1 * ratio}, ${t}, ${ratio}, &opt )
+            i( ${l + x2 * ratio}, ${t}, ${ratio}, &opt )
+            zeta( ${l + x3 * ratio}, ${t}, ${ratio}, &opt )
+            zeta( ${l + x4 * ratio}, ${t}, ${ratio}, &opt )
+            i( ${l + x5 * ratio}, ${t}, ${ratio}, &opt )

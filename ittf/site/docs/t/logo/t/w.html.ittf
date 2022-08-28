@@ -1,0 +1,17 @@
+﻿$group
+	$params l:float, t:float, ratio:float, &opt
+
+    polyline
+        stroke ${opt.stroke}
+        fill ${opt.fill}
+        stroke-width 2
+        points ${l + 10 * ratio} ${t + opt.ybottom}
+            \b ${l + 45 * ratio} ${t + opt.y0} 
+            \b ${l + 60 * ratio} ${t + opt.y0} 
+            \b ${l + 75 * ratio} ${t + opt.y1a + (40*ratio)} 
+            \b ${l + 120 * ratio} ${t + opt.y2} 
+            \b ${l + 120 * ratio} ${t + opt.y1a + (40*ratio)} 
+            \b ${l + 175 * ratio} ${t + opt.y2} 
+            \b ${l + 175 * ratio} ${t + opt.y1a + (20*ratio)} 
+            \b ${l + 230 * ratio} ${t + opt.y2} 
+            \b ${l + 230 * ratio} ${t + opt.ybottom}

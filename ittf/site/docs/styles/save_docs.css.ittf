@@ -1,0 +1,135 @@
+﻿css
+    
+    $include _layouts/page-layout
+
+    $include home/header/index
+    $include home/content/index
+    $include home/footer/index
+
+    $$ No More (see _layouts/page-layout) $include base
+    $include aside-right
+
+    < article
+        background-color ${wzCtx.Colors.bg_dark_medium}
+        border-radius 10px
+        padding 20px
+        margin 0 5px 3px 5px
+        box-shadow 0 3px 5px rgba(0,0,0,0.1)
+        font-size 16px
+
+    media (min-width: 768px)
+        < article
+            padding 40px 40px 30px
+            font-size 21px
+            margin 0 10px 10px 10px
+            box-shadow 0 5px 10px rgba(0,0,0,0.1)
+    
+    . doc-container
+        margin 0 auto
+        width 60%
+        display flex
+
+    . w-1-5
+        width 20%
+    
+    . w-4-5
+        width 80%
+
+    . doc-title
+        font-size 1.5rem
+        font-weight 600
+        border-bottom 1px solid #999
+
+    . ittf-panel
+        $$ background-color #aaa
+        $$ padding 20px
+        margin-bottom 20px
+
+    . ittf-panel-title
+        font-size 1rem
+        font-weight 700
+        margin-bottom 2px
+
+    media (min-width: 768px)
+        . ittf-panel-title
+            font-size 19px
+            font-weight 700
+            margin-bottom 4px
+
+
+    . link
+        float 'right'
+        paddingLeft '10px'
+    
+    . cheatsheet
+    . cheatsheet-page
+        display flex
+        padding 25px
+        position fixed
+        height 100vh
+        width 100%
+    
+    . cheatsheet-sidebar
+        display flex
+        min-width 300px
+        margin 5px
+        flex-direction column
+        overflow auto
+
+    . cheatsheet-sidebar-schemas
+        display flex
+        flex-direction column
+        border 1px solid gray
+        margin-bottom 5px
+    
+    . cheatsheet-sidebar-element-title
+        padding-left 15px
+        font-weight 600
+
+    . cheatsheet-sidebar-items
+        border 1px solid gray
+
+    . cheatsheet-content
+        flex 1 1 auto
+        margin 5px
+        overflow auto
+
+    . cheatsheet-item
+        display flex
+        background-color #3e5a6d
+
+    . cheatsheet-ittf
+        padding 10px
+        border 1px solid gray
+        margin 5px
+        width 50%
+        < pre
+            width 100%
+            padding 10px
+
+    . cheatsheet-generated
+        padding 10px
+        border 1px solid gray
+        margin 5px
+        width 50%
+        background-color #dedede
+        < pre
+            width 100%
+            padding 10px
+
+    . cheatsheet-element-title
+        background-color #bbb
+        width 100%
+        padding 15px 5px 15px 15px
+        margin 20px 0 10px 0
+        font-size 1.2rem
+        font-weight 600
+
+    . cheatsheet-item-title
+        padding 5px 10px 0px 10px
+        font-weight 700
+    
+    $include highlight
+
+    $ var opt = wzCtx.Fonts
+    css/fonts(&opt)

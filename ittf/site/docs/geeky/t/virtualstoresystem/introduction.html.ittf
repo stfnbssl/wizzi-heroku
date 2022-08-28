@@ -1,0 +1,10 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Virtual Store System'
+        };
+
+    section(&sect)
+		
+		table-doc( glo )
+            glo-item( TODO )

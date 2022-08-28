@@ -1,0 +1,289 @@
+﻿css
+
+	$include base
+    < body
+		text-align center
+    $include header
+    $include search
+
+	< img
+		display block
+		width 100%
+		height auto
+
+	< h1, h2, h3
+		margin 0
+		padding 1em 0
+
+	< p
+		margin 0
+		padding 1em 0
+
+	. btn
+		display inline-block
+		background-color ${wzCtx.Colors.bg_dark_medium}
+		color ${wzCtx.Colors.c_dark}
+		margin .5em 0
+		padding 1em 2em
+		text-decoration none
+		border 1px solid #666
+
+	. btn:hover
+		background-color #eaeaea
+		color ${wzCtx.Colors.bg_dark_medium}
+
+	# main
+        width 80%
+        margin 0 auto
+
+    # showcase
+		min-height 350px
+        width 60%
+		color ${wzCtx.Colors.c_dark}
+		text-align center
+        margin 0 auto
+	
+    # showcase .bg-logo
+		position absolute
+		background ${wzCtx.Colors.bg_dark_medium} url('${wzCtx.Params.baseUrl}/images/logo.svg')
+		background-position center
+		background-repeat no-repeat
+		background-size cover
+		width 60%
+		height 350px
+		z-index -1
+		opacity 0.6
+
+	# showcase .bg-image
+		position absolute
+		background ${wzCtx.Colors.bg_dark_medium} url(${wzCtx.Params.baseUrl}/images/showcase.png)
+		background-position center
+		background-repeat no-repeat
+		background-size cover
+		width 60%
+		height 350px
+		z-index -1
+		opacity 0.2
+
+	# showcase h1
+		padding-top 100px
+		padding-bottom 0
+
+	# showcase .content-wrap,
+		\b #section-a .content-wrap,
+		\b #section-a2 .content-wrap,
+		\b #section-a3 .content-wrap,
+		\b #section-a4 .content-wrap
+		padding 0 1.5em 1.5em 0
+
+    . showcase-sub-title
+        margin 50px 0
+        font-size 24px
+
+	# section-a
+		background-color ${wzCtx.Colors.bg_dark_medium}
+		color ${wzCtx.Colors.c_dark}
+        margin 0 auto
+        width 70%
+        border-radius 5px
+        box-shadow inset 0 1px 10px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(0,0,0,.5)
+
+
+	# section-a2
+		background-color ${wzCtx.Colors.bg_dark_medium}
+		color ${wzCtx.Colors.c_dark}
+        margin 0 auto
+        width 70%
+        border-radius 5px
+        box-shadow inset 0 1px 10px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(0,0,0,.5)
+
+	# section-a3
+		background-color ${wzCtx.Colors.bg_dark_medium}
+		color ${wzCtx.Colors.c_dark}
+        margin 0 auto
+        width 70%
+        border-radius 5px
+        box-shadow inset 0 1px 10px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(0,0,0,.5)
+
+	# section-a4
+		background-color ${wzCtx.Colors.bg_dark_medium}
+		color ${wzCtx.Colors.c_dark}
+        margin 0 auto
+        width 70%
+        border-radius 5px
+        box-shadow inset 0 1px 10px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(0,0,0,.5)
+
+	# section-b
+		padding 2em 1em 1em
+
+		< ul
+			list-style none
+			margin 0
+			padding 0
+
+			< li
+				background-color ${wzCtx.Colors.bg_dark_medium}
+				margin-bottom 1em
+				color ${wzCtx.Colors.c_dark}
+                border-radius 5px
+                box-shadow inset 0 1px 10px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(0,0,0,.5)
+                < h3
+                    color ${wzCtx.Colors.h3_c_dark}
+
+	# section-b2
+		padding 2em 1em 1em
+
+		< ul
+			list-style none
+			margin 0
+			padding 0
+
+			< li
+				background-color ${wzCtx.Colors.bg_dark_medium}
+				margin-bottom 1em
+				color ${wzCtx.Colors.c_dark}
+                border-radius 5px
+                box-shadow inset 0 1px 10px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(0,0,0,.5)
+                < h3
+                    color ${wzCtx.Colors.h3_c_dark}
+
+	# section-b3
+		padding 2em 1em 1em
+		font-size 0.8em
+
+		< ul
+			list-style none
+			margin 0
+			padding 0
+
+			< li
+				background-color ${wzCtx.Colors.bg_dark_medium}
+				margin-bottom 1em
+				color ${wzCtx.Colors.c_dark}
+                border-radius 10px
+                box-shadow 0 3px 5px rgba(0,0,0,0.1)
+                < h3
+                    color ${wzCtx.Colors.h3_c_dark}
+	
+    # section-b4
+		padding 2em 1em 1em
+
+		< ul
+			list-style none
+			margin 0
+			padding 0
+
+			< li
+				background-color ${wzCtx.Colors.bg_dark_medium}
+				margin-bottom 1em
+				color ${wzCtx.Colors.c_dark}
+                border-radius 10px
+                box-shadow 0 3px 5px rgba(0,0,0,0.1)
+                < h3
+                    color ${wzCtx.Colors.h3_c_dark}
+
+	. card-content
+		padding 1em
+
+    . content-title
+        color ${wzCtx.Colors.h3_c_dark}
+
+	# section-c
+		background-color ${wzCtx.Colors.c_dark}
+		color ${wzCtx.Colors.bg_dark_medium}
+		padding 2em
+
+	# section-d .box
+		color ${wzCtx.Colors.c_dark}
+		padding 2em
+
+	# section-d .box:first-child
+		background-color #2690d4
+
+	# main-footer
+		padding 2em
+		background-color ${wzCtx.Colors.bg_f_0}
+		color ${wzCtx.Colors.c_dark}
+		text-align center
+
+	# main-footer a
+		color #2690d4
+		text-decoration none
+
+	media min-width: 700px 
+        $*
+		. grid 
+			display grid
+			grid-template-columns 1fr repeat(2, minmax(auto, 25em)) 1fr
+
+		*$
+        . grid2 
+			display grid
+			grid-template-columns 1fr repeat(2, minmax(auto, 40em)) 1fr
+
+        # section-a .content-text
+			columns 1
+			column-gap 2em
+			< p
+				padding-top 0
+
+		# section-a2 .content-text
+			columns 1
+			column-gap 2em
+			< p
+				padding-top 0
+
+		# section-a3 .content-text
+			columns 1
+			column-gap 2em
+			< p
+				padding-top 0
+
+		# section-a4 .content-text
+			columns 1
+			column-gap 2em
+			< p
+				padding-top 0
+
+		. content-wrap, #section-b ul
+			grid-column 2/4
+
+		. content-wrap, #section-b2 ul
+			grid-column 2/4
+
+		. content-wrap, #section-b3 ul
+			grid-column 2/4
+
+		. content-wrap, #section-b4 ul
+			grid-column 2/4
+
+		. box, #main-footer div
+			grid-column span 2
+
+		# section-b
+			< ul
+				display flex
+				justify-content space-around
+				< li
+					width 19%
+			
+		# section-b2
+			< ul
+				display flex
+				justify-content space-around
+				< li
+					width 31%
+
+		# section-b3
+			< ul
+				display flex
+				justify-content space-around
+				< li
+					width 12%
+
+		# section-b4
+			< ul
+				display flex
+				justify-content space-around
+				< li
+					width 23%

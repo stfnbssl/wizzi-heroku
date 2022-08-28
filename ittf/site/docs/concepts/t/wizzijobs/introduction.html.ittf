@@ -1,0 +1,22 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi jobs'
+        };
+
+    section(&sect)
+
+		p Wizzi jobs are the task manager of the Wizzi factory.
+            \b They execute a sequence of \b
+            to-docs( Wizzi Model )
+            span \b loadings and \b
+            to-docs( artifact generations )
+            span .
+
+        p They are configured using `wfjob` ITTF documents, and are execute using
+            \b the `executeWizziJob` method of a 
+            to-docs( wizzi.WizziFactory )
+            span \b instance or the `wizzi`
+                \b command of the `
+            to-plugin( wizzi-cli )
+            span ` CLI package.

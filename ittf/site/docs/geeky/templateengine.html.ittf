@@ -1,0 +1,12 @@
+﻿html
+    $global
+        var dollar = '$';
+    $
+        var art = {
+            section: 'Geeky',
+            title: 'Template Engine'
+        };
+    
+    _layouts/geeky(&art)
+    
+        $include ./templateengine/introduction

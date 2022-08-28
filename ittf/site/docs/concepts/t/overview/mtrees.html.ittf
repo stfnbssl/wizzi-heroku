@@ -1,0 +1,13 @@
+﻿$group
+    $
+        var sect = {
+            title: 'mTrees'
+        };
+
+    section(&sect)
+
+        p The ITTF Processor executes the template nodes and interpolates the semantic node names and values
+            \b of an ITTF Document.
+            \b The result of an ITTF Process is a tree data structure of semantic nodes only, 
+            \b that must have a single root node, 
+            \b and is loaded in a javascript object named `mTree`.

@@ -1,0 +1,26 @@
+$group
+    
+    $
+        var g_schemas = [
+            'ittf',
+            'jswizzi',
+             'js',
+             'ts',
+             'html',
+             'css',
+             'scss',
+             'svg',
+             'graphql',
+             'vue',
+             'vtt',
+             'md',
+             'json',
+             'yaml',
+             'xml',
+             'text'
+        ];
+        var g_pages = [
+            'home',
+            'docs',
+            'cheatsheets'
+        ];

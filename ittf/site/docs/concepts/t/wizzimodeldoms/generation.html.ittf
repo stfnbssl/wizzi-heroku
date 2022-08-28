@@ -1,0 +1,37 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Model DOMs generation'
+        };
+
+    section(&sect)
+
+		p Wizzi Model DOMs are generated calling the 
+            high-code( generateModelDoms ) 
+			+ method of an instance of the 
+            high-code( wizzi.WizziFactory )
+            + class, instantiated with use of the \b
+            to-plugin( wizzi-core )
+            span , \b
+            to-plugin( wizzi-js )
+            span and \b
+            to-plugin( wizzi-web )
+            span plugins.
+
+		ittf-panel
+            schema api
+            title The wizzi.WizziFactory.generateModelDoms method.
+            ittf
+                ...
+                    m generateModelDoms
+                        string wfschemaIttfDocumentUri
+                            # The full path to the primary ITTF document of the `wfschema` declaration.
+                        string outputPackagePath
+                            # The full path of the package folder where the generated artifacts will be written 
+                        string wfschemaName
+                            # The schema name, for composing the names of the generated artifacts
+                        { mTreeBuildupContext
+                            # An object that will be the evaluation context object
+                            # during the mTree processing of the `wfschema` ITTF document
+                        callback
+                            # Returns error or null

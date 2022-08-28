@@ -1,0 +1,80 @@
+﻿$group
+    $
+        var sect = {
+            title: 'JsWizzi'
+        };
+
+    section(&sect)
+		
+        p JsWizzi is a subset of the ECMA-262 javascript standard used by 
+			\b the wizzi factory for processing ITTF Documents and build mTrees.
+			\b JsWizzi uses the quite efficent <a href="https://babeljs.io//">babel</a> parser
+            \b and is run by a custom javascript engine (
+            high-code( JsWizziRunner )
+            + ).
+
+		p Ittf Documents may contain JsWizzi statements in
+			ul
+				li The value part of nodes (ITTF Node Values are interpolated)
+                    ittf-panel
+					    ittf
+						    caption ${'$'}{ name.capitalize() }
+				li Conditional expression of $if, $elif, $while template commands
+                    ittf-panel
+					    ittf
+    						${'$'}if name.substring(1,2) === 'is'
+
+				li Collection name of $foreach template command 
+                    ittf-panel
+					    ittf
+    						${'$'}foreach item in model.getCollection('alfa')
+
+                li Body of $ and $global template commands
+                    ittf-panel
+					    ittf
+        					${'$'} var beta = 100
+
+        ittf-panel
+            schema html
+            title Sample JsWizzi expressions and statements
+            ittf
+                ul
+                    ${'$'} var i = 0;
+                    ${'$'}while i < 10
+                        li counting ${'$'}{i}
+                        ${'$'} i++;
+
+		ul Node types implemented by JsWizzi:
+			li VariableDeclaration
+			li Statements
+				ul
+					li EmptyStatement
+					li ExpressionStatement
+					li IfStatement
+					li WhileStatement
+					li DoWhileStatement
+					li ForStatement
+					li ForInStatement
+					li BreakStatement
+					li ContinueStatement
+					li ReturnStatement
+					li TODO SwitchStatement
+			
+			li Expressions
+				ul
+					li UnaryExpression: !
+					li BinaryExpression: +. -, *, /, ==, ===, !=, !==, >=, >, <=, <
+					li UpdateExpressions: ++, --
+					li LogicalExpression: &&, ||
+					li ConditionalExpression: test ? consequent : alternate
+					li CallExpression
+					li MemberExpression
+					li AssignmentExpression: =, *=, /=, %=, +=, -=, <<=, >>=, >>>=, &=, ^=, |= 
+					li ArrayExpression
+					li ObjectExpression
+					li FunctionCall
+			
+			li FunctionDeclaration
+				div Simple function declaration. No prototypes. No function
+					+ objects; functions cannot be built by code and used like objects.
+

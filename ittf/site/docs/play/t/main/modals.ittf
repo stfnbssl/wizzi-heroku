@@ -1,0 +1,50 @@
+$group
+
+    < FlexibleModal 
+        @ isOpen {this.state.addArtifactOpen}
+        @ onRequestClose {this.handleAddArtifactClose}
+        @ initWidth {400}
+        @ initHeight {500}
+        @ disableResize {true}
+        div 
+            style
+                {
+                    @ fontSize '20px'
+                    @ fontWeight '700'
+                    @ padding '15px'
+            + Create a new Artifact
+        < FormRoot
+            < FlexColumn
+                < FormControl
+                    < ControlLabel
+                        + Artifact name
+                    input
+                        style {{ width: '150px', display: 'inline-block' }}
+                        type 'text'
+                        @ value {this.state.newArtifactName}
+                        @ onChange {this.handleNewArtifactNameChange}
+                < FormControl
+                    < ControlLabel
+                        + Wizzi Schema
+                    < SelectorSelectValue
+                        @ value {this.state.newArtifactWizziSchema}
+                        @ onChange {this.handleNewArtifactWizziSchemaChange}
+                        {
+                            _ ['html','css','svg'].map
+                                =>
+                                    param artifactName
+                                    param ndx 
+                                    option
+                                        @ key {ndx}
+                                        @ value {artifactName}
+                                        + {artifactName}
+            < FlexRow
+                < Button
+                    @ size 'h1'
+                    @ onClick {this.handleAddArtifactConfirm}
+                    + Confirm create
+                < Button
+                    @ size 'h1'
+                    @ onClick {this.handleAddArtifactClose}
+                    + Cancel
+

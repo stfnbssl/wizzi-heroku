@@ -1,0 +1,46 @@
+﻿$group
+    
+    $
+        var sect = {
+            title: 'Wizzi Language Schemas'
+        };
+
+    section(&sect)
+
+        p Artifact generators in most cases
+            \b target imperative programming languages (PLs).
+
+        p A Language Wizzi Schema describes an ITTF Document
+            \b that an artifact generator can transform in a PL code file.
+            
+        p It can be viewd as a profile of a PL grammar that is implemented partially,
+            \b with some of its symbols stereotyped.
+
+        p The schema developer should try to find the optimal balance
+            \b between convenience and completeness and
+            \b define the proper approximation of the schema in respect to the PL grammar.
+            \b The purpose of a Wizzi Language Schema is not to map a PL grammar but to make pieces of code
+            \b templeatable and interpolable when convenient.
+
+        p Wizzi is entirely coded using the `js` Language Wizzi Schema implemented
+            \b by the `wizzi-js` core plugin.
+
+        ittf-panel
+            title Sample `js` ITTF Document
+            schema js
+            ittf
+                module
+                    kind jsfile
+                    class Horse
+                        super Animal
+                        ctor
+                            param name
+                            base name
+                        m say
+                            log 'Hiiii i am ' + this.name
+                        m create
+                            static
+                            param name
+                            return
+                                new Horse
+                                    @ name

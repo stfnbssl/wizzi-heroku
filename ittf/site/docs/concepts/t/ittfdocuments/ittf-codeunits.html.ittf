@@ -1,0 +1,78 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Ittf documents as code units'
+        };
+
+    section(&sect)
+
+		p Primary and fragment ITTF Documents have their own local (code unit scoped) evaluation context.
+			+ An mTree loading also has a global evaluation context that may contain
+			ul
+				li built-in javascript components that JsWizzi can safely access
+				li context objects passed to the wizzi-mtree.loader.loadMTree function
+				li variables declared in ITTF Documents using the 
+                    high-code $global
+                    + command.
+
+		p Template commands and JsWizzi expressions contained in node names and node values can
+			+ access the global context and their code unit context.
+
+		p There are two ITTF commands that can declare or modify variables in the evaluation contexts.
+
+		ittf-panel
+            title The '$' command
+            ittf
+                ...
+                    ${'$'} jswizzi-statement
+
+		p The '$' command can be used to declare single line or multi-line jswizzi-statements, that
+			+ during the evaluation step, are executed in the scope of the code unit
+			+ to which the command belongs.
+		p It can declare and modify variables that have code unit scope, and
+			+ only modify variables that have global scope.
+		
+		ittf-panel
+            title Single line format example
+            ittf
+                ...
+                    ${'$'} var names = ['stefi', 'annie'];
+			
+		ittf-panel
+            title Multi line format example
+            ittf
+                ${'$'}
+                    jswizzi-statement
+                    jswizzi-statement
+                    ...
+		
+		h4 Example
+		ittf-panel
+            ittf
+                - ...
+                    - $
+                        - var names = ['stefi', 'annie'];
+                        - var j = 0;
+
+			
+		h3 The $global command
+		p Can be used to declare single line or multi-line jswizzi-statements, that
+			+ are executed in the global scope.
+		p They can  declare and modify variables that have global scope.
+
+		h4 Single line format
+		ittf-panel
+            title The $global command - single line
+			ittf
+                - ...
+                    - $global jswizzi-statement
+		
+		ittf-panel
+            title The $global command - multi-line
+            ittf
+                - $global
+                    - jswizzi-statement
+                    - jswizzi-statement
+                    - ...
+
+

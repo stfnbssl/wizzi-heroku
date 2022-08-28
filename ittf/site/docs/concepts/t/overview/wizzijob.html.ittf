@@ -1,0 +1,37 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi jobs'
+        };
+
+    section(&sect)
+
+		p The execution of a Wizzi Job is the main operation of the Wizzi software factory.
+		
+		p A Wizzi Job is an ITTF Document that declares how to load context models, execute model transformations, generate artifacts 
+			\b and persist them in their destination paths. 
+			
+		p The core Wizzi Schema 'wfjob' describes the types of a Wizzi Job declaration. 
+
+        ittf-panel
+            title Sample Wizzi job
+            schema wfjob
+            ittf
+                wfjob wizzi-docs-concepts
+                    ${'$'}
+                        var models_folder     = path.join(__dirname, 'models');
+                        var html_folder       = path.join(__dirname, 'html');
+                        var dest_folder       = "c:/my/wizzi/v5/github/wizzifactory.github.io";
+                    models-base-folder ${'$'}{models_folder}
+                    model concepts
+                        src concepts.docs.ittf
+                        schema docs
+
+                    line html
+                        cwd-folder ${'$'}{html_folder}
+                        $raw wfjob/artifact-html( concepts.html.ittf )
+                            model-ref concepts
+                                transformer docs/preprint
+                    production
+                        dest-folder ${'$'}{dest_folder}
+                        line-ref html

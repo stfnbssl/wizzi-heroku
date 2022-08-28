@@ -1,0 +1,28 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Ittf documents'
+        };
+
+    section(&sect)
+
+        p Ittf, Indented Text Tree Format, is a document type for
+            \b declaring a textual representation of
+            \b a tree structure of name-valued nodes.
+
+        p Ittf documents are building blocks, made to be loaded and composed into a 
+            \b javascript tree structure, named mTree.
+
+        p A single ITTF Document, when loaded, becomes an mTreeBrick, a composition element
+            \b that can include or mix other mTreeBricks and can in turn be included or mixed. 
+
+        p Ittf documents also can be templates or pieces of templates. They can contain 
+            \b conditional or repeat template commands and can use context objects,
+            \b passed to the mTree load function, for creating new nodes of the composed mTree.
+
+        p Further ITTF Documents may be seen as code units. They can codify statements and expressions using 
+            \b a sandboxed subset of the ECMA-262 javascript standard named 'jsWizzi'. Statements can create,
+            \b and modify, variables (in the evaluation context of an mTreeBrick or in the global
+            \b evaluation context) that template commands can use to select or create nodes.
+
+

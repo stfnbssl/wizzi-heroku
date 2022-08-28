@@ -1,0 +1,21 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Ittf built-in schema'
+        };
+
+    section(&sect)
+
+		p Using the ittf built-in schema may increases the plasticity of a generation
+			\b process.
+		
+		p We can load complex untyped ITTF Documents
+			\b into an mTree and obtain as a result an in-memory simple tree structure
+			\b of nodes with a name, a value and a childs collection, that can generate
+			\b a new ITTF Document.
+
+		p We can chain complex mTrees buildups until we get the final ITTF Document
+			\b to load into a Wizzi Model for artifact generation.
+
+
+

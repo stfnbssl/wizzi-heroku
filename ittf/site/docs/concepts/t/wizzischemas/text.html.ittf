@@ -1,0 +1,40 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Text built-in schema'
+        };
+
+    section(&sect)
+
+		p A text Ittf Document is a bit out of standard. It is
+			\b a common text document that can break the rule of
+			\b only one root node. It can use any command or expression
+			\b of an ITTF Document. A preprocessor transforms the text in
+			\b a standard ittf tree structure. 
+
+		ittf-panel
+            title Example of text mixin for a license file
+            ittf
+                ${'$'}params copy, license
+                MIT License
+                
+                Copyright (c) ${'$'}{copy}
+                
+                ${'$'}if license === 'mit'
+                    ${'$'}include mit_license_text
+                ${'$'}elif ...
+
+		
+		ittf-panel
+            title The mixin transformed by the prepocessor in a standard format
+            ittf
+                text
+                    ${'$'}params copy, license
+                    + MIT License
+                    +
+                    + Copyright (c) 2015 The Wizzi Team
+                    +
+                    ${'$'}if license === 'mit'
+                        ${'$'}include mit_license_text
+                    ${'$'}elif ...
+

@@ -32,9 +32,7 @@ function sendPromiseResult(res, message) {
 }
 exports.sendPromiseResult = sendPromiseResult;
 function sendPromiseLikeResult(res, message) {
-    message.then(
-    // loog 'sendPromiseLikeResult.ok', result
-    (result) => (0, exports.sendSuccess)(res, result));
+    message.then((result) => (0, exports.sendSuccess)(res, result));
 }
 exports.sendPromiseLikeResult = sendPromiseLikeResult;
 //# sourceMappingURL=sendResponse.js.map

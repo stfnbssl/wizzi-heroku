@@ -24,6 +24,7 @@ class ProductionController {
             this.router.post('/mtree', this.mTree);
             this.router.post('/mtreescript', this.mTreeBuildupScript);
             this.router.post('/mtreescan', this.mTreeScan);
+            this.router.post('/wrapittf', this.wrapIttfText);
         };
         this.artifact = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const artifactRequest = request.body;
@@ -36,6 +37,17 @@ class ProductionController {
                         (0, sendResponse_1.sendSuccess)(response, generatedArtifact);
                     }).catch((err) => {
                         console.log('features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifactFs.error', err, __filename);
+                        (0, sendResponse_1.sendFailure)(response, {
+                            err: err
+                        }, 501);
+                    });
+                }
+                else if (artifactRequest.ittfDocument.source == 'packi') {
+                    wizziProds.generateArtifact(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.packiFiles, context).then((generatedArtifact) => {
+                        console.log(myname, 'generateArtifact.result', generatedArtifact, __filename);
+                        (0, sendResponse_1.sendSuccess)(response, generatedArtifact);
+                    }).catch((err) => {
+                        console.log('features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifact.error', err, __filename);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -77,6 +89,19 @@ class ProductionController {
                         }, 501);
                     });
                 }
+                else if (artifactRequest.ittfDocument.source == 'packi') {
+                    wizziProds.mTree(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.packiFiles, context).then((mTree) => {
+                        console.log(myname, '.handle.mTree.result', mTree.mTreeIttf, __filename);
+                        (0, sendResponse_1.sendSuccess)(response, {
+                            mTree: mTree.mTreeIttf
+                        });
+                    }).catch((err) => {
+                        console.log('features/wizzi/controller/productions.handler.mTree.wizziProds.mTree.error', err, __filename);
+                        (0, sendResponse_1.sendFailure)(response, {
+                            err: err
+                        }, 501);
+                    });
+                }
                 else if (artifactRequest.ittfDocument.source == 'db') {
                     wizziProds.mTreeDb(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.path, context).then((mTree) => {
                         console.log(myname, '.handle.mTreeDb.result', mTree.mTreeIttf, __filename);
@@ -108,6 +133,17 @@ class ProductionController {
                         (0, sendResponse_1.sendSuccess)(response, mTreeBuildupScript);
                     }).catch((err) => {
                         console.log('features/wizzi/controller/productions.handler.mTreeBuildupScript.wizziProds.mTreeBuildupScriptFs.error', err, __filename);
+                        (0, sendResponse_1.sendFailure)(response, {
+                            err: err
+                        }, 501);
+                    });
+                }
+                else if (artifactRequest.ittfDocument.source == 'packi') {
+                    wizziProds.mTreeBuildupScript(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.packiFiles, context).then((mTreeBuildupScript) => {
+                        console.log(myname, '.handle.mTreeBuildupScript.result', mTreeBuildupScript, __filename);
+                        (0, sendResponse_1.sendSuccess)(response, mTreeBuildupScript);
+                    }).catch((err) => {
+                        console.log('features/wizzi/controller/productions.handler.mTreeBuildupScript.wizziProds.mTreeBuildupScript.error', err, __filename);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -148,6 +184,20 @@ class ProductionController {
                     }, 501);
                 });
             }
+            else if (artifactRequest.ittfDocument.source == 'packi') {
+                var rootFolder = artifactRequest.ittfDocument.rootFolder || '';
+                wizziProds.scanIttfDocument(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.packiFiles, rootFolder).then((mTreeScan) => {
+                    console.log(myname, '.handle.mTreeScan.result', Object.keys(mTreeScan), __filename);
+                    (0, sendResponse_1.sendSuccess)(response, {
+                        mTreeScan: mTreeScan
+                    });
+                }).catch((err) => {
+                    console.log('features/wizzi/controller/productions.handler.mTreeScan.wizziProds.mTreeScan.error', err, __filename);
+                    (0, sendResponse_1.sendFailure)(response, {
+                        err: err
+                    }, 501);
+                });
+            }
             else if (artifactRequest.ittfDocument.source == 'db') {
                 var rootFolder = artifactRequest.ittfDocument.rootFolder || '';
                 wizziProds.scanIttfDocumentDb(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.path, rootFolder).then((mTreeScan) => {
@@ -169,6 +219,19 @@ class ProductionController {
                     }
                 }, 501);
             }
+        });
+        this.wrapIttfText = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            return wizziProds.wrapIttfText(request.body.schema, request.body.ittfText).then((wrappedIttfText) => {
+                console.log(myname, '.handle.wrapIttfText.result', wrappedIttfText, __filename);
+                (0, sendResponse_1.sendSuccess)(response, {
+                    wrappedIttfText: wrappedIttfText
+                });
+            }).catch((err) => {
+                console.log('features/wizzi/controller/productions.handler.mTreeScan.wizziProds.wrapIttfText.error', err, __filename);
+                (0, sendResponse_1.sendFailure)(response, {
+                    err: err
+                }, 501);
+            });
         });
     }
 }
