@@ -26,7 +26,7 @@ $group
         $foreach item in opt.googleFonts
             css https://fonts.googleapis.com/css?family=${item}
     $if opt.useHighlight
-        $if isWizziStudio
+        $if opt.isWizziStudio
             s( /public/lib/highlight/styles/github.css
             s( /public/lib/highlightjs-master/dracula.css
         $else
@@ -34,7 +34,7 @@ $group
     $if opt.useJarallax
         s( /public/lib/jarallax/jarallax.css
     $if opt.useJsonFormatter
-        $if isWizziStudio
+        $if opt.isWizziStudio
             s( https://cdnjs.cloudflare.com/ajax/libs/json-formatter/0.7.0/json-formatter.min.css
         $else
             s( https://cdnjs.cloudflare.com/ajax/libs/json-formatter/0.7.0/json-formatter.min.css
@@ -43,7 +43,7 @@ $group
     $if opt.usePopper
         s( /public/lib/popper/main.css
     $if opt.usePrism
-        $if isWizziStudio
+        $if opt.isWizziStudio
             css /public/lib/prism/prism.css
         $else
             css https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css
