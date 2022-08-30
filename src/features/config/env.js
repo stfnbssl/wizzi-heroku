@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\config\env.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\config\env.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const dotenv_1 = tslib_1.__importDefault(require("dotenv"));
@@ -28,12 +28,8 @@ function validateEnv() {
         GOOGLE_CLIENT_SECRET: (0, envalid_1.str)(),
         GOOGLE_CALLBACK_URL: (0, envalid_1.str)(),
         IS_WIZZI_DEV: (0, envalid_1.bool)(),
-        WIZZI_BASE_PATH: (0, envalid_1.str)(),
-        PACKI_STORE_FOLDER: (0, envalid_1.str)(),
-        PACKI_TEMPLATES_FOLDER: (0, envalid_1.str)(),
-        PACKI_API_ENDPOINT: (0, envalid_1.str)()
+        WIZZI_BASE_PATH: (0, envalid_1.str)()
     });
-    process.env.PACKI_API_ENDPOINT = checkedEnv.PACKI_API_ENDPOINT;
     return checkedEnv;
 }
 exports.packiFilePrefix = 'json://';
@@ -66,10 +62,7 @@ function create() {
             dataPath: __dataPath,
             metaHtmlIttfPath: path_1.default.join(__ittfPath, 'meta', 'html', 'index.html.ittf'),
             metaFolderIttfPath: path_1.default.join(__ittfPath, 'meta', 'folder', 'index.html.ittf'),
-            metaHtmlTextPath: path_1.default.join(__ittfPath, 'meta', 'text', 'index.html.ittf'),
-            packiStoreFolder: checkedEnv.PACKI_STORE_FOLDER,
-            packiTemplatesFolder: checkedEnv.PACKI_TEMPLATES_FOLDER,
-            packiApiEndpoint: checkedEnv.PACKI_API_ENDPOINT
+            metaHtmlTextPath: path_1.default.join(__ittfPath, 'meta', 'text', 'index.html.ittf')
         };
         const { mongoHost, mongoUser, mongoPassword, mongoPath } = config;
         if (mongoUser && mongoUser.length > 0 && mongoPassword && mongoPassword.length > 0 && mongoHost && mongoHost.length > 0) {

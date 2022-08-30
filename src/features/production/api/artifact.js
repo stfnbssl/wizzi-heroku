@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\api\artifact.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\api\artifact.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
