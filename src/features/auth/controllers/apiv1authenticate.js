@@ -26,7 +26,6 @@ class ApiV1AuthenticateController {
                 client_secret: config_1.config.githubClientSecret,
                 code: request.query.code
             };
-            console.log(myname, 'githubCallback', 'body', body, __filename);
             const options = { headers: { accept: 'application/json' } };
             axios_1.default.post(`https://github.com/login/oauth/access_token`, body, options).then((result) => {
                 console.log(myname, 'githubCallback', 'result', JSON.stringify(result.data, null, 2), __filename);
@@ -34,7 +33,12 @@ class ApiV1AuthenticateController {
             }).then((_token) => {
                 console.log(myname, 'githubCallback', '_token', _token, __filename);
                 request.session.github_access_token = _token;
-                response.redirect('/account/profile/github');
+                request.session.save(function (err) {
+                    if (err) {
+                        return response.status(500).json({ message: err.message });
+                    }
+                    response.redirect('/account/profile/github');
+                });
             }).catch((err) => {
                 console.log(myname, 'githubCallback', 'error', err, __filename);
                 response.status(500).json({ message: err.message });
@@ -53,7 +57,12 @@ class ApiV1AuthenticateController {
                 return result.data['access_token'];
             }).then((_token) => {
                 request.session.google_access_token = _token;
-                response.redirect('/account/profile/google');
+                request.session.save(function (err) {
+                    if (err) {
+                        return response.status(500).json({ message: err.message });
+                    }
+                    response.redirect('/account/profile/google');
+                });
             }).catch((err) => response.status(500).json({ message: err.message }));
         });
     }
