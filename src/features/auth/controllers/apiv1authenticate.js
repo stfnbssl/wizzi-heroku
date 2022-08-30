@@ -26,6 +26,7 @@ class ApiV1AuthenticateController {
                 client_secret: config_1.config.githubClientSecret,
                 code: request.query.code
             };
+            console.log(myname, 'githubCallback', 'body', body, __filename);
             const options = { headers: { accept: 'application/json' } };
             axios_1.default.post(`https://github.com/login/oauth/access_token`, body, options).then((result) => {
                 console.log(myname, 'githubCallback', 'result', JSON.stringify(result.data, null, 2), __filename);
