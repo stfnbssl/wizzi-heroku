@@ -5,6 +5,7 @@ const tslib_1 = require("tslib");
 const cors_1 = require("./cors");
 const session_1 = require("./session");
 const ittfStatic_1 = require("./ittfStatic");
+const packiBrowse_1 = require("./packiBrowse");
 const bodyParser_1 = require("./bodyParser");
 const cacheControl_1 = require("./cacheControl");
 const userInViews_1 = require("./userInViews");
@@ -14,6 +15,7 @@ const appMiddlewaresPre = [
     cors_1.CorsMiddleware,
     session_1.SessionMiddleware,
     ittfStatic_1.IttfStaticMiddleware,
+    packiBrowse_1.PackiBrowseMiddleware,
     bodyParser_1.BodyParserMiddleware,
     cacheControl_1.CacheControlMiddleware,
     userInViews_1.UserInViewMiddleware,

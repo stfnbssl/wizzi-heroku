@@ -1,0 +1,127 @@
+$group
+    li 
+        class css-1wgu51w
+        . css-1clvfi2
+            h3 Docs
+                class css-1enu353
+            button Docs
+                type button
+                aria-expanded false
+                aria-controls Docs-dropdown
+                class css-3q8779
+                svg 
+                    stroke currentColor
+                    fill currentColor
+                    stroke-width 0
+                    viewBox 0 0 24 24
+                    height 1em
+                    width 1em
+                    xmlns http://www.w3.org/2000/svg
+                    path 
+                        d M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z
+            . css-1k80wem
+                id Docs-dropdown
+                ul 
+                    class css-y86b6k
+                    li 
+                        class css-1szfju1
+                        a 
+                            class css-5w7k2g
+                            href /docs/
+                            svg 
+                                width 32
+                                height 32
+                                viewBox 0 0 32 32
+                                fill none
+                                xmlns http://www.w3.org/2000/svg
+                                class css-1ppz169
+                                path 
+                                    d M6 10C6 8.4 7.4 7 9 7H12V12H6V10Z
+                                    fill #F67300
+                                    stroke ${wzCtx.Colors.primary2}
+                                    stroke-width 1.5
+                                path 
+                                    d M9 7C10.6 7 12 8.4 12 10V22C12 23.6 13.3 25 15 25C16.7 25 18 23.6 18 22H24V10C24 8.4 22.6 7 21 7H9Z
+                                    fill white
+                                path 
+                                    d M9 7H21C22.6 7 24 8.4 24 10V22
+                                    stroke ${wzCtx.Colors.primary2}
+                                    stroke-width 1.5
+                                path 
+                                    d M15 25C13.3 25 12 23.6 12 22V10C12 8.4 10.6 7 9 7
+                                    stroke ${wzCtx.Colors.primary2}
+                                    stroke-width 1.5
+                                path 
+                                    d M15 25H24C25.6 25 27 23.6 27 22V21H18V22C18 23.6 16.6 25 15 25Z
+                                    fill #F1DEFA
+                                    stroke ${wzCtx.Colors.primary2}
+                                    stroke-width 1.5
+                                circle 
+                                    cx 20.2002
+                                    cy 11.6
+                                    r 1
+                                    fill ${wzCtx.Colors.primary2}
+                                circle 
+                                    cx 16
+                                    cy 11.6
+                                    r 1
+                                    fill ${wzCtx.Colors.primary2}
+                                path 
+                                    d M21.2002 14.5C21.2002 14.5 21.2002 15.6 21.2002 15.8C21.2002 16.4 20.9002 16.9 20.4002 17.4C19.9002 17.9 19.1002 18.3 18.2002 18.3C17.3002 18.3 16.5002 17.9 16.0002 17.4C15.5002 16.9 15.2002 16.4 15.2002 15.8C15.2002 15.5 15.2002 14.5 15.2002 14.5C16.9002 14.5 19.6002 14.5 21.2002 14.5Z
+                                    fill ${wzCtx.Colors.primary2}
+                            span Documentation
+                                class css-ovr08e
+                            h2 Documentation
+                                class css-a2l7qn
+                            p Start building with Gatsby and its ecosystem tools
+                                class css-9wr7tw
+                        ul 
+                            class css-kqnhvk
+                            li 
+                                ul 
+                                    class css-lqt4hu
+                                    li 
+                                        h3 Get Started
+                                            class css-ocmoim
+                                        ul 
+                                            class css-j7qwjs
+                                            li 
+                                                class css-1uk1gs8
+                                                a Documentation
+                                                    class css-17mmtw1
+                                                    href /docs/
+                                            li 
+                                                class css-1uk1gs8
+                                                a Quick Start
+                                                    class css-17mmtw1
+                                                    href /docs/quick-start/
+                                            li 
+                                                class css-1uk1gs8
+                                                a Tutorial
+                                                    class css-17mmtw1
+                                                    href /docs/tutorial/
+                                            li 
+                                                class css-1uk1gs8
+                                                a Cheat Sheet
+                                                    class css-17mmtw1
+                                                    href /docs/cheat-sheet/
+                                    li 
+                                        h3 Guides
+                                            class css-ocmoim
+                                        ul 
+                                            class css-j7qwjs
+                                            li 
+                                                class css-1uk1gs8
+                                                a How-To Guides
+                                                    class css-17mmtw1
+                                                    href /docs/how-to/
+                                            li 
+                                                class css-1uk1gs8
+                                                a Reference Guides
+                                                    class css-17mmtw1
+                                                    href /docs/reference/
+                                            li 
+                                                class css-1uk1gs8
+                                                a Conceptual Guides
+                                                    class css-17mmtw1
+                                                    href /docs/conceptual/

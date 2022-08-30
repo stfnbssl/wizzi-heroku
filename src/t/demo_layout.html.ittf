@@ -19,11 +19,11 @@ $group
                 href /account/profile
                 class .w3-bar-item.w3-button
             a Log Out
-                href /account/logout
+                href /auth/logout
                 class .w3-bar-item.w3-button
         $else
             a Log In
                 id qsLoginBtn
-                href /account/login
+                href /auth/login
                 class .w3-bar-item.w3-button
         $hook

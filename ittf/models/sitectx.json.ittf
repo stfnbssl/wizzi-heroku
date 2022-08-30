@@ -1,7 +1,7 @@
 {
     name "Wizzi"
     version "0.0.1"
-    title "The artifact meta generation platform."
+    title "The artifact meta generation service."
     title2 "With Wizzi you set up model driven productions of code, packages, documents and data files."
     [ subtitles
         "A single machinery, many productions."
@@ -10,6 +10,7 @@
     { author
         name "Stefano Bassoli"
         email "stfn.bssl@gmail.com"
+    $include ./sitectx/lab
     [ demos
         {
             title "Pure html"

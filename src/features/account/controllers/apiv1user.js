@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\features\account\controllers\apiv1user.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\account\controllers\apiv1user.tsx.ittf
 */
 const express_1 = require("express");
 const sendResponse_1 = require("../../../utils/sendResponse");
@@ -19,12 +19,8 @@ class ApiV1UserController {
             console.log("[33m%s[0m", 'Entering ApiV1UserController.initialize');
             this.router.get('/checkusername/:username', this.getCheckUsername);
         };
-        this.getCheckUsername = 
-        // loog 'getCheckUsername.request.params', request.params
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            return (0, user_1.validateUsername)(request.params.username).then(
-            // loog 'getCheckUsername.result', result
-            (result) => (0, sendResponse_1.sendSuccess)(response, result)).catch(err => (0, sendResponse_1.sendFailure)(response, {
+        this.getCheckUsername = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            return (0, user_1.validateUsername)(request.params.username).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch(err => (0, sendResponse_1.sendFailure)(response, {
                 err: err
             }, 501));
         });

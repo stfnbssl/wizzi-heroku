@@ -1,16 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.wizzify = exports.scanIttfDocumentDb = exports.scanIttfFolder = exports.scanIttfDocumentFs = exports.scanIttfDocument = exports.inferAndLoadContextFs = exports.inferAndLoadContextJson = exports.executeJobs = exports.executeJob = exports.transformModelFs = exports.transformModel = exports.generateArtifactDb = exports.generateArtifactFs = exports.generateArtifact = exports.wrapIttfText = exports.mTreeDb = exports.mTreeFs = exports.mTree = exports.mTreeBuildupScriptDb = exports.mTreeBuildupScriptFs = exports.mTreeBuildupScript = exports.loadModelFs = exports.loadModel = void 0;
+exports.loadSiteJsonModel = exports.wizzify = exports.scanIttfDocumentDb = exports.scanIttfFolder = exports.scanIttfDocumentFs = exports.scanIttfDocument = exports.inferAndLoadContextFs = exports.inferAndLoadContextJson = exports.executeJobs = exports.executeJob = exports.transformModelFs = exports.transformModel = exports.generateFolderArtifacts = exports.generateArtifactDb = exports.generateArtifactFs = exports.generateArtifact = exports.wrapIttfText = exports.mTreeDb = exports.mTreeFs = exports.mTree = exports.mTreeBuildupScriptDb = exports.mTreeBuildupScriptFs = exports.mTreeBuildupScript = exports.loadModelFs = exports.loadModel = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\features\wizzi\productions.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\wizzi\productions.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const fs_1 = tslib_1.__importDefault(require("fs"));
 const wizzi_tools_1 = tslib_1.__importDefault(require("wizzi-tools"));
 const wizzi_utils_1 = require("wizzi-utils");
+const env_1 = require("../config/env");
+const config_1 = require("../config");
 const wizziMaps = tslib_1.__importStar(require("./maps"));
 const factory_1 = require("./factory");
 const myname = 'features/wizzi/productions';
@@ -279,6 +281,56 @@ function generateArtifactDb(owner, name, context) {
     });
 }
 exports.generateArtifactDb = generateArtifactDb;
+function generateFolderArtifacts(sourceFolderUri, destFolderUri, files, context) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            if (!wizzi_utils_1.verify.isObject(files)) {
+                return reject({
+                    action: 'wizzi.productions.generateFolderArtifacts',
+                    message: 'files parameter must be an object of type PackiFiles',
+                    files
+                });
+            }
+            let jsonwf = {};
+            try {
+                jsonwf = yield (0, factory_1.createFsJsonAndFactory)(files);
+                ;
+                jsonwf.wf.generateFolderArtifacts(env_1.packiFilePrefix + sourceFolderUri, {
+                    modelRequestContext: context,
+                    artifactRequestContext: context
+                }, {
+                    destFolder: env_1.packiFilePrefix + destFolderUri
+                }, (err, result) => {
+                    if (err) {
+                        return reject(err);
+                    }
+                    jsonwf.wf.fileService.getFiles(env_1.packiFilePrefix + destFolderUri, {
+                        deep: true,
+                        documentContent: true
+                    }, (err, files) => {
+                        if (err) {
+                            return reject(err);
+                        }
+                        const packiFiles = {};
+                        var i, i_items = files, i_len = files.length, file;
+                        for (i = 0; i < i_len; i++) {
+                            file = files[i];
+                            packiFiles[file.relPath] = {
+                                type: 'CODE',
+                                contents: file.content
+                            };
+                        }
+                        resolve(packiFiles);
+                    });
+                });
+            }
+            catch (ex) {
+                return reject(ex);
+            }
+        }));
+    });
+}
+exports.generateFolderArtifacts = generateFolderArtifacts;
 function transformModel(filePath, files, context, options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
@@ -529,4 +581,16 @@ function handleWizzify(extension, codeSnippet) {
         }
     }));
 }
+// TODO cache results!
+function loadSiteJsonModel(relPath, context) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        context = Object.assign({}, {
+            isWizziStudio: true
+        }, context || {});
+        return new Promise((resolve, reject) => loadModelFs(path_1.default.join(config_1.config.ittfPath, 'models', relPath), context).then(
+        // log 'loadJsonIttfModel', model
+        model => resolve(model)).catch(err => reject(err)));
+    });
+}
+exports.loadSiteJsonModel = loadSiteJsonModel;
 //# sourceMappingURL=productions.js.map

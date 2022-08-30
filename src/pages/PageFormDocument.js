@@ -5,10 +5,9 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\pages\PageFormDocument.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\pages\PageFormDocument.tsx.ittf
 */
 const jsesc_1 = tslib_1.__importDefault(require("jsesc"));
-const react_1 = tslib_1.__importDefault(require("react"));
 const css = String.raw;
 const PageCss = css `
               :root {
@@ -84,7 +83,7 @@ const PageCss = css `
             `;
 function PageFormDocument(props) {
     const { data, queryParams, content } = props;
-    return ((0, jsx_runtime_1.jsxs)("html", { children: [(0, jsx_runtime_1.jsxs)("head", { children: [(0, jsx_runtime_1.jsx)("meta", { charSet: "utf-8" }), (0, jsx_runtime_1.jsx)("meta", { httpEquiv: "X-UA-Compatible", content: "IE=edge" }), (0, jsx_runtime_1.jsx)("meta", { name: "viewport", content: "width=device-width,minimum-scale=1,initial-scale=1" }), (0, jsx_runtime_1.jsx)("link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,500,600" }), (0, jsx_runtime_1.jsx)("link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" }), (0, jsx_runtime_1.jsx)("link", { rel: "stylesheet", href: "/ittf/styles/main.css.ittf" }), (0, jsx_runtime_1.jsx)("script", { src: "https://bundle.run/buffer@6.0.3" }), (0, jsx_runtime_1.jsx)("style", { type: "text/css", dangerouslySetInnerHTML: {
+    return ((0, jsx_runtime_1.jsxs)("html", { children: [(0, jsx_runtime_1.jsxs)("head", { children: [(0, jsx_runtime_1.jsx)("meta", { charSet: "utf-8" }), (0, jsx_runtime_1.jsx)("meta", { httpEquiv: "X-UA-Compatible", content: "IE=edge" }), (0, jsx_runtime_1.jsx)("meta", { name: "viewport", content: "width=device-width,minimum-scale=1,initial-scale=1" }), (0, jsx_runtime_1.jsx)("link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,500,600" }), (0, jsx_runtime_1.jsx)("link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" }), (0, jsx_runtime_1.jsx)("link", { rel: "stylesheet", href: "/ittf/css/main.css.ittf" }), (0, jsx_runtime_1.jsx)("script", { src: "https://bundle.run/buffer@6.0.3" }), (0, jsx_runtime_1.jsx)("style", { type: "text/css", dangerouslySetInnerHTML: {
                             __html: PageCss
                         } }), (0, jsx_runtime_1.jsx)("script", { dangerouslySetInnerHTML: {
                             __html: `  window.__INITIAL_DATA__ = ${(0, jsesc_1.default)({

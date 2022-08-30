@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\features\wizzi\api\context.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\wizzi\api\context.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const wizzi_1 = require("wizzi");
@@ -56,6 +56,15 @@ function resolveContext(contextItem) {
             return reject(err);
         }));
     }
+    else if (contextItem.source == 'json-packiIttf') {
+        return new Promise((resolve, reject) => wizziProds.generateArtifact(contextItem.mainIttf, contextItem.packiFiles).then((value) => {
+            console.log(myname + '.resolveContext', contextItem.source, 'mainIttf', contextItem.mainIttf, Object.keys(value), __filename);
+            resolve(value);
+        }).catch((err) => {
+            console.log('.resolveContext.wizziProds.generateArtifact.error', err, __filename);
+            return reject(err);
+        }));
+    }
     else if (contextItem.source == 'json-dbIttf') {
         throw new Error('ContextItem source not yet implemented: ' + contextItem.source);
     }
@@ -74,6 +83,15 @@ function resolveContext(contextItem) {
             resolve(value);
         }).catch((err) => {
             console.log('.resolveContext.wizziProds.loadModelFs.error', err, __filename);
+            return reject(err);
+        }));
+    }
+    else if (contextItem.source == 'model-packiIttf') {
+        return new Promise((resolve, reject) => wizziProds.loadModel(contextItem.mainIttf, contextItem.packiFiles).then((value) => {
+            console.log(myname + '.resolveContext', 'mainIttf', contextItem.mainIttf, Object.keys(value), __filename);
+            resolve(value);
+        }).catch((err) => {
+            console.log('.resolveContext.wizziProds.loadModel.error', err, __filename);
             return reject(err);
         }));
     }

@@ -5,18 +5,18 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\middlewares\wizziViewEngine.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\middlewares\wizziViewEngine.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
-const config_1 = require("../features/config");
 const wizzi_1 = require("../features/wizzi");
 const WizziViewEngineMiddleware = (app) => {
     app.engine('ittf', function (filePath, options, callback) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             try {
                 const twinJsonContext = yield wizzi_1.wizziProds.inferAndLoadContextFs(filePath, 'wzCtx');
-                const siteCtx = yield loadJsonIttfModel('sitectx.json.ittf');
-                const context = Object.assign(Object.assign(Object.assign({}, options), { locals: options._locals, siteCtx }), twinJsonContext);
+                const context = Object.assign(Object.assign(Object.assign(Object.assign({}, options), { locals: options._locals }), twinJsonContext), { isWizziStudio: true });
+                const siteCtx = yield wizzi_1.wizziProds.loadSiteJsonModel('sitectx.json.ittf', context);
+                context.siteCtx = siteCtx;
                 console.log('WizziViewEngineMiddleware.filePath', filePath, __filename);
                 console.log('WizziViewEngineMiddleware.options', JSON.stringify(options, null, 2), __filename);
                 wizzi_1.wizziProds.generateArtifactFs(filePath, context).then((generated) => {
@@ -40,11 +40,4 @@ const WizziViewEngineMiddleware = (app) => {
     console.log('WizziViewEngineMiddleware installed, on folder', viewsFolder, __filename);
 };
 exports.WizziViewEngineMiddleware = WizziViewEngineMiddleware;
-function loadJsonIttfModel(relPath) {
-    return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => wizzi_1.wizziProds.loadModelFs(path_1.default.join(config_1.config.ittfPath, 'models', relPath), {}).then(
-        // log 'loadJsonIttfModel', model
-        model => resolve(model)).catch(err => reject(err)));
-    });
-}
 //# sourceMappingURL=wizziViewEngine.js.map

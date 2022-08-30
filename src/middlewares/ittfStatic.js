@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\middlewares\ittfStatic.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\middlewares\ittfStatic.ts.ittf
 */
 const util_1 = tslib_1.__importDefault(require("util"));
 const path_1 = tslib_1.__importDefault(require("path"));
@@ -102,7 +102,7 @@ function ittfMiddleware(basePath, routePath) {
         if (!contentType) {
             next();
         }
-        loadJsonIttfModel('sitectx.json.ittf').then((siteCtx) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        wizzi_1.wizziProds.loadSiteJsonModel('sitectx.json.ittf').then((siteCtx) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             if (queryMeta && queryMeta === 'html') {
                 try {
                     const documentState = yield wizzi_1.wizziProds.scanIttfDocumentFs(filePath, path_1.default.dirname(basePath));
@@ -114,7 +114,8 @@ function ittfMiddleware(basePath, routePath) {
                         locals: {
                             user: request.session.user
                         },
-                        siteCtx
+                        siteCtx,
+                        isWizziStudio: true
                     });
                     response.writeHead(200, {
                         'Content-Type': 'text/html',
@@ -133,7 +134,8 @@ function ittfMiddleware(basePath, routePath) {
                     locals: {
                         user: request.session.user
                     },
-                    siteCtx
+                    siteCtx,
+                    isWizziStudio: true
                 }, {
                     generator: 'ittf/tojson'
                 }).then((generated) => {
@@ -159,7 +161,8 @@ function ittfMiddleware(basePath, routePath) {
                         locals: {
                             user: request.session.user
                         },
-                        siteCtx
+                        siteCtx,
+                        isWizziStudio: true
                     });
                     wizzi_1.wizziProds.generateArtifactFs(filePath, modelContext).then((generated) => {
                         response.writeHead(200, {
@@ -224,7 +227,9 @@ function contextLoader(resourceFilePath, request, callback) {
                     return callback('Context loader for cheatsheet type not implemented.');
                 }
                 else {
-                    wizzi_1.wizziProds.loadModelFs(ctxRequest.fullPath, {}).then((model) => {
+                    wizzi_1.wizziProds.loadModelFs(ctxRequest.fullPath, {
+                        isWizziStudio: true
+                    }).then((model) => {
                         resultContext[ctxRequest.exportName] = model;
                         repeat(index + 1);
                     }).catch(err => callback(err));
@@ -247,7 +252,7 @@ function sendFolderScan(folderPath, root, meta, request, response) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         try {
             const folderState = yield wizzi_1.wizziProds.scanIttfFolder(folderPath, path_1.default.dirname(root));
-            const siteCtx = yield loadJsonIttfModel('sitectx.json.ittf');
+            const siteCtx = yield wizzi_1.wizziProds.loadSiteJsonModel('sitectx.json.ittf');
             if (meta === 'json') {
                 return sendJSONStringified(response, folderState);
             }
@@ -259,7 +264,8 @@ function sendFolderScan(folderPath, root, meta, request, response) {
                     locals: {
                         user: request.session.user
                     },
-                    siteCtx
+                    siteCtx,
+                    isWizziStudio: true
                 });
                 response.writeHead(200, {
                     'Content-Type': 'text/html',
@@ -277,7 +283,9 @@ function sendFolderScan(folderPath, root, meta, request, response) {
     });
 }
 function sendTransform(filePath, transformer, response) {
-    wizzi_1.wizziProds.transformModelFs(filePath, {}, {
+    wizzi_1.wizziProds.transformModelFs(filePath, {
+        isWizziStudio: true
+    }, {
         transformer: transformer
     }).then(model => response.send((0, json_stringify_safe_1.default)(model, null, 2))).catch(err => sendError(response, err, {
         format: 'json'
@@ -358,12 +366,5 @@ function sendError(response, err, options) {
         code,
         error: errEmit
     }, null, 4));
-}
-function loadJsonIttfModel(relPath) {
-    return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => wizzi_1.wizziProds.loadModelFs(path_1.default.join(config_1.config.ittfPath, 'models', relPath), {}).then(
-        // log 'loadJsonIttfModel', model
-        model => resolve(model)).catch(err => reject(err)));
-    });
 }
 //# sourceMappingURL=ittfStatic.js.map

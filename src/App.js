@@ -4,7 +4,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\App.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\App.ts.ittf
 */
 const express_1 = tslib_1.__importDefault(require("express"));
 /**
@@ -23,8 +23,6 @@ function normalizePort(val) {
     return false;
 }
 function initializeApp(app, initValues) {
-    var port = normalizePort(process.env.PORT || '3000');
-    app.set('port', port);
     initValues.middlewaresPre.forEach(middleware => middleware(app));
     initValues.apis.forEach((api) => {
         console.log("[33m%s[0m", 'installing api: ', api.name);
@@ -41,19 +39,19 @@ function initializeApp(app, initValues) {
 class App {
     constructor(initValues) {
         this.config = initValues.config;
-        this.port = this.config.port;
+        this.port = normalizePort(process.env.PORT || this.config.port) || "3000";
         this.app = (0, express_1.default)();
         ;
+        this.app.set('port', this.port);
         initializeApp(this.app, initValues);
     }
     listen(port) {
-        this.usedPort = port || this.port;
-        this.server = this.app.listen(this.usedPort, () => console.log(`App listening at http://localhost:${this.usedPort}`));
+        this.server = this.app.listen(this.port, () => console.log(`App listening at http://localhost:${this.port}`));
     }
     close(done) {
-        console.log(`Server closing. App listening at http://localhost:${this.usedPort}`);
+        console.log(`Server closing. App listening at http://localhost:${this.port}`);
         this.server.close(() => {
-            console.log(`Server stopped. App was listening at http://localhost:${this.usedPort}`);
+            console.log(`Server stopped. App was listening at http://localhost:${this.port}`);
             done();
         });
     }

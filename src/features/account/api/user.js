@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\features\account\api\user.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\account\api\user.tsx.ittf
 */
 const user_1 = require("../mongo/user");
 const myname = 'features.account.api.user';
@@ -14,9 +14,7 @@ function validateUsername(chosenUsername) {
         const User = (0, user_1.GetUserModel)();
         return new Promise((resolve, reject) => {
             let query = { username: chosenUsername };
-            User.find(query, 
-            // loog myname, 'validateUsername', 'User.find', 'error', err
-            (err, result) => {
+            User.find(query, (err, result) => {
                 if (err) {
                     return reject(err);
                 }
@@ -111,9 +109,7 @@ exports.validateUserNotUsed = validateUserNotUsed;
 function createUserFromSignup(signupData) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         const User = (0, user_1.GetUserModel)();
-        return new Promise((resolve, reject) => validateUserNotUsed(signupData.wizziUserName, signupData.email).then(
-        // loog myname, 'createUserFromSignup', 'validateUserNotUsed', result
-        (result) => {
+        return new Promise((resolve, reject) => validateUserNotUsed(signupData.wizziUserName, signupData.email).then((result) => {
             if (result.isValid) {
                 const newUser = new User({
                     username: signupData.wizziUserName,

@@ -5,10 +5,9 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\pages\EditorDocument.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\pages\EditorDocument.tsx.ittf
 */
 const jsesc_1 = tslib_1.__importDefault(require("jsesc"));
-const react_1 = tslib_1.__importDefault(require("react"));
 const css = String.raw;
 const PageCss = css `
               :root {

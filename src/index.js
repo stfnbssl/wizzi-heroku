@@ -5,9 +5,13 @@ const tslib_1 = require("tslib");
 const index_1 = require("./features/config/index");
 const mongodb_1 = require("./services/mongodb");
 const index_2 = require("./site/index");
-const index_3 = require("./features/blog/index");
-const index_4 = require("./features/docs/index");
-const index_5 = require("./middlewares/index");
+const index_3 = require("./features/auth/index");
+const index_4 = require("./features/account/index");
+const index_5 = require("./features/blog/index");
+const index_6 = require("./features/docs/index");
+const index_7 = require("./features/production/index");
+const index_8 = require("./features/packi/index");
+const index_9 = require("./middlewares/index");
 const App_1 = tslib_1.__importDefault(require("./App"));
 var app = {
     instance: null
@@ -15,20 +19,26 @@ var app = {
 function start() {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         let modelBuilders = [
-            ...index_3.blogModelBuilders
+            ...index_4.accountModelBuilders,
+            ...index_5.blogModelBuilders,
+            ...index_7.productionModelBuilders
         ];
         yield (0, mongodb_1.mongodbStart)(index_1.config, modelBuilders);
         let middlewaresPre = [
-            ...index_5.appMiddlewaresPre
+            ...index_9.appMiddlewaresPre
         ];
         let middlewaresPost = [
-            ...index_5.appMiddlewaresPost
+            ...index_9.appMiddlewaresPost
         ];
         let apis = [];
         let controllers = [
             ...index_2.siteControllers,
-            ...index_3.blogControllers,
-            ...index_4.docsControllers
+            ...index_3.authControllers,
+            ...index_4.accountControllers,
+            ...index_5.blogControllers,
+            ...index_6.docsControllers,
+            ...index_7.productionControllers,
+            ...index_8.packiControllers
         ];
         console.log("[33m%s[0m", 'Starting app. Config:', index_1.config);
         const appInitializer = {
@@ -38,7 +48,7 @@ function start() {
             apis,
             controllers,
             middlewaresPost,
-            auth0Secured: index_5.auth0Secured
+            auth0Secured: index_9.auth0Secured
         };
         app.instance = new App_1.default(appInitializer);
         app.instance.listen();

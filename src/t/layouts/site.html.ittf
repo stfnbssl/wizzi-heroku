@@ -88,6 +88,7 @@ $group
         $hook head-styles
         $hook head-styles-2
         $hook head-styles-3
+        $hook head-scripts
     body
         . flex-row space-between bg-color-header color-header align-items-center
             id __main_navbar
@@ -128,9 +129,9 @@ $group
             . flex-row m-r-x
                 $if locals.user
                     a( Profile, /account/profile, ${ca}
-                    a( Log Out, /account/logout, ${ca}
+                    a( Log Out, /auth/logout, ${ca}
                 $else
-                    a( Log In, /account/login, ${ca}
+                    a( Log In, /auth/login, ${ca}
         $hook
         $hook body-scripts-0
         $if opt.isWizziStudio && !opt.useFirebase

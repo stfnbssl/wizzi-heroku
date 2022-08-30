@@ -7,7 +7,7 @@ function getSecured() {
             return next();
         }
         req.session.returnTo = req.originalUrl;
-        res.redirect('/account/login');
+        res.redirect('/auth/login');
     };
 }
 exports.default = getSecured;

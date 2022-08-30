@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\site\controllers\docs.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\site\controllers\docs.ts.ittf
 */
 const express_1 = require("express");
 const sendResponse_1 = require("../../utils/sendResponse");
@@ -19,7 +19,7 @@ class DocsController {
             this.router.get('/cheatsheet/:name', this.cheatsheet);
         };
         this.cheatsheet = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            return docs_1.cheatsheetApi.getCheatsheet(request.params.name).then(result => response.render('docs/cheatsheet.html.ittf', {
+            return docs_1.cheatsheetApi.getCheatsheet(request.params.name).then(result => response.render('wizzi/docs/cheatsheet.html.ittf', {
                 cs: result
             })).catch((err) => {
                 console.log('docs.cheatsheet.error', err, __filename);

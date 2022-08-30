@@ -27,7 +27,7 @@ html
             . flex-row justify-center m-0-auto
                 a( Artifacts, /productions/artifacts, ${ca}
                 a( Packages, /productions/packages, ${ca}
-                agins, /productions/plugins, ${ca}
+                a( Plugins, /productions/plugins, ${ca}
                 a( Metas, /productions/metas, ${ca}
                 a( tFolders, /productions/tfolders, ${ca}
 

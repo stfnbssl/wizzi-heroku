@@ -6,7 +6,7 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.meta.demos\packages\wizzi-heroku\.wizzi\src\features\account\controllers\user.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\account\controllers\user.tsx.ittf
 */
 const express_1 = require("express");
 const server_1 = tslib_1.__importDefault(require("react-dom/server"));
@@ -32,9 +32,7 @@ class UserController {
             this.router.get('/delete', this.getDeleteUserForm);
             this.router.delete('/delete', this.deleteUser);
         };
-        this.getNewUserForm = 
-        // loog myname, 'getNewUserForm', JSON.stringify(request.query, null, 2)
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getNewUserForm = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return renderPackiPageForm(request, response, {
                 type: 'success',
                 formName: 'CreateUser',
@@ -46,21 +44,17 @@ class UserController {
                 }
             }, {});
         });
-        this.postNewUser = 
-        // loog myname + '.postNewUser.request.body', JSON.stringify(request.body, null, 2)
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.postNewUser = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, user_1.createUserFromSignup)({
                 name: request.body.u_name,
                 email: request.body.u_email,
                 avatarUrl: request.body.u_avatar_url,
                 openidProvider: request.body.u_openid_provider,
                 wizziUserName: request.body.u_username
-            }).then(
-            // loog myname + '.postNewUser.createUserFromSignup.result', JSON.stringify(result, null, 2)
-            (result) => {
+            }).then((result) => {
                 if (result.created) {
                     request.session.user = result.user;
-                    response.redirect('/profile');
+                    response.redirect('/account/profile');
                 }
                 else {
                     response.render('error.html.ittf', {
@@ -73,9 +67,7 @@ class UserController {
                 error: err
             }));
         });
-        this.getUpdateUserForm = 
-        // # loog myname + '.getUpdateUserForm',
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getUpdateUserForm = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return renderPackiPageForm(request, response, {
                 type: 'success',
                 formName: 'UpdateUser',
@@ -84,17 +76,11 @@ class UserController {
                 }
             }, {});
         });
-        this.postUpdateUser = 
-        // loog myname + '.postUpdateUser',
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.postUpdateUser = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
         });
-        this.getDeleteUserForm = 
-        // loog myname + '.getDeleteUserForm',
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getDeleteUserForm = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
         });
-        this.deleteUser = 
-        // loog myname + '.deleteUser',
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.deleteUser = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
         });
     }
 }
