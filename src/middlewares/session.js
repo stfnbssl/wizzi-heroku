@@ -9,8 +9,7 @@ const config_1 = require("../features/config");
 const SessionMiddleware = (app) => {
     console.log("SessionMiddleware process.env.NODE_ENV: " + process.env.NODE_ENV, __filename);
     const cookieOptions = {
-        // serve secure cookies, requires https
-        secure: process.env.NODE_ENV === 'production' ? true : false,
+        secure: false,
         httpOnly: false,
         sameSite: 'none',
         // expires in 14 days

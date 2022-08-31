@@ -28,7 +28,9 @@ class AccountController {
             });
         });
         this.profileGithub = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            return (0, axios_1.default)({
+            console.log(myname, 'profileGithub', request.session.github_access_token, __filename);
+            console.log(myname, 'profileGithub', request.session, __filename);
+            (0, axios_1.default)({
                 method: 'get',
                 url: `https://api.github.com/user`,
                 headers: {
