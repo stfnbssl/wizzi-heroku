@@ -17,7 +17,7 @@ const SessionMiddleware = (app) => {
         name: 'wizzi-heroku.sid',
         secret: config_1.config.sessionSecret,
         store: new express_session_1.default.MemoryStore(),
-        cookie: cookieOptions,
+        // cookie: cookieOptions,
         resave: false,
         saveUninitialized: false
     };
