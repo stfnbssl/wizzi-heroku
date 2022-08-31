@@ -16,25 +16,36 @@ const SessionMiddleware = (app) => {
         // expires in 14 days
         maxAge: 14 * 24 * 60 * 60 * 1000
     };
+    let connectUrl;
+    const { mongoHost, mongoUser, mongoPassword, mongoPath } = config_1.config;
+    if (mongoUser && mongoUser.length > 0 && mongoPassword && mongoPassword.length > 0 && mongoHost && mongoHost.length > 0) {
+        connectUrl = `${mongoHost}://${mongoUser}:${mongoPassword}${mongoPath}`;
+    }
+    // example 'mongodb://localhost/test'
+    else {
+        connectUrl = `${mongoPath}`;
+    }
     const sessionOptions = {
         name: 'wizzi-heroku.sid',
         secret: config_1.config.sessionSecret,
         store: connect_mongo_1.default.create(
         // save session 14 days
         {
-            client: mongoose_1.default.connection.getClient(),
+            mongoUrl: connectUrl,
+            dbName: "wizzi",
+            stringify: false,
             ttl: 14 * 24 * 60 * 60
         }),
         cookie: cookieOptions,
         resave: false,
-        saveUninitialized: false,
-        unset: 'destroy'
+        saveUninitialized: false
     };
     if (process.env.NODE_ENV == "production") {
-        app.enable('trust proxy');
+        app.set('trust proxy', 1);
     }
     app.use((0, express_session_1.default)(sessionOptions));
-    console.log("SessionMiddleware installed, using MongoStore", mongoose_1.default.connection.getClient(), __filename);
+    console.log("SessionMiddleware installed, using MongoStore", connectUrl, __filename);
+    console.log("SessionMiddleware installed, mongoose.connection.getClient() was", mongoose_1.default.connection.getClient(), __filename);
 };
 exports.SessionMiddleware = SessionMiddleware;
 //# sourceMappingURL=session.js.map
