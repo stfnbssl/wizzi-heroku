@@ -7,12 +7,11 @@ const connect_mongo_1 = tslib_1.__importDefault(require("connect-mongo"));
 const mongoose_1 = tslib_1.__importDefault(require("mongoose"));
 const config_1 = require("../features/config");
 const SessionMiddleware = (app) => {
-    console.log("SessionMiddleware app.get('env'): " + app.get('env'), __filename);
     console.log("SessionMiddleware process.env.NODE_ENV: " + process.env.NODE_ENV, __filename);
     const cookieOptions = {
         // serve secure cookies, requires https
-        secure: app.get('env') === 'production' ? true : false,
-        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production' ? true : false,
+        httpOnly: false,
         sameSite: 'none',
         // expires in 14 days
         maxAge: 14 * 24 * 60 * 60 * 1000

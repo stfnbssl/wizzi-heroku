@@ -10,6 +10,7 @@ const tslib_1 = require("tslib");
 const path_1 = tslib_1.__importDefault(require("path"));
 const dotenv_1 = tslib_1.__importDefault(require("dotenv"));
 const envalid_1 = require("envalid");
+// see https://devcenter.heroku.com/articles/node-best-practices#be-environmentally-aware
 function validateEnv() {
     dotenv_1.default.config();
     let checkedEnv = (0, envalid_1.cleanEnv)(process.env, {

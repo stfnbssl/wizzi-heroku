@@ -35,8 +35,10 @@ class ApiV1AuthenticateController {
                 request.session.github_access_token = _token;
                 request.session.save(function (err) {
                     if (err) {
+                        console.log("[31m%s[0m", myname, 'githubCallback', 'error saving session', err);
                         return response.status(500).json({ message: err.message });
                     }
+                    console.log(myname, 'githubCallback', 'session saved before redirect to /account/profile/github', __filename);
                     response.redirect('/account/profile/github');
                 });
             }).catch((err) => {
@@ -59,7 +61,9 @@ class ApiV1AuthenticateController {
                 request.session.google_access_token = _token;
                 request.session.save(function (err) {
                     if (err) {
+                        console.log("[31m%s[0m", myname, 'githubCallback', 'error saving session', err);
                         return response.status(500).json({ message: err.message });
+                        console.log(myname, 'githubCallback', 'session saved before redirect to /account/profile/google', __filename);
                     }
                     response.redirect('/account/profile/google');
                 });
