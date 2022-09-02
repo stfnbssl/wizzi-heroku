@@ -34,7 +34,7 @@ html
                 h3 common urls
                 p Packi Editor -> [host]/~~/[a|p|m|t]/[username]/[production_name]
                 p (a: artifact production, p: package production, m: meta production, t: tFolder)
-                p Packi Editor Example -> http://localhost:5000/~~/a/stfnbssl/html.starter
+                p Packi Editor Example -> https://www.wizzihub.com/~~/a/stfnbssl/html.starter
                 p Site Packi Browse -> [host]/~-/[production_name]
                 p User Packi Browse -> [host]/~/[username]/[production_name]
 
