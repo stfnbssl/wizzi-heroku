@@ -56,11 +56,10 @@ class ProductionsController {
                 }, 501);
             }));
         });
-        this.generateArtifact = 
-        // loog myname, 'generateArtifact.received files', Object.keys(req_files)
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.generateArtifact = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const id = request.params.id;
             const req_files = request.body;
+            console.log(myname, 'generateArtifact.received files', Object.keys(req_files), __filename);
             production_1.artifactApi.prepareGenerationFromWizziJson(req_files).then((result) => wizzi_1.wizziProds.generateArtifact(id, result.packiFiles, result.context).then(
             // loog myname, 'generateArtifact.result', value
             value => (0, sendResponse_1.sendSuccess)(response, {

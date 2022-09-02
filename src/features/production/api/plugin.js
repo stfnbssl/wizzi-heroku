@@ -230,7 +230,7 @@ function createPluginProduction(owner, name, description, packiFiles) {
 exports.createPluginProduction = createPluginProduction;
 function updatePluginProduction(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updatePluginProduction', owner, name, description, packiFiles);
+        console.log(myname, 'updatePluginProduction');
         const PluginProduction = (0, plugin_1.GetPluginProductionModel)();
         return new Promise((resolve, reject) => {
             const query = {

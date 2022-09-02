@@ -18,7 +18,7 @@ const WizziViewEngineMiddleware = (app) => {
                 const siteCtx = yield wizzi_1.wizziProds.loadSiteJsonModel('sitectx.json.ittf', context);
                 context.siteCtx = siteCtx;
                 console.log('WizziViewEngineMiddleware.filePath', filePath, __filename);
-                console.log('WizziViewEngineMiddleware.options', JSON.stringify(options, null, 2), __filename);
+                console.log('WizziViewEngineMiddleware.options', Object.keys(options), __filename);
                 wizzi_1.wizziProds.generateArtifactFs(filePath, context).then((generated) => {
                     return callback(null, generated.artifactContent);
                 }).catch((err) => {

@@ -237,7 +237,7 @@ function createArtifactProduction(owner, name, description, mainIttf, wizziSchem
 exports.createArtifactProduction = createArtifactProduction;
 function updateArtifactProduction(id, owner, name, description, mainIttf, wizziSchema, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updateArtifactProduction', owner, name, description, mainIttf, wizziSchema, packiFiles);
+        console.log(myname, 'updateArtifactProduction');
         const ArtifactProduction = (0, artifact_1.GetArtifactProductionModel)();
         return new Promise((resolve, reject) => {
             const query = {
@@ -574,6 +574,7 @@ const extContentTypeMap = {
     '.png': 'image/png',
     '.scss': 'text/scss',
     '.svg': 'image/svg+xml',
+    '.ts': 'text/typescript',
     '.ttf': 'application/x-font-ttf',
     '.txt': 'text/plain',
     '.vtt': 'text/vtt',

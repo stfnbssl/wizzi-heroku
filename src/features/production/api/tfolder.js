@@ -231,7 +231,7 @@ function createTFolder(owner, name, description, packiFiles) {
 exports.createTFolder = createTFolder;
 function updateTFolder(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updateTFolder', owner, name, description, packiFiles);
+        console.log(myname, 'updateTFolder');
         const TFolder = (0, tfolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             const query = {

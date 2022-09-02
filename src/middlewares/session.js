@@ -7,7 +7,8 @@ const config_1 = require("../features/config");
 const SessionMiddleware = (app) => {
     console.log("SessionMiddleware process.env.NODE_ENV: " + process.env.NODE_ENV, __filename);
     const cookieOptions = {
-        secure: false,
+        // serve secure cookies, requires https
+        secure: process.env.NODE_ENV === 'production' ? true : false,
         httpOnly: false,
         sameSite: 'none',
         // expires in 14 days
@@ -16,8 +17,6 @@ const SessionMiddleware = (app) => {
     const sessionOptions = {
         name: 'wizzi-heroku.sid',
         secret: config_1.config.sessionSecret,
-        store: new express_session_1.default.MemoryStore(),
-        // cookie: cookieOptions,
         resave: false,
         saveUninitialized: false
     };

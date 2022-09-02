@@ -31,9 +31,12 @@ html
                     p A wizzi macro expression should work even if there are spaces between graphs and expression ${'$'}{ '()' }
                     p Delete UTC time from generation headings, they produce false changes to commit.
                     
+                    h1 wizzi-core
+                    p json-model: errors lines in fragments are reported of mixer instead of mixed
+
                     h1 Mongo Productions repository
                     p The global context artifact 'wzctx' should be optional 
-                    p Before returning a production fron MongoDB always check its integrity
+                    p Before returning a production from MongoDB always check its integrity
                     
                     h1 Packi editor
                     p The editor must show production name and kind (artifact|package|meta|tFolder).

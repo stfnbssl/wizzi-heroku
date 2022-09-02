@@ -230,7 +230,7 @@ function createPackageProduction(owner, name, description, packiFiles) {
 exports.createPackageProduction = createPackageProduction;
 function updatePackageProduction(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updatePackageProduction', owner, name, description, packiFiles);
+        console.log(myname, 'updatePackageProduction');
         const PackageProduction = (0, package_1.GetPackageProductionModel)();
         return new Promise((resolve, reject) => {
             const query = {

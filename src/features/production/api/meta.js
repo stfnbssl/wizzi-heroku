@@ -232,7 +232,7 @@ function createMetaProduction(owner, name, description, packiFiles) {
 exports.createMetaProduction = createMetaProduction;
 function updateMetaProduction(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updateMetaProduction', owner, name, description, packiFiles);
+        console.log(myname, 'updateMetaProduction');
         const MetaProduction = (0, meta_1.GetMetaProductionModel)();
         return new Promise((resolve, reject) => {
             const query = {

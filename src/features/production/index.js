@@ -19,6 +19,7 @@ const meta_2 = require("./controllers/meta");
 const apiv1meta_1 = require("./controllers/apiv1meta");
 const tfolder_2 = require("./controllers/tfolder");
 const apiv1tfolder_1 = require("./controllers/apiv1tfolder");
+const apiv1generations_1 = require("./controllers/apiv1generations");
 const artifactApi = tslib_1.__importStar(require("./api/artifact"));
 exports.artifactApi = artifactApi;
 const packageApi = tslib_1.__importStar(require("./api/package"));
@@ -57,7 +58,8 @@ const productionControllers = [
     new meta_2.MetaProductionController(),
     new apiv1meta_1.ApiV1MetaProductionController(),
     new tfolder_2.TFolderController(),
-    new apiv1tfolder_1.ApiV1TFolderController()
+    new apiv1tfolder_1.ApiV1TFolderController(),
+    new apiv1generations_1.ApiV1GenerationsController()
 ];
 exports.productionControllers = productionControllers;
 //# sourceMappingURL=index.js.map

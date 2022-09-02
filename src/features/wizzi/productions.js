@@ -94,7 +94,7 @@ function mTreeBuildupScript(filePath, files, context) {
             let jsonwf = {};
             jsonwf = yield (0, factory_1.createFsJsonAndFactory)(files);
             ;
-            jsonwf.wf.loadMTreeDebugInfo(ittfDocumentUri, context, (err, buildUpScript) => {
+            jsonwf.wf.loadMTreeBuildupScript(ittfDocumentUri, context, (err, buildUpScript) => {
                 if (err) {
                     return reject(err);
                 }
@@ -577,7 +577,11 @@ function handleWizzify(extension, codeSnippet) {
             });
         }
         else {
-            reject(new Error('Extension "' + extension + '" has no wizzifier'));
+            const ittfResult = [extension.substring(1)];
+            ittfResult.push('\t$' + '*');
+            ittfResult.push(codeSnippet);
+            ittfResult.push('\t*' + '$');
+            resolve(ittfResult.join('\n'));
         }
     }));
 }

@@ -53,7 +53,9 @@ html
                     p example: packages\wizzi-demo\.wizzi\examples\starter\essentials\mtrees\level_1\step_1__copy\treeview_1.html.ittf
                     
                     h2 Package wizzi.editor
-                    p Manage SaveState and SaveHistory
+                    p Manage SaveState
+                    p From modal "Edit Production Details" update the production data base: use the production Rest Api
+                    p Synthax highlight generated code
         
                     h1 Good reads
                     ul

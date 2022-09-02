@@ -56,9 +56,7 @@ class ApiV1ArtifactProductionController {
             });
         });
         this.postArtifactProduction = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            console.log('postArtifactProduction.request.params', request.params, __filename);
-            console.log('postArtifactProduction.request.body', request.body, __filename);
-            (0, artifact_1.createArtifactProduction)(request.params.owner, request.params.name, request.body.description, request.body.mainIttf, request.body.wizziSchema, JSON.stringify(request.body.packiFiles)).then((result) => {
+            return (0, artifact_1.createArtifactProduction)(request.params.owner, request.params.name, request.body.description, request.body.mainIttf, request.body.wizziSchema, JSON.stringify(request.body.packiFiles)).then((result) => {
                 console.log('postArtifactProduction.create.result', result, __filename);
                 (0, artifact_1.invalidateCache)(request.params.owner, request.params.name);
                 (0, sendResponse_1.sendSuccess)(response, result);
@@ -70,9 +68,7 @@ class ApiV1ArtifactProductionController {
             });
         });
         this.putArtifactProduction = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            console.log('putArtifactProduction.request.params', request.params, __filename);
-            console.log('putArtifactProduction.request.body', request.body, __filename);
-            (0, artifact_1.updateArtifactProduction)(request.params.id, request.body.owner, request.body.name, request.body.description, request.body.mainIttf, request.body.wizziSchema, JSON.stringify(request.body.packiFiles)).then((result) => {
+            return (0, artifact_1.updateArtifactProduction)(request.params.id, request.body.owner, request.body.name, request.body.description, request.body.mainIttf, request.body.wizziSchema, JSON.stringify(request.body.packiFiles)).then((result) => {
                 console.log('putArtifactProduction.update.result', result, __filename);
                 (0, artifact_1.invalidateCache)(request.params.owner, request.params.name);
                 (0, sendResponse_1.sendSuccess)(response, result);
