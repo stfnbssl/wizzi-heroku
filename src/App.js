@@ -7,10 +7,6 @@ const tslib_1 = require("tslib");
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\App.ts.ittf
 */
 const express_1 = tslib_1.__importDefault(require("express"));
-const fs_1 = tslib_1.__importDefault(require("fs"));
-const https_1 = tslib_1.__importDefault(require("https"));
-const ssl_key = fs_1.default.readFileSync('server.key');
-const ssl_cert = fs_1.default.readFileSync('server.cert');
 /**
     //
     // Normalize a port into a number, string, or false.
@@ -48,13 +44,9 @@ class App {
         ;
         this.app.set('port', this.port);
         initializeApp(this.app, initValues);
-        this.server = https_1.default.createServer({
-            key: ssl_key,
-            cert: ssl_cert
-        }, this.app);
     }
     listen(port) {
-        this.server.listen(this.port, () => console.log(`App listening at https://www.wizzihub.com:${this.port}`));
+        this.server = this.app.listen(this.port, () => console.log(`App listening at https://www.wizzihub.com:${this.port}`));
     }
     close(done) {
         console.log(`Server closing. App listening at https://www.wizzihub.com:${this.port}`);
