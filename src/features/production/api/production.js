@@ -270,7 +270,7 @@ function getProductionSetFromProductionObject(owner, productionName, packiConfig
                     }
                 }, progressiveContext).then((generationResult) => {
                     const packiConfigObj = JSON.parse(generationResult.artifactContent);
-                    console.log('packiConfigObj', JSON.stringify(packiConfigObj), __filename);
+                    console.log(myname, 'getProductionSetFromProductionObject', 'packiConfigObj', JSON.stringify(packiConfigObj), __filename);
                     getTFoldersPackiFilesFromProductionData(owner, packiConfigObj).then((tFoldersPackiFiles) => {
                         console.log(myname, 'getProductionSetFromProductionObject', 'tFoldersPackiFiles', Object.keys(tFoldersPackiFiles), __filename);
                         progressivePackiFiles = mergePackiFiles(progressivePackiFiles, tFoldersPackiFiles);
@@ -304,7 +304,9 @@ function getTFoldersPackiFilesFromProductionData(owner, packiConfigObj) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
             var tFoldersPackiFiles = {};
-            if (!!(packiConfigObj && packiConfigObj.tfolders && packiConfigObj.tfolders.length > 0) == false) {
+            const hasTFolders = packiConfigObj && packiConfigObj.tfolders && packiConfigObj.tfolders.length > 0;
+            console.log(myname, 'getTFoldersPackiFilesFromProductionData', 'hastFolders', hasTFolders, __filename);
+            if (!hasTFolders) {
                 return resolve(tFoldersPackiFiles);
             }
             var j = 0;

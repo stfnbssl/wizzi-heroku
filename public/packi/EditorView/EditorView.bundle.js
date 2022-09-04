@@ -1263,7 +1263,7 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         onMTreeDebugInfoPreview
       } = this.props;
       const annotations = this.props.annotations;
-      const testPreviewURL = "".concat("https://www.wizzihub.com", "/~/").concat(encodeURIComponent(owner), "/").concat(encodeURIComponent(name));
+      const testPreviewURL = "".concat("http://localhost:5000", "/~/").concat(encodeURIComponent(owner), "/").concat(encodeURIComponent(name));
       console.log('EditorView.props', this.props, mainIttf, wizziSchema, __filename);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_shell_ContentShell__WEBPACK_IMPORTED_MODULE_11__.ContentShell, null, this.state.loadedEditor ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_ProgressIndicator__WEBPACK_IMPORTED_MODULE_19__.ProgressIndicator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_PageMetadata__WEBPACK_IMPORTED_MODULE_9__.default, {
         name: name,
@@ -2689,19 +2689,19 @@ let UserMenuComp = /*#__PURE__*/function (_React$Component) {
         visible: this.state.visible,
         actions: loggedUser ? [{
           label: 'Artifacts',
-          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/artifacts"))
+          handler: () => window.open("".concat("http://localhost:5000", "/productions/artifacts"))
         }, {
           label: 'Packages',
-          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/packages"))
+          handler: () => window.open("".concat("http://localhost:5000", "/productions/packages"))
         }, {
           label: 'Metas',
-          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/metas"))
+          handler: () => window.open("".concat("http://localhost:5000", "/productions/metas"))
         }, {
           label: 'tFolders',
-          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/tfolders"))
+          handler: () => window.open("".concat("http://localhost:5000", "/productions/tfolders"))
         }, {
           label: 'Settings',
-          handler: () => window.open("".concat("https://www.wizzihub.com", "/settings"))
+          handler: () => window.open("".concat("http://localhost:5000", "/settings"))
         }] : [{
           label: 'Log in to Wizzi',
           handler: () => window.location.href = '#'
@@ -5575,7 +5575,7 @@ __webpack_require__.r(__webpack_exports__);
 function getPageMetadata(props) {
   const title = "".concat(props.name, " - Packi");
   const description = props.description;
-  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"https://www.wizzihub.com","API_SERVER_URL":"https://www.wizzihub.com","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1662124741272}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
+  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"http://localhost:5000","API_SERVER_URL":"http://localhost:5000","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1662291401142}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
   const image = 'https://s3.amazonaws.com/exp-brand-assets/PackiIcon_200.png';
   const meta = [{
     name: 'description',
