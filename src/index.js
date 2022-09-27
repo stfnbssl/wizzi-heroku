@@ -47,8 +47,7 @@ function start() {
             globalApi: {},
             apis,
             controllers,
-            middlewaresPost,
-            auth0Secured: index_9.auth0Secured
+            middlewaresPost
         };
         app.instance = new App_1.default(appInitializer);
         app.instance.listen();

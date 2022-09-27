@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.wrapperForSchema = exports.schemaFromFilePath = exports.transformerFor = exports.schemaFromExtension = exports.generatorFor = exports.pluginsFor = exports.ittfRootFromSchema = exports.artifactNameFromSchema = exports.parseFilePath = void 0;
+exports.contentTypeFor = exports.wrapperForSchema = exports.schemaFromFilePath = exports.transformerFor = exports.schemaFromExtension = exports.generatorFor = exports.pluginsFor = exports.ittfRootFromSchema = exports.artifactNameFromFileSchema = exports.parseFilePath = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\wizzi\maps.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
@@ -26,92 +26,95 @@ function parseFilePath(filePath) {
     }
 }
 exports.parseFilePath = parseFilePath;
-var schemaArtifactMap = {
-    js: 'js/module',
-    jsx: 'js/module',
-    ts: 'ts/module',
-    html: 'html/document',
+const schemaArtifactMap = {
     css: 'css/document',
+    html: 'html/document',
+    ittf: 'ittf/document',
+    js: 'js/module',
+    json: 'json/document',
+    jsx: 'js/module',
+    md: 'md/document',
     scss: 'scss/document',
     svg: 'svg/document',
+    text: 'text/document',
+    ts: 'ts/module',
+    tsx: 'ts/module',
     vtt: 'vtt/document',
-    md: 'md/document',
-    json: 'json/document',
     xml: 'xml/document',
     yaml: 'yaml/document',
-    text: 'text/document',
-    ittf: 'ittf/document'
+    yml: 'yaml/document'
 };
-function artifactNameFromSchema(schema) {
+function artifactNameFromFileSchema(schema) {
     return schemaArtifactMap[schema];
 }
-exports.artifactNameFromSchema = artifactNameFromSchema;
-var schemaIttfRootMap = {
-    js: 'module',
-    jsx: 'module',
-    ts: 'module',
-    html: 'html',
+exports.artifactNameFromFileSchema = artifactNameFromFileSchema;
+const schemaIttfRootMap = {
     css: 'css',
+    html: 'html',
+    ittf: 'any',
+    js: 'module',
+    json: '{',
+    jsx: 'module',
+    md: 'md',
     scss: 'scss',
     svg: 'svg',
-    md: 'vtt',
+    text: 'text',
+    ts: 'module',
+    tsx: 'module',
     vtt: 'vtt',
-    json: '{',
     xml: 'xml',
-    yaml: 'yaml',
-    text: 'any',
-    ittf: 'any'
+    yaml: 'yaml'
 };
 function ittfRootFromSchema(schema) {
     return schemaIttfRootMap[schema];
 }
 exports.ittfRootFromSchema = ittfRootFromSchema;
 const schemaPluginMap = {
-    wfjob: [
-        'wizzi-core'
+    css: [
+        'wizzi-web'
     ],
-    wfschema: [
-        'wizzi-core'
-    ],
-    js: [
-        'wizzi-js'
-    ],
-    ts: [
-        'wizzi-js'
+    graphql: [
+        'wizzi-web'
     ],
     html: [
         'wizzi-web',
         'wizzi-js',
         'wizzi-core'
     ],
-    css: [
-        'wizzi-web'
+    ittf: [
+        'wizzi-core'
+    ],
+    js: [
+        'wizzi-js'
+    ],
+    json: [
+        'wizzi-core'
     ],
     scss: [
         'wizzi-web'
     ],
-    graphql: [
-        'wizzi-web'
+    text: [
+        'wizzi-core'
     ],
-    vml: [
+    ts: [
+        'wizzi-js'
+    ],
+    vtt: [
         'wizzi-web'
     ],
     vue: [
         'wizzi-web'
     ],
-    json: [
+    wfjob: [
         'wizzi-core'
     ],
-    text: [
+    wfschema: [
         'wizzi-core'
     ],
     xml: [
         'wizzi-core'
     ],
     yaml: [
-        'wizzi-core'
-    ],
-    ittf: [
         'wizzi-core'
     ]
 };
@@ -123,42 +126,31 @@ function pluginsFor(file) {
     return [];
 }
 exports.pluginsFor = pluginsFor;
-const schemaModuleMap = {
-    css: 'css/document',
-    graphql: 'graphql/document',
-    ittf: 'ittf/document',
-    js: 'js/module',
-    json: 'json/document',
-    html: 'html/document',
-    md: 'md/document',
-    scss: 'scss/document',
-    svg: 'svg/document',
-    text: 'text/document',
-    ts: 'ts/module',
-    vml: 'vml/document',
-    vue: 'vue/document',
-    xml: 'xml/document'
-};
 function generatorFor(filePath) {
     const pf = parseFilePath(filePath);
     if (pf.isIttfDocument) {
-        return schemaModuleMap[pf.schema];
+        return artifactNameFromFileSchema(pf.schema);
     }
     return undefined;
 }
 exports.generatorFor = generatorFor;
 const extSchemaMap = {
+    '.css': 'css',
+    '.graphql': 'graphql',
+    '.html': 'html',
+    '.ittf': 'ittf',
     '.js': 'js',
+    '.json': 'json',
     '.jsx': 'js',
+    '.md': 'md',
+    '.svg': 'svg',
+    '.text': 'text',
     '.ts': 'ts',
     '.tsx': 'ts',
-    '.html': 'html',
-    '.css': 'css',
-    '.svg': 'svg',
-    '.md': 'md',
+    '.vtt': 'vtt',
     '.xml': 'xml',
-    '.json': 'json',
-    '.graphql': 'graphql'
+    '.yaml': 'yaml',
+    '.yml': 'yaml'
 };
 function schemaFromExtension(extension) {
     return extSchemaMap[extension];
@@ -210,4 +202,35 @@ function wrapperForSchema(schema) {
     }
 }
 exports.wrapperForSchema = wrapperForSchema;
+const extContentTypeMap = {
+    '.css': 'text/css',
+    '.gif': 'image/gif',
+    '.html': 'text/html',
+    '.ittf': 'text/plain',
+    '.jpeg': 'image/jpeg',
+    '.jpg': 'image/jpg',
+    '.js': 'text/javascript',
+    '.jsx': 'text/javascript',
+    '.json': 'application/json',
+    '.png': 'image/png',
+    '.scss': 'text/scss',
+    '.svg': 'image/svg+xml',
+    '.ts': 'text/typescript',
+    '.tsx': 'text/typescript',
+    '.ttf': 'application/x-font-ttf',
+    '.txt': 'text/plain',
+    '.vtt': 'text/vtt',
+    '.woff': 'application/x-font-woff',
+    '.xml': 'text/xml',
+    '.yaml': 'text/yanl',
+    '.yml': 'text/yanl'
+};
+function contentTypeFor(filePath) {
+    const ittfSchema = schemaFromFilePath(filePath);
+    if (ittfSchema) {
+        return extContentTypeMap['.' + ittfSchema];
+    }
+    return undefined;
+}
+exports.contentTypeFor = contentTypeFor;
 //# sourceMappingURL=maps.js.map

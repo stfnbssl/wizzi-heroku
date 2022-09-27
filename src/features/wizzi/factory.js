@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ensurePackiFilePrefix = exports.extractGeneratedFiles = exports.createFsJson = exports.createFsJsonAndFactory = exports.createFilesystemFactory = exports.packiFilesToJsonDocuments = void 0;
+exports.ensurePackiFilePrefix = exports.extractGeneratedFiles = exports.createJsonFs = exports.createJsonFsAndFactory = exports.createFilesystemFactory = exports.packiFilesToJsonDocuments = void 0;
 const tslib_1 = require("tslib");
 const wizzi_1 = tslib_1.__importDefault(require("wizzi"));
 const wizzi_repo_1 = require("wizzi-repo");
@@ -49,7 +49,7 @@ function createFilesystemFactory(globalContext) {
     });
 }
 exports.createFilesystemFactory = createFilesystemFactory;
-function createFsJsonAndFactory(files) {
+function createJsonFsAndFactory(files) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         const plugins = [];
         const jsonDocuments = [];
@@ -68,12 +68,12 @@ function createFsJsonAndFactory(files) {
                 });
             }
         });
-        return new Promise((resolve, reject) => wizzi_repo_1.JsonComponents.createFsJson(jsonDocuments, (err, fsJson) => {
+        return new Promise((resolve, reject) => wizzi_repo_1.JsonComponents.createJsonFs(jsonDocuments, (err, jsonFs) => {
             if (err) {
                 return reject(err);
             }
             wizzi_1.default.jsonFactory({
-                fsJson,
+                jsonFs,
                 plugins: {
                     items: [
                         'wizzi-core',
@@ -88,14 +88,14 @@ function createFsJsonAndFactory(files) {
                 }
                 resolve({
                     wf,
-                    fsJson
+                    jsonFs
                 });
             });
         }));
     });
 }
-exports.createFsJsonAndFactory = createFsJsonAndFactory;
-function createFsJson(files) {
+exports.createJsonFsAndFactory = createJsonFsAndFactory;
+function createJsonFs(files) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         const jsonDocuments = [];
         Object.keys(files).map((value) => {
@@ -107,7 +107,7 @@ function createFsJson(files) {
                 });
             }
         });
-        return new Promise((resolve, reject) => wizzi_repo_1.JsonComponents.createFsJson(jsonDocuments, (err, result) => {
+        return new Promise((resolve, reject) => wizzi_repo_1.JsonComponents.createJsonFs(jsonDocuments, (err, result) => {
             if (err) {
                 return reject(err);
             }
@@ -115,11 +115,11 @@ function createFsJson(files) {
         }));
     });
 }
-exports.createFsJson = createFsJson;
-function extractGeneratedFiles(fsJson) {
+exports.createJsonFs = createJsonFs;
+function extractGeneratedFiles(jsonFs) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         const files = {};
-        return new Promise((resolve, reject) => fsJson.toFiles({
+        return new Promise((resolve, reject) => jsonFs.toFiles({
             removeRoot: env_1.packiFilePrefix
         }, (err, result) => {
             if (err) {
@@ -140,7 +140,11 @@ function extractGeneratedFiles(fsJson) {
 }
 exports.extractGeneratedFiles = extractGeneratedFiles;
 function ensurePackiFilePrefix(filePath) {
-    return filePath.startsWith(env_1.packiFilePrefix) ? filePath : env_1.packiFilePrefix + filePath;
+    var newFilePath = normalizePath(filePath);
+    return newFilePath.startsWith(env_1.packiFilePrefix) ? newFilePath : env_1.packiFilePrefix + newFilePath;
 }
 exports.ensurePackiFilePrefix = ensurePackiFilePrefix;
+function normalizePath(path) {
+    return path.replace(/\\/g, '/');
+}
 //# sourceMappingURL=factory.js.map

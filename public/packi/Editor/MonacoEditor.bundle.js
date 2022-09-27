@@ -65,7 +65,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\MonacoEditor.tsx.ittf
 */
 
@@ -485,9 +485,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-// export * from 'monaco-editor-core';
+/*
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
+    package: wizzi-js@0.7.13
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\languages\ittf.language.tsx.ittf
+*/
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  // defaultToken: 'invalid',
+  defaultToken: 'invalid',
   tokenizer: {
     root: [{
       include: '@whitespace'
@@ -519,24 +523,48 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
     }]],
-    ittfCommand: [[/\$[a-z]+$/, 'ittf-command'], [/\$[a-z]+/, {
-      token: 'ittf-command',
-      next: 'scriptLine'
+    ittfCommand: [[/(\$global|\$)$/, {
+      token: 'interpolation',
+      next: 'scriptMultiLine'
     }], [/\$[ ]/, {
       token: 'interpolation',
       next: 'scriptLine'
-    }], [/(\$global|\$)$/, {
-      token: 'interpolation',
-      next: 'scriptMultiLine'
+    }], [/\$[a-z]+$/, 'ittf-command'], [/\$[a-z]+/, {
+      token: 'ittf-command',
+      next: 'scriptLine'
     }]],
-    nodeName: [[/([^($\s]+)/, {
+    nodeName: [[/(\${)([^}]*)(})/, {
       cases: {
-        '@eos': 'node-name',
+        '@eos': ['interpolation.delimiter', 'interpolation', {
+          token: 'interpolation.delimiter',
+          next: '@popall'
+        }],
+        '@default': ['interpolation.delimiter', 'interpolation', {
+          token: 'interpolation.delimiter',
+          next: 'nodeName'
+        }]
+      }
+    }], [/\$/, {
+      token: 'node-name',
+      next: 'nodeName'
+    }], [/[^\s]*\$/, {
+      token: 'node-name',
+      goBack: 1,
+      next: 'nodeName'
+    }], [/[^\s]+/, {
+      cases: {
+        '@eos': {
+          token: 'node-name',
+          next: '@popall'
+        },
         '@default': {
           token: 'node-name',
           next: 'nodeValue'
         }
       }
+    }], [/[\s]+/, {
+      token: 'node-name',
+      next: 'nodeValue'
     }]],
     nodeValue: [[/[^\$]+$/, {
       token: 'node-value',
@@ -551,7 +579,7 @@ __webpack_require__.r(__webpack_exports__);
         }],
         '@default': ['interpolation.delimiter', 'interpolation', 'interpolation.delimiter']
       }
-    }], // [ /.*$/, { token: 'node-value', next: '@pop' } ] 
+    }], // [ /.*$/, { token: 'node-value', next: '@pop' } ]
     [/\$$/, {
       token: 'node-value',
       next: '@popall'
@@ -577,9 +605,9 @@ __webpack_require__.r(__webpack_exports__);
       next: '@popall'
     }], [/\$/, 'mix-value']],
     scriptLine: [[/.*$/, 'interpolation', '@pop']],
-    scriptMultiLine: [[/[^\/\/\.]+/, 'interpolation'], [/\/\/\.$/, 'interpolation', '@pop']]
+    scriptMultiLine: [[/[^\/\/\.]+/, 'interpolation'], [/\/\/$/, 'interpolation', '@pop']]
   }
-});
+}); // export * from 'monaco-editor-core';
 
 /***/ }),
 
@@ -598,7 +626,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\colors-dark.tsx.ittf
 */
 
@@ -646,7 +674,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\colors-light.tsx.ittf
 */
 
@@ -693,6 +721,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   base: 'vs-dark',
   inherit: false,
+  colors: {},
   rules: [{
     token: 'node-name',
     foreground: '57e34d'
@@ -719,7 +748,7 @@ __webpack_require__.r(__webpack_exports__);
     foreground: 'ffff00'
   }, {
     token: 'invalid',
-    foreground: 'ffffff'
+    foreground: 'ff00ff'
   }]
 });
 
@@ -739,6 +768,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   base: 'vs',
   inherit: false,
+  colors: {},
   rules: [{
     token: 'node-name',
     foreground: '0000ff'
@@ -758,14 +788,14 @@ __webpack_require__.r(__webpack_exports__);
     token: 'comment',
     foreground: 'ababab'
   }, {
-    token: 'invalid',
-    foreground: 'ff00ff'
-  }, {
     token: 'interpolation.delimiter',
     foreground: 'ff0000'
   }, {
     token: 'interpolation',
     foreground: '54db4b'
+  }, {
+    token: 'invalid',
+    foreground: 'ff00ff'
   }]
 });
 
@@ -792,7 +822,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\monaco-overrides.tsx.ittf
 */
 
@@ -820,7 +850,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _colors_light__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./colors-light */ "./src/components/Editor/themes/colors-light.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\monaco.tsx.ittf
 */
 
@@ -1025,7 +1055,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ResizeDetector.tsx.ittf
 */
 
@@ -1138,7 +1168,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _prettierCode__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./prettierCode */ "./src/features/prettier/prettierCode.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\prettier\index.tsx.ittf
 */
 
@@ -1166,7 +1196,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\prettier\prettierCode.tsx.ittf
 */
 

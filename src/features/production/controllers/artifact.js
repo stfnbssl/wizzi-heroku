@@ -5,14 +5,17 @@ const tslib_1 = require("tslib");
 const jsx_runtime_1 = require("react/jsx-runtime");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\controllers\artifact.tsx.ittf
 */
 const express_1 = require("express");
+const index_1 = require("../../../middlewares/index");
+const error_1 = require("../../../utils/error");
+const utils_1 = require("../../../utils");
 const server_1 = tslib_1.__importDefault(require("react-dom/server"));
 const PageFormDocument_1 = tslib_1.__importDefault(require("../../../pages/PageFormDocument"));
 const artifact_1 = require("../api/artifact");
-const utils_1 = require("../utils");
+const utils_2 = require("../utils");
 const myname = 'features/production/controllers/artifact';
 function renderPageForm(req, res, data, queryParams) {
     const index = '<!DOCTYPE html>' + (server_1.default.renderToStaticMarkup((0, jsx_runtime_1.jsx)(PageFormDocument_1.default, { data: data, queryParams: queryParams })));
@@ -20,12 +23,30 @@ function renderPageForm(req, res, data, queryParams) {
     res.set('Content-Length', index.length.toString());
     res.send(index);
 }
-function getPackiFiles(mainIttf, contexts, tfolders) {
-    return {
-        [mainIttf]: {
-            type: 'CODE',
-            contents: ''
-        }
+function makeHandlerAwareOfAsyncErrors(handler) {
+    return function (request, response, next) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            try {
+                yield handler(request, response, next);
+            }
+            catch (error) {
+                if (error instanceof error_1.FcError) {
+                    response.status(utils_1.statusCode.BAD_REQUEST).send({
+                        code: error.code,
+                        message: error.message,
+                        data: error.data || {}
+                    });
+                }
+                else {
+                    const fcError = new error_1.FcError(error_1.SYSTEM_ERROR);
+                    response.status(utils_1.statusCode.BAD_REQUEST).send({
+                        code: fcError.code,
+                        message: error.message,
+                        data: fcError.data || {}
+                    });
+                }
+            }
+        });
     };
 }
 class ArtifactProductionController {
@@ -34,12 +55,12 @@ class ArtifactProductionController {
         this.router = (0, express_1.Router)();
         this.initialize = (initValues) => {
             console.log("[33m%s[0m", 'Entering ArtifactProductionController.initialize');
-            this.router.get('/new', this.getNewArtifactForm);
-            this.router.post('/new', this.postArtifact);
-            this.router.get('/update/:id', this.getUpdateArtifactForm);
-            this.router.post('/update', this.putArtifact);
-            this.router.get('/delete/:id', this.getDeleteArtifactForm);
-            this.router.post('/delete', this.deleteArtifact);
+            this.router.get("/new", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getNewArtifactForm));
+            this.router.post("/new", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.postArtifact));
+            this.router.get("/update/:id", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getUpdateArtifactForm));
+            this.router.post("/update", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.putArtifact));
+            this.router.get("/delete/:id", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getDeleteArtifactForm));
+            this.router.post("/delete", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.deleteArtifact));
         };
         this.getNewArtifactForm = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return renderPageForm(request, response, {
@@ -53,13 +74,14 @@ class ArtifactProductionController {
                 }
             }, {});
         });
-        this.postArtifact = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            console.log(myname + '.postNewArtifact.request.body', JSON.stringify(request.body, null, 2), __filename);
+        this.postArtifact = 
+        // loog myname + '.postNewArtifact.request.body', JSON.stringify(request.body, null, 2)
+        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const wizziSchema = request.body.ap_wizzi_schema || 'html';
             const mainIttf = request.body.ap_main_ittf || 'index.' + wizziSchema + '.ittf';
-            const contexts = request.body.ap_context || '[]';
+            const contexts = request.body.ap_contexts || '[]';
             const tfolders = request.body.ap_tfolders || '[]';
-            (0, artifact_1.createArtifactProduction)(request.session.user.username, request.body.ap_name, request.body.ap_description, mainIttf, wizziSchema, JSON.stringify((0, utils_1.createInitialPackiFiles)(contexts, tfolders, wizziSchema, mainIttf))).then((result) => {
+            (0, artifact_1.createArtifactProduction)(request.session.user.username, request.body.ap_name, request.body.ap_description, mainIttf, wizziSchema, JSON.stringify((0, utils_2.createInitialPackiFiles)(contexts, tfolders, wizziSchema, mainIttf))).then((result) => {
                 // _ response.redirect('/productions/artifacts')
                 if (result.ok) {
                     response.redirect('/~~/a/' + request.session.user.username + '/' + request.body.ap_name);
@@ -75,9 +97,10 @@ class ArtifactProductionController {
                 error: err
             }));
         });
-        this.getUpdateArtifactForm = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getUpdateArtifactForm = 
+        // loog myname + '.getUpdateArtifactForm.id', id
+        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const id = request.params.id;
-            console.log(myname + '.getUpdateArtifactForm.id', id, __filename);
             (0, artifact_1.getArtifactProductionObjectById)(id).then((result) => renderPageForm(request, response, {
                 type: 'success',
                 formName: 'UpdateArtifactProduction',
@@ -105,9 +128,10 @@ class ArtifactProductionController {
                 }
             });
         });
-        this.getDeleteArtifactForm = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getDeleteArtifactForm = 
+        // loog myname + '.getDeleteArtifactForm.id', id
+        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const id = request.params.id;
-            console.log(myname + '.getDeleteArtifactForm.id', id, __filename);
             (0, artifact_1.getArtifactProductionObjectById)(id).then((result) => renderPageForm(request, response, {
                 type: 'success',
                 formName: 'DeleteArtifactProduction',
@@ -121,8 +145,9 @@ class ArtifactProductionController {
                 }
             }, {}));
         });
-        this.deleteArtifact = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            console.log(myname + '.deleteArtifact.request.path', request.path, __filename);
+        this.deleteArtifact = 
+        // loog myname + '.deleteArtifact.request.path', request.path
+        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const obj = request.body;
             (0, artifact_1.deleteArtifactProduction)(obj.ap_id, obj.ap_owner, obj.ap_name, obj.ap_description, obj.ap_mainIttf, obj.ap_wizziSchema).then((result) => {
                 if (result.ok) {

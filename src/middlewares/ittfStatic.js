@@ -4,7 +4,7 @@ exports.IttfStaticMiddleware = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\middlewares\ittfStatic.ts.ittf
 */
 const util_1 = tslib_1.__importDefault(require("util"));
@@ -15,44 +15,10 @@ const parseurl_1 = tslib_1.__importDefault(require("parseurl"));
 const config_1 = require("../features/config");
 const wizzi_1 = require("../features/wizzi");
 const IttfStaticMiddleware = (app) => {
-    console.log('IttfStaticMiddleware. Folder served from ', path_1.default.resolve(__dirname, '..', '..', 'ittf'), __filename);
+    console.log('IttfStaticMiddleware. Folder served from ', path_1.default.resolve(__dirname, '..', '..', 'ittf'));
     app.use('/ittf', ittfMiddleware(path_1.default.resolve(__dirname, '..', '..', 'ittf'), '/ittf'));
 };
 exports.IttfStaticMiddleware = IttfStaticMiddleware;
-const extContentTypeMap = {
-    '.css': 'text/css',
-    '.gif': 'image/gif',
-    '.html': 'text/html',
-    '.ittf': 'text/plain',
-    '.jpeg': 'image/jpeg',
-    '.jpg': 'image/jpg',
-    '.js': 'text/javascript',
-    '.json': 'application/json',
-    '.png': 'image/png',
-    '.scss': 'text/scss',
-    '.svg': 'image/svg+xml',
-    '.ttf': 'application/x-font-ttf',
-    '.txt': 'text/plain',
-    '.vtt': 'text/vtt',
-    '.woff': 'application/x-font-woff',
-    '.yaml': 'text/yanl',
-    '.yml': 'text/yanl',
-    '.xml': 'text/xml'
-};
-function ittfSchemaOf(file) {
-    const nameParts = path_1.default.basename(file).split('.');
-    if (nameParts[nameParts.length - 1] === 'ittf') {
-        return nameParts[nameParts.length - 2];
-    }
-    return undefined;
-}
-function contentTypeFor(file) {
-    const ittfSchema = ittfSchemaOf(file);
-    if (ittfSchema) {
-        return extContentTypeMap['.' + ittfSchema];
-    }
-    return undefined;
-}
 /**
     //
     // request.query._context contains a semicolon separated list of context models export names.
@@ -97,8 +63,8 @@ function ittfMiddleware(basePath, routePath) {
         if (queryTransform && queryTransform.indexOf('/') > 0) {
             return sendTransform(filePath, queryTransform, response);
         }
-        let ittfSchema = ittfSchemaOf(filePath);
-        let contentType = contentTypeFor(filePath);
+        let ittfSchema = wizzi_1.wizziMaps.schemaFromFilePath(filePath);
+        let contentType = wizzi_1.wizziMaps.contentTypeFor(filePath);
         if (!contentType) {
             next();
         }
@@ -275,7 +241,7 @@ function sendFolderScan(folderPath, root, meta, request, response) {
             }
         }
         catch (ex) {
-            console.log('sendFolderScan.exception', ex, __filename);
+            console.log("[31m%s[0m", 'sendFolderScan.exception', ex);
             sendError(response, ex, {
                 format: 'json'
             });

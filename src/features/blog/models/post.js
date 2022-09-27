@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PostModelBuilder = exports.GetPostModel = void 0;
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\blog\mongo\post.ts.ittf
+    package: wizzi-js@0.7.13
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\blog\models\post.ts.ittf
 */
 const mongoose_1 = require("mongoose");
 const PostSchema = new mongoose_1.Schema({
@@ -28,10 +28,15 @@ PostSchema.index({
 // controllers call GetPostModel() when initialized, after buildModel() has benn called
 let PostModel;
 function GetPostModel() {
+    if (!PostModel) {
+        PostModel = (0, mongoose_1.model)("Post");
+    }
     return PostModel;
 }
 exports.GetPostModel = GetPostModel;
 exports.PostModelBuilder = {
-    buildModel: () => PostModel = (0, mongoose_1.model)("Post", PostSchema)
+    buildModel: (options) => PostModel = (0, mongoose_1.model)("Post", PostSchema),
+    applyExtraSetup: (options) => {
+    }
 };
 //# sourceMappingURL=post.js.map

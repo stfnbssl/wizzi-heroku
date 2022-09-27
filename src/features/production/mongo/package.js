@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PackageProductionModelBuilder = exports.GetPackageProductionModel = void 0;
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\mongo\package.ts.ittf
 */
 const mongoose_1 = require("mongoose");
@@ -26,10 +26,15 @@ PackageProductionSchema.index({
 // controllers call GetPackageProductionModel() when initialized, after buildModel() has benn called
 let PackageProductionModel;
 function GetPackageProductionModel() {
+    if (!PackageProductionModel) {
+        PackageProductionModel = (0, mongoose_1.model)("PackageProduction");
+    }
     return PackageProductionModel;
 }
 exports.GetPackageProductionModel = GetPackageProductionModel;
 exports.PackageProductionModelBuilder = {
-    buildModel: () => PackageProductionModel = (0, mongoose_1.model)("PackageProduction", PackageProductionSchema)
+    buildModel: (options) => PackageProductionModel = (0, mongoose_1.model)("PackageProduction", PackageProductionSchema),
+    applyExtraSetup: (options) => {
+    }
 };
 //# sourceMappingURL=package.js.map

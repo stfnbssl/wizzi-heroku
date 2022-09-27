@@ -1,157 +1,63 @@
-
-/* The default splitter within a react-split */
-.react-split > .split-container > .splitter .default-splitter {
-  box-sizing: border-box;
-  height: 100%;
-  outline: none;
-  overflow: hidden;
-  user-select: none;
-  width: 100%;
-  --default-splitter-line-color: silver;
-  --default-splitter-line-hover-color: black;
-  --default-splitter-line-margin: 2px;
-  --default-splitter-line-size: 3px;
+/*
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-web\lib\artifacts\css\document\gen\main.js
+    package: wizzi-web@0.7.16
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorView.css.ittf
+    utc time: Tue, 27 Sep 2022 11:18:29 GMT
+*/
+.Resizer {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    position: relative;
+    background: darkGray;
+    box-sizing: border-box;
+    background-clip: padding-box;
+}
+.Resizer.horizontal {
+    height: 11px;
+    margin: -5px 0;
+    border-top: 5px solid rgba(255, 255, 255, 0);
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+    width: 100%;
+}
+.Resizer.horizontal:hover {
+    height: 13px;
+    cursor: row-resize;
+    -webkit-transition: all 0.1s linear 0.5s;
+    -moz-transition: all 0.1s linear 0.5s;
+    -o-transition: all 0.1s linear 0.5s;
+    transition: all 0.1s linear 0.5s;
+    border-top: 5px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+}
+.Resizer.vertical {
+    width: 11px;
+    margin: 0 -5px;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+}
+.Resizer.vertical:hover {
+    width: 15px;
+    cursor: col-resize;
+    -webkit-transition: all 0.1s linear 0.5s;
+    -moz-transition: all 0.1s linear 0.5s;
+    -o-transition: all 0.1s linear 0.5s;
+    transition: all 0.1s linear 0.5s;
+}
+.Resizer.disabled {
+    cursor: not-allowed;
+}
+.Resizer.disabled:hover, .Resizer.disabled:active {
+    border-color: transparent;
 }
 
-.react-split > .split-container.horizontal > .splitter .default-splitter {
-  cursor: row-resize;
-}
-
-.react-split > .split-container.vertical > .splitter .default-splitter {
-  cursor: col-resize;
-}
-
-/* The thin line within a default splitter hit area */
-.react-split > .split-container > .splitter .default-splitter > .line {
-  background: var(--default-splitter-line-color);
-}
-
-.react-split > .split-container > .splitter .default-splitter:hover > .line {
-  background: var(--default-splitter-line-hover-color);
-}
-
-.react-split > .split-container.horizontal > .splitter .default-splitter > .line {
-  height: var(--default-splitter-line-size);
-  width: 100%;
-  margin-top: var(--default-splitter-line-margin);
-  margin-left: 0;
-}
-
-.react-split > .split-container.vertical > .splitter .default-splitter > .line {
-  height: 100%;
-  width: var(--default-splitter-line-size);
-  margin-top: 0;
-  margin-left: var(--default-splitter-line-margin);
-}
-/* The top-level element of the splitter*/
-.react-split {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  outline: none;
-  overflow: hidden;
-  --react-split-min-primary: 0;
-  --react-split-min-secondary: 0;
-  --react-split-primary: 50%;
-  --react-split-splitter: 7px;
-}
-
-/* The container for the primary pane, splitter, and secondary pane.*/
-.react-split > .split-container {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  outline: none;
-  overflow: hidden;
-  display: grid;
-}
-
-/* When the container is splitting horizontally */
-.react-split > .split-container.horizontal {
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(var(--react-split-min-primary),var(--react-split-primary)) var(--react-split-splitter) minmax(var(--react-split-min-secondary), 1fr);
-  grid-template-areas: "primary" "split" "secondary";
-}
-
-/* When the container is splitting vertical */
-.react-split > .split-container.vertical {
-  grid-template-columns: minmax(var(--react-split-min-primary),var(--react-split-primary)) var(--react-split-splitter) minmax(var(--react-split-min-secondary), 1fr);
-  grid-template-rows: 1fr;
-  grid-template-areas: "primary split secondary";
-}
-
-/* The primary pane. This is either the left or top depending on the split type */
-.react-split > .split-container > .primary {
-  grid-area: primary;
-  box-sizing: border-box;
-  outline: none;
-  overflow: hidden;
-}
-
-.react-split > .split-container.horizontal > .primary {
-  height: auto;
-  width: 100%;
-}
-
-.react-split > .split-container.vertical > .primary {
-  height: 100%;
-  width: auto;
-}
-
-/* The splitter between panes. */
-.react-split > .split-container > .splitter {
-  grid-area: split;
-  background: transparent;
-  user-select: none;
-  box-sizing: border-box;
-  outline: none;
-  overflow: hidden;
-}
-
-.react-split > .split-container.horizontal > .splitter {
-  height: auto;
-  width: 100%;
-  cursor: row-resize;
-}
-
-.react-split > .split-container.vertical > .splitter {
-  height: 100%;
-  width: auto;
-  cursor: col-resize;
-}
-
-/* The secondary pane. This is either the right or bottom depending on the split type */
-.react-split > .split-container >.secondary {
-  grid-area: secondary;
-  box-sizing: border-box;
-  outline: none;
-  overflow: hidden;
-}
-
-.react-split > .split-container.horizontal > .secondary {
-  height: auto;
-  width: 100%;
-}
-
-.react-split > .split-container.vertical > .secondary {
-  height: 100%;
-  width: auto;
-}
-
-/* The content within the primary pane, splitter, or secondary pane.*/
-.react-split .full-content {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  outline: none;
-  overflow: hidden;
-}
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-web\lib\artifacts\css\document\gen\main.js
-    package: wizzi-web@0.7.14
+    package: wizzi-web@0.7.16
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\CodeView\SyntaxHighlighter.css.ittf
-    utc time: Sun, 04 Sep 2022 16:12:11 GMT
+    utc time: Tue, 27 Sep 2022 11:18:29 GMT
 */
 .syntax-highlight-container {
     height: 100%;

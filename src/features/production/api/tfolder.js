@@ -4,23 +4,24 @@ exports.invalidateCache = exports.getTFolder_withCache = exports.getTFolderObjec
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\api\tfolder.ts.ittf
 */
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
-const tfolder_1 = require("../mongo/tfolder");
-const myname = 'features.production.api.tfolder';
-const tfolderCache = new node_cache_1.default({
+const env_1 = require("../../config/env");
+const wizzi_1 = require("../../wizzi");
+const tFolder_1 = require("../mongo/tFolder");
+const myname = 'features.production.api.TFolder';
+const tFolderCache = new node_cache_1.default({
     stdTTL: 120,
     checkperiod: 60
 });
 function validateTFolder(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        const TFolder = (0, tfolder_1.GetTFolderModel)();
+        const TFolder = (0, tFolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             let query = { owner: owner, name: name };
             TFolder.find(query, (err, result) => {
-                console.log(myname, 'validateTFolder', 'TFolder.find', 'error', err, __filename);
                 if (err) {
                     return reject(err);
                 }
@@ -41,8 +42,7 @@ exports.validateTFolder = validateTFolder;
 function getListTFolder(options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         options = options || {};
-        console.log(myname, 'getListTFolder', 'options', options);
-        const TFolder = (0, tfolder_1.GetTFolderModel)();
+        const TFolder = (0, tFolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             const query = TFolder.find(options.query);
             if (options.limit) {
@@ -53,7 +53,7 @@ function getListTFolder(options) {
             }
             query.find((err, result) => {
                 if (err) {
-                    console.log(myname, 'getListTFolder', 'TFolder.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getListTFolder', 'TFolder.find', 'error', err);
                     return reject(err);
                 }
                 const resultItem = [];
@@ -82,8 +82,7 @@ function getListTFolder(options) {
 exports.getListTFolder = getListTFolder;
 function getTFolder(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getTFolder', owner, name);
-        const TFolder = (0, tfolder_1.GetTFolderModel)();
+        const TFolder = (0, tFolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 owner: owner,
@@ -91,7 +90,7 @@ function getTFolder(owner, name) {
             };
             TFolder.find(query, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getTFolder', 'TFolder.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getTFolder', 'TFolder.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -113,14 +112,13 @@ function getTFolder(owner, name) {
 exports.getTFolder = getTFolder;
 function getTFolderById(id) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getTFolderById', id);
-        const TFolder = (0, tfolder_1.GetTFolderModel)();
+        const TFolder = (0, tFolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             TFolder.find({
                 _id: id
             }, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getTFolder', 'TFolder.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getTFolder', 'TFolder.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -140,63 +138,87 @@ function getTFolderById(id) {
     });
 }
 exports.getTFolderById = getTFolderById;
-function getTFolderObject(owner, name) {
+function getTFolderObject(owner, name, loadPackiConfig) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getTFolder(owner, name).then(
-        // loog 'myname', 'getTFolderObject.tf', tf
-        // loog 'myname', 'getTFolderObject.tf_packiFiles_object', tf_packiFiles_object
-        // loog 'myname', 'getTFolderObject', obj
-        (result) => {
+        return new Promise((resolve, reject) => getTFolder(owner, name).then((result) => {
             if (!result.ok) {
                 return reject(result);
             }
             const tf = result.item;
-            const tf_packiFiles_object = JSON.parse(tf.packiFiles);
-            const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString() });
-            return resolve(obj);
+            return resolve(_createTFolderObject(tf, loadPackiConfig));
         }).catch((err) => {
-            console.log('getTFolderObject.getTFolder.error', err, __filename);
+            console.log('features.production.api.tFolder.getTFolderObject.getTFolder.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getTFolderObject = getTFolderObject;
-function getTFolderObjectById(id) {
+function getTFolderObjectById(id, loadPackiConfig) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getTFolderById(id).then(
-        // loog 'myname', 'getTFolderObjectById.tf', tf
-        // loog 'myname', 'getTFolderObjectById.tf_packiFiles_object', tf_packiFiles_object
-        // loog 'myname', 'getTFolderObjectById', obj
-        (result) => {
+        return new Promise((resolve, reject) => getTFolderById(id).then((result) => {
             if (!result.ok) {
                 return reject(result);
             }
             const tf = result.item;
-            const tf_packiFiles_object = JSON.parse(tf.packiFiles);
-            const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString() });
-            return resolve(obj);
+            return resolve(_createTFolderObject(tf, loadPackiConfig));
         }).catch((err) => {
-            console.log('getTFolderObjectById.getTFolderById.error', err, __filename);
+            console.log('features.production.api.tFolder.getTFolderObjectById.getTFolderById.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getTFolderObjectById = getTFolderObjectById;
+function _createTFolderObject(tf, loadPackiConfig) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise(
+        // loog 'myname', '_createTFolderObject.tf', Object.keys(tf)
+        // loog 'myname', '_createTFolderObject.tf_packiFiles_object', Object.keys(tf_packiFiles_object)
+        (resolve, reject) => {
+            const tf_packiFiles_object = JSON.parse(tf.packiFiles);
+            const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString(), packiProduction: "TFolder", packiConfig: tf_packiFiles_object[env_1.packiConfigPath], packiConfigObj: null });
+            if (loadPackiConfig) {
+                if (!obj.packiConfig) {
+                    return reject({
+                        message: 'Missing file ' + env_1.packiConfigPath + ' in TFolder'
+                    });
+                }
+                wizzi_1.wizziProds.generateArtifact(env_1.packiConfigPath, {
+                    [env_1.packiConfigPath]: {
+                        type: obj.packiConfig.type,
+                        contents: obj.packiConfig.contents
+                    }
+                }, {}).then(
+                // loog myname, '_createTFolderObject', 'obj.packiConfigObj', JSON.stringify(obj.packiConfigObj)
+                (generationResult) => {
+                    obj.packiConfigObj = JSON.parse(generationResult.artifactContent);
+                    return resolve(obj);
+                }).catch((err) => {
+                    console.log('features.production.api.tFolder.getTFolderObject._createTFolderObject.error', err, __filename);
+                    return reject(err);
+                });
+            }
+            // loog 'myname', '_createTFolderObject.resolve', Object.keys(obj)
+            else {
+                return resolve(obj);
+            }
+        });
+    });
+}
 function createTFolder(owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'createTFolder', owner, name, description, packiFiles);
-        const TFolder = (0, tfolder_1.GetTFolderModel)();
+        const TFolder = (0, tFolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 owner: owner,
                 name: name
             };
-            TFolder.find(query, (err, result) => {
+            TFolder.find(query, 
+            // loog myname, 'getTFolder', 'TFolder.find', 'result', result
+            (err, result) => {
                 if (err) {
-                    console.log(myname, 'getTFolder', 'TFolder.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getTFolder', 'TFolder.find', 'error', err);
                     return reject(err);
                 }
-                console.log(myname, 'getTFolder', 'TFolder.find', 'result', result, __filename);
                 if (result.length > 0) {
                     return resolve({
                         oper: 'create',
@@ -214,7 +236,7 @@ function createTFolder(owner, name, description, packiFiles) {
                 });
                 newTFolder.save(function (err, doc) {
                     if (err) {
-                        console.log(myname, 'createTFolder', 'newTFolder.save', 'error', err, __filename);
+                        console.log("[31m%s[0m", myname, 'createTFolder', 'newTFolder.save', 'error', err);
                         return reject(err);
                     }
                     return resolve({
@@ -231,8 +253,7 @@ function createTFolder(owner, name, description, packiFiles) {
 exports.createTFolder = createTFolder;
 function updateTFolder(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updateTFolder');
-        const TFolder = (0, tfolder_1.GetTFolderModel)();
+        const TFolder = (0, tFolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             const query = {
                 _id: id
@@ -253,7 +274,7 @@ function updateTFolder(id, owner, name, description, packiFiles) {
             update['updated_at'] = new Date();
             TFolder.findOneAndUpdate(query, update, {}, (err, result) => {
                 if (err) {
-                    console.log(myname, 'updateTFolder', 'TFolder.findOneAndUpdate', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'updateTFolder', 'TFolder.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
                 return resolve({
@@ -268,15 +289,14 @@ function updateTFolder(id, owner, name, description, packiFiles) {
 exports.updateTFolder = updateTFolder;
 function deleteTFolder(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'deleteTFolder', owner, name);
-        const TFolder = (0, tfolder_1.GetTFolderModel)();
+        const TFolder = (0, tFolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 _id: id
             };
             TFolder.deleteOne(query, (err) => {
                 if (err) {
-                    console.log(myname, 'deleteTFolder', 'TFolder.deleteOne', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'deleteTFolder', 'TFolder.deleteOne', 'error', err);
                     return reject(err);
                 }
                 resolve({
@@ -350,7 +370,7 @@ function getTFolder_withCache(owner, name) {
 exports.getTFolder_withCache = getTFolder_withCache;
 function invalidateCache(owner, name) {
     var cacheKey = owner + '|' + name;
-    tfolderCache.del(cacheKey);
+    tFolderCache.del(cacheKey);
 }
 exports.invalidateCache = invalidateCache;
 //# sourceMappingURL=tfolder.js.map

@@ -1,16 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.invalidateCache = exports.getPackageProduction_withCache = exports.getPackageProductionObjectById_stop = exports.getPackageProductionObject_stop = exports.deletePackageProduction = exports.updatePackageProduction = exports.createPackageProduction = exports.getPackageProductionObjectById = exports.getPackageProductionObject = exports.getPackageProductionById = exports.getPackageProduction = exports.getListPackageProduction = exports.validatePackageProduction = void 0;
+exports.getArtifactGeneration_withPrepare = exports.getWizziMetaFolderById = exports.getWizziMetaFolder = exports.invalidateCache = exports.getPackageProduction_withCache = exports.getPackageProductionObjectById_stop = exports.getPackageProductionObject_stop = exports.deletePackageProduction = exports.updatePackageProduction = exports.createPackageProduction = exports.getPackageProductionObjectById = exports.getPackageProductionObject = exports.getPackageProductionById = exports.getPackageProduction = exports.getListPackageProduction = exports.validatePackageProduction = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\api\package.ts.ittf
 */
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
+const env_1 = require("../../config/env");
+const wizzi_1 = require("../../wizzi");
 const package_1 = require("../mongo/package");
-const myname = 'features.production.api.package';
-const packageCache = new node_cache_1.default({
+const index_1 = require("../index");
+const myname = 'features.production.api.PackageProduction';
+const packageProductionCache = new node_cache_1.default({
     stdTTL: 120,
     checkperiod: 60
 });
@@ -37,10 +40,10 @@ function validatePackageProduction(owner, name) {
     });
 }
 exports.validatePackageProduction = validatePackageProduction;
+const index_2 = require("../index");
 function getListPackageProduction(options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         options = options || {};
-        console.log(myname, 'getListPackageProduction', 'options', options);
         const PackageProduction = (0, package_1.GetPackageProductionModel)();
         return new Promise((resolve, reject) => {
             const query = PackageProduction.find(options.query);
@@ -52,7 +55,7 @@ function getListPackageProduction(options) {
             }
             query.find((err, result) => {
                 if (err) {
-                    console.log(myname, 'getListPackageProduction', 'PackageProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getListPackageProduction', 'PackageProduction.find', 'error', err);
                     return reject(err);
                 }
                 const resultItem = [];
@@ -81,7 +84,6 @@ function getListPackageProduction(options) {
 exports.getListPackageProduction = getListPackageProduction;
 function getPackageProduction(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getPackageProduction', owner, name);
         const PackageProduction = (0, package_1.GetPackageProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
@@ -90,7 +92,7 @@ function getPackageProduction(owner, name) {
             };
             PackageProduction.find(query, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getPackageProduction', 'PackageProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getPackageProduction', 'PackageProduction.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -112,14 +114,13 @@ function getPackageProduction(owner, name) {
 exports.getPackageProduction = getPackageProduction;
 function getPackageProductionById(id) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getPackageProductionById', id);
         const PackageProduction = (0, package_1.GetPackageProductionModel)();
         return new Promise((resolve, reject) => {
             PackageProduction.find({
                 _id: id
             }, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getPackageProduction', 'PackageProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getPackageProduction', 'PackageProduction.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -139,63 +140,87 @@ function getPackageProductionById(id) {
     });
 }
 exports.getPackageProductionById = getPackageProductionById;
-function getPackageProductionObject(owner, name) {
+function getPackageProductionObject(owner, name, loadPackiConfig) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getPackageProduction(owner, name).then(
-        // loog 'myname', 'getPackageProductionObject.pp', pp
-        // loog 'myname', 'getPackageProductionObject.pp_packiFiles_object', pp_packiFiles_object
-        // loog 'myname', 'getPackageProductionObject', obj
-        (result) => {
+        return new Promise((resolve, reject) => getPackageProduction(owner, name).then((result) => {
             if (!result.ok) {
                 return reject(result);
             }
             const pp = result.item;
-            const pp_packiFiles_object = JSON.parse(pp.packiFiles);
-            const obj = Object.assign(Object.assign({}, pp._doc), { packiFiles: pp_packiFiles_object, _id: pp._id.toString() });
-            return resolve(obj);
+            return resolve(_createPackageProductionObject(pp, loadPackiConfig));
         }).catch((err) => {
-            console.log('getPackageProductionObject.getPackageProduction.error', err, __filename);
+            console.log('features.production.api.packageProduction.getPackageProductionObject.getPackageProduction.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getPackageProductionObject = getPackageProductionObject;
-function getPackageProductionObjectById(id) {
+function getPackageProductionObjectById(id, loadPackiConfig) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getPackageProductionById(id).then(
-        // loog 'myname', 'getPackageProductionObjectById.pp', pp
-        // loog 'myname', 'getPackageProductionObjectById.pp_packiFiles_object', pp_packiFiles_object
-        // loog 'myname', 'getPackageProductionObjectById', obj
-        (result) => {
+        return new Promise((resolve, reject) => getPackageProductionById(id).then((result) => {
             if (!result.ok) {
                 return reject(result);
             }
             const pp = result.item;
-            const pp_packiFiles_object = JSON.parse(pp.packiFiles);
-            const obj = Object.assign(Object.assign({}, pp._doc), { packiFiles: pp_packiFiles_object, _id: pp._id.toString() });
-            return resolve(obj);
+            return resolve(_createPackageProductionObject(pp, loadPackiConfig));
         }).catch((err) => {
-            console.log('getPackageProductionObjectById.getPackageProductionById.error', err, __filename);
+            console.log('features.production.api.packageProduction.getPackageProductionObjectById.getPackageProductionById.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getPackageProductionObjectById = getPackageProductionObjectById;
+function _createPackageProductionObject(pp, loadPackiConfig) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise(
+        // loog 'myname', '_createPackageProductionObject.pp', Object.keys(pp)
+        // loog 'myname', '_createPackageProductionObject.pp_packiFiles_object', Object.keys(pp_packiFiles_object)
+        (resolve, reject) => {
+            const pp_packiFiles_object = JSON.parse(pp.packiFiles);
+            const obj = Object.assign(Object.assign({}, pp._doc), { packiFiles: pp_packiFiles_object, _id: pp._id.toString(), packiProduction: "PackageProduction", packiConfig: pp_packiFiles_object[env_1.packiConfigPath], packiConfigObj: null });
+            if (loadPackiConfig) {
+                if (!obj.packiConfig) {
+                    return reject({
+                        message: 'Missing file ' + env_1.packiConfigPath + ' in PackageProduction'
+                    });
+                }
+                wizzi_1.wizziProds.generateArtifact(env_1.packiConfigPath, {
+                    [env_1.packiConfigPath]: {
+                        type: obj.packiConfig.type,
+                        contents: obj.packiConfig.contents
+                    }
+                }, {}).then(
+                // loog myname, '_createPackageProductionObject', 'obj.packiConfigObj', JSON.stringify(obj.packiConfigObj)
+                (generationResult) => {
+                    obj.packiConfigObj = JSON.parse(generationResult.artifactContent);
+                    return resolve(obj);
+                }).catch((err) => {
+                    console.log('features.production.api.packageProduction.getPackageProductionObject._createPackageProductionObject.error', err, __filename);
+                    return reject(err);
+                });
+            }
+            // loog 'myname', '_createPackageProductionObject.resolve', Object.keys(obj)
+            else {
+                return resolve(obj);
+            }
+        });
+    });
+}
 function createPackageProduction(owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'createPackageProduction', owner, name, description, packiFiles);
         const PackageProduction = (0, package_1.GetPackageProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 owner: owner,
                 name: name
             };
-            PackageProduction.find(query, (err, result) => {
+            PackageProduction.find(query, 
+            // loog myname, 'getPackageProduction', 'PackageProduction.find', 'result', result
+            (err, result) => {
                 if (err) {
-                    console.log(myname, 'getPackageProduction', 'PackageProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getPackageProduction', 'PackageProduction.find', 'error', err);
                     return reject(err);
                 }
-                console.log(myname, 'getPackageProduction', 'PackageProduction.find', 'result', result, __filename);
                 if (result.length > 0) {
                     return resolve({
                         oper: 'create',
@@ -213,7 +238,7 @@ function createPackageProduction(owner, name, description, packiFiles) {
                 });
                 newPackageProduction.save(function (err, doc) {
                     if (err) {
-                        console.log(myname, 'createPackageProduction', 'newPackageProduction.save', 'error', err, __filename);
+                        console.log("[31m%s[0m", myname, 'createPackageProduction', 'newPackageProduction.save', 'error', err);
                         return reject(err);
                     }
                     return resolve({
@@ -230,7 +255,6 @@ function createPackageProduction(owner, name, description, packiFiles) {
 exports.createPackageProduction = createPackageProduction;
 function updatePackageProduction(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updatePackageProduction');
         const PackageProduction = (0, package_1.GetPackageProductionModel)();
         return new Promise((resolve, reject) => {
             const query = {
@@ -252,7 +276,7 @@ function updatePackageProduction(id, owner, name, description, packiFiles) {
             update['updated_at'] = new Date();
             PackageProduction.findOneAndUpdate(query, update, {}, (err, result) => {
                 if (err) {
-                    console.log(myname, 'updatePackageProduction', 'PackageProduction.findOneAndUpdate', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'updatePackageProduction', 'PackageProduction.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
                 return resolve({
@@ -267,7 +291,6 @@ function updatePackageProduction(id, owner, name, description, packiFiles) {
 exports.updatePackageProduction = updatePackageProduction;
 function deletePackageProduction(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'deletePackageProduction', owner, name);
         const PackageProduction = (0, package_1.GetPackageProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
@@ -275,7 +298,7 @@ function deletePackageProduction(id, owner, name, description, packiFiles) {
             };
             PackageProduction.deleteOne(query, (err) => {
                 if (err) {
-                    console.log(myname, 'deletePackageProduction', 'PackageProduction.deleteOne', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'deletePackageProduction', 'PackageProduction.deleteOne', 'error', err);
                     return reject(err);
                 }
                 resolve({
@@ -349,7 +372,63 @@ function getPackageProduction_withCache(owner, name) {
 exports.getPackageProduction_withCache = getPackageProduction_withCache;
 function invalidateCache(owner, name) {
     var cacheKey = owner + '|' + name;
-    packageCache.del(cacheKey);
+    packageProductionCache.del(cacheKey);
 }
 exports.invalidateCache = invalidateCache;
+function getWizziMetaFolder(owner, name, progressiveContext) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return getPackageProductionObject(owner, name, true).then(
+        // loog myname, 'getWizziMetaFolder.packageProductionObject', Object.keys(packageProductionObject)
+        (packageProductionObject) => {
+            return getWizziMetaFolderByPackageProductionObject(packageProductionObject, progressiveContext);
+        });
+    });
+}
+exports.getWizziMetaFolder = getWizziMetaFolder;
+function getWizziMetaFolderById(packageId, progressiveContext) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return getPackageProductionObjectById(packageId, true).then(
+        // loog myname, 'getWizziMetaFolderById.packageProductionObject', Object.keys(packageProductionObject)
+        (packageProductionObject) => {
+            return getWizziMetaFolderByPackageProductionObject(packageProductionObject, progressiveContext);
+        });
+    });
+}
+exports.getWizziMetaFolderById = getWizziMetaFolderById;
+function getWizziMetaFolderByPackageProductionObject(packageProductionObject, progressiveContext) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => index_1.productionApi.getCliCtxFromPackiConfig(packageProductionObject.owner, packageProductionObject.packiConfigObj, packageProductionObject.packiFiles, progressiveContext).then((cliCtx) => index_2.metaApi.generateMetaProduction(packageProductionObject.owner, packageProductionObject.packiConfigObj.meta.name, cliCtx).then(
+        // loog myname, 'getWizziMetaFolderByPackageProductionObject.generateMetaProduction', Object.keys(wizziPackiFiles)
+        (wizziPackiFiles) => {
+            return resolve(wizziPackiFiles);
+        })).catch((err) => {
+            console.log('api.production.getWizziMetaFolderByPackageProductionObject.getCliCtxFromPackiConfig.error', err, __filename);
+            return reject(err);
+        }));
+    });
+}
+function getArtifactGeneration_withPrepare(owner, productionName, filePath, queryContext, rootContext) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => index_1.productionApi.prepareProduction('package', owner, productionName, queryContext, rootContext).then(
+        // loog myname, 'getArtifactGeneration_withPrepare.productionObj', 'packiFiles', Object.keys(productionObj.packiFiles), 'context', Object.keys(productionObj.context),
+        (productionObj) => wizzi_1.wizziProds.generateArtifact(filePath, productionObj.packiFiles, productionObj.context).then(
+        // loog 'getArtifactGeneration_withPrepare', productionName, result.artifactContent.length
+        // loog 'getArtifactGeneration_withPrepare', productionName, result.artifactContent.substring(0, 120) + '...'
+        (result) => {
+            const response = {
+                content: result.artifactContent,
+                contentLength: result.artifactContent.length,
+                contentType: wizzi_1.wizziMaps.contentTypeFor(filePath)
+            };
+            return resolve(response);
+        }).catch((err) => {
+            console.log('' + myname + 'getArtifactGeneration_withPrepare.generateArtifact.error', err, __filename);
+            return reject(err);
+        })).catch((err) => {
+            console.log('' + myname + 'getArtifactGeneration_withPrepare.prepareProduction.error', err, __filename);
+            return reject(err);
+        }));
+    });
+}
+exports.getArtifactGeneration_withPrepare = getArtifactGeneration_withPrepare;
 //# sourceMappingURL=package.js.map

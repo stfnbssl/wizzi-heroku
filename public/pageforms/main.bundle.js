@@ -5550,7 +5550,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\assets\AddDocumentIcon.tsx.ittf
 */
 
@@ -5607,7 +5607,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\assets\AddIcon.tsx.ittf
 */
 
@@ -5668,7 +5668,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\assets\DeleteIcon.tsx.ittf
 */
 
@@ -5772,7 +5772,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\App.tsx.ittf
 */
 
@@ -5923,7 +5923,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\NonExistent.tsx.ittf
 */
 
@@ -6003,7 +6003,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\ThemeProvider.tsx.ittf
 */
 // taken from https://github.com/expo/snack/blob/main/website/src/client/components/ThemeProvider.tsx
@@ -6143,7 +6143,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nullthrows */ "./node_modules/nullthrows/nullthrows.js");
@@ -6156,7 +6156,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormHidden__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/FormHidden */ "./src/components/pageforms/widgets/FormHidden.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
-/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
+/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -6181,7 +6182,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\CreateArtifactProduction.tsx.ittf
 */
 
@@ -6198,7 +6199,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_12__.default.div`
+
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_13__.default.div`
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -6301,12 +6303,26 @@ let CreateArtifactProduction = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmitCreate", ev => {
-      console.log('handleSubmitCreate', _this.state.ap_name_available, __filename); // _ this.formRef.dispatchEvent(new Event('submit'))
+      console.log('handleSubmitCreate', __filename);
+      console.log('this.state.ap_name_available', _this.state.ap_name_available, __filename);
+      /**
+          * this.formRef.dispatchEvent
+              * Event
+                  * 'submit'
+                  * 
+                      * cancelable true
+                      * bubbles true
+      */
 
-      if (!_this.state.ap_name_available) {
+      if (!(_this.state.ap_name_available == true)) {
+        console.log('handleSubmitCreate prevent default', __filename);
         ev.preventDefault();
-        console.log('handleSubmitCreate not dispatched', __filename);
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/artifacts";
     });
 
     return _this;
@@ -6319,7 +6335,7 @@ let CreateArtifactProduction = /*#__PURE__*/function (_Component) {
         owner
       } = this.props.data;
       const ap_checked = this.state.ap_name;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("http://localhost:5000/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(ap_checked)}`;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("https://www.wizzihub.com/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(ap_checked)}`;
       console.log('CreateArtifact._checkAvalibleArtifactName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -6350,7 +6366,7 @@ let CreateArtifactProduction = /*#__PURE__*/function (_Component) {
         action: "/artifact/new",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Artifact name",
         name: "ap_name",
@@ -6358,7 +6374,7 @@ let CreateArtifactProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.ap_name,
         onChange: this.handleArtifactNameChange
-      }), this.state.ap_name.length > 0 && this.state.ap_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_11__.default, null, 'Artifact name ' + this.state.ap_name_checked + ' is available'), this.state.ap_name.length > 0 && !this.state.ap_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_11__.default, {
+      }), this.state.ap_name.length > 0 && this.state.ap_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_12__.default, null, 'Artifact name ' + this.state.ap_name_checked + ' is available'), this.state.ap_name.length > 0 && !this.state.ap_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_12__.default, {
         color: "#ff0000"
       }, 'Artifact name ' + this.state.ap_name_checked + ' is not available'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_10__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Description",
@@ -6425,13 +6441,21 @@ let CreateArtifactProduction = /*#__PURE__*/function (_Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormRow__WEBPACK_IMPORTED_MODULE_7__.default, {
         type: "add",
         onAdd: this.handleTFolderAdd
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_10__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_9__.default, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_10__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_11__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_9__.default, {
         label: "Create artifact production",
         id: "btn_create_ap",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitCreate
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitCreate(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_9__.default, {
+        label: "Cancel",
+        id: "btn_cancel_ap",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -6455,7 +6479,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nullthrows */ "./node_modules/nullthrows/nullthrows.js");
@@ -6468,7 +6492,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormHidden__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/FormHidden */ "./src/components/pageforms/widgets/FormHidden.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
-/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
+/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -6493,7 +6518,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\CreateMetaProduction.tsx.ittf
 */
 
@@ -6510,7 +6535,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_12__.default.div`
+
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_13__.default.div`
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -6611,11 +6637,26 @@ let CreateMetaProduction = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmitCreate", ev => {
-      ev.preventDefault();
+      console.log('handleSubmitCreate', __filename);
+      console.log('this.state.mp_name_available', _this.state.mp_name_available, __filename);
+      /**
+          * this.formRef.dispatchEvent
+              * Event
+                  * 'submit'
+                  * 
+                      * cancelable true
+                      * bubbles true
+      */
 
-      if (_this.state.mp_name_available) {
-        _this.formRef.dispatchEvent(new Event('submit'));
+      if (!(_this.state.mp_name_available == true)) {
+        console.log('handleSubmitCreate prevent default', __filename);
+        ev.preventDefault();
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/metas";
     });
 
     return _this;
@@ -6628,7 +6669,7 @@ let CreateMetaProduction = /*#__PURE__*/function (_Component) {
         owner
       } = this.props.data;
       const mp_checked = this.state.mp_name;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("http://localhost:5000/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(mp_checked)}`;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("https://www.wizzihub.com/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(mp_checked)}`;
       console.log('CreateMeta._checkAvalibleMetaName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -6659,7 +6700,7 @@ let CreateMetaProduction = /*#__PURE__*/function (_Component) {
         action: "/meta/new",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Meta name",
         name: "mp_name",
@@ -6667,7 +6708,7 @@ let CreateMetaProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.mp_name,
         onChange: this.handleMetaNameChange
-      }), this.state.mp_name.length > 0 && this.state.mp_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_11__.default, null, 'Meta name ' + this.state.mp_name_checked + ' is available'), this.state.mp_name.length > 0 && !this.state.mp_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_11__.default, {
+      }), this.state.mp_name.length > 0 && this.state.mp_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_12__.default, null, 'Meta name ' + this.state.mp_name_checked + ' is available'), this.state.mp_name.length > 0 && !this.state.mp_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_12__.default, {
         color: "#ff0000"
       }, 'Meta name ' + this.state.mp_name_checked + ' is not available'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_10__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Description",
@@ -6720,13 +6761,21 @@ let CreateMetaProduction = /*#__PURE__*/function (_Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormRow__WEBPACK_IMPORTED_MODULE_7__.default, {
         type: "add",
         onAdd: this.handleTFolderAdd
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_10__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_9__.default, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_10__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_11__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_9__.default, {
         label: "Create meta production",
         id: "btn_create_mp",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitCreate
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitCreate(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_9__.default, {
+        label: "Cancel",
+        id: "btn_cancel_mp",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -6750,7 +6799,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nullthrows */ "./node_modules/nullthrows/nullthrows.js");
@@ -6765,11 +6814,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormHidden__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/FormHidden */ "./src/components/pageforms/widgets/FormHidden.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
-/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
-/* harmony import */ var lodash_set__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! lodash/set */ "./node_modules/lodash/set.js");
-/* harmony import */ var lodash_set__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(lodash_set__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _widgets_FormObject__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./widgets/FormObject */ "./src/components/pageforms/widgets/FormObject.tsx");
-/* harmony import */ var _fetch__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../fetch */ "./src/fetch.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
+/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
+/* harmony import */ var lodash_set__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! lodash/set */ "./node_modules/lodash/set.js");
+/* harmony import */ var lodash_set__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(lodash_set__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _widgets_FormObject__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./widgets/FormObject */ "./src/components/pageforms/widgets/FormObject.tsx");
+/* harmony import */ var _fetch__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../fetch */ "./src/fetch.tsx");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -6798,7 +6848,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\CreatePackageProduction.tsx.ittf
 */
 
@@ -6820,7 +6870,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_17__.default.div`
+
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_18__.default.div`
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -6918,7 +6969,7 @@ let CreatePackageProduction = /*#__PURE__*/function (_Component) {
       console.log('handleMetaChange.value', value, __filename);
 
       if (value && value.length > 0) {
-        const result = await (0,_fetch__WEBPACK_IMPORTED_MODULE_16__.getData)('production/meta/props/' + encodeURIComponent(value));
+        const result = await (0,_fetch__WEBPACK_IMPORTED_MODULE_17__.getData)('production/meta/props/' + encodeURIComponent(value));
         console.log('handleMetaChange.result', result, result.meta.properties, __filename);
         const properties = result.meta.properties;
         const values = {};
@@ -6954,7 +7005,7 @@ let CreatePackageProduction = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleMetaPropsValuesChange", (valuePath, value) => _this.setState(state => {
-      const newValues = lodash_set__WEBPACK_IMPORTED_MODULE_14___default()(state.meta_propsValues, valuePath, value);
+      const newValues = lodash_set__WEBPACK_IMPORTED_MODULE_15___default()(state.meta_propsValues, valuePath, value);
       return {
         meta_propsValues: newValues
       };
@@ -6971,11 +7022,26 @@ let CreatePackageProduction = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmitCreate", ev => {
-      ev.preventDefault();
+      console.log('handleSubmitCreate', __filename);
+      console.log('this.state.pp_name_available', _this.state.pp_name_available, __filename);
+      /**
+          * this.formRef.dispatchEvent
+              * Event
+                  * 'submit'
+                  * 
+                      * cancelable true
+                      * bubbles true
+      */
 
-      if (_this.state.pp_name_available) {
-        _this.formRef.dispatchEvent(new Event('submit'));
+      if (!(_this.state.pp_name_available == true)) {
+        console.log('handleSubmitCreate prevent default', __filename);
+        ev.preventDefault();
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/packages";
     });
 
     _this.state = _objectSpread(_objectSpread({}, _this.state), {}, {
@@ -6994,7 +7060,7 @@ let CreatePackageProduction = /*#__PURE__*/function (_Component) {
         owner
       } = this.props.data;
       const pp_checked = this.state.pp_name;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("http://localhost:5000/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(pp_checked)}`;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("https://www.wizzihub.com/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(pp_checked)}`;
       console.log('CreatePackage._checkAvaliblePackageName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -7016,7 +7082,7 @@ let CreatePackageProduction = /*#__PURE__*/function (_Component) {
       const {
         owner
       } = this.props.data;
-      const metas = await (0,_fetch__WEBPACK_IMPORTED_MODULE_16__.getData)('production/meta/' + encodeURIComponent(owner));
+      const metas = await (0,_fetch__WEBPACK_IMPORTED_MODULE_17__.getData)('production/meta/' + encodeURIComponent(owner));
       console.log('componentDidMount.metas', metas, __filename);
       const options = [{
         name: '',
@@ -7050,7 +7116,7 @@ let CreatePackageProduction = /*#__PURE__*/function (_Component) {
         action: "/package/new",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Package name",
         name: "pp_name",
@@ -7058,7 +7124,7 @@ let CreatePackageProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.pp_name,
         onChange: this.handlePackageNameChange
-      }), this.state.pp_name.length > 0 && this.state.pp_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_13__.default, null, 'Package name ' + this.state.pp_name_checked + ' is available'), this.state.pp_name.length > 0 && !this.state.pp_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_13__.default, {
+      }), this.state.pp_name.length > 0 && this.state.pp_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_14__.default, null, 'Package name ' + this.state.pp_name_checked + ' is available'), this.state.pp_name.length > 0 && !this.state.pp_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_14__.default, {
         color: "#ff0000"
       }, 'Package name ' + this.state.pp_name_checked + ' is not available'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_12__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Description",
@@ -7131,7 +7197,7 @@ let CreatePackageProduction = /*#__PURE__*/function (_Component) {
         }
 
         if (p.type == 'object') {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormObject__WEBPACK_IMPORTED_MODULE_15__.default, {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormObject__WEBPACK_IMPORTED_MODULE_16__.default, {
             key: ndx,
             label: p.label || p.name,
             name: p.name,
@@ -7148,13 +7214,21 @@ let CreatePackageProduction = /*#__PURE__*/function (_Component) {
         id: "meta_propsValues",
         required: true,
         value: JSON.stringify(this.state.meta_propsValues, null, 4)
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_12__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_11__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_12__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_13__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_11__.default, {
         label: "Create package production",
         id: "btn_create_pp",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitCreate
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitCreate(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_11__.default, {
+        label: "Cancel",
+        id: "btn_cancel_pp",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -7178,7 +7252,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nullthrows */ "./node_modules/nullthrows/nullthrows.js");
@@ -7193,11 +7267,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormHidden__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/FormHidden */ "./src/components/pageforms/widgets/FormHidden.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
-/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
-/* harmony import */ var lodash_set__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! lodash/set */ "./node_modules/lodash/set.js");
-/* harmony import */ var lodash_set__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(lodash_set__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _widgets_FormObject__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./widgets/FormObject */ "./src/components/pageforms/widgets/FormObject.tsx");
-/* harmony import */ var _fetch__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../fetch */ "./src/fetch.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
+/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
+/* harmony import */ var lodash_set__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! lodash/set */ "./node_modules/lodash/set.js");
+/* harmony import */ var lodash_set__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(lodash_set__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _widgets_FormObject__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./widgets/FormObject */ "./src/components/pageforms/widgets/FormObject.tsx");
+/* harmony import */ var _fetch__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../fetch */ "./src/fetch.tsx");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -7226,7 +7301,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\CreatePluginProduction.tsx.ittf
 */
 
@@ -7248,7 +7323,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_17__.default.div`
+
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_18__.default.div`
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -7346,7 +7422,7 @@ let CreatePluginProduction = /*#__PURE__*/function (_Component) {
       console.log('handleMetaChange.value', value, __filename);
 
       if (value && value.length > 0) {
-        const result = await (0,_fetch__WEBPACK_IMPORTED_MODULE_16__.getData)('production/meta/props/' + encodeURIComponent(value));
+        const result = await (0,_fetch__WEBPACK_IMPORTED_MODULE_17__.getData)('production/meta/props/' + encodeURIComponent(value));
         console.log('handleMetaChange.result', result, result.meta.properties, __filename);
         const properties = result.meta.properties;
         const values = {};
@@ -7382,7 +7458,7 @@ let CreatePluginProduction = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleMetaPropsValuesChange", (valuePath, value) => _this.setState(state => {
-      const newValues = lodash_set__WEBPACK_IMPORTED_MODULE_14___default()(state.meta_propsValues, valuePath, value);
+      const newValues = lodash_set__WEBPACK_IMPORTED_MODULE_15___default()(state.meta_propsValues, valuePath, value);
       return {
         meta_propsValues: newValues
       };
@@ -7399,11 +7475,26 @@ let CreatePluginProduction = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmitCreate", ev => {
-      ev.preventDefault();
+      console.log('handleSubmitCreate', __filename);
+      console.log('this.state.pl_name_available', _this.state.pl_name_available, __filename);
+      /**
+          * this.formRef.dispatchEvent
+              * Event
+                  * 'submit'
+                  * 
+                      * cancelable true
+                      * bubbles true
+      */
 
-      if (_this.state.pl_name_available) {
-        _this.formRef.dispatchEvent(new Event('submit'));
+      if (!(_this.state.pl_name_available == true)) {
+        console.log('handleSubmitCreate prevent default', __filename);
+        ev.preventDefault();
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/plugins";
     });
 
     _this.state = _objectSpread(_objectSpread({}, _this.state), {}, {
@@ -7422,7 +7513,7 @@ let CreatePluginProduction = /*#__PURE__*/function (_Component) {
         owner
       } = this.props.data;
       const pl_checked = this.state.pl_name;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("http://localhost:5000/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(pl_checked)}`;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("https://www.wizzihub.com/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(pl_checked)}`;
       console.log('CreatePlugin._checkAvaliblePluginName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -7441,7 +7532,7 @@ let CreatePluginProduction = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: async function componentDidMount() {
       this._checkAvaliblePluginName = lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default()(this._checkAvaliblePluginName, 100);
-      const metas = await (0,_fetch__WEBPACK_IMPORTED_MODULE_16__.getData)('production/meta/' + encodeURIComponent(owner));
+      const metas = await (0,_fetch__WEBPACK_IMPORTED_MODULE_17__.getData)('production/meta/' + encodeURIComponent(owner));
       console.log('componentDidMount.metas', metas, __filename);
       const options = [{
         name: '',
@@ -7475,7 +7566,7 @@ let CreatePluginProduction = /*#__PURE__*/function (_Component) {
         action: "/plugin/new",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Plugin name",
         name: "pl_name",
@@ -7483,7 +7574,7 @@ let CreatePluginProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.pl_name,
         onChange: this.handlePluginNameChange
-      }), this.state.pl_name.length > 0 && this.state.pl_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_13__.default, null, 'Plugin name ' + this.state.pl_name_checked + ' is available'), this.state.pl_name.length > 0 && !this.state.pl_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_13__.default, {
+      }), this.state.pl_name.length > 0 && this.state.pl_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_14__.default, null, 'Plugin name ' + this.state.pl_name_checked + ' is available'), this.state.pl_name.length > 0 && !this.state.pl_name_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_14__.default, {
         color: "#ff0000"
       }, 'Plugin name ' + this.state.pl_name_checked + ' is not available'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_12__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Description",
@@ -7556,7 +7647,7 @@ let CreatePluginProduction = /*#__PURE__*/function (_Component) {
         }
 
         if (p.type == 'object') {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormObject__WEBPACK_IMPORTED_MODULE_15__.default, {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormObject__WEBPACK_IMPORTED_MODULE_16__.default, {
             key: ndx,
             label: p.label || p.name,
             name: p.name,
@@ -7573,13 +7664,21 @@ let CreatePluginProduction = /*#__PURE__*/function (_Component) {
         id: "meta_propsValues",
         required: true,
         value: JSON.stringify(this.state.meta_propsValues, null, 4)
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_12__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_11__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_12__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_13__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_11__.default, {
         label: "Create plugin production",
         id: "btn_create_pl",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitCreate
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitCreate(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_11__.default, {
+        label: "Cancel",
+        id: "btn_cancel_pl",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -7603,7 +7702,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nullthrows */ "./node_modules/nullthrows/nullthrows.js");
@@ -7617,6 +7716,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormHidden__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/FormHidden */ "./src/components/pageforms/widgets/FormHidden.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -7641,7 +7741,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\CreateTFolder.tsx.ittf
 */
 
@@ -7658,7 +7758,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_12__.default.div`
+
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_13__.default.div`
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -7760,11 +7861,26 @@ let CreateTFolder = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmitCreate", ev => {
-      ev.preventDefault();
+      console.log('handleSubmitCreate', __filename);
+      console.log('this.state.tf_name_available', _this.state.tf_name_available, __filename);
+      /**
+          * this.formRef.dispatchEvent
+              * Event
+                  * 'submit'
+                  * 
+                      * cancelable true
+                      * bubbles true
+      */
 
-      if (_this.state.tf_name_available) {
-        _this.formRef.dispatchEvent(new Event('submit'));
+      if (!(_this.state.tf_name_available == true)) {
+        console.log('handleSubmitCreate prevent default', __filename);
+        ev.preventDefault();
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/tfolders";
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleTFolderUploadChange", files => {
@@ -7801,7 +7917,7 @@ let CreateTFolder = /*#__PURE__*/function (_Component) {
         owner
       } = this.props.data;
       const tf_checked = this.state.tf_name;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("http://localhost:5000/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(tf_checked)}`;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("https://www.wizzihub.com/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(tf_checked)}`;
       console.log('CreateTFolder._checkAvalibleTFolderName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -7830,7 +7946,7 @@ let CreateTFolder = /*#__PURE__*/function (_Component) {
         action: "/tfolder/new",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "TFolder name",
         name: "tf_name",
@@ -7895,13 +8011,21 @@ let CreateTFolder = /*#__PURE__*/function (_Component) {
         id: "tf_upload",
         value: this.state.tf_upload_files,
         onChange: this.handleTFolderUploadChange
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_11__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_10__.default, {
-        label: "Create tfolder",
-        id: "btn_create_tfolder",
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_11__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_12__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_10__.default, {
+        label: "Create tfolder production",
+        id: "btn_create_tf",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitCreate
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitCreate(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_10__.default, {
+        label: "Cancel",
+        id: "btn_cancel_tf",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -7966,7 +8090,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\CreateUser.tsx.ittf
 */
 
@@ -8046,7 +8170,7 @@ let CreateUser = /*#__PURE__*/function (_Component) {
     key: "_checkAvalibleUserName",
     value: async function _checkAvalibleUserName() {
       const u_checked = this.state.u_username;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("http://localhost:5000/api/v1")}/user/checkusername/${u_checked}`;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_2___default()("https://www.wizzihub.com/api/v1")}/user/checkusername/${u_checked}`;
       console.log('CreateUser.checkAvalibleUserName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -8085,7 +8209,7 @@ let CreateUser = /*#__PURE__*/function (_Component) {
         action: "/user/new",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormHidden__WEBPACK_IMPORTED_MODULE_6__.default, {
         name: "u_name",
         value: this.props.data.name
@@ -8112,7 +8236,7 @@ let CreateUser = /*#__PURE__*/function (_Component) {
         id: "btn_create_u",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitSignUp
+        onClick: ev => this.handleSubmitSignUp(ev)
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_11__.default, null, "By creating an account, you agree to the", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Link__WEBPACK_IMPORTED_MODULE_13__.default, {
         href: "/terms-of-service"
       }, "Terms of Service"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Text__WEBPACK_IMPORTED_MODULE_12__.default, null, ". For more information about Wizzi's privacy practices, see the", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Link__WEBPACK_IMPORTED_MODULE_13__.default, {
@@ -8146,6 +8270,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./widgets/FormStatic */ "./src/components/pageforms/widgets/FormStatic.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8170,9 +8295,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\DeleteArtifactProduction.tsx.ittf
 */
+
 
 
 
@@ -8192,15 +8318,21 @@ let DeleteArtifactProduction = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "state", {
+      ap_id: "",
       ap_owner: "",
       ap_name: "",
       ap_description: ""
     });
 
-    _defineProperty(_assertThisInitialized(_this), "handleSubmitDelete", ev => {
-      ev.preventDefault();
+    _defineProperty(_assertThisInitialized(_this), "formRef", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createRef());
 
-      _this.formRef.dispatchEvent(new Event('submit'));
+    _defineProperty(_assertThisInitialized(_this), "handleSubmitDelete", ev => {
+      console.log('handleSubmitDelete', __filename);
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/artifacts";
     });
 
     return _this;
@@ -8233,7 +8365,7 @@ let DeleteArtifactProduction = /*#__PURE__*/function (_Component) {
         action: "/artifact/delete",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__.default, {
         label: "Artifact id",
         name: "ap_id",
@@ -8254,13 +8386,21 @@ let DeleteArtifactProduction = /*#__PURE__*/function (_Component) {
         name: "ap_description",
         id: "ap_description",
         value: this.state.ap_description
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_6__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Delete artifact production",
         id: "btn_delete_ap",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitDelete
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitDelete(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+        label: "Cancel",
+        id: "btn_cancel_ap",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -8289,6 +8429,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./widgets/FormStatic */ "./src/components/pageforms/widgets/FormStatic.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8313,9 +8454,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\DeleteMetaProduction.tsx.ittf
 */
+
 
 
 
@@ -8335,15 +8477,21 @@ let DeleteMetaProduction = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "state", {
+      mp_id: "",
       mp_owner: "",
       mp_name: "",
       mp_description: ""
     });
 
-    _defineProperty(_assertThisInitialized(_this), "handleSubmitDelete", ev => {
-      ev.preventDefault();
+    _defineProperty(_assertThisInitialized(_this), "formRef", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createRef());
 
-      _this.formRef.dispatchEvent(new Event('submit'));
+    _defineProperty(_assertThisInitialized(_this), "handleSubmitDelete", ev => {
+      console.log('handleSubmitDelete', __filename);
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/metas";
     });
 
     return _this;
@@ -8376,7 +8524,7 @@ let DeleteMetaProduction = /*#__PURE__*/function (_Component) {
         action: "/meta/delete",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__.default, {
         label: "Meta id",
         name: "mp_id",
@@ -8397,13 +8545,21 @@ let DeleteMetaProduction = /*#__PURE__*/function (_Component) {
         name: "mp_description",
         id: "mp_description",
         value: this.state.mp_description
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_6__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Delete meta production",
         id: "btn_delete_mp",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitDelete
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitDelete(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+        label: "Cancel",
+        id: "btn_cancel_mp",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -8432,6 +8588,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./widgets/FormStatic */ "./src/components/pageforms/widgets/FormStatic.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8456,9 +8613,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\DeletePackageProduction.tsx.ittf
 */
+
 
 
 
@@ -8478,15 +8636,21 @@ let DeletePackageProduction = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "state", {
+      pp_id: "",
       pp_owner: "",
       pp_name: "",
       pp_description: ""
     });
 
-    _defineProperty(_assertThisInitialized(_this), "handleSubmitDelete", ev => {
-      ev.preventDefault();
+    _defineProperty(_assertThisInitialized(_this), "formRef", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createRef());
 
-      _this.formRef.dispatchEvent(new Event('submit'));
+    _defineProperty(_assertThisInitialized(_this), "handleSubmitDelete", ev => {
+      console.log('handleSubmitDelete', __filename);
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/packages";
     });
 
     return _this;
@@ -8519,7 +8683,7 @@ let DeletePackageProduction = /*#__PURE__*/function (_Component) {
         action: "/package/delete",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__.default, {
         label: "Package id",
         name: "pp_id",
@@ -8540,13 +8704,21 @@ let DeletePackageProduction = /*#__PURE__*/function (_Component) {
         name: "pp_description",
         id: "pp_description",
         value: this.state.pp_description
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_6__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Delete package production",
         id: "btn_delete_pp",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitDelete
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitDelete(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+        label: "Cancel",
+        id: "btn_cancel_pp",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -8575,6 +8747,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./widgets/FormStatic */ "./src/components/pageforms/widgets/FormStatic.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8599,9 +8772,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\DeletePluginProduction.tsx.ittf
 */
+
 
 
 
@@ -8621,15 +8795,21 @@ let DeletePluginProduction = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "state", {
-      pp_owner: "",
-      pp_name: "",
-      pp_description: ""
+      pl_id: "",
+      pl_owner: "",
+      pl_name: "",
+      pl_description: ""
     });
 
-    _defineProperty(_assertThisInitialized(_this), "handleSubmitDelete", ev => {
-      ev.preventDefault();
+    _defineProperty(_assertThisInitialized(_this), "formRef", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createRef());
 
-      _this.formRef.dispatchEvent(new Event('submit'));
+    _defineProperty(_assertThisInitialized(_this), "handleSubmitDelete", ev => {
+      console.log('handleSubmitDelete', __filename);
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/plugins";
     });
 
     return _this;
@@ -8646,10 +8826,10 @@ let DeletePluginProduction = /*#__PURE__*/function (_Component) {
         description
       } = this.props.data;
       this.setState({
-        pp_id: _id,
-        pp_owner: owner,
-        pp_name: name,
-        pp_description: description
+        pl_id: _id,
+        pl_owner: owner,
+        pl_name: name,
+        pl_description: description
       });
     }
   }, {
@@ -8662,34 +8842,42 @@ let DeletePluginProduction = /*#__PURE__*/function (_Component) {
         action: "/plugin/delete",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__.default, {
         label: "Plugin id",
-        name: "pp_id",
-        id: "pp_id",
-        value: this.state.pp_id
+        name: "pl_id",
+        id: "pl_id",
+        value: this.state.pl_id
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__.default, {
         label: "Plugin owner",
-        name: "pp_owner",
-        id: "pp_owner",
-        value: this.state.pp_owner
+        name: "pl_owner",
+        id: "pl_owner",
+        value: this.state.pl_owner
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__.default, {
         label: "Plugin name",
-        name: "pp_name",
-        id: "pp_name",
-        value: this.state.pp_name
+        name: "pl_name",
+        id: "pl_name",
+        value: this.state.pl_name
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__.default, {
         label: "Description",
-        name: "pp_description",
-        id: "pp_description",
-        value: this.state.pp_description
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+        name: "pl_description",
+        id: "pl_description",
+        value: this.state.pl_description
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_6__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Delete plugin production",
-        id: "btn_delete_pp",
+        id: "btn_delete_pl",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitDelete
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitDelete(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+        label: "Cancel",
+        id: "btn_cancel_pl",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -8718,6 +8906,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./widgets/FormStatic */ "./src/components/pageforms/widgets/FormStatic.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -8742,9 +8931,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\DeleteTFolder.tsx.ittf
 */
+
 
 
 
@@ -8770,10 +8960,15 @@ let DeleteTFolderProduction = /*#__PURE__*/function (_Component) {
       tf_description: ""
     });
 
-    _defineProperty(_assertThisInitialized(_this), "handleSubmitDelete", ev => {
-      ev.preventDefault();
+    _defineProperty(_assertThisInitialized(_this), "formRef", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createRef());
 
-      _this.formRef.dispatchEvent(new Event('submit'));
+    _defineProperty(_assertThisInitialized(_this), "handleSubmitDelete", ev => {
+      console.log('handleSubmitDelete', __filename);
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/tfolders";
     });
 
     return _this;
@@ -8806,7 +9001,7 @@ let DeleteTFolderProduction = /*#__PURE__*/function (_Component) {
         action: "/tfolder/delete",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormStatic__WEBPACK_IMPORTED_MODULE_3__.default, {
         label: "TFolder id",
         name: "tf_id",
@@ -8827,13 +9022,21 @@ let DeleteTFolderProduction = /*#__PURE__*/function (_Component) {
         name: "tf_description",
         id: "tf_description",
         value: this.state.tf_description
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
-        label: "Delete tfolder",
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_5__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_6__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+        label: "Delete tfolder production",
         id: "btn_delete_tf",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitDelete
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitDelete(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+        label: "Cancel",
+        id: "btn_cancel_tf",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -8880,7 +9083,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\DeleteUser.tsx.ittf
 */
 
@@ -8957,7 +9160,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\ListArtifactProduction.tsx.ittf
 */
 
@@ -9227,7 +9430,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\ListMetaProduction.tsx.ittf
 */
 
@@ -9441,7 +9644,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\ListPackageProduction.tsx.ittf
 */
 
@@ -9655,7 +9858,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\ListPluginProduction.tsx.ittf
 */
 
@@ -9869,7 +10072,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\ListTFolder.tsx.ittf
 */
 
@@ -10080,7 +10283,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\ListUser.tsx.ittf
 */
 
@@ -10261,7 +10464,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\PropertyEditor.tsx.ittf
 */
 
@@ -10446,7 +10649,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nullthrows */ "./node_modules/nullthrows/nullthrows.js");
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(nullthrows__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _widgets_FormContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./widgets/FormContainer */ "./src/components/pageforms/widgets/FormContainer.tsx");
@@ -10455,7 +10658,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/FormHidden */ "./src/components/pageforms/widgets/FormHidden.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
-/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
+/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -10480,7 +10684,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\UpdateArtifactProduction.tsx.ittf
 */
 
@@ -10494,7 +10698,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_9__.default.div`
+
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_10__.default.div`
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -10547,11 +10752,26 @@ let UpdateArtifactProduction = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmitUpdate", ev => {
-      ev.preventDefault();
+      console.log('handleSubmitUpdate', __filename);
+      console.log('this.state.ap_name_new_available', _this.state.ap_name_new_available, __filename);
+      /**
+          * this.formRef.dispatchEvent
+              * Event
+                  * 'submit'
+                  * 
+                      * cancelable true
+                      * bubbles true
+      */
 
-      if (_this.state.ap_name_new_available) {
-        _this.formRef.dispatchEvent(new Event('submit'));
+      if (!(_this.state.ap_name_new_available == true)) {
+        console.log('handleSubmitUpdate prevent default', __filename);
+        ev.preventDefault();
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/artifacts";
     });
 
     return _this;
@@ -10563,8 +10783,8 @@ let UpdateArtifactProduction = /*#__PURE__*/function (_Component) {
       const {
         owner
       } = this.props.data;
-      const ap_name_new_checked = this.state.ap_name_new_name;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_1___default()("http://localhost:5000/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(ap_name_new_checked)}`;
+      const ap_name_new_checked = this.state.ap_name_new;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_1___default()("https://www.wizzihub.com/api/v1")}/production/artifact/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(ap_name_new_checked)}`;
       console.log('CreateArtifact._checkAvalibleArtifactName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -10575,8 +10795,8 @@ let UpdateArtifactProduction = /*#__PURE__*/function (_Component) {
       const result = await response.json();
       console.log('CreateArtifact._checkAvalibleArtifactName.result', result, __filename);
       this.setState({
-        ap_name_new_name_available: result.isValid,
-        ap_name_new_name_checked: ap_name_new_checked
+        ap_name_new_available: result.isValid,
+        ap_name_new_checked: ap_name_new_checked
       });
     }
   }, {
@@ -10600,6 +10820,7 @@ let UpdateArtifactProduction = /*#__PURE__*/function (_Component) {
         ap_owner: owner,
         ap_name_old: name,
         ap_name_new: name,
+        mp_name_new_available: true,
         ap_description: description,
         ap_mainIttf: mainIttf,
         ap_wizziSchema: wizziSchema,
@@ -10620,7 +10841,7 @@ let UpdateArtifactProduction = /*#__PURE__*/function (_Component) {
         action: "/artifact/update",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__.default, {
         name: "ap_id",
         id: "ap_id",
@@ -10640,7 +10861,7 @@ let UpdateArtifactProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.ap_name_new,
         onChange: this.handleArtifactNameChange
-      }), this.state.ap_name_new.length > 0 && this.state.ap_name_old !== this.state.ap_name_new && this.state.ap_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__.default, null, 'Artifact name ' + this.state.ap_name_new_checked + ' is available'), this.state.ap_name_new.length > 0 && this.state.ap_name_old !== this.state.ap_name_new && !this.state.ap_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }), this.state.ap_name_new.length > 0 && this.state.ap_name_old !== this.state.ap_name_new && this.state.ap_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__.default, null, 'Artifact name ' + this.state.ap_name_new_checked + ' is available'), this.state.ap_name_new.length > 0 && this.state.ap_name_old !== this.state.ap_name_new && !this.state.ap_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__.default, {
         color: "#ff0000"
       }, 'Artifact name ' + this.state.ap_name_new_checked + ' is not available'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Description",
@@ -10663,13 +10884,21 @@ let UpdateArtifactProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.ap_wizziSchema,
         onChange: this.handleInputChange
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_8__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
         label: "Update artifact production",
         id: "btn_update_ap",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitUpdate
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitUpdate(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+        label: "Cancel",
+        id: "btn_cancel_ap",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -10693,7 +10922,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nullthrows */ "./node_modules/nullthrows/nullthrows.js");
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(nullthrows__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _widgets_FormContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./widgets/FormContainer */ "./src/components/pageforms/widgets/FormContainer.tsx");
@@ -10702,7 +10931,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/FormHidden */ "./src/components/pageforms/widgets/FormHidden.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
-/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
+/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -10727,7 +10957,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\UpdateMetaProduction.tsx.ittf
 */
 
@@ -10741,7 +10971,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_9__.default.div`
+
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_10__.default.div`
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -10765,13 +10996,16 @@ let UpdateMetaProduction = /*#__PURE__*/function (_Component) {
       mp_owner: "",
       mp_name_old: "",
       mp_name_new: "",
+      mp_name_new_checked: "",
+      mp_name_new_available: false,
       mp_description: "",
       mp_add_context: false,
       mp_contexts: [],
       mp_add_tfolder: false,
-      mp_dependencies: [],
-      mp_name_new_available: false
+      mp_dependencies: []
     });
+
+    _defineProperty(_assertThisInitialized(_this), "formRef", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createRef());
 
     _defineProperty(_assertThisInitialized(_this), "handleInputChange", ev => {
       console.log('handleInputChange', ev.target.type, ev.target.checked, ev.target.value, __filename);
@@ -10794,11 +11028,26 @@ let UpdateMetaProduction = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmitUpdate", ev => {
-      ev.preventDefault();
+      console.log('handleSubmitUpdate', __filename);
+      console.log('this.state.mp_name_new_available', _this.state.mp_name_new_available, __filename);
+      /**
+          * this.formRef.dispatchEvent
+              * Event
+                  * 'submit'
+                  * 
+                      * cancelable true
+                      * bubbles true
+      */
 
-      if (_this.state.mp_name_new_available) {
-        _this.formRef.dispatchEvent(new Event('submit'));
+      if (!(_this.state.mp_name_new_available == true)) {
+        console.log('handleSubmitUpdate prevent default', __filename);
+        ev.preventDefault();
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/metas";
     });
 
     return _this;
@@ -10810,8 +11059,8 @@ let UpdateMetaProduction = /*#__PURE__*/function (_Component) {
       const {
         owner
       } = this.props.data;
-      const mp_name_new_checked = this.state.mp_name_new_name;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_1___default()("http://localhost:5000/api/v1")}/production/meta/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(mp_name_new_checked)}`;
+      const mp_name_new_checked = this.state.mp_name_new;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_1___default()("https://www.wizzihub.com/api/v1")}/production/meta/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(mp_name_new_checked)}`;
       console.log('CreateMeta._checkAvalibleMetaName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -10822,8 +11071,8 @@ let UpdateMetaProduction = /*#__PURE__*/function (_Component) {
       const result = await response.json();
       console.log('CreateMeta._checkAvalibleMetaName.result', result, __filename);
       this.setState({
-        mp_name_new_name_available: result.isValid,
-        mp_name_new_name_checked: mp_name_new_checked
+        mp_name_new_available: result.isValid,
+        mp_name_new_checked: mp_name_new_checked
       });
     }
   }, {
@@ -10845,6 +11094,7 @@ let UpdateMetaProduction = /*#__PURE__*/function (_Component) {
         mp_owner: owner,
         mp_name_old: name,
         mp_name_new: name,
+        mp_name_new_available: true,
         mp_description: description,
         mp_add_context: mp_contexts.length > 0,
         mp_contexts,
@@ -10863,7 +11113,11 @@ let UpdateMetaProduction = /*#__PURE__*/function (_Component) {
         action: "/meta/update",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: ref => this.formRef = ref,
+        onSubmit: // _ ev.preventDefault()
+        ev => {
+          console.log('onSubmit preventing default', __filename);
+        }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__.default, {
         name: "mp_id",
         id: "mp_id",
@@ -10883,7 +11137,7 @@ let UpdateMetaProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.mp_name_new,
         onChange: this.handleMetaNameChange
-      }), this.state.mp_name_new.length > 0 && this.state.mp_name_old !== this.state.mp_name_new && this.state.mp_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__.default, null, 'Meta name ' + this.state.mp_name_new_checked + ' is available'), this.state.mp_name_new.length > 0 && this.state.mp_name_old !== this.state.mp_name_new && !this.state.mp_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }), this.state.mp_name_new.length > 0 && this.state.mp_name_old !== this.state.mp_name_new && this.state.mp_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__.default, null, 'Meta name ' + this.state.mp_name_new_checked + ' is available'), this.state.mp_name_new.length > 0 && this.state.mp_name_old !== this.state.mp_name_new && !this.state.mp_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__.default, {
         color: "#ff0000"
       }, 'Meta name ' + this.state.mp_name_new_checked + ' is not available'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Description",
@@ -10892,13 +11146,21 @@ let UpdateMetaProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.mp_description,
         onChange: this.handleInputChange
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_8__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
         label: "Update meta production",
-        id: "btn_update_ap",
+        id: "btn_update_mp",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitUpdate
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitUpdate(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+        label: "Cancel",
+        id: "btn_cancel_mp",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -10922,7 +11184,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nullthrows */ "./node_modules/nullthrows/nullthrows.js");
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(nullthrows__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _widgets_FormContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./widgets/FormContainer */ "./src/components/pageforms/widgets/FormContainer.tsx");
@@ -10931,7 +11193,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/FormHidden */ "./src/components/pageforms/widgets/FormHidden.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
-/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
+/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -10956,7 +11219,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\UpdatePackageProduction.tsx.ittf
 */
 
@@ -10970,7 +11233,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_9__.default.div`
+
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_10__.default.div`
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -11023,11 +11287,26 @@ let UpdatePackageProduction = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmitUpdate", ev => {
-      ev.preventDefault();
+      console.log('handleSubmitUpdate', __filename);
+      console.log('this.state.pp_name_new_available', _this.state.pp_name_new_available, __filename);
+      /**
+          * this.formRef.dispatchEvent
+              * Event
+                  * 'submit'
+                  * 
+                      * cancelable true
+                      * bubbles true
+      */
 
-      if (_this.state.pp_name_new_available) {
-        _this.formRef.dispatchEvent(new Event('submit'));
+      if (!(_this.state.pp_name_new_available == true)) {
+        console.log('handleSubmitUpdate prevent default', __filename);
+        ev.preventDefault();
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/packages";
     });
 
     return _this;
@@ -11039,8 +11318,8 @@ let UpdatePackageProduction = /*#__PURE__*/function (_Component) {
       const {
         owner
       } = this.props.data;
-      const pp_name_new_checked = this.state.pp_name_new_name;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_1___default()("http://localhost:5000/api/v1")}/production/package/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(pp_name_new_checked)}`;
+      const pp_name_new_checked = this.state.pp_name_new;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_1___default()("https://www.wizzihub.com/api/v1")}/production/package/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(pp_name_new_checked)}`;
       console.log('CreatePackage._checkAvaliblePackageName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -11051,8 +11330,8 @@ let UpdatePackageProduction = /*#__PURE__*/function (_Component) {
       const result = await response.json();
       console.log('CreatePackage._checkAvaliblePackageName.result', result, __filename);
       this.setState({
-        pp_name_new_name_available: result.isValid,
-        pp_name_new_name_checked: pp_name_new_checked
+        pp_name_new_available: result.isValid,
+        pp_name_new_checked: pp_name_new_checked
       });
     }
   }, {
@@ -11074,6 +11353,7 @@ let UpdatePackageProduction = /*#__PURE__*/function (_Component) {
         pp_owner: owner,
         pp_name_old: name,
         pp_name_new: name,
+        mp_name_new_available: true,
         pp_description: description,
         pp_add_context: pp_contexts.length > 0,
         pp_contexts,
@@ -11092,7 +11372,7 @@ let UpdatePackageProduction = /*#__PURE__*/function (_Component) {
         action: "/package/update",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__.default, {
         name: "pp_id",
         id: "pp_id",
@@ -11112,7 +11392,7 @@ let UpdatePackageProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.pp_name_new,
         onChange: this.handlePackageNameChange
-      }), this.state.pp_name_new.length > 0 && this.state.pp_name_old !== this.state.pp_name_new && this.state.pp_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__.default, null, 'Package name ' + this.state.pp_name_new_checked + ' is available'), this.state.pp_name_new.length > 0 && this.state.pp_name_old !== this.state.pp_name_new && !this.state.pp_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }), this.state.pp_name_new.length > 0 && this.state.pp_name_old !== this.state.pp_name_new && this.state.pp_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__.default, null, 'Package name ' + this.state.pp_name_new_checked + ' is available'), this.state.pp_name_new.length > 0 && this.state.pp_name_old !== this.state.pp_name_new && !this.state.pp_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__.default, {
         color: "#ff0000"
       }, 'Package name ' + this.state.pp_name_new_checked + ' is not available'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Description",
@@ -11121,13 +11401,21 @@ let UpdatePackageProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.pp_description,
         onChange: this.handleInputChange
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_8__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
         label: "Update package production",
-        id: "btn_update_ap",
+        id: "btn_update_pp",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitUpdate
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitUpdate(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+        label: "Cancel",
+        id: "btn_cancel_pp",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -11151,7 +11439,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nullthrows */ "./node_modules/nullthrows/nullthrows.js");
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(nullthrows__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _widgets_FormContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./widgets/FormContainer */ "./src/components/pageforms/widgets/FormContainer.tsx");
@@ -11160,7 +11448,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/FormHidden */ "./src/components/pageforms/widgets/FormHidden.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
-/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
+/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -11185,7 +11474,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\UpdatePluginProduction.tsx.ittf
 */
 
@@ -11199,7 +11488,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_9__.default.div`
+
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_10__.default.div`
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -11219,16 +11509,16 @@ let UpdatePluginProduction = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "state", {
-      pp_id: "",
-      pp_owner: "",
-      pp_name_old: "",
-      pp_name_new: "",
-      pp_description: "",
-      pp_add_context: false,
-      pp_contexts: [],
-      pp_add_tfolder: false,
-      pp_dependencies: [],
-      pp_name_new_available: false
+      pl_id: "",
+      pl_owner: "",
+      pl_name_old: "",
+      pl_name_new: "",
+      pl_description: "",
+      pl_add_context: false,
+      pl_contexts: [],
+      pl_add_tfolder: false,
+      pl_dependencies: [],
+      pl_name_new_available: false
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleInputChange", ev => {
@@ -11243,20 +11533,35 @@ let UpdatePluginProduction = /*#__PURE__*/function (_Component) {
       console.log('handlePluginNameChange', ev.target.type, ev.target.checked, ev.target.value, __filename);
 
       _this.setState({
-        pp_name_new: ev.target.value
+        pl_name_new: ev.target.value
       }, () => {
-        if (ev.target.value !== _this.state.pp_name_old) {
+        if (ev.target.value !== _this.state.pl_name_old) {
           _this._checkAvaliblePluginName();
         }
       });
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmitUpdate", ev => {
-      ev.preventDefault();
+      console.log('handleSubmitUpdate', __filename);
+      console.log('this.state.pl_name_new_available', _this.state.pl_name_new_available, __filename);
+      /**
+          * this.formRef.dispatchEvent
+              * Event
+                  * 'submit'
+                  * 
+                      * cancelable true
+                      * bubbles true
+      */
 
-      if (_this.state.pp_name_new_available) {
-        _this.formRef.dispatchEvent(new Event('submit'));
+      if (!(_this.state.pl_name_new_available == true)) {
+        console.log('handleSubmitUpdate prevent default', __filename);
+        ev.preventDefault();
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/plugins";
     });
 
     return _this;
@@ -11268,8 +11573,8 @@ let UpdatePluginProduction = /*#__PURE__*/function (_Component) {
       const {
         owner
       } = this.props.data;
-      const pp_name_new_checked = this.state.pp_name_new_name;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_1___default()("http://localhost:5000/api/v1")}/production/plugin/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(pp_name_new_checked)}`;
+      const pl_name_new_checked = this.state.pl_name_new;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_1___default()("https://www.wizzihub.com/api/v1")}/production/plugin/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(pl_name_new_checked)}`;
       console.log('CreatePlugin._checkAvaliblePluginName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -11280,8 +11585,8 @@ let UpdatePluginProduction = /*#__PURE__*/function (_Component) {
       const result = await response.json();
       console.log('CreatePlugin._checkAvaliblePluginName.result', result, __filename);
       this.setState({
-        pp_name_new_name_available: result.isValid,
-        pp_name_new_name_checked: pp_name_new_checked
+        pl_name_new_available: result.isValid,
+        pl_name_new_checked: pl_name_new_checked
       });
     }
   }, {
@@ -11296,18 +11601,19 @@ let UpdatePluginProduction = /*#__PURE__*/function (_Component) {
         contexts,
         dependencies
       } = this.props.data;
-      const pp_contexts = contexts || [];
-      const pp_dependencies = dependencies || [];
+      const pl_contexts = contexts || [];
+      const pl_dependencies = dependencies || [];
       this.setState({
-        pp_id: _id,
-        pp_owner: owner,
-        pp_name_old: name,
-        pp_name_new: name,
-        pp_description: description,
-        pp_add_context: pp_contexts.length > 0,
-        pp_contexts,
-        pp_add_tfolder: pp_dependencies.length > 0,
-        pp_dependencies
+        pl_id: _id,
+        pl_owner: owner,
+        pl_name_old: name,
+        pl_name_new: name,
+        mp_name_new_available: true,
+        pl_description: description,
+        pl_add_context: pl_contexts.length > 0,
+        pl_contexts,
+        pl_add_tfolder: pl_dependencies.length > 0,
+        pl_dependencies
       });
     }
   }, {
@@ -11321,42 +11627,50 @@ let UpdatePluginProduction = /*#__PURE__*/function (_Component) {
         action: "/plugin/update",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__.default, {
-        name: "pp_id",
-        id: "pp_id",
-        value: this.state.pp_id
+        name: "pl_id",
+        id: "pl_id",
+        value: this.state.pl_id
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__.default, {
-        name: "pp_owner",
-        id: "pp_owner",
-        value: this.state.pp_owner
+        name: "pl_owner",
+        id: "pl_owner",
+        value: this.state.pl_owner
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__.default, {
-        name: "pp_name_old",
-        id: "pp_name_old",
-        value: this.state.pp_name_old
+        name: "pl_name_old",
+        id: "pl_name_old",
+        value: this.state.pl_name_old
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Plugin name",
-        name: "pp_name_new",
-        id: "pp_name_new",
+        name: "pl_name_new",
+        id: "pl_name_new",
         required: true,
-        value: this.state.pp_name_new,
+        value: this.state.pl_name_new,
         onChange: this.handlePluginNameChange
-      }), this.state.pp_name_new.length > 0 && this.state.pp_name_old !== this.state.pp_name_new && this.state.pp_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__.default, null, 'Plugin name ' + this.state.pp_name_new_checked + ' is available'), this.state.pp_name_new.length > 0 && this.state.pp_name_old !== this.state.pp_name_new && !this.state.pp_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }), this.state.pl_name_new.length > 0 && this.state.pl_name_old !== this.state.pl_name_new && this.state.pl_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__.default, null, 'Plugin name ' + this.state.pl_name_new_checked + ' is available'), this.state.pl_name_new.length > 0 && this.state.pl_name_old !== this.state.pl_name_new && !this.state.pl_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__.default, {
         color: "#ff0000"
-      }, 'Plugin name ' + this.state.pp_name_new_checked + ' is not available'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_4__.default, {
+      }, 'Plugin name ' + this.state.pl_name_new_checked + ' is not available'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Description",
-        name: "pp_description",
-        id: "pp_description",
+        name: "pl_description",
+        id: "pl_description",
         required: true,
-        value: this.state.pp_description,
+        value: this.state.pl_description,
         onChange: this.handleInputChange
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_8__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
         label: "Update plugin production",
-        id: "btn_update_ap",
+        id: "btn_update_pl",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitUpdate
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitUpdate(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+        label: "Cancel",
+        id: "btn_cancel_pl",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -11380,7 +11694,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nullthrows */ "./node_modules/nullthrows/nullthrows.js");
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(nullthrows__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _widgets_FormContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./widgets/FormContainer */ "./src/components/pageforms/widgets/FormContainer.tsx");
@@ -11389,7 +11703,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/FormHidden */ "./src/components/pageforms/widgets/FormHidden.tsx");
 /* harmony import */ var _widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/FormButton */ "./src/components/pageforms/widgets/FormButton.tsx");
 /* harmony import */ var _widgets_HR__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widgets/HR */ "./src/components/pageforms/widgets/HR.tsx");
-/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
+/* harmony import */ var _widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/styles/FlexRow */ "./src/components/pageforms/widgets/styles/FlexRow.tsx");
+/* harmony import */ var _widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/styles/Para */ "./src/components/pageforms/widgets/styles/Para.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -11414,7 +11729,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\UpdateTFolder.tsx.ittf
 */
 
@@ -11428,7 +11743,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_9__.default.div`
+
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_10__.default.div`
     display: -ms-flexbox;
     display: -webkit-box;
     display: -webkit-flex;
@@ -11481,11 +11797,26 @@ let UpdateTFolderProduction = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmitUpdate", ev => {
-      ev.preventDefault();
+      console.log('handleSubmitUpdate', __filename);
+      console.log('this.state.tf_name_new_available', _this.state.tf_name_new_available, __filename);
+      /**
+          * this.formRef.dispatchEvent
+              * Event
+                  * 'submit'
+                  * 
+                      * cancelable true
+                      * bubbles true
+      */
 
-      if (_this.state.tf_name_new_available) {
-        _this.formRef.dispatchEvent(new Event('submit'));
+      if (!(_this.state.tf_name_new_available == true)) {
+        console.log('handleSubmitUpdate prevent default', __filename);
+        ev.preventDefault();
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleCancel", ev => {
+      ev.preventDefault();
+      window.location.href = "/productions/tfolders";
     });
 
     return _this;
@@ -11497,8 +11828,8 @@ let UpdateTFolderProduction = /*#__PURE__*/function (_Component) {
       const {
         owner
       } = this.props.data;
-      const tf_name_new_checked = this.state.tf_name_new_name;
-      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_1___default()("http://localhost:5000/api/v1")}/production/tFolder/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(tf_name_new_checked)}`;
+      const tf_name_new_checked = this.state.tf_name_new;
+      const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_1___default()("https://www.wizzihub.com/api/v1")}/production/tFolder/checkname/${encodeURIComponent(owner)}/${encodeURIComponent(tf_name_new_checked)}`;
       console.log('CreateTFolder._checkAvalibleTFolderName.endpoint', endpoint, __filename);
       const response = await fetch(endpoint);
 
@@ -11509,8 +11840,8 @@ let UpdateTFolderProduction = /*#__PURE__*/function (_Component) {
       const result = await response.json();
       console.log('CreateTFolder._checkAvalibleTFolderName.result', result, __filename);
       this.setState({
-        tf_name_new_name_available: result.isValid,
-        tf_name_new_name_checked: tf_name_new_checked
+        tf_name_new_available: result.isValid,
+        tf_name_new_checked: tf_name_new_checked
       });
     }
   }, {
@@ -11532,6 +11863,7 @@ let UpdateTFolderProduction = /*#__PURE__*/function (_Component) {
         tf_owner: owner,
         tf_name_old: name,
         tf_name_new: name,
+        mp_name_new_available: true,
         tf_description: description,
         tf_add_context: tf_contexts.length > 0,
         tf_contexts,
@@ -11550,7 +11882,7 @@ let UpdateTFolderProduction = /*#__PURE__*/function (_Component) {
         action: "/tfolder/update",
         acceptCharset: "UTF-8",
         method: "POST",
-        ref: ref => this.formRef = ref
+        ref: this.formRef
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormHidden__WEBPACK_IMPORTED_MODULE_5__.default, {
         name: "tf_id",
         id: "tf_id",
@@ -11570,7 +11902,7 @@ let UpdateTFolderProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.tf_name_new,
         onChange: this.handleTFolderNameChange
-      }), this.state.tf_name_new.length > 0 && this.state.tf_name_old !== this.state.tf_name_new && this.state.tf_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__.default, null, 'TFolder name ' + this.state.tf_name_new_checked + ' is available'), this.state.tf_name_new.length > 0 && this.state.tf_name_old !== this.state.tf_name_new && !this.state.tf_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }), this.state.tf_name_new.length > 0 && this.state.tf_name_old !== this.state.tf_name_new && this.state.tf_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__.default, null, 'TFolder name ' + this.state.tf_name_new_checked + ' is available'), this.state.tf_name_new.length > 0 && this.state.tf_name_old !== this.state.tf_name_new && !this.state.tf_name_new_available && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_Para__WEBPACK_IMPORTED_MODULE_9__.default, {
         color: "#ff0000"
       }, 'TFolder name ' + this.state.tf_name_new_checked + ' is not available'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormGroup__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Description",
@@ -11579,13 +11911,21 @@ let UpdateTFolderProduction = /*#__PURE__*/function (_Component) {
         required: true,
         value: this.state.tf_description,
         onChange: this.handleInputChange
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
-        label: "Update tFolder",
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_HR__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_styles_FlexRow__WEBPACK_IMPORTED_MODULE_8__.default, {
+        justifyContent: "space-evenly"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+        label: "Update tfolder production",
         id: "btn_update_tf",
         variant: "submit",
         type: "submit",
-        onClick: this.handleSubmitUpdate
-      })));
+        bgColor: "#2ea44f",
+        onClick: ev => this.handleSubmitUpdate(ev)
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_FormButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+        label: "Cancel",
+        id: "btn_cancel_tf",
+        type: "button",
+        onClick: this.handleCancel
+      })))));
     }
   }]);
 
@@ -11639,7 +11979,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\UpdateUser.tsx.ittf
 */
 
@@ -11729,7 +12069,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormAvatar.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -11779,37 +12119,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormButton.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.button`
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: 1px solid;
-    -webkit-border-radius: 6px;
-    -khtml-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -o-border-radius: 6px;
-    border-radius: 6px;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    padding: 5px 16px;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    
-`;
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_1__.default.button(props => {
+  return {
+    appearance: "none",
+    border: "1px solid",
+    borderRadius: "6px",
+    cursor: "pointer",
+    display: "inline-block",
+    fontSize: "14px",
+    fontWeight: "500",
+    lineHeight: "20px",
+    padding: "5px 16px",
+    position: "relative",
+    userSelect: "none",
+    verticalAlign: "middle",
+    whiteSpace: "nowrap",
+    backgroundColor: props.bgColor || 'aliceblue'
+  };
+});
 const FormButton = ({
   id,
   label,
@@ -11844,7 +12177,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormCheckBox.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -11911,7 +12244,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormContainer.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -11957,7 +12290,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormFile.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -12061,7 +12394,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormGroup.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -12148,7 +12481,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormHidden.tsx.ittf
 */
 
@@ -12211,7 +12544,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormObject.tsx.ittf
 */
 
@@ -12364,7 +12697,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormRow.tsx.ittf
 */
 
@@ -12524,7 +12857,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormSelect.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -12616,7 +12949,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormStatic.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -12688,7 +13021,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormText.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -12778,7 +13111,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\FormTitle.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -12833,7 +13166,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\HR.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -12872,7 +13205,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\ThemeDemo.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -13045,7 +13378,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\styles\Box.tsx.ittf
 */
 
@@ -13093,7 +13426,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\styles\FlexRow.tsx.ittf
 */
 
@@ -13123,7 +13456,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\styles\Link.tsx.ittf
 */
 
@@ -13153,7 +13486,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\styles\Para.tsx.ittf
 */
 
@@ -13197,7 +13530,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\components\pageforms\widgets\styles\Text.tsx.ittf
 */
 
@@ -13240,12 +13573,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nullthrows__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nullthrows__WEBPACK_IMPORTED_MODULE_0__);
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\fetch.tsx.ittf
 */
 
 async function getData(path) {
-  const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_0___default()("http://localhost:5000/api/v1")}/${path}`;
+  const endpoint = `${nullthrows__WEBPACK_IMPORTED_MODULE_0___default()("https://www.wizzihub.com/api/v1")}/${path}`;
   console.log('Fetch.getData.endpoint', endpoint, __filename);
   const response = await fetch(endpoint);
 
@@ -49917,7 +50250,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/is-prop-valid */ "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js");
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__);
-function v(){return(v=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}).apply(this,arguments)}var g=function(e,t){for(var n=[e[0]],r=0,o=t.length;r<o;r+=1)n.push(t[r],e[r+1]);return n},S=function(t){return null!==t&&"object"==typeof t&&"[object Object]"===(t.toString?t.toString():Object.prototype.toString.call(t))&&!(0,react_is__WEBPACK_IMPORTED_MODULE_0__.typeOf)(t)},w=Object.freeze([]),E=Object.freeze({});function b(e){return"function"==typeof e}function _(e){return true&&"string"==typeof e&&e||e.displayName||e.name||"Component"}function N(e){return e&&"string"==typeof e.styledComponentId}var A="undefined"!=typeof process&&(({"NODE_ENV":"development","API_SERVER_URL":"http://localhost:5000/api/v1","BUILD_TIMESTAMP":1662362983081}).REACT_APP_SC_ATTR||({"NODE_ENV":"development","API_SERVER_URL":"http://localhost:5000/api/v1","BUILD_TIMESTAMP":1662362983081}).SC_ATTR)||"data-styled",C="5.3.0",I="undefined"!=typeof window&&"HTMLElement"in window,P=Boolean("boolean"==typeof SC_DISABLE_SPEEDY?SC_DISABLE_SPEEDY:"undefined"!=typeof process&&void 0!==({"NODE_ENV":"development","API_SERVER_URL":"http://localhost:5000/api/v1","BUILD_TIMESTAMP":1662362983081}).REACT_APP_SC_DISABLE_SPEEDY&&""!==({"NODE_ENV":"development","API_SERVER_URL":"http://localhost:5000/api/v1","BUILD_TIMESTAMP":1662362983081}).REACT_APP_SC_DISABLE_SPEEDY?"false"!==({"NODE_ENV":"development","API_SERVER_URL":"http://localhost:5000/api/v1","BUILD_TIMESTAMP":1662362983081}).REACT_APP_SC_DISABLE_SPEEDY&&({"NODE_ENV":"development","API_SERVER_URL":"http://localhost:5000/api/v1","BUILD_TIMESTAMP":1662362983081}).REACT_APP_SC_DISABLE_SPEEDY:"undefined"!=typeof process&&void 0!==({"NODE_ENV":"development","API_SERVER_URL":"http://localhost:5000/api/v1","BUILD_TIMESTAMP":1662362983081}).SC_DISABLE_SPEEDY&&""!==({"NODE_ENV":"development","API_SERVER_URL":"http://localhost:5000/api/v1","BUILD_TIMESTAMP":1662362983081}).SC_DISABLE_SPEEDY?"false"!==({"NODE_ENV":"development","API_SERVER_URL":"http://localhost:5000/api/v1","BUILD_TIMESTAMP":1662362983081}).SC_DISABLE_SPEEDY&&({"NODE_ENV":"development","API_SERVER_URL":"http://localhost:5000/api/v1","BUILD_TIMESTAMP":1662362983081}).SC_DISABLE_SPEEDY:"production"!=="development"),O={},R= true?{1:"Cannot create styled-component for component: %s.\n\n",2:"Can't collect styles once you've consumed a `ServerStyleSheet`'s styles! `ServerStyleSheet` is a one off instance for each server-side render cycle.\n\n- Are you trying to reuse it across renders?\n- Are you accidentally calling collectStyles twice?\n\n",3:"Streaming SSR is only supported in a Node.js environment; Please do not try to call this method in the browser.\n\n",4:"The `StyleSheetManager` expects a valid target or sheet prop!\n\n- Does this error occur on the client and is your target falsy?\n- Does this error occur on the server and is the sheet falsy?\n\n",5:"The clone method cannot be used on the client!\n\n- Are you running in a client-like environment on the server?\n- Are you trying to run SSR on the client?\n\n",6:"Trying to insert a new style tag, but the given Node is unmounted!\n\n- Are you using a custom target that isn't mounted?\n- Does your document not have a valid head element?\n- Have you accidentally removed a style tag manually?\n\n",7:'ThemeProvider: Please return an object from your "theme" prop function, e.g.\n\n```js\ntheme={() => ({})}\n```\n\n',8:'ThemeProvider: Please make your "theme" prop an object.\n\n',9:"Missing document `<head>`\n\n",10:"Cannot find a StyleSheet instance. Usually this happens if there are multiple copies of styled-components loaded at once. Check out this issue for how to troubleshoot and fix the common cases where this situation can happen: https://github.com/styled-components/styled-components/issues/1941#issuecomment-417862021\n\n",11:"_This error was replaced with a dev-time warning, it will be deleted for v4 final._ [createGlobalStyle] received children which will not be rendered. Please use the component without passing children elements.\n\n",12:"It seems you are interpolating a keyframe declaration (%s) into an untagged string. This was supported in styled-components v3, but is not longer supported in v4 as keyframes are now injected on-demand. Please wrap your string in the css\\`\\` helper which ensures the styles are injected correctly. See https://www.styled-components.com/docs/api#css\n\n",13:"%s is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details.\n\n",14:'ThemeProvider: "theme" prop is required.\n\n',15:"A stylis plugin has been supplied that is not named. We need a name for each plugin to be able to prevent styling collisions between different stylis configurations within the same app. Before you pass your plugin to `<StyleSheetManager stylisPlugins={[]}>`, please make sure each plugin is uniquely-named, e.g.\n\n```js\nObject.defineProperty(importedPlugin, 'name', { value: 'some-unique-name' });\n```\n\n",16:"Reached the limit of how many styled components may be created at group %s.\nYou may only create up to 1,073,741,824 components. If you're creating components dynamically,\nas for instance in your render method then you may be running into this limitation.\n\n",17:"CSSStyleSheet could not be found on HTMLStyleElement.\nHas styled-components' style tag been unmounted or altered by another script?\n"}:0;function D(){for(var e=arguments.length<=0?void 0:arguments[0],t=[],n=1,r=arguments.length;n<r;n+=1)t.push(n<0||arguments.length<=n?void 0:arguments[n]);return t.forEach((function(t){e=e.replace(/%[a-z]/,t)})),e}function j(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];throw false?0:new Error(D.apply(void 0,[R[e]].concat(n)).trim())}var T=function(){function e(e){this.groupSizes=new Uint32Array(512),this.length=512,this.tag=e}var t=e.prototype;return t.indexOfGroup=function(e){for(var t=0,n=0;n<e;n++)t+=this.groupSizes[n];return t},t.insertRules=function(e,t){if(e>=this.groupSizes.length){for(var n=this.groupSizes,r=n.length,o=r;e>=o;)(o<<=1)<0&&j(16,""+e);this.groupSizes=new Uint32Array(o),this.groupSizes.set(n),this.length=o;for(var i=r;i<o;i++)this.groupSizes[i]=0}for(var s=this.indexOfGroup(e+1),a=0,c=t.length;a<c;a++)this.tag.insertRule(s,t[a])&&(this.groupSizes[e]++,s++)},t.clearGroup=function(e){if(e<this.length){var t=this.groupSizes[e],n=this.indexOfGroup(e),r=n+t;this.groupSizes[e]=0;for(var o=n;o<r;o++)this.tag.deleteRule(n)}},t.getGroup=function(e){var t="";if(e>=this.length||0===this.groupSizes[e])return t;for(var n=this.groupSizes[e],r=this.indexOfGroup(e),o=r+n,i=r;i<o;i++)t+=this.tag.getRule(i)+"/*!sc*/\n";return t},e}(),k=new Map,x=new Map,V=1,B=function(e){if(k.has(e))return k.get(e);for(;x.has(V);)V++;var t=V++;return true&&((0|t)<0||t>1<<30)&&j(16,""+t),k.set(e,t),x.set(t,e),t},M=function(e){return x.get(e)},z=function(e,t){k.set(e,t),x.set(t,e)},L="style["+A+'][data-styled-version="5.3.0"]',G=new RegExp("^"+A+'\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)'),F=function(e,t,n){for(var r,o=n.split(","),i=0,s=o.length;i<s;i++)(r=o[i])&&e.registerName(t,r)},Y=function(e,t){for(var n=t.innerHTML.split("/*!sc*/\n"),r=[],o=0,i=n.length;o<i;o++){var s=n[o].trim();if(s){var a=s.match(G);if(a){var c=0|parseInt(a[1],10),u=a[2];0!==c&&(z(u,c),F(e,u,a[3]),e.getTag().insertRules(c,r)),r.length=0}else r.push(s)}}},q=function(){return"undefined"!=typeof window&&void 0!==window.__webpack_nonce__?window.__webpack_nonce__:null},H=function(e){var t=document.head,n=e||t,r=document.createElement("style"),o=function(e){for(var t=e.childNodes,n=t.length;n>=0;n--){var r=t[n];if(r&&1===r.nodeType&&r.hasAttribute(A))return r}}(n),i=void 0!==o?o.nextSibling:null;r.setAttribute(A,"active"),r.setAttribute("data-styled-version","5.3.0");var s=q();return s&&r.setAttribute("nonce",s),n.insertBefore(r,i),r},$=function(){function e(e){var t=this.element=H(e);t.appendChild(document.createTextNode("")),this.sheet=function(e){if(e.sheet)return e.sheet;for(var t=document.styleSheets,n=0,r=t.length;n<r;n++){var o=t[n];if(o.ownerNode===e)return o}j(17)}(t),this.length=0}var t=e.prototype;return t.insertRule=function(e,t){try{return this.sheet.insertRule(t,e),this.length++,!0}catch(e){return!1}},t.deleteRule=function(e){this.sheet.deleteRule(e),this.length--},t.getRule=function(e){var t=this.sheet.cssRules[e];return void 0!==t&&"string"==typeof t.cssText?t.cssText:""},e}(),W=function(){function e(e){var t=this.element=H(e);this.nodes=t.childNodes,this.length=0}var t=e.prototype;return t.insertRule=function(e,t){if(e<=this.length&&e>=0){var n=document.createTextNode(t),r=this.nodes[e];return this.element.insertBefore(n,r||null),this.length++,!0}return!1},t.deleteRule=function(e){this.element.removeChild(this.nodes[e]),this.length--},t.getRule=function(e){return e<this.length?this.nodes[e].textContent:""},e}(),U=function(){function e(e){this.rules=[],this.length=0}var t=e.prototype;return t.insertRule=function(e,t){return e<=this.length&&(this.rules.splice(e,0,t),this.length++,!0)},t.deleteRule=function(e){this.rules.splice(e,1),this.length--},t.getRule=function(e){return e<this.length?this.rules[e]:""},e}(),J=I,X={isServer:!I,useCSSOMInjection:!P},Z=function(){function e(e,t,n){void 0===e&&(e=E),void 0===t&&(t={}),this.options=v({},X,{},e),this.gs=t,this.names=new Map(n),!this.options.isServer&&I&&J&&(J=!1,function(e){for(var t=document.querySelectorAll(L),n=0,r=t.length;n<r;n++){var o=t[n];o&&"active"!==o.getAttribute(A)&&(Y(e,o),o.parentNode&&o.parentNode.removeChild(o))}}(this))}e.registerId=function(e){return B(e)};var t=e.prototype;return t.reconstructWithOptions=function(t,n){return void 0===n&&(n=!0),new e(v({},this.options,{},t),this.gs,n&&this.names||void 0)},t.allocateGSInstance=function(e){return this.gs[e]=(this.gs[e]||0)+1},t.getTag=function(){return this.tag||(this.tag=(n=(t=this.options).isServer,r=t.useCSSOMInjection,o=t.target,e=n?new U(o):r?new $(o):new W(o),new T(e)));var e,t,n,r,o},t.hasNameForId=function(e,t){return this.names.has(e)&&this.names.get(e).has(t)},t.registerName=function(e,t){if(B(e),this.names.has(e))this.names.get(e).add(t);else{var n=new Set;n.add(t),this.names.set(e,n)}},t.insertRules=function(e,t,n){this.registerName(e,t),this.getTag().insertRules(B(e),n)},t.clearNames=function(e){this.names.has(e)&&this.names.get(e).clear()},t.clearRules=function(e){this.getTag().clearGroup(B(e)),this.clearNames(e)},t.clearTag=function(){this.tag=void 0},t.toString=function(){return function(e){for(var t=e.getTag(),n=t.length,r="",o=0;o<n;o++){var i=M(o);if(void 0!==i){var s=e.names.get(i),a=t.getGroup(o);if(void 0!==s&&0!==a.length){var c=A+".g"+o+'[id="'+i+'"]',u="";void 0!==s&&s.forEach((function(e){e.length>0&&(u+=e+",")})),r+=""+a+c+'{content:"'+u+'"}/*!sc*/\n'}}}return r}(this)},e}(),K=/(a)(d)/gi,Q=function(e){return String.fromCharCode(e+(e>25?39:97))};function ee(e){var t,n="";for(t=Math.abs(e);t>52;t=t/52|0)n=Q(t%52)+n;return(Q(t%52)+n).replace(K,"$1-$2")}var te=function(e,t){for(var n=t.length;n;)e=33*e^t.charCodeAt(--n);return e},ne=function(e){return te(5381,e)};function re(e){for(var t=0;t<e.length;t+=1){var n=e[t];if(b(n)&&!N(n))return!1}return!0}var oe=ne("5.3.0"),ie=function(){function e(e,t,n){this.rules=e,this.staticRulesId="",this.isStatic= false&&0,this.componentId=t,this.baseHash=te(oe,t),this.baseStyle=n,Z.registerId(t)}return e.prototype.generateAndInjectStyles=function(e,t,n){var r=this.componentId,o=[];if(this.baseStyle&&o.push(this.baseStyle.generateAndInjectStyles(e,t,n)),this.isStatic&&!n.hash)if(this.staticRulesId&&t.hasNameForId(r,this.staticRulesId))o.push(this.staticRulesId);else{var i=Ne(this.rules,e,t,n).join(""),s=ee(te(this.baseHash,i.length)>>>0);if(!t.hasNameForId(r,s)){var a=n(i,"."+s,void 0,r);t.insertRules(r,s,a)}o.push(s),this.staticRulesId=s}else{for(var c=this.rules.length,u=te(this.baseHash,n.hash),l="",d=0;d<c;d++){var h=this.rules[d];if("string"==typeof h)l+=h, true&&(u=te(u,h+d));else if(h){var p=Ne(h,e,t,n),f=Array.isArray(p)?p.join(""):p;u=te(u,f+d),l+=f}}if(l){var m=ee(u>>>0);if(!t.hasNameForId(r,m)){var y=n(l,"."+m,void 0,r);t.insertRules(r,m,y)}o.push(m)}}return o.join(" ")},e}(),se=/^\s*\/\/.*$/gm,ae=[":","[",".","#"];function ce(e){var t,n,r,o,i=void 0===e?E:e,s=i.options,a=void 0===s?E:s,c=i.plugins,u=void 0===c?w:c,l=new _emotion_stylis__WEBPACK_IMPORTED_MODULE_3__.default(a),d=[],h=function(e){function t(t){if(t)try{e(t+"}")}catch(e){}}return function(n,r,o,i,s,a,c,u,l,d){switch(n){case 1:if(0===l&&64===r.charCodeAt(0))return e(r+";"),"";break;case 2:if(0===u)return r+"/*|*/";break;case 3:switch(u){case 102:case 112:return e(o[0]+r),"";default:return r+(0===d?"/*|*/":"")}case-2:r.split("/*|*/}").forEach(t)}}}((function(e){d.push(e)})),f=function(e,r,i){return 0===r&&-1!==ae.indexOf(i[n.length])||i.match(o)?e:"."+t};function m(e,i,s,a){void 0===a&&(a="&");var c=e.replace(se,""),u=i&&s?s+" "+i+" { "+c+" }":c;return t=a,n=i,r=new RegExp("\\"+n+"\\b","g"),o=new RegExp("(\\"+n+"\\b){2,}"),l(s||!i?"":i,u)}return l.use([].concat(u,[function(e,t,o){2===e&&o.length&&o[0].lastIndexOf(n)>0&&(o[0]=o[0].replace(r,f))},h,function(e){if(-2===e){var t=d;return d=[],t}}])),m.hash=u.length?u.reduce((function(e,t){return t.name||j(15),te(e,t.name)}),5381).toString():"",m}var ue=react__WEBPACK_IMPORTED_MODULE_1__.createContext(),le=ue.Consumer,de=react__WEBPACK_IMPORTED_MODULE_1__.createContext(),he=(de.Consumer,new Z),pe=ce();function fe(){return (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ue)||he}function me(){return (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(de)||pe}function ye(e){var t=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(e.stylisPlugins),n=t[0],i=t[1],c=fe(),u=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)((function(){var t=c;return e.sheet?t=e.sheet:e.target&&(t=t.reconstructWithOptions({target:e.target},!1)),e.disableCSSOMInjection&&(t=t.reconstructWithOptions({useCSSOMInjection:!1})),t}),[e.disableCSSOMInjection,e.sheet,e.target]),l=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)((function(){return ce({options:{prefix:!e.disableVendorPrefixes},plugins:n})}),[e.disableVendorPrefixes,n]);return (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)((function(){shallowequal__WEBPACK_IMPORTED_MODULE_2___default()(n,e.stylisPlugins)||i(e.stylisPlugins)}),[e.stylisPlugins]),react__WEBPACK_IMPORTED_MODULE_1__.createElement(ue.Provider,{value:u},react__WEBPACK_IMPORTED_MODULE_1__.createElement(de.Provider,{value:l}, true?react__WEBPACK_IMPORTED_MODULE_1__.Children.only(e.children):0))}var ve=function(){function e(e,t){var n=this;this.inject=function(e,t){void 0===t&&(t=pe);var r=n.name+t.hash;e.hasNameForId(n.id,r)||e.insertRules(n.id,r,t(n.rules,r,"@keyframes"))},this.toString=function(){return j(12,String(n.name))},this.name=e,this.id="sc-keyframes-"+e,this.rules=t}return e.prototype.getName=function(e){return void 0===e&&(e=pe),this.name+e.hash},e}(),ge=/([A-Z])/,Se=/([A-Z])/g,we=/^ms-/,Ee=function(e){return"-"+e.toLowerCase()};function be(e){return ge.test(e)?e.replace(Se,Ee).replace(we,"-ms-"):e}var _e=function(e){return null==e||!1===e||""===e};function Ne(e,n,r,o){if(Array.isArray(e)){for(var i,s=[],a=0,c=e.length;a<c;a+=1)""!==(i=Ne(e[a],n,r,o))&&(Array.isArray(i)?s.push.apply(s,i):s.push(i));return s}if(_e(e))return"";if(N(e))return"."+e.styledComponentId;if(b(e)){if("function"!=typeof(l=e)||l.prototype&&l.prototype.isReactComponent||!n)return e;var u=e(n);return true&&(0,react_is__WEBPACK_IMPORTED_MODULE_0__.isElement)(u)&&console.warn(_(e)+" is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details."),Ne(u,n,r,o)}var l;return e instanceof ve?r?(e.inject(r,o),e.getName(o)):e:S(e)?function e(t,n){var r,o,i=[];for(var s in t)t.hasOwnProperty(s)&&!_e(t[s])&&(S(t[s])?i.push.apply(i,e(t[s],s)):b(t[s])?i.push(be(s)+":",t[s],";"):i.push(be(s)+": "+(r=s,null==(o=t[s])||"boolean"==typeof o||""===o?"":"number"!=typeof o||0===o||r in _emotion_unitless__WEBPACK_IMPORTED_MODULE_4__.default?String(o).trim():o+"px")+";"));return n?[n+" {"].concat(i,["}"]):i}(e):e.toString()}function Ae(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];return b(e)||S(e)?Ne(g(w,[e].concat(n))):0===n.length&&1===e.length&&"string"==typeof e[0]?e:Ne(g(e,n))}var Ce=/invalid hook call/i,Ie=new Set,Pe=function(e,t){if(true){var n="The component "+e+(t?' with the id of "'+t+'"':"")+" has been created dynamically.\nYou may see this warning because you've called styled inside another component.\nTo resolve this only create new StyledComponents outside of any render method and function component.";try{(0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(),Ie.has(n)||(console.warn(n),Ie.add(n))}catch(e){Ce.test(e.message)&&Ie.delete(n)}}},Oe=function(e,t,n){return void 0===n&&(n=E),e.theme!==n.theme&&e.theme||t||n.theme},Re=/[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~-]+/g,De=/(^-|-$)/g;function je(e){return e.replace(Re,"-").replace(De,"")}var Te=function(e){return ee(ne(e)>>>0)};function ke(e){return"string"==typeof e&&( false||e.charAt(0)===e.charAt(0).toLowerCase())}var xe=function(e){return"function"==typeof e||"object"==typeof e&&null!==e&&!Array.isArray(e)},Ve=function(e){return"__proto__"!==e&&"constructor"!==e&&"prototype"!==e};function Be(e,t,n){var r=e[n];xe(t)&&xe(r)?Me(r,t):e[n]=t}function Me(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];for(var o=0,i=n;o<i.length;o++){var s=i[o];if(xe(s))for(var a in s)Ve(a)&&Be(e,s[a],a)}return e}var ze=react__WEBPACK_IMPORTED_MODULE_1__.createContext(),Le=ze.Consumer;function Ge(e){var t=(0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ze),n=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)((function(){return function(e,t){if(!e)return j(14);if(b(e)){var n=e(t);return false||null!==n&&!Array.isArray(n)&&"object"==typeof n?n:j(7)}return Array.isArray(e)||"object"!=typeof e?j(8):t?v({},t,{},e):e}(e.theme,t)}),[e.theme,t]);return e.children?react__WEBPACK_IMPORTED_MODULE_1__.createElement(ze.Provider,{value:n},e.children):null}var Fe={};function Ye(e,t,n){var o=N(e),s=!ke(e),a=t.attrs,c=void 0===a?w:a,d=t.componentId,h=void 0===d?function(e,t){var n="string"!=typeof e?"sc":je(e);Fe[n]=(Fe[n]||0)+1;var r=n+"-"+Te("5.3.0"+n+Fe[n]);return t?t+"-"+r:r}(t.displayName,t.parentComponentId):d,p=t.displayName,f=void 0===p?function(e){return ke(e)?"styled."+e:"Styled("+_(e)+")"}(e):p,g=t.displayName&&t.componentId?je(t.displayName)+"-"+t.componentId:t.componentId||h,S=o&&e.attrs?Array.prototype.concat(e.attrs,c).filter(Boolean):c,A=t.shouldForwardProp;o&&e.shouldForwardProp&&(A=t.shouldForwardProp?function(n,r,o){return e.shouldForwardProp(n,r,o)&&t.shouldForwardProp(n,r,o)}:e.shouldForwardProp);var C,I=new ie(n,g,o?e.componentStyle:void 0),P=I.isStatic&&0===c.length,O=function(e,t){return function(e,t,n,r){var o=e.attrs,s=e.componentStyle,a=e.defaultProps,c=e.foldedComponentIds,d=e.shouldForwardProp,h=e.styledComponentId,p=e.target; true&&(0,react__WEBPACK_IMPORTED_MODULE_1__.useDebugValue)(h);var f=function(e,t,n){void 0===e&&(e=E);var r=v({},t,{theme:e}),o={};return n.forEach((function(e){var t,n,i,s=e;for(t in b(s)&&(s=s(r)),s)r[t]=o[t]="className"===t?(n=o[t],i=s[t],n&&i?n+" "+i:n||i):s[t]})),[r,o]}(Oe(t,(0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ze),a)||E,t,o),y=f[0],g=f[1],S=function(e,t,n,r){var o=fe(),i=me(),s=t?e.generateAndInjectStyles(E,o,i):e.generateAndInjectStyles(n,o,i);return true&&(0,react__WEBPACK_IMPORTED_MODULE_1__.useDebugValue)(s), true&&!t&&r&&r(s),s}(s,r,y, true?e.warnTooManyClasses:0),w=n,_=g.$as||t.$as||g.as||t.as||p,N=ke(_),A=g!==t?v({},t,{},g):t,C={};for(var I in A)"$"!==I[0]&&"as"!==I&&("forwardedAs"===I?C.as=A[I]:(d?d(I,_emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__.default,_):!N||(0,_emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__.default)(I))&&(C[I]=A[I]));return t.style&&g.style!==t.style&&(C.style=v({},t.style,{},g.style)),C.className=Array.prototype.concat(c,h,S!==h?S:null,t.className,g.className).filter(Boolean).join(" "),C.ref=w,(0,react__WEBPACK_IMPORTED_MODULE_1__.createElement)(_,C)}(C,e,t,P)};return O.displayName=f,(C=react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(O)).attrs=S,C.componentStyle=I,C.displayName=f,C.shouldForwardProp=A,C.foldedComponentIds=o?Array.prototype.concat(e.foldedComponentIds,e.styledComponentId):w,C.styledComponentId=g,C.target=o?e.target:e,C.withComponent=function(e){var r=t.componentId,o=function(e,t){if(null==e)return{};var n,r,o={},i=Object.keys(e);for(r=0;r<i.length;r++)n=i[r],t.indexOf(n)>=0||(o[n]=e[n]);return o}(t,["componentId"]),i=r&&r+"-"+(ke(e)?e:je(_(e)));return Ye(e,v({},o,{attrs:S,componentId:i}),n)},Object.defineProperty(C,"defaultProps",{get:function(){return this._foldedDefaultProps},set:function(t){this._foldedDefaultProps=o?Me({},e.defaultProps,t):t}}), true&&(Pe(f,g),C.warnTooManyClasses=function(e,t){var n={},r=!1;return function(o){if(!r&&(n[o]=!0,Object.keys(n).length>=200)){var i=t?' with the id of "'+t+'"':"";console.warn("Over 200 classes were generated for component "+e+i+".\nConsider using the attrs method, together with a style object for frequently changed styles.\nExample:\n  const Component = styled.div.attrs(props => ({\n    style: {\n      background: props.background,\n    },\n  }))`width: 100%;`\n\n  <Component />"),r=!0,n={}}}}(f,g)),C.toString=function(){return"."+C.styledComponentId},s&&hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default()(C,e,{attrs:!0,componentStyle:!0,displayName:!0,foldedComponentIds:!0,shouldForwardProp:!0,styledComponentId:!0,target:!0,withComponent:!0}),C}var qe=function(e){return function e(t,r,o){if(void 0===o&&(o=E),!(0,react_is__WEBPACK_IMPORTED_MODULE_0__.isValidElementType)(r))return j(1,String(r));var i=function(){return t(r,o,Ae.apply(void 0,arguments))};return i.withConfig=function(n){return e(t,r,v({},o,{},n))},i.attrs=function(n){return e(t,r,v({},o,{attrs:Array.prototype.concat(o.attrs,n).filter(Boolean)}))},i}(Ye,e)};["a","abbr","address","area","article","aside","audio","b","base","bdi","bdo","big","blockquote","body","br","button","canvas","caption","cite","code","col","colgroup","data","datalist","dd","del","details","dfn","dialog","div","dl","dt","em","embed","fieldset","figcaption","figure","footer","form","h1","h2","h3","h4","h5","h6","head","header","hgroup","hr","html","i","iframe","img","input","ins","kbd","keygen","label","legend","li","link","main","map","mark","marquee","menu","menuitem","meta","meter","nav","noscript","object","ol","optgroup","option","output","p","param","picture","pre","progress","q","rp","rt","ruby","s","samp","script","section","select","small","source","span","strong","style","sub","summary","sup","table","tbody","td","textarea","tfoot","th","thead","time","title","tr","track","u","ul","var","video","wbr","circle","clipPath","defs","ellipse","foreignObject","g","image","line","linearGradient","marker","mask","path","pattern","polygon","polyline","radialGradient","rect","stop","svg","text","textPath","tspan"].forEach((function(e){qe[e]=qe(e)}));var He=function(){function e(e,t){this.rules=e,this.componentId=t,this.isStatic=re(e),Z.registerId(this.componentId+1)}var t=e.prototype;return t.createStyles=function(e,t,n,r){var o=r(Ne(this.rules,t,n,r).join(""),""),i=this.componentId+e;n.insertRules(i,i,o)},t.removeStyles=function(e,t){t.clearRules(this.componentId+e)},t.renderStyles=function(e,t,n,r){e>2&&Z.registerId(this.componentId+e),this.removeStyles(e,n),this.createStyles(e,t,n,r)},e}();function $e(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),o=1;o<t;o++)n[o-1]=arguments[o];var s=Ae.apply(void 0,[e].concat(n)),a="sc-global-"+Te(JSON.stringify(s)),u=new He(s,a);function l(e){var t=fe(),n=me(),o=(0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ze),l=(0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(t.allocateGSInstance(a)).current;return true&&react__WEBPACK_IMPORTED_MODULE_1__.Children.count(e.children)&&console.warn("The global style component "+a+" was given child JSX. createGlobalStyle does not render children."), true&&s.some((function(e){return"string"==typeof e&&-1!==e.indexOf("@import")}))&&console.warn("Please do not use @import CSS syntax in createGlobalStyle at this time, as the CSSOM APIs we use in production do not handle it well. Instead, we recommend using a library such as react-helmet to inject a typical <link> meta tag to the stylesheet, or simply embedding it manually in your index.html <head> section for a simpler app."),(0,react__WEBPACK_IMPORTED_MODULE_1__.useLayoutEffect)((function(){return h(l,e,t,o,n),function(){return u.removeStyles(l,t)}}),[l,e,t,o,n]),null}function h(e,t,n,r,o){if(u.isStatic)u.renderStyles(e,O,n,o);else{var i=v({},t,{theme:Oe(t,r,l.defaultProps)});u.renderStyles(e,i,n,o)}}return true&&Pe(a),react__WEBPACK_IMPORTED_MODULE_1__.memo(l)}function We(e){ true&&"undefined"!=typeof navigator&&"ReactNative"===navigator.product&&console.warn("`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.");for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];var o=Ae.apply(void 0,[e].concat(n)).join(""),i=Te(o);return new ve(i,o)}var Ue=function(){function e(){var e=this;this._emitSheetCSS=function(){var t=e.instance.toString(),n=q();return"<style "+[n&&'nonce="'+n+'"',A+'="true"','data-styled-version="5.3.0"'].filter(Boolean).join(" ")+">"+t+"</style>"},this.getStyleTags=function(){return e.sealed?j(2):e._emitSheetCSS()},this.getStyleElement=function(){var t;if(e.sealed)return j(2);var n=((t={})[A]="",t["data-styled-version"]="5.3.0",t.dangerouslySetInnerHTML={__html:e.instance.toString()},t),o=q();return o&&(n.nonce=o),[react__WEBPACK_IMPORTED_MODULE_1__.createElement("style",v({},n,{key:"sc-0-0"}))]},this.seal=function(){e.sealed=!0},this.instance=new Z({isServer:!0}),this.sealed=!1}var t=e.prototype;return t.collectStyles=function(e){return this.sealed?j(2):react__WEBPACK_IMPORTED_MODULE_1__.createElement(ye,{sheet:this.instance},e)},t.interleaveWithNodeStream=function(e){return j(3)},e}(),Je=function(e){var t=react__WEBPACK_IMPORTED_MODULE_1__.forwardRef((function(t,n){var o=(0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ze),s=e.defaultProps,a=Oe(t,o,s);return true&&void 0===a&&console.warn('[withTheme] You are not using a ThemeProvider nor passing a theme prop or a theme in defaultProps in component class "'+_(e)+'"'),react__WEBPACK_IMPORTED_MODULE_1__.createElement(e,v({},t,{theme:a,ref:n}))}));return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default()(t,e),t.displayName="WithTheme("+_(e)+")",t},Xe=function(){return (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ze)},Ze={StyleSheet:Z,masterSheet:he}; true&&"undefined"!=typeof navigator&&"ReactNative"===navigator.product&&console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native"), true&&(window["__styled-components-init__"]=window["__styled-components-init__"]||0,1===window["__styled-components-init__"]&&console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."),window["__styled-components-init__"]+=1);/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (qe);
+function v(){return(v=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}).apply(this,arguments)}var g=function(e,t){for(var n=[e[0]],r=0,o=t.length;r<o;r+=1)n.push(t[r],e[r+1]);return n},S=function(t){return null!==t&&"object"==typeof t&&"[object Object]"===(t.toString?t.toString():Object.prototype.toString.call(t))&&!(0,react_is__WEBPACK_IMPORTED_MODULE_0__.typeOf)(t)},w=Object.freeze([]),E=Object.freeze({});function b(e){return"function"==typeof e}function _(e){return true&&"string"==typeof e&&e||e.displayName||e.name||"Component"}function N(e){return e&&"string"==typeof e.styledComponentId}var A="undefined"!=typeof process&&(({"NODE_ENV":"development","API_SERVER_URL":"https://www.wizzihub.com/api/v1","BUILD_TIMESTAMP":1664277699646}).REACT_APP_SC_ATTR||({"NODE_ENV":"development","API_SERVER_URL":"https://www.wizzihub.com/api/v1","BUILD_TIMESTAMP":1664277699646}).SC_ATTR)||"data-styled",C="5.3.0",I="undefined"!=typeof window&&"HTMLElement"in window,P=Boolean("boolean"==typeof SC_DISABLE_SPEEDY?SC_DISABLE_SPEEDY:"undefined"!=typeof process&&void 0!==({"NODE_ENV":"development","API_SERVER_URL":"https://www.wizzihub.com/api/v1","BUILD_TIMESTAMP":1664277699646}).REACT_APP_SC_DISABLE_SPEEDY&&""!==({"NODE_ENV":"development","API_SERVER_URL":"https://www.wizzihub.com/api/v1","BUILD_TIMESTAMP":1664277699646}).REACT_APP_SC_DISABLE_SPEEDY?"false"!==({"NODE_ENV":"development","API_SERVER_URL":"https://www.wizzihub.com/api/v1","BUILD_TIMESTAMP":1664277699646}).REACT_APP_SC_DISABLE_SPEEDY&&({"NODE_ENV":"development","API_SERVER_URL":"https://www.wizzihub.com/api/v1","BUILD_TIMESTAMP":1664277699646}).REACT_APP_SC_DISABLE_SPEEDY:"undefined"!=typeof process&&void 0!==({"NODE_ENV":"development","API_SERVER_URL":"https://www.wizzihub.com/api/v1","BUILD_TIMESTAMP":1664277699646}).SC_DISABLE_SPEEDY&&""!==({"NODE_ENV":"development","API_SERVER_URL":"https://www.wizzihub.com/api/v1","BUILD_TIMESTAMP":1664277699646}).SC_DISABLE_SPEEDY?"false"!==({"NODE_ENV":"development","API_SERVER_URL":"https://www.wizzihub.com/api/v1","BUILD_TIMESTAMP":1664277699646}).SC_DISABLE_SPEEDY&&({"NODE_ENV":"development","API_SERVER_URL":"https://www.wizzihub.com/api/v1","BUILD_TIMESTAMP":1664277699646}).SC_DISABLE_SPEEDY:"production"!=="development"),O={},R= true?{1:"Cannot create styled-component for component: %s.\n\n",2:"Can't collect styles once you've consumed a `ServerStyleSheet`'s styles! `ServerStyleSheet` is a one off instance for each server-side render cycle.\n\n- Are you trying to reuse it across renders?\n- Are you accidentally calling collectStyles twice?\n\n",3:"Streaming SSR is only supported in a Node.js environment; Please do not try to call this method in the browser.\n\n",4:"The `StyleSheetManager` expects a valid target or sheet prop!\n\n- Does this error occur on the client and is your target falsy?\n- Does this error occur on the server and is the sheet falsy?\n\n",5:"The clone method cannot be used on the client!\n\n- Are you running in a client-like environment on the server?\n- Are you trying to run SSR on the client?\n\n",6:"Trying to insert a new style tag, but the given Node is unmounted!\n\n- Are you using a custom target that isn't mounted?\n- Does your document not have a valid head element?\n- Have you accidentally removed a style tag manually?\n\n",7:'ThemeProvider: Please return an object from your "theme" prop function, e.g.\n\n```js\ntheme={() => ({})}\n```\n\n',8:'ThemeProvider: Please make your "theme" prop an object.\n\n',9:"Missing document `<head>`\n\n",10:"Cannot find a StyleSheet instance. Usually this happens if there are multiple copies of styled-components loaded at once. Check out this issue for how to troubleshoot and fix the common cases where this situation can happen: https://github.com/styled-components/styled-components/issues/1941#issuecomment-417862021\n\n",11:"_This error was replaced with a dev-time warning, it will be deleted for v4 final._ [createGlobalStyle] received children which will not be rendered. Please use the component without passing children elements.\n\n",12:"It seems you are interpolating a keyframe declaration (%s) into an untagged string. This was supported in styled-components v3, but is not longer supported in v4 as keyframes are now injected on-demand. Please wrap your string in the css\\`\\` helper which ensures the styles are injected correctly. See https://www.styled-components.com/docs/api#css\n\n",13:"%s is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details.\n\n",14:'ThemeProvider: "theme" prop is required.\n\n',15:"A stylis plugin has been supplied that is not named. We need a name for each plugin to be able to prevent styling collisions between different stylis configurations within the same app. Before you pass your plugin to `<StyleSheetManager stylisPlugins={[]}>`, please make sure each plugin is uniquely-named, e.g.\n\n```js\nObject.defineProperty(importedPlugin, 'name', { value: 'some-unique-name' });\n```\n\n",16:"Reached the limit of how many styled components may be created at group %s.\nYou may only create up to 1,073,741,824 components. If you're creating components dynamically,\nas for instance in your render method then you may be running into this limitation.\n\n",17:"CSSStyleSheet could not be found on HTMLStyleElement.\nHas styled-components' style tag been unmounted or altered by another script?\n"}:0;function D(){for(var e=arguments.length<=0?void 0:arguments[0],t=[],n=1,r=arguments.length;n<r;n+=1)t.push(n<0||arguments.length<=n?void 0:arguments[n]);return t.forEach((function(t){e=e.replace(/%[a-z]/,t)})),e}function j(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];throw false?0:new Error(D.apply(void 0,[R[e]].concat(n)).trim())}var T=function(){function e(e){this.groupSizes=new Uint32Array(512),this.length=512,this.tag=e}var t=e.prototype;return t.indexOfGroup=function(e){for(var t=0,n=0;n<e;n++)t+=this.groupSizes[n];return t},t.insertRules=function(e,t){if(e>=this.groupSizes.length){for(var n=this.groupSizes,r=n.length,o=r;e>=o;)(o<<=1)<0&&j(16,""+e);this.groupSizes=new Uint32Array(o),this.groupSizes.set(n),this.length=o;for(var i=r;i<o;i++)this.groupSizes[i]=0}for(var s=this.indexOfGroup(e+1),a=0,c=t.length;a<c;a++)this.tag.insertRule(s,t[a])&&(this.groupSizes[e]++,s++)},t.clearGroup=function(e){if(e<this.length){var t=this.groupSizes[e],n=this.indexOfGroup(e),r=n+t;this.groupSizes[e]=0;for(var o=n;o<r;o++)this.tag.deleteRule(n)}},t.getGroup=function(e){var t="";if(e>=this.length||0===this.groupSizes[e])return t;for(var n=this.groupSizes[e],r=this.indexOfGroup(e),o=r+n,i=r;i<o;i++)t+=this.tag.getRule(i)+"/*!sc*/\n";return t},e}(),k=new Map,x=new Map,V=1,B=function(e){if(k.has(e))return k.get(e);for(;x.has(V);)V++;var t=V++;return true&&((0|t)<0||t>1<<30)&&j(16,""+t),k.set(e,t),x.set(t,e),t},M=function(e){return x.get(e)},z=function(e,t){k.set(e,t),x.set(t,e)},L="style["+A+'][data-styled-version="5.3.0"]',G=new RegExp("^"+A+'\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)'),F=function(e,t,n){for(var r,o=n.split(","),i=0,s=o.length;i<s;i++)(r=o[i])&&e.registerName(t,r)},Y=function(e,t){for(var n=t.innerHTML.split("/*!sc*/\n"),r=[],o=0,i=n.length;o<i;o++){var s=n[o].trim();if(s){var a=s.match(G);if(a){var c=0|parseInt(a[1],10),u=a[2];0!==c&&(z(u,c),F(e,u,a[3]),e.getTag().insertRules(c,r)),r.length=0}else r.push(s)}}},q=function(){return"undefined"!=typeof window&&void 0!==window.__webpack_nonce__?window.__webpack_nonce__:null},H=function(e){var t=document.head,n=e||t,r=document.createElement("style"),o=function(e){for(var t=e.childNodes,n=t.length;n>=0;n--){var r=t[n];if(r&&1===r.nodeType&&r.hasAttribute(A))return r}}(n),i=void 0!==o?o.nextSibling:null;r.setAttribute(A,"active"),r.setAttribute("data-styled-version","5.3.0");var s=q();return s&&r.setAttribute("nonce",s),n.insertBefore(r,i),r},$=function(){function e(e){var t=this.element=H(e);t.appendChild(document.createTextNode("")),this.sheet=function(e){if(e.sheet)return e.sheet;for(var t=document.styleSheets,n=0,r=t.length;n<r;n++){var o=t[n];if(o.ownerNode===e)return o}j(17)}(t),this.length=0}var t=e.prototype;return t.insertRule=function(e,t){try{return this.sheet.insertRule(t,e),this.length++,!0}catch(e){return!1}},t.deleteRule=function(e){this.sheet.deleteRule(e),this.length--},t.getRule=function(e){var t=this.sheet.cssRules[e];return void 0!==t&&"string"==typeof t.cssText?t.cssText:""},e}(),W=function(){function e(e){var t=this.element=H(e);this.nodes=t.childNodes,this.length=0}var t=e.prototype;return t.insertRule=function(e,t){if(e<=this.length&&e>=0){var n=document.createTextNode(t),r=this.nodes[e];return this.element.insertBefore(n,r||null),this.length++,!0}return!1},t.deleteRule=function(e){this.element.removeChild(this.nodes[e]),this.length--},t.getRule=function(e){return e<this.length?this.nodes[e].textContent:""},e}(),U=function(){function e(e){this.rules=[],this.length=0}var t=e.prototype;return t.insertRule=function(e,t){return e<=this.length&&(this.rules.splice(e,0,t),this.length++,!0)},t.deleteRule=function(e){this.rules.splice(e,1),this.length--},t.getRule=function(e){return e<this.length?this.rules[e]:""},e}(),J=I,X={isServer:!I,useCSSOMInjection:!P},Z=function(){function e(e,t,n){void 0===e&&(e=E),void 0===t&&(t={}),this.options=v({},X,{},e),this.gs=t,this.names=new Map(n),!this.options.isServer&&I&&J&&(J=!1,function(e){for(var t=document.querySelectorAll(L),n=0,r=t.length;n<r;n++){var o=t[n];o&&"active"!==o.getAttribute(A)&&(Y(e,o),o.parentNode&&o.parentNode.removeChild(o))}}(this))}e.registerId=function(e){return B(e)};var t=e.prototype;return t.reconstructWithOptions=function(t,n){return void 0===n&&(n=!0),new e(v({},this.options,{},t),this.gs,n&&this.names||void 0)},t.allocateGSInstance=function(e){return this.gs[e]=(this.gs[e]||0)+1},t.getTag=function(){return this.tag||(this.tag=(n=(t=this.options).isServer,r=t.useCSSOMInjection,o=t.target,e=n?new U(o):r?new $(o):new W(o),new T(e)));var e,t,n,r,o},t.hasNameForId=function(e,t){return this.names.has(e)&&this.names.get(e).has(t)},t.registerName=function(e,t){if(B(e),this.names.has(e))this.names.get(e).add(t);else{var n=new Set;n.add(t),this.names.set(e,n)}},t.insertRules=function(e,t,n){this.registerName(e,t),this.getTag().insertRules(B(e),n)},t.clearNames=function(e){this.names.has(e)&&this.names.get(e).clear()},t.clearRules=function(e){this.getTag().clearGroup(B(e)),this.clearNames(e)},t.clearTag=function(){this.tag=void 0},t.toString=function(){return function(e){for(var t=e.getTag(),n=t.length,r="",o=0;o<n;o++){var i=M(o);if(void 0!==i){var s=e.names.get(i),a=t.getGroup(o);if(void 0!==s&&0!==a.length){var c=A+".g"+o+'[id="'+i+'"]',u="";void 0!==s&&s.forEach((function(e){e.length>0&&(u+=e+",")})),r+=""+a+c+'{content:"'+u+'"}/*!sc*/\n'}}}return r}(this)},e}(),K=/(a)(d)/gi,Q=function(e){return String.fromCharCode(e+(e>25?39:97))};function ee(e){var t,n="";for(t=Math.abs(e);t>52;t=t/52|0)n=Q(t%52)+n;return(Q(t%52)+n).replace(K,"$1-$2")}var te=function(e,t){for(var n=t.length;n;)e=33*e^t.charCodeAt(--n);return e},ne=function(e){return te(5381,e)};function re(e){for(var t=0;t<e.length;t+=1){var n=e[t];if(b(n)&&!N(n))return!1}return!0}var oe=ne("5.3.0"),ie=function(){function e(e,t,n){this.rules=e,this.staticRulesId="",this.isStatic= false&&0,this.componentId=t,this.baseHash=te(oe,t),this.baseStyle=n,Z.registerId(t)}return e.prototype.generateAndInjectStyles=function(e,t,n){var r=this.componentId,o=[];if(this.baseStyle&&o.push(this.baseStyle.generateAndInjectStyles(e,t,n)),this.isStatic&&!n.hash)if(this.staticRulesId&&t.hasNameForId(r,this.staticRulesId))o.push(this.staticRulesId);else{var i=Ne(this.rules,e,t,n).join(""),s=ee(te(this.baseHash,i.length)>>>0);if(!t.hasNameForId(r,s)){var a=n(i,"."+s,void 0,r);t.insertRules(r,s,a)}o.push(s),this.staticRulesId=s}else{for(var c=this.rules.length,u=te(this.baseHash,n.hash),l="",d=0;d<c;d++){var h=this.rules[d];if("string"==typeof h)l+=h, true&&(u=te(u,h+d));else if(h){var p=Ne(h,e,t,n),f=Array.isArray(p)?p.join(""):p;u=te(u,f+d),l+=f}}if(l){var m=ee(u>>>0);if(!t.hasNameForId(r,m)){var y=n(l,"."+m,void 0,r);t.insertRules(r,m,y)}o.push(m)}}return o.join(" ")},e}(),se=/^\s*\/\/.*$/gm,ae=[":","[",".","#"];function ce(e){var t,n,r,o,i=void 0===e?E:e,s=i.options,a=void 0===s?E:s,c=i.plugins,u=void 0===c?w:c,l=new _emotion_stylis__WEBPACK_IMPORTED_MODULE_3__.default(a),d=[],h=function(e){function t(t){if(t)try{e(t+"}")}catch(e){}}return function(n,r,o,i,s,a,c,u,l,d){switch(n){case 1:if(0===l&&64===r.charCodeAt(0))return e(r+";"),"";break;case 2:if(0===u)return r+"/*|*/";break;case 3:switch(u){case 102:case 112:return e(o[0]+r),"";default:return r+(0===d?"/*|*/":"")}case-2:r.split("/*|*/}").forEach(t)}}}((function(e){d.push(e)})),f=function(e,r,i){return 0===r&&-1!==ae.indexOf(i[n.length])||i.match(o)?e:"."+t};function m(e,i,s,a){void 0===a&&(a="&");var c=e.replace(se,""),u=i&&s?s+" "+i+" { "+c+" }":c;return t=a,n=i,r=new RegExp("\\"+n+"\\b","g"),o=new RegExp("(\\"+n+"\\b){2,}"),l(s||!i?"":i,u)}return l.use([].concat(u,[function(e,t,o){2===e&&o.length&&o[0].lastIndexOf(n)>0&&(o[0]=o[0].replace(r,f))},h,function(e){if(-2===e){var t=d;return d=[],t}}])),m.hash=u.length?u.reduce((function(e,t){return t.name||j(15),te(e,t.name)}),5381).toString():"",m}var ue=react__WEBPACK_IMPORTED_MODULE_1__.createContext(),le=ue.Consumer,de=react__WEBPACK_IMPORTED_MODULE_1__.createContext(),he=(de.Consumer,new Z),pe=ce();function fe(){return (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ue)||he}function me(){return (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(de)||pe}function ye(e){var t=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(e.stylisPlugins),n=t[0],i=t[1],c=fe(),u=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)((function(){var t=c;return e.sheet?t=e.sheet:e.target&&(t=t.reconstructWithOptions({target:e.target},!1)),e.disableCSSOMInjection&&(t=t.reconstructWithOptions({useCSSOMInjection:!1})),t}),[e.disableCSSOMInjection,e.sheet,e.target]),l=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)((function(){return ce({options:{prefix:!e.disableVendorPrefixes},plugins:n})}),[e.disableVendorPrefixes,n]);return (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)((function(){shallowequal__WEBPACK_IMPORTED_MODULE_2___default()(n,e.stylisPlugins)||i(e.stylisPlugins)}),[e.stylisPlugins]),react__WEBPACK_IMPORTED_MODULE_1__.createElement(ue.Provider,{value:u},react__WEBPACK_IMPORTED_MODULE_1__.createElement(de.Provider,{value:l}, true?react__WEBPACK_IMPORTED_MODULE_1__.Children.only(e.children):0))}var ve=function(){function e(e,t){var n=this;this.inject=function(e,t){void 0===t&&(t=pe);var r=n.name+t.hash;e.hasNameForId(n.id,r)||e.insertRules(n.id,r,t(n.rules,r,"@keyframes"))},this.toString=function(){return j(12,String(n.name))},this.name=e,this.id="sc-keyframes-"+e,this.rules=t}return e.prototype.getName=function(e){return void 0===e&&(e=pe),this.name+e.hash},e}(),ge=/([A-Z])/,Se=/([A-Z])/g,we=/^ms-/,Ee=function(e){return"-"+e.toLowerCase()};function be(e){return ge.test(e)?e.replace(Se,Ee).replace(we,"-ms-"):e}var _e=function(e){return null==e||!1===e||""===e};function Ne(e,n,r,o){if(Array.isArray(e)){for(var i,s=[],a=0,c=e.length;a<c;a+=1)""!==(i=Ne(e[a],n,r,o))&&(Array.isArray(i)?s.push.apply(s,i):s.push(i));return s}if(_e(e))return"";if(N(e))return"."+e.styledComponentId;if(b(e)){if("function"!=typeof(l=e)||l.prototype&&l.prototype.isReactComponent||!n)return e;var u=e(n);return true&&(0,react_is__WEBPACK_IMPORTED_MODULE_0__.isElement)(u)&&console.warn(_(e)+" is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details."),Ne(u,n,r,o)}var l;return e instanceof ve?r?(e.inject(r,o),e.getName(o)):e:S(e)?function e(t,n){var r,o,i=[];for(var s in t)t.hasOwnProperty(s)&&!_e(t[s])&&(S(t[s])?i.push.apply(i,e(t[s],s)):b(t[s])?i.push(be(s)+":",t[s],";"):i.push(be(s)+": "+(r=s,null==(o=t[s])||"boolean"==typeof o||""===o?"":"number"!=typeof o||0===o||r in _emotion_unitless__WEBPACK_IMPORTED_MODULE_4__.default?String(o).trim():o+"px")+";"));return n?[n+" {"].concat(i,["}"]):i}(e):e.toString()}function Ae(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];return b(e)||S(e)?Ne(g(w,[e].concat(n))):0===n.length&&1===e.length&&"string"==typeof e[0]?e:Ne(g(e,n))}var Ce=/invalid hook call/i,Ie=new Set,Pe=function(e,t){if(true){var n="The component "+e+(t?' with the id of "'+t+'"':"")+" has been created dynamically.\nYou may see this warning because you've called styled inside another component.\nTo resolve this only create new StyledComponents outside of any render method and function component.";try{(0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(),Ie.has(n)||(console.warn(n),Ie.add(n))}catch(e){Ce.test(e.message)&&Ie.delete(n)}}},Oe=function(e,t,n){return void 0===n&&(n=E),e.theme!==n.theme&&e.theme||t||n.theme},Re=/[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~-]+/g,De=/(^-|-$)/g;function je(e){return e.replace(Re,"-").replace(De,"")}var Te=function(e){return ee(ne(e)>>>0)};function ke(e){return"string"==typeof e&&( false||e.charAt(0)===e.charAt(0).toLowerCase())}var xe=function(e){return"function"==typeof e||"object"==typeof e&&null!==e&&!Array.isArray(e)},Ve=function(e){return"__proto__"!==e&&"constructor"!==e&&"prototype"!==e};function Be(e,t,n){var r=e[n];xe(t)&&xe(r)?Me(r,t):e[n]=t}function Me(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];for(var o=0,i=n;o<i.length;o++){var s=i[o];if(xe(s))for(var a in s)Ve(a)&&Be(e,s[a],a)}return e}var ze=react__WEBPACK_IMPORTED_MODULE_1__.createContext(),Le=ze.Consumer;function Ge(e){var t=(0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ze),n=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)((function(){return function(e,t){if(!e)return j(14);if(b(e)){var n=e(t);return false||null!==n&&!Array.isArray(n)&&"object"==typeof n?n:j(7)}return Array.isArray(e)||"object"!=typeof e?j(8):t?v({},t,{},e):e}(e.theme,t)}),[e.theme,t]);return e.children?react__WEBPACK_IMPORTED_MODULE_1__.createElement(ze.Provider,{value:n},e.children):null}var Fe={};function Ye(e,t,n){var o=N(e),s=!ke(e),a=t.attrs,c=void 0===a?w:a,d=t.componentId,h=void 0===d?function(e,t){var n="string"!=typeof e?"sc":je(e);Fe[n]=(Fe[n]||0)+1;var r=n+"-"+Te("5.3.0"+n+Fe[n]);return t?t+"-"+r:r}(t.displayName,t.parentComponentId):d,p=t.displayName,f=void 0===p?function(e){return ke(e)?"styled."+e:"Styled("+_(e)+")"}(e):p,g=t.displayName&&t.componentId?je(t.displayName)+"-"+t.componentId:t.componentId||h,S=o&&e.attrs?Array.prototype.concat(e.attrs,c).filter(Boolean):c,A=t.shouldForwardProp;o&&e.shouldForwardProp&&(A=t.shouldForwardProp?function(n,r,o){return e.shouldForwardProp(n,r,o)&&t.shouldForwardProp(n,r,o)}:e.shouldForwardProp);var C,I=new ie(n,g,o?e.componentStyle:void 0),P=I.isStatic&&0===c.length,O=function(e,t){return function(e,t,n,r){var o=e.attrs,s=e.componentStyle,a=e.defaultProps,c=e.foldedComponentIds,d=e.shouldForwardProp,h=e.styledComponentId,p=e.target; true&&(0,react__WEBPACK_IMPORTED_MODULE_1__.useDebugValue)(h);var f=function(e,t,n){void 0===e&&(e=E);var r=v({},t,{theme:e}),o={};return n.forEach((function(e){var t,n,i,s=e;for(t in b(s)&&(s=s(r)),s)r[t]=o[t]="className"===t?(n=o[t],i=s[t],n&&i?n+" "+i:n||i):s[t]})),[r,o]}(Oe(t,(0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ze),a)||E,t,o),y=f[0],g=f[1],S=function(e,t,n,r){var o=fe(),i=me(),s=t?e.generateAndInjectStyles(E,o,i):e.generateAndInjectStyles(n,o,i);return true&&(0,react__WEBPACK_IMPORTED_MODULE_1__.useDebugValue)(s), true&&!t&&r&&r(s),s}(s,r,y, true?e.warnTooManyClasses:0),w=n,_=g.$as||t.$as||g.as||t.as||p,N=ke(_),A=g!==t?v({},t,{},g):t,C={};for(var I in A)"$"!==I[0]&&"as"!==I&&("forwardedAs"===I?C.as=A[I]:(d?d(I,_emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__.default,_):!N||(0,_emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__.default)(I))&&(C[I]=A[I]));return t.style&&g.style!==t.style&&(C.style=v({},t.style,{},g.style)),C.className=Array.prototype.concat(c,h,S!==h?S:null,t.className,g.className).filter(Boolean).join(" "),C.ref=w,(0,react__WEBPACK_IMPORTED_MODULE_1__.createElement)(_,C)}(C,e,t,P)};return O.displayName=f,(C=react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(O)).attrs=S,C.componentStyle=I,C.displayName=f,C.shouldForwardProp=A,C.foldedComponentIds=o?Array.prototype.concat(e.foldedComponentIds,e.styledComponentId):w,C.styledComponentId=g,C.target=o?e.target:e,C.withComponent=function(e){var r=t.componentId,o=function(e,t){if(null==e)return{};var n,r,o={},i=Object.keys(e);for(r=0;r<i.length;r++)n=i[r],t.indexOf(n)>=0||(o[n]=e[n]);return o}(t,["componentId"]),i=r&&r+"-"+(ke(e)?e:je(_(e)));return Ye(e,v({},o,{attrs:S,componentId:i}),n)},Object.defineProperty(C,"defaultProps",{get:function(){return this._foldedDefaultProps},set:function(t){this._foldedDefaultProps=o?Me({},e.defaultProps,t):t}}), true&&(Pe(f,g),C.warnTooManyClasses=function(e,t){var n={},r=!1;return function(o){if(!r&&(n[o]=!0,Object.keys(n).length>=200)){var i=t?' with the id of "'+t+'"':"";console.warn("Over 200 classes were generated for component "+e+i+".\nConsider using the attrs method, together with a style object for frequently changed styles.\nExample:\n  const Component = styled.div.attrs(props => ({\n    style: {\n      background: props.background,\n    },\n  }))`width: 100%;`\n\n  <Component />"),r=!0,n={}}}}(f,g)),C.toString=function(){return"."+C.styledComponentId},s&&hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default()(C,e,{attrs:!0,componentStyle:!0,displayName:!0,foldedComponentIds:!0,shouldForwardProp:!0,styledComponentId:!0,target:!0,withComponent:!0}),C}var qe=function(e){return function e(t,r,o){if(void 0===o&&(o=E),!(0,react_is__WEBPACK_IMPORTED_MODULE_0__.isValidElementType)(r))return j(1,String(r));var i=function(){return t(r,o,Ae.apply(void 0,arguments))};return i.withConfig=function(n){return e(t,r,v({},o,{},n))},i.attrs=function(n){return e(t,r,v({},o,{attrs:Array.prototype.concat(o.attrs,n).filter(Boolean)}))},i}(Ye,e)};["a","abbr","address","area","article","aside","audio","b","base","bdi","bdo","big","blockquote","body","br","button","canvas","caption","cite","code","col","colgroup","data","datalist","dd","del","details","dfn","dialog","div","dl","dt","em","embed","fieldset","figcaption","figure","footer","form","h1","h2","h3","h4","h5","h6","head","header","hgroup","hr","html","i","iframe","img","input","ins","kbd","keygen","label","legend","li","link","main","map","mark","marquee","menu","menuitem","meta","meter","nav","noscript","object","ol","optgroup","option","output","p","param","picture","pre","progress","q","rp","rt","ruby","s","samp","script","section","select","small","source","span","strong","style","sub","summary","sup","table","tbody","td","textarea","tfoot","th","thead","time","title","tr","track","u","ul","var","video","wbr","circle","clipPath","defs","ellipse","foreignObject","g","image","line","linearGradient","marker","mask","path","pattern","polygon","polyline","radialGradient","rect","stop","svg","text","textPath","tspan"].forEach((function(e){qe[e]=qe(e)}));var He=function(){function e(e,t){this.rules=e,this.componentId=t,this.isStatic=re(e),Z.registerId(this.componentId+1)}var t=e.prototype;return t.createStyles=function(e,t,n,r){var o=r(Ne(this.rules,t,n,r).join(""),""),i=this.componentId+e;n.insertRules(i,i,o)},t.removeStyles=function(e,t){t.clearRules(this.componentId+e)},t.renderStyles=function(e,t,n,r){e>2&&Z.registerId(this.componentId+e),this.removeStyles(e,n),this.createStyles(e,t,n,r)},e}();function $e(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),o=1;o<t;o++)n[o-1]=arguments[o];var s=Ae.apply(void 0,[e].concat(n)),a="sc-global-"+Te(JSON.stringify(s)),u=new He(s,a);function l(e){var t=fe(),n=me(),o=(0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ze),l=(0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(t.allocateGSInstance(a)).current;return true&&react__WEBPACK_IMPORTED_MODULE_1__.Children.count(e.children)&&console.warn("The global style component "+a+" was given child JSX. createGlobalStyle does not render children."), true&&s.some((function(e){return"string"==typeof e&&-1!==e.indexOf("@import")}))&&console.warn("Please do not use @import CSS syntax in createGlobalStyle at this time, as the CSSOM APIs we use in production do not handle it well. Instead, we recommend using a library such as react-helmet to inject a typical <link> meta tag to the stylesheet, or simply embedding it manually in your index.html <head> section for a simpler app."),(0,react__WEBPACK_IMPORTED_MODULE_1__.useLayoutEffect)((function(){return h(l,e,t,o,n),function(){return u.removeStyles(l,t)}}),[l,e,t,o,n]),null}function h(e,t,n,r,o){if(u.isStatic)u.renderStyles(e,O,n,o);else{var i=v({},t,{theme:Oe(t,r,l.defaultProps)});u.renderStyles(e,i,n,o)}}return true&&Pe(a),react__WEBPACK_IMPORTED_MODULE_1__.memo(l)}function We(e){ true&&"undefined"!=typeof navigator&&"ReactNative"===navigator.product&&console.warn("`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.");for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];var o=Ae.apply(void 0,[e].concat(n)).join(""),i=Te(o);return new ve(i,o)}var Ue=function(){function e(){var e=this;this._emitSheetCSS=function(){var t=e.instance.toString(),n=q();return"<style "+[n&&'nonce="'+n+'"',A+'="true"','data-styled-version="5.3.0"'].filter(Boolean).join(" ")+">"+t+"</style>"},this.getStyleTags=function(){return e.sealed?j(2):e._emitSheetCSS()},this.getStyleElement=function(){var t;if(e.sealed)return j(2);var n=((t={})[A]="",t["data-styled-version"]="5.3.0",t.dangerouslySetInnerHTML={__html:e.instance.toString()},t),o=q();return o&&(n.nonce=o),[react__WEBPACK_IMPORTED_MODULE_1__.createElement("style",v({},n,{key:"sc-0-0"}))]},this.seal=function(){e.sealed=!0},this.instance=new Z({isServer:!0}),this.sealed=!1}var t=e.prototype;return t.collectStyles=function(e){return this.sealed?j(2):react__WEBPACK_IMPORTED_MODULE_1__.createElement(ye,{sheet:this.instance},e)},t.interleaveWithNodeStream=function(e){return j(3)},e}(),Je=function(e){var t=react__WEBPACK_IMPORTED_MODULE_1__.forwardRef((function(t,n){var o=(0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ze),s=e.defaultProps,a=Oe(t,o,s);return true&&void 0===a&&console.warn('[withTheme] You are not using a ThemeProvider nor passing a theme prop or a theme in defaultProps in component class "'+_(e)+'"'),react__WEBPACK_IMPORTED_MODULE_1__.createElement(e,v({},t,{theme:a,ref:n}))}));return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default()(t,e),t.displayName="WithTheme("+_(e)+")",t},Xe=function(){return (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(ze)},Ze={StyleSheet:Z,masterSheet:he}; true&&"undefined"!=typeof navigator&&"ReactNative"===navigator.product&&console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native"), true&&(window["__styled-components-init__"]=window["__styled-components-init__"]||0,1===window["__styled-components-init__"]&&console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."),window["__styled-components-init__"]+=1);/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (qe);
 //# sourceMappingURL=styled-components.browser.esm.js.map
 
 
@@ -50043,7 +50376,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.pageforms\.wizzi\src\index.tsx.ittf
 */
 

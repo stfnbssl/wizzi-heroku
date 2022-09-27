@@ -4,7 +4,7 @@ exports.createUserFromSignup = exports.validateUserNotUsed = exports.getUserByEm
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\account\api\user.tsx.ittf
 */
 const user_1 = require("../mongo/user");
@@ -43,7 +43,7 @@ function getUserByEmail(email) {
         };
         return new Promise((resolve, reject) => User.find(query, function (err, result) {
             if (err) {
-                console.log(myname, 'getUserByEmail', 'User.find', 'error', err, __filename);
+                console.log("[31m%s[0m", myname, 'getUserByEmail', 'User.find', 'error', err);
                 return reject(err);
             }
             if (result.length == 1) {
@@ -71,7 +71,7 @@ function validateUserNotUsed(chosenUsername, email) {
             };
             User.find(query, function (err, result) {
                 if (err) {
-                    console.log(myname, 'validateUserNotUsed', 'User.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'validateUserNotUsed', 'User.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -88,7 +88,7 @@ function validateUserNotUsed(chosenUsername, email) {
                 };
                 User.find(query, function (err, result) {
                     if (err) {
-                        console.log(myname, 'validateUserNotUsed', 'User.find', 'error', err, __filename);
+                        console.log("[31m%s[0m", myname, 'validateUserNotUsed', 'User.find', 'error', err);
                         return reject(err);
                     }
                     if (result.length == 1) {
@@ -123,7 +123,7 @@ function createUserFromSignup(signupData) {
                 });
                 newUser.save(function (err, doc) {
                     if (err) {
-                        console.log(myname, 'createUserFromSignup', 'newUser.save', newUser, 'error', err, __filename);
+                        console.log("[31m%s[0m", myname, 'createUserFromSignup', 'newUser.save', newUser, 'error', err);
                         return reject(err);
                     }
                     return resolve({

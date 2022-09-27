@@ -4,13 +4,15 @@ exports.invalidateCache = exports.getPluginProduction_withCache = exports.getPlu
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\api\plugin.ts.ittf
 */
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
+const env_1 = require("../../config/env");
+const wizzi_1 = require("../../wizzi");
 const plugin_1 = require("../mongo/plugin");
-const myname = 'features.production.api.plugin';
-const pluginCache = new node_cache_1.default({
+const myname = 'features.production.api.PluginProduction';
+const pluginProductionCache = new node_cache_1.default({
     stdTTL: 120,
     checkperiod: 60
 });
@@ -40,7 +42,6 @@ exports.validatePluginProduction = validatePluginProduction;
 function getListPluginProduction(options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         options = options || {};
-        console.log(myname, 'getListPluginProduction', 'options', options);
         const PluginProduction = (0, plugin_1.GetPluginProductionModel)();
         return new Promise((resolve, reject) => {
             const query = PluginProduction.find(options.query);
@@ -52,7 +53,7 @@ function getListPluginProduction(options) {
             }
             query.find((err, result) => {
                 if (err) {
-                    console.log(myname, 'getListPluginProduction', 'PluginProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getListPluginProduction', 'PluginProduction.find', 'error', err);
                     return reject(err);
                 }
                 const resultItem = [];
@@ -81,7 +82,6 @@ function getListPluginProduction(options) {
 exports.getListPluginProduction = getListPluginProduction;
 function getPluginProduction(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getPluginProduction', owner, name);
         const PluginProduction = (0, plugin_1.GetPluginProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
@@ -90,7 +90,7 @@ function getPluginProduction(owner, name) {
             };
             PluginProduction.find(query, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getPluginProduction', 'PluginProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getPluginProduction', 'PluginProduction.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -112,14 +112,13 @@ function getPluginProduction(owner, name) {
 exports.getPluginProduction = getPluginProduction;
 function getPluginProductionById(id) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getPluginProductionById', id);
         const PluginProduction = (0, plugin_1.GetPluginProductionModel)();
         return new Promise((resolve, reject) => {
             PluginProduction.find({
                 _id: id
             }, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getPluginProduction', 'PluginProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getPluginProduction', 'PluginProduction.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -139,63 +138,87 @@ function getPluginProductionById(id) {
     });
 }
 exports.getPluginProductionById = getPluginProductionById;
-function getPluginProductionObject(owner, name) {
+function getPluginProductionObject(owner, name, loadPackiConfig) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getPluginProduction(owner, name).then(
-        // loog 'myname', 'getPluginProductionObject.lp', lp
-        // loog 'myname', 'getPluginProductionObject.lp_packiFiles_object', lp_packiFiles_object
-        // loog 'myname', 'getPluginProductionObject', obj
-        (result) => {
+        return new Promise((resolve, reject) => getPluginProduction(owner, name).then((result) => {
             if (!result.ok) {
                 return reject(result);
             }
             const lp = result.item;
-            const lp_packiFiles_object = JSON.parse(lp.packiFiles);
-            const obj = Object.assign(Object.assign({}, lp._doc), { packiFiles: lp_packiFiles_object, _id: lp._id.toString() });
-            return resolve(obj);
+            return resolve(_createPluginProductionObject(lp, loadPackiConfig));
         }).catch((err) => {
-            console.log('getPluginProductionObject.getPluginProduction.error', err, __filename);
+            console.log('features.production.api.pluginProduction.getPluginProductionObject.getPluginProduction.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getPluginProductionObject = getPluginProductionObject;
-function getPluginProductionObjectById(id) {
+function getPluginProductionObjectById(id, loadPackiConfig) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getPluginProductionById(id).then(
-        // loog 'myname', 'getPluginProductionObjectById.lp', lp
-        // loog 'myname', 'getPluginProductionObjectById.lp_packiFiles_object', lp_packiFiles_object
-        // loog 'myname', 'getPluginProductionObjectById', obj
-        (result) => {
+        return new Promise((resolve, reject) => getPluginProductionById(id).then((result) => {
             if (!result.ok) {
                 return reject(result);
             }
             const lp = result.item;
-            const lp_packiFiles_object = JSON.parse(lp.packiFiles);
-            const obj = Object.assign(Object.assign({}, lp._doc), { packiFiles: lp_packiFiles_object, _id: lp._id.toString() });
-            return resolve(obj);
+            return resolve(_createPluginProductionObject(lp, loadPackiConfig));
         }).catch((err) => {
-            console.log('getPluginProductionObjectById.getPluginProductionById.error', err, __filename);
+            console.log('features.production.api.pluginProduction.getPluginProductionObjectById.getPluginProductionById.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getPluginProductionObjectById = getPluginProductionObjectById;
+function _createPluginProductionObject(lp, loadPackiConfig) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise(
+        // loog 'myname', '_createPluginProductionObject.lp', Object.keys(lp)
+        // loog 'myname', '_createPluginProductionObject.lp_packiFiles_object', Object.keys(lp_packiFiles_object)
+        (resolve, reject) => {
+            const lp_packiFiles_object = JSON.parse(lp.packiFiles);
+            const obj = Object.assign(Object.assign({}, lp._doc), { packiFiles: lp_packiFiles_object, _id: lp._id.toString(), packiProduction: "PluginProduction", packiConfig: lp_packiFiles_object[env_1.packiConfigPath], packiConfigObj: null });
+            if (loadPackiConfig) {
+                if (!obj.packiConfig) {
+                    return reject({
+                        message: 'Missing file ' + env_1.packiConfigPath + ' in PluginProduction'
+                    });
+                }
+                wizzi_1.wizziProds.generateArtifact(env_1.packiConfigPath, {
+                    [env_1.packiConfigPath]: {
+                        type: obj.packiConfig.type,
+                        contents: obj.packiConfig.contents
+                    }
+                }, {}).then(
+                // loog myname, '_createPluginProductionObject', 'obj.packiConfigObj', JSON.stringify(obj.packiConfigObj)
+                (generationResult) => {
+                    obj.packiConfigObj = JSON.parse(generationResult.artifactContent);
+                    return resolve(obj);
+                }).catch((err) => {
+                    console.log('features.production.api.pluginProduction.getPluginProductionObject._createPluginProductionObject.error', err, __filename);
+                    return reject(err);
+                });
+            }
+            // loog 'myname', '_createPluginProductionObject.resolve', Object.keys(obj)
+            else {
+                return resolve(obj);
+            }
+        });
+    });
+}
 function createPluginProduction(owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'createPluginProduction', owner, name, description, packiFiles);
         const PluginProduction = (0, plugin_1.GetPluginProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 owner: owner,
                 name: name
             };
-            PluginProduction.find(query, (err, result) => {
+            PluginProduction.find(query, 
+            // loog myname, 'getPluginProduction', 'PluginProduction.find', 'result', result
+            (err, result) => {
                 if (err) {
-                    console.log(myname, 'getPluginProduction', 'PluginProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getPluginProduction', 'PluginProduction.find', 'error', err);
                     return reject(err);
                 }
-                console.log(myname, 'getPluginProduction', 'PluginProduction.find', 'result', result, __filename);
                 if (result.length > 0) {
                     return resolve({
                         oper: 'create',
@@ -213,7 +236,7 @@ function createPluginProduction(owner, name, description, packiFiles) {
                 });
                 newPluginProduction.save(function (err, doc) {
                     if (err) {
-                        console.log(myname, 'createPluginProduction', 'newPluginProduction.save', 'error', err, __filename);
+                        console.log("[31m%s[0m", myname, 'createPluginProduction', 'newPluginProduction.save', 'error', err);
                         return reject(err);
                     }
                     return resolve({
@@ -230,7 +253,6 @@ function createPluginProduction(owner, name, description, packiFiles) {
 exports.createPluginProduction = createPluginProduction;
 function updatePluginProduction(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updatePluginProduction');
         const PluginProduction = (0, plugin_1.GetPluginProductionModel)();
         return new Promise((resolve, reject) => {
             const query = {
@@ -252,7 +274,7 @@ function updatePluginProduction(id, owner, name, description, packiFiles) {
             update['updated_at'] = new Date();
             PluginProduction.findOneAndUpdate(query, update, {}, (err, result) => {
                 if (err) {
-                    console.log(myname, 'updatePluginProduction', 'PluginProduction.findOneAndUpdate', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'updatePluginProduction', 'PluginProduction.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
                 return resolve({
@@ -267,7 +289,6 @@ function updatePluginProduction(id, owner, name, description, packiFiles) {
 exports.updatePluginProduction = updatePluginProduction;
 function deletePluginProduction(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'deletePluginProduction', owner, name);
         const PluginProduction = (0, plugin_1.GetPluginProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
@@ -275,7 +296,7 @@ function deletePluginProduction(id, owner, name, description, packiFiles) {
             };
             PluginProduction.deleteOne(query, (err) => {
                 if (err) {
-                    console.log(myname, 'deletePluginProduction', 'PluginProduction.deleteOne', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'deletePluginProduction', 'PluginProduction.deleteOne', 'error', err);
                     return reject(err);
                 }
                 resolve({
@@ -349,7 +370,7 @@ function getPluginProduction_withCache(owner, name) {
 exports.getPluginProduction_withCache = getPluginProduction_withCache;
 function invalidateCache(owner, name) {
     var cacheKey = owner + '|' + name;
-    pluginCache.del(cacheKey);
+    pluginProductionCache.del(cacheKey);
 }
 exports.invalidateCache = invalidateCache;
 //# sourceMappingURL=plugin.js.map

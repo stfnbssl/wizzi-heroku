@@ -4,14 +4,42 @@ exports.ProductionsController = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\packi\controllers\productions.ts.ittf
 */
 const express_1 = require("express");
 const sendResponse_1 = require("../../../utils/sendResponse");
+const error_1 = require("../../../utils/error");
+const utils_1 = require("../../../utils");
 const wizzi_1 = require("../../wizzi");
 const production_1 = require("../../production");
 const myname = 'features/packi/controllers/productions';
+function makeHandlerAwareOfAsyncErrors(handler) {
+    return function (request, response, next) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            try {
+                yield handler(request, response, next);
+            }
+            catch (error) {
+                if (error instanceof error_1.FcError) {
+                    response.status(utils_1.statusCode.BAD_REQUEST).send({
+                        code: error.code,
+                        message: error.message,
+                        data: error.data || {}
+                    });
+                }
+                else {
+                    const fcError = new error_1.FcError(error_1.SYSTEM_ERROR);
+                    response.status(utils_1.statusCode.BAD_REQUEST).send({
+                        code: fcError.code,
+                        message: error.message,
+                        data: fcError.data || {}
+                    });
+                }
+            }
+        });
+    };
+}
 class ProductionsController {
     constructor() {
         this.path = '/api/v1/productions';
@@ -25,10 +53,11 @@ class ProductionsController {
             this.router.post(`/job`, this.executeJob);
             this.router.post(`/wizzify`, this.wizzify);
         };
-        this.mTree = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.mTree = 
+        // loog myname, 'mTree.received files', Object.keys(req_files)
+        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const id = request.params.id;
             const req_files = request.body;
-            console.log(myname, 'mTree.received files', Object.keys(req_files), __filename);
             production_1.artifactApi.prepareGenerationFromWizziJson(req_files).then((result) => wizzi_1.wizziProds.mTree(id, result.packiFiles, result.context).then(
             // loog myname, 'mTree.result', value
             (value) => (0, sendResponse_1.sendSuccess)(response, {
@@ -56,10 +85,11 @@ class ProductionsController {
                 }, 501);
             }));
         });
-        this.generateArtifact = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.generateArtifact = 
+        // loog myname, 'generateArtifact.received files', Object.keys(req_files)
+        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const id = request.params.id;
             const req_files = request.body;
-            console.log(myname, 'generateArtifact.received files', Object.keys(req_files), __filename);
             production_1.artifactApi.prepareGenerationFromWizziJson(req_files).then((result) => wizzi_1.wizziProds.generateArtifact(id, result.packiFiles, result.context).then(
             // loog myname, 'generateArtifact.result', value
             value => (0, sendResponse_1.sendSuccess)(response, {
@@ -124,10 +154,9 @@ class ProductionsController {
                 return (0, sendResponse_1.sendSuccess)(response, {
                     packiResult: ittfResult
                 });
-            })).catch((err) => {
-                console.log('features.packi.controllers.production.wizzify.err', err, __filename);
-                (0, sendResponse_1.sendFailure)(response, err, 501);
-            });
+            })).catch(
+            // loog 'features.packi.controllers.production.wizzify.err', err
+            err => (0, sendResponse_1.sendFailure)(response, err, 501));
         });
     }
 }

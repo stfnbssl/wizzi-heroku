@@ -6,11 +6,15 @@ const parseurl_1 = tslib_1.__importDefault(require("parseurl"));
 const production_1 = require("../features/production");
 const sendResponse_1 = require("../utils/sendResponse");
 const myname = 'express.middleware.packiBrowse';
-const packiUserBrowsePath = '/~';
+const packiSiteBrowsePackageItemPath = '/~p';
+const packiSiteBrowsePluginItemPath = '/~l';
 const packiSiteBrowsePath = '/~-';
+const packiUserBrowsePath = '/~';
 const PackiBrowseMiddleware = (app) => {
-    app.use(packiUserBrowsePath, packiUserBrowseMiddleware());
-    app.use(packiSiteBrowsePath, packiSiteBrowseMiddleware());
+    app.use(packiSiteBrowsePackageItemPath, packiBrowseMiddleware('package', false));
+    app.use(packiSiteBrowsePluginItemPath, packiBrowseMiddleware('plugin', false));
+    app.use(packiSiteBrowsePath, packiBrowseMiddleware('artifact', true));
+    app.use(packiUserBrowsePath, packiBrowseMiddleware('artifact', false));
 };
 exports.PackiBrowseMiddleware = PackiBrowseMiddleware;
 function getPackiBrowseContext(request) {
@@ -21,7 +25,7 @@ function getPackiBrowseContext(request) {
         }
     };
 }
-function packiUserBrowseMiddleware() {
+function packiBrowseMiddleware(packiProduction, isSiteLevel) {
     return (request, response, next) => tslib_1.__awaiter(this, void 0, void 0, function* () {
         if (request.method !== 'GET' && request.method !== 'HEAD') {
             return next();
@@ -33,33 +37,32 @@ function packiUserBrowseMiddleware() {
         console.log(myname + '.parsedUrl', parsedUrl, __filename);
         const pathname = decodeURIComponent(parsedUrl.pathname);
         const parts = pathname.split('/');
-        const owner = parts[1];
-        const productionName = parts.slice(2).join('/');
+        let owner, productionName;
+        if (isSiteLevel) {
+            owner = "stfnbssl";
+            productionName = parts.slice(1).join('/');
+        }
+        else {
+            owner = parts[1];
+            productionName = parts.slice(2).join('/');
+        }
         console.log(myname + '.owner', owner, 'productionName', productionName, 'context', request.query.context, __filename);
-        _executeBrowse(owner, productionName, request, response);
+        _executeBrowse(packiProduction, owner, productionName, request, response);
     });
 }
-function packiSiteBrowseMiddleware() {
-    return (request, response, next) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-        if (request.method !== 'GET' && request.method !== 'HEAD') {
-            return next();
-        }
-        const parsedUrl = (0, parseurl_1.default)(request);
-        if (!parsedUrl || !parsedUrl.pathname) {
-            return next();
-        }
-        console.log(myname + '.parsedUrl', parsedUrl, __filename);
-        const pathname = decodeURIComponent(parsedUrl.pathname);
-        const parts = pathname.split('/');
-        const owner = "stfnbssl";
-        const productionName = parts.slice(1).join('/');
-        console.log(myname + '.owner', owner, 'productionName', productionName, 'context', request.query.context, __filename);
-        _executeBrowse(owner, productionName, request, response);
-    });
-}
-function _executeBrowse(owner, productionName, request, response) {
+function _executeBrowse(packiProduction, owner, productionName, request, response) {
+    let productionApi;
+    if (packiProduction == 'package') {
+        productionApi = production_1.packageApi;
+    }
+    else if (packiProduction == 'plugin') {
+        productionApi = production_1.pluginApi;
+    }
+    else {
+        productionApi = production_1.artifactApi;
+    }
     if (request.query.meta && request.query.meta.toLowerCase() == 'mtree') {
-        production_1.artifactApi.getArtifactMTree_withPrepare(owner, productionName, request.query.context, getPackiBrowseContext(request)).then((result) => {
+        productionApi.getArtifactMTree_withPrepare(owner, productionName, request.query.context, getPackiBrowseContext(request)).then((result) => {
             console.log(myname + 'getArtifactMTree_withPrepare.result.length:', result.length, __filename);
             response.status(200);
             response.set('Content-Type', result.contentType);
@@ -69,7 +72,7 @@ function _executeBrowse(owner, productionName, request, response) {
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log('_executeBrowse.artifactApi.getArtifactMTree.error', err, __filename);
+            console.log('' + myname + '_executeBrowse.artifactApi.getArtifactMTree.error', err, __filename);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
@@ -78,7 +81,7 @@ function _executeBrowse(owner, productionName, request, response) {
         });
     }
     else if (request.query.meta && request.query.meta.toLowerCase() == 'script') {
-        production_1.artifactApi.getArtifactMTreeBuildupScript_withPrepare(owner, productionName, request.query.context, getPackiBrowseContext(request)).then((result) => {
+        productionApi.getArtifactMTreeBuildupScript_withPrepare(owner, productionName, request.query.context, getPackiBrowseContext(request)).then((result) => {
             console.log(myname + 'getArtifactMTreeBuildupScript_withPrepare.result.length:', result.length, __filename);
             response.status(200);
             response.set('Content-Type', result.contentType);
@@ -88,7 +91,7 @@ function _executeBrowse(owner, productionName, request, response) {
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log('_executeBrowse.artifactApi.getArtifactMTree.error', err, __filename);
+            console.log('' + myname + '_executeBrowse.artifactApi.getArtifactMTree.error', err, __filename);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
@@ -97,7 +100,7 @@ function _executeBrowse(owner, productionName, request, response) {
         });
     }
     else if (request.query.meta && request.query.meta.toLowerCase() == 'raw') {
-        production_1.artifactApi.getArtifactGeneration_withPrepare(owner, productionName, request.query.context, getPackiBrowseContext(request)).then((result) => {
+        productionApi.getArtifactGeneration_withPrepare(owner, productionName, request.query.filepath, request.query.context, getPackiBrowseContext(request)).then((result) => {
             console.log(myname + 'getArtifactGeneration_withPrepare.result.length:', result.length, __filename);
             response.status(200);
             response.set('Content-Type', 'text/plain');
@@ -107,7 +110,7 @@ function _executeBrowse(owner, productionName, request, response) {
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log('_executeBrowse.artifactApi.getArtifactGeneration.error', err, __filename);
+            console.log('' + myname + '_executeBrowse.artifactApi.getArtifactGeneration.error', err, __filename);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
@@ -116,7 +119,7 @@ function _executeBrowse(owner, productionName, request, response) {
         });
     }
     else {
-        production_1.artifactApi.getArtifactGeneration_withPrepare(owner, productionName, request.query.context, getPackiBrowseContext(request)).then((result) => {
+        productionApi.getArtifactGeneration_withPrepare(owner, productionName, request.query.filepath, request.query.context, getPackiBrowseContext(request)).then((result) => {
             console.log(myname + 'getArtifactGeneration_withPrepare.result.length:', result.length, __filename);
             response.status(200);
             response.set('Content-Type', result.contentType);
@@ -126,7 +129,7 @@ function _executeBrowse(owner, productionName, request, response) {
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log('_executeBrowse.artifactApi.getArtifactGeneration.error', err, __filename);
+            console.log('' + myname + '_executeBrowse.artifactApi.getArtifactGeneration.error', err, __filename);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';

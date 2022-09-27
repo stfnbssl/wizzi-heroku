@@ -5,10 +5,13 @@ const tslib_1 = require("tslib");
 const jsx_runtime_1 = require("react/jsx-runtime");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\controllers\meta.tsx.ittf
 */
 const express_1 = require("express");
+const index_1 = require("../../../middlewares/index");
+const error_1 = require("../../../utils/error");
+const utils_1 = require("../../../utils");
 const server_1 = tslib_1.__importDefault(require("react-dom/server"));
 const PageFormDocument_1 = tslib_1.__importDefault(require("../../../pages/PageFormDocument"));
 const meta_1 = require("../api/meta");
@@ -21,7 +24,20 @@ function renderPageForm(req, res, data, queryParams) {
 }
 function getPackiFiles() {
     return {
-        ['properties/index.json.ittf']: {
+        ['.packi/config.json.ittf']: {
+            type: 'CODE',
+            contents: [
+                '{',
+                '    [ tfolders',
+                '        {',
+                '            $$ name "..."',
+                '    [ contexts',
+                '        {',
+                '            $$ propertyName "..."',
+                '            $$ artifactName "..."'
+            ].join('\n')
+        },
+        ['.packi/properties/index.json.ittf']: {
             type: 'CODE',
             contents: [
                 '{',
@@ -32,7 +48,7 @@ function getPackiFiles() {
                 '        string( kind )'
             ].join('\n')
         },
-        ['properties/t/string.json.ittf']: {
+        ['.packi/properties/t/string.json.ittf']: {
             type: 'CODE',
             contents: [
                 '{',
@@ -42,7 +58,7 @@ function getPackiFiles() {
                 '    $hook'
             ].join('\n')
         },
-        ['properties/t/boolean.json.ittf']: {
+        ['.packi/properties/t/boolean.json.ittf']: {
             type: 'CODE',
             contents: [
                 '{',
@@ -52,7 +68,7 @@ function getPackiFiles() {
                 '    $hook'
             ].join('\n')
         },
-        ['properties/t/number.json.ittf']: {
+        ['.packi/properties/t/number.json.ittf']: {
             type: 'CODE',
             contents: [
                 '{',
@@ -62,7 +78,7 @@ function getPackiFiles() {
                 '    $hook'
             ].join('\n')
         },
-        ['properties/t/object.json.ittf']: {
+        ['.packi/properties/t/object.json.ittf']: {
             type: 'CODE',
             contents: [
                 '{',
@@ -73,7 +89,7 @@ function getPackiFiles() {
                 '        $hook'
             ].join('\n')
         },
-        ['properties/t/array.json.ittf']: {
+        ['.packi/properties/t/array.json.ittf']: {
             type: 'CODE',
             contents: [
                 '{',
@@ -83,17 +99,33 @@ function getPackiFiles() {
                 '    [ properties',
                 '        $hook'
             ].join('\n')
-        },
-        ['template/index.html.ittf.ittf']: {
-            type: 'CODE',
-            contents: [
-                'html',
-                '    body',
-                '        div',
-                '            h1',
-                '                + Hello ${cliCtx.name}'
-            ].join('\n')
         }
+    };
+}
+function makeHandlerAwareOfAsyncErrors(handler) {
+    return function (request, response, next) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            try {
+                yield handler(request, response, next);
+            }
+            catch (error) {
+                if (error instanceof error_1.FcError) {
+                    response.status(utils_1.statusCode.BAD_REQUEST).send({
+                        code: error.code,
+                        message: error.message,
+                        data: error.data || {}
+                    });
+                }
+                else {
+                    const fcError = new error_1.FcError(error_1.SYSTEM_ERROR);
+                    response.status(utils_1.statusCode.BAD_REQUEST).send({
+                        code: fcError.code,
+                        message: error.message,
+                        data: fcError.data || {}
+                    });
+                }
+            }
+        });
     };
 }
 class MetaProductionController {
@@ -102,12 +134,12 @@ class MetaProductionController {
         this.router = (0, express_1.Router)();
         this.initialize = (initValues) => {
             console.log("[33m%s[0m", 'Entering MetaProductionController.initialize');
-            this.router.get('/new', this.getNewMetaForm);
-            this.router.post('/new', this.postMeta);
-            this.router.get('/update/:id', this.getUpdateMetaForm);
-            this.router.post('/update', this.putMeta);
-            this.router.get('/delete/:id', this.getDeleteMetaForm);
-            this.router.post('/delete', this.deleteMeta);
+            this.router.get("/new", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getNewMetaForm));
+            this.router.post("/new", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.postMeta));
+            this.router.get("/update/:id", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getUpdateMetaForm));
+            this.router.post("/update", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.putMeta));
+            this.router.get("/delete/:id", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getDeleteMetaForm));
+            this.router.post("/delete", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.deleteMeta));
         };
         this.getNewMetaForm = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return renderPageForm(request, response, {
@@ -134,9 +166,10 @@ class MetaProductionController {
                 error: err
             }));
         });
-        this.getUpdateMetaForm = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getUpdateMetaForm = 
+        // loog myname + '.getUpdateMetaForm.id', id
+        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const id = request.params.id;
-            console.log(myname + '.getUpdateMetaForm.id', id, __filename);
             (0, meta_1.getMetaProductionObjectById)(id).then((result) => renderPageForm(request, response, {
                 type: 'success',
                 formName: 'UpdateMetaProduction',
@@ -162,9 +195,10 @@ class MetaProductionController {
                 }
             });
         });
-        this.getDeleteMetaForm = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getDeleteMetaForm = 
+        // loog myname + '.getDeleteMetaForm.id', id
+        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const id = request.params.id;
-            console.log(myname + '.getDeleteMetaForm.id', id, __filename);
             (0, meta_1.getMetaProductionObjectById)(id).then((result) => renderPageForm(request, response, {
                 type: 'success',
                 formName: 'DeleteMetaProduction',
@@ -176,8 +210,9 @@ class MetaProductionController {
                 }
             }, {}));
         });
-        this.deleteMeta = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            console.log(myname + '.deleteMeta.request.path', request.path, __filename);
+        this.deleteMeta = 
+        // loog myname + '.deleteMeta.request.path', request.path
+        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const obj = request.body;
             (0, meta_1.deleteMetaProduction)(obj.mp_id, obj.mp_owner, obj.mp_name, obj.mp_description).then((result) => {
                 if (result.ok) {

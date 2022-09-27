@@ -4,7 +4,7 @@ exports.postApi = exports.blogControllers = exports.blogModelBuilders = exports.
 const tslib_1 = require("tslib");
 const blogTypes = tslib_1.__importStar(require("./types"));
 exports.blogTypes = blogTypes;
-const post_1 = require("./mongo/post");
+const post_1 = require("./models/post");
 const apiv1post_1 = require("./controllers/apiv1post");
 const postApi = tslib_1.__importStar(require("./api/post"));
 exports.postApi = postApi;

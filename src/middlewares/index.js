@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.auth0Secured = exports.appMiddlewaresPost = exports.appMiddlewaresPre = void 0;
+exports.apiSecured = exports.webSecured = exports.appMiddlewaresPost = exports.appMiddlewaresPre = void 0;
 const tslib_1 = require("tslib");
 const cors_1 = require("./cors");
 const session_1 = require("./session");
@@ -25,6 +25,8 @@ const appMiddlewaresPre = [
 exports.appMiddlewaresPre = appMiddlewaresPre;
 const appMiddlewaresPost = [];
 exports.appMiddlewaresPost = appMiddlewaresPost;
-const auth0Secured_1 = tslib_1.__importDefault(require("./auth0Secured"));
-exports.auth0Secured = auth0Secured_1.default;
+const webSecured_1 = tslib_1.__importDefault(require("./webSecured"));
+exports.webSecured = webSecured_1.default;
+const apiSecured_1 = tslib_1.__importDefault(require("./apiSecured"));
+exports.apiSecured = apiSecured_1.default;
 //# sourceMappingURL=index.js.map

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deletePost = exports.updatePost = exports.createPost = exports.getPostById = exports.getPost = exports.getListPost = exports.validatePost = void 0;
 const tslib_1 = require("tslib");
-const post_1 = require("../mongo/post");
+const post_1 = require("../models/post");
 const myname = 'features.blog.api.post';
 function validatePost(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
@@ -30,7 +30,6 @@ exports.validatePost = validatePost;
 function getListPost(options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         options = options || {};
-        console.log(myname, 'getListPost', 'options', options);
         const Post = (0, post_1.GetPostModel)();
         return new Promise((resolve, reject) => {
             const query = Post.find(options.query);
@@ -42,7 +41,7 @@ function getListPost(options) {
             }
             query.find((err, result) => {
                 if (err) {
-                    console.log(myname, 'getListPost', 'Post.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getListPost', 'Post.find', 'error', err);
                     return reject(err);
                 }
                 const resultItem = [];
@@ -73,7 +72,6 @@ function getListPost(options) {
 exports.getListPost = getListPost;
 function getPost(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getPost', owner, name);
         const Post = (0, post_1.GetPostModel)();
         return new Promise((resolve, reject) => {
             let query = {
@@ -82,7 +80,7 @@ function getPost(owner, name) {
             };
             Post.find(query, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getPost', 'Post.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getPost', 'Post.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -104,14 +102,13 @@ function getPost(owner, name) {
 exports.getPost = getPost;
 function getPostById(id) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getPostById', id);
         const Post = (0, post_1.GetPostModel)();
         return new Promise((resolve, reject) => {
             Post.find({
                 _id: id
             }, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getPost', 'Post.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getPost', 'Post.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -133,19 +130,19 @@ function getPostById(id) {
 exports.getPostById = getPostById;
 function createPost(owner, name, title, content, state, pubblished_at) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'createPost', owner, name, title, content, state, pubblished_at);
         const Post = (0, post_1.GetPostModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 owner: owner,
                 name: name
             };
-            Post.find(query, (err, result) => {
+            Post.find(query, 
+            // loog myname, 'getPost', 'Post.find', 'result', result
+            (err, result) => {
                 if (err) {
-                    console.log(myname, 'getPost', 'Post.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getPost', 'Post.find', 'error', err);
                     return reject(err);
                 }
-                console.log(myname, 'getPost', 'Post.find', 'result', result, __filename);
                 if (result.length > 0) {
                     return resolve({
                         oper: 'create',
@@ -165,7 +162,7 @@ function createPost(owner, name, title, content, state, pubblished_at) {
                 });
                 newPost.save(function (err, doc) {
                     if (err) {
-                        console.log(myname, 'createPost', 'newPost.save', 'error', err, __filename);
+                        console.log("[31m%s[0m", myname, 'createPost', 'newPost.save', 'error', err);
                         return reject(err);
                     }
                     return resolve({
@@ -182,7 +179,6 @@ function createPost(owner, name, title, content, state, pubblished_at) {
 exports.createPost = createPost;
 function updatePost(id, owner, name, title, content, state, pubblished_at) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updatePost', owner, name, title, content, state, pubblished_at);
         const Post = (0, post_1.GetPostModel)();
         return new Promise((resolve, reject) => {
             const query = {
@@ -210,7 +206,7 @@ function updatePost(id, owner, name, title, content, state, pubblished_at) {
             update['updated_at'] = new Date();
             Post.findOneAndUpdate(query, update, {}, (err, result) => {
                 if (err) {
-                    console.log(myname, 'updatePost', 'Post.findOneAndUpdate', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'updatePost', 'Post.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
                 return resolve({
@@ -225,7 +221,6 @@ function updatePost(id, owner, name, title, content, state, pubblished_at) {
 exports.updatePost = updatePost;
 function deletePost(id, owner, name, title, content, state, pubblished_at) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'deletePost', owner, name);
         const Post = (0, post_1.GetPostModel)();
         return new Promise((resolve, reject) => {
             let query = {
@@ -233,7 +228,7 @@ function deletePost(id, owner, name, title, content, state, pubblished_at) {
             };
             Post.deleteOne(query, (err) => {
                 if (err) {
-                    console.log(myname, 'deletePost', 'Post.deleteOne', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'deletePost', 'Post.deleteOne', 'error', err);
                     return reject(err);
                 }
                 resolve({

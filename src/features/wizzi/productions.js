@@ -1,14 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.loadSiteJsonModel = exports.wizzify = exports.scanIttfDocumentDb = exports.scanIttfFolder = exports.scanIttfDocumentFs = exports.scanIttfDocument = exports.inferAndLoadContextFs = exports.inferAndLoadContextJson = exports.executeJobs = exports.executeJob = exports.transformModelFs = exports.transformModel = exports.generateFolderArtifacts = exports.generateArtifactDb = exports.generateArtifactFs = exports.generateArtifact = exports.wrapIttfText = exports.mTreeDb = exports.mTreeFs = exports.mTree = exports.mTreeBuildupScriptDb = exports.mTreeBuildupScriptFs = exports.mTreeBuildupScript = exports.loadModelFs = exports.loadModel = void 0;
+exports.loadSiteJsonModel = exports.getCodeAST = exports.wizzify = exports.scanIttfDocumentDb = exports.scanIttfFolder = exports.scanIttfDocumentFs = exports.scanIttfDocument = exports.inferAndLoadContextFs = exports.inferAndLoadContextJson = exports.executeJobs = exports.executeJob = exports.metaGenerate = exports.transformModelFs = exports.transformModel = exports.generateFolderArtifacts = exports.generateArtifactDb = exports.generateArtifactFs = exports.generateArtifact = exports.wrapIttfText = exports.mTreeDb = exports.mTreeFs = exports.mTree = exports.mTreeBuildupScriptDb = exports.mTreeBuildupScriptFs = exports.mTreeBuildupScript = exports.loadModelFs = exports.loadModel = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\wizzi\productions.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const fs_1 = tslib_1.__importDefault(require("fs"));
+const json_stringify_safe_1 = tslib_1.__importDefault(require("json-stringify-safe"));
 const wizzi_tools_1 = tslib_1.__importDefault(require("wizzi-tools"));
 const wizzi_utils_1 = require("wizzi-utils");
 const env_1 = require("../config/env");
@@ -28,7 +29,7 @@ function loadModel(filePath, files, context) {
             }
             let jsonwf = {};
             const ittfDocumentUri = (0, factory_1.ensurePackiFilePrefix)(filePath);
-            jsonwf = yield (0, factory_1.createFsJsonAndFactory)(files);
+            jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
             ;
             jsonwf.wf.loadModel(ittfDocumentUri, {
                 mTreeBuildupContext: context
@@ -92,7 +93,7 @@ function mTreeBuildupScript(filePath, files, context) {
             }
             const ittfDocumentUri = (0, factory_1.ensurePackiFilePrefix)(filePath);
             let jsonwf = {};
-            jsonwf = yield (0, factory_1.createFsJsonAndFactory)(files);
+            jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
             ;
             jsonwf.wf.loadMTreeBuildupScript(ittfDocumentUri, context, (err, buildUpScript) => {
                 if (err) {
@@ -128,7 +129,7 @@ function mTree(filePath, files, context) {
             }
             const ittfDocumentUri = (0, factory_1.ensurePackiFilePrefix)(filePath);
             let jsonwf = {};
-            jsonwf = yield (0, factory_1.createFsJsonAndFactory)(files);
+            jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
             ;
             jsonwf.wf.loadMTree(ittfDocumentUri, context, (err, mTree) => {
                 if (err) {
@@ -191,7 +192,7 @@ function wrapIttfText(schema, ittftext, context) {
                     resolve(result.mTree.toIttf(wrapperNode));
                 }
             }).catch((err) => {
-                console.log('features.wizzi.productions.wrapIttfText.mTree.error', err, __filename);
+                console.log("[31m%s[0m", 'features.wizzi.productions.wrapIttfText.mTree.error', err);
                 return reject(err);
             });
         }));
@@ -215,7 +216,7 @@ function generateArtifact(filePath, files, context, options) {
                 const ittfDocumentUri = (0, factory_1.ensurePackiFilePrefix)(filePath);
                 const siteDocumentUri = Object.keys(files).find(k => k.endsWith('site.json.ittf'));
                 try {
-                    jsonwf = yield (0, factory_1.createFsJsonAndFactory)(files);
+                    jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
                     ;
                     generationContext = Object.assign(context || {}, Object.assign({ site: siteDocumentUri ? yield loadModelInternal(jsonwf.wf, (0, factory_1.ensurePackiFilePrefix)(siteDocumentUri), {}) : null }, (yield inferAndLoadContextJson(jsonwf.wf, files, ittfDocumentUri, 'twin'))));
                     jsonwf.wf.loadModelAndGenerateArtifact(ittfDocumentUri, {
@@ -293,7 +294,7 @@ function generateFolderArtifacts(sourceFolderUri, destFolderUri, files, context)
             }
             let jsonwf = {};
             try {
-                jsonwf = yield (0, factory_1.createFsJsonAndFactory)(files);
+                jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
                 ;
                 jsonwf.wf.generateFolderArtifacts(env_1.packiFilePrefix + sourceFolderUri, {
                     modelRequestContext: context,
@@ -348,7 +349,7 @@ function transformModel(filePath, files, context, options) {
                 const ittfDocumentUri = (0, factory_1.ensurePackiFilePrefix)(filePath);
                 const siteDocumentUri = Object.keys(files).find(k => k.endsWith('site.json.ittf'));
                 try {
-                    jsonwf = yield (0, factory_1.createFsJsonAndFactory)(files);
+                    jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
                     ;
                     transformationContext = Object.assign({ site: siteDocumentUri ? yield loadModelInternal(jsonwf.wf, (0, factory_1.ensurePackiFilePrefix)(siteDocumentUri), {}) : null }, (yield inferAndLoadContextJson(jsonwf.wf, files, ittfDocumentUri, 'twin')));
                     jsonwf.wf.loadAndTransformModel(ittfDocumentUri, {
@@ -404,6 +405,44 @@ function transformModelFs(filePath, context, options) {
     });
 }
 exports.transformModelFs = transformModelFs;
+function metaGenerate(files, context) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            if (!wizzi_utils_1.verify.isObject(files)) {
+                return reject({
+                    action: 'wizzi.productions.metaGenerate',
+                    message: 'files parameter must be an object of type PackiFiles',
+                    files
+                });
+            }
+            console.log(myname, 'metaGenerate.files', Object.keys(files), __filename);
+            console.log(myname, 'metaGenerate.context', Object.keys(context), __filename);
+            let jsonwf = {};
+            try {
+                jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
+                ;
+                jsonwf.wf.metaGenerate(env_1.packiFilePrefix + 'index.ittf.ittf', {
+                    modelRequestContext: context
+                }, {
+                    tempFolder: env_1.packiFilePrefix + 'template',
+                    destFolder: env_1.packiFilePrefix + '.wizzi'
+                }, (err, jsonFs) => {
+                    if (err) {
+                        return reject(err);
+                    }
+                    jsonFsToPackiFiles(jsonwf.jsonFs, '.wizzi').then((wizziPackiFiles) => resolve(wizziPackiFiles)).catch((err) => {
+                        console.log("[31m%s[0m", 'features/wizzi/productions.metaGenerate.error', err);
+                        return reject(err);
+                    });
+                });
+            }
+            catch (ex) {
+                return reject(ex);
+            }
+        }));
+    });
+}
+exports.metaGenerate = metaGenerate;
 function executeJob(wfjobFilePath, packiFiles, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
@@ -415,7 +454,7 @@ function executeJob(wfjobFilePath, packiFiles, context) {
                 });
             }
             wfjobFilePath = (0, factory_1.ensurePackiFilePrefix)(wfjobFilePath);
-            const jsonwf = yield (0, factory_1.createFsJsonAndFactory)(packiFiles);
+            const jsonwf = yield (0, factory_1.createJsonFsAndFactory)(packiFiles);
             jsonwf.wf.executeJob({
                 name: '',
                 path: wfjobFilePath,
@@ -425,7 +464,7 @@ function executeJob(wfjobFilePath, packiFiles, context) {
                 if (err) {
                     return reject(err);
                 }
-                resolve(jsonwf.fsJson);
+                resolve(jsonwf.jsonFs);
             });
         }));
     });
@@ -435,10 +474,10 @@ function executeJobs(packiFiles, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const wfjobFilePaths = Object.keys(packiFiles).filter(k => k.endsWith('.wfjob.ittf'));
-            const jsonwf = yield (0, factory_1.createFsJsonAndFactory)(packiFiles);
+            const jsonwf = yield (0, factory_1.createJsonFsAndFactory)(packiFiles);
             const execJob = (index) => {
                 if (index == wfjobFilePaths.length) {
-                    return resolve(jsonwf.fsJson);
+                    return resolve(jsonwf.jsonFs);
                 }
                 const wfjobFilePath = (0, factory_1.ensurePackiFilePrefix)(wfjobFilePaths[index]);
                 jsonwf.wf.executeJob({
@@ -585,16 +624,72 @@ function handleWizzify(extension, codeSnippet) {
         }
     }));
 }
+function getCodeAST(files) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            var result = {};
+            for (const k of Object.keys(files)) {
+                var extension = path_1.default.extname(k);
+                const astResult = yield handleGetCodeAST(extension, files[k].contents);
+                result[k + '.ast'] = {
+                    type: 'CODE',
+                    contents: (0, json_stringify_safe_1.default)(astResult, null, 2)
+                };
+            }
+            return resolve(result);
+        }));
+    });
+}
+exports.getCodeAST = getCodeAST;
+function handleGetCodeAST(extension, codeSnippet) {
+    return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        var schema = wizziMaps.schemaFromExtension(extension);
+        if (schema) {
+            wizzi_tools_1.default.getCodeAST(schema, codeSnippet, function (err, astResult) {
+                if (err) {
+                    reject(err);
+                }
+                resolve(astResult);
+            });
+        }
+        else {
+            const ittfResult = {
+                message: "The file has an invalid schema."
+            };
+            resolve(ittfResult);
+        }
+    }));
+}
 // TODO cache results!
 function loadSiteJsonModel(relPath, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         context = Object.assign({}, {
             isWizziStudio: true
         }, context || {});
-        return new Promise((resolve, reject) => loadModelFs(path_1.default.join(config_1.config.ittfPath, 'models', relPath), context).then(
-        // log 'loadJsonIttfModel', model
-        model => resolve(model)).catch(err => reject(err)));
+        return new Promise((resolve, reject) => loadModelFs(path_1.default.join(config_1.config.ittfPath, 'models', relPath), context).then(model => resolve(model)).catch(err => reject(err)));
     });
 }
 exports.loadSiteJsonModel = loadSiteJsonModel;
+function jsonFsToPackiFiles(jsonFs, folder) {
+    return new Promise((resolve, reject) => {
+        const packiFiles = {};
+        jsonFs.toFiles({
+            removeRoot: env_1.packiFilePrefixExtract
+        }, (err, files) => {
+            if (err) {
+                return reject(err);
+            }
+            files.forEach((file) => {
+                if (file.relPath.startsWith(folder + '/')) {
+                    packiFiles[file.relPath] = {
+                        type: 'CODE',
+                        contents: file.content,
+                        generated: true
+                    };
+                }
+            });
+            resolve(packiFiles);
+        });
+    });
+}
 //# sourceMappingURL=productions.js.map

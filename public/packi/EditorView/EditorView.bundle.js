@@ -1,5 +1,66 @@
 (self["webpackChunkwizzi_editor"] = self["webpackChunkwizzi_editor"] || []).push([["EditorView/EditorView"],{
 
+/***/ "./src/assets/AstIcon.tsx":
+/*!********************************!*\
+  !*** ./src/assets/AstIcon.tsx ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AstIcon": () => (/* binding */ AstIcon)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+const _excluded = ["height", "width", "theme"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+/*
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
+    package: wizzi-js@0.7.13
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\AstIcon.tsx.ittf
+*/
+
+const AstIcon = _ref => {
+  let {
+    height = "24px",
+    width = "24px",
+    theme = "light"
+  } = _ref,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  const fill = theme == 'light' ? '#ffffff' : '#000000';
+  const stroke = theme == 'light' ? '#000000' : '#ffffff';
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    fill: fill,
+    xmlns: "http://www.w3.org/2000/svg",
+    width: width,
+    height: height,
+    viewBox: "0 0 400 180"
+  }, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("text", {
+    x: "200",
+    y: "141",
+    "font-size": "130",
+    "font-family": "Helvetica,Arial,Sans",
+    "font-weight": "bold",
+    "text-anchor": "middle"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    fill: "none",
+    stroke: stroke,
+    d: "m199-90a180,180 0 1,0 2,0",
+    "stroke-width": "40"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M88,15a135,135 0 0,0 0,150h32a114,114 0 0,1 0-150M280,15a114,114 0 0,1 0,150h32a135,135 0 0,0 0-150"
+  }));
+};
+
+/***/ }),
+
 /***/ "./src/assets/BrowserIcon.tsx":
 /*!************************************!*\
   !*** ./src/assets/BrowserIcon.tsx ***!
@@ -22,7 +83,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\BrowserIcon.tsx.ittf
 */
 
@@ -92,7 +153,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\DebugIcon.tsx.ittf
 */
 
@@ -140,7 +201,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\EditIcon.tsx.ittf
 */
 
@@ -194,7 +255,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\WizziIcon.tsx.ittf
 */
 
@@ -246,6 +307,60 @@ const WizziIcon = _ref => {
 
 /***/ }),
 
+/***/ "./src/assets/WizzifiedIcon.tsx":
+/*!**************************************!*\
+  !*** ./src/assets/WizzifiedIcon.tsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "WizzifiedIcon": () => (/* binding */ WizzifiedIcon)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+const _excluded = ["height", "width", "theme"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+/*
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
+    package: wizzi-js@0.7.13
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\WizzifiedIcon.tsx.ittf
+*/
+
+const WizzifiedIcon = _ref => {
+  let {
+    height = "24px",
+    width = "24px",
+    theme = "light"
+  } = _ref,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  const fill = theme == 'light' ? '#ffffff' : '#000000';
+  const stroke = theme == 'light' ? '#000000' : '#ffffff';
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: width,
+    height: height,
+    viewBox: "0 0 392.186 392.186"
+  }, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M368.62,17.951H23.568C10.57,17.951,0,28.524,0,41.52v309.146c0,12.996,10.57,23.568,23.568,23.568h345.053c12.994,0,23.564-10.572,23.564-23.568V41.52C392.188,28.525,381.614,17.951,368.62,17.951z M297.56,57.528c0-4.806,3.896-8.703,8.701-8.703h8.703c4.808,0,8.701,3.896,8.701,8.703v9.863c0,4.806-3.896,8.702-8.701,8.702h-8.703c-4.805,0-8.701-3.896-8.701-8.702V57.528z M257.093,57.528c0-4.806,3.898-8.703,8.703-8.703h8.701c4.805,0,8.703,3.896,8.703,8.703v9.863c0,4.806-3.898,8.702-8.703,8.702h-8.701c-4.805,0-8.703-3.896-8.703-8.702V57.528zM363.903,345.951H28.282V102.235h335.621V345.951L363.903,345.951z M364.132,67.391c0,4.806-3.896,8.702-8.701,8.702h-8.703c-4.809,0-8.702-3.896-8.702-8.702v-9.863c0-4.806,3.896-8.703,8.702-8.703h8.703c4.806,0,8.701,3.896,8.701,8.703V67.391z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M84.185,233.284l63.084,29.336c1.631,0.755,3.367,1.138,5.162,1.138c2.338,0,4.617-0.664,6.598-1.924c3.547-2.267,5.666-6.13,5.666-10.334v-0.322c0-4.752-2.785-9.116-7.096-11.118l-39.455-18.332l39.455-18.334c4.311-2.004,7.096-6.367,7.096-11.117v-0.319c0-4.21-2.119-8.075-5.666-10.334c-1.961-1.253-4.246-1.916-6.605-1.916c-1.779,0-3.563,0.391-5.16,1.133l-63.08,29.333c-4.307,2.004-7.09,6.369-7.09,11.117v0.877C77.093,226.909,79.874,231.272,84.185,233.284z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M165.257,293.036c2.301,3.149,6.002,5.03,9.9,5.03h0.316c5.352,0,10.041-3.426,11.672-8.517L228.7,160.788c1.192-3.716,0.531-7.818-1.771-10.973c-2.301-3.15-6.002-5.03-9.901-5.03h-0.315c-5.354,0-10.048,3.425-11.679,8.516l-41.559,128.771C162.292,285.793,162.958,289.889,165.257,293.036z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M227.49,192.276c0,4.745,2.783,9.109,7.095,11.123l39.455,18.329l-39.455,18.33c-4.31,2.004-7.095,6.368-7.095,11.118v0.322c0,4.205,2.117,8.068,5.668,10.336c1.974,1.258,4.254,1.924,6.595,1.924c1.793,0,3.528-0.383,5.17-1.142l63.08-29.335c4.307-2.009,7.09-6.372,7.09-11.115v-0.877c0-4.748-2.783-9.113-7.094-11.117l-63.08-29.333c-1.591-0.74-3.373-1.131-5.152-1.131c-2.355,0-4.643,0.661-6.604,1.912c-3.551,2.263-5.67,6.127-5.67,10.337v0.318H227.49L227.49,192.276z"
+  })))));
+};
+
+/***/ }),
+
 /***/ "./src/components/CodeView/SyntaxHighlighter.tsx":
 /*!*******************************************************!*\
   !*** ./src/components/CodeView/SyntaxHighlighter.tsx ***!
@@ -262,7 +377,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _SyntaxHighlighter_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SyntaxHighlighter.css */ "./src/components/CodeView/SyntaxHighlighter.css");
 /* harmony import */ var react_syntax_highlighter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-syntax-highlighter */ "./node_modules/react-syntax-highlighter/dist/esm/prism.js");
-/* harmony import */ var react_syntax_highlighter_dist_esm_styles_prism__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-syntax-highlighter/dist/esm/styles/prism */ "./node_modules/react-syntax-highlighter/dist/esm/styles/prism/dark.js");
+/* harmony import */ var react_syntax_highlighter_dist_esm_styles_prism__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-syntax-highlighter/dist/esm/styles/prism */ "./node_modules/react-syntax-highlighter/dist/esm/styles/prism/vsc-dark-plus.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -285,7 +400,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\CodeView\SyntaxHighlighter.tsx.ittf
 */
 
@@ -385,7 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_ToggleSwitch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../widgets/ToggleSwitch */ "./src/components/widgets/ToggleSwitch.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorFooter.tsx.ittf
 */
 
@@ -669,7 +784,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorPanels.tsx.ittf
 */
 
@@ -838,7 +953,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ModalProductionDetails__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ModalProductionDetails */ "./src/components/EditorView/ModalProductionDetails.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorToolbar.tsx.ittf
 */
 
@@ -873,7 +988,8 @@ function EditorToolbar(props) {
     loggedUser,
     isWizziJobWaiting,
     generatedPreviewURL,
-    onExecuteWizziJob
+    onExecuteWizziJob,
+    onExecuteWizziMetaFolder
   } = props;
   const {
     theme
@@ -889,8 +1005,8 @@ function EditorToolbar(props) {
     href: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_assets_WizziIcon__WEBPACK_IMPORTED_MODULE_3__.WizziIcon, {
     theme: theme,
-    width: "150",
-    height: "50"
+    width: "90",
+    height: "30"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.ve_top_bar_control)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -915,7 +1031,31 @@ function EditorToolbar(props) {
     responsive: true,
     title: "Browse generated",
     onClick: () => window.open(generatedPreviewURL)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_assets_BrowserIcon__WEBPACK_IMPORTED_MODULE_5__.BrowserIcon, null)), packiProduction == 'package' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_assets_BrowserIcon__WEBPACK_IMPORTED_MODULE_5__.BrowserIcon, null)), packiProduction == 'package' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+    responsive: true,
+    title: "Generate .wizzi-meta folder",
+    onClick: onExecuteWizziMetaFolder
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+    width: "20px",
+    height: "18px",
+    viewBox: "0 0 20 18",
+    fill: "none",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
+    d: "M18,8a3,3,0,1,1,3-3A3,3,0,0,1,18,8Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,18,4Z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
+    d: "M5.5,14.5A3.5,3.5,0,1,1,9,11,3.5,3.5,0,0,1,5.5,14.5Zm0-5A1.5,1.5,0,1,0,7,11,1.5,1.5,0,0,0,5.5,9.5Z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
+    d: "M18,22a4,4,0,1,1,4-4A4,4,0,0,1,18,22Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,18,16Z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
+    d: "M7.73,10.64a1,1,0,0,1-.91-.57,1,1,0,0,1,.47-1.34L15.37,4.9a1,1,0,0,1,.86,1.8L8.15,10.54A.9.9,0,0,1,7.73,10.64Z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
+    d: "M18.7,16.1a.92.92,0,0,1-.36-.07L8.14,12.1a1,1,0,0,1,.72-1.87l10.2,3.94a1,1,0,0,1-.36,1.93Z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
+    d: "M12.21,18.5a1,1,0,0,1-.6-.2L6,14.1a1,1,0,1,1,1.19-1.6l5.62,4.2a1,1,0,0,1,.2,1.4A1,1,0,0,1,12.21,18.5Z"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
     responsive: true,
     title: "Generate package",
     onClick: onExecuteWizziJob
@@ -929,21 +1069,7 @@ function EditorToolbar(props) {
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
-    responsive: true,
-    title: "Download as zip",
-    onClick: onDownloadCode,
-    disabled: isDownloading || isPublishing
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
-    width: "20",
-    height: "20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
-    d: "M14.167 10H5.833L10 16.667 14.167 10z"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
-    d: "M2.5 18.333h15M10 10V1.667",
-    strokeWidth: "2",
-    strokeLinecap: "round"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_UserMenu__WEBPACK_IMPORTED_MODULE_7__.default, {
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_UserMenu__WEBPACK_IMPORTED_MODULE_7__.default, {
     loggedUser: loggedUser
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_ModalProductionDetails__WEBPACK_IMPORTED_MODULE_8__.default, {
     title: "Edit Production Details",
@@ -954,8 +1080,9 @@ function EditorToolbar(props) {
       onSubmitMetadata(details);
       onDismissEditModal();
     },
-    description: description,
+    packiProduction: name,
     name: name,
+    description: description,
     mainIttf: mainIttf,
     wizziSchema: wizziSchema
   }));
@@ -966,16 +1093,17 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
     display: "grid",
     gridTemplateColumns: "1fr 5fr 1fr",
     marginBottom: "20px",
-    height: "50px"
+    height: "50px",
+    zIndex: "100"
   },
   ve_top_bar_logo: {
-    paddingTop: "4px",
+    paddingTop: "10px",
+    paddingLeft: "15px",
     cursor: "pointer"
   },
   ve_top_bar_control: {
     display: "grid",
-    gridTemplateRows: "0.1fr 1fr",
-    borderBottom: "1px solid gray"
+    gridTemplateRows: "0.1fr 1fr"
   },
   ve_top_bar_label: {
     paddingTop: "2px",
@@ -1017,27 +1145,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var aphrodite__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! aphrodite */ "./node_modules/aphrodite/no-important.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _widgets_splitter_Split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../widgets/splitter/Split */ "./src/components/widgets/splitter/Split.tsx");
-/* harmony import */ var _EditorFooter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./EditorFooter */ "./src/components/EditorView/EditorFooter.tsx");
-/* harmony import */ var _EditorPanels__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./EditorPanels */ "./src/components/EditorView/EditorPanels.tsx");
-/* harmony import */ var _EditorToolbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EditorToolbar */ "./src/components/EditorView/EditorToolbar.tsx");
-/* harmony import */ var _FileList_FileList__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../FileList/FileList */ "./src/components/FileList/FileList.tsx");
-/* harmony import */ var _KeyboardShortcuts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./KeyboardShortcuts */ "./src/components/EditorView/KeyboardShortcuts.tsx");
-/* harmony import */ var _NoFileSelected__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./NoFileSelected */ "./src/components/EditorView/NoFileSelected.tsx");
-/* harmony import */ var _PageMetadata__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../PageMetadata */ "./src/components/PageMetadata.tsx");
-/* harmony import */ var _features_preferences_index__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../features/preferences/index */ "./src/features/preferences/index.tsx");
-/* harmony import */ var _shell_ContentShell__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../shell/ContentShell */ "./src/components/shell/ContentShell.tsx");
-/* harmony import */ var _shell_EditorShell__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../shell/EditorShell */ "./src/components/shell/EditorShell.tsx");
-/* harmony import */ var _shell_LayoutShell__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../shell/LayoutShell */ "./src/components/shell/LayoutShell.tsx");
-/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
-/* harmony import */ var _widgets_Banner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../widgets/Banner */ "./src/components/widgets/Banner.tsx");
-/* harmony import */ var _widgets_KeybindingsManager__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../widgets/KeybindingsManager */ "./src/components/widgets/KeybindingsManager.tsx");
-/* harmony import */ var _widgets_LazyLoad__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../widgets/LazyLoad */ "./src/components/widgets/LazyLoad.tsx");
-/* harmony import */ var _widgets_ModalDialog__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../widgets/ModalDialog */ "./src/components/widgets/ModalDialog.tsx");
-/* harmony import */ var _widgets_ProgressIndicator__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../widgets/ProgressIndicator */ "./src/components/widgets/ProgressIndicator.tsx");
-/* harmony import */ var _GeneratedView__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./GeneratedView */ "./src/components/EditorView/GeneratedView.tsx");
-/* harmony import */ var _GenerationErrors__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./GenerationErrors */ "./src/components/EditorView/GenerationErrors.tsx");
+/* harmony import */ var _EditorView_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditorView.css */ "./src/components/EditorView/EditorView.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _widgets_react_multi_split_pane__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../widgets/react-multi-split-pane */ "./src/components/widgets/react-multi-split-pane/index.tsx");
+/* harmony import */ var _EditorFooter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./EditorFooter */ "./src/components/EditorView/EditorFooter.tsx");
+/* harmony import */ var _EditorPanels__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EditorPanels */ "./src/components/EditorView/EditorPanels.tsx");
+/* harmony import */ var _EditorToolbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./EditorToolbar */ "./src/components/EditorView/EditorToolbar.tsx");
+/* harmony import */ var _FileList_FileList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../FileList/FileList */ "./src/components/FileList/FileList.tsx");
+/* harmony import */ var _KeyboardShortcuts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./KeyboardShortcuts */ "./src/components/EditorView/KeyboardShortcuts.tsx");
+/* harmony import */ var _NoFileSelected__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./NoFileSelected */ "./src/components/EditorView/NoFileSelected.tsx");
+/* harmony import */ var _PageMetadata__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../PageMetadata */ "./src/components/PageMetadata.tsx");
+/* harmony import */ var _features_preferences_index__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../features/preferences/index */ "./src/features/preferences/index.tsx");
+/* harmony import */ var _shell_ContentShell__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../shell/ContentShell */ "./src/components/shell/ContentShell.tsx");
+/* harmony import */ var _shell_EditorShell__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../shell/EditorShell */ "./src/components/shell/EditorShell.tsx");
+/* harmony import */ var _shell_LayoutShell__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../shell/LayoutShell */ "./src/components/shell/LayoutShell.tsx");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
+/* harmony import */ var _widgets_Banner__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../widgets/Banner */ "./src/components/widgets/Banner.tsx");
+/* harmony import */ var _widgets_KeybindingsManager__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../widgets/KeybindingsManager */ "./src/components/widgets/KeybindingsManager.tsx");
+/* harmony import */ var _widgets_LazyLoad__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../widgets/LazyLoad */ "./src/components/widgets/LazyLoad.tsx");
+/* harmony import */ var _widgets_ModalDialog__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../widgets/ModalDialog */ "./src/components/widgets/ModalDialog.tsx");
+/* harmony import */ var _widgets_ProgressIndicator__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../widgets/ProgressIndicator */ "./src/components/widgets/ProgressIndicator.tsx");
+/* harmony import */ var _GeneratedView__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./GeneratedView */ "./src/components/EditorView/GeneratedView.tsx");
+/* harmony import */ var _GenerationErrors__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./GenerationErrors */ "./src/components/EditorView/GenerationErrors.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -1062,9 +1191,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorView.tsx.ittf
 */
+
 
 
 // import Split from 'react-split'
@@ -1253,24 +1383,31 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         previewURL,
         loggedUser,
         onExecuteWizziJob,
+        onExecuteWizziMetaFolder,
+        previewKind,
         generatedArtifact,
         mTreeBuildupScript,
         mTreeIttf,
         isWizziJobWaiting,
         wizzifiedIttfContent,
+        codeASTContent,
         wizziError,
+        onGenerateArtifactPreview,
         onMTreePreview,
-        onMTreeDebugInfoPreview
+        onMTreeDebugInfoPreview,
+        onBrowsePreview,
+        onWizzifyPreview,
+        onCodeASTPreview
       } = this.props;
       const annotations = this.props.annotations;
       const testPreviewURL = "".concat("https://www.wizzihub.com", "/~/").concat(encodeURIComponent(owner), "/").concat(encodeURIComponent(name));
       console.log('EditorView.props', this.props, mainIttf, wizziSchema, __filename);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_shell_ContentShell__WEBPACK_IMPORTED_MODULE_11__.ContentShell, null, this.state.loadedEditor ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_ProgressIndicator__WEBPACK_IMPORTED_MODULE_19__.ProgressIndicator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_PageMetadata__WEBPACK_IMPORTED_MODULE_9__.default, {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_shell_ContentShell__WEBPACK_IMPORTED_MODULE_12__.ContentShell, null, this.state.loadedEditor ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_ProgressIndicator__WEBPACK_IMPORTED_MODULE_20__.ProgressIndicator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_PageMetadata__WEBPACK_IMPORTED_MODULE_10__.default, {
         name: name,
         description: description,
         id: id
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_KeybindingsManager__WEBPACK_IMPORTED_MODULE_16__.default, {
-        bindings: _KeyboardShortcuts__WEBPACK_IMPORTED_MODULE_7__.Shortcuts,
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_KeybindingsManager__WEBPACK_IMPORTED_MODULE_17__.default, {
+        bindings: _KeyboardShortcuts__WEBPACK_IMPORTED_MODULE_8__.Shortcuts,
         onTrigger: type => {
           const commands = {
             tree: this._toggleFileTree,
@@ -1283,7 +1420,7 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
             fn();
           }
         }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_EditorToolbar__WEBPACK_IMPORTED_MODULE_5__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_EditorToolbar__WEBPACK_IMPORTED_MODULE_6__.default, {
         packiProduction: packiProduction,
         name: name,
         description: description,
@@ -1302,16 +1439,23 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         onShowEditModal: this._handleShowTitleDescriptionModal,
         onDismissEditModal: this._handleDismissEditModal,
         onExecuteWizziJob: onExecuteWizziJob,
+        onExecuteWizziMetaFolder: onExecuteWizziMetaFolder,
         onSubmitMetadata: this.props.onSubmitMetadata,
         onDownloadCode: this.props.onDownloadAsync,
         onPublishAsync: onPublishAsync
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
         className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.editorAreaOuterWrapper)
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
         className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.editorAreaOuter)
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_shell_LayoutShell__WEBPACK_IMPORTED_MODULE_13__.LayoutShell, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_splitter_Split__WEBPACK_IMPORTED_MODULE_2__.Split, {
-        initialPrimarySize: "30%"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_FileList_FileList__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_shell_LayoutShell__WEBPACK_IMPORTED_MODULE_14__.LayoutShell, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_react_multi_split_pane__WEBPACK_IMPORTED_MODULE_3__.SplitPane, {
+        split: "vertical",
+        defaultSizes: JSON.parse(localStorage.getItem('splitPos1')) || undefined,
+        onDragFinished: size => localStorage.setItem('splitPos1', JSON.stringify(size)),
+        minSize: [240, 400],
+        style: {
+          position: 'relative'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_FileList_FileList__WEBPACK_IMPORTED_MODULE_7__.default, {
         annotations: annotations,
         visible: preferences.fileTreeShown,
         files: files,
@@ -1323,9 +1467,15 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         onRenameFile: this._handleRenameFile,
         onDownloadCode: this.props.onDownloadAsync,
         saveStatus: saveStatus
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_splitter_Split__WEBPACK_IMPORTED_MODULE_2__.Split, {
-        initialPrimarySize: "60%"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_LazyLoad__WEBPACK_IMPORTED_MODULE_17__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_react_multi_split_pane__WEBPACK_IMPORTED_MODULE_3__.SplitPane, {
+        split: "vertical",
+        defaultSizes: JSON.parse(localStorage.getItem('splitPos2')) || undefined,
+        onDragFinished: size => localStorage.setItem('splitPos2', JSON.stringify(size)),
+        minSize: [200, 200],
+        style: {
+          position: 'relative'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_LazyLoad__WEBPACK_IMPORTED_MODULE_18__.default, {
         load: async () => {
           let timeout; // Fallback to simple editor if monaco editor takes too long to load
 
@@ -1367,95 +1517,105 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
           const isMarkdown = selectedFile.endsWith('.md');
 
           if (isMarkdown && this.state.isMarkdownPreview) {
-            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_LazyLoad__WEBPACK_IMPORTED_MODULE_17__.default, {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react__WEBPACK_IMPORTED_MODULE_2__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_LazyLoad__WEBPACK_IMPORTED_MODULE_18__.default, {
               load: () => Promise.all(/*! import() | Markdown/MarkdownPreview */[__webpack_require__.e("vendors-node_modules_escape-html_index_js-node_modules_marked_lib_marked_js-node_modules_pris-17ca71"), __webpack_require__.e("Markdown/MarkdownPreview")]).then(__webpack_require__.bind(__webpack_require__, /*! ../Markdown/MarkdownPreview */ "./src/components/Markdown/MarkdownPreview.tsx"))
             }, ({
               loaded: mdLoaded,
               data: MarkdownPreview
             }) => {
               if (mdLoaded && MarkdownPreview) {
-                return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(MarkdownPreview, {
+                return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(MarkdownPreview, {
                   source: contents
                 });
               }
 
-              return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_shell_EditorShell__WEBPACK_IMPORTED_MODULE_12__.EditorShell, null);
-            }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", {
+              return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_shell_EditorShell__WEBPACK_IMPORTED_MODULE_13__.EditorShell, null);
+            }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {
               className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.previewToggle),
               onClick: this._toggleMarkdownPreview
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
               width: "12px",
               height: "12px",
               viewBox: "0 0 18 18",
               className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.previewToggleIcon)
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("g", {
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", {
               transform: "translate(-147.000000, -99.000000)"
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("g", {
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", {
               transform: "translate(144.000000, 96.000000)"
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
               d: "M3,17.25 L3,21 L6.75,21 L17.81,9.94 L14.06,6.19 L3,17.25 L3,17.25 Z M20.71,7.04 C21.1,6.65 21.1,6.02 20.71,5.63 L18.37,3.29 C17.98,2.9 17.35,2.9 16.96,3.29 L15.13,5.12 L18.88,8.87 L20.71,7.04 L20.71,7.04 Z"
             }))))));
           }
 
           if (loaded && Comp) {
-            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
               className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.editorComponentOuter)
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Comp, {
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(Comp, {
               className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.editorComponent),
               selectedFile: selectedFile,
               files: files,
               autoFocus: !/Untitled file.*\.(js|tsx?)$/.test(selectedFile),
-              annotations: annotations,
               readOnly: this.props.readOnly,
               updateFiles: this.props.updateFiles,
               onSelectFile: this.props.onSelectFile,
-              lineNumbers: "undefined"
-            }), isMarkdown ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", {
+              wordWrap: "off"
+            }), isMarkdown ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {
               className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.previewToggle),
               onClick: this._toggleMarkdownPreview
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
               width: "16px",
               height: "12px",
               viewBox: "0 0 22 16",
               className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.previewToggleIcon)
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("g", {
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", {
               transform: "translate(-145.000000, -1156.000000)"
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("g", {
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", {
               transform: "translate(144.000000, 1152.000000)"
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
               d: "M12,4.5 C7,4.5 2.73,7.61 1,12 C2.73,16.39 7,19.5 12,19.5 C17,19.5 21.27,16.39 23,12 C21.27,7.61 17,4.5 12,4.5 L12,4.5 Z M12,17 C9.24,17 7,14.76 7,12 C7,9.24 9.24,7 12,7 C14.76,7 17,9.24 17,12 C17,14.76 14.76,17 12,17 L12,17 Z M12,9 C10.34,9 9,10.34 9,12 C9,13.66 10.34,15 12,15 C13.66,15 15,13.66 15,12 C15,10.34 13.66,9 12,9 L12,9 Z"
             }))))) : null);
           }
         } else {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_NoFileSelected__WEBPACK_IMPORTED_MODULE_8__.default, null);
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_NoFileSelected__WEBPACK_IMPORTED_MODULE_9__.default, null);
         }
 
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_shell_EditorShell__WEBPACK_IMPORTED_MODULE_12__.EditorShell, null);
-      }), wizziError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_GenerationErrors__WEBPACK_IMPORTED_MODULE_21__.default, {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_shell_EditorShell__WEBPACK_IMPORTED_MODULE_13__.EditorShell, null);
+      }), wizziError ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_GenerationErrors__WEBPACK_IMPORTED_MODULE_22__.default, {
+        key: "GeneratedView",
         error: wizziError
-      }) : generatedArtifact && generatedArtifact.artifactContent || wizzifiedIttfContent ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_GeneratedView__WEBPACK_IMPORTED_MODULE_20__.default, {
+      }) : generatedArtifact && generatedArtifact.artifactContent || wizzifiedIttfContent || codeASTContent ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_GeneratedView__WEBPACK_IMPORTED_MODULE_21__.default, {
+        key: "GeneratedView",
         selectedFile: this.props.selectedFile,
         generatedContent: generatedArtifact ? generatedArtifact.artifactContent : undefined,
         generatedSourcePath: generatedArtifact ? generatedArtifact.sourcePath : undefined,
         mTreeBuildupScript: mTreeBuildupScript,
         mTreeIttf: mTreeIttf,
         wizzifiedIttfContent: wizzifiedIttfContent,
+        codeASTContent: codeASTContent,
         generatedPreviewURL: previewURL,
+        previewKind: previewKind,
         splitViewKind: this.state.splitViewKind,
+        onGenerateArtifactPreview: onGenerateArtifactPreview,
         onMTreePreview: onMTreePreview,
-        onMTreeDebugInfoPreview: onMTreeDebugInfoPreview
-      }) : generatedArtifact && generatedArtifact.errorLines ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_GenerationErrors__WEBPACK_IMPORTED_MODULE_21__.default, {
+        onMTreeDebugInfoPreview: onMTreeDebugInfoPreview,
+        onBrowsePreview: onBrowsePreview,
+        onWizzifyPreview: onWizzifyPreview,
+        onCodeASTPreview: onCodeASTPreview
+      }) : generatedArtifact && generatedArtifact.errorLines ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_GenerationErrors__WEBPACK_IMPORTED_MODULE_22__.default, {
+        key: "GeneratedView",
         errorName: generatedArtifact.errorName,
         errorLines: generatedArtifact.errorLines,
         errorMessage: generatedArtifact.errorMessage,
         errorStack: generatedArtifact.errorStack
-      }) : null))), preferences.panelsShown ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_EditorPanels__WEBPACK_IMPORTED_MODULE_4__.default, {
+      }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+        key: "GeneratedView"
+      }, "No data")))), preferences.panelsShown ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_EditorPanels__WEBPACK_IMPORTED_MODULE_5__.default, {
         annotations: annotations,
         onShowErrorPanel: this._showErrorPanel,
         onTogglePanels: this._togglePanels,
         onSelectFile: this.props.onSelectFile,
         panelType: preferences.panelType
-      }) : null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_EditorFooter__WEBPACK_IMPORTED_MODULE_3__.default, {
+      }) : null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_EditorFooter__WEBPACK_IMPORTED_MODULE_4__.default, {
         annotations: annotations,
         loggedUser: loggedUser,
         fileTreeShown: preferences.fileTreeShown,
@@ -1468,16 +1628,16 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         theme: this.props.preferences.theme,
         autoGenSingleDoc: preferences.autoGenSingleDoc,
         autoExecJob: preferences.autoExecJob
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_ModalDialog__WEBPACK_IMPORTED_MODULE_18__.ModalDialog, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_ModalDialog__WEBPACK_IMPORTED_MODULE_19__.ModalDialog, {
         visible: currentModal === 'shortcuts',
         onDismiss: this._handleHideModal
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_KeyboardShortcuts__WEBPACK_IMPORTED_MODULE_7__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_Banner__WEBPACK_IMPORTED_MODULE_15__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_KeyboardShortcuts__WEBPACK_IMPORTED_MODULE_8__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_Banner__WEBPACK_IMPORTED_MODULE_16__.default, {
         type: "info",
         visible: currentBanner === 'autosave-disabled'
-      }, "Automatic saving has been disabled in this Packi because you have it open in another tab."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_Banner__WEBPACK_IMPORTED_MODULE_15__.default, {
+      }, "Automatic saving has been disabled in this Packi because you have it open in another tab."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_Banner__WEBPACK_IMPORTED_MODULE_16__.default, {
         type: "info",
         visible: currentBanner === 'slow-connection'
-      }, "Slow network detected. Trying to load a basic version of the editor. Some features such as linting and autocomplete may not work."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_Banner__WEBPACK_IMPORTED_MODULE_15__.default, {
+      }, "Slow network detected. Trying to load a basic version of the editor. Some features such as linting and autocomplete may not work."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_Banner__WEBPACK_IMPORTED_MODULE_16__.default, {
         type: "info",
         visible: currentBanner === 'export-unavailable'
       }, "You need to save the Packi first to export the code!"));
@@ -1504,9 +1664,9 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return EditorViewComp;
-}(react__WEBPACK_IMPORTED_MODULE_1__.Component);
+}(react__WEBPACK_IMPORTED_MODULE_2__.Component);
 
-const EditorView = (0,_features_preferences_index__WEBPACK_IMPORTED_MODULE_10__.withPreferences)(EditorViewComp);
+const EditorView = (0,_features_preferences_index__WEBPACK_IMPORTED_MODULE_11__.withPreferences)(EditorViewComp);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EditorView);
 const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
   editorAreaOuter: {
@@ -1530,8 +1690,8 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
     maxHeight: 'calc(100% - 48px)'
   },
   preview: {
-    backgroundColor: (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_14__.c)('content'),
-    borderLeft: "1px solid ".concat((0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_14__.c)('border'))
+    backgroundColor: (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_15__.c)('content'),
+    borderLeft: "1px solid ".concat((0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_15__.c)('border'))
   },
   previewToggle: {
     appearance: 'none',
@@ -1544,8 +1704,8 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
     width: 48,
     border: 0,
     borderRadius: '50%',
-    backgroundColor: (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_14__.c)('secondary'),
-    color: (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_14__.c)('secondary-text'),
+    backgroundColor: (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_15__.c)('secondary'),
+    color: (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_15__.c)('secondary-text'),
     outline: 0,
     transitionDuration: '170ms',
     transitionProperty: 'box-shadow',
@@ -1554,7 +1714,7 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
       outline: 'auto'
     },
     ':hover': {
-      boxShadow: (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_14__.s)('small')
+      boxShadow: (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_15__.s)('small')
     }
   },
   previewToggleIcon: {
@@ -1562,8 +1722,6 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
     verticalAlign: -1
   },
   editorComponentOuter: {
-    border: '0.3em solid rgb(122, 102, 82)',
-    borderRadius: '0.5em',
     height: '100%',
     width: '100%'
   },
@@ -1582,21 +1740,24 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+var __filename = "/index.js";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/createStyles.js");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
-/* harmony import */ var _material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Tooltip */ "./node_modules/@material-ui/core/esm/Tooltip/Tooltip.js");
-/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/IconButton.js");
-/* harmony import */ var _material_ui_icons_ViewList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/ViewList */ "./node_modules/@material-ui/icons/ViewList.js");
-/* harmony import */ var _material_ui_icons_AccountTree__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/AccountTree */ "./node_modules/@material-ui/icons/AccountTree.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/createStyles.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Tooltip */ "./node_modules/@material-ui/core/esm/Tooltip/Tooltip.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/IconButton.js");
+/* harmony import */ var _material_ui_icons_ViewList__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/ViewList */ "./node_modules/@material-ui/icons/ViewList.js");
+/* harmony import */ var _material_ui_icons_AccountTree__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/AccountTree */ "./node_modules/@material-ui/icons/AccountTree.js");
 /* harmony import */ var _assets_BrowserIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/BrowserIcon */ "./src/assets/BrowserIcon.tsx");
 /* harmony import */ var _assets_DebugIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/DebugIcon */ "./src/assets/DebugIcon.tsx");
-/* harmony import */ var _CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../CodeView/SyntaxHighlighter */ "./src/components/CodeView/SyntaxHighlighter.tsx");
-/* harmony import */ var _widgets_WebFrame__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../widgets/WebFrame */ "./src/components/widgets/WebFrame.tsx");
+/* harmony import */ var _assets_AstIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/AstIcon */ "./src/assets/AstIcon.tsx");
+/* harmony import */ var _assets_WizzifiedIcon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/WizzifiedIcon */ "./src/assets/WizzifiedIcon.tsx");
+/* harmony import */ var _CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../CodeView/SyntaxHighlighter */ "./src/components/CodeView/SyntaxHighlighter.tsx");
+/* harmony import */ var _widgets_WebFrame__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../widgets/WebFrame */ "./src/components/widgets/WebFrame.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -1621,9 +1782,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\GeneratedView.tsx.ittf
 */
+
+
 
 
 
@@ -1647,33 +1810,17 @@ let GeneratedView = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, ...args);
 
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      view: 'generated'
-    });
+    _defineProperty(_assertThisInitialized(_this), "_handleGenerateArtifact", () => _this.props.onGenerateArtifactPreview());
 
-    _defineProperty(_assertThisInitialized(_this), "_handleGenerated", () => _this.setState({
-      view: 'generated'
-    }));
+    _defineProperty(_assertThisInitialized(_this), "_handleMTree", () => _this.props.onMTreePreview());
 
-    _defineProperty(_assertThisInitialized(_this), "_handleMTree", () => {
-      _this.props.onMTreePreview();
+    _defineProperty(_assertThisInitialized(_this), "_handleMTreeDebugInfo", () => _this.props.onMTreeDebugInfoPreview());
 
-      _this.setState({
-        view: 'mtreeIttf'
-      });
-    });
+    _defineProperty(_assertThisInitialized(_this), "_handleBrowse", () => _this.props.onBrowsePreview());
 
-    _defineProperty(_assertThisInitialized(_this), "_handleMTreeDebugInfo", () => {
-      _this.props.onMTreeDebugInfoPreview();
+    _defineProperty(_assertThisInitialized(_this), "_handleWizzify", () => _this.props.onWizzifyPreview());
 
-      _this.setState({
-        view: 'mTreeBuildupScript'
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "_handleBrowser", () => _this.setState({
-      view: 'browser'
-    }));
+    _defineProperty(_assertThisInitialized(_this), "_handleCodeAST", () => _this.props.onCodeASTPreview());
 
     return _this;
   }
@@ -1683,97 +1830,123 @@ let GeneratedView = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       const {
         classes,
+        previewKind,
         splitViewKind,
         selectedFile
       } = this.props;
-      const {
-        view
-      } = this.state;
+      const isIttf = selectedFile && selectedFile.endsWith('.ittf');
+      console.log('GeneratedView.isIttf', isIttf, 'previewKind', previewKind, __filename);
+      console.log('GeneratedView.props', this.props, __filename);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: splitViewKind === 'right' ? classes.containerFull : classes.container
-      }, view === 'generated' && this.props.generatedContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, previewKind === 'generated' && this.props.generatedContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.editor
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_3__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_5__.default, {
         className: classes.syntaxHigh,
         code: this.props.generatedContent,
         filePath: selectedFile.substr(0, selectedFile.length - 5),
         lineNumbers: true
-      })), view === 'generated' && this.props.wizzifiedIttfContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      })), previewKind === 'mTreeIttf' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.editor
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_3__.default, {
-        className: classes.syntaxHigh,
-        code: this.props.wizzifiedIttfContent,
-        filePath: selectedFile,
-        lineNumbers: true
-      })), view === 'mtreeIttf' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: classes.editor
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_3__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_5__.default, {
         className: classes.syntaxHigh,
         code: this.props.mTreeIttf || '',
         filePath: 'mTree.ittf',
         lineNumbers: true
-      })), view === 'mTreeBuildupScript' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      })), previewKind === 'mTreeBuildupScript' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.editor
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_3__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_5__.default, {
         className: classes.syntaxHigh,
         code: this.props.mTreeBuildupScript || '',
         filePath: 'mTreeBuildupScript.js',
         lineNumbers: true
-      })), view === 'browser' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      })), previewKind === 'browser' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.browserOuter
-      }, this.props.generatedSourcePath.endsWith('.html.ittf') || this.props.generatedSourcePath.endsWith('.svg.ittf') ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_WebFrame__WEBPACK_IMPORTED_MODULE_4__.default, {
+      }, this.props.generatedSourcePath.endsWith('.html.ittf') || this.props.generatedSourcePath.endsWith('.svg.ittf') ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_WebFrame__WEBPACK_IMPORTED_MODULE_6__.default, {
         previewURL: this.props.generatedPreviewURL
-      }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "No viewer for document", this.props.generatedSourcePath)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "No browser viewer for document")( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, this.props.generatedSourcePath))), previewKind === 'wizzified' && this.props.wizzifiedIttfContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: classes.editor
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_5__.default, {
+        className: classes.syntaxHigh,
+        code: this.props.wizzifiedIttfContent,
+        filePath: selectedFile,
+        lineNumbers: true
+      })), previewKind === 'codeAST' && this.props.codeASTContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: classes.editor
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_5__.default, {
+        className: classes.syntaxHigh,
+        code: this.props.codeASTContent,
+        filePath: selectedFile,
+        lineNumbers: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sidebar
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, isIttf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sbItem
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_5__.default, {
-        title: "View generated content"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
-        onClick: this._handleGenerated,
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
+        title: "View generated artifact content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+        onClick: this._handleGenerateArtifact,
         classes: {
           root: classes.iconButton
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_icons_ViewList__WEBPACK_IMPORTED_MODULE_7__.default, null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_icons_ViewList__WEBPACK_IMPORTED_MODULE_9__.default, null)))), isIttf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sbItem
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_5__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
         title: "View mTree"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
         onClick: this._handleMTree,
         classes: {
           root: classes.iconButton
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_icons_AccountTree__WEBPACK_IMPORTED_MODULE_8__.default, null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_icons_AccountTree__WEBPACK_IMPORTED_MODULE_10__.default, null)))), isIttf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sbItem
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_5__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
         title: "View mTree build script"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
         onClick: this._handleMTreeDebugInfo,
         classes: {
           root: classes.iconButton
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_DebugIcon__WEBPACK_IMPORTED_MODULE_2__.DebugIcon, null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_DebugIcon__WEBPACK_IMPORTED_MODULE_2__.DebugIcon, null)))), isIttf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sbItem
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_5__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
         title: "Browse artifact"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
-        onClick: this._handleBrowser,
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+        onClick: this._handleBrowse,
         classes: {
           root: classes.iconButton
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_BrowserIcon__WEBPACK_IMPORTED_MODULE_1__.BrowserIcon, null))))));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_BrowserIcon__WEBPACK_IMPORTED_MODULE_1__.BrowserIcon, null)))), isIttf == false && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: classes.sbItem
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
+        title: "Wizzify source"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+        onClick: this._handleWizzify,
+        classes: {
+          root: classes.iconButton
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_WizzifiedIcon__WEBPACK_IMPORTED_MODULE_4__.WizzifiedIcon, null)))), isIttf == false && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: classes.sbItem
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
+        title: "Get code AST"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+        onClick: this._handleCodeAST,
+        classes: {
+          root: classes.iconButton
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_AstIcon__WEBPACK_IMPORTED_MODULE_3__.AstIcon, null))))));
     }
   }]);
 
   return GeneratedView;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_9__.default)({
+const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_11__.default)({
   container: {
     display: 'flex',
     flexDirection: 'row',
     borderLeft: '1px solid #cccccc',
-    width: '44vw',
+    width: '100%',
     height: '100%'
   },
   containerFull: {
@@ -1784,12 +1957,10 @@ const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_
     height: '100%'
   },
   editor: {
-    width: '90%'
+    width: '92%'
   },
   browserOuter: {
-    border: '0.3em solid rgb(122, 102, 82)',
-    borderRadius: '0.5em',
-    width: '90%'
+    width: '92%'
   },
   syntaxHigh: {
     margin: 0,
@@ -1800,8 +1971,8 @@ const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'start',
-    width: '10%',
-    background: theme.palette.primary.light
+    width: '8%',
+    backgroundColor: '#666'
   },
   sbItem: {
     display: 'flex',
@@ -1812,7 +1983,7 @@ const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_
   }
 });
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_10__.default)(muiStyles)(GeneratedView));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_12__.default)(muiStyles)(GeneratedView));
 
 /***/ }),
 
@@ -1853,7 +2024,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\GenerationErrors.tsx.ittf
 */
 
@@ -1876,17 +2047,70 @@ let GenerationErrors = /*#__PURE__*/function (_React$Component) {
         classes,
         error
       } = this.props;
-      const {
+      var {
         name,
         message,
+        data,
+        inner,
+        ittfDocumentUri,
+        method,
+        uri,
+        mixerUri,
         stack,
         errorLines
       } = error;
+
+      if (data) {
+        if (data.errorName) {
+          name = data.errorName;
+        }
+
+        if (data.method) {
+          method = data.method;
+        }
+
+        if (data.uri) {
+          ittfDocumentUri = data.uri;
+        }
+
+        if (data.mixerUri) {
+          mixerUri = data.mixerUri;
+        }
+
+        if (data.errorLines) {
+          errorLines = data.errorLines;
+        }
+      }
+
+      if (inner) {
+        if (inner.name) {
+          name = inner.name;
+        }
+
+        if (inner.message) {
+          message = inner.message;
+        }
+
+        if (inner.stack) {
+          stack = inner.stack;
+        }
+
+        if (inner.errorLines) {
+          errorLines = inner.errorLines;
+        }
+      }
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.container
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.errorName
-      }, name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, name), method && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: classes.errorMethod
+      }, "Method: ", method), ittfDocumentUri && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: classes.errorUri
+      }, "In ITTF Document: ", ittfDocumentUri), mixerUri && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: classes.errorUri
+      }, "Mixed by ITTF Document: ", mixerUri), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.message
       }, message && message.split(',').map((line, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         key: i
@@ -1913,6 +2137,14 @@ const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_
   errorName: {
     padding: '15px 30px',
     fontSize: '28px'
+  },
+  errorMethod: {
+    padding: '5px 10px',
+    fontSize: '20px'
+  },
+  errorUri: {
+    padding: '5px 10px',
+    fontSize: '20px'
   },
   message: {
     padding: '15px 30px',
@@ -1967,7 +2199,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\KeyboardShortcuts.tsx.ittf
 */
 
@@ -2097,7 +2329,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\ModalProductionDetails.tsx.ittf
 */
 
@@ -2160,7 +2392,8 @@ let ModalProductionDetails = /*#__PURE__*/function (_React$Component) {
         title,
         onDismiss,
         isWorking,
-        action
+        action,
+        packiProduction
       } = this.props;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_ModalDialog__WEBPACK_IMPORTED_MODULE_7__.ModalDialog, {
         visible: visible,
@@ -2170,7 +2403,7 @@ let ModalProductionDetails = /*#__PURE__*/function (_React$Component) {
         onSubmit: this._handleSubmit
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h4", {
         className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.subtitle)
-      }, "Project name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(ValidatedInput, {
+      }, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(ValidatedInput, {
         name: "name" // @ts-ignore
         ,
         autoFocus: true,
@@ -2185,7 +2418,7 @@ let ModalProductionDetails = /*#__PURE__*/function (_React$Component) {
         value: this.state.description,
         onChange: this.handleChange,
         minRows: 4
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h4", {
+      }), packiProduction == "artifact" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h4", {
         className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.subtitle)
       }, "Main ittf"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_LargeInput__WEBPACK_IMPORTED_MODULE_5__.default, {
         name: "mainIttf",
@@ -2197,7 +2430,7 @@ let ModalProductionDetails = /*#__PURE__*/function (_React$Component) {
         name: "wizziSchema",
         value: this.state.wizziSchema,
         onChange: this.handleChange
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
         className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.buttons)
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(FormButton // @ts-ignore
       , {
@@ -2297,7 +2530,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\NoFileSelected.tsx.ittf
 */
 
@@ -2364,7 +2597,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\ProblemsPanel.tsx.ittf
 */
 
@@ -2599,7 +2832,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\UserMenu.tsx.ittf
 */
 
@@ -2812,7 +3045,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileList.tsx.ittf
 */
 
@@ -3221,19 +3454,20 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    height: '100%'
+    height: '100%',
+    width: '100%'
   },
   list: {
     padding: '0 12px',
-    height: '100%'
+    height: '100%',
+    width: '100%'
   },
   pane: {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    width: 240,
-    minWidth: 240,
     height: '100%',
+    width: '100%',
     zIndex: 10
   },
   project: {
@@ -3316,7 +3550,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListChildren.tsx.ittf
 */
 
@@ -3464,7 +3698,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntry.tsx.ittf
 */
 
@@ -3906,7 +4140,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntryBase.tsx.ittf
 */
 
@@ -4219,7 +4453,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntryDropTarget.tsx.ittf
 */
 
@@ -4392,7 +4626,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntryIcon.tsx.ittf
 */
 
@@ -4546,7 +4780,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListOpenEntry.tsx.ittf
 */
 
@@ -4689,7 +4923,7 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
   label: {
     display: 'inline-block',
     verticalAlign: -1,
-    margin: 6,
+    margin: "0 6px",
     userSelect: 'none',
     whiteSpace: 'nowrap'
   },
@@ -4738,7 +4972,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListPane.tsx.ittf
 */
 
@@ -4867,7 +5101,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListPaneButton.tsx.ittf
 */
 
@@ -4941,7 +5175,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\closeEntry.tsx.ittf
 */
 
@@ -4988,7 +5222,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\createEntryAtPath.tsx.ittf
 */
 
@@ -5035,7 +5269,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\createNewEntry.tsx.ittf
 */
 
@@ -5099,7 +5333,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\expandEntry.tsx.ittf
 */
 
@@ -5133,7 +5367,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\openEntry.tsx.ittf
 */
 
@@ -5209,7 +5443,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\pasteEntry.tsx.ittf
 */
 
@@ -5248,7 +5482,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _features_file__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../features/file */ "./src/features/file/index.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\recursivelyCreateParents.tsx.ittf
 */
 
@@ -5300,7 +5534,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\renameEntry.tsx.ittf
 */
 
@@ -5354,7 +5588,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\selectEntry.tsx.ittf
 */
 
@@ -5387,7 +5621,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\updateEntry.tsx.ittf
 */
 function updateEntry(entry, updates) {
@@ -5420,7 +5654,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\utils\convertFileStructure.tsx.ittf
 */
 
@@ -5567,7 +5801,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_helmet_async__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-helmet-async */ "./node_modules/react-helmet-async/lib/index.module.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\PageMetadata.tsx.ittf
 */
 
@@ -5575,7 +5809,7 @@ __webpack_require__.r(__webpack_exports__);
 function getPageMetadata(props) {
   const title = "".concat(props.name, " - Packi");
   const description = props.description;
-  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"https://www.wizzihub.com","API_SERVER_URL":"https://www.wizzihub.com","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1662307954213}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
+  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"https://www.wizzihub.com","API_SERVER_URL":"https://www.wizzihub.com","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1664277544181}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
   const image = 'https://s3.amazonaws.com/exp-brand-assets/PackiIcon_200.png';
   const meta = [{
     name: 'description',
@@ -5660,7 +5894,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Avatar.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -5733,7 +5967,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Banner.tsx.ittf
 */
 
@@ -5850,7 +6084,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ContextMenu.tsx.ittf
 */
 
@@ -5997,7 +6231,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\FooterButton.tsx.ittf
 */
 
@@ -6078,7 +6312,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\IconButton.tsx.ittf
 */
 
@@ -6230,7 +6464,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\KeybindingsManager.tsx.ittf
 */
 
@@ -6373,7 +6607,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\LargeInput.tsx.ittf
 */
 
@@ -6510,7 +6744,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\LargeTextArea.tsx.ittf
 */
 
@@ -6560,7 +6794,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\LoadingText.tsx.ittf
 */
 
@@ -6630,7 +6864,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FooterButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FooterButton */ "./src/components/widgets/FooterButton.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\MenuButton.tsx.ittf
 */
 
@@ -6742,7 +6976,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Modal.tsx.ittf
 */
 
@@ -6871,7 +7105,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ModalDialog.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -6925,7 +7159,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ModalSheet.tsx.ittf
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -6990,7 +7224,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ResizablePane.tsx.ittf
 */
 
@@ -7179,7 +7413,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _KeybindingsManager__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./KeybindingsManager */ "./src/components/widgets/KeybindingsManager.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ShortcutLabel.tsx.ittf
 */
 
@@ -7281,7 +7515,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Toast.tsx.ittf
 */
 
@@ -7486,7 +7720,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ToggleSwitch.tsx.ittf
 */
 
@@ -7576,7 +7810,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\WebFrame.tsx.ittf
 */
 
@@ -7614,242 +7848,507 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
 
 /***/ }),
 
-/***/ "./src/components/widgets/splitter/DefaultSplitter.tsx":
-/*!*************************************************************!*\
-  !*** ./src/components/widgets/splitter/DefaultSplitter.tsx ***!
-  \*************************************************************/
+/***/ "./src/components/widgets/react-multi-split-pane/index.tsx":
+/*!*****************************************************************!*\
+  !*** ./src/components/widgets/react-multi-split-pane/index.tsx ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "DefaultSplitter": () => (/* binding */ DefaultSplitter)
+/* harmony export */   "SplitPane": () => (/* reexport safe */ _lib_SplitPane__WEBPACK_IMPORTED_MODULE_0__.SplitPane)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _defaultSplitter_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./defaultSplitter.css */ "./src/components/widgets/splitter/defaultSplitter.css");
+/* harmony import */ var _lib_SplitPane__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/SplitPane */ "./src/components/widgets/react-multi-split-pane/lib/SplitPane.tsx");
 
-
-
-const getThinLineSize = size => `${size % 2 === 0 ? 2 : 3}px`;
-
-const getCenteredMargin = size => `${Math.max(0, Math.floor(size / 2) - 1)}px`;
-
-/**
- * The default splitter which provides a thin line within a larger mouse hit area.
- */
-const DefaultSplitter = props => {
-  const {
-    dragging,
-    pixelSize,
-    color = 'silver',
-    hoverColor = 'gray',
-    dragColor = 'black'
-  } = props;
-  const cssProperties = {
-    '--default-splitter-line-margin': getCenteredMargin(pixelSize),
-    '--default-splitter-line-size': getThinLineSize(pixelSize),
-    '--default-splitter-line-color': dragging ? dragColor : color,
-    '--default-splitter-line-hover-color': dragging ? dragColor : hoverColor
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "default-splitter",
-    style: cssProperties
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "line"
-  }));
-};
 
 /***/ }),
 
-/***/ "./src/components/widgets/splitter/Split.tsx":
-/*!***************************************************!*\
-  !*** ./src/components/widgets/splitter/Split.tsx ***!
-  \***************************************************/
+/***/ "./src/components/widgets/react-multi-split-pane/lib/Pane.tsx":
+/*!********************************************************************!*\
+  !*** ./src/components/widgets/react-multi-split-pane/lib/Pane.tsx ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Split": () => (/* binding */ Split)
+/* harmony export */   "Pane": () => (/* binding */ Pane)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_measure__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-measure */ "./node_modules/react-measure/dist/index.esm.js");
-/* harmony import */ var _DefaultSplitter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DefaultSplitter */ "./src/components/widgets/splitter/DefaultSplitter.tsx");
-/* harmony import */ var _split_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./split.css */ "./src/components/widgets/splitter/split.css");
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-
-
-
-const Split = props => {
-  const {
-    horizontal = false,
-    initialPrimarySize = '50%',
-    minPrimarySize = '0px',
-    minSecondarySize = '0px',
-    splitterSize = '7px',
-    renderSplitter,
-    resetOnDoubleClick = false,
-    defaultSplitterColors = {
-      color: 'silver',
-      hover: 'gray',
-      drag: 'black'
-    },
-    onSplitChanged,
-    onMeasuredSizesChanged
-  } = props;
-  const [contentMeasuredDimensions, setContentMeasuredDimensions] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
-    height: 0,
-    width: 0
-  });
-  const [primaryMeasuredDimensions, setPrimaryMeasuredDimensions] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
-    height: 0,
-    width: 0
-  });
-  const [splitterMeasuredDimensions, setSplitterMeasuredDimensions] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
-    height: 0,
-    width: 0
-  });
-  const currentContentSize = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => horizontal ? contentMeasuredDimensions.height : contentMeasuredDimensions.width, [horizontal, contentMeasuredDimensions]);
-  const currentPrimarySize = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => horizontal ? primaryMeasuredDimensions.height : primaryMeasuredDimensions.width, [horizontal, primaryMeasuredDimensions]);
-  const currentSplitterSize = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => horizontal ? splitterMeasuredDimensions.height : splitterMeasuredDimensions.width, [horizontal, splitterMeasuredDimensions]);
-  const [percent, setPercent] = react__WEBPACK_IMPORTED_MODULE_0__.useState(undefined);
-  const [clientStart, setClientStart] = react__WEBPACK_IMPORTED_MODULE_0__.useState(0);
-  const [primaryStart, setPrimaryStart] = react__WEBPACK_IMPORTED_MODULE_0__.useState(0);
-  const [dragging, setDragging] = react__WEBPACK_IMPORTED_MODULE_0__.useState(false);
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
-    if (onSplitChanged) {
-      onSplitChanged(percent !== undefined ? `${percent}%` : initialPrimarySize);
-    }
-  }, [percent, initialPrimarySize]);
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
-    if (onMeasuredSizesChanged) {
-      onMeasuredSizesChanged({
-        primary: currentPrimarySize,
-        splitter: currentSplitterSize,
-        secondary: currentContentSize - (currentPrimarySize + currentSplitterSize)
-      });
-    }
-  }, [horizontal, currentContentSize, currentPrimarySize, currentSplitterSize]);
-
-  const onMeasureContent = contentRect => {
-    contentRect.bounds && setContentMeasuredDimensions({
-      height: contentRect.bounds.height,
-      width: contentRect.bounds.width
-    });
-  };
-
-  const onMeasurePrimary = contentRect => {
-    contentRect.bounds && setPrimaryMeasuredDimensions({
-      height: contentRect.bounds.height,
-      width: contentRect.bounds.width
-    });
-  };
-
-  const onMeasureSplitter = contentRect => {
-    contentRect.bounds && setSplitterMeasuredDimensions({
-      height: contentRect.bounds.height,
-      width: contentRect.bounds.width
-    });
-  };
-
-  const onSplitPointerDown = event => {
-    event.currentTarget.setPointerCapture(event.pointerId);
-    setClientStart(horizontal ? event.clientY : event.clientX);
-    setPrimaryStart(currentPrimarySize);
-    setDragging(true);
-  };
-
-  const onSplitPointerMove = event => {
-    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
-      const position = horizontal ? event.clientY : event.clientX;
-      const primarySize = primaryStart + (position - clientStart);
-      const newPrimary = Math.max(0, Math.min(primarySize, currentContentSize));
-      const newPercent = newPrimary / currentContentSize * 100;
-      setPercent(newPercent);
-    }
-  };
-
-  const onSplitPointerUp = event => {
-    event.currentTarget.releasePointerCapture(event.pointerId);
-    setDragging(false);
-  };
-
-  const onSplitDoubleClick = () => {
-    resetOnDoubleClick && setPercent(undefined);
-  };
-
-  const children = react__WEBPACK_IMPORTED_MODULE_0__.Children.toArray(props.children);
-  const primaryChild = children.length > 0 ? children[0] : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null);
-  const secondaryChild = children.length > 1 ? children[1] : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null);
-  const renderSizes = {
-    primary: percent !== undefined ? `${percent}%` : initialPrimarySize,
-    minPrimary: minPrimarySize ?? '0px',
-    minSecondary: minSecondarySize ?? '0px'
-  };
-  const renderSplitterProps = {
-    pixelSize: currentSplitterSize,
-    horizontal,
-    dragging: dragging
-  };
-
-  const renderSplitVisual = renderSplitter ?? (() => {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_DefaultSplitter__WEBPACK_IMPORTED_MODULE_2__.DefaultSplitter, _extends({}, renderSplitterProps, {
-      color: dragging ? defaultSplitterColors.drag : defaultSplitterColors.color,
-      hoverColor: dragging ? defaultSplitterColors.drag : defaultSplitterColors.hover
-    }));
-  });
-
-  const rootClassName = horizontal ? 'split-container horizontal' : 'split-container vertical';
-  const rootStyle = {
-    '--react-split-min-primary': renderSizes.minPrimary,
-    '--react-split-min-secondary': renderSizes.minSecondary,
-    '--react-split-primary': renderSizes.primary,
-    '--react-split-splitter': splitterSize
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_measure__WEBPACK_IMPORTED_MODULE_1__.default, {
-    bounds: true,
-    onResize: onMeasureContent
-  }, ({
-    measureRef: contentRef
-  }) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "react-split",
-    ref: contentRef
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: rootClassName,
-    style: rootStyle
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "primary"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_measure__WEBPACK_IMPORTED_MODULE_1__.default, {
-    bounds: true,
-    onResize: onMeasurePrimary
-  }, ({
-    measureRef: primaryRef
-  }) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "full-content",
-    ref: primaryRef
-  }, primaryChild))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "splitter",
-    tabIndex: -1,
-    onPointerDown: onSplitPointerDown,
-    onPointerUp: onSplitPointerUp,
-    onPointerMove: onSplitPointerMove,
-    onDoubleClick: onSplitDoubleClick
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_measure__WEBPACK_IMPORTED_MODULE_1__.default, {
-    bounds: true,
-    onResize: onMeasureSplitter
-  }, ({
-    measureRef: splitterRef
-  }) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "full-content",
-    ref: splitterRef
-  }, renderSplitVisual(renderSplitterProps)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "secondary"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "full-content"
-  }, secondaryChild)))));
+const baseStyle = {
+  position: 'relative',
+  outline: 'none',
+  border: 0,
+  overflow: 'hidden',
+  display: 'flex',
+  flexBasis: 'auto'
 };
+const Pane = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(({
+  size,
+  minSize,
+  split,
+  className,
+  forwardRef,
+  children
+}) => {
+  const style = _objectSpread(_objectSpread({}, baseStyle), {}, {
+    flexGrow: size,
+    flexShrink: size
+  });
+
+  if (split === 'vertical') {
+    style.width = 0;
+    style.height = '100%';
+    style.minWidth = minSize;
+  } else {
+    style.width = '100%';
+    style.height = 0;
+    style.minHeight = minSize;
+  }
+
+  const classes = ['Pane', split, className].join(' ');
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: classes,
+    style: style,
+    ref: forwardRef
+  }, children);
+});
+Pane.displayName = 'Pane';
+
+/***/ }),
+
+/***/ "./src/components/widgets/react-multi-split-pane/lib/Resizer.tsx":
+/*!***********************************************************************!*\
+  !*** ./src/components/widgets/react-multi-split-pane/lib/Resizer.tsx ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+var react__WEBPACK_IMPORTED_MODULE_0___namespace_cache;
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Resizer": () => (/* binding */ Resizer)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+const {
+  useCallback
+} = /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2)));
+const Resizer = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(({
+  split,
+  className,
+  index,
+  onDragStarted
+}) => {
+  const handleMouseDown = useCallback(event => {
+    event.preventDefault();
+    onDragStarted(index, event);
+  }, [index, onDragStarted]);
+  const handleTouchStart = useCallback(event => {
+    event.preventDefault();
+    onDragStarted(index, event.touches[0]);
+  }, [index, onDragStarted]);
+  const classes = ['Resizer', split, className].join(' ');
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    role: "presentation",
+    className: classes,
+    style: {
+      flex: 'none'
+    },
+    onMouseDown: handleMouseDown,
+    onTouchStart: handleTouchStart
+  });
+});
+Resizer.displayName = 'Resizer';
+
+/***/ }),
+
+/***/ "./src/components/widgets/react-multi-split-pane/lib/SplitPane.tsx":
+/*!*************************************************************************!*\
+  !*** ./src/components/widgets/react-multi-split-pane/lib/SplitPane.tsx ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+var react__WEBPACK_IMPORTED_MODULE_0___namespace_cache;
+var __filename = "/index.js";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "SplitPane": () => (/* binding */ SplitPane)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Pane__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pane */ "./src/components/widgets/react-multi-split-pane/lib/Pane.tsx");
+/* harmony import */ var _Resizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Resizer */ "./src/components/widgets/react-multi-split-pane/lib/Resizer.tsx");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./util */ "./src/components/widgets/react-multi-split-pane/lib/util.tsx");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+const {
+  useCallback,
+  useRef,
+  useState,
+  useMemo,
+  useEffect
+} = /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2)));
+
+
+
+const DEFAULT_MIN_SIZE = 50;
+
+function getNodeKey(node, index) {
+  if (typeof node === 'object' && node && node.key != null) {
+    return 'key.' + node.key;
+  }
+
+  return 'index.' + index;
+}
+
+function getMinSize(index, minSizes) {
+  if (typeof minSizes === 'number') {
+    if (minSizes > 0) {
+      return minSizes;
+    }
+  } else if (minSizes instanceof Array) {
+    const value = minSizes[index];
+
+    if (value > 0) {
+      return value;
+    }
+  }
+
+  return DEFAULT_MIN_SIZE;
+}
+
+function getDefaultSize(index, defaultSizes) {
+  if (defaultSizes) {
+    const value = defaultSizes[index];
+
+    if (value >= 0) {
+      return value;
+    }
+  }
+
+  return 1;
+}
+
+function move(sizes, index, offset, minSizes) {
+  if (!offset || index < 0 || index + 1 >= sizes.length) {
+    return 0;
+  }
+
+  const firstMinSize = getMinSize(index, minSizes);
+  const secondMinSize = getMinSize(index + 1, minSizes);
+  const firstSize = sizes[index] + offset;
+  const secondSize = sizes[index + 1] - offset;
+
+  if (offset < 0 && firstSize < firstMinSize) {
+    // offset is negative, so missing and pushed are, too
+    const missing = firstSize - firstMinSize;
+    const pushed = move(sizes, index - 1, missing, minSizes);
+    offset -= missing - pushed;
+  } else if (offset > 0 && secondSize < secondMinSize) {
+    const missing = secondMinSize - secondSize;
+    const pushed = move(sizes, index + 1, missing, minSizes);
+    offset -= missing - pushed;
+  }
+
+  sizes[index] += offset;
+  sizes[index + 1] -= offset;
+  return offset;
+}
+
+const defaultProps = {
+  split: 'vertical',
+  className: ''
+};
+
+function useSplitPaneResize(options) {
+  const {
+    children,
+    split,
+    defaultSizes,
+    minSize: minSizes,
+    onDragStarted,
+    onChange,
+    onDragFinished
+  } = options;
+  const [sizes, setSizes] = useState(new Map());
+  const paneRefs = useRef(new Map());
+  const getMovedSizes = useCallback(dragState => {
+    const collectedSizes = children.map((node, index) => sizes.get(getNodeKey(node, index)) || getDefaultSize(index, defaultSizes));
+
+    if (dragState) {
+      const {
+        offset,
+        extraState: {
+          index
+        }
+      } = dragState;
+      move(collectedSizes, index, offset, minSizes);
+    }
+
+    return collectedSizes;
+  }, [children, defaultSizes, minSizes, sizes]);
+  const handleDragFinished = useCallback(dragState => {
+    const movedSizes = getMovedSizes(dragState);
+    setSizes(new Map(children.map((node, index) => [getNodeKey(node, index), movedSizes[index]])));
+
+    if (onDragFinished) {
+      onDragFinished(movedSizes);
+    }
+  }, [children, getMovedSizes, onDragFinished]);
+  const [dragState, beginDrag] = (0,_util__WEBPACK_IMPORTED_MODULE_3__.useDragState)(split, handleDragFinished);
+  const movedSizes = useMemo(() => getMovedSizes(dragState), [dragState, getMovedSizes]);
+  const resizeState = dragState ? dragState.extraState : null;
+  useEffect(() => {
+    if (onChange && dragState) {
+      onChange(movedSizes);
+    }
+  }, [dragState, movedSizes, onChange]);
+  const childPanes = useMemo(() => {
+    const prevPaneRefs = paneRefs.current;
+    paneRefs.current = new Map();
+    return children.map((node, index) => {
+      const key = getNodeKey(node, index);
+      const ref = prevPaneRefs.get(key) || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createRef();
+      paneRefs.current.set(key, ref);
+      const minSize = getMinSize(index, minSizes);
+      return {
+        key,
+        node,
+        ref,
+        minSize
+      };
+    });
+  }, [children, minSizes]);
+  const childPanesWithSizes = useMemo(() => childPanes.map((child, index) => {
+    const size = movedSizes[index];
+    return _objectSpread(_objectSpread({}, child), {}, {
+      size
+    });
+  }), [childPanes, movedSizes]);
+  const handleDragStart = useCallback((index, pos) => {
+    const sizeAttr = split === 'vertical' ? 'width' : 'height';
+    const clientSizes = new Map(childPanes.map(({
+      key,
+      ref
+    }) => {
+      const size = ref.current ? ref.current.getBoundingClientRect()[sizeAttr] : 0;
+      return [key, size];
+    }));
+
+    if (onDragStarted) {
+      onDragStarted();
+    }
+
+    beginDrag(pos, {
+      index
+    });
+    setSizes(clientSizes);
+  }, [beginDrag, childPanes, onDragStarted, split]);
+  return {
+    childPanes: childPanesWithSizes,
+    resizeState,
+    handleDragStart
+  };
+}
+
+const SplitPane = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(props => {
+  const options = _objectSpread(_objectSpread({}, defaultProps), props);
+
+  const {
+    split,
+    className,
+    style: styleProps
+  } = options;
+  const {
+    childPanes,
+    resizeState,
+    handleDragStart
+  } = useSplitPaneResize(options);
+  const splitStyleProps = split === 'vertical' ? {
+    left: 0,
+    right: 0,
+    flexDirection: 'row'
+  } : {
+    bottom: 0,
+    top: 0,
+    flexDirection: 'column',
+    minHeight: '100%',
+    width: '100%'
+  };
+
+  const style = _objectSpread(_objectSpread({
+    display: 'flex',
+    flex: 1,
+    height: '100%',
+    position: 'absolute',
+    outline: 'none',
+    overflow: 'hidden'
+  }, splitStyleProps), styleProps);
+
+  const classes = ['SplitPane', split, className].join(' ');
+  const dragLayerStyle = {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0
+  };
+  const dragLayerClasses = ['DragLayer', split, resizeState ? 'resizing' : '', className].join(' ');
+  const entries = [];
+  childPanes.forEach(({
+    key,
+    node,
+    ref,
+    size,
+    minSize
+  }, index) => {
+    if (index !== 0) {
+      const resizing = resizeState && resizeState.index === index - 1;
+      entries.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Resizer__WEBPACK_IMPORTED_MODULE_2__.Resizer, {
+        key: 'resizer.' + index,
+        split: split,
+        className: className + (resizing ? ' resizing' : ''),
+        index: index - 1,
+        onDragStarted: handleDragStart
+      }));
+    }
+
+    console.log('SplitPane key', 'pane.' + key);
+    entries.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Pane__WEBPACK_IMPORTED_MODULE_1__.Pane, {
+      key: 'pane.' + key,
+      forwardRef: ref,
+      size: size,
+      minSize: minSize,
+      split: split,
+      className: className
+    }, node));
+  });
+  console.log('SplitPane', 'style', style, __filename);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: classes,
+    style: style
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: dragLayerClasses,
+    style: dragLayerStyle
+  }), entries);
+});
+SplitPane.displayName = 'SplitPane';
+
+/***/ }),
+
+/***/ "./src/components/widgets/react-multi-split-pane/lib/util.tsx":
+/*!********************************************************************!*\
+  !*** ./src/components/widgets/react-multi-split-pane/lib/util.tsx ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+var react__WEBPACK_IMPORTED_MODULE_0___namespace_cache;
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useEventListener": () => (/* binding */ useEventListener),
+/* harmony export */   "useDragState": () => (/* binding */ useDragState)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
+
+const {
+  useCallback,
+  useMemo,
+  useState,
+  useEffect
+} = /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2)));
+function useEventListener(type, listener) {
+  useEffect(() => {
+    if (!listener) return;
+    document.addEventListener(type, listener);
+    return () => {
+      document.removeEventListener(type, listener);
+    };
+  }, [type, listener]);
+}
+
+function useDragStateHandlers(split, onDragFinished) {
+  const [dragging, setDragging] = useState(null);
+  const [current, setCurrent] = useState(0);
+  const beginDrag = useCallback((event, extraState) => {
+    const pos = split === 'vertical' ? event.clientX : event.clientY;
+    setDragging([extraState, pos]);
+    setCurrent(pos);
+  }, [split]);
+  const [dragState, onMouseUp] = useMemo(() => {
+    if (!dragging) {
+      return [null, undefined];
+    }
+
+    const [extraState, origin] = dragging;
+    const dragState = {
+      offset: current - origin,
+      extraState
+    };
+
+    const onMouseUp = () => {
+      react_dom__WEBPACK_IMPORTED_MODULE_1__.unstable_batchedUpdates(() => {
+        setDragging(null);
+        onDragFinished(dragState);
+      });
+    };
+
+    return [dragState, onMouseUp];
+  }, [current, dragging, onDragFinished]);
+  const [onMouseMove, onTouchMove] = useMemo(() => {
+    if (!dragging) {
+      return [undefined, undefined];
+    }
+
+    const onMouseMove = event => {
+      const pos = split === 'vertical' ? event.clientX : event.clientY;
+      setCurrent(pos);
+    };
+
+    const onTouchMove = event => {
+      onMouseMove(event.touches[0]);
+    };
+
+    return [onMouseMove, onTouchMove];
+  }, [dragging, split]);
+  return {
+    beginDrag,
+    dragState,
+    onMouseMove,
+    onTouchMove,
+    onMouseUp
+  };
+}
+
+function useDragState(split, onDragFinished) {
+  const {
+    beginDrag,
+    dragState,
+    onMouseMove,
+    onTouchMove,
+    onMouseUp
+  } = useDragStateHandlers(split, onDragFinished);
+  useEventListener('mousemove', onMouseMove);
+  useEventListener('touchmove', onTouchMove);
+  useEventListener('mouseup', onMouseUp);
+  return [dragState, beginDrag];
+}
 
 /***/ }),
 
@@ -7907,7 +8406,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\EditorForm.tsx.ittf
 */
 
@@ -8217,7 +8716,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\Form.tsx.ittf
 */
 
@@ -8333,7 +8832,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _withStatus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./withStatus */ "./src/features/form/withStatus.tsx");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\index.tsx.ittf
 */
 
@@ -8361,7 +8860,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\withStatus.tsx.ittf
 */
 
@@ -8426,7 +8925,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\withValidation.tsx.ittf
 */
 
@@ -8656,23 +9155,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/widgets/splitter/defaultSplitter.css":
-/*!*************************************************************!*\
-  !*** ./src/components/widgets/splitter/defaultSplitter.css ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/components/widgets/splitter/split.css":
-/*!***************************************************!*\
-  !*** ./src/components/widgets/splitter/split.css ***!
-  \***************************************************/
+/***/ "./src/components/EditorView/EditorView.css":
+/*!**************************************************!*\
+  !*** ./src/components/EditorView/EditorView.css ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";

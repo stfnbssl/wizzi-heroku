@@ -2,18 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getContextFromWizziJson = exports.getFragmentsFromWizziJson = exports.prepareGenerationFromWizziJson = exports.getArtifactMTreeBuildupScript_withPrepare = exports.getArtifactMTreeBuildupScript = exports.getArtifactMTree_withPrepare = exports.getArtifactMTree = exports.getArtifactGeneration_withPrepare = exports.getArtifactGeneration = exports.getArtifactTransformation_withPrepare = exports.getArtifactTransformation = exports.getArtifactContextItem = exports.getArtifactContext = exports.getDefaultContext_withCache = exports.invalidateCache = exports.getArtifactProduction_withCache = exports.getArtifactProductionObjectById_stop = exports.getArtifactProductionObject_stop = exports.deleteArtifactProduction = exports.updateArtifactProduction = exports.createArtifactProduction = exports.getArtifactProductionObjectById = exports.getArtifactProductionObject = exports.getArtifactProductionById = exports.getArtifactProduction = exports.getListArtifactProduction = exports.validateArtifactProduction = void 0;
 const tslib_1 = require("tslib");
-/*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\api\artifact.ts.ittf
-*/
-const path_1 = tslib_1.__importDefault(require("path"));
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
+const env_1 = require("../../config/env");
+const wizzi_1 = require("../../wizzi");
 const artifact_1 = require("../mongo/artifact");
 const index_1 = require("../index");
-const wizzi_1 = require("../../wizzi");
-const myname = 'features.production.api.artifact';
-const artifactCache = new node_cache_1.default({
+const myname = 'features.production.api.ArtifactProduction';
+const artifactProductionCache = new node_cache_1.default({
     stdTTL: 120,
     checkperiod: 60
 });
@@ -40,10 +35,10 @@ function validateArtifactProduction(owner, name) {
     });
 }
 exports.validateArtifactProduction = validateArtifactProduction;
+const index_2 = require("../index");
 function getListArtifactProduction(options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         options = options || {};
-        console.log(myname, 'getListArtifactProduction', 'options', options);
         const ArtifactProduction = (0, artifact_1.GetArtifactProductionModel)();
         return new Promise((resolve, reject) => {
             const query = ArtifactProduction.find(options.query);
@@ -55,7 +50,7 @@ function getListArtifactProduction(options) {
             }
             query.find((err, result) => {
                 if (err) {
-                    console.log(myname, 'getListArtifactProduction', 'ArtifactProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getListArtifactProduction', 'ArtifactProduction.find', 'error', err);
                     return reject(err);
                 }
                 const resultItem = [];
@@ -86,7 +81,6 @@ function getListArtifactProduction(options) {
 exports.getListArtifactProduction = getListArtifactProduction;
 function getArtifactProduction(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getArtifactProduction', owner, name);
         const ArtifactProduction = (0, artifact_1.GetArtifactProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
@@ -95,7 +89,7 @@ function getArtifactProduction(owner, name) {
             };
             ArtifactProduction.find(query, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getArtifactProduction', 'ArtifactProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getArtifactProduction', 'ArtifactProduction.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -117,14 +111,13 @@ function getArtifactProduction(owner, name) {
 exports.getArtifactProduction = getArtifactProduction;
 function getArtifactProductionById(id) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getArtifactProductionById', id);
         const ArtifactProduction = (0, artifact_1.GetArtifactProductionModel)();
         return new Promise((resolve, reject) => {
             ArtifactProduction.find({
                 _id: id
             }, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getArtifactProduction', 'ArtifactProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getArtifactProduction', 'ArtifactProduction.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -144,63 +137,87 @@ function getArtifactProductionById(id) {
     });
 }
 exports.getArtifactProductionById = getArtifactProductionById;
-function getArtifactProductionObject(owner, name) {
+function getArtifactProductionObject(owner, name, loadPackiConfig) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getArtifactProduction(owner, name).then(
-        // loog 'myname', 'getArtifactProductionObject.ap', ap
-        // loog 'myname', 'getArtifactProductionObject.ap_packiFiles_object', ap_packiFiles_object
-        // loog 'myname', 'getArtifactProductionObject', obj
-        (result) => {
+        return new Promise((resolve, reject) => getArtifactProduction(owner, name).then((result) => {
             if (!result.ok) {
                 return reject(result);
             }
             const ap = result.item;
-            const ap_packiFiles_object = JSON.parse(ap.packiFiles);
-            const obj = Object.assign(Object.assign({}, ap._doc), { packiFiles: ap_packiFiles_object, _id: ap._id.toString() });
-            return resolve(obj);
+            return resolve(_createArtifactProductionObject(ap, loadPackiConfig));
         }).catch((err) => {
-            console.log('getArtifactProductionObject.getArtifactProduction.error', err, __filename);
+            console.log('features.production.api.artifactProduction.getArtifactProductionObject.getArtifactProduction.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getArtifactProductionObject = getArtifactProductionObject;
-function getArtifactProductionObjectById(id) {
+function getArtifactProductionObjectById(id, loadPackiConfig) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getArtifactProductionById(id).then(
-        // loog 'myname', 'getArtifactProductionObjectById.ap', ap
-        // loog 'myname', 'getArtifactProductionObjectById.ap_packiFiles_object', ap_packiFiles_object
-        // loog 'myname', 'getArtifactProductionObjectById', obj
-        (result) => {
+        return new Promise((resolve, reject) => getArtifactProductionById(id).then((result) => {
             if (!result.ok) {
                 return reject(result);
             }
             const ap = result.item;
-            const ap_packiFiles_object = JSON.parse(ap.packiFiles);
-            const obj = Object.assign(Object.assign({}, ap._doc), { packiFiles: ap_packiFiles_object, _id: ap._id.toString() });
-            return resolve(obj);
+            return resolve(_createArtifactProductionObject(ap, loadPackiConfig));
         }).catch((err) => {
-            console.log('getArtifactProductionObjectById.getArtifactProductionById.error', err, __filename);
+            console.log('features.production.api.artifactProduction.getArtifactProductionObjectById.getArtifactProductionById.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getArtifactProductionObjectById = getArtifactProductionObjectById;
+function _createArtifactProductionObject(ap, loadPackiConfig) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise(
+        // loog 'myname', '_createArtifactProductionObject.ap', Object.keys(ap)
+        // loog 'myname', '_createArtifactProductionObject.ap_packiFiles_object', Object.keys(ap_packiFiles_object)
+        (resolve, reject) => {
+            const ap_packiFiles_object = JSON.parse(ap.packiFiles);
+            const obj = Object.assign(Object.assign({}, ap._doc), { packiFiles: ap_packiFiles_object, _id: ap._id.toString(), packiProduction: "ArtifactProduction", packiConfig: ap_packiFiles_object[env_1.packiConfigPath], packiConfigObj: null });
+            if (loadPackiConfig) {
+                if (!obj.packiConfig) {
+                    return reject({
+                        message: 'Missing file ' + env_1.packiConfigPath + ' in ArtifactProduction'
+                    });
+                }
+                wizzi_1.wizziProds.generateArtifact(env_1.packiConfigPath, {
+                    [env_1.packiConfigPath]: {
+                        type: obj.packiConfig.type,
+                        contents: obj.packiConfig.contents
+                    }
+                }, {}).then(
+                // loog myname, '_createArtifactProductionObject', 'obj.packiConfigObj', JSON.stringify(obj.packiConfigObj)
+                (generationResult) => {
+                    obj.packiConfigObj = JSON.parse(generationResult.artifactContent);
+                    return resolve(obj);
+                }).catch((err) => {
+                    console.log('features.production.api.artifactProduction.getArtifactProductionObject._createArtifactProductionObject.error', err, __filename);
+                    return reject(err);
+                });
+            }
+            // loog 'myname', '_createArtifactProductionObject.resolve', Object.keys(obj)
+            else {
+                return resolve(obj);
+            }
+        });
+    });
+}
 function createArtifactProduction(owner, name, description, mainIttf, wizziSchema, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'createArtifactProduction', owner, name, description, mainIttf, wizziSchema, packiFiles);
         const ArtifactProduction = (0, artifact_1.GetArtifactProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 owner: owner,
                 name: name
             };
-            ArtifactProduction.find(query, (err, result) => {
+            ArtifactProduction.find(query, 
+            // loog myname, 'getArtifactProduction', 'ArtifactProduction.find', 'result', result
+            (err, result) => {
                 if (err) {
-                    console.log(myname, 'getArtifactProduction', 'ArtifactProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getArtifactProduction', 'ArtifactProduction.find', 'error', err);
                     return reject(err);
                 }
-                console.log(myname, 'getArtifactProduction', 'ArtifactProduction.find', 'result', result, __filename);
                 if (result.length > 0) {
                     return resolve({
                         oper: 'create',
@@ -220,7 +237,7 @@ function createArtifactProduction(owner, name, description, mainIttf, wizziSchem
                 });
                 newArtifactProduction.save(function (err, doc) {
                     if (err) {
-                        console.log(myname, 'createArtifactProduction', 'newArtifactProduction.save', 'error', err, __filename);
+                        console.log("[31m%s[0m", myname, 'createArtifactProduction', 'newArtifactProduction.save', 'error', err);
                         return reject(err);
                     }
                     return resolve({
@@ -237,7 +254,6 @@ function createArtifactProduction(owner, name, description, mainIttf, wizziSchem
 exports.createArtifactProduction = createArtifactProduction;
 function updateArtifactProduction(id, owner, name, description, mainIttf, wizziSchema, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updateArtifactProduction');
         const ArtifactProduction = (0, artifact_1.GetArtifactProductionModel)();
         return new Promise((resolve, reject) => {
             const query = {
@@ -265,7 +281,7 @@ function updateArtifactProduction(id, owner, name, description, mainIttf, wizziS
             update['updated_at'] = new Date();
             ArtifactProduction.findOneAndUpdate(query, update, {}, (err, result) => {
                 if (err) {
-                    console.log(myname, 'updateArtifactProduction', 'ArtifactProduction.findOneAndUpdate', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'updateArtifactProduction', 'ArtifactProduction.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
                 return resolve({
@@ -280,7 +296,6 @@ function updateArtifactProduction(id, owner, name, description, mainIttf, wizziS
 exports.updateArtifactProduction = updateArtifactProduction;
 function deleteArtifactProduction(id, owner, name, description, mainIttf, wizziSchema, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'deleteArtifactProduction', owner, name);
         const ArtifactProduction = (0, artifact_1.GetArtifactProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
@@ -288,7 +303,7 @@ function deleteArtifactProduction(id, owner, name, description, mainIttf, wizziS
             };
             ArtifactProduction.deleteOne(query, (err) => {
                 if (err) {
-                    console.log(myname, 'deleteArtifactProduction', 'ArtifactProduction.deleteOne', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'deleteArtifactProduction', 'ArtifactProduction.deleteOne', 'error', err);
                     return reject(err);
                 }
                 resolve({
@@ -360,7 +375,7 @@ function getArtifactProduction_withCache(owner, name) {
                 const ap = result.item;
                 const ap_packiFiles_object = JSON.parse(ap.packiFiles);
                 if (ap.wizziSchema && ap.wizziSchema.length > 0) {
-                    index_1.tFolderApi.getTFolder(owner, ap.wizziSchema).then((result) => {
+                    index_2.tFolderApi.getTFolder(owner, ap.wizziSchema).then((result) => {
                         if (!result.ok) {
                             apValue = {
                                 mainIttf: ap.mainIttf,
@@ -397,7 +412,7 @@ function getArtifactProduction_withCache(owner, name) {
 exports.getArtifactProduction_withCache = getArtifactProduction_withCache;
 function invalidateCache(owner, name) {
     var cacheKey = owner + '|' + name;
-    artifactCache.del(cacheKey);
+    artifactProductionCache.del(cacheKey);
 }
 exports.invalidateCache = invalidateCache;
 function getDefaultContext_withCache(owner, sysContext) {
@@ -500,18 +515,16 @@ function getArtifactTransformation(owner, name, context, transformerName) {
 exports.getArtifactTransformation = getArtifactTransformation;
 function getArtifactTransformation_withPrepare(owner, productionName, queryContext, rootContext, transformerName) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log('getArtifactMTree_withPrepare', 'owner', owner, 'productionName', productionName, 'queryContext', queryContext, 'rootContext', Object.keys(rootContext), 'transformerName', transformerName, __filename);
-        return new Promise((resolve, reject) => index_1.productionApi.prepareProduction('artifact', owner, productionName, queryContext, rootContext).then((productionObj) => {
-            console.log('getArtifactTransformation_withPrepare.productionObj', 'mainIttf', productionObj.mainIttf, 'packiFiles', Object.keys(productionObj.packiFiles), 'context', Object.keys(productionObj.context), __filename);
-            wizzi_1.wizziProds.transformModel(productionObj.mainIttf, productionObj.packiFiles, productionObj.context, {
-                transformer: transformerName
-            }).then((result) => {
-                return resolve(result);
-            }).catch((err) => {
-                console.log('getArtifactTransformation_withPrepare.transformModel.error', err, __filename);
-                return reject(err);
-            });
+        return new Promise((resolve, reject) => index_1.productionApi.prepareProduction('artifact', owner, productionName, queryContext, rootContext).then(
+        // loog 'getArtifactTransformation_withPrepare.productionObj', 'mainIttf', productionObj.mainIttf, 'packiFiles', Object.keys(productionObj.packiFiles), 'context', Object.keys(productionObj.context),
+        (productionObj) => wizzi_1.wizziProds.transformModel(productionObj.mainIttf, productionObj.packiFiles, productionObj.context, {
+            transformer: transformerName
+        }).then((result) => {
+            return resolve(result);
         }).catch((err) => {
+            console.log('getArtifactTransformation_withPrepare.transformModel.error', err, __filename);
+            return reject(err);
+        })).catch((err) => {
             console.log('getArtifactTransformation_withPrepare.getArtifactProduction.error', err, __filename);
             return reject(err);
         }));
@@ -524,7 +537,7 @@ function getArtifactGeneration(owner, name, context) {
             const response = {
                 content: result.artifactContent,
                 contentLength: result.artifactContent.length,
-                contentType: contentTypeFor(ap.mainIttf)
+                contentType: wizzi_1.wizziMaps.contentTypeFor(ap.mainIttf)
             };
             return resolve(response);
         }).catch((err) => {
@@ -537,73 +550,37 @@ function getArtifactGeneration(owner, name, context) {
     });
 }
 exports.getArtifactGeneration = getArtifactGeneration;
-function getArtifactGeneration_withPrepare(owner, productionName, queryContext, rootContext) {
+function getArtifactGeneration_withPrepare(owner, productionName, filePath, queryContext, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log('getArtifactGeneration_withPrepare', 'owner', owner, 'productionName', productionName, 'queryContext', queryContext, 'rootContext', Object.keys(rootContext), __filename);
-        return new Promise((resolve, reject) => index_1.productionApi.prepareProduction('artifact', owner, productionName, queryContext, rootContext).then((productionObj) => {
-            console.log('getArtifactGeneration_withPrepare.productionObj', 'mainIttf', productionObj.mainIttf, 'packiFiles', Object.keys(productionObj.packiFiles), 'context', Object.keys(productionObj.context), __filename);
-            wizzi_1.wizziProds.generateArtifact(productionObj.mainIttf, productionObj.packiFiles, productionObj.context).then((result) => {
-                console.log('getArtifactGeneration_withPrepare', productionName, result.artifactContent.length, __filename);
-                console.log('getArtifactGeneration_withPrepare', productionName, result.artifactContent.substring(0, 200) + '...', __filename);
-                const response = {
-                    content: result.artifactContent,
-                    contentLength: result.artifactContent.length,
-                    contentType: contentTypeFor(productionObj.mainIttf)
-                };
-                return resolve(response);
-            }).catch((err) => {
-                console.log('getArtifactGeneration_withPrepare.generateArtifact.error', err, __filename);
-                return reject(err);
-            });
+        return new Promise((resolve, reject) => index_1.productionApi.prepareProduction('artifact', owner, productionName, queryContext, rootContext).then(
+        // loog 'getArtifactGeneration_withPrepare.productionObj', 'mainIttf', productionObj.mainIttf, 'packiFiles', Object.keys(productionObj.packiFiles), 'context', Object.keys(productionObj.context),
+        (productionObj) => wizzi_1.wizziProds.generateArtifact(filePath || productionObj.mainIttf, productionObj.packiFiles, productionObj.context).then(
+        // loog 'getArtifactGeneration_withPrepare', productionName, result.artifactContent.length
+        // loog 'getArtifactGeneration_withPrepare', productionName, result.artifactContent.substring(0, 200) + '...'
+        (result) => {
+            const response = {
+                content: result.artifactContent,
+                contentLength: result.artifactContent.length,
+                contentType: wizzi_1.wizziMaps.contentTypeFor(productionObj.mainIttf)
+            };
+            return resolve(response);
         }).catch((err) => {
+            console.log('getArtifactGeneration_withPrepare.generateArtifact.error', err, __filename);
+            return reject(err);
+        })).catch((err) => {
             console.log('getArtifactGeneration_withPrepare.prepareProduction.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getArtifactGeneration_withPrepare = getArtifactGeneration_withPrepare;
-const extContentTypeMap = {
-    '.css': 'text/css',
-    '.gif': 'image/gif',
-    '.html': 'text/html',
-    '.ittf': 'text/plain',
-    '.jpeg': 'image/jpeg',
-    '.jpg': 'image/jpg',
-    '.js': 'text/javascript',
-    '.json': 'application/json',
-    '.png': 'image/png',
-    '.scss': 'text/scss',
-    '.svg': 'image/svg+xml',
-    '.ts': 'text/typescript',
-    '.ttf': 'application/x-font-ttf',
-    '.txt': 'text/plain',
-    '.vtt': 'text/vtt',
-    '.woff': 'application/x-font-woff',
-    '.yaml': 'text/yanl',
-    '.yml': 'text/yanl',
-    '.xml': 'text/xml'
-};
-function ittfSchemaOf(file) {
-    const nameParts = path_1.default.basename(file).split('.');
-    if (nameParts[nameParts.length - 1] === 'ittf') {
-        return nameParts[nameParts.length - 2];
-    }
-    return undefined;
-}
-function contentTypeFor(file) {
-    const ittfSchema = ittfSchemaOf(file);
-    if (ittfSchema) {
-        return extContentTypeMap['.' + ittfSchema];
-    }
-    return undefined;
-}
 function getArtifactMTree(owner, productionName, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => getArtifactProduction_withCache(owner, productionName).then((ap) => wizzi_1.wizziProds.mTree(ap.mainIttf, ap.packiFiles, rootContext).then((result) => {
             const response = {
                 content: result.mTreeIttf,
                 contentLength: result.mTreeIttf.length,
-                contentType: contentTypeFor('x.ittf.ittf')
+                contentType: wizzi_1.wizziMaps.contentTypeFor('x.ittf.ittf')
             };
             return resolve(response);
         }).catch((err) => {
@@ -618,12 +595,11 @@ function getArtifactMTree(owner, productionName, rootContext) {
 exports.getArtifactMTree = getArtifactMTree;
 function getArtifactMTree_withPrepare(owner, productionName, queryContext, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log('getArtifactMTree_withPrepare', 'owner', owner, 'productionName', productionName, 'queryContext', queryContext, 'rootContext', Object.keys(rootContext), __filename);
         return new Promise((resolve, reject) => index_1.productionApi.prepareProduction('artifact', owner, productionName, queryContext, rootContext).then((productionObj) => wizzi_1.wizziProds.mTree(productionObj.mainIttf, productionObj.packiFiles, productionObj.context).then((result) => {
             const response = {
                 content: result.mTreeIttf,
                 contentLength: result.mTreeIttf.length,
-                contentType: contentTypeFor('x.ittf.ittf')
+                contentType: wizzi_1.wizziMaps.contentTypeFor('x.ittf.ittf')
             };
             return resolve(response);
         }).catch((err) => {
@@ -642,7 +618,7 @@ function getArtifactMTreeBuildupScript(owner, productionName, rootContext) {
             const response = {
                 content: result.mTreeBuildupScript,
                 contentLength: result.mTreeBuildupScript.length,
-                contentType: contentTypeFor('x.ittf.ittf')
+                contentType: wizzi_1.wizziMaps.contentTypeFor('x.ittf.ittf')
             };
             return resolve(response);
         }).catch((err) => {
@@ -657,12 +633,11 @@ function getArtifactMTreeBuildupScript(owner, productionName, rootContext) {
 exports.getArtifactMTreeBuildupScript = getArtifactMTreeBuildupScript;
 function getArtifactMTreeBuildupScript_withPrepare(owner, productionName, queryContext, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log('getArtifactMTreeBuildupScript_withPrepare', 'owner', owner, 'productionName', productionName, 'queryContext', queryContext, 'rootContext', Object.keys(rootContext), __filename);
         return new Promise((resolve, reject) => index_1.productionApi.prepareProduction('artifact', owner, productionName, queryContext, rootContext).then((productionObj) => wizzi_1.wizziProds.mTreeBuildupScript(productionObj.mainIttf, productionObj.packiFiles, productionObj.context).then((result) => {
             const response = {
                 content: result.mTreeBuildupScript,
                 contentLength: result.mTreeBuildupScript.length,
-                contentType: contentTypeFor('x.ittf.ittf')
+                contentType: wizzi_1.wizziMaps.contentTypeFor('x.ittf.ittf')
             };
             return resolve(response);
         }).catch((err) => {
@@ -729,7 +704,7 @@ function getFragmentsFromWizziJson(wizziJsonObj) {
                     return resolve(retPackiFiles);
                 }
                 const parts = tfolder.path.split('/');
-                index_1.tFolderApi.getTFolder(parts[0], parts.slice(1).join('/')).then((result) => {
+                index_2.tFolderApi.getTFolder(parts[0], parts.slice(1).join('/')).then((result) => {
                     const tf = result.item;
                     const tf_packiFiles_object = JSON.parse(tf.packiFiles);
                     retPackiFiles = mergePackiFiles(retPackiFiles, tf_packiFiles_object);

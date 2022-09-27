@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 const express_session_1 = tslib_1.__importDefault(require("express-session"));
 const config_1 = require("../features/config");
 const SessionMiddleware = (app) => {
-    console.log("SessionMiddleware process.env.NODE_ENV: " + process.env.NODE_ENV, __filename);
+    console.log("SessionMiddleware process.env.NODE_ENV: " + process.env.NODE_ENV);
     const cookieOptions = {
         // serve secure cookies, requires https
         secure: process.env.NODE_ENV === 'production' ? true : false,
@@ -24,7 +24,7 @@ const SessionMiddleware = (app) => {
         app.set('trust proxy', 1);
     }
     app.use((0, express_session_1.default)(sessionOptions));
-    console.log("SessionMiddleware installed", __filename);
+    console.log("SessionMiddleware installed");
 };
 exports.SessionMiddleware = SessionMiddleware;
 //# sourceMappingURL=session.js.map

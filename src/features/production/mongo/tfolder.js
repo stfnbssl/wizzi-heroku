@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TFolderModelBuilder = exports.GetTFolderModel = void 0;
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\mongo\tfolder.ts.ittf
 */
 const mongoose_1 = require("mongoose");
@@ -26,10 +26,15 @@ TFolderSchema.index({
 // controllers call GetTFolderModel() when initialized, after buildModel() has benn called
 let TFolderModel;
 function GetTFolderModel() {
+    if (!TFolderModel) {
+        TFolderModel = (0, mongoose_1.model)("TFolder");
+    }
     return TFolderModel;
 }
 exports.GetTFolderModel = GetTFolderModel;
 exports.TFolderModelBuilder = {
-    buildModel: () => TFolderModel = (0, mongoose_1.model)("TFolder", TFolderSchema)
+    buildModel: (options) => TFolderModel = (0, mongoose_1.model)("TFolder", TFolderSchema),
+    applyExtraSetup: (options) => {
+    }
 };
 //# sourceMappingURL=tfolder.js.map

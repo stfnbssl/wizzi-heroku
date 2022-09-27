@@ -1,18 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getTemplatePackiFiles = exports.invalidateCache = exports.getMetaProduction_withCache = exports.getMetaProductionObjectById_stop = exports.getMetaProductionObject_stop = exports.deleteMetaProduction = exports.updateMetaProduction = exports.createMetaProduction = exports.getMetaProductionObjectById = exports.getMetaProductionObject = exports.getMetaProductionById = exports.getMetaProduction = exports.getListMetaProduction = exports.validateMetaProduction = void 0;
+exports.generateMetaProductionById = exports.generateMetaProduction = exports.getTemplatePackiFiles = exports.invalidateCache = exports.getMetaProduction_withCache = exports.getMetaProductionObjectById_stop = exports.getMetaProductionObject_stop = exports.deleteMetaProduction = exports.updateMetaProduction = exports.createMetaProduction = exports.getMetaProductionObjectById = exports.getMetaProductionObject = exports.getMetaProductionById = exports.getMetaProduction = exports.getListMetaProduction = exports.validateMetaProduction = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\api\meta.ts.ittf
 */
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
-const meta_1 = require("../mongo/meta");
+const env_1 = require("../../config/env");
 const wizzi_1 = require("../../wizzi");
+const meta_1 = require("../mongo/meta");
 const index_1 = require("../index");
-const myname = 'features.production.api.meta';
-const metaCache = new node_cache_1.default({
+const myname = 'features.production.api.MetaProduction';
+const metaProductionCache = new node_cache_1.default({
     stdTTL: 120,
     checkperiod: 60
 });
@@ -42,7 +43,6 @@ exports.validateMetaProduction = validateMetaProduction;
 function getListMetaProduction(options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         options = options || {};
-        console.log(myname, 'getListMetaProduction', 'options', options);
         const MetaProduction = (0, meta_1.GetMetaProductionModel)();
         return new Promise((resolve, reject) => {
             const query = MetaProduction.find(options.query);
@@ -54,7 +54,7 @@ function getListMetaProduction(options) {
             }
             query.find((err, result) => {
                 if (err) {
-                    console.log(myname, 'getListMetaProduction', 'MetaProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getListMetaProduction', 'MetaProduction.find', 'error', err);
                     return reject(err);
                 }
                 const resultItem = [];
@@ -83,7 +83,6 @@ function getListMetaProduction(options) {
 exports.getListMetaProduction = getListMetaProduction;
 function getMetaProduction(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getMetaProduction', owner, name);
         const MetaProduction = (0, meta_1.GetMetaProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
@@ -92,7 +91,7 @@ function getMetaProduction(owner, name) {
             };
             MetaProduction.find(query, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getMetaProduction', 'MetaProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getMetaProduction', 'MetaProduction.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -114,14 +113,13 @@ function getMetaProduction(owner, name) {
 exports.getMetaProduction = getMetaProduction;
 function getMetaProductionById(id) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getMetaProductionById', id);
         const MetaProduction = (0, meta_1.GetMetaProductionModel)();
         return new Promise((resolve, reject) => {
             MetaProduction.find({
                 _id: id
             }, (err, result) => {
                 if (err) {
-                    console.log(myname, 'getMetaProduction', 'MetaProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getMetaProduction', 'MetaProduction.find', 'error', err);
                     return reject(err);
                 }
                 if (result.length == 1) {
@@ -141,63 +139,87 @@ function getMetaProductionById(id) {
     });
 }
 exports.getMetaProductionById = getMetaProductionById;
-function getMetaProductionObject(owner, name) {
+function getMetaProductionObject(owner, name, loadPackiConfig) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getMetaProduction(owner, name).then(
-        // loog 'myname', 'getMetaProductionObject.mp', mp
-        // loog 'myname', 'getMetaProductionObject.mp_packiFiles_object', mp_packiFiles_object
-        // loog 'myname', 'getMetaProductionObject', obj
-        (result) => {
+        return new Promise((resolve, reject) => getMetaProduction(owner, name).then((result) => {
             if (!result.ok) {
                 return reject(result);
             }
             const mp = result.item;
-            const mp_packiFiles_object = JSON.parse(mp.packiFiles);
-            const obj = Object.assign(Object.assign({}, mp._doc), { packiFiles: mp_packiFiles_object, _id: mp._id.toString() });
-            return resolve(obj);
+            return resolve(_createMetaProductionObject(mp, loadPackiConfig));
         }).catch((err) => {
-            console.log('getMetaProductionObject.getMetaProduction.error', err, __filename);
+            console.log('features.production.api.metaProduction.getMetaProductionObject.getMetaProduction.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getMetaProductionObject = getMetaProductionObject;
-function getMetaProductionObjectById(id) {
+function getMetaProductionObjectById(id, loadPackiConfig) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getMetaProductionById(id).then(
-        // loog 'myname', 'getMetaProductionObjectById.mp', mp
-        // loog 'myname', 'getMetaProductionObjectById.mp_packiFiles_object', mp_packiFiles_object
-        // loog 'myname', 'getMetaProductionObjectById', obj
-        (result) => {
+        return new Promise((resolve, reject) => getMetaProductionById(id).then((result) => {
             if (!result.ok) {
                 return reject(result);
             }
             const mp = result.item;
-            const mp_packiFiles_object = JSON.parse(mp.packiFiles);
-            const obj = Object.assign(Object.assign({}, mp._doc), { packiFiles: mp_packiFiles_object, _id: mp._id.toString() });
-            return resolve(obj);
+            return resolve(_createMetaProductionObject(mp, loadPackiConfig));
         }).catch((err) => {
-            console.log('getMetaProductionObjectById.getMetaProductionById.error', err, __filename);
+            console.log('features.production.api.metaProduction.getMetaProductionObjectById.getMetaProductionById.error', err, __filename);
             return reject(err);
         }));
     });
 }
 exports.getMetaProductionObjectById = getMetaProductionObjectById;
+function _createMetaProductionObject(mp, loadPackiConfig) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise(
+        // loog 'myname', '_createMetaProductionObject.mp', Object.keys(mp)
+        // loog 'myname', '_createMetaProductionObject.mp_packiFiles_object', Object.keys(mp_packiFiles_object)
+        (resolve, reject) => {
+            const mp_packiFiles_object = JSON.parse(mp.packiFiles);
+            const obj = Object.assign(Object.assign({}, mp._doc), { packiFiles: mp_packiFiles_object, _id: mp._id.toString(), packiProduction: "MetaProduction", packiConfig: mp_packiFiles_object[env_1.packiConfigPath], packiConfigObj: null });
+            if (loadPackiConfig) {
+                if (!obj.packiConfig) {
+                    return reject({
+                        message: 'Missing file ' + env_1.packiConfigPath + ' in MetaProduction'
+                    });
+                }
+                wizzi_1.wizziProds.generateArtifact(env_1.packiConfigPath, {
+                    [env_1.packiConfigPath]: {
+                        type: obj.packiConfig.type,
+                        contents: obj.packiConfig.contents
+                    }
+                }, {}).then(
+                // loog myname, '_createMetaProductionObject', 'obj.packiConfigObj', JSON.stringify(obj.packiConfigObj)
+                (generationResult) => {
+                    obj.packiConfigObj = JSON.parse(generationResult.artifactContent);
+                    return resolve(obj);
+                }).catch((err) => {
+                    console.log('features.production.api.metaProduction.getMetaProductionObject._createMetaProductionObject.error', err, __filename);
+                    return reject(err);
+                });
+            }
+            // loog 'myname', '_createMetaProductionObject.resolve', Object.keys(obj)
+            else {
+                return resolve(obj);
+            }
+        });
+    });
+}
 function createMetaProduction(owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'createMetaProduction', owner, name, description, packiFiles);
         const MetaProduction = (0, meta_1.GetMetaProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 owner: owner,
                 name: name
             };
-            MetaProduction.find(query, (err, result) => {
+            MetaProduction.find(query, 
+            // loog myname, 'getMetaProduction', 'MetaProduction.find', 'result', result
+            (err, result) => {
                 if (err) {
-                    console.log(myname, 'getMetaProduction', 'MetaProduction.find', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'getMetaProduction', 'MetaProduction.find', 'error', err);
                     return reject(err);
                 }
-                console.log(myname, 'getMetaProduction', 'MetaProduction.find', 'result', result, __filename);
                 if (result.length > 0) {
                     return resolve({
                         oper: 'create',
@@ -215,7 +237,7 @@ function createMetaProduction(owner, name, description, packiFiles) {
                 });
                 newMetaProduction.save(function (err, doc) {
                     if (err) {
-                        console.log(myname, 'createMetaProduction', 'newMetaProduction.save', 'error', err, __filename);
+                        console.log("[31m%s[0m", myname, 'createMetaProduction', 'newMetaProduction.save', 'error', err);
                         return reject(err);
                     }
                     return resolve({
@@ -232,7 +254,6 @@ function createMetaProduction(owner, name, description, packiFiles) {
 exports.createMetaProduction = createMetaProduction;
 function updateMetaProduction(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'updateMetaProduction');
         const MetaProduction = (0, meta_1.GetMetaProductionModel)();
         return new Promise((resolve, reject) => {
             const query = {
@@ -254,7 +275,7 @@ function updateMetaProduction(id, owner, name, description, packiFiles) {
             update['updated_at'] = new Date();
             MetaProduction.findOneAndUpdate(query, update, {}, (err, result) => {
                 if (err) {
-                    console.log(myname, 'updateMetaProduction', 'MetaProduction.findOneAndUpdate', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'updateMetaProduction', 'MetaProduction.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
                 return resolve({
@@ -269,7 +290,6 @@ function updateMetaProduction(id, owner, name, description, packiFiles) {
 exports.updateMetaProduction = updateMetaProduction;
 function deleteMetaProduction(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'deleteMetaProduction', owner, name);
         const MetaProduction = (0, meta_1.GetMetaProductionModel)();
         return new Promise((resolve, reject) => {
             let query = {
@@ -277,7 +297,7 @@ function deleteMetaProduction(id, owner, name, description, packiFiles) {
             };
             MetaProduction.deleteOne(query, (err) => {
                 if (err) {
-                    console.log(myname, 'deleteMetaProduction', 'MetaProduction.deleteOne', 'error', err, __filename);
+                    console.log("[31m%s[0m", myname, 'deleteMetaProduction', 'MetaProduction.deleteOne', 'error', err);
                     return reject(err);
                 }
                 resolve({
@@ -327,7 +347,6 @@ exports.getMetaProductionObjectById_stop = getMetaProductionObjectById_stop;
 function getMetaProduction_withCache(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         var cacheKey = owner + '|' + name;
-        console.log('getMetaProduction_withCache.cacheKey', cacheKey, __filename);
         return new Promise((resolve, reject) => {
             let mpValue = {
                 packiFiles: {}
@@ -352,12 +371,11 @@ function getMetaProduction_withCache(owner, name) {
 exports.getMetaProduction_withCache = getMetaProduction_withCache;
 function invalidateCache(owner, name) {
     var cacheKey = owner + '|' + name;
-    metaCache.del(cacheKey);
+    metaProductionCache.del(cacheKey);
 }
 exports.invalidateCache = invalidateCache;
 function getTemplatePackiFiles(metaId, cliCtx, queryString, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        console.log(myname, 'getTemplatePackiFiles', 'metaId', metaId, 'cliCtx', Object.keys(cliCtx), 'queryString', queryString, 'rootContext', Object.keys(rootContext), __filename);
         function getPackiFiles(mainIttf) {
             const ret = {};
             ret[mainIttf] = {
@@ -370,15 +388,15 @@ function getTemplatePackiFiles(metaId, cliCtx, queryString, rootContext) {
             if (!metaId || metaId.length < 1) {
                 return resolve(getPackiFiles('index.js.ittf'));
             }
-            index_1.productionApi.prepareProductionById('meta', metaId, queryString, rootContext).then((metaProductionSet) => {
-                console.log('getTemplatePackiFiles.metaProductionSet', 'packiFiles', Object.keys(metaProductionSet.packiFiles), 'context', Object.keys(metaProductionSet.context), __filename);
+            index_1.productionApi.prepareProductionById('meta', metaId, queryString, rootContext).then(
+            // loog 'getTemplatePackiFiles.metaProductionSet', 'packiFiles', Object.keys(metaProductionSet.packiFiles), 'context', Object.keys(metaProductionSet.context),
+            (metaProductionSet) => {
                 const context = Object.assign({}, metaProductionSet.context, {
                     cliCtx: cliCtx
                 });
-                wizzi_1.wizziProds.generateFolderArtifacts('template', 'output', metaProductionSet.packiFiles, context).then((packiFiles) => {
-                    console.log('getTemplatePackiFiles.generatedFolderArtifacts', 'packiFiles', Object.keys(packiFiles), __filename);
-                    resolve(packiFiles);
-                }).catch((err) => {
+                wizzi_1.wizziProds.generateFolderArtifacts('template', 'output', metaProductionSet.packiFiles, context).then(
+                // loog 'getTemplatePackiFiles.generatedFolderArtifacts', 'packiFiles', Object.keys(packiFiles),
+                (packiFiles) => resolve(packiFiles)).catch((err) => {
                     console.log('getTemplatePackiFiles.generateFolderArtifacts.error', err, __filename);
                     return reject(err);
                 });
@@ -390,4 +408,35 @@ function getTemplatePackiFiles(metaId, cliCtx, queryString, rootContext) {
     });
 }
 exports.getTemplatePackiFiles = getTemplatePackiFiles;
+function generateMetaProduction(owner, name, cliCtx) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return getMetaProduction(owner, name).then(
+        // loog myname, 'generateMetaProduction.gotMetaProductionItem', 'CRUDResult.item.id,keys', metaProduction.item.id, Object.keys(metaProduction.item)
+        (metaProduction) => {
+            return generateMetaProductionById(metaProduction.item.id, cliCtx);
+        });
+    });
+}
+exports.generateMetaProduction = generateMetaProduction;
+function generateMetaProductionById(metaId, cliCtx) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => index_1.productionApi.prepareProductionById('meta', metaId, "", {}).then(
+        // loog 'generateMetaProductionById.metaProductionSet', 'packiFiles', Object.keys(metaProductionSet.packiFiles), 'context', Object.keys(metaProductionSet.context),
+        (metaProductionSet) => {
+            const metaContext = Object.assign({}, metaProductionSet.context, {
+                cliCtx: cliCtx
+            });
+            wizzi_1.wizziProds.metaGenerate(metaProductionSet.packiFiles, metaContext).then(
+            // loog 'generateMetaProductionById.metaGenerate.result', 'packiFiles', Object.keys(packiFiles),
+            (packiFiles) => resolve(packiFiles)).catch((err) => {
+                console.log('generateMetaProductionById.metaGenerate.error', err, __filename);
+                return reject(err);
+            });
+        }).catch((err) => {
+            console.log('generateMetaProductionById.prepareProductionById.error', err, __filename);
+            return reject(err);
+        }));
+    });
+}
+exports.generateMetaProductionById = generateMetaProductionById;
 //# sourceMappingURL=meta.js.map

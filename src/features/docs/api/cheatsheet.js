@@ -4,7 +4,7 @@ exports.getCheatsheet = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\docs\api\cheatsheet.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
@@ -35,7 +35,6 @@ function getCheatsheet(name) {
                 var i, i_items = mTree.nodes[0].children, i_len = mTree.nodes[0].children.length, itemTop;
                 for (i = 0; i < i_len; i++) {
                     itemTop = mTree.nodes[0].children[i];
-                    // log itemTop.n, itemTop.v
                     if (itemTop.n === 'element') {
                         var elementResult = {
                             name: itemTop.v,
@@ -53,7 +52,6 @@ function getCheatsheet(name) {
                                 var k, k_items = itemEl.children, k_len = itemEl.children.length, item;
                                 for (k = 0; k < k_len; k++) {
                                     item = itemEl.children[k];
-                                    // log item.n, mTree.toIttf(item.children[0])
                                     if (item.n === 'ittf') {
                                         if (item.children.length == 1) {
                                             // is already ok, has the correct root
@@ -88,7 +86,6 @@ function getCheatsheet(name) {
                                     else if (item.n === 'expected') {
                                         itemResult[item.n] = buildExpected(item).trim();
                                     }
-                                    // log item.n, item.v
                                     else {
                                         itemResult[item.n] = item.v;
                                     }
@@ -104,7 +101,6 @@ function getCheatsheet(name) {
                     }
                 }
                 var item_count = 0;
-                // log 'contextLoader.prettify', JSON.stringify(item.ittf, null, 2)
                 (function next() {
                     var item = _all_items[item_count++];
                     if (!item) {
@@ -151,14 +147,14 @@ function getCheatsheet(name) {
                                 item.generated = artifactText ? artifactText.trim() : 'No result. Something went wrong!';
                                 next();
                             }).catch((err) => {
-                                console.log('getCheatsheet.generateArtifact.error', err, __filename);
+                                console.log("[31m%s[0m", 'getCheatsheet.generateArtifact.error', err);
                                 return reject(err);
                             });
                         }
                     });
                 })();
             }).catch((err) => {
-                console.log('cheatsheetApi.getCheatsheet.error', err, __filename);
+                console.log("[31m%s[0m", 'cheatsheetApi.getCheatsheet.error', err);
                 return reject(err);
             });
         });

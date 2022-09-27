@@ -5,10 +5,12 @@ const tslib_1 = require("tslib");
 const jsx_runtime_1 = require("react/jsx-runtime");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\account\controllers\user.tsx.ittf
 */
 const express_1 = require("express");
+const error_1 = require("../../../utils/error");
+const utils_1 = require("../../../utils");
 const server_1 = tslib_1.__importDefault(require("react-dom/server"));
 const PageFormDocument_1 = tslib_1.__importDefault(require("../../../pages/PageFormDocument"));
 const user_1 = require("../api/user");
@@ -18,6 +20,32 @@ function renderPackiPageForm(req, res, data, queryParams) {
     res.set('Content-Type', 'text/html');
     res.set('Content-Length', index.length.toString());
     res.send(index);
+}
+function makeHandlerAwareOfAsyncErrors(handler) {
+    return function (request, response, next) {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            try {
+                yield handler(request, response, next);
+            }
+            catch (error) {
+                if (error instanceof error_1.FcError) {
+                    response.status(utils_1.statusCode.BAD_REQUEST).send({
+                        code: error.code,
+                        message: error.message,
+                        data: error.data || {}
+                    });
+                }
+                else {
+                    const fcError = new error_1.FcError(error_1.SYSTEM_ERROR);
+                    response.status(utils_1.statusCode.BAD_REQUEST).send({
+                        code: fcError.code,
+                        message: error.message,
+                        data: fcError.data || {}
+                    });
+                }
+            }
+        });
+    };
 }
 class UserController {
     constructor() {

@@ -1,6 +1,6 @@
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\js\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\public\wz.js.ittf
 */
 'use strict';
@@ -23,13 +23,11 @@ if (typeof Array.isArray === 'undefined') {
         }
         emit(name) {
             var args = [].slice.call(arguments, 1);
-            // log 'wz_EventTarget.emit.args', arguments, args
             if (this.__is_Event(name)) {
                 if (this.handlers[name] instanceof Array) {
                     var i, i_items=this.handlers[name], i_len=this.handlers[name].length, handle;
                     for (i=0; i<i_len; i++) {
                         handle = this.handlers[name][i];
-                        // log 'handle.context', handle.context
                         handle.callback.apply(handle.context, args);
                     }
                 }
@@ -39,7 +37,6 @@ if (typeof Array.isArray === 'undefined') {
             }
         }
         on(name, callback, scope) {
-            // log 'EventTarget.on.name,scope', name, scope
             if (this.__is_Event(name)) {
                 if (!this.handlers[name]) {
                     this.handlers[name] = [];
@@ -626,7 +623,6 @@ class wz_ContextMenu {
         ;
     }
     create(meta) {
-        // log 'wz.ContextMenu.create'
         this.meta = meta;
         var menusContainer = wz.element('#' + this.menusContainerId);
         if (!menusContainer) {
@@ -644,7 +640,6 @@ class wz_ContextMenu {
         this.menuDiv.onclick = (event) => {
         
             var command = event.target.dataset['command'];
-            // log 'clickListener.target', event.target, command
             if (meta.onClick) {
                 meta.onClick({
                     command: command, 
@@ -656,18 +651,15 @@ class wz_ContextMenu {
         ;
         wz.click(document, () => 
         
-            // log 'document.onclick', meta.menu.id
             this.handleClose()
         )
         wz.global.on('wz.contextMenu.clear', function(target) {
-            // log 'wz.contextMenu.clear.target', target, meta.menu.id
             if (target !== meta.menu.id) {
                 this.handleClose();
             }
         }, this)
     }
     replace(menuMeta) {
-        // log 'wz.ContextMenu.replace'
         // _createMenuItemsDiv removes the previous div
         var itemsDiv = this._createMenuItemsDiv(menuMeta);
         this.menuDiv.appendChild(itemsDiv)
@@ -712,7 +704,6 @@ class wz_ContextMenu {
     }
     handleClose() {
         wz.hide('#' + this.meta.menu.id)
-        // log 'handleClose', this.onClose
         this.onClose();
     }
 }
@@ -1709,7 +1700,6 @@ async function callApi(method, path, data) {
                 body: JSON.stringify(data)
              }).then((response) => {
             
-                // log 'callApi.response', response
                 if (response.ok) {
                     resolve(response.json())
                 }
@@ -1722,7 +1712,6 @@ async function callApi(method, path, data) {
             }
             ).catch(err => 
             
-                // log 'callApi.err', err
                 reject(err())
             )
         
@@ -1790,7 +1779,6 @@ async function callApi(method, path, data) {
                     throw new Error('Invalid result: ' + result);
                 }
             }
-            // log 'wz.genFromText.result', result
             else {
                 callback(null, result.generatedArtifact.artifactContent)
             }
@@ -1961,8 +1949,6 @@ class EditorControl {
         }
         this.editor.on('change', (value) => {
         
-            
-            // log 'editvaluechanged', this.key, value
             if (this.isSettingValue == false) {
                 glEventHub.emit('editvaluechanged', {
                     key: this.key, 
@@ -1977,7 +1963,6 @@ class EditorControl {
             console.log('on seteditvalue', data, __filename);
             var key = data.key;
             var value = data.value;
-            // log 'seteditvalue', key, value
             if (key === this.key) {
                 this.isSettingValue = true;
                 this.value(value)
@@ -2115,7 +2100,6 @@ class TreeNode {
         }
         var oldEl = this.el;
         var newEl = this.render();
-        // log 'replace', newEl, this.el
         oldEl.parentNode.replaceChild(newEl, oldEl);
     }
     render() {
@@ -2226,7 +2210,6 @@ class TreeNode {
         this.text.parentNode.replaceChild(this.input, this.text)
         var editOnInputKeyPress = (event) => {
         
-            // log 'keypress', event.keyCode
             if (event.keyCode == 13) {
                 editOnDocumentClick({
                     target: null
@@ -2287,7 +2270,6 @@ class TreeNode {
     }
     getItemEl(item) {
         var kind;
-        // log 'getItemEl', item
         if (item.isFolder) {
             kind = item.expanded ? 'folder-opened' : 'folder-closed';
         }
@@ -2398,7 +2380,6 @@ class TreeView  extends  wz.EventTarget {
                     console.log('err', err, __filename);
                     throw err;
                 }
-                // log 'TreeView.folderRoot', data
                 this.rootNode = new TreeNode(data, this);
                 return callback(null, this.rootNode.render());
             }
@@ -2415,7 +2396,6 @@ class TreeView  extends  wz.EventTarget {
         }
     }
     handleContextMenu(payload) {
-        // log 'handleContextMenu.payload', payload, payload.data
         if (this.filesystem) {
             if (payload.data.isFolder) {
                 this.handleContextMenuFolder(payload)
@@ -2439,7 +2419,6 @@ class TreeView  extends  wz.EventTarget {
                  }, 
                 onClick: (data) => {
                 
-                    // log 'handleContextMenu_ittfDocument.onClick', data
                     if (data.command === 'rename') {
                         data.payload.treeNode.renameStart();
                     }
@@ -2496,7 +2475,6 @@ class TreeView  extends  wz.EventTarget {
                  }, 
                 onClick: (data) => {
                 
-                    // log 'handleContextMenu_ittfDocument.onClick', data
                     if (data.command === 'rename') {
                         data.payload.treeNode.renameStart();
                     }
@@ -2534,7 +2512,6 @@ class TreeView  extends  wz.EventTarget {
                 console.log('err', err, __filename);
                 throw err;
             }
-            // log 'TreeView.populate', populatedItem
             treeNode.replace(populatedItem)
             if (callback) {
                 return callback(null);

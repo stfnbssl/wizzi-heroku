@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.packiFilePrefix = void 0;
+exports.packiConfigPath = exports.packiFilePrefixExtract = exports.packiFilePrefix = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\config\env.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
@@ -33,7 +33,9 @@ function validateEnv() {
     });
     return checkedEnv;
 }
-exports.packiFilePrefix = 'json://';
+exports.packiFilePrefix = 'json:/';
+exports.packiFilePrefixExtract = 'json:/';
+exports.packiConfigPath = '.packi/config.json.ittf';
 let config;
 function create() {
     if (config == null) {

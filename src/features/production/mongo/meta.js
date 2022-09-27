@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MetaProductionModelBuilder = exports.GetMetaProductionModel = void 0;
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.11
+    package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\mongo\meta.ts.ittf
 */
 const mongoose_1 = require("mongoose");
@@ -26,10 +26,15 @@ MetaProductionSchema.index({
 // controllers call GetMetaProductionModel() when initialized, after buildModel() has benn called
 let MetaProductionModel;
 function GetMetaProductionModel() {
+    if (!MetaProductionModel) {
+        MetaProductionModel = (0, mongoose_1.model)("MetaProduction");
+    }
     return MetaProductionModel;
 }
 exports.GetMetaProductionModel = GetMetaProductionModel;
 exports.MetaProductionModelBuilder = {
-    buildModel: () => MetaProductionModel = (0, mongoose_1.model)("MetaProduction", MetaProductionSchema)
+    buildModel: (options) => MetaProductionModel = (0, mongoose_1.model)("MetaProduction", MetaProductionSchema),
+    applyExtraSetup: (options) => {
+    }
 };
 //# sourceMappingURL=meta.js.map

@@ -31,10 +31,19 @@ html
                     p A wizzi macro expression should work even if there are spaces between graphs and expression ${'$'}{ '()' }
                     p Delete UTC time from generation headings, they produce false changes to commit.
                     
+                    h1 wizzi-js
+                    p in lib\artifacts\js\module\gen\codegen\statements\objects.js.ittf when a statement node inside an object '{' is
+                        \b an empty line "+   " it causes a comma ", " to be written, the same as it were a property. 
+                    p A comment node is counted as a statement when emitting arrow expressions, 
+                        \b causing errors in empty expressions.
+                    
                     h1 wizzi-core
                     p json-model: errors lines in fragments are reported of mixer instead of mixed
 
-                    h1 Mongo Productions repository
+                    h1 wizzi-tools
+                    p wizzify-ts: 'export type' is not recognized, emits simply 'export' instead of 'export-type'
+
+                    h1 Mongo productions repository
                     p The global context artifact 'wzctx' should be optional 
                     p Before returning a production from MongoDB always check its integrity
                     
