@@ -10,7 +10,7 @@ const tslib_1 = require("tslib");
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
 const env_1 = require("../../config/env");
 const wizzi_1 = require("../../wizzi");
-const tFolder_1 = require("../mongo/tFolder");
+const tfolder_1 = require("../mongo/tfolder");
 const myname = 'features.production.api.TFolder';
 const tFolderCache = new node_cache_1.default({
     stdTTL: 120,
@@ -18,7 +18,7 @@ const tFolderCache = new node_cache_1.default({
 });
 function validateTFolder(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        const TFolder = (0, tFolder_1.GetTFolderModel)();
+        const TFolder = (0, tfolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             let query = { owner: owner, name: name };
             TFolder.find(query, (err, result) => {
@@ -42,7 +42,7 @@ exports.validateTFolder = validateTFolder;
 function getListTFolder(options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         options = options || {};
-        const TFolder = (0, tFolder_1.GetTFolderModel)();
+        const TFolder = (0, tfolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             const query = TFolder.find(options.query);
             if (options.limit) {
@@ -82,7 +82,7 @@ function getListTFolder(options) {
 exports.getListTFolder = getListTFolder;
 function getTFolder(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        const TFolder = (0, tFolder_1.GetTFolderModel)();
+        const TFolder = (0, tfolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 owner: owner,
@@ -112,7 +112,7 @@ function getTFolder(owner, name) {
 exports.getTFolder = getTFolder;
 function getTFolderById(id) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        const TFolder = (0, tFolder_1.GetTFolderModel)();
+        const TFolder = (0, tfolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             TFolder.find({
                 _id: id
@@ -206,7 +206,7 @@ function _createTFolderObject(tf, loadPackiConfig) {
 }
 function createTFolder(owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        const TFolder = (0, tFolder_1.GetTFolderModel)();
+        const TFolder = (0, tfolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 owner: owner,
@@ -253,7 +253,7 @@ function createTFolder(owner, name, description, packiFiles) {
 exports.createTFolder = createTFolder;
 function updateTFolder(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        const TFolder = (0, tFolder_1.GetTFolderModel)();
+        const TFolder = (0, tfolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             const query = {
                 _id: id
@@ -289,7 +289,7 @@ function updateTFolder(id, owner, name, description, packiFiles) {
 exports.updateTFolder = updateTFolder;
 function deleteTFolder(id, owner, name, description, packiFiles) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        const TFolder = (0, tFolder_1.GetTFolderModel)();
+        const TFolder = (0, tfolder_1.GetTFolderModel)();
         return new Promise((resolve, reject) => {
             let query = {
                 _id: id
