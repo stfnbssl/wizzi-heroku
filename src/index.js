@@ -8,10 +8,11 @@ const index_2 = require("./site/index");
 const index_3 = require("./features/auth/index");
 const index_4 = require("./features/account/index");
 const index_5 = require("./features/blog/index");
-const index_6 = require("./features/docs/index");
-const index_7 = require("./features/production/index");
-const index_8 = require("./features/packi/index");
-const index_9 = require("./middlewares/index");
+const index_6 = require("./features/github/index");
+const index_7 = require("./features/docs/index");
+const index_8 = require("./features/production/index");
+const index_9 = require("./features/packi/index");
+const index_10 = require("./middlewares/index");
 const App_1 = tslib_1.__importDefault(require("./App"));
 var app = {
     instance: null
@@ -21,14 +22,14 @@ function start() {
         let modelBuilders = [
             ...index_4.accountModelBuilders,
             ...index_5.blogModelBuilders,
-            ...index_7.productionModelBuilders
+            ...index_8.productionModelBuilders
         ];
         yield (0, mongodb_1.mongodbStart)(index_1.config, modelBuilders);
         let middlewaresPre = [
-            ...index_9.appMiddlewaresPre
+            ...index_10.appMiddlewaresPre
         ];
         let middlewaresPost = [
-            ...index_9.appMiddlewaresPost
+            ...index_10.appMiddlewaresPost
         ];
         let apis = [];
         let controllers = [
@@ -36,9 +37,10 @@ function start() {
             ...index_3.authControllers,
             ...index_4.accountControllers,
             ...index_5.blogControllers,
-            ...index_6.docsControllers,
-            ...index_7.productionControllers,
-            ...index_8.packiControllers
+            ...index_6.githubControllers,
+            ...index_7.docsControllers,
+            ...index_8.productionControllers,
+            ...index_9.packiControllers
         ];
         console.log("[33m%s[0m", 'Starting app. Config:', index_1.config);
         const appInitializer = {

@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\api\tfolder.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\api\tfolder.ts.ittf
 */
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
 const env_1 = require("../../config/env");
@@ -147,7 +147,9 @@ function getTFolderObject(owner, name, loadPackiConfig) {
             const tf = result.item;
             return resolve(_createTFolderObject(tf, loadPackiConfig));
         }).catch((err) => {
-            console.log('features.production.api.tFolder.getTFolderObject.getTFolder.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.tFolder.getTFolderObject.getTFolder.error', err);
             return reject(err);
         }));
     });
@@ -162,7 +164,9 @@ function getTFolderObjectById(id, loadPackiConfig) {
             const tf = result.item;
             return resolve(_createTFolderObject(tf, loadPackiConfig));
         }).catch((err) => {
-            console.log('features.production.api.tFolder.getTFolderObjectById.getTFolderById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.tFolder.getTFolderObjectById.getTFolderById.error', err);
             return reject(err);
         }));
     });
@@ -193,7 +197,9 @@ function _createTFolderObject(tf, loadPackiConfig) {
                     obj.packiConfigObj = JSON.parse(generationResult.artifactContent);
                     return resolve(obj);
                 }).catch((err) => {
-                    console.log('features.production.api.tFolder.getTFolderObject._createTFolderObject.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.tFolder.getTFolderObject._createTFolderObject.error', err);
                     return reject(err);
                 });
             }
@@ -320,7 +326,9 @@ function getTFolderObject_stop(owner, name) {
             const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString() });
             return resolve(obj);
         }).catch((err) => {
-            console.log('getTFolderObject.getTFolder.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getTFolderObject.getTFolder.error', err);
             return reject(err);
         }));
     });
@@ -337,7 +345,9 @@ function getTFolderObjectById_stop(id) {
             const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString() });
             return resolve(obj);
         }).catch((err) => {
-            console.log('getTFolderObjectById.getTFolderById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getTFolderObjectById.getTFolderById.error', err);
             return reject(err);
         }));
     });
@@ -361,7 +371,9 @@ function getTFolder_withCache(owner, name) {
                 };
                 return resolve(tfValue);
             }).catch((err) => {
-                console.log('getTFolder_withCache.getArtifactProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getTFolder_withCache.getArtifactProduction.error', err);
                 return reject(err);
             });
         });

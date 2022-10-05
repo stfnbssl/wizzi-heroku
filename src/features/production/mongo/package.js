@@ -4,7 +4,7 @@ exports.PackageProductionModelBuilder = exports.GetPackageProductionModel = void
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\mongo\package.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\mongo\package.ts.ittf
 */
 const mongoose_1 = require("mongoose");
 const PackageProductionSchema = new mongoose_1.Schema({

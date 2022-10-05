@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\wizzi\maps.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\wizzi\maps.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 function parseFilePath(filePath) {
@@ -29,7 +29,7 @@ exports.parseFilePath = parseFilePath;
 const schemaArtifactMap = {
     css: 'css/document',
     html: 'html/document',
-    ittf: 'ittf/document',
+    ittf: 'ittf/tojson',
     js: 'js/module',
     json: 'json/document',
     jsx: 'js/module',

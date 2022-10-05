@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\controllers\apiv1meta.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\controllers\apiv1meta.tsx.ittf
 */
 const express_1 = require("express");
 const index_1 = require("../../../middlewares/index");
@@ -77,13 +77,15 @@ class ApiV1MetaProductionController {
                     (0, sendResponse_1.sendSuccess)(response, items);
                 }
                 else {
-                    console.log('getMetaProductionList.error', result, __filename);
+                    console.log("[31m%s[0m", 'getMetaProductionList.error', result);
                     (0, sendResponse_1.sendFailure)(response, {
                         err: result
                     }, 501);
                 }
             }).catch((err) => {
-                console.log('getMetaProductionList.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getMetaProductionList.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -95,12 +97,16 @@ class ApiV1MetaProductionController {
             value => (0, sendResponse_1.sendSuccess)(response, {
                 meta: JSON.parse(value.artifactContent)
             })).catch((err) => {
-                console.log('features.packi.controllers.production.generateArtifact.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.packi.controllers.production.generateArtifact.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
-                console.log('getMetaProperties.prepareProductionById.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getMetaProperties.prepareProductionById.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -112,7 +118,9 @@ class ApiV1MetaProductionController {
             return (0, meta_1.validateMetaProduction)(request.params.owner, request.params.name).then(
             // loog 'getCheckMetaName.result', result
             (result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getCheckMetaName.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getCheckMetaName.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -120,7 +128,9 @@ class ApiV1MetaProductionController {
         });
         this.getMetaProduction = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, meta_1.getMetaProduction)(request.params.owner, request.params.name).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getMetaProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getMetaProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -131,7 +141,9 @@ class ApiV1MetaProductionController {
         // loog 'postMetaProduction.request.body', request.body
         (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, meta_1.createMetaProduction)(request.params.owner, request.params.name, request.body.description, JSON.stringify(request.body.packiFiles)).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('postMetaProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'postMetaProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -139,7 +151,9 @@ class ApiV1MetaProductionController {
         });
         this.putMetaProduction = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, meta_1.updateMetaProduction)(request.params.id, request.body.owner, request.body.name, request.body.description, JSON.stringify(request.body.packiFiles)).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('putMetaProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'putMetaProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -147,7 +161,9 @@ class ApiV1MetaProductionController {
         });
         this.generateMetaProductionByName = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, meta_1.generateMetaProduction)(request.params.owner, request.params.name, request.body.cliCtx).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('generateMetaProductionByName.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'generateMetaProductionByName.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

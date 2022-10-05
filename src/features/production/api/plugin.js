@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\api\plugin.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\api\plugin.ts.ittf
 */
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
 const env_1 = require("../../config/env");
@@ -147,7 +147,9 @@ function getPluginProductionObject(owner, name, loadPackiConfig) {
             const lp = result.item;
             return resolve(_createPluginProductionObject(lp, loadPackiConfig));
         }).catch((err) => {
-            console.log('features.production.api.pluginProduction.getPluginProductionObject.getPluginProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.pluginProduction.getPluginProductionObject.getPluginProduction.error', err);
             return reject(err);
         }));
     });
@@ -162,7 +164,9 @@ function getPluginProductionObjectById(id, loadPackiConfig) {
             const lp = result.item;
             return resolve(_createPluginProductionObject(lp, loadPackiConfig));
         }).catch((err) => {
-            console.log('features.production.api.pluginProduction.getPluginProductionObjectById.getPluginProductionById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.pluginProduction.getPluginProductionObjectById.getPluginProductionById.error', err);
             return reject(err);
         }));
     });
@@ -193,7 +197,9 @@ function _createPluginProductionObject(lp, loadPackiConfig) {
                     obj.packiConfigObj = JSON.parse(generationResult.artifactContent);
                     return resolve(obj);
                 }).catch((err) => {
-                    console.log('features.production.api.pluginProduction.getPluginProductionObject._createPluginProductionObject.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.pluginProduction.getPluginProductionObject._createPluginProductionObject.error', err);
                     return reject(err);
                 });
             }
@@ -320,7 +326,9 @@ function getPluginProductionObject_stop(owner, name) {
             const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString() });
             return resolve(obj);
         }).catch((err) => {
-            console.log('getPluginProductionObject.getPluginProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getPluginProductionObject.getPluginProduction.error', err);
             return reject(err);
         }));
     });
@@ -337,7 +345,9 @@ function getPluginProductionObjectById_stop(id) {
             const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString() });
             return resolve(obj);
         }).catch((err) => {
-            console.log('getPluginProductionObjectById.getPluginProductionById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getPluginProductionObjectById.getPluginProductionById.error', err);
             return reject(err);
         }));
     });
@@ -361,7 +371,9 @@ function getPluginProduction_withCache(owner, name) {
                 };
                 return resolve(ppValue);
             }).catch((err) => {
-                console.log('getPluginProduction_withCache.getArtifactProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPluginProduction_withCache.getArtifactProduction.error', err);
                 return reject(err);
             });
         });

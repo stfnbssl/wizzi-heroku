@@ -6,7 +6,7 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\packi\controllers\packiEditing.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\packi\controllers\packiEditing.tsx.ittf
 */
 const express_1 = require("express");
 const index_1 = require("../../../middlewares/index");
@@ -101,7 +101,9 @@ class PackiEditingController {
                     }
                 }, loggedUser, queryParams);
             }).catch((err) => {
-                console.log('getPackiArtifactProductionByUsername_Name.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackiArtifactProductionByUsername_Name.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -136,7 +138,9 @@ class PackiEditingController {
                     }
                 }, loggedUser, queryParams);
             }).catch((err) => {
-                console.log('getPackiPackageProductionByUsername_Name.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackiPackageProductionByUsername_Name.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -171,7 +175,9 @@ class PackiEditingController {
                     }
                 }, loggedUser, queryParams);
             }).catch((err) => {
-                console.log('getPackiMetaProductionByUsername_Name.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackiMetaProductionByUsername_Name.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -206,7 +212,9 @@ class PackiEditingController {
                     }
                 }, loggedUser, queryParams);
             }).catch((err) => {
-                console.log('getPackiPluginProductionByUsername_Name.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackiPluginProductionByUsername_Name.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -241,7 +249,9 @@ class PackiEditingController {
                     }
                 }, loggedUser, queryParams);
             }).catch((err) => {
-                console.log('getPackiTFolderByUsername_Name.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackiTFolderByUsername_Name.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

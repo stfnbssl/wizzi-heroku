@@ -6,7 +6,7 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\controllers\package.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\controllers\package.tsx.ittf
 */
 const express_1 = require("express");
 const index_1 = require("../../../middlewares/index");
@@ -179,13 +179,21 @@ class PackageProductionController {
                         error: result
                     });
                 }
-            }).catch((err) => response.render('error.html.ittf', {
-                message: 'creating a new package production',
-                error: err
-            }))).catch((err) => response.render('error.html.ittf', {
-                message: 'getting template packi files while creating a new package production',
-                error: err
-            }));
+            }).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                response.render('error.html.ittf', {
+                    message: 'creating a new package production',
+                    error: err
+                });
+            })).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                response.render('error.html.ittf', {
+                    message: 'getting template packi files while creating a new package production',
+                    error: err
+                });
+            });
         });
         this.getUpdatePackageForm = 
         // loog myname + '.getUpdatePackageForm.id', id
@@ -303,10 +311,14 @@ class PackageProductionController {
             }, {});
         });
         this.getWizziMetaFolderByName = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            return (0, package_1.getWizziMetaFolder)(request.params.owner, request.params.name, {}).then((packiFiles) => (0, sendResponse_1.sendSuccess)(response, packiFiles)).catch((err) => response.render('error.html.ittf', {
-                message: 'getting wizzi meta folder',
-                error: err
-            }));
+            return (0, package_1.getWizziMetaFolder)(request.params.owner, request.params.name, {}).then((packiFiles) => (0, sendResponse_1.sendSuccess)(response, packiFiles)).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                response.render('error.html.ittf', {
+                    message: 'getting wizzi meta folder',
+                    error: err
+                });
+            });
         });
     }
 }

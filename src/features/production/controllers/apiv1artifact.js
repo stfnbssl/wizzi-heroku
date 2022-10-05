@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\controllers\apiv1artifact.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\controllers\apiv1artifact.tsx.ittf
 */
 const express_1 = require("express");
 const index_1 = require("../../../middlewares/index");
@@ -58,7 +58,9 @@ class ApiV1ArtifactProductionController {
                     owner: request.params.owner
                 }
             }).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getArtifactProductionList.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getArtifactProductionList.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -70,7 +72,9 @@ class ApiV1ArtifactProductionController {
             return (0, artifact_1.validateArtifactProduction)(request.params.owner, request.params.name).then(
             // loog 'getCheckArtifactName.result', result
             (result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getCheckArtifactName.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getCheckArtifactName.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -78,7 +82,9 @@ class ApiV1ArtifactProductionController {
         });
         this.getArtifactProduction = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, artifact_1.getArtifactProduction)(request.params.owner, request.params.name).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getArtifactProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getArtifactProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -91,7 +97,9 @@ class ApiV1ArtifactProductionController {
                 (0, artifact_1.invalidateCache)(request.params.owner, request.params.name);
                 (0, sendResponse_1.sendSuccess)(response, result);
             }).catch((err) => {
-                console.log('postArtifactProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'postArtifactProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -104,7 +112,9 @@ class ApiV1ArtifactProductionController {
                 (0, artifact_1.invalidateCache)(request.params.owner, request.params.name);
                 (0, sendResponse_1.sendSuccess)(response, result);
             }).catch((err) => {
-                console.log('putArtifactProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'putArtifactProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

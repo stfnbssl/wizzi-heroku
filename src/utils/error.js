@@ -4,7 +4,7 @@ exports.NOT_REGISTERED_YET = exports.CONTEST_NOT_FOUND = exports.SEND_EMAIL_ERRO
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\utils\error.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\utils\error.ts.ittf
 */
 const MISSING_REQUIRED_FIELDS = 1000;
 exports.MISSING_REQUIRED_FIELDS = MISSING_REQUIRED_FIELDS;

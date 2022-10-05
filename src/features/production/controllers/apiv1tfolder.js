@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\controllers\apiv1tfolder.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\controllers\apiv1tfolder.tsx.ittf
 */
 const express_1 = require("express");
 const index_1 = require("../../../middlewares/index");
@@ -58,7 +58,9 @@ class ApiV1TFolderController {
                     owner: request.params.owner
                 }
             }).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getTFolderList.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getTFolderList.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -70,7 +72,9 @@ class ApiV1TFolderController {
             return (0, tfolder_1.validateTFolder)(request.params.owner, request.params.name).then(
             // loog 'getCheckTFolderName.result', result
             (result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getCheckTFolderName.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getCheckTFolderName.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -78,7 +82,9 @@ class ApiV1TFolderController {
         });
         this.getTFolder = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, tfolder_1.getTFolder)(request.params.owner, request.params.name).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getTFolder.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getTFolder.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -89,7 +95,9 @@ class ApiV1TFolderController {
                 (0, tfolder_1.invalidateCache)(request.params.owner, request.params.name);
                 (0, sendResponse_1.sendSuccess)(response, result);
             }).catch((err) => {
-                console.log('postTFolder.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'postTFolder.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -100,7 +108,9 @@ class ApiV1TFolderController {
                 (0, tfolder_1.invalidateCache)(request.params.owner, request.params.name);
                 (0, sendResponse_1.sendSuccess)(response, result);
             }).catch((err) => {
-                console.log('putTFolder.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'putTFolder.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

@@ -72,7 +72,7 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log('' + myname + '_executeBrowse.artifactApi.getArtifactMTree.error', err, __filename);
+            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactMTree.error', err);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
@@ -91,7 +91,7 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log('' + myname + '_executeBrowse.artifactApi.getArtifactMTree.error', err, __filename);
+            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactMTree.error', err);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
@@ -110,7 +110,7 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log('' + myname + '_executeBrowse.artifactApi.getArtifactGeneration.error', err, __filename);
+            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactGeneration.error', err);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
@@ -129,7 +129,7 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log('' + myname + '_executeBrowse.artifactApi.getArtifactGeneration.error', err, __filename);
+            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactGeneration.error', err);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';

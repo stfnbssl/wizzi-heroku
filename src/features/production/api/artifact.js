@@ -146,7 +146,9 @@ function getArtifactProductionObject(owner, name, loadPackiConfig) {
             const ap = result.item;
             return resolve(_createArtifactProductionObject(ap, loadPackiConfig));
         }).catch((err) => {
-            console.log('features.production.api.artifactProduction.getArtifactProductionObject.getArtifactProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.artifactProduction.getArtifactProductionObject.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
@@ -161,7 +163,9 @@ function getArtifactProductionObjectById(id, loadPackiConfig) {
             const ap = result.item;
             return resolve(_createArtifactProductionObject(ap, loadPackiConfig));
         }).catch((err) => {
-            console.log('features.production.api.artifactProduction.getArtifactProductionObjectById.getArtifactProductionById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.artifactProduction.getArtifactProductionObjectById.getArtifactProductionById.error', err);
             return reject(err);
         }));
     });
@@ -192,7 +196,9 @@ function _createArtifactProductionObject(ap, loadPackiConfig) {
                     obj.packiConfigObj = JSON.parse(generationResult.artifactContent);
                     return resolve(obj);
                 }).catch((err) => {
-                    console.log('features.production.api.artifactProduction.getArtifactProductionObject._createArtifactProductionObject.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.artifactProduction.getArtifactProductionObject._createArtifactProductionObject.error', err);
                     return reject(err);
                 });
             }
@@ -337,7 +343,9 @@ function getArtifactProductionObject_stop(owner, name) {
             const obj = Object.assign(Object.assign({}, ap._doc), { packiFiles: ap_packiFiles_object, _id: ap._id.toString() });
             return resolve(obj);
         }).catch((err) => {
-            console.log('getArtifactProductionObject.getArtifactProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getArtifactProductionObject.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
@@ -354,7 +362,9 @@ function getArtifactProductionObjectById_stop(id) {
             const obj = Object.assign(Object.assign({}, ap._doc), { packiFiles: ap_packiFiles_object, _id: ap._id.toString() });
             return resolve(obj);
         }).catch((err) => {
-            console.log('getArtifactProductionObjectById.getArtifactProductionById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getArtifactProductionObjectById.getArtifactProductionById.error', err);
             return reject(err);
         }));
     });
@@ -391,7 +401,9 @@ function getArtifactProduction_withCache(owner, name) {
                         };
                         return resolve(apValue);
                     }).catch((err) => {
-                        console.log('getArtifactProduction_withCache.getTFolder.error', err, __filename);
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'getArtifactProduction_withCache.getTFolder.error', err);
                         return reject(err);
                     });
                 }
@@ -403,7 +415,9 @@ function getArtifactProduction_withCache(owner, name) {
                     return resolve(apValue);
                 }
             }).catch((err) => {
-                console.log('getArtifactProduction_withCache.getArtifactProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getArtifactProduction_withCache.getArtifactProduction.error', err);
                 return reject(err);
             });
         });
@@ -422,7 +436,9 @@ function getDefaultContext_withCache(owner, sysContext) {
             const defaultContext = Object.assign({}, sysContext, resultItemContext);
             resolve(defaultContext);
         }).catch((err) => {
-            console.log('getDefaultContext_withCache.getArtifactContextItem.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getDefaultContext_withCache.getArtifactContextItem.error', err);
             return reject(err);
         }));
     });
@@ -445,7 +461,9 @@ function getArtifactContext(owner, queryContextString, sysContext) {
                         resultContext = Object.assign({}, resultContext, resultItemContext);
                         next();
                     }).catch((err) => {
-                        console.log('getArtifactContext.getArtifactContextItem.error', err, __filename);
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'getArtifactContext.getArtifactContextItem.error', err);
                         return reject(err);
                     });
                 })();
@@ -474,7 +492,9 @@ function getArtifactContextItem(owner, queryContextString, sysContext) {
                     getArtifactTransformation(owner, contextArtifactName, sysContext, contextTransformation).then((result) => resolve(Object.assign({}, sysContext, {
                         [contextName]: result.transformResult
                     }))).catch((err) => {
-                        console.log('getArtifactContextItem.getArtifactTransformation.error', err, __filename);
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'getArtifactContextItem.getArtifactTransformation.error', err);
                         return reject(err);
                     });
                 }
@@ -485,7 +505,9 @@ function getArtifactContextItem(owner, queryContextString, sysContext) {
                             [contextName]: contextObject
                         }));
                     }).catch((err) => {
-                        console.log('getArtifactContextItem.getArtifactGeneration.error', err, __filename);
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'getArtifactContextItem.getArtifactGeneration.error', err);
                         return reject(err);
                     });
                 }
@@ -504,10 +526,24 @@ function getArtifactTransformation(owner, name, context, transformerName) {
         }).then((result) => {
             return resolve(result);
         }).catch((err) => {
-            console.log('getArtifactTransformation.transformModel.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: name,
+                    mainIttf: ap.mainIttf,
+                    transformerName: transformerName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactTransformation.transformModel.error', err);
             return reject(err);
         })).catch((err) => {
-            console.log('getArtifactTransformation.getArtifactProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: name
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactTransformation.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
@@ -522,10 +558,24 @@ function getArtifactTransformation_withPrepare(owner, productionName, queryConte
         }).then((result) => {
             return resolve(result);
         }).catch((err) => {
-            console.log('getArtifactTransformation_withPrepare.transformModel.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName,
+                    mainIttf: productionObj.mainIttf,
+                    transformerName: transformerName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactTransformation_withPrepare.transformModel.error', err);
             return reject(err);
         })).catch((err) => {
-            console.log('getArtifactTransformation_withPrepare.getArtifactProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactTransformation_withPrepare.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
@@ -541,10 +591,23 @@ function getArtifactGeneration(owner, name, context) {
             };
             return resolve(response);
         }).catch((err) => {
-            console.log('getArtifactGeneration.generateArtifact.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: name,
+                    mainIttf: ap.mainIttf
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactGeneration.generateArtifact.error', err);
             return reject(err);
         })).catch((err) => {
-            console.log('getArtifactGeneration.getArtifactProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: name
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactGeneration.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
@@ -565,10 +628,23 @@ function getArtifactGeneration_withPrepare(owner, productionName, filePath, quer
             };
             return resolve(response);
         }).catch((err) => {
-            console.log('getArtifactGeneration_withPrepare.generateArtifact.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName,
+                    mainIttf: filePath || productionObj.mainIttf
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactGeneration_withPrepare.generateArtifact.error', err);
             return reject(err);
         })).catch((err) => {
-            console.log('getArtifactGeneration_withPrepare.prepareProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactGeneration_withPrepare.prepareProduction.error', err);
             return reject(err);
         }));
     });
@@ -584,10 +660,22 @@ function getArtifactMTree(owner, productionName, rootContext) {
             };
             return resolve(response);
         }).catch((err) => {
-            console.log('getArtifactMTree.mTree.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactMTree.mTree.error', err);
             return reject(err);
         })).catch((err) => {
-            console.log('getArtifactMTree.getArtifactProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactMTree.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
@@ -603,10 +691,22 @@ function getArtifactMTree_withPrepare(owner, productionName, queryContext, rootC
             };
             return resolve(response);
         }).catch((err) => {
-            console.log('getArtifactMTree.mTree.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactMTree.mTree.error', err);
             return reject(err);
         })).catch((err) => {
-            console.log('getArtifactMTree.getArtifactProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactMTree.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
@@ -622,10 +722,22 @@ function getArtifactMTreeBuildupScript(owner, productionName, rootContext) {
             };
             return resolve(response);
         }).catch((err) => {
-            console.log('getArtifactMTreeBuildupScript.mTree.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactMTreeBuildupScript.mTree.error', err);
             return reject(err);
         })).catch((err) => {
-            console.log('getArtifactMTreeBuildupScript.getArtifactProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactMTreeBuildupScript.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
@@ -641,10 +753,22 @@ function getArtifactMTreeBuildupScript_withPrepare(owner, productionName, queryC
             };
             return resolve(response);
         }).catch((err) => {
-            console.log('getArtifactMTreeBuildupScript.mTree.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactMTreeBuildupScript.mTree.error', err);
             return reject(err);
         })).catch((err) => {
-            console.log('getArtifactMTreeBuildupScript.getArtifactProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+                err.parameter = {
+                    artifactOwner: owner,
+                    artifactName: productionName
+                };
+            }
+            console.log("[31m%s[0m", 'getArtifactMTreeBuildupScript.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
@@ -672,11 +796,15 @@ function prepareGenerationFromWizziJson(req_files) {
                             });
                         });
                     }).catch((err) => {
-                        console.log('getArtifactGeneration.getFragmentsFromWizziJson.error', err, __filename);
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'getArtifactGeneration.getFragmentsFromWizziJson.error', err);
                         return reject(err);
                     });
                 }).catch((err) => {
-                    console.log('getArtifactGeneration.generateArtifact.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'getArtifactGeneration.generateArtifact.error', err);
                     return reject(err);
                 });
             }
@@ -710,7 +838,9 @@ function getFragmentsFromWizziJson(wizziJsonObj) {
                     retPackiFiles = mergePackiFiles(retPackiFiles, tf_packiFiles_object);
                     next();
                 }).catch((err) => {
-                    console.log('getFragmentsFromWizziJson.getTFolder.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'getFragmentsFromWizziJson.getTFolder.error', err);
                     return reject(err);
                 });
             })();
@@ -736,7 +866,9 @@ function getContextFromWizziJson(wizziJsonObj) {
                     retContext = Object.assign({}, retContext, contextObject);
                     next();
                 }).catch((err) => {
-                    console.log('getContextFromWizziJson.getArtifactContextItem.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'getContextFromWizziJson.getArtifactContextItem.error', err);
                     return reject(err);
                 });
             })();

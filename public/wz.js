@@ -1,7 +1,7 @@
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\js\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\public\wz.js.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\public\wz.js.ittf
 */
 'use strict';
 if (typeof Array.isArray === 'undefined') {
@@ -302,7 +302,7 @@ if (typeof Array.isArray === 'undefined') {
             element = wz.element(element);
         }
         if (!element) {
-            console.log('element', saveElementForLog, __filename);
+            console.log("[31m%s[0m", 'Error, element', saveElementForLog);
             throw new Error('In wz.html the element parameter must be an html element or the id of an html element. Received: ' + saveElementForLog);
         }
         if (typeof html === 'undefined') {
@@ -322,8 +322,9 @@ if (typeof Array.isArray === 'undefined') {
         if (typeof element === "string") {
             element = wz.element(element);
         }
+        
+        // loog 'element', saveElementForLog
         if (!element) {
-            console.log('element', saveElementForLog, __filename);
             throw new Error('In wz.replaceChildren the element parameter must be an html element or the id of an html element. Received: ' + saveElementForLog);
         }
         element.innerHTML = '';
@@ -345,7 +346,7 @@ if (typeof Array.isArray === 'undefined') {
             element = wz.element(element);
         }
         if (!element) {
-            console.log('element', saveElementForLog, __filename);
+            console.log("[31m%s[0m", 'element', saveElementForLog);
             throw new Error('In wz.value the element parameter must be an html element or the id of an html element. Received: ' + saveElementForLog);
         }
         if (typeof value === 'undefined') {
@@ -534,7 +535,7 @@ class AceEditor {
         if (this.editor) {
             return ;
         }
-        console.log('AceEditor.initialize start on', this.options.editorElementId, __filename);
+        // loog 'AceEditor.initialize start on', this.options.editorElementId
         if (typeof ace === 'undefined' || !ace.edit) {
             throw new Error('wz.ace initialize methods requires the `ace` component. Check that the ace script has been included.');
         }
@@ -557,7 +558,7 @@ class AceEditor {
                 that.getValue()
             ])
         })
-        console.log('AceEditor.initialize end', __filename);
+        // loog 'AceEditor.initialize end'
     }
     on(name, handler) {
         if (this.events.hasOwnProperty(name)) {
@@ -745,7 +746,7 @@ wz.ContextMenu = wz_ContextMenu;
             params = null;
         }
         var buildedUrl = wz.fetch.buildUrl(url, params);
-        console.log('wz.fetch.get.buildedUrl', buildedUrl, __filename);
+        // loog 'wz.fetch.get.buildedUrl', buildedUrl
         fetch(buildedUrl, {
             method: 'GET', 
             headers: {
@@ -761,16 +762,14 @@ wz.ContextMenu = wz_ContextMenu;
                 throw response.json();
             }
         }
-        ).then((json) => {
+        ).then(json => 
         
-            console.log('fetch.get', url, 'response', json, __filename);
+            // loog 'fetch.get', url, 'response', json
             callback(null, json)
-        }
-        ).catch((err) => {
+        ).catch(err => 
         
-            console.log('fetch.get', url, 'err', Object.keys(err), err, __filename);
+            // loog 'fetch.get', url, 'err', Object.keys(err), err
             callback(err)
-        }
         )
     }
     ;
@@ -780,7 +779,7 @@ wz.ContextMenu = wz_ContextMenu;
             params = null;
         }
         var buildedUrl = wz.fetch.buildUrl(url, params);
-        console.log('wz.fetch.post.buildedUrl', buildedUrl, __filename);
+        // loog 'wz.fetch.post.buildedUrl', buildedUrl
         fetch(buildedUrl, {
             method: 'POST', 
             headers: {
@@ -797,16 +796,14 @@ wz.ContextMenu = wz_ContextMenu;
                 throw response.json();
             }
         }
-        ).then((json) => {
+        ).then(json => 
         
-            console.log('fetch.post', url, 'response', json, __filename);
+            // loog 'fetch.post', url, 'response', json
             callback(null, json)
-        }
-        ).catch((err) => {
+        ).catch(err => 
         
-            console.log('fetch.post', url, 'err', Object.keys(err), err, __filename);
+            // loog 'fetch.post', url, 'err', Object.keys(err), err
             callback(err)
-        }
         )
     }
     ;
@@ -816,9 +813,9 @@ wz.ContextMenu = wz_ContextMenu;
             params = null;
         }
         var buildedUrl = wz.fetch.buildUrl(url, params);
-        console.log('wz.fetch.put.url', url, __filename);
-        console.log('wz.fetch.put.params', params, __filename);
-        console.log('wz.fetch.put.buildedUrl', buildedUrl, __filename);
+        // loog 'wz.fetch.put.url', url
+        // loog 'wz.fetch.put.params', params
+        // loog 'wz.fetch.put.buildedUrl', buildedUrl
         fetch(buildedUrl, {
             method: 'PUT', 
             headers: {
@@ -835,16 +832,14 @@ wz.ContextMenu = wz_ContextMenu;
                 throw response.json();
             }
         }
-        ).then((json) => {
+        ).then(json => 
         
-            console.log('fetch.post', url, 'response', json, __filename);
+            // loog 'fetch.post', url, 'response', json
             callback(null, json)
-        }
-        ).catch((err) => {
+        ).catch(err => 
         
-            console.log('fetch.post', url, 'err', Object.keys(err), err, __filename);
+            // loog 'fetch.post', url, 'err', Object.keys(err), err
             callback(err)
-        }
         )
     }
     ;
@@ -1161,12 +1156,12 @@ class wzHtmlBuilder {
             item = this.elements[i];
             found = item.get(id)
             ;
-            console.log('select.item', id, item.id, found, __filename);
+            // loog 'select.item', id, item.id, found
             if (found) {
                 break;
             }
         }
-        console.log('select', id, found, __filename);
+        // loog 'select', id, found
         if (!found) {
             return false;
         }
@@ -1232,7 +1227,7 @@ class HttpRequest {
         success = _.isFunction(success) ? success : function(data) { console.log(data) };
         failure = _.isFunction(failure) ? failure : function(data) { console.log(data) };
         errorHandler = _.isFunction(errorHandler) ? errorHandler : function(data) { console.log(data) };
-        console.log('sending ajax', __filename);
+        // loog 'sending ajax'
         $.ajax(
         // Let jquery turn data map into query string only on GET requests.
         {
@@ -1552,14 +1547,13 @@ wz.node.replace = function(node, newnode) {
                 throw response.json();
             }
         }
-        ).then((json) => {
+        ).then(json => 
         
-            console.log('uploadPackiItem.response', json, __filename);
+            // loog 'uploadPackiItem.response', json
             callback(null, json)
-        }
         ).catch((err) => {
         
-            console.log('uploadPackiItem.err', Object.keys(err), __filename);
+            console.log("[31m%s[0m", 'uploadPackiItem.err', Object.keys(err));
             callback(err)
         }
         )
@@ -1650,8 +1644,8 @@ wz.node.replace = function(node, newnode) {
     }
     ;
     wz.production.createItem = function(kind, owner, name, wizziSchema, mainIttf, packiFiles, callback) {
-        console.log('wz.production.createItem.mainIttf', mainIttf, __filename);
-        console.log('wz.production.createItem.packiFiles', packiFiles, __filename);
+        // loog 'wz.production.createItem.mainIttf', mainIttf
+        // loog 'wz.production.createItem.packiFiles', packiFiles
         wz.fetch.post(wz.production.apiUrl + '/' + kind + '/:owner/:name', [
             {
                 type: 'url', 
@@ -1688,7 +1682,7 @@ wz.node.replace = function(node, newnode) {
 
 async function callApi(method, path, data) {
     const API_URL = 'https://www.wizzihub.com/api/v1';
-    console.log('callApi method', method, 'API_URL', API_URL, 'path', path, 'data', data, __filename);
+    // loog 'callApi method', method, 'API_URL', API_URL, 'path', path, 'data', data
     return new Promise((resolve, reject) => 
         
             fetch(`${API_URL}/${path}`, {
@@ -1814,7 +1808,7 @@ async function callApi(method, path, data) {
     wz.transformModel = function(filePath, transformationName, packiFiles, callback) {
         callApi('POST', 'productions/transform/' + encodeURIComponent(filePath) + '/' + encodeURIComponent(transformationName), packiFiles).then((result) => {
         
-            console.log('wz.transformModel', result, __filename);
+            // loog 'wz.transformModel', result
             if (wz.isString(result)) {
                 const json = JSON.parse(result);
                 if (json.__is_error) {
@@ -1859,7 +1853,7 @@ async function callApi(method, path, data) {
     wz.genWithRequest = function(request, callback) {
         callApi('POST', 'wizzi/productions/artifact', request).then((result) => {
         
-            console.log('result', result, __filename);
+            // loog 'result', result
             if (wz.isString(result)) {
                 const json = JSON.parse(result);
                 if (json.__is_error) {
@@ -1902,9 +1896,9 @@ async function callApi(method, path, data) {
                     throw new Error('Invalid result: ' + result);
                 }
             }
+            // loog 'wz.wizzify.json', json
             else {
                 var json = result.packiResult;
-                console.log('wz.wizzify.json', json, __filename);
                 callback(null, json['x.' + schemaName + '.ittf'].contents)
             }
         }
@@ -1960,7 +1954,7 @@ class EditorControl {
         )
         glEventHub.on('seteditvalue', (data) => {
         
-            console.log('on seteditvalue', data, __filename);
+            // loog 'on seteditvalue', data
             var key = data.key;
             var value = data.value;
             if (key === this.key) {
@@ -1970,7 +1964,7 @@ class EditorControl {
             }
         }
         )
-        console.log('EditorControl initialized', __filename);
+        // loog 'EditorControl initialized'
     }
     theme(value) {
         if (typeof value === 'undefined') {
@@ -2049,7 +2043,7 @@ itemUtils.rename = function(item, newName) {
         item.isIttfDocument = newItem.isIttfDocument;
         item.isFragment = newItem.isFragment;
     }
-    console.log('itemUtils.rename.renamed', item, __filename);
+    // loog 'itemUtils.rename.renamed', item
 }
 ;
 //
@@ -2128,7 +2122,7 @@ class TreeNode {
         }
         var clickThis = (event) => {
         
-            console.log('clickThis', 'expanded', this.item.expanded, 'needs populate',  this.children.length == 0 && !this.item.loadedAt && this.item.isFolder, __filename);
+            // loog 'clickThis', 'expanded', this.item.expanded, 'needs populate',  this.children.length == 0 && !this.item.loadedAt && this.item.isFolder
             var selectThis = () => {
             
                 if (this.item.isFolder) {
@@ -2171,7 +2165,7 @@ class TreeNode {
     }
     expand(skipEmit) {
         svg['folder-opened'](this.svg)
-        console.log('expand', this.children.length, __filename);
+        // loog 'expand', this.children.length
         if (this.children.length > 0) {
             var childrenEl = this.el.querySelector('.tree-child-leaves');
             childrenEl.classList.remove('hidden');
@@ -2186,7 +2180,7 @@ class TreeNode {
     }
     collapse(skipEmit) {
         svg['folder-closed'](this.svg)
-        console.log('collapse', this.children.length, __filename);
+        // loog 'collapse', this.children.length
         if (this.children.length > 0) {
             var childrenEl = this.el.querySelector('.tree-child-leaves');
             childrenEl.classList.add('hidden');
@@ -2200,7 +2194,7 @@ class TreeNode {
          })
     }
     renameStart() {
-        console.log('renameStart', this, __filename);
+        // loog 'renameStart', this
         if (!this.input) {
             this.input = document.createElement('input');
             this.input.setAttribute('style', 'margin: 1px 4px;');
@@ -2236,12 +2230,12 @@ class TreeNode {
     }
     renameFinish() {
         var newName = wz.value(this.input);
-        console.log('renameFinish', newName, this.item.name, __filename);
+        // loog 'renameFinish', newName, this.item.name
         if (newName !== this.item.name) {
             this.getTreeview().rename(this, newName, (err, result) => {
             
                 if (err) {
-                    console.log('err', err, __filename);
+                    console.log("[31m%s[0m", 'err', err);
                     throw err;
                 }
                 itemUtils.rename(this.item, newName)
@@ -2256,11 +2250,11 @@ class TreeNode {
         }
     }
     copyCutStart(oper) {
-        console.log('copyCutStart', oper, this, __filename);
+        // loog 'copyCutStart', oper, this
         wz.addClass(this.el, oper === 'copy' ? 'copying' : 'cutting')
     }
     copyCutFinish() {
-        console.log('copyCutFinish', this, __filename);
+        // loog 'copyCutFinish', this
         wz.removeClass(this.el, 'copying')
         wz.removeClass(this.el, 'cutting')
     }
@@ -2377,7 +2371,7 @@ class TreeView  extends  wz.EventTarget {
             this.filesystem.getFolderRoot((err, data) => {
             
                 if (err) {
-                    console.log('err', err, __filename);
+                    console.log("[31m%s[0m", 'err', err);
                     throw err;
                 }
                 this.rootNode = new TreeNode(data, this);
@@ -2509,7 +2503,7 @@ class TreeView  extends  wz.EventTarget {
         this.filesystem.populateFolderItem(treeNode.item, (err, populatedItem) => {
         
             if (err) {
-                console.log('err', err, __filename);
+                console.log("[31m%s[0m", 'err', err);
                 throw err;
             }
             treeNode.replace(populatedItem)
@@ -2532,22 +2526,23 @@ class TreeView  extends  wz.EventTarget {
             this.filesystem.createFolder(treeNode.item, (err, newItem) => {
             
                 if (err) {
-                    console.log('err', err, __filename);
+                    console.log("[31m%s[0m", 'err', err);
                     throw err;
                 }
-                console.log('createFolder.1', newItem, __filename);
+                // loog 'createFolder.1', newItem
                 var newNode = treeNode.addItem(newItem);
                 treeNode.expand();
                 newNode.renameStart();
             }
             )
         ;
+        
+        // loog 'createFolder.populate'
         if (!treeNode.item.loadedAt) {
-            console.log('createFolder.populate', __filename);
             this.populate(treeNode, (err, notUsed) => {
             
                 if (err) {
-                    console.log('err', err, __filename);
+                    console.log("[31m%s[0m", 'err', err);
                     throw err;
                 }
                 createExec();
@@ -2562,7 +2557,7 @@ class TreeView  extends  wz.EventTarget {
         this.filesystem.deleteFolder(treeNode.item, (err, result) => {
         
             if (err) {
-                console.log('err', err, __filename);
+                console.log("[31m%s[0m", 'err', err);
                 throw err;
             }
             treeNode.remove();
@@ -2575,7 +2570,7 @@ class TreeView  extends  wz.EventTarget {
             this.filesystem.createFile(treeNode.item, (err, newItem) => {
             
                 if (err) {
-                    console.log('err', err, __filename);
+                    console.log("[31m%s[0m", 'err', err);
                     throw err;
                 }
                 var newNode = treeNode.addItem(newItem);
@@ -2588,7 +2583,7 @@ class TreeView  extends  wz.EventTarget {
             this.populate(treeNode, (err, notUsed) => {
             
                 if (err) {
-                    console.log('err', err, __filename);
+                    console.log("[31m%s[0m", 'err', err);
                     throw err;
                 }
                 createExec();
@@ -2609,10 +2604,10 @@ class TreeView  extends  wz.EventTarget {
                 this.filesystem.cloneFolder(treeNode.item, (err, newItem) => {
                 
                     if (err) {
-                        console.log('err', err, __filename);
+                        console.log("[31m%s[0m", 'err', err);
                         throw err;
                     }
-                    console.log('cloneFolder.1', newItem, __filename);
+                     loog 'cloneFolder.1', newItem
                     var newNode = treeNode.addItem(newItem);
                     treeNode.expand();
                     newNode.renameStart();
@@ -2620,12 +2615,13 @@ class TreeView  extends  wz.EventTarget {
                 )*/
         
         ;
+        
+        // loog 'cloneFolder.populate'
         if (!treeNode.item.loadedAt) {
-            console.log('cloneFolder.populate', __filename);
             this.populate(treeNode, (err, notUsed) => {
             
                 if (err) {
-                    console.log('err', err, __filename);
+                    console.log("[31m%s[0m", 'err', err);
                     throw err;
                 }
                 cloneExec();
@@ -2646,10 +2642,10 @@ class TreeView  extends  wz.EventTarget {
                 this.filesystem.checkoutFolder(treeNode.item, (err, newItem) => {
                 
                     if (err) {
-                        console.log('err', err, __filename);
+                        console.log("[31m%s[0m", 'err', err);
                         throw err;
                     }
-                    console.log('checkoutFolder.1', newItem, __filename);
+                     loog 'checkoutFolder.1', newItem
                     var newNode = treeNode.addItem(newItem);
                     treeNode.expand();
                     newNode.renameStart();
@@ -2657,12 +2653,13 @@ class TreeView  extends  wz.EventTarget {
                 )*/
         
         ;
+        
+        // loog 'checkoutFolder.populate'
         if (!treeNode.item.loadedAt) {
-            console.log('checkoutFolder.populate', __filename);
             this.populate(treeNode, (err, notUsed) => {
             
                 if (err) {
-                    console.log('err', err, __filename);
+                    console.log("[31m%s[0m", 'err', err);
                     throw err;
                 }
                 checkoutExec();
@@ -2677,7 +2674,7 @@ class TreeView  extends  wz.EventTarget {
         this.filesystem.updateFile(treeNode.item, newContent, (err, result) => {
         
             if (err) {
-                console.log('err', err, __filename);
+                console.log("[31m%s[0m", 'err', err);
                 throw err;
             }
             treeNode.item.content = newContent;
@@ -2692,7 +2689,7 @@ class TreeView  extends  wz.EventTarget {
         this.filesystem.deleteFile(treeNode.item, (err, result) => {
         
             if (err) {
-                console.log('err', err, __filename);
+                console.log("[31m%s[0m", 'err', err);
                 throw err;
             }
             treeNode.remove();
@@ -2710,10 +2707,10 @@ class TreeView  extends  wz.EventTarget {
         this.filesystem.pasteTo(treeNode.item, (err, from) => {
         
             if (err) {
-                console.log('err', err, __filename);
+                console.log("[31m%s[0m", 'err', err);
                 throw err;
             }
-            console.log('treeView.pasteTo', 'from', from, 'to', treeNode.item, __filename);
+            // loog 'treeView.pasteTo', 'from', from, 'to', treeNode.item
             if (from.action === 'copyFile' || from.action === 'copyFolder') {
                 var newItem = itemUtils.cloneItem(from.context.item);
                 itemUtils.setDirname(newItem, treeNode.item.dirname)
@@ -2770,7 +2767,7 @@ class TreeFileSystem {
         this.fsAdapter.createFolder(newPath, (err, result) => {
         
             if (err) {
-                console.log('err', err, __filename);
+                console.log("[31m%s[0m", 'err', err);
                 throw err;
             }
             var newItem = wz.fs.infoByPath(newPath, true);
@@ -2790,7 +2787,7 @@ class TreeFileSystem {
         this.fsAdapter.writeFile(newPath, newContent, (err, result) => {
         
             if (err) {
-                console.log('err', err, __filename);
+                console.log("[31m%s[0m", 'err', err);
                 throw err;
             }
             var newItem = wz.fs.infoByPath(newPath, false);
@@ -2807,7 +2804,7 @@ class TreeFileSystem {
         this.fsAdapter.deleteFile(item.path, callback)
     }
     rename(item, newName, callback) {
-        console.log('treeFileSystem.rename', item, newName, __filename);
+        // loog 'treeFileSystem.rename', item, newName
         if (item.isFolder) {
             this.fsAdapter.renameFolder(item.path, item.dirname + '/' + newName, callback)
         }
@@ -2827,7 +2824,7 @@ class TreeFileSystem {
         this.copyCutOper = null;
     }
     pasteTo(item, callback) {
-        console.log('TreeFileSystem.pasteTo', item, 'from', this.copyCutItem, __filename);
+        // loog 'TreeFileSystem.pasteTo', item, 'from', this.copyCutItem
         var action;
         if (this.copyCutOper === 'copy') {
             if (this.copyCutItem.isFolder) {

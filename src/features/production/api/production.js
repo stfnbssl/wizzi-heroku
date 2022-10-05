@@ -42,7 +42,9 @@ function getProductionById(packiProduction, id) {
                         reject(result);
                     }
                 }).catch((err) => {
-                    console.log('features.production.api.production.getProductionById.getArtifactProductionById.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.production.getProductionById.getArtifactProductionById.error', err);
                     return reject(err);
                 });
             }
@@ -55,7 +57,9 @@ function getProductionById(packiProduction, id) {
                         reject(result);
                     }
                 }).catch((err) => {
-                    console.log('features.production.api.production.getProductionById.getPackageProductionById.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.production.getProductionById.getPackageProductionById.error', err);
                     return reject(err);
                 });
             }
@@ -68,7 +72,9 @@ function getProductionById(packiProduction, id) {
                         reject(result);
                     }
                 }).catch((err) => {
-                    console.log('features.production.api.production.getProductionById.getMetaProductionById.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.production.getProductionById.getMetaProductionById.error', err);
                     return reject(err);
                 });
             }
@@ -81,7 +87,9 @@ function getProductionById(packiProduction, id) {
                         reject(result);
                     }
                 }).catch((err) => {
-                    console.log('features.production.api.production.getProductionById.getPluginProductionById.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.production.getProductionById.getPluginProductionById.error', err);
                     return reject(err);
                 });
             }
@@ -94,7 +102,9 @@ function getProductionById(packiProduction, id) {
                         reject(result);
                     }
                 }).catch((err) => {
-                    console.log('features.production.api.production.getProductionById.getTFolderProductionById.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.production.getProductionById.getTFolderProductionById.error', err);
                     return reject(err);
                 });
             }
@@ -110,31 +120,41 @@ function getProductionObject(packiProduction, owner, name) {
         return new Promise((resolve, reject) => {
             if (packiProduction == 'artifact') {
                 artifactApi.getArtifactProductionObject(owner, name).then((productionObject) => resolve(transformProductionObject(packiProduction, productionObject))).catch((err) => {
-                    console.log('features.production.api.production.getProductionObject.getArtifactProductionObject.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.production.getProductionObject.getArtifactProductionObject.error', err);
                     return reject(err);
                 });
             }
             else if (packiProduction == 'package') {
                 packageApi.getPackageProductionObject(owner, name).then((productionObject) => resolve(transformProductionObject(packiProduction, productionObject))).catch((err) => {
-                    console.log('features.production.api.production.getProductionObject.getPackageProductionObject.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.production.getProductionObject.getPackageProductionObject.error', err);
                     return reject(err);
                 });
             }
             else if (packiProduction == 'meta') {
                 metaApi.getMetaProductionObject(owner, name).then((productionObject) => resolve(transformProductionObject(packiProduction, productionObject))).catch((err) => {
-                    console.log('features.production.api.production.getProductionObject.getMetaProductionObject.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.production.getProductionObject.getMetaProductionObject.error', err);
                     return reject(err);
                 });
             }
             else if (packiProduction == 'plugin') {
                 pluginApi.getPluginProductionObject(owner, name).then((productionObject) => resolve(transformProductionObject(packiProduction, productionObject))).catch((err) => {
-                    console.log('features.production.api.production.getProductionObject.getPluginProductionObject.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.production.getProductionObject.getPluginProductionObject.error', err);
                     return reject(err);
                 });
             }
             else if (packiProduction == 'tfolder') {
                 tFolderApi.getTFolderObject(owner, name).then((productionObject) => resolve(transformProductionObject(packiProduction, productionObject))).catch((err) => {
-                    console.log('features.production.api.production.getProductionObject.getTFolderObject.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.production.getProductionObject.getTFolderObject.error', err);
                     return reject(err);
                 });
             }
@@ -148,10 +168,14 @@ exports.getProductionObject = getProductionObject;
 function prepareProductionById(packiProduction, id, queryContext, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => getProductionById(packiProduction, id).then((productionItem) => prepareProduction(packiProduction, productionItem.owner, productionItem.name, queryContext, rootContext).then((result) => resolve(result)).catch((err) => {
-            console.log('features.production.api.production.prepareProductionById.prepareProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.production.prepareProductionById.prepareProduction.error', err);
             return reject(err);
         })).catch((err) => {
-            console.log('features.production.api.production.prepareProductionById.getProductionById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.production.prepareProductionById.getProductionById.error', err);
             return reject(err);
         }));
     });
@@ -159,41 +183,55 @@ function prepareProductionById(packiProduction, id, queryContext, rootContext) {
 exports.prepareProductionById = prepareProductionById;
 function prepareProduction(packiProduction, owner, productionName, queryContext, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getDefaultContext_withCache(owner, productionName, rootContext).then((defaultContext) => getProductionObject(packiProduction, owner, productionName).then(
-        // loog 'prepareProduction.productionObject', Object.keys(productionObject)
-        (productionObject) => {
-            if (productionObject.packiConfig) {
-                getProductionSetFromProductionObject(owner, productionName, productionObject.packiConfig, productionObject.packiFiles, defaultContext).then((productionSet) => {
-                    productionObject.packiFiles = productionSet.packiFiles;
-                    productionObject.context = productionSet.context;
-                    getProductionSetByQueryContext(owner, productionName, queryContext, productionObject.packiFiles, productionObject.context).then((queryProductionSet) => {
+        console.log(myname + 'prepareProduction entered', owner, productionName, __filename);
+        return new Promise((resolve, reject) => getDefaultContext_withCache(owner, productionName, rootContext).then((defaultContext) => {
+            console.log(myname + 'prepareProduction.getDefaultContext_withCache completed', Object.keys(defaultContext), __filename);
+            getProductionObject(packiProduction, owner, productionName).then((productionObject) => {
+                console.log('prepareProduction.productionObject got', Object.keys(productionObject), __filename);
+                if (productionObject.packiConfig) {
+                    console.log('prepareProduction.productionObject packiConfig', productionObject.packiConfig, __filename);
+                    getProductionSetFromProductionObject(owner, productionName, productionObject.packiConfig, productionObject.packiFiles, defaultContext).then((productionSet) => {
+                        productionObject.packiFiles = productionSet.packiFiles;
+                        productionObject.context = productionSet.context;
+                        getProductionSetByQueryContext(owner, productionName, queryContext, productionObject.packiFiles, productionObject.context).then((queryProductionSet) => {
+                            productionObject.packiFiles = queryProductionSet.packiFiles;
+                            productionObject.context = queryProductionSet.context;
+                            resolve(productionObject);
+                        }).catch((err) => {
+                            if (typeof err === 'object' && err !== null) {
+                            }
+                            console.log("[31m%s[0m", 'features.production.api.production.prepareProduction.getContextByQueryContext.error', err);
+                            return reject(err);
+                        });
+                    }).catch((err) => {
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'features.production.api.production.prepareProduction.getContextByProductionObject.error', err);
+                        return reject(err);
+                    });
+                }
+                else {
+                    getProductionSetByQueryContext(owner, productionName, queryContext, productionObject.packiFiles, defaultContext).then((queryProductionSet) => {
                         productionObject.packiFiles = queryProductionSet.packiFiles;
                         productionObject.context = queryProductionSet.context;
                         resolve(productionObject);
                     }).catch((err) => {
-                        console.log('features.production.api.production.prepareProduction.getContextByQueryContext.error', err, __filename);
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'features.production.api.production.prepareProduction.getContextByQueryContext.error', err);
                         return reject(err);
                     });
-                }).catch((err) => {
-                    console.log('features.production.api.production.prepareProduction.getContextByProductionObject.error', err, __filename);
-                    return reject(err);
-                });
-            }
-            else {
-                getProductionSetByQueryContext(owner, productionName, queryContext, productionObject.packiFiles, defaultContext).then((queryProductionSet) => {
-                    productionObject.packiFiles = queryProductionSet.packiFiles;
-                    productionObject.context = queryProductionSet.context;
-                    resolve(productionObject);
-                }).catch((err) => {
-                    console.log('features.production.api.production.prepareProduction.getContextByQueryContext.error', err, __filename);
-                    return reject(err);
-                });
-            }
+                }
+            }).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.api.production.prepareProduction.getProductionObject.error', err);
+                return reject(err);
+            });
         }).catch((err) => {
-            console.log('features.production.api.production.prepareProduction.getProductionObject.error', err, __filename);
-            return reject(err);
-        })).catch((err) => {
-            console.log('features.production.api.production.prepareProduction.getDefaultContext_withCache.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.production.prepareProduction.getDefaultContext_withCache.error', err);
             return reject(err);
         }));
     });
@@ -205,7 +243,9 @@ function getDefaultContext_withCache(owner, productionName, progressiveContext) 
         return new Promise((resolve, reject) => getArtifactContextItem(owner, 'wzCtx;wzctx', progressiveContext).then(
         // loog 'getDefaultContext_withCache', 'got context item wzCtx;wzctx', 'keys', Object.keys(resultItemContext)
         (resultItemContext) => resolve(Object.assign({}, progressiveContext, resultItemContext))).catch((err) => {
-            console.log('getDefaultContext_withCache.getArtifactContextItem.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getDefaultContext_withCache.getArtifactContextItem.error', err);
             return reject(err);
         }));
     });
@@ -231,7 +271,9 @@ function getArtifactContextItem(owner, queryContextString, progressiveContext) {
                     (result) => resolve(Object.assign({}, progressiveContext, {
                         [contextPropertyName]: result.transformResult
                     }))).catch((err) => {
-                        console.log('getArtifactContextItem.getArtifactTransformation.error', err, __filename);
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'getArtifactContextItem.getArtifactTransformation.error', err);
                         return reject(err);
                     });
                 }
@@ -244,7 +286,9 @@ function getArtifactContextItem(owner, queryContextString, progressiveContext) {
                             [contextPropertyName]: contextObject
                         }));
                     }).catch((err) => {
-                        console.log('getArtifactContextItem.getArtifactGeneration.error', err, __filename);
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'getArtifactContextItem.getArtifactGeneration.error', err);
                         return reject(err);
                     });
                 }
@@ -288,13 +332,22 @@ function getProductionSetFromProductionObject(owner, productionName, packiConfig
                                 packiFiles: progressivePackiFiles,
                                 context: resultProductionContext
                             });
+                        }).catch((err) => {
+                            if (typeof err === 'object' && err !== null) {
+                            }
+                            console.log("[31m%s[0m", 'getArtifactGeneration.addContextPropertiesFromProductionData.error', err);
+                            return reject(err);
                         });
                     }).catch((err) => {
-                        console.log('getArtifactGeneration.getTFoldersPackiFilesFromProductionData.error', err, __filename);
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'getArtifactGeneration.getTFoldersPackiFilesFromProductionData.error', err);
                         return reject(err);
                     });
                 }).catch((err) => {
-                    console.log('getArtifactGeneration.generateArtifact.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'getArtifactGeneration.generateArtifact.error', err);
                     return reject(err);
                 });
             }
@@ -335,7 +388,9 @@ function getTFoldersPackiFilesFromProductionData(owner, packiConfigObj) {
                     tFoldersPackiFiles = mergePackiFiles(tFoldersPackiFiles, tf_packiFiles_object);
                     next();
                 }).catch((err) => {
-                    console.log('getTFoldersPackiFilesFromProductionData.getTFolder.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'getTFoldersPackiFilesFromProductionData.getTFolder.error', err);
                     return reject(err);
                 });
             })();
@@ -364,7 +419,9 @@ function addContextPropertiesFromProductionData(owner, packiConfigObj, progressi
                     progressiveContext = Object.assign({}, progressiveContext, resultContextItem);
                     next();
                 }).catch((err) => {
-                    console.log('addContextPropertiesFromProductionData.getArtifactContextItem.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'addContextPropertiesFromProductionData.getArtifactContextItem.error', err);
                     return reject(err);
                 });
             })();
@@ -406,7 +463,9 @@ function getProductionSetByQueryContext(owner, productionName, queryContextStrin
                         progressiveContext = Object.assign({}, progressiveContext, resultItemContext);
                         next();
                     }).catch((err) => {
-                        console.log('getProductionSetByQueryContext.getArtifactContextItem.error', err, __filename);
+                        if (typeof err === 'object' && err !== null) {
+                        }
+                        console.log("[31m%s[0m", 'getProductionSetByQueryContext.getArtifactContextItem.error', err);
                         return reject(err);
                     });
                 })();
@@ -440,7 +499,9 @@ function getCliCtxFromPackiConfig(owner, packiConfigObj, packiFiles, progressive
             else if (kind == "artifact") {
                 artifact = packiConfigObj.meta.cliCtx.artifact;
                 artifactApi.getArtifactGeneration_withPrepare(owner, packiConfigObj.meta.cliCtx.artifact.name, null, progressiveContext, "").then((generationResult) => resolve(JSON.parse(generationResult.content))).catch((err) => {
-                    console.log('api.production.getCliCtxFromPackiConfig.getArtifactGeneration_withPrepare.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'api.production.getCliCtxFromPackiConfig.getArtifactGeneration_withPrepare.error', err);
                     return reject(err);
                 });
             }
@@ -457,7 +518,9 @@ function getCliCtxFromPackiFile(filePath, packiFiles, progressiveContext) {
         return new Promise((resolve, reject) => wizzi_1.wizziProds.generateArtifact(filePath, packiFiles, progressiveContext).then(
         // loog 'api.production.getCliCtxFromPackiFile', generationResult.artifactContent
         (generationResult) => resolve(JSON.parse(generationResult.artifactContent))).catch((err) => {
-            console.log('api.production.getCliCtxFromPackiFile.generateArtifact.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'api.production.getCliCtxFromPackiFile.generateArtifact.error', err);
             return reject(err);
         }));
     });

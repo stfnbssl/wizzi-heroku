@@ -6,7 +6,7 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\controllers\plugin.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\controllers\plugin.tsx.ittf
 */
 const express_1 = require("express");
 const index_1 = require("../../../middlewares/index");
@@ -170,13 +170,21 @@ class PluginProductionController {
                         error: result
                     });
                 }
-            }).catch((err) => response.render('error.html.ittf', {
-                message: 'creating a new plugin production',
-                error: err
-            }))).catch((err) => response.render('error.html.ittf', {
-                message: 'getting template packi files while creating a new plugin production',
-                error: err
-            }));
+            }).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                response.render('error.html.ittf', {
+                    message: 'creating a new plugin production',
+                    error: err
+                });
+            })).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                response.render('error.html.ittf', {
+                    message: 'getting template packi files while creating a new plugin production',
+                    error: err
+                });
+            });
         });
         this.getUpdatePluginForm = 
         // loog myname + '.getUpdatePluginForm.id', id

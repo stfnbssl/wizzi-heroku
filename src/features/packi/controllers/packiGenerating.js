@@ -6,7 +6,7 @@ const jsx_runtime_1 = require("react/jsx-runtime");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\packi\controllers\packiGenerating.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\packi\controllers\packiGenerating.tsx.ittf
 */
 const express_1 = require("express");
 const index_1 = require("../../../middlewares/index");
@@ -93,18 +93,24 @@ class PackiGeneratingController {
                     }, loggedUser, queryParams);
                 })
                     .catch((err) => {
-                    console.log('getPackiPackageGeneration.extractGeneratedFiles.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'getPackiPackageGeneration.extractGeneratedFiles.error', err);
                     (0, sendResponse_1.sendFailure)(response, {
                         err: err
                     }, 501);
                 });
             }).catch((err) => {
-                console.log('getPackiPackageGeneration.executeJobs.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackiPackageGeneration.executeJobs.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
-                console.log('getPackiPackageGeneration.prepareProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackiPackageGeneration.prepareProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -147,18 +153,24 @@ class PackiGeneratingController {
                     }, loggedUser, queryParams);
                 })
                     .catch((err) => {
-                    console.log('getPackiPluginGeneration.extractGeneratedFiles.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'getPackiPluginGeneration.extractGeneratedFiles.error', err);
                     (0, sendResponse_1.sendFailure)(response, {
                         err: err
                     }, 501);
                 });
             }).catch((err) => {
-                console.log('getPackiPluginGeneration.executeJobs.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackiPluginGeneration.executeJobs.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
-                console.log('getPackiPluginGeneration.prepareProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackiPluginGeneration.prepareProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

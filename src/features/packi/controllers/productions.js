@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\packi\controllers\productions.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\packi\controllers\productions.ts.ittf
 */
 const express_1 = require("express");
 const sendResponse_1 = require("../../../utils/sendResponse");
@@ -63,7 +63,9 @@ class ProductionsController {
             (value) => (0, sendResponse_1.sendSuccess)(response, {
                 mTreeIttf: value
             })).catch((err) => {
-                console.log('features.packi.controllers.productions.mTree.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.packi.controllers.productions.mTree.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -79,7 +81,9 @@ class ProductionsController {
             value => (0, sendResponse_1.sendSuccess)(response, {
                 mTreeBuildupScript: value
             })).catch((err) => {
-                console.log('features.packi.controllers.productions.mTreeBuildupScript.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.packi.controllers.productions.mTreeBuildupScript.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -95,12 +99,16 @@ class ProductionsController {
             value => (0, sendResponse_1.sendSuccess)(response, {
                 generatedArtifact: value
             })).catch((err) => {
-                console.log('features.packi.controllers.production.generateArtifact.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.packi.controllers.production.generateArtifact.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
-                console.log('features.packi.controllers.production.prepareGenerationPackiFiles.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.packi.controllers.production.prepareGenerationPackiFiles.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -119,7 +127,9 @@ class ProductionsController {
             value => (0, sendResponse_1.sendSuccess)(response, {
                 transformedModel: value.transformResult
             })).catch((err) => {
-                console.log('features.packi.controllers.production.transformModel.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.packi.controllers.production.transformModel.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -137,7 +147,9 @@ class ProductionsController {
                     generatedArtifacts: files
                 });
             })).catch((err) => {
-                console.log('features.packi.controllers.production.executeJob.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.packi.controllers.production.executeJob.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

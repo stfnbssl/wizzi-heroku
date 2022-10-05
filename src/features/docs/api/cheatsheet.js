@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\docs\api\cheatsheet.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\docs\api\cheatsheet.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const wizzi_utils_1 = require("wizzi-utils");
@@ -147,6 +147,8 @@ function getCheatsheet(name) {
                                 item.generated = artifactText ? artifactText.trim() : 'No result. Something went wrong!';
                                 next();
                             }).catch((err) => {
+                                if (typeof err === 'object' && err !== null) {
+                                }
                                 console.log("[31m%s[0m", 'getCheatsheet.generateArtifact.error', err);
                                 return reject(err);
                             });
@@ -154,6 +156,8 @@ function getCheatsheet(name) {
                     });
                 })();
             }).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
                 console.log("[31m%s[0m", 'cheatsheetApi.getCheatsheet.error', err);
                 return reject(err);
             });

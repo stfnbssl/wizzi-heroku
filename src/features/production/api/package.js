@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\api\package.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\api\package.ts.ittf
 */
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
 const env_1 = require("../../config/env");
@@ -149,7 +149,9 @@ function getPackageProductionObject(owner, name, loadPackiConfig) {
             const pp = result.item;
             return resolve(_createPackageProductionObject(pp, loadPackiConfig));
         }).catch((err) => {
-            console.log('features.production.api.packageProduction.getPackageProductionObject.getPackageProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.packageProduction.getPackageProductionObject.getPackageProduction.error', err);
             return reject(err);
         }));
     });
@@ -164,7 +166,9 @@ function getPackageProductionObjectById(id, loadPackiConfig) {
             const pp = result.item;
             return resolve(_createPackageProductionObject(pp, loadPackiConfig));
         }).catch((err) => {
-            console.log('features.production.api.packageProduction.getPackageProductionObjectById.getPackageProductionById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.packageProduction.getPackageProductionObjectById.getPackageProductionById.error', err);
             return reject(err);
         }));
     });
@@ -195,7 +199,9 @@ function _createPackageProductionObject(pp, loadPackiConfig) {
                     obj.packiConfigObj = JSON.parse(generationResult.artifactContent);
                     return resolve(obj);
                 }).catch((err) => {
-                    console.log('features.production.api.packageProduction.getPackageProductionObject._createPackageProductionObject.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.packageProduction.getPackageProductionObject._createPackageProductionObject.error', err);
                     return reject(err);
                 });
             }
@@ -322,7 +328,9 @@ function getPackageProductionObject_stop(owner, name) {
             const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString() });
             return resolve(obj);
         }).catch((err) => {
-            console.log('getPackageProductionObject.getPackageProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getPackageProductionObject.getPackageProduction.error', err);
             return reject(err);
         }));
     });
@@ -339,7 +347,9 @@ function getPackageProductionObjectById_stop(id) {
             const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString() });
             return resolve(obj);
         }).catch((err) => {
-            console.log('getPackageProductionObjectById.getPackageProductionById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getPackageProductionObjectById.getPackageProductionById.error', err);
             return reject(err);
         }));
     });
@@ -363,7 +373,9 @@ function getPackageProduction_withCache(owner, name) {
                 };
                 return resolve(ppValue);
             }).catch((err) => {
-                console.log('getPackageProduction_withCache.getArtifactProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackageProduction_withCache.getArtifactProduction.error', err);
                 return reject(err);
             });
         });
@@ -402,7 +414,9 @@ function getWizziMetaFolderByPackageProductionObject(packageProductionObject, pr
         (wizziPackiFiles) => {
             return resolve(wizziPackiFiles);
         })).catch((err) => {
-            console.log('api.production.getWizziMetaFolderByPackageProductionObject.getCliCtxFromPackiConfig.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'api.production.getWizziMetaFolderByPackageProductionObject.getCliCtxFromPackiConfig.error', err);
             return reject(err);
         }));
     });
@@ -422,10 +436,14 @@ function getArtifactGeneration_withPrepare(owner, productionName, filePath, quer
             };
             return resolve(response);
         }).catch((err) => {
-            console.log('' + myname + 'getArtifactGeneration_withPrepare.generateArtifact.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", '' + myname + 'getArtifactGeneration_withPrepare.generateArtifact.error', err);
             return reject(err);
         })).catch((err) => {
-            console.log('' + myname + 'getArtifactGeneration_withPrepare.prepareProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", '' + myname + 'getArtifactGeneration_withPrepare.prepareProduction.error', err);
             return reject(err);
         }));
     });

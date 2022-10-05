@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\controllers\apiv1generations.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\controllers\apiv1generations.ts.ittf
 */
 const express_1 = require("express");
 const index_1 = require("../../../middlewares/index");
@@ -68,12 +68,16 @@ class ApiV1GenerationsController {
             (result) => (0, sendResponse_1.sendSuccess)(response, {
                 mTreeIttf: result.mTreeIttf
             })).catch((err) => {
-                console.log('features.production.controllers.productions.mTree.execute.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.productions.mTree.execute.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
-                console.log('features.production.controllers.productions.mTree.prepareProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.productions.mTree.prepareProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -90,12 +94,16 @@ class ApiV1GenerationsController {
             production_1.productionApi.prepareProduction(productionKind, owner, productionName, '', {}).then((packageProductionSet) => wizzi_1.wizziProds.mTreeBuildupScript(id, packageProductionSet.packiFiles, packageProductionSet.context).then(
             // loog myname, 'mTreeBuildupScript.result', result
             result => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('features.production.controllers.productions.mTreeBuildupScript.execute.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.productions.mTreeBuildupScript.execute.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
-                console.log('features.production.controllers.productions.mTreeBuildupScript.prepareProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.productions.mTreeBuildupScript.prepareProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -114,12 +122,16 @@ class ApiV1GenerationsController {
             value => (0, sendResponse_1.sendSuccess)(response, {
                 generatedArtifact: value
             })).catch((err) => {
-                console.log('features.production.controllers.production.generateArtifact.execute.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.production.generateArtifact.execute.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
-                console.log('features.production.controllers.production.generateArtifact.prepareProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.production.generateArtifact.prepareProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -141,12 +153,16 @@ class ApiV1GenerationsController {
             value => (0, sendResponse_1.sendSuccess)(response, {
                 transformedModel: value.transformResult
             })).catch((err) => {
-                console.log('features.production.controllers.production.transformModel.execute.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.production.transformModel.execute.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
-                console.log('features.production.controllers.production.transformModel.prepareProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.production.transformModel.prepareProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -167,12 +183,16 @@ class ApiV1GenerationsController {
                     generatedArtifacts: files
                 });
             })).catch((err) => {
-                console.log('features.production.controllers.production.executeJob.execute.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.production.executeJob.execute.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
-                console.log('features.production.controllers.production.executeJob.prepareProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.production.executeJob.prepareProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -190,7 +210,9 @@ class ApiV1GenerationsController {
                     wizzifiedPackiFiles: result
                 });
             })).catch((err) => {
-                console.log('features.production.controllers.production.wizzify.execute.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.production.wizzify.execute.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -208,7 +230,9 @@ class ApiV1GenerationsController {
                     codeASTPackiFiles: result
                 });
             })).catch((err) => {
-                console.log('features.production.controllers.production.codeAST.execute.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.production.controllers.production.codeAST.execute.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

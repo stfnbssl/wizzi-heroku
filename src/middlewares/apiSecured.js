@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\middlewares\apiSecured.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\middlewares\apiSecured.ts.ittf
 */
 const utils_1 = require("../utils");
 const error_1 = require("../utils/error");

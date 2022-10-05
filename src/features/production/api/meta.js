@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\api\meta.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\api\meta.ts.ittf
 */
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
 const env_1 = require("../../config/env");
@@ -148,7 +148,9 @@ function getMetaProductionObject(owner, name, loadPackiConfig) {
             const mp = result.item;
             return resolve(_createMetaProductionObject(mp, loadPackiConfig));
         }).catch((err) => {
-            console.log('features.production.api.metaProduction.getMetaProductionObject.getMetaProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.metaProduction.getMetaProductionObject.getMetaProduction.error', err);
             return reject(err);
         }));
     });
@@ -163,7 +165,9 @@ function getMetaProductionObjectById(id, loadPackiConfig) {
             const mp = result.item;
             return resolve(_createMetaProductionObject(mp, loadPackiConfig));
         }).catch((err) => {
-            console.log('features.production.api.metaProduction.getMetaProductionObjectById.getMetaProductionById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'features.production.api.metaProduction.getMetaProductionObjectById.getMetaProductionById.error', err);
             return reject(err);
         }));
     });
@@ -194,7 +198,9 @@ function _createMetaProductionObject(mp, loadPackiConfig) {
                     obj.packiConfigObj = JSON.parse(generationResult.artifactContent);
                     return resolve(obj);
                 }).catch((err) => {
-                    console.log('features.production.api.metaProduction.getMetaProductionObject._createMetaProductionObject.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'features.production.api.metaProduction.getMetaProductionObject._createMetaProductionObject.error', err);
                     return reject(err);
                 });
             }
@@ -321,7 +327,9 @@ function getMetaProductionObject_stop(owner, name) {
             const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString() });
             return resolve(obj);
         }).catch((err) => {
-            console.log('getMetaProductionObject.getMetaProduction.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getMetaProductionObject.getMetaProduction.error', err);
             return reject(err);
         }));
     });
@@ -338,7 +346,9 @@ function getMetaProductionObjectById_stop(id) {
             const obj = Object.assign(Object.assign({}, tf._doc), { packiFiles: tf_packiFiles_object, _id: tf._id.toString() });
             return resolve(obj);
         }).catch((err) => {
-            console.log('getMetaProductionObjectById.getMetaProductionById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'getMetaProductionObjectById.getMetaProductionById.error', err);
             return reject(err);
         }));
     });
@@ -362,7 +372,9 @@ function getMetaProduction_withCache(owner, name) {
                 };
                 return resolve(mpValue);
             }).catch((err) => {
-                console.log('getMetaProduction_withCache.getArtifactProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getMetaProduction_withCache.getArtifactProduction.error', err);
                 return reject(err);
             });
         });
@@ -397,11 +409,15 @@ function getTemplatePackiFiles(metaId, cliCtx, queryString, rootContext) {
                 wizzi_1.wizziProds.generateFolderArtifacts('template', 'output', metaProductionSet.packiFiles, context).then(
                 // loog 'getTemplatePackiFiles.generatedFolderArtifacts', 'packiFiles', Object.keys(packiFiles),
                 (packiFiles) => resolve(packiFiles)).catch((err) => {
-                    console.log('getTemplatePackiFiles.generateFolderArtifacts.error', err, __filename);
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'getTemplatePackiFiles.generateFolderArtifacts.error', err);
                     return reject(err);
                 });
             }).catch((err) => {
-                console.log('getTemplatePackiFiles.prepareProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getTemplatePackiFiles.prepareProduction.error', err);
                 return reject(err);
             });
         });
@@ -429,11 +445,15 @@ function generateMetaProductionById(metaId, cliCtx) {
             wizzi_1.wizziProds.metaGenerate(metaProductionSet.packiFiles, metaContext).then(
             // loog 'generateMetaProductionById.metaGenerate.result', 'packiFiles', Object.keys(packiFiles),
             (packiFiles) => resolve(packiFiles)).catch((err) => {
-                console.log('generateMetaProductionById.metaGenerate.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'generateMetaProductionById.metaGenerate.error', err);
                 return reject(err);
             });
         }).catch((err) => {
-            console.log('generateMetaProductionById.prepareProductionById.error', err, __filename);
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'generateMetaProductionById.prepareProductionById.error', err);
             return reject(err);
         }));
     });

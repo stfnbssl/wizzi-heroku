@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/common/index.ts"],"names":[],"mappings":";;;;AAAA;;;;EAIE;AACF,6DAAuC;AAE/B,kCAAW"}
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../wizzi.apps/packages/wizzi-heroku/src/common/index.ts"],"names":[],"mappings":";;;;AAAA;;;;EAIE;AACF,6DAAuC;AAE/B,kCAAW"}

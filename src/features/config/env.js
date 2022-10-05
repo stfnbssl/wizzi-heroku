@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\config\env.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\config\env.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const dotenv_1 = tslib_1.__importDefault(require("dotenv"));
@@ -28,6 +28,7 @@ function validateEnv() {
         GOOGLE_CLIENT_ID: (0, envalid_1.str)(),
         GOOGLE_CLIENT_SECRET: (0, envalid_1.str)(),
         GOOGLE_CALLBACK_URL: (0, envalid_1.str)(),
+        GITHUB_ACCESS_TOKEN: (0, envalid_1.str)(),
         IS_WIZZI_DEV: (0, envalid_1.bool)(),
         WIZZI_BASE_PATH: (0, envalid_1.str)()
     });
@@ -59,6 +60,7 @@ function create() {
             googleClientId: checkedEnv.GOOGLE_CLIENT_ID,
             googleClientSecret: checkedEnv.GOOGLE_CLIENT_SECRET,
             googleCallbackURL: checkedEnv.GOOGLE_CALLBACK_URL,
+            githubAccessToken: checkedEnv.GITHUB_ACCESS_TOKEN,
             isWizziDev: checkedEnv.IS_WIZZI_DEV,
             wizziBasePath: checkedEnv.WIZZI_BASE_PATH,
             ittfPath: __ittfPath,

@@ -1465,6 +1465,7 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         onSelectFile: this.props.onSelectFile,
         onRemoveFile: this._handleRemoveFile,
         onRenameFile: this._handleRenameFile,
+        onGithubClone: this.props.onGithubClone,
         onDownloadCode: this.props.onDownloadAsync,
         saveStatus: saveStatus
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_react_multi_split_pane__WEBPACK_IMPORTED_MODULE_3__.SplitPane, {
@@ -2057,7 +2058,8 @@ let GenerationErrors = /*#__PURE__*/function (_React$Component) {
         uri,
         mixerUri,
         stack,
-        errorLines
+        errorLines,
+        parameter
       } = error;
 
       if (data) {
@@ -2114,9 +2116,11 @@ let GenerationErrors = /*#__PURE__*/function (_React$Component) {
         className: classes.message
       }, message && message.split(',').map((line, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         key: i
-      }, line))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("pre", {
+      }, line)), parameter && Object.keys(parameter).map(key => {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, key, ": ", parameter[key]);
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("pre", {
         className: classes.lines
-      }, errorLines && errorLines.join('\n')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, stack && stack.split('\n').map((line, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      }, errorLines && errorLines.join('\n'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null), stack && stack.split('\n').map((line, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
         key: i
       }, line))));
     }
@@ -3017,6 +3021,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_selectEntry__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./actions/selectEntry */ "./src/components/FileList/actions/selectEntry.tsx");
 /* harmony import */ var _actions_updateEntry__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./actions/updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /* harmony import */ var _utils_convertFileStructure__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./utils/convertFileStructure */ "./src/components/FileList/utils/convertFileStructure.tsx");
+/* harmony import */ var _Packi_PackiPanel__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../Packi/PackiPanel */ "./src/components/Packi/PackiPanel.tsx");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -3048,6 +3053,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileList.tsx.ittf
 */
+
 
 
 
@@ -3109,6 +3115,7 @@ let FileListComp = /*#__PURE__*/function (_React$PureComponent) {
     _defineProperty(_assertThisInitialized(_this), "state", {
       clipboard: [],
       deleted: [],
+      optionsPane: true,
       openFilesPane: true,
       projectPane: true,
       entries: [],
@@ -3285,6 +3292,10 @@ let FileListComp = /*#__PURE__*/function (_React$PureComponent) {
       clipboard: []
     }));
 
+    _defineProperty(_assertThisInitialized(_this), "_toggleOptionsPane", () => _this.setState(state => ({
+      optionsPane: !state.optionsPane
+    })));
+
     _defineProperty(_assertThisInitialized(_this), "_toggleOpenFilesPane", () => _this.setState(state => ({
       openFilesPane: !state.openFilesPane
     })));
@@ -3360,6 +3371,22 @@ let FileListComp = /*#__PURE__*/function (_React$PureComponent) {
       }, this.props.visible ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_shell_SidebarShell__WEBPACK_IMPORTED_MODULE_6__.SidebarShell, {
         className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.pane)
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_FileListPane__WEBPACK_IMPORTED_MODULE_12__.default, {
+        className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.options),
+        title: "Options" + (this.props.readOnly ? ' (readonly)' : ''),
+        expanded: this.state.optionsPane,
+        onClick: this._toggleOptionsPane,
+        buttons: !this.props.readOnly ? [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_FileListPaneButton__WEBPACK_IMPORTED_MODULE_13__.default, {
+          key: "github-clone",
+          onClick: () => this._handleGithubClone()
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+          fillOpacity: "0.7",
+          d: "M3,2 L13,2 L13,14 L3,14 L3,2 Z M9,2 L13,6 L13,2 L9,2 Z M9,6 L9,2 L8,2 L8,7 L13,7 L13,6 L9,6 Z"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(AddIcon, null))] : []
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_Packi_PackiPanel__WEBPACK_IMPORTED_MODULE_24__.default, {
+        onGithubClone: this.props.onGithubClone
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("ul", {
+        className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.tabs)
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_FileListPane__WEBPACK_IMPORTED_MODULE_12__.default, {
         className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(this.state.projectPane ? styles.openFilesSmall : styles.openFilesLarge),
         title: "Open files",
         expanded: this.state.openFilesPane,
@@ -3472,6 +3499,9 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
   },
   project: {
     flex: 1
+  },
+  options: {
+    maxHeight: '30%'
   },
   openFilesSmall: {
     maxHeight: '50%'
@@ -5785,6 +5815,306 @@ function findFocusedEntry(entries) {
 
 /***/ }),
 
+/***/ "./src/components/Packi/ModalGithubClone.tsx":
+/*!***************************************************!*\
+  !*** ./src/components/Packi/ModalGithubClone.tsx ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ModalGithubClone)
+/* harmony export */ });
+/* harmony import */ var aphrodite__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! aphrodite */ "./node_modules/aphrodite/no-important.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _features_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../features/form */ "./src/features/form/index.tsx");
+/* harmony import */ var _widgets_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../widgets/Button */ "./src/components/widgets/Button.tsx");
+/* harmony import */ var _widgets_LargeInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../widgets/LargeInput */ "./src/components/widgets/LargeInput.tsx");
+/* harmony import */ var _widgets_ModalDialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../widgets/ModalDialog */ "./src/components/widgets/ModalDialog.tsx");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/*
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
+    package: wizzi-js@0.7.13
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Packi\ModalGithubClone.tsx.ittf
+*/
+
+
+
+
+
+
+// @ts-ignore
+const FormButton = (0,_features_form__WEBPACK_IMPORTED_MODULE_2__.withStatus)(_widgets_Button__WEBPACK_IMPORTED_MODULE_3__.Button); // @ts-ignore
+
+const ValidatedInput = (0,_features_form__WEBPACK_IMPORTED_MODULE_2__.withValidation)(_widgets_LargeInput__WEBPACK_IMPORTED_MODULE_4__.default);
+
+let ModalGithubClone = /*#__PURE__*/function (_React$Component) {
+  _inherits(ModalGithubClone, _React$Component);
+
+  var _super = _createSuper(ModalGithubClone);
+
+  function ModalGithubClone(...args) {
+    var _this$props$name, _this$props$branch;
+
+    var _this;
+
+    _classCallCheck(this, ModalGithubClone);
+
+    _this = _super.call(this, ...args);
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      owner: _this.props.owner || '',
+      name: (_this$props$name = _this.props.name) !== null && _this$props$name !== void 0 ? _this$props$name : '',
+      branch: (_this$props$branch = _this.props.branch) !== null && _this$props$branch !== void 0 ? _this$props$branch : '',
+      visible: _this.props.visible
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "_handleSubmit", () => _this.props.onSubmit({
+      owner: _this.state.owner,
+      name: _this.state.name,
+      branch: _this.state.branch
+    }));
+
+    _defineProperty(_assertThisInitialized(_this), "_validateName", name => name ? /^[a-z_\-\.\/\d\s]+$/i.test(name) ? null : new Error('Name can only contain letters, numbers, space, hyphen (-) and underscore (_).') : new Error('Name cannot be empty.'));
+
+    _defineProperty(_assertThisInitialized(_this), "handleChange", e => _this.setState({
+      [e.target.name]: e.target.value
+    }));
+
+    return _this;
+  }
+
+  _createClass(ModalGithubClone, [{
+    key: "render",
+    value: // log 'ModalGithubClone.state', this.state
+    function render() {
+      const {
+        visible,
+        title,
+        onDismiss,
+        isWorking,
+        action
+      } = this.props;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_ModalDialog__WEBPACK_IMPORTED_MODULE_5__.ModalDialog, {
+        visible: visible,
+        title: title,
+        onDismiss: onDismiss
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_features_form__WEBPACK_IMPORTED_MODULE_2__.Form, {
+        onSubmit: this._handleSubmit
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h4", {
+        className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.subtitle)
+      }, "Owner"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(ValidatedInput, {
+        name: "owner" // @ts-ignore
+        ,
+        autoFocus: true,
+        value: this.state.owner,
+        onChange: this.handleChange,
+        placeholder: "Repo owner",
+        validate: this._validateName
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(ValidatedInput, {
+        name: "name" // @ts-ignore
+        ,
+        autoFocus: true,
+        value: this.state.name,
+        onChange: this.handleChange,
+        placeholder: "Repo name",
+        validate: this._validateName
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(ValidatedInput, {
+        name: "branch" // @ts-ignore
+        ,
+        autoFocus: true,
+        value: this.state.branch,
+        onChange: this.handleChange,
+        placeholder: "Repo branch",
+        validate: this._validateName
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.buttons)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(FormButton // @ts-ignore
+      , {
+        type: "submit",
+        large: true,
+        variant: "primary",
+        loading: isWorking
+      }, action))));
+    }
+  }], [{
+    key: "getDerivedStateFromProps",
+    value: function getDerivedStateFromProps(props, state) {
+      if (state.visible !== props.visible) {
+        if (props.visible) {
+          var _props$name, _props$branch;
+
+          return {
+            owner: props.owner || '',
+            name: (_props$name = props.name) !== null && _props$name !== void 0 ? _props$name : '',
+            branch: (_props$branch = props.branch) !== null && _props$branch !== void 0 ? _props$branch : '',
+            visible: props.visible
+          };
+        } else {
+          return {
+            visible: props.visible
+          };
+        }
+      }
+
+      return null;
+    }
+  }]);
+
+  return ModalGithubClone;
+}(react__WEBPACK_IMPORTED_MODULE_1__.Component);
+
+
+const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
+  subtitle: {
+    fontSize: 16,
+    fontWeight: 500,
+    padding: 0,
+    lineHeight: '22px',
+    margin: '16px 0 6px 0'
+  },
+  buttons: {
+    margin: '20px 0 0 0'
+  }
+});
+
+/***/ }),
+
+/***/ "./src/components/Packi/PackiPanel.tsx":
+/*!*********************************************!*\
+  !*** ./src/components/Packi/PackiPanel.tsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PackiPanel": () => (/* binding */ PackiPanel),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/createStyles.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _ModalGithubClone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ModalGithubClone */ "./src/components/Packi/ModalGithubClone.tsx");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/*
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
+    package: wizzi-js@0.7.13
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Packi\PackiPanel.tsx.ittf
+*/
+
+
+
+
+
+let PackiPanelComp = /*#__PURE__*/function (_React$Component) {
+  _inherits(PackiPanelComp, _React$Component);
+
+  var _super = _createSuper(PackiPanelComp);
+
+  function PackiPanelComp(...args) {
+    var _this;
+
+    _classCallCheck(this, PackiPanelComp);
+
+    _this = _super.call(this, ...args);
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      currentModal: null
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "_handleDismissEditModal", () => _this.setState({
+      currentModal: null
+    }));
+
+    _defineProperty(_assertThisInitialized(_this), "_handleOpenModalGithubClone", () => _this.setState({
+      currentModal: 'github-clone'
+    }));
+
+    return _this;
+  }
+
+  _createClass(PackiPanelComp, [{
+    key: "render",
+    value: function render() {
+      const {
+        onGithubClone
+      } = this.props;
+      const {
+        currentModal
+      } = this.state;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__.default, {
+        variant: "contained",
+        size: "small",
+        onClick: this._handleOpenModalGithubClone
+      }, "Github clone"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ModalGithubClone__WEBPACK_IMPORTED_MODULE_1__.default, {
+        title: "Clone github repository",
+        action: "Clone",
+        visible: currentModal === 'github-clone',
+        onDismiss: this._handleDismissEditModal,
+        onSubmit: details => {
+          onGithubClone(details);
+
+          this._handleDismissEditModal();
+        }
+      }));
+    }
+  }]);
+
+  return PackiPanelComp;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__.default)({});
+
+const PackiPanel = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__.default)(muiStyles)(PackiPanelComp);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PackiPanel);
+
+/***/ }),
+
 /***/ "./src/components/PageMetadata.tsx":
 /*!*****************************************!*\
   !*** ./src/components/PageMetadata.tsx ***!
@@ -5809,7 +6139,7 @@ __webpack_require__.r(__webpack_exports__);
 function getPageMetadata(props) {
   const title = "".concat(props.name, " - Packi");
   const description = props.description;
-  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"https://www.wizzihub.com","API_SERVER_URL":"https://www.wizzihub.com","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1664277544181}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
+  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"https://www.wizzihub.com","API_SERVER_URL":"https://www.wizzihub.com","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1664983324824}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
   const image = 'https://s3.amazonaws.com/exp-brand-assets/PackiIcon_200.png';
   const meta = [{
     name: 'description',
@@ -7979,7 +8309,6 @@ Resizer.displayName = 'Resizer';
 
 "use strict";
 var react__WEBPACK_IMPORTED_MODULE_0___namespace_cache;
-var __filename = "/index.js";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SplitPane": () => (/* binding */ SplitPane)
@@ -8227,7 +8556,6 @@ const SplitPane = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(props => 
       }));
     }
 
-    console.log('SplitPane key', 'pane.' + key);
     entries.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Pane__WEBPACK_IMPORTED_MODULE_1__.Pane, {
       key: 'pane.' + key,
       forwardRef: ref,
@@ -8237,7 +8565,6 @@ const SplitPane = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(props => 
       className: className
     }, node));
   });
-  console.log('SplitPane', 'style', style, __filename);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: classes,
     style: style

@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi-override\src\features\production\controllers\apiv1package.tsx.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\production\controllers\apiv1package.tsx.ittf
 */
 const express_1 = require("express");
 const index_1 = require("../../../middlewares/index");
@@ -59,7 +59,9 @@ class ApiV1PackageProductionController {
                     owner: request.params.owner
                 }
             }).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getPackageProductionList.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackageProductionList.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -71,7 +73,9 @@ class ApiV1PackageProductionController {
             return (0, package_1.validatePackageProduction)(request.params.owner, request.params.name).then(
             // loog 'getCheckPackageName.result', result
             (result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getCheckPackageName.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getCheckPackageName.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -79,7 +83,9 @@ class ApiV1PackageProductionController {
         });
         this.getPackageProduction = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, package_1.getPackageProduction)(request.params.owner, request.params.name).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('getPackageProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getPackageProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -87,7 +93,9 @@ class ApiV1PackageProductionController {
         });
         this.postPackageProduction = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, package_1.createPackageProduction)(request.params.owner, request.params.name, request.body.description, JSON.stringify(request.body.packiFiles)).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('postPackageProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'postPackageProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -95,7 +103,9 @@ class ApiV1PackageProductionController {
         });
         this.putPackageProduction = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, package_1.updatePackageProduction)(request.params.id, request.body.owner, request.body.name, request.body.description, JSON.stringify(request.body.packiFiles)).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
-                console.log('putPackageProduction.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'putPackageProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -105,7 +115,9 @@ class ApiV1PackageProductionController {
         // loog 'getWizziMetaFolder.request.params', request.params
         (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, package_1.getWizziMetaFolderById)(request.params.id, {}).then((packiFiles) => (0, sendResponse_1.sendSuccess)(response, packiFiles)).catch((err) => {
-                console.log('getWizziMetaFolder.error', err, __filename);
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'getWizziMetaFolder.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

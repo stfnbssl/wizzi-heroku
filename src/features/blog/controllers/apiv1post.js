@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\blog\controllers\apiv1post.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\blog\controllers\apiv1post.ts.ittf
 */
 const express_1 = require("express");
 const index_1 = require("../../../middlewares/index");
@@ -58,6 +58,8 @@ class ApiV1PostController {
                     owner: request.params.owner
                 }
             }).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
                 console.log("[31m%s[0m", 'getPostList.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
@@ -66,6 +68,8 @@ class ApiV1PostController {
         });
         this.getCheckPostName = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, post_1.validatePost)(request.params.owner, request.params.name).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
                 console.log("[31m%s[0m", 'getCheckPostName.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
@@ -74,6 +78,8 @@ class ApiV1PostController {
         });
         this.getPost = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, post_1.getPost)(request.params.owner, request.params.name).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
                 console.log("[31m%s[0m", 'getPost.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
@@ -82,6 +88,8 @@ class ApiV1PostController {
         });
         this.postPost = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, post_1.createPost)(request.params.owner, request.params.name, request.body.title, request.body.content).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
                 console.log("[31m%s[0m", 'postPost.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
@@ -90,6 +98,8 @@ class ApiV1PostController {
         });
         this.putPost = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, post_1.updatePost)(request.params.id, request.body.owner, request.body.name, request.body.title, request.body.content, request.body.state).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
                 console.log("[31m%s[0m", 'putPost.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
@@ -98,6 +108,8 @@ class ApiV1PostController {
         });
         this.deletePost = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, post_1.deletePost)(request.params.id).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
                 console.log("[31m%s[0m", 'deletePost.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err

@@ -5,7 +5,7 @@ const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
     package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi-heroku\.wizzi\src\features\wizzi\productions.ts.ittf
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\wizzi\productions.ts.ittf
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const fs_1 = tslib_1.__importDefault(require("fs"));
@@ -19,7 +19,9 @@ const factory_1 = require("./factory");
 const myname = 'features/wizzi/productions';
 function loadModel(filePath, files, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise(
+        // TODO catch error
+        (resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             if (!wizzi_utils_1.verify.isObject(files)) {
                 return reject({
                     action: 'wizzi.productions.loadModel',
@@ -45,7 +47,9 @@ function loadModel(filePath, files, context) {
 exports.loadModel = loadModel;
 function loadModelFs(filePath, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise(
+        // TODO catch error
+        (resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const schemaName = wizziMaps.schemaFromFilePath(filePath);
             if (!schemaName) {
                 return reject('File is not a known ittf document: ' + filePath);
@@ -83,7 +87,9 @@ function loadModelInternal(wf, filePath, context) {
 }
 function mTreeBuildupScript(filePath, files, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise(
+        // TODO catch error
+        (resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             if (!wizzi_utils_1.verify.isObject(files)) {
                 return reject({
                     action: 'wizzi.productions.mTreeBuildupScript',
@@ -119,7 +125,9 @@ function mTreeBuildupScriptDb(owner, name, context) {
 exports.mTreeBuildupScriptDb = mTreeBuildupScriptDb;
 function mTree(filePath, files, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise(
+        // TODO catch error
+        (resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             if (!wizzi_utils_1.verify.isObject(files)) {
                 return reject({
                     action: 'wizzi.productions.mTree',
@@ -192,6 +200,8 @@ function wrapIttfText(schema, ittftext, context) {
                     resolve(result.mTree.toIttf(wrapperNode));
                 }
             }).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
                 console.log("[31m%s[0m", 'features.wizzi.productions.wrapIttfText.mTree.error', err);
                 return reject(err);
             });
@@ -248,6 +258,7 @@ function generateArtifactFs(filePath, context, options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const generator = options && options.generator ? options.generator : wizziMaps.generatorFor(filePath);
+            // TODO catch error
             if (generator) {
                 const wf = yield (0, factory_1.createFilesystemFactory)();
                 try {
@@ -380,6 +391,7 @@ function transformModelFs(filePath, context, options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const transformer = options && options.transformer ? options.transformer : wizziMaps.transformerFor(filePath);
+            // TODO catch error
             if (transformer) {
                 const wf = yield (0, factory_1.createFilesystemFactory)();
                 const transformationContext = {
@@ -431,6 +443,8 @@ function metaGenerate(files, context) {
                         return reject(err);
                     }
                     jsonFsToPackiFiles(jsonwf.jsonFs, '.wizzi').then((wizziPackiFiles) => resolve(wizziPackiFiles)).catch((err) => {
+                        if (typeof err === 'object' && err !== null) {
+                        }
                         console.log("[31m%s[0m", 'features/wizzi/productions.metaGenerate.error', err);
                         return reject(err);
                     });
@@ -472,7 +486,9 @@ function executeJob(wfjobFilePath, packiFiles, context) {
 exports.executeJob = executeJob;
 function executeJobs(packiFiles, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise(
+        // TODO catch error
+        (resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const wfjobFilePaths = Object.keys(packiFiles).filter(k => k.endsWith('.wfjob.ittf'));
             const jsonwf = yield (0, factory_1.createJsonFsAndFactory)(packiFiles);
             const execJob = (index) => {
@@ -593,11 +609,19 @@ function wizzify(files) {
             var result = {};
             for (const k of Object.keys(files)) {
                 var extension = path_1.default.extname(k);
-                const ittfResult = yield handleWizzify(extension, files[k].contents);
-                result[k + '.ittf'] = {
-                    type: 'CODE',
-                    contents: ittfResult
-                };
+                try {
+                    const ittfResult = yield handleWizzify(extension, files[k].contents);
+                    result[k + '.ittf'] = {
+                        type: 'CODE',
+                        contents: ittfResult
+                    };
+                }
+                catch (ex) {
+                    result[k + '.ittf'] = {
+                        type: 'CODE',
+                        contents: (0, json_stringify_safe_1.default)(ex, null, 2)
+                    };
+                }
             }
             return resolve(result);
         }));
@@ -630,11 +654,19 @@ function getCodeAST(files) {
             var result = {};
             for (const k of Object.keys(files)) {
                 var extension = path_1.default.extname(k);
-                const astResult = yield handleGetCodeAST(extension, files[k].contents);
-                result[k + '.ast'] = {
-                    type: 'CODE',
-                    contents: (0, json_stringify_safe_1.default)(astResult, null, 2)
-                };
+                try {
+                    const astResult = yield handleGetCodeAST(extension, files[k].contents);
+                    result[k + '.ast'] = {
+                        type: 'CODE',
+                        contents: (0, json_stringify_safe_1.default)(astResult, null, 2)
+                    };
+                }
+                catch (ex) {
+                    result[k + '.ast'] = {
+                        type: 'CODE',
+                        contents: (0, json_stringify_safe_1.default)(ex, null, 2)
+                    };
+                }
             }
             return resolve(result);
         }));

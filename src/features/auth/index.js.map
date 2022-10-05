@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/features/auth/index.ts"],"names":[],"mappings":";;;AAMA,uEAA4E;AAE5E,MAAM,eAAe,GAAqB;IACtC,IAAI,+CAA2B,EAAE;CACpC,CAAC;AACM,0CAAe"}
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../../wizzi.apps/packages/wizzi-heroku/src/features/auth/index.ts"],"names":[],"mappings":";;;AAMA,uEAA4E;AAE5E,MAAM,eAAe,GAAqB;IACtC,IAAI,+CAA2B,EAAE;CACpC,CAAC;AACM,0CAAe"}
