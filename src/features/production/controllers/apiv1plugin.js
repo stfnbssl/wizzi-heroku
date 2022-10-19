@@ -12,8 +12,9 @@ const index_1 = require("../../../middlewares/index");
 const sendResponse_1 = require("../../../utils/sendResponse");
 const error_1 = require("../../../utils/error");
 const utils_1 = require("../../../utils");
+const packi_1 = require("../../packi");
 const plugin_1 = require("../api/plugin");
-const myname = 'features/production/controllers/apiv1pluginproduction';
+const myname = 'features/production/controllers/apiv1plugin';
 function makeHandlerAwareOfAsyncErrors(handler) {
     return function (request, response, next) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
@@ -50,6 +51,7 @@ class ApiV1PluginProductionController {
             this.router.get("/checkname/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.getCheckPluginName));
             this.router.get("/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.getPluginProduction));
             this.router.put("/:id", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.putPluginProduction));
+            this.router.put("/packidiffs/:id", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.putPluginProductionPackiDiffs));
             this.router.post("/:post", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.postPluginProduction));
         };
         this.getPluginProductionList = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
@@ -110,7 +112,41 @@ class ApiV1PluginProductionController {
                 }, 501);
             });
         });
+        this.putPluginProductionPackiDiffs = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            console.log('putPluginProductionPackiDiffs.request.params', request.params, __filename);
+            console.log('putPluginProductionPackiDiffs.request.body.options', Object.keys(request.body.options), __filename);
+            console.log('putPluginProductionPackiDiffs.request.body.packiDiffs', Object.keys(request.body.packiDiffs), __filename);
+            const options = request.body.options || {};
+            (0, plugin_1.getPluginProductionObjectById)(request.params.id).then((prevPlugin) => {
+                console.log('putPluginProductionPackiDiffs.prevPackiFiles', Object.keys(prevPlugin.packiFiles), __filename);
+                const pm = new packi_1.PackiBuilder(prevPlugin.packiFiles);
+                pm.applyPatch_ChangesOnly(request.body.packiDiffs);
+                return exec_updatePluginProduction(request, response, pm.packiFiles);
+            }).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'putPluginProductionPackiDiffs.getPluginProductionObjectById.error', err);
+                (0, sendResponse_1.sendFailure)(response, {
+                    err: err
+                }, 501);
+            });
+        });
     }
 }
 exports.ApiV1PluginProductionController = ApiV1PluginProductionController;
+function exec_updatePluginProduction(request, response, packiFiles) {
+    (0, plugin_1.updatePluginProduction)(request.params.id, request.body.owner, request.body.name, request.body.description, JSON.stringify(packiFiles)).then(
+    // loog 'putPluginProduction.update.result', result
+    (result) => {
+        (0, plugin_1.invalidateCache)(request.params.id);
+        (0, sendResponse_1.sendSuccess)(response, result);
+    }).catch((err) => {
+        if (typeof err === 'object' && err !== null) {
+        }
+        console.log("[31m%s[0m", 'exec_updatePluginProduction.updatePluginProduction.error', err);
+        (0, sendResponse_1.sendFailure)(response, {
+            err: err
+        }, 501);
+    });
+}
 //# sourceMappingURL=apiv1plugin.js.map

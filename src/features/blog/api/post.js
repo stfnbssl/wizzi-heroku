@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deletePost = exports.updatePost = exports.createPost = exports.getPostById = exports.getPost = exports.getListPost = exports.validatePost = void 0;
+exports.deletePost = exports.updatePost = exports.createPost = exports.getPostById = exports.getPost = exports.getPostList = exports.validatePost = void 0;
 const tslib_1 = require("tslib");
 const post_1 = require("../models/post");
 const myname = 'features.blog.api.post';
@@ -27,7 +27,7 @@ function validatePost(owner, name) {
     });
 }
 exports.validatePost = validatePost;
-function getListPost(options) {
+function getPostList(options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         options = options || {};
         const Post = (0, post_1.GetPostModel)();
@@ -41,7 +41,7 @@ function getListPost(options) {
             }
             query.find((err, result) => {
                 if (err) {
-                    console.log("[31m%s[0m", myname, 'getListPost', 'Post.find', 'error', err);
+                    console.log("[31m%s[0m", myname, 'getPostList', 'Post.find', 'error', err);
                     return reject(err);
                 }
                 const resultItem = [];
@@ -61,7 +61,7 @@ function getListPost(options) {
                     resultItem.push(item_obj);
                 }
                 resolve({
-                    oper: 'getList',
+                    oper: 'getPostList',
                     ok: true,
                     item: resultItem
                 });
@@ -69,7 +69,7 @@ function getListPost(options) {
         });
     });
 }
-exports.getListPost = getListPost;
+exports.getPostList = getPostList;
 function getPost(owner, name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         const Post = (0, post_1.GetPostModel)();
@@ -119,7 +119,7 @@ function getPostById(id) {
                     });
                 }
                 resolve({
-                    oper: 'get',
+                    oper: 'getPost',
                     ok: false,
                     message: 'Blog post not found'
                 });
@@ -166,7 +166,7 @@ function createPost(owner, name, title, content, state, pubblished_at) {
                         return reject(err);
                     }
                     return resolve({
-                        oper: 'create',
+                        oper: 'createPost',
                         ok: true,
                         item: doc._doc,
                         message: 'Blog post created'
@@ -209,8 +209,16 @@ function updatePost(id, owner, name, title, content, state, pubblished_at) {
                     console.log("[31m%s[0m", myname, 'updatePost', 'Post.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
+                if (!result) {
+                    console.log("[31m%s[0m", myname, 'updatePost', 'Post.findOneAndUpdate', 'error', 'document not found');
+                    return reject({
+                        oper: 'updatePost',
+                        ok: false,
+                        message: 'Blog post document not found: ' + id
+                    });
+                }
                 return resolve({
-                    oper: 'update',
+                    oper: 'updatePost',
                     ok: true,
                     message: 'Blog post updated'
                 });
@@ -232,7 +240,7 @@ function deletePost(id, owner, name, title, content, state, pubblished_at) {
                     return reject(err);
                 }
                 resolve({
-                    oper: 'delete',
+                    oper: 'deletePost',
                     ok: true,
                     message: 'Blog post'
                 });

@@ -368,7 +368,6 @@ const WizzifiedIcon = _ref => {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-var __filename = "/index.js";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SyntaxHighlighter": () => (/* binding */ SyntaxHighlighter),
@@ -422,7 +421,6 @@ let SyntaxHighlighter = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       const el1 = document.querySelector('.syntax-highlight-container > pre');
-      console.log('SyntaxHighlighter.el1', el1, __filename);
 
       if (el1 && el1.style) {
         el1.style.margin = 0;
@@ -936,7 +934,6 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-var __filename = "/index.js";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "EditorToolbar": () => (/* binding */ EditorToolbar),
@@ -996,7 +993,6 @@ function EditorToolbar(props) {
   } = preferences;
   const isPublishing = saveStatus === 'publishing';
   const isPublished = saveStatus === 'published';
-  console.log('EditorToolbar.props', props, mainIttf, wizziSchema, __filename);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.ve_top_bar)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -1138,7 +1134,6 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-var __filename = "/index.js";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "EditorView": () => (/* binding */ EditorView),
@@ -1357,6 +1352,7 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: // log 'EditorView.props.loggedUser', loggedUser, this.props.loggedUser
+    // log 'EditorView.props', this.props, mainIttf, wizziSchema
     function render() {
       const {
         currentModal,
@@ -1401,7 +1397,6 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
       } = this.props;
       const annotations = this.props.annotations;
       const testPreviewURL = "".concat("https://www.wizzihub.com", "/~/").concat(encodeURIComponent(owner), "/").concat(encodeURIComponent(name));
-      console.log('EditorView.props', this.props, mainIttf, wizziSchema, __filename);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_shell_ContentShell__WEBPACK_IMPORTED_MODULE_12__.ContentShell, null, this.state.loadedEditor ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_ProgressIndicator__WEBPACK_IMPORTED_MODULE_20__.ProgressIndicator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_PageMetadata__WEBPACK_IMPORTED_MODULE_10__.default, {
         name: name,
         description: description,
@@ -1741,24 +1736,24 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-var __filename = "/index.js";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/createStyles.js");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
-/* harmony import */ var _material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Tooltip */ "./node_modules/@material-ui/core/esm/Tooltip/Tooltip.js");
-/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/IconButton.js");
-/* harmony import */ var _material_ui_icons_ViewList__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/ViewList */ "./node_modules/@material-ui/icons/ViewList.js");
-/* harmony import */ var _material_ui_icons_AccountTree__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/AccountTree */ "./node_modules/@material-ui/icons/AccountTree.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/createStyles.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Tooltip */ "./node_modules/@material-ui/core/esm/Tooltip/Tooltip.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/IconButton.js");
+/* harmony import */ var _material_ui_icons_ViewList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/ViewList */ "./node_modules/@material-ui/icons/ViewList.js");
+/* harmony import */ var _material_ui_icons_AccountTree__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/icons/AccountTree */ "./node_modules/@material-ui/icons/AccountTree.js");
 /* harmony import */ var _assets_BrowserIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/BrowserIcon */ "./src/assets/BrowserIcon.tsx");
 /* harmony import */ var _assets_DebugIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/DebugIcon */ "./src/assets/DebugIcon.tsx");
 /* harmony import */ var _assets_AstIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/AstIcon */ "./src/assets/AstIcon.tsx");
 /* harmony import */ var _assets_WizzifiedIcon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/WizzifiedIcon */ "./src/assets/WizzifiedIcon.tsx");
 /* harmony import */ var _CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../CodeView/SyntaxHighlighter */ "./src/components/CodeView/SyntaxHighlighter.tsx");
 /* harmony import */ var _widgets_WebFrame__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../widgets/WebFrame */ "./src/components/widgets/WebFrame.tsx");
+/* harmony import */ var _widgets_LazyLoad__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../widgets/LazyLoad */ "./src/components/widgets/LazyLoad.tsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -1786,6 +1781,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     package: wizzi-js@0.7.13
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\GeneratedView.tsx.ittf
 */
+
 
 
 
@@ -1836,8 +1832,6 @@ let GeneratedView = /*#__PURE__*/function (_React$Component) {
         selectedFile
       } = this.props;
       const isIttf = selectedFile && selectedFile.endsWith('.ittf');
-      console.log('GeneratedView.isIttf', isIttf, 'previewKind', previewKind, __filename);
-      console.log('GeneratedView.props', this.props, __filename);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: splitViewKind === 'right' ? classes.containerFull : classes.container
       }, previewKind === 'generated' && this.props.generatedContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1865,7 +1859,20 @@ let GeneratedView = /*#__PURE__*/function (_React$Component) {
         className: classes.browserOuter
       }, this.props.generatedSourcePath.endsWith('.html.ittf') || this.props.generatedSourcePath.endsWith('.svg.ittf') ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_WebFrame__WEBPACK_IMPORTED_MODULE_6__.default, {
         previewURL: this.props.generatedPreviewURL
-      }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "No browser viewer for document")( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, this.props.generatedSourcePath))), previewKind === 'wizzified' && this.props.wizzifiedIttfContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }) : this.props.generatedSourcePath.endsWith('.md.ittf') ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_LazyLoad__WEBPACK_IMPORTED_MODULE_7__.default, {
+        load: () => Promise.all(/*! import() | Markdown/MarkdownPreview */[__webpack_require__.e("vendors-node_modules_escape-html_index_js-node_modules_marked_lib_marked_js-node_modules_pris-17ca71"), __webpack_require__.e("Markdown/MarkdownPreview")]).then(__webpack_require__.bind(__webpack_require__, /*! ../Markdown/MarkdownPreview */ "./src/components/Markdown/MarkdownPreview.tsx"))
+      }, ({
+        loaded: mdLoaded,
+        data: MarkdownPreview
+      }) => {
+        if (mdLoaded && MarkdownPreview) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(MarkdownPreview, {
+            source: this.props.generatedContent
+          });
+        } else {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Failed to load markdown preview for document"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, this.props.generatedSourcePath));
+        }
+      })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "No browser viewer for document"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, this.props.generatedSourcePath))), previewKind === 'wizzified' && this.props.wizzifiedIttfContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.editor
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_5__.default, {
         className: classes.syntaxHigh,
@@ -1883,54 +1890,54 @@ let GeneratedView = /*#__PURE__*/function (_React$Component) {
         className: classes.sidebar
       }, isIttf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sbItem
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_8__.default, {
         title: "View generated artifact content"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__.default, {
         onClick: this._handleGenerateArtifact,
         classes: {
           root: classes.iconButton
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_icons_ViewList__WEBPACK_IMPORTED_MODULE_9__.default, null)))), isIttf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_icons_ViewList__WEBPACK_IMPORTED_MODULE_10__.default, null)))), isIttf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sbItem
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_8__.default, {
         title: "View mTree"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__.default, {
         onClick: this._handleMTree,
         classes: {
           root: classes.iconButton
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_icons_AccountTree__WEBPACK_IMPORTED_MODULE_10__.default, null)))), isIttf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_icons_AccountTree__WEBPACK_IMPORTED_MODULE_11__.default, null)))), isIttf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sbItem
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_8__.default, {
         title: "View mTree build script"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__.default, {
         onClick: this._handleMTreeDebugInfo,
         classes: {
           root: classes.iconButton
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_DebugIcon__WEBPACK_IMPORTED_MODULE_2__.DebugIcon, null)))), isIttf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sbItem
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_8__.default, {
         title: "Browse artifact"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__.default, {
         onClick: this._handleBrowse,
         classes: {
           root: classes.iconButton
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_BrowserIcon__WEBPACK_IMPORTED_MODULE_1__.BrowserIcon, null)))), isIttf == false && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sbItem
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_8__.default, {
         title: "Wizzify source"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__.default, {
         onClick: this._handleWizzify,
         classes: {
           root: classes.iconButton
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_assets_WizzifiedIcon__WEBPACK_IMPORTED_MODULE_4__.WizzifiedIcon, null)))), isIttf == false && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.sbItem
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_7__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Tooltip__WEBPACK_IMPORTED_MODULE_8__.default, {
         title: "Get code AST"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_9__.default, {
         onClick: this._handleCodeAST,
         classes: {
           root: classes.iconButton
@@ -1942,7 +1949,7 @@ let GeneratedView = /*#__PURE__*/function (_React$Component) {
   return GeneratedView;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_11__.default)({
+const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_12__.default)({
   container: {
     display: 'flex',
     flexDirection: 'row',
@@ -1984,7 +1991,7 @@ const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_
   }
 });
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_12__.default)(muiStyles)(GeneratedView));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)(muiStyles)(GeneratedView));
 
 /***/ }),
 
@@ -2800,7 +2807,6 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-var __filename = "/index.js";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "UserMenuComp": () => (/* binding */ UserMenuComp),
@@ -2861,8 +2867,6 @@ let UserMenuComp = /*#__PURE__*/function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "_handleDocumentClick", e => {
-      console.log('UserMenu _handleDocumentClick', _this.state.visible, __filename);
-
       if (_this.state.visible) {
         if (_this._menu.current && e.target !== _this._menu.current && !_this._menu.current.contains(e.target)) {
           _this._hideMenu();
@@ -2898,7 +2902,6 @@ let UserMenuComp = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       document.addEventListener('click', this._handleDocumentClick);
       document.addEventListener('contextmenu', this._handleDocumentContextMenu);
-      console.log('UserMenu componentDidMount', __filename);
     }
   }, {
     key: "componentWillUnmount",
@@ -6139,7 +6142,7 @@ __webpack_require__.r(__webpack_exports__);
 function getPageMetadata(props) {
   const title = "".concat(props.name, " - Packi");
   const description = props.description;
-  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"https://www.wizzihub.com","API_SERVER_URL":"https://www.wizzihub.com","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1664983324824}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
+  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"https://www.wizzihub.com","API_SERVER_URL":"https://www.wizzihub.com","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1666193470771}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
   const image = 'https://s3.amazonaws.com/exp-brand-assets/PackiIcon_200.png';
   const meta = [{
     name: 'description',
@@ -9012,7 +9015,6 @@ const muiStyles = theme => (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-var __filename = "/index.js";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "FormValidationContext": () => (/* binding */ FormValidationContext),
@@ -9092,18 +9094,13 @@ let Form = /*#__PURE__*/function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "_handleSubmit", e => {
       e.preventDefault();
-      console.log('features.form._handleSubmit', __filename);
 
       for (const input of _this._inputs) {
-        console.log('features.form._handleSubmit.input.validate()', input.validate(), __filename);
-
         if (input.validate()) {
           input.focus();
           return;
         }
       }
-
-      console.log('features.form._handleSubmit.onSubmit()', __filename);
 
       _this.props.onSubmit();
     });

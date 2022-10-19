@@ -12,7 +12,9 @@ const index_1 = require("../../../middlewares/index");
 const sendResponse_1 = require("../../../utils/sendResponse");
 const error_1 = require("../../../utils/error");
 const utils_1 = require("../../../utils");
+const packi_1 = require("../../packi");
 const package_1 = require("../api/package");
+const package_2 = require("../api/package");
 const myname = 'features/production/controllers/apiv1packageproduction';
 function makeHandlerAwareOfAsyncErrors(handler) {
     return function (request, response, next) {
@@ -51,6 +53,7 @@ class ApiV1PackageProductionController {
             this.router.get("/:owner", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.getPackageProductionList));
             this.router.get("/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.getPackageProduction));
             this.router.put("/:id", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.putPackageProduction));
+            this.router.put("/packidiffs/:id", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.putPackageProductionPackiDiffs));
             this.router.post("/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.postPackageProduction));
         };
         this.getPackageProductionList = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
@@ -111,10 +114,29 @@ class ApiV1PackageProductionController {
                 }, 501);
             });
         });
+        this.putPackageProductionPackiDiffs = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            console.log('putPackageProductionPackiDiffs.request.params', request.params, __filename);
+            console.log('putPackageProductionPackiDiffs.request.body.options', Object.keys(request.body.options), __filename);
+            console.log('putPackageProductionPackiDiffs.request.body.packiDiffs', Object.keys(request.body.packiDiffs), __filename);
+            const options = request.body.options || {};
+            (0, package_1.getPackageProductionObjectById)(request.params.id).then((prevPackage) => {
+                console.log('putPackageProductionPackiDiffs.prevPackiFiles', Object.keys(prevPackage.packiFiles), __filename);
+                const pm = new packi_1.PackiBuilder(prevPackage.packiFiles);
+                pm.applyPatch_ChangesOnly(request.body.packiDiffs);
+                return exec_updatePackageProduction(request, response, pm.packiFiles);
+            }).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'putPackageProductionPackiDiffs.getPackageProductionObjectById.error', err);
+                (0, sendResponse_1.sendFailure)(response, {
+                    err: err
+                }, 501);
+            });
+        });
         this.getWizziMetaFolder = 
         // loog 'getWizziMetaFolder.request.params', request.params
         (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            return (0, package_1.getWizziMetaFolderById)(request.params.id, {}).then((packiFiles) => (0, sendResponse_1.sendSuccess)(response, packiFiles)).catch((err) => {
+            return (0, package_2.getWizziMetaFolderById)(request.params.id, {}).then((packiFiles) => (0, sendResponse_1.sendSuccess)(response, packiFiles)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
                 console.log("[31m%s[0m", 'getWizziMetaFolder.error', err);
@@ -126,4 +148,19 @@ class ApiV1PackageProductionController {
     }
 }
 exports.ApiV1PackageProductionController = ApiV1PackageProductionController;
+function exec_updatePackageProduction(request, response, packiFiles) {
+    (0, package_1.updatePackageProduction)(request.params.id, request.body.owner, request.body.name, request.body.description, JSON.stringify(packiFiles)).then(
+    // loog 'putPackageProduction.update.result', result
+    (result) => {
+        (0, package_1.invalidateCache)(request.params.id);
+        (0, sendResponse_1.sendSuccess)(response, result);
+    }).catch((err) => {
+        if (typeof err === 'object' && err !== null) {
+        }
+        console.log("[31m%s[0m", 'exec_updatePackageProduction.updatePackageProduction.error', err);
+        (0, sendResponse_1.sendFailure)(response, {
+            err: err
+        }, 501);
+    });
+}
 //# sourceMappingURL=apiv1package.js.map

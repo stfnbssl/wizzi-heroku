@@ -7,7 +7,6 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-var __filename = "/index.js";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MonacoEditor": () => (/* binding */ MonacoEditor),
@@ -214,8 +213,6 @@ let MonacoEditorComp = /*#__PURE__*/function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "_openFile", (path, value, focus) => {
-      console.log('MonacoEditor', '_openFile', path, value, __filename);
-
       _this._initializeFile(path, value);
 
       const model = findModel(path);
@@ -245,7 +242,6 @@ let MonacoEditorComp = /*#__PURE__*/function (_React$Component) {
         var _this$props$files$_th;
 
         const value = model.getValue();
-        console.log('---*** MonacoEditor._handleEditFile', __filename);
 
         if (value !== ((_this$props$files$_th = _this.props.files[_this.props.selectedFile]) === null || _this$props$files$_th === void 0 ? void 0 : _this$props$files$_th.contents)) {
           _this.props.updateFiles(() => ({

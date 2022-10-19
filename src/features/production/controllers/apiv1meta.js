@@ -12,8 +12,10 @@ const index_1 = require("../../../middlewares/index");
 const sendResponse_1 = require("../../../utils/sendResponse");
 const error_1 = require("../../../utils/error");
 const utils_1 = require("../../../utils");
-const meta_1 = require("../api/meta");
 const wizzi_1 = require("../../wizzi");
+const packi_1 = require("../../packi");
+const meta_1 = require("../api/meta");
+const meta_2 = require("../api/meta");
 const production_1 = require("../../production");
 const myname = 'features/production/controllers/apiv1metaproduction';
 function makeHandlerAwareOfAsyncErrors(handler) {
@@ -53,6 +55,7 @@ class ApiV1MetaProductionController {
             this.router.get("/checkname/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.getCheckMetaName));
             this.router.get("/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.getMetaProduction));
             this.router.put("/:id", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.putMetaProduction));
+            this.router.put("/packidiffs/:id", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.putMetaProductionPackiDiffs));
             this.router.post("'/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.postMetaProduction));
             this.router.post("'/generate/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.generateMetaProductionByName));
         };
@@ -63,18 +66,7 @@ class ApiV1MetaProductionController {
                 }
             }).then((result) => {
                 if (result.ok) {
-                    const items = [];
-                    var i, i_items = result.item, i_len = result.item.length, meta;
-                    for (i = 0; i < i_len; i++) {
-                        meta = result.item[i];
-                        items.push({
-                            id: meta.id,
-                            owner: meta.owner,
-                            name: meta.name,
-                            description: meta.description
-                        });
-                    }
-                    (0, sendResponse_1.sendSuccess)(response, items);
+                    (0, sendResponse_1.sendSuccess)(response, result);
                 }
                 else {
                     console.log("[31m%s[0m", 'getMetaProductionList.error', result);
@@ -159,8 +151,27 @@ class ApiV1MetaProductionController {
                 }, 501);
             });
         });
+        this.putMetaProductionPackiDiffs = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            console.log('putMetaProductionPackiDiffs.request.params', request.params, __filename);
+            console.log('putMetaProductionPackiDiffs.request.body.options', Object.keys(request.body.options), __filename);
+            console.log('putMetaProductionPackiDiffs.request.body.packiDiffs', Object.keys(request.body.packiDiffs), __filename);
+            const options = request.body.options || {};
+            (0, meta_1.getMetaProductionObjectById)(request.params.id).then((prevMeta) => {
+                console.log('putMetaProductionPackiDiffs.prevPackiFiles', Object.keys(prevMeta.packiFiles), __filename);
+                const pm = new packi_1.PackiBuilder(prevMeta.packiFiles);
+                pm.applyPatch_ChangesOnly(request.body.packiDiffs);
+                return exec_updateMetaProduction(request, response, pm.packiFiles);
+            }).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'putMetaProductionPackiDiffs.getMetaProductionObjectById.error', err);
+                (0, sendResponse_1.sendFailure)(response, {
+                    err: err
+                }, 501);
+            });
+        });
         this.generateMetaProductionByName = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            return (0, meta_1.generateMetaProduction)(request.params.owner, request.params.name, request.body.cliCtx).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
+            return (0, meta_2.generateMetaProduction)(request.params.owner, request.params.name, request.body.cliCtx).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
                 console.log("[31m%s[0m", 'generateMetaProductionByName.error', err);
@@ -172,4 +183,19 @@ class ApiV1MetaProductionController {
     }
 }
 exports.ApiV1MetaProductionController = ApiV1MetaProductionController;
+function exec_updateMetaProduction(request, response, packiFiles) {
+    (0, meta_1.updateMetaProduction)(request.params.id, request.body.owner, request.body.name, request.body.description, JSON.stringify(packiFiles)).then(
+    // loog 'putMetaProduction.update.result', result
+    (result) => {
+        (0, meta_1.invalidateCache)(request.params.id);
+        (0, sendResponse_1.sendSuccess)(response, result);
+    }).catch((err) => {
+        if (typeof err === 'object' && err !== null) {
+        }
+        console.log("[31m%s[0m", 'exec_updateMetaProduction.updateMetaProduction.error', err);
+        (0, sendResponse_1.sendFailure)(response, {
+            err: err
+        }, 501);
+    });
+}
 //# sourceMappingURL=apiv1meta.js.map

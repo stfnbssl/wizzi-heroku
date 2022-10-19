@@ -283,8 +283,16 @@ function updateTFolder(id, owner, name, description, packiFiles) {
                     console.log("[31m%s[0m", myname, 'updateTFolder', 'TFolder.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
+                if (!result) {
+                    console.log("[31m%s[0m", myname, 'updateTFolder', 'TFolder.findOneAndUpdate', 'error', 'document not found');
+                    return reject({
+                        oper: 'updateTFolder',
+                        ok: false,
+                        message: 'tFolder document not found: ' + id
+                    });
+                }
                 return resolve({
-                    oper: 'update',
+                    oper: 'updateTFolder',
                     ok: true,
                     message: 'tFolder updated'
                 });

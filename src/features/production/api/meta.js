@@ -284,8 +284,16 @@ function updateMetaProduction(id, owner, name, description, packiFiles) {
                     console.log("[31m%s[0m", myname, 'updateMetaProduction', 'MetaProduction.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
+                if (!result) {
+                    console.log("[31m%s[0m", myname, 'updateMetaProduction', 'MetaProduction.findOneAndUpdate', 'error', 'document not found');
+                    return reject({
+                        oper: 'updateMetaProduction',
+                        ok: false,
+                        message: 'meta production document not found: ' + id
+                    });
+                }
                 return resolve({
-                    oper: 'update',
+                    oper: 'updateMetaProduction',
                     ok: true,
                     message: 'meta production updated'
                 });

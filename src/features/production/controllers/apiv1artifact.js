@@ -12,8 +12,11 @@ const index_1 = require("../../../middlewares/index");
 const sendResponse_1 = require("../../../utils/sendResponse");
 const error_1 = require("../../../utils/error");
 const utils_1 = require("../../../utils");
+const wizzi_1 = require("../../wizzi");
+const packi_1 = require("../../packi");
+const utils_2 = require("../utils");
 const artifact_1 = require("../api/artifact");
-const myname = 'features/production/controllers/apiv1artifactproduction';
+const myname = 'features/production/controllers/apiv1artifact';
 function makeHandlerAwareOfAsyncErrors(handler) {
     return function (request, response, next) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
@@ -50,6 +53,7 @@ class ApiV1ArtifactProductionController {
             this.router.get("/checkname/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.getCheckArtifactName));
             this.router.get("/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.getArtifactProduction));
             this.router.put("/:id", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.putArtifactProduction));
+            this.router.put("/packidiffs/:id", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.putArtifactProductionPackiDiffs));
             this.router.post("/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.postArtifactProduction));
         };
         this.getArtifactProductionList = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
@@ -106,15 +110,57 @@ class ApiV1ArtifactProductionController {
             });
         });
         this.putArtifactProduction = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            return (0, artifact_1.updateArtifactProduction)(request.params.id, request.body.owner, request.body.name, request.body.description, request.body.mainIttf, request.body.wizziSchema, JSON.stringify(request.body.packiFiles)).then(
-            // loog 'putArtifactProduction.update.result', result
-            (result) => {
-                (0, artifact_1.invalidateCache)(request.params.owner, request.params.name);
-                (0, sendResponse_1.sendSuccess)(response, result);
+            console.log('putArtifactProduction.request.params', request.params, __filename);
+            console.log('putArtifactProduction.request.body', Object.keys(request.body), __filename);
+            if (request.body.packiFiles) {
+                console.log('putArtifactProduction.request.body.packiFiles', Object.keys(request.body.packiFiles), __filename);
+            }
+            const options = request.body.options || {};
+            if (options.wizzify) {
+                wizzi_1.wizziProds.wizzify(request.body.packiFiles).then((resultPackiFiles) => {
+                    console.log('putArtifactProduction.wizzify.resultPackiFiles', Object.keys(resultPackiFiles), __filename);
+                    return exec_updateArtifactProduction(request, response, resultPackiFiles);
+                }).catch((err) => {
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'putArtifactProduction.wizzify.error', err);
+                    (0, sendResponse_1.sendFailure)(response, {
+                        err: err
+                    }, 501);
+                });
+            }
+            else if (options.merge) {
+                (0, artifact_1.getArtifactProductionObjectById)(request.params.id).then((prevArtifact) => {
+                    const resultPackiFiles = (0, utils_2.mergePackiFiles)(prevArtifact.packiFiles, request.body.packiFiles);
+                    console.log('putArtifactProduction.merge.resultPackiFiles', Object.keys(resultPackiFiles), __filename);
+                    return exec_updateArtifactProduction(request, response, resultPackiFiles);
+                }).catch((err) => {
+                    if (typeof err === 'object' && err !== null) {
+                    }
+                    console.log("[31m%s[0m", 'putArtifactProduction.merge.getArtifactProductionById.error', err);
+                    (0, sendResponse_1.sendFailure)(response, {
+                        err: err
+                    }, 501);
+                });
+            }
+            else {
+                exec_updateArtifactProduction(request, response, request.body.packiFiles);
+            }
+        });
+        this.putArtifactProductionPackiDiffs = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            console.log('putArtifactProductionPackiDiffs.request.params', request.params, __filename);
+            console.log('putArtifactProductionPackiDiffs.request.body.options', Object.keys(request.body.options), __filename);
+            console.log('putArtifactProductionPackiDiffs.request.body.packiDiffs', Object.keys(request.body.packiDiffs), __filename);
+            const options = request.body.options || {};
+            (0, artifact_1.getArtifactProductionObjectById)(request.params.id).then((prevArtifact) => {
+                console.log('putArtifactProductionPackiDiffs.prevPackiFiles', Object.keys(prevArtifact.packiFiles), __filename);
+                const pm = new packi_1.PackiBuilder(prevArtifact.packiFiles);
+                pm.applyPatch_ChangesOnly(request.body.packiDiffs);
+                return exec_updateArtifactProduction(request, response, pm.packiFiles);
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'putArtifactProduction.error', err);
+                console.log("[31m%s[0m", 'putArtifactProductionPackiDiffs.getArtifactProductionObjectById.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -123,4 +169,19 @@ class ApiV1ArtifactProductionController {
     }
 }
 exports.ApiV1ArtifactProductionController = ApiV1ArtifactProductionController;
+function exec_updateArtifactProduction(request, response, packiFiles) {
+    (0, artifact_1.updateArtifactProduction)(request.params.id, request.body.owner, request.body.name, request.body.description, request.body.mainIttf, request.body.wizziSchema, JSON.stringify(packiFiles)).then(
+    // loog 'putArtifactProduction.update.result', result
+    (result) => {
+        (0, artifact_1.invalidateCache)(request.params.id);
+        (0, sendResponse_1.sendSuccess)(response, result);
+    }).catch((err) => {
+        if (typeof err === 'object' && err !== null) {
+        }
+        console.log("[31m%s[0m", 'exec_updateArtifactProduction.updateArtifactProduction.error', err);
+        (0, sendResponse_1.sendFailure)(response, {
+            err: err
+        }, 501);
+    });
+}
 //# sourceMappingURL=apiv1artifact.js.map

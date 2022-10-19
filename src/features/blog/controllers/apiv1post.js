@@ -53,7 +53,7 @@ class ApiV1PostController {
             this.router.delete("/:id", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.deletePost));
         };
         this.getPostList = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            return (0, post_1.getListPost)({
+            return (0, post_1.getPostList)({
                 query: {
                     owner: request.params.owner
                 }

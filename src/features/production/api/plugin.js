@@ -283,8 +283,16 @@ function updatePluginProduction(id, owner, name, description, packiFiles) {
                     console.log("[31m%s[0m", myname, 'updatePluginProduction', 'PluginProduction.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
+                if (!result) {
+                    console.log("[31m%s[0m", myname, 'updatePluginProduction', 'PluginProduction.findOneAndUpdate', 'error', 'document not found');
+                    return reject({
+                        oper: 'updatePluginProduction',
+                        ok: false,
+                        message: 'plugin production document not found: ' + id
+                    });
+                }
                 return resolve({
-                    oper: 'update',
+                    oper: 'updatePluginProduction',
                     ok: true,
                     message: 'plugin production updated'
                 });

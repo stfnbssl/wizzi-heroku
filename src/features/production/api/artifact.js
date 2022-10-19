@@ -290,8 +290,16 @@ function updateArtifactProduction(id, owner, name, description, mainIttf, wizziS
                     console.log("[31m%s[0m", myname, 'updateArtifactProduction', 'ArtifactProduction.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
+                if (!result) {
+                    console.log("[31m%s[0m", myname, 'updateArtifactProduction', 'ArtifactProduction.findOneAndUpdate', 'error', 'document not found');
+                    return reject({
+                        oper: 'updateArtifactProduction',
+                        ok: false,
+                        message: 'artifact production document not found: ' + id
+                    });
+                }
                 return resolve({
-                    oper: 'update',
+                    oper: 'updateArtifactProduction',
                     ok: true,
                     message: 'artifact production updated'
                 });

@@ -285,8 +285,16 @@ function updatePackageProduction(id, owner, name, description, packiFiles) {
                     console.log("[31m%s[0m", myname, 'updatePackageProduction', 'PackageProduction.findOneAndUpdate', 'error', err);
                     return reject(err);
                 }
+                if (!result) {
+                    console.log("[31m%s[0m", myname, 'updatePackageProduction', 'PackageProduction.findOneAndUpdate', 'error', 'document not found');
+                    return reject({
+                        oper: 'updatePackageProduction',
+                        ok: false,
+                        message: 'package production document not found: ' + id
+                    });
+                }
                 return resolve({
-                    oper: 'update',
+                    oper: 'updatePackageProduction',
                     ok: true,
                     message: 'package production updated'
                 });
