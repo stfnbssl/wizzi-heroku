@@ -6,7 +6,7 @@ const jsx_runtime_1 = require("react/jsx-runtime");
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\pages\PageFormDocument.tsx.ittf
-    utc time: Wed, 13 Mar 2024 06:20:40 GMT
+    utc time: Wed, 13 Mar 2024 07:19:42 GMT
 */
 const jsesc_1 = tslib_1.__importDefault(require("jsesc"));
 const css = String.raw;
