@@ -3,9 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.contentTypeFor = exports.wrapperForSchema = exports.schemaFromFilePath = exports.transformerFor = exports.schemaFromExtension = exports.generatorFor = exports.pluginsFor = exports.ittfRootFromSchema = exports.artifactNameFromFileSchema = exports.parseFilePath = void 0;
 const tslib_1 = require("tslib");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\wizzi\maps.ts.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: wizzi.plugin.ts@
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\wizzi\maps.ts.ittf
+    utc time: Wed, 13 Mar 2024 05:41:15 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 function parseFilePath(filePath) {
@@ -33,7 +34,7 @@ const schemaArtifactMap = {
     js: 'js/module',
     json: 'json/document',
     jsx: 'js/module',
-    md: 'md/document',
+    md: 'md/tohtml',
     scss: 'scss/document',
     svg: 'svg/document',
     text: 'text/document',
@@ -212,6 +213,7 @@ const extContentTypeMap = {
     '.js': 'text/javascript',
     '.jsx': 'text/javascript',
     '.json': 'application/json',
+    '.md': 'text/html',
     '.png': 'image/png',
     '.scss': 'text/scss',
     '.svg': 'image/svg+xml',

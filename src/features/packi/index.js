@@ -1,7 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.packiControllers = exports.packiTypes = exports.PackiBuilder = void 0;
+exports.packiControllers = exports.PackiBuilder = exports.packiTypes = void 0;
 const tslib_1 = require("tslib");
+/*
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: wizzi.plugin.ts@
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\packi\index.ts.ittf
+    utc time: Wed, 13 Mar 2024 05:41:15 GMT
+*/
 const packiTypes = tslib_1.__importStar(require("./types"));
 exports.packiTypes = packiTypes;
 const PackiBuilder_1 = require("./api/PackiBuilder");

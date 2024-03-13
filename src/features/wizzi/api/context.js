@@ -3,12 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.resolveContexts = void 0;
 const tslib_1 = require("tslib");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\wizzi\api\context.ts.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: wizzi.plugin.ts@
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\wizzi\api\context.ts.ittf
+    utc time: Wed, 13 Mar 2024 05:41:15 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
-const wizzi_1 = require("wizzi");
+const factory_1 = require("@wizzi/factory");
 const config_1 = require("../../config");
 const wizziProds = tslib_1.__importStar(require("../productions"));
 const myname = 'features.wizzi.api.context';
@@ -55,20 +56,12 @@ function resolveContext(contextItem) {
             return reject(err);
         }));
     }
-    else if (contextItem.source == 'json-packiIttf') {
-        return new Promise((resolve, reject) => wizziProds.generateArtifact(contextItem.mainIttf, contextItem.packiFiles).then((value) => resolve(value)).catch((err) => {
-            if (typeof err === 'object' && err !== null) {
-            }
-            console.log("[31m%s[0m", 'features.wizzi.api.context.resolveContext.wizziProds.generateArtifact.error', err);
-            return reject(err);
-        }));
-    }
     else if (contextItem.source == 'json-dbIttf') {
         throw new Error('ContextItem source not yet implemented: ' + contextItem.source);
     }
     else if (contextItem.source == 'json-fsFile') {
         return new Promise((resolve, reject) => {
-            const json = wizzi_1.file.readJSON(contextItem.path);
+            const json = factory_1.file.readJSON(contextItem.path);
             resolve(json);
         });
     }
@@ -80,14 +73,6 @@ function resolveContext(contextItem) {
             if (typeof err === 'object' && err !== null) {
             }
             console.log("[31m%s[0m", 'features.wizzi.api.context.resolveContext.wizziProds.loadModelFs.error', err);
-            return reject(err);
-        }));
-    }
-    else if (contextItem.source == 'model-packiIttf') {
-        return new Promise((resolve, reject) => wizziProds.loadModel(contextItem.mainIttf, contextItem.packiFiles).then((value) => resolve(value)).catch((err) => {
-            if (typeof err === 'object' && err !== null) {
-            }
-            console.log("[31m%s[0m", 'features.wizzi.api.context.resolveContext.wizziProds.loadModel.error', err);
             return reject(err);
         }));
     }

@@ -3,19 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PackiGeneratingController = void 0;
 const tslib_1 = require("tslib");
 const jsx_runtime_1 = require("react/jsx-runtime");
-/*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi-override\src\features\packi\controllers\packiGenerating.tsx.ittf
-*/
 const express_1 = require("express");
-const index_1 = require("../../../middlewares/index");
 const sendResponse_1 = require("../../../utils/sendResponse");
 const error_1 = require("../../../utils/error");
 const utils_1 = require("../../../utils");
 const server_1 = tslib_1.__importDefault(require("react-dom/server"));
 const wizzi_1 = require("../../wizzi");
-const production_1 = require("../../production");
+const packiProductions_1 = require("../../packiProductions");
 const EditorDocument_1 = tslib_1.__importDefault(require("../../../pages/EditorDocument"));
 const myname = 'features/packi/controller/packiGenerating';
 function renderPackiEditor(req, res, packiItemObject, loggedUser, queryParams) {
@@ -54,22 +48,19 @@ class PackiGeneratingController {
     constructor() {
         this.path = '/~=';
         this.router = (0, express_1.Router)();
-        this.initialize = (initValues) => {
+        this.initialize = (app, initValues) => {
             console.log("[33m%s[0m", 'Entering PackiGeneratingController.initialize');
-            this.router.get("/p/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getPackiPackageGeneration));
-            this.router.get("/p/:owner/:name/*", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getPackiPackageGeneration));
-            this.router.get("/m/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getPackiMetaGeneration));
-            this.router.get("/m/:owner/:name/*", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getPackiMetaGeneration));
-            this.router.get("/l/:owner/:name", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getPackiPluginGeneration));
-            this.router.get("/l/:owner/:name/*", makeHandlerAwareOfAsyncErrors(index_1.webSecured), makeHandlerAwareOfAsyncErrors(this.getPackiPluginGeneration));
+            this.router.get("/p/:owner/:name", makeHandlerAwareOfAsyncErrors(this.getPackiPackageGeneration));
+            this.router.get("/p/:owner/:name/*", makeHandlerAwareOfAsyncErrors(this.getPackiPackageGeneration));
+            this.router.get("/m/:owner/:name", makeHandlerAwareOfAsyncErrors(this.getPackiMetaGeneration));
+            this.router.get("/m/:owner/:name/*", makeHandlerAwareOfAsyncErrors(this.getPackiMetaGeneration));
+            this.router.get("/l/:owner/:name", makeHandlerAwareOfAsyncErrors(this.getPackiPluginGeneration));
+            this.router.get("/l/:owner/:name/*", makeHandlerAwareOfAsyncErrors(this.getPackiPluginGeneration));
         };
-        this.getPackiPackageGeneration = 
-        // loog myname + '.getPackiPackageGeneration', request.path
-        // loog myname + '.getPackiPackageGeneration', parts[1], parts.slice(2).join('/')
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getPackiPackageGeneration = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const queryParams = {};
             const parts = request.path.split('/');
-            production_1.productionApi.prepareProduction('package', parts[2], parts.slice(3).join('/'), '', {}).then((packageProductionSet) => wizzi_1.wizziProds.executeJobs(packageProductionSet.packiFiles, packageProductionSet.context).then((fsJson) => {
+            packiProductions_1.productionApi.prepareProduction('package', parts[2], parts.slice(3).join('/'), '', {}).then((packageProductionSet) => wizzi_1.wizziProds.executeJobs(packageProductionSet.packiFiles, packageProductionSet.context).then((fsJson) => {
                 wizzi_1.WizziFactory.extractGeneratedFiles(fsJson).then((packiFiles) => {
                     const user = request.session.user;
                     const loggedUser = {
@@ -95,7 +86,6 @@ class PackiGeneratingController {
                     .catch((err) => {
                     if (typeof err === 'object' && err !== null) {
                     }
-                    console.log("[31m%s[0m", 'getPackiPackageGeneration.extractGeneratedFiles.error', err);
                     (0, sendResponse_1.sendFailure)(response, {
                         err: err
                     }, 501);
@@ -103,33 +93,25 @@ class PackiGeneratingController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'getPackiPackageGeneration.executeJobs.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'getPackiPackageGeneration.prepareProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             });
         });
-        this.getPackiMetaGeneration = 
-        // loog myname + '.getPackiMetaGeneration', request.path
-        // loog myname + '.getPackiMetaGeneration', parts[1], parts.slice(2).join('/')
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getPackiMetaGeneration = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const queryParams = {};
             const parts = request.path.split('/');
         });
-        this.getPackiPluginGeneration = 
-        // loog myname + '.getPackiPluginGeneration', request.path
-        // loog myname + '.getPackiPluginGeneration', parts[1], parts.slice(2).join('/')
-        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.getPackiPluginGeneration = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const queryParams = {};
             const parts = request.path.split('/');
-            production_1.productionApi.prepareProduction('plugin', parts[2], parts.slice(3).join('/'), '', {}).then((packageProductionSet) => wizzi_1.wizziProds.executeJobs(packageProductionSet.packiFiles, packageProductionSet.context).then((fsJson) => {
+            packiProductions_1.productionApi.prepareProduction('plugin', parts[2], parts.slice(3).join('/'), '', {}).then((packageProductionSet) => wizzi_1.wizziProds.executeJobs(packageProductionSet.packiFiles, packageProductionSet.context).then((fsJson) => {
                 wizzi_1.WizziFactory.extractGeneratedFiles(fsJson).then((packiFiles) => {
                     const user = request.session.user;
                     const loggedUser = {
@@ -155,7 +137,6 @@ class PackiGeneratingController {
                     .catch((err) => {
                     if (typeof err === 'object' && err !== null) {
                     }
-                    console.log("[31m%s[0m", 'getPackiPluginGeneration.extractGeneratedFiles.error', err);
                     (0, sendResponse_1.sendFailure)(response, {
                         err: err
                     }, 501);
@@ -163,14 +144,12 @@ class PackiGeneratingController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'getPackiPluginGeneration.executeJobs.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'getPackiPluginGeneration.prepareProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

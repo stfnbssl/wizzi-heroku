@@ -2,9 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NOT_REGISTERED_YET = exports.CONTEST_NOT_FOUND = exports.SEND_EMAIL_ERROR = exports.OTP_EXPIRED = exports.OTP_INVALID = exports.LOGIN_REQUIRED = exports.SYSTEM_ERROR = exports.USERNAME_EXISTS = exports.EMAIL_EXISTS = exports.LOGOUT_REQUIRED = exports.EMAIL_USERNAME_PASSWORD_INVALID = exports.USER_NOT_FOUND = exports.MISSING_USER_ID = exports.MISSING_FULLNAME = exports.MISSING_EMAIL = exports.MISSING_REQUIRED_FIELDS = exports.FcError = void 0;
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\utils\error.ts.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: wizzi.plugin.ts@
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\utils\error.ts.ittf
+    utc time: Wed, 13 Mar 2024 05:41:15 GMT
 */
 const MISSING_REQUIRED_FIELDS = 1000;
 exports.MISSING_REQUIRED_FIELDS = MISSING_REQUIRED_FIELDS;

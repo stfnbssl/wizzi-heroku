@@ -2,9 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\App.ts.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: wizzi.plugin.ts@
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\App.ts.ittf
+    utc time: Wed, 13 Mar 2024 05:41:15 GMT
 */
 const express_1 = tslib_1.__importDefault(require("express"));
 /**
@@ -26,12 +27,12 @@ function initializeApp(app, initValues) {
     initValues.middlewaresPre.forEach(middleware => middleware(app));
     initValues.apis.forEach((api) => {
         console.log("[33m%s[0m", 'installing api: ', api.name);
-        api.initialize(initValues);
+        api.initialize(app, initValues);
         initValues.globalApi[api.name] = api;
     });
     initValues.controllers.forEach((controller) => {
         console.log("[33m%s[0m", 'installing router on path: ', controller.path);
-        controller.initialize(initValues);
+        controller.initialize(app, initValues);
         app.use(controller.path, controller.router);
     });
     initValues.middlewaresPost.forEach(middleware => middleware(app));

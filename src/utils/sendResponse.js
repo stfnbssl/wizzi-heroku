@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendPromiseLikeResult = exports.sendPromiseResult = exports.sendSuccess = exports.sendFailure = exports.sendHtml = void 0;
+exports.sendPromiseLikeResult = exports.sendPromiseResult = exports.sendSuccess = exports.sendFailure = exports.sendError = exports.sendHtml = void 0;
 function sendContent(res, contentType, content) {
     res.writeHead(200, {
         'Content-Type': contentType,
@@ -10,6 +10,16 @@ function sendContent(res, contentType, content) {
 }
 const sendHtml = (res, content) => sendContent(res, 'text/html', content);
 exports.sendHtml = sendHtml;
+const sendError = (res, error) => {
+    res.status(200);
+    res.type('application/json');
+    res.send({
+        err: error,
+        message: error && error.message,
+        stack: error && error.stack
+    });
+};
+exports.sendError = sendError;
 const sendFailure = (res, error, status) => {
     res.status(error && error.status ? error.status : status);
     res.type('application/json');

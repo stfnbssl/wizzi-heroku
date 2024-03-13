@@ -3,9 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.packiConfigPath = exports.packiFilePrefixExtract = exports.packiFilePrefix = void 0;
 const tslib_1 = require("tslib");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\config\env.ts.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: wizzi.plugin.ts@
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\config\env.ts.ittf
+    utc time: Wed, 13 Mar 2024 05:41:15 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const dotenv_1 = tslib_1.__importDefault(require("dotenv"));
@@ -22,13 +23,6 @@ function validateEnv() {
         MONGO_USER: (0, envalid_1.str)(),
         MONGO_PASSWORD: (0, envalid_1.str)(),
         MONGO_PATH: (0, envalid_1.str)(),
-        GITHUB_CLIENT_ID: (0, envalid_1.str)(),
-        GITHUB_CLIENT_SECRET: (0, envalid_1.str)(),
-        GITHUB_CALLBACK_URL: (0, envalid_1.str)(),
-        GOOGLE_CLIENT_ID: (0, envalid_1.str)(),
-        GOOGLE_CLIENT_SECRET: (0, envalid_1.str)(),
-        GOOGLE_CALLBACK_URL: (0, envalid_1.str)(),
-        GITHUB_ACCESS_TOKEN: (0, envalid_1.str)(),
         IS_WIZZI_DEV: (0, envalid_1.bool)(),
         WIZZI_BASE_PATH: (0, envalid_1.str)()
     });
@@ -54,20 +48,17 @@ function create() {
             mongoPassword: checkedEnv.MONGO_PASSWORD,
             mongoPath: checkedEnv.MONGO_PATH,
             mongoConnectUrl: "",
-            githubClientId: checkedEnv.GITHUB_CLIENT_ID,
-            githubClientSecret: checkedEnv.GITHUB_CLIENT_SECRET,
-            githubCallbackURL: checkedEnv.GITHUB_CALLBACK_URL,
-            googleClientId: checkedEnv.GOOGLE_CLIENT_ID,
-            googleClientSecret: checkedEnv.GOOGLE_CLIENT_SECRET,
-            googleCallbackURL: checkedEnv.GOOGLE_CALLBACK_URL,
-            githubAccessToken: checkedEnv.GITHUB_ACCESS_TOKEN,
             isWizziDev: checkedEnv.IS_WIZZI_DEV,
             wizziBasePath: checkedEnv.WIZZI_BASE_PATH,
             ittfPath: __ittfPath,
             dataPath: __dataPath,
-            metaHtmlIttfPath: path_1.default.join(__ittfPath, 'meta', 'html', 'index.html.ittf'),
+            metaHtmlIttfPath: path_1.default.join(__ittfPath, 'meta', 'document', 'index.html.ittf'),
             metaFolderIttfPath: path_1.default.join(__ittfPath, 'meta', 'folder', 'index.html.ittf'),
-            metaHtmlTextPath: path_1.default.join(__ittfPath, 'meta', 'text', 'index.html.ittf')
+            metaHtmlTextPath: path_1.default.join(__ittfPath, 'meta', 'text', 'index.html.ittf'),
+            jobsBasePath: path_1.default.join(__ittfPath, 'data', 'jobs'),
+            userUserName: "stfnbssl",
+            userDisplayName: "Stefano Bassoli",
+            userAvatarUrl: "https://avatars.githubusercontent.com/u/728956?v=4"
         };
         const { mongoHost, mongoUser, mongoPassword, mongoPath } = config;
         if (mongoUser && mongoUser.length > 0 && mongoPassword && mongoPassword.length > 0 && mongoHost && mongoHost.length > 0) {

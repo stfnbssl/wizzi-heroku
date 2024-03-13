@@ -2,13 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProductionController = void 0;
 const tslib_1 = require("tslib");
-/*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\features\wizzi\controllers\production.ts.ittf
-*/
 const express_1 = require("express");
-const index_1 = require("../../../middlewares/index");
 const sendResponse_1 = require("../../../utils/sendResponse");
 const error_1 = require("../../../utils/error");
 const utils_1 = require("../../../utils");
@@ -47,13 +41,13 @@ class ProductionController {
     constructor() {
         this.path = '/api/v1/wizzi/production';
         this.router = (0, express_1.Router)();
-        this.initialize = (initValues) => {
+        this.initialize = (app, initValues) => {
             console.log("[33m%s[0m", 'Entering ProductionController.initialize');
-            this.router.post("/artifact", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.artifact));
-            this.router.post("/mtree", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.mTree));
-            this.router.post("/mtreescript", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.mTreeBuildupScript));
-            this.router.post("/mtreescan", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.mTreeScan));
-            this.router.post("/wrapittf", makeHandlerAwareOfAsyncErrors(index_1.apiSecured), makeHandlerAwareOfAsyncErrors(this.wrapIttfText));
+            this.router.post("/artifact", makeHandlerAwareOfAsyncErrors(this.artifact));
+            this.router.post("/mtree", makeHandlerAwareOfAsyncErrors(this.mTree));
+            this.router.post("/mtreescript", makeHandlerAwareOfAsyncErrors(this.mTreeBuildupScript));
+            this.router.post("/mtreescan", makeHandlerAwareOfAsyncErrors(this.mTreeScan));
+            this.router.post("/wrapittf", makeHandlerAwareOfAsyncErrors(this.wrapIttfText));
         };
         this.artifact = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const artifactRequest = request.body;
@@ -62,7 +56,6 @@ class ProductionController {
                     wizziProds.generateArtifactFs(path_1.default.join(config_1.config.ittfPath, artifactRequest.ittfDocument.path), context).then(generatedArtifact => (0, sendResponse_1.sendSuccess)(response, generatedArtifact)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
-                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifactFs.error', err);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -72,7 +65,6 @@ class ProductionController {
                     wizziProds.generateArtifact(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.packiFiles, context).then((generatedArtifact) => (0, sendResponse_1.sendSuccess)(response, generatedArtifact)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
-                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifact.error', err);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -82,7 +74,6 @@ class ProductionController {
                     wizziProds.generateArtifactDb(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.path, context).then((generatedArtifact) => (0, sendResponse_1.sendSuccess)(response, generatedArtifact)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
-                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifact.error', err);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -91,7 +82,6 @@ class ProductionController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.artifact.resolveContexts.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -106,7 +96,6 @@ class ProductionController {
                     })).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
-                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTree.wizziProds.mTreeFs.error', err);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -118,7 +107,6 @@ class ProductionController {
                     })).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
-                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTree.wizziProds.mTree.error', err);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -130,7 +118,6 @@ class ProductionController {
                     })).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
-                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTree.wizziProds.mTreeDb.error', err);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -139,7 +126,6 @@ class ProductionController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", '} features/wizzi/controller/productions.handler.mTree.resolveContexts.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -152,7 +138,6 @@ class ProductionController {
                     wizziProds.mTreeBuildupScriptFs(path_1.default.join(config_1.config.ittfPath, artifactRequest.ittfDocument.path), context).then(mTreeBuildupScript => (0, sendResponse_1.sendSuccess)(response, mTreeBuildupScript)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
-                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeBuildupScript.wizziProds.mTreeBuildupScriptFs.error', err);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -162,7 +147,6 @@ class ProductionController {
                     wizziProds.mTreeBuildupScript(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.packiFiles, context).then((mTreeBuildupScript) => (0, sendResponse_1.sendSuccess)(response, mTreeBuildupScript)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
-                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeBuildupScript.wizziProds.mTreeBuildupScript.error', err);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -172,7 +156,6 @@ class ProductionController {
                     wizziProds.mTreeBuildupScriptDb(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.path, context).then((mTreeBuildupScript) => (0, sendResponse_1.sendSuccess)(response, mTreeBuildupScript)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
-                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeBuildupScript.wizziProds.mTreeBuildupScriptDb.error', err);
                         (0, sendResponse_1.sendFailure)(response, {
                             err: err
                         }, 501);
@@ -181,7 +164,6 @@ class ProductionController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeBuildupScript.resolveContexts.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
@@ -196,7 +178,6 @@ class ProductionController {
                 })).catch((err) => {
                     if (typeof err === 'object' && err !== null) {
                     }
-                    console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.mTreeScanFs.error', err);
                     (0, sendResponse_1.sendFailure)(response, {
                         err: err
                     }, 501);
@@ -209,7 +190,6 @@ class ProductionController {
                 })).catch((err) => {
                     if (typeof err === 'object' && err !== null) {
                     }
-                    console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.mTreeScan.error', err);
                     (0, sendResponse_1.sendFailure)(response, {
                         err: err
                     }, 501);
@@ -222,7 +202,6 @@ class ProductionController {
                 })).catch((err) => {
                     if (typeof err === 'object' && err !== null) {
                     }
-                    console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.mTreeScanDb.error', err);
                     (0, sendResponse_1.sendFailure)(response, {
                         err: err
                     }, 501);
@@ -242,7 +221,6 @@ class ProductionController {
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.wrapIttfText.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

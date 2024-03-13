@@ -15,7 +15,7 @@ const SessionMiddleware = (app) => {
         maxAge: 14 * 24 * 60 * 60 * 1000
     };
     const sessionOptions = {
-        name: 'wizzi-heroku.sid',
+        name: 'wizzi.heroku-1010.sid',
         secret: config_1.config.sessionSecret,
         resave: false,
         saveUninitialized: false

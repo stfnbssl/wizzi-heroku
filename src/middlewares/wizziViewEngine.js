@@ -3,18 +3,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WizziViewEngineMiddleware = void 0;
 const tslib_1 = require("tslib");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\middlewares\wizziViewEngine.ts.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: wizzi.plugin.ts@
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\middlewares\wizziViewEngine.ts.ittf
+    utc time: Wed, 13 Mar 2024 05:41:15 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const wizzi_1 = require("../features/wizzi");
+const json_stringify_safe_1 = tslib_1.__importDefault(require("json-stringify-safe"));
 const WizziViewEngineMiddleware = (app) => {
     app.engine('ittf', function (filePath, options, callback) {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
             try {
                 const twinJsonContext = yield wizzi_1.wizziProds.inferAndLoadContextFs(filePath, 'wzCtx');
-                const context = Object.assign(Object.assign(Object.assign(Object.assign({}, options), { locals: options._locals }), twinJsonContext), { isWizziStudio: true });
+                var optionsLocals = Object.assign({}, options._locals);
+                const context = Object.assign(Object.assign(Object.assign(Object.assign({}, options), { locals: optionsLocals }), twinJsonContext), { isWizziStudio: true });
                 const siteCtx = yield wizzi_1.wizziProds.loadSiteJsonModel('sitectx.json.ittf', context);
                 context.siteCtx = siteCtx;
                 console.log('WizziViewEngineMiddleware.filePath', filePath);
@@ -23,7 +26,7 @@ const WizziViewEngineMiddleware = (app) => {
                     return callback(null, generated.artifactContent);
                 }).catch((err) => {
                     console.log("[31m%s[0m", 'WizziViewEngineMiddleware. wizziProds.generateArtifactFs error', err);
-                    return callback(err);
+                    return callback((0, json_stringify_safe_1.default)(err, null, 4));
                 });
             }
             catch (ex) {

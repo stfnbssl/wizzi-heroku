@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PackiBrowseMiddleware = void 0;
 const tslib_1 = require("tslib");
 const parseurl_1 = tslib_1.__importDefault(require("parseurl"));
-const production_1 = require("../features/production");
+const packiProductions_1 = require("../features/packiProductions");
 const sendResponse_1 = require("../utils/sendResponse");
 const myname = 'express.middleware.packiBrowse';
 const packiSiteBrowsePackageItemPath = '/~p';
@@ -18,12 +18,12 @@ const PackiBrowseMiddleware = (app) => {
 };
 exports.PackiBrowseMiddleware = PackiBrowseMiddleware;
 function getPackiBrowseContext(request) {
-    return {
+    return Object.assign({}, request.query, {
         isWizziStudio: false,
         locals: {
             user: request.session.user
         }
-    };
+    });
 }
 function packiBrowseMiddleware(packiProduction, isSiteLevel) {
     return (request, response, next) => tslib_1.__awaiter(this, void 0, void 0, function* () {
@@ -34,7 +34,6 @@ function packiBrowseMiddleware(packiProduction, isSiteLevel) {
         if (!parsedUrl || !parsedUrl.pathname) {
             return next();
         }
-        console.log(myname + '.parsedUrl', parsedUrl, __filename);
         const pathname = decodeURIComponent(parsedUrl.pathname);
         const parts = pathname.split('/');
         let owner, productionName;
@@ -46,24 +45,22 @@ function packiBrowseMiddleware(packiProduction, isSiteLevel) {
             owner = parts[1];
             productionName = parts.slice(2).join('/');
         }
-        console.log(myname + '.owner', owner, 'productionName', productionName, 'context', request.query.context, __filename);
         _executeBrowse(packiProduction, owner, productionName, request, response);
     });
 }
 function _executeBrowse(packiProduction, owner, productionName, request, response) {
     let productionApi;
     if (packiProduction == 'package') {
-        productionApi = production_1.packageApi;
+        productionApi = packiProductions_1.packageApi;
     }
     else if (packiProduction == 'plugin') {
-        productionApi = production_1.pluginApi;
+        productionApi = packiProductions_1.pluginApi;
     }
     else {
-        productionApi = production_1.artifactApi;
+        productionApi = packiProductions_1.artifactApi;
     }
     if (request.query.meta && request.query.meta.toLowerCase() == 'mtree') {
         productionApi.getArtifactMTree_withPrepare(owner, productionName, request.query.context, getPackiBrowseContext(request)).then((result) => {
-            console.log(myname + 'getArtifactMTree_withPrepare.result.length:', result.length, __filename);
             response.status(200);
             response.set('Content-Type', result.contentType);
             response.set('Content-Length', result.contentLength.toString());
@@ -82,7 +79,6 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
     }
     else if (request.query.meta && request.query.meta.toLowerCase() == 'script') {
         productionApi.getArtifactMTreeBuildupScript_withPrepare(owner, productionName, request.query.context, getPackiBrowseContext(request)).then((result) => {
-            console.log(myname + 'getArtifactMTreeBuildupScript_withPrepare.result.length:', result.length, __filename);
             response.status(200);
             response.set('Content-Type', result.contentType);
             response.set('Content-Length', result.contentLength.toString());
@@ -101,7 +97,6 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
     }
     else if (request.query.meta && request.query.meta.toLowerCase() == 'raw') {
         productionApi.getArtifactGeneration_withPrepare(owner, productionName, request.query.filepath, request.query.context, getPackiBrowseContext(request)).then((result) => {
-            console.log(myname + 'getArtifactGeneration_withPrepare.result.length:', result.length, __filename);
             response.status(200);
             response.set('Content-Type', 'text/plain');
             response.set('Content-Length', result.contentLength.toString());
@@ -120,7 +115,6 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
     }
     else {
         productionApi.getArtifactGeneration_withPrepare(owner, productionName, request.query.filepath, request.query.context, getPackiBrowseContext(request)).then((result) => {
-            console.log(myname + 'getArtifactGeneration_withPrepare.result.length:', result.length, __filename);
             response.status(200);
             response.set('Content-Type', result.contentType);
             response.set('Content-Length', result.contentLength.toString());

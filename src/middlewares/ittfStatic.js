@@ -3,9 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.IttfStaticMiddleware = void 0;
 const tslib_1 = require("tslib");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\middlewares\ittfStatic.ts.ittf
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: wizzi.plugin.ts@
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\middlewares\ittfStatic.ts.ittf
+    utc time: Wed, 13 Mar 2024 05:41:15 GMT
 */
 const util_1 = tslib_1.__importDefault(require("util"));
 const path_1 = tslib_1.__importDefault(require("path"));
@@ -66,7 +67,7 @@ function ittfMiddleware(basePath, routePath) {
         let ittfSchema = wizzi_1.wizziMaps.schemaFromFilePath(filePath);
         let contentType = wizzi_1.wizziMaps.contentTypeFor(filePath);
         if (!contentType) {
-            next();
+            return next();
         }
         wizzi_1.wizziProds.loadSiteJsonModel('sitectx.json.ittf').then((siteCtx) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             if (queryMeta && queryMeta === 'html') {
@@ -249,7 +250,7 @@ function sendFolderScan(folderPath, root, meta, request, response) {
     });
 }
 function sendTransform(filePath, transformer, response) {
-    wizzi_1.wizziProds.transformModelFs(filePath, {
+    wizzi_1.wizziProds.loadAndTransformModelFs(filePath, {
         isWizziStudio: true
     }, {
         transformer: transformer

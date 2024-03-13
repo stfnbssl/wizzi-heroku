@@ -2,11 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HomeController = void 0;
 const tslib_1 = require("tslib");
-/*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
-    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi-heroku\.wizzi\src\site\controllers\home.ts.ittf
-*/
 const express_1 = require("express");
 const error_1 = require("../../utils/error");
 const utils_1 = require("../../utils");
@@ -40,14 +35,13 @@ class HomeController {
     constructor() {
         this.path = '';
         this.router = (0, express_1.Router)();
-        this.initialize = (initValues) => {
+        this.initialize = (app, initValues) => {
             console.log("[33m%s[0m", 'Entering HomeController.initialize');
             this.router.get("/", makeHandlerAwareOfAsyncErrors(this.home));
         };
         this.home = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            console.log('Home controller. Received request', __filename);
-            response.render('home/index.html.ittf', {
-                title: 'Wizzi Hub'
+            return response.render('home/index.html.ittf', {
+                title: 'wizzi.heroku-1010'
             });
         });
     }
