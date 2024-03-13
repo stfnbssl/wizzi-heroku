@@ -163,12 +163,12 @@
                                     @ 'adapters.js.ittf'
                             # call the wizzifactory method for loading a language Wizzi Model and
                             # generate a language artifact from it. Pass the input model in the
-                            # mTreeBuildupContext property of the request object argument.
+                            # mTreeBuildUpContext property of the request object argument.
                             # The 'js' schema of the template model is detected by its filename.
                             _ ctx.wizziFactory.loadModelAndGenerateArtifact
                                 @ ittfTemplatePath
                                 {
-                                    @ mTreeBuildupContext model
+                                    @ mTreeBuildUpContext model
                                 @ 'js/module'
                                 function
                                     param err

@@ -88,7 +88,7 @@
                     'myschema', // schema name
                     path.join (__dirname, 'ittf', 'mysource.myschema.ittf'),
                     {
-                        mTreeBuildupContext: myContextObject,
+                        mTreeBuildUpContext: myContextObject,
                         formatOptions: {}
                     },
                     function (err, loadedModel) {

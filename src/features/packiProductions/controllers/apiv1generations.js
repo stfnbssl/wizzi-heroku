@@ -42,7 +42,7 @@ class ApiV1GenerationsController {
         this.initialize = (app, initValues) => {
             console.log("[33m%s[0m", 'Entering ApiV1GenerationsController.initialize');
             this.router.post("/mtree/:id", makeHandlerAwareOfAsyncErrors(this.mTree));
-            this.router.post("/mtreescript/:id", makeHandlerAwareOfAsyncErrors(this.mTreeBuildupScript));
+            this.router.post("/mtreescript/:id", makeHandlerAwareOfAsyncErrors(this.mTreeBuildUpScript));
             this.router.post("/artifact/:id", makeHandlerAwareOfAsyncErrors(this.generateArtifact));
             this.router.post("/transform/:id/:transformer", makeHandlerAwareOfAsyncErrors(this.transformModel));
             this.router.post("/job", makeHandlerAwareOfAsyncErrors(this.executeJob));
@@ -77,27 +77,27 @@ class ApiV1GenerationsController {
                 }, 501);
             });
         });
-        this.mTreeBuildupScript = 
-        // loog myname, 'mTreeBuildupScript.id, productionKind,  productionName, files', id, productionKind, productionName, Object.keys(req_files)
+        this.mTreeBuildUpScript = 
+        // loog myname, 'mTreeBuildUpScript.id, productionKind,  productionName, files', id, productionKind, productionName, Object.keys(req_files)
         (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const owner = request.session.user.username;
             const id = request.params.id;
             const req_files = request.body.packiFiles;
             const productionKind = request.body.productionKind;
             const productionName = request.body.productionName;
-            packiProductions_1.productionApi.prepareProduction(productionKind, owner, productionName, '', {}).then((packageProductionSet) => wizzi_1.wizziProds.mTreeBuildupScript(id, packageProductionSet.packiFiles, packageProductionSet.context).then(
-            // loog myname, 'mTreeBuildupScript.result', result
+            packiProductions_1.productionApi.prepareProduction(productionKind, owner, productionName, '', {}).then((packageProductionSet) => wizzi_1.wizziProds.mTreeBuildUpScript(id, packageProductionSet.packiFiles, packageProductionSet.context).then(
+            // loog myname, 'mTreeBuildUpScript.result', result
             result => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'features.production.controllers.productions.mTreeBuildupScript.execute.error', err);
+                console.log("[31m%s[0m", 'features.production.controllers.productions.mTreeBuildUpScript.execute.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'features.production.controllers.productions.mTreeBuildupScript.prepareProduction.error', err);
+                console.log("[31m%s[0m", 'features.production.controllers.productions.mTreeBuildUpScript.prepareProduction.error', err);
                 (0, sendResponse_1.sendFailure)(response, {
                     err: err
                 }, 501);

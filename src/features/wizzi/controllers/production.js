@@ -45,7 +45,7 @@ class ProductionController {
             console.log("[33m%s[0m", 'Entering ProductionController.initialize');
             this.router.post("/artifact", makeHandlerAwareOfAsyncErrors(this.artifact));
             this.router.post("/mtree", makeHandlerAwareOfAsyncErrors(this.mTree));
-            this.router.post("/mtreescript", makeHandlerAwareOfAsyncErrors(this.mTreeBuildupScript));
+            this.router.post("/mtreescript", makeHandlerAwareOfAsyncErrors(this.mTreeBuildUpScript));
             this.router.post("/mtreescan", makeHandlerAwareOfAsyncErrors(this.mTreeScan));
             this.router.post("/wrapittf", makeHandlerAwareOfAsyncErrors(this.wrapIttfText));
         };
@@ -131,11 +131,11 @@ class ProductionController {
                 }, 501);
             });
         });
-        this.mTreeBuildupScript = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.mTreeBuildUpScript = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const artifactRequest = request.body;
             (0, context_1.resolveContexts)(artifactRequest.contextItems).then((context) => {
                 if (artifactRequest.ittfDocument.source == 'fs') {
-                    wizziProds.mTreeBuildupScriptFs(path_1.default.join(config_1.config.ittfPath, artifactRequest.ittfDocument.path), context).then(mTreeBuildupScript => (0, sendResponse_1.sendSuccess)(response, mTreeBuildupScript)).catch((err) => {
+                    wizziProds.mTreeBuildUpScriptFs(path_1.default.join(config_1.config.ittfPath, artifactRequest.ittfDocument.path), context).then(mTreeBuildUpScript => (0, sendResponse_1.sendSuccess)(response, mTreeBuildUpScript)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
                         (0, sendResponse_1.sendFailure)(response, {
@@ -144,7 +144,7 @@ class ProductionController {
                     });
                 }
                 else if (artifactRequest.ittfDocument.source == 'packi') {
-                    wizziProds.mTreeBuildupScript(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.packiFiles, context).then((mTreeBuildupScript) => (0, sendResponse_1.sendSuccess)(response, mTreeBuildupScript)).catch((err) => {
+                    wizziProds.mTreeBuildUpScript(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.packiFiles, context).then((mTreeBuildUpScript) => (0, sendResponse_1.sendSuccess)(response, mTreeBuildUpScript)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
                         (0, sendResponse_1.sendFailure)(response, {
@@ -153,7 +153,7 @@ class ProductionController {
                     });
                 }
                 else if (artifactRequest.ittfDocument.source == 'db') {
-                    wizziProds.mTreeBuildupScriptDb(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.path, context).then((mTreeBuildupScript) => (0, sendResponse_1.sendSuccess)(response, mTreeBuildupScript)).catch((err) => {
+                    wizziProds.mTreeBuildUpScriptDb(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.path, context).then((mTreeBuildUpScript) => (0, sendResponse_1.sendSuccess)(response, mTreeBuildUpScript)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
                         (0, sendResponse_1.sendFailure)(response, {

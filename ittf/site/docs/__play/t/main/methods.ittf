@@ -64,14 +64,14 @@ $group
                             {
                                 @ mTreeText result.mTree
             if this.state.resultView == 'script'
-                _ wz.wizzi.mTreeBuildupScriptFromText
+                _ wz.wizzi.mTreeBuildUpScriptFromText
                     @ cs.packiFilesJson[cs.mainIttf].contents
                     =>
                         param err
                         param result
-                        log 'execProduction.mTreeBuildupScriptFromText.err,result', err, result
+                        log 'execProduction.mTreeBuildUpScriptFromText.err,result', err, result
                         _ this.setState
                             {
-                                @ mTreeBuildupScript result.mTreeBuildupScript || result.mTreeBuildUpScript
+                                @ mTreeBuildUpScript result.mTreeBuildUpScript || result.mTreeBuildUpScript
 
 

@@ -84,7 +84,7 @@
                             # Is alternative to 'schema' attribute.
                         string dump-file `path`
                         [ modelRefs
-                            # References to the models to be used, as properties of the mTreeBuildupContext
+                            # References to the models to be used, as properties of the mTreeBuildUpContext
                             # parameter, passed to the wizzi-mtree.loader.loadMTree function,
                             # for loading the model mTree.
 

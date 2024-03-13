@@ -6,7 +6,7 @@
 
     section(&sect)
         table-doc()
-            tr( The mTree build up scripter, wizzi-mtree, lib/loader/mTreeBuildupScripter.js.ittf, lib/loader/mTreeBuildupScripter.js )
+            tr( The mTree build up scripter, wizzi-mtree, lib/loader/mTreeBuildUpScripter.js.ittf, lib/loader/mTreeBuildUpScripter.js )
                 p The Wizzi Template Engine is implemented building a JsWizzi Script that rebuilds the
                     \b tree data structure of an ITTF Document. Template commands and expressions become
                     \b JsWizzi statements and expressions in the build up script, that is executed by 

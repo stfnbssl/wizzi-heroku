@@ -731,10 +731,10 @@ function getArtifactMTree_withPrepare(owner, productionName, queryContext, rootC
 exports.getArtifactMTree_withPrepare = getArtifactMTree_withPrepare;
 function getArtifactMTreeBuildupScript(owner, productionName, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => getArtifactProduction_withCache(owner, productionName).then((ap) => wizzi_1.wizziProds.mTreeBuildupScript(ap.mainIttf, ap.packiFiles, rootContext).then((result) => {
+        return new Promise((resolve, reject) => getArtifactProduction_withCache(owner, productionName).then((ap) => wizzi_1.wizziProds.mTreeBuildUpScript(ap.mainIttf, ap.packiFiles, rootContext).then((result) => {
             const response = {
-                content: result.mTreeBuildupScript,
-                contentLength: result.mTreeBuildupScript.length,
+                content: result.mTreeBuildUpScript,
+                contentLength: result.mTreeBuildUpScript.length,
                 contentType: wizzi_1.wizziMaps.contentTypeFor('x.ittf.ittf')
             };
             return resolve(response);
@@ -762,10 +762,10 @@ function getArtifactMTreeBuildupScript(owner, productionName, rootContext) {
 exports.getArtifactMTreeBuildupScript = getArtifactMTreeBuildupScript;
 function getArtifactMTreeBuildupScript_withPrepare(owner, productionName, queryContext, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => index_1.productionApi.prepareProduction('artifact', owner, productionName, queryContext, rootContext).then((productionObj) => wizzi_1.wizziProds.mTreeBuildupScript(productionObj.mainIttf, productionObj.packiFiles, productionObj.context).then((result) => {
+        return new Promise((resolve, reject) => index_1.productionApi.prepareProduction('artifact', owner, productionName, queryContext, rootContext).then((productionObj) => wizzi_1.wizziProds.mTreeBuildUpScript(productionObj.mainIttf, productionObj.packiFiles, productionObj.context).then((result) => {
             const response = {
-                content: result.mTreeBuildupScript,
-                contentLength: result.mTreeBuildupScript.length,
+                content: result.mTreeBuildUpScript,
+                contentLength: result.mTreeBuildUpScript.length,
                 contentType: wizzi_1.wizziMaps.contentTypeFor('x.ittf.ittf')
             };
             return resolve(response);

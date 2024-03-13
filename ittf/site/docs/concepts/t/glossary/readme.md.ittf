@@ -138,7 +138,7 @@
 				+ jsWizziRunner, will give as result the final mTree
 				+ of the source ittf document. 
 
-		md/glo-item( mTreeBuildupScriptCoder)
+		md/glo-item( mTreeBuildUpScriptCoder)
 			span A module of the wizzi.mtree package that generates the 
 				+ mTree build up script.
 

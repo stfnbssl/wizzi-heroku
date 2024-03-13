@@ -42,7 +42,7 @@ class ProductionsController {
         this.initialize = (app, initValues) => {
             console.log("[33m%s[0m", 'Entering ProductionsController.initialize');
             this.router.post(`/mtree/:id`, this.mTree);
-            this.router.post(`/mtreescript/:id`, this.mTreeBuildupScript);
+            this.router.post(`/mtreescript/:id`, this.mTreeBuildUpScript);
             this.router.post(`/artifact/:id`, this.generateArtifact);
             this.router.post(`/transform/:id/:transformer`, this.transformModel);
             this.router.post(`/job`, this.executeJob);
@@ -61,11 +61,11 @@ class ProductionsController {
                 }, 501);
             }));
         });
-        this.mTreeBuildupScript = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+        this.mTreeBuildUpScript = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const id = request.params.id;
             const req_files = request.body;
-            packiProductions_1.artifactApi.prepareGenerationFromWizziJson(req_files).then((result) => wizzi_1.wizziProds.mTreeBuildupScript(id, result.packiFiles, result.context).then(value => (0, sendResponse_1.sendSuccess)(response, {
-                mTreeBuildupScript: value
+            packiProductions_1.artifactApi.prepareGenerationFromWizziJson(req_files).then((result) => wizzi_1.wizziProds.mTreeBuildUpScript(id, result.packiFiles, result.context).then(value => (0, sendResponse_1.sendSuccess)(response, {
+                mTreeBuildUpScript: value
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }

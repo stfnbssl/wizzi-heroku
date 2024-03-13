@@ -30,7 +30,7 @@
                             # The full path of the package folder where the generated artifacts will be written 
                         string wfschemaName
                             # The schema name, for composing the names of the generated artifacts
-                        { mTreeBuildupContext
+                        { mTreeBuildUpContext
                             # An object that will be the evaluation context object
                             # during the mTree processing of the `wfschema` ITTF document
                         callback

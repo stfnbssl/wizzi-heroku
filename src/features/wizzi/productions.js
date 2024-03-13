@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.loadSiteJsonModel = exports.getCodeAST = exports.getCodeASTFs = exports.wizzify = exports.wizzifyFs = exports.packiFilesToFolderFs = exports.folderFsToPackiFiles = exports.folderBrowseToPackiFiles = exports.scanIttfDocumentDb = exports.scanIttfFolder = exports.scanIttfDocumentFs = exports.scanIttfDocument = exports.inferAndLoadContextFs = exports.inferAndLoadContextJson = exports.executeJobFs = exports.executeJobs = exports.executeJob = exports.metaGenerate = exports.loadAndTransformModelFs = exports.transformModel = exports.loadAndTransformModel = exports.generateWizziModelTypes = exports.generateFolderArtifactsFs = exports.generateFolderArtifacts = exports.generateArtifactDb = exports.generateArtifactFs = exports.generateArtifact = exports.wrapIttfText = exports.mTreeDb = exports.mTreeFs = exports.mTree = exports.mTreeBuildupScriptDb = exports.mTreeBuildupScriptFs = exports.mTreeBuildupScript = exports.loadModelFs = exports.loadModel = void 0;
+exports.loadSiteJsonModel = exports.getCodeAST = exports.getCodeASTFs = exports.wizzify = exports.wizzifyFs = exports.packiFilesToFolderFs = exports.folderFsToPackiFiles = exports.folderBrowseToPackiFiles = exports.scanIttfDocumentDb = exports.scanIttfFolder = exports.scanIttfDocumentFs = exports.scanIttfDocument = exports.inferAndLoadContextFs = exports.inferAndLoadContextJson = exports.executeJobFs = exports.executeJobs = exports.executeJob = exports.metaGenerate = exports.loadAndTransformModelFs = exports.transformModel = exports.loadAndTransformModel = exports.generateWizziModelTypes = exports.generateFolderArtifactsFs = exports.generateFolderArtifacts = exports.generateArtifactDb = exports.generateArtifactFs = exports.generateArtifact = exports.wrapIttfText = exports.mTreeDb = exports.mTreeFs = exports.mTree = exports.mTreeBuildUpScriptDb = exports.mTreeBuildUpScriptFs = exports.mTreeBuildUpScript = exports.loadModelFs = exports.loadModel = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\wizzi\productions.ts.ittf
-    utc time: Wed, 13 Mar 2024 05:51:46 GMT
+    utc time: Wed, 13 Mar 2024 06:11:37 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const fs_1 = tslib_1.__importDefault(require("fs"));
@@ -34,7 +34,7 @@ function loadModel(filePath, files, context) {
             jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
             ;
             jsonwf.wf.loadModel(ittfDocumentUri, {
-                mTreeBuildupContext: context
+                mTreeBuildUpContext: context
             }, (err, result) => {
                 if (err) {
                     return reject(err);
@@ -61,7 +61,7 @@ function loadModelFs(filePath, context, options) {
             } : null;
             const wf = yield (0, factory_1.createFilesystemFactory)(plugins, null, {});
             wf.loadModel(schemaName, filePath, {
-                mTreeBuildupContext: context
+                mTreeBuildUpContext: context
             }, (err, result) => {
                 if (err) {
                     return reject(err);
@@ -80,7 +80,7 @@ function loadModelInternal(wf, filePath, context) {
                 return reject('File is not a known ittf document: ' + filePath);
             }
             wf.loadModel(schemaName, filePath, {
-                mTreeBuildupContext: context
+                mTreeBuildUpContext: context
             }, (err, result) => {
                 if (err) {
                     return reject(err);
@@ -90,14 +90,14 @@ function loadModelInternal(wf, filePath, context) {
         }));
     });
 }
-function mTreeBuildupScript(filePath, files, context) {
+function mTreeBuildUpScript(filePath, files, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise(
         // TODO catch error
         (resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             if (!utils_1.verify.isObject(files)) {
                 return reject({
-                    action: 'wizzi.productions.mTreeBuildupScript',
+                    action: 'wizzi.productions.mTreeBuildUpScript',
                     message: 'files parameter must be an object of type PackiFiles',
                     files
                 });
@@ -115,19 +115,19 @@ function mTreeBuildupScript(filePath, files, context) {
         }));
     });
 }
-exports.mTreeBuildupScript = mTreeBuildupScript;
-function mTreeBuildupScriptFs(filePath, context) {
+exports.mTreeBuildUpScript = mTreeBuildUpScript;
+function mTreeBuildUpScriptFs(filePath, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        throw new Error(myname + '.mTreeBuildupScriptFs not yet implemented');
+        throw new Error(myname + '.mTreeBuildUpScriptFs not yet implemented');
     });
 }
-exports.mTreeBuildupScriptFs = mTreeBuildupScriptFs;
-function mTreeBuildupScriptDb(owner, name, context) {
+exports.mTreeBuildUpScriptFs = mTreeBuildUpScriptFs;
+function mTreeBuildUpScriptDb(owner, name, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        throw new Error(myname + '.mTreeBuildupScriptDB not yet implemented');
+        throw new Error(myname + '.mTreeBuildUpScriptDB not yet implemented');
     });
 }
-exports.mTreeBuildupScriptDb = mTreeBuildupScriptDb;
+exports.mTreeBuildUpScriptDb = mTreeBuildUpScriptDb;
 function mTree(filePath, files, context) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise(
@@ -382,7 +382,7 @@ function generateWizziModelTypes(request) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const storeKind = request.storeKind || 'filesystem';
-            const mTreeBuildupContext = Object.assign({}, request.mTreeBuildupContext);
+            const mTreeBuildUpContext = Object.assign({}, request.mTreeBuildUpContext);
             const globalContext = Object.assign({}, request.globalContext);
             var plugins = [];
             if (request.plugins) {
@@ -398,8 +398,8 @@ function generateWizziModelTypes(request) {
                 plugins.push('wizzi-core');
             }
             console.log('wizziProds.generateWizziModelTypes.plugins', plugins);
-            for (var k in mTreeBuildupContext) {
-                console.log('- mTreeBuildupContext property', k, mTreeBuildupContext[k]);
+            for (var k in mTreeBuildUpContext) {
+                console.log('- mTreeBuildUpContext property', k, mTreeBuildUpContext[k]);
             }
             for (var k in globalContext) {
                 console.log('- globalContext property', k, globalContext[k]);
@@ -407,7 +407,7 @@ function generateWizziModelTypes(request) {
             try {
                 const wf = yield (0, factory_1.createFilesystemFactoryWithParameters)(request.pluginsBaseFolder, plugins, globalContext);
                 console.log('STARTING WIZZI MODEL TYPES GENERATION FOR SCHEMA ' + request.wfschemaName);
-                wf.generateModelDoms(request.wfschemaIttfDocumentUri, request.wfschemaOutputPackageFolder, request.wfschemaName, mTreeBuildupContext, (err, result) => {
+                wf.generateModelDoms(request.wfschemaIttfDocumentUri, request.wfschemaOutputPackageFolder, request.wfschemaName, mTreeBuildUpContext, (err, result) => {
                     if (err) {
                         return reject({
                             message: "wizziProds.generateWizziModelTypes.generateModelDoms.error",

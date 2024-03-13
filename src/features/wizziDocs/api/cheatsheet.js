@@ -6,7 +6,7 @@ const tslib_1 = require("tslib");
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\wizziDocs\api\cheatsheet.ts.ittf
-    utc time: Wed, 13 Mar 2024 05:51:46 GMT
+    utc time: Wed, 13 Mar 2024 06:11:37 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const wizzi_utils_1 = require("wizzi-utils");
@@ -121,17 +121,17 @@ function getCheatsheet(name) {
                             item.ittfPretty = pretty;
                         }
                         if (item.render === 'script') {
-                            wizzi_1.wizziProds.mTreeBuildupScript('index.ittf.ittf', {
+                            wizzi_1.wizziProds.mTreeBuildUpScript('index.ittf.ittf', {
                                 ['index.ittf.ittf']: {
                                     type: 'CODE',
                                     contents: item.ittfWrapped
                                 }
-                            }, {}).then((mTreeBuildupScript) => {
-                                if (mTreeBuildupScript.__is_error) {
-                                    item.generated = wizzi_utils_1.verify.htmlEscape(JSON.stringify(mTreeBuildupScript, null, 2));
+                            }, {}).then((mTreeBuildUpScript) => {
+                                if (mTreeBuildUpScript.__is_error) {
+                                    item.generated = wizzi_utils_1.verify.htmlEscape(JSON.stringify(mTreeBuildUpScript, null, 2));
                                 }
                                 else {
-                                    item.generated = wizzi_utils_1.verify.htmlEscape(mTreeBuildupScript);
+                                    item.generated = wizzi_utils_1.verify.htmlEscape(mTreeBuildUpScript);
                                 }
                                 item.generated = item.generated ? item.generated.trim() : 'No result. Something went wrong!';
                                 next();

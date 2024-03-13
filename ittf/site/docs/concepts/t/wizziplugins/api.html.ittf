@@ -90,7 +90,7 @@
                                                 api-ref wizzi.production.aclstat
                                     { __ittfDocumentStore
                                         api-ref wizzi-repo.ittfDocumentStore
-                                    { mTreeBuildupContext
+                                    { mTreeBuildUpContext
                                         optional
                                         | api-ref wizzi-plugin.wizziModel
                                         | POJO
