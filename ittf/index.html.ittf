@@ -1,0 +1,10 @@
+html
+    head
+        meta
+            charset utf-8
+        @title Title...
+    style
+    body
+        script
+            set window.__filename = 'browser'
+        h1 Hello

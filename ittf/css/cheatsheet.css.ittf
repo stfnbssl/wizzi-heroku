@@ -21,6 +21,7 @@ css
         var c_tn_bg_f_0 = "#000";
         var c_mc_bg_frame_bar = c_tn_bg_sub;
         var c_mc_frame_bar = c_tn_bg_bar;
+
     < h1, h2, h3, h4, h5, h6
         margin 0
     < h3

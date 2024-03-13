@@ -8,6 +8,6 @@ html
             title: 'Overview'
         };
 
-    _layouts/geeky(&art)
+    _layouts/concepts(&art)
 
         $include overview/overview

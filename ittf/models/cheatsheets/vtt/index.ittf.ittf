@@ -1,3 +1,4 @@
 meta
 	schema vtt
+	language vtt
 	$include base

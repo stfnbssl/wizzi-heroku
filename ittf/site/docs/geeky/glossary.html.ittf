@@ -7,6 +7,6 @@ html
             title: 'Glossary'
         };
     
-    _layouts/geeky(&art)
+    _layouts/concepts(&art)
     
         $include ./glossary/introduction

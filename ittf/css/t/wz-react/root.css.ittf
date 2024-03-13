@@ -1,0 +1,14 @@
+$group
+    - header
+    - main
+    - main-content
+    - footer
+    < :root
+        --color-tn-bg #313131
+        --color-input-bg #dedede
+        --color-input-border #767676
+        --color-shadow-inset #a0a0a0
+        --color-text-primary #000000
+        --color-success #2ea44f
+        --color-error #ff0000
+        --color-warning #dbab09

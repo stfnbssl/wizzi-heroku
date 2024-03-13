@@ -1,5 +1,6 @@
 meta
 	schema ts
+	language typescript
 	$include modules
 	$include var
 	$include functions

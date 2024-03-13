@@ -10,7 +10,7 @@ $group
 			render script
 			ittf
 				root
-					${d}
+					${'$'}
 						var name = 'Derby', winner = null;
 						if (name == 'Ascot') {
 							winner = 'Ribot';
@@ -21,30 +21,30 @@ $group
 						} else {
 							winner = 'Varenne';
 						}
-					node If the race was ${d}{name} the winner was ${d}{winner}.
+					node If the race was ${'$'}{name} the winner was ${'$'}{winner}.
 
 		item
 			title Conditions in markup
 			render script
 			ittf
 				root
-					${d}
+					${'$'}
 						var name = 'Derby';
-					${d}if name == 'Ascot'
-						node If the race was ${d}{name} the winner was Ribot
-					${d}elif name == 'Arc de triomphe'
-						node If the race was ${d}{name} the winner was Varenne
-					${d}elif name == 'Derby'
-						node If the race was ${d}{name} the winner was Ribot
-					${d}else
-						node If the race was ${d}{name} the winner was Varenne
+					${'$'}if name == 'Ascot'
+						node If the race was ${'$'}{name} the winner was Ribot
+					${'$'}elif name == 'Arc de triomphe'
+						node If the race was ${'$'}{name} the winner was Varenne
+					${'$'}elif name == 'Derby'
+						node If the race was ${'$'}{name} the winner was Ribot
+					${'$'}else
+						node If the race was ${'$'}{name} the winner was Varenne
 
 		item
 			title For loop in scripts
 			render script
 			ittf
 				root
-					${d}
+					${'$'}
 						var sletters = 'a,b,c,d,e,f,g,h';
 						var aletters = sletters.split(',');
 						var letter, label='';
@@ -52,40 +52,40 @@ $group
 							letter = aletters[i];
 							label += i % 2 == 0 ? letter : letter.toUpperCase();
 						}
-					node The resulting label has the even letters upper cased: ${d}{label}.
+					node The resulting label has the even letters upper cased: ${'$'}{label}.
 
 		item
 			title For loop in markup
 			render script
 			ittf
 				root
-					${d}
+					${'$'}
 						var sletters = 'a,b,c,d,e,f,g,h';
 						var aletters = sletters.split(',');
 					node The resulting tree has the even node values upper cased:
-						${d}foreach letter in aletters
-							node ${d}{ _index} ${d}{ _index % 2 == 0 ? letter : letter.toUpperCase() }
+						${'$'}foreach letter in aletters
+							node ${'$'}{ _index} ${'$'}{ _index % 2 == 0 ? letter : letter.toUpperCase() }
 
 		item
 			title While loop in scripts
 			render script
 			ittf
 				root
-					${d}
+					${'$'}
 						var x = 1, odds = '1';
 						while ( x < 10 ) {
 							x += 2;
 							odds += ', ' + x 
 						}
-					node First odd numbers: ${d}{odds}.
+					node First odd numbers: ${'$'}{odds}.
 
 		item
 			title While loop in markup
 			render script
 			ittf
 				root
-					${d} var x = 1, odds = '1'
-					${d}while x < 10
-						${d} x += 2
-						node ${d}{ odds += ', ' + x } 
+					${'$'} var x = 1, odds = '1'
+					${'$'}while x < 10
+						${'$'} x += 2
+						node ${'$'}{ odds += ', ' + x } 
 						

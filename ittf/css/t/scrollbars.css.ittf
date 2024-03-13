@@ -1,0 +1,4 @@
+$group
+    . scrollbar-thin
+        @ scrollbar-color #6D6D6D #4D4D4D
+        @ scrollbar-width thin          

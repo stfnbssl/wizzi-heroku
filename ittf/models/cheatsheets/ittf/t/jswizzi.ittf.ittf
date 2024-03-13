@@ -7,21 +7,23 @@ $group
 
 		item
 			title jsWizzi variable declaration and interpolation
+			render ittf
 			ittf
 				root
-					${d}
+					${'$'}
 						var name = 'stefi';
 						var options = {
 							title: 'Chapter 1'
 						};
-					node title is ${d}{options.title}
-					node name is ${d}{name}
+					node title is ${'$'}{options.title}
+					node name is ${'$'}{name}
 
 		item 
 			title More variable declarations
+			render ittf
 			ittf
 				html
-					${d}
+					${'$'}
 						var name = 'Ribot';
 						var runDowns = 16, runWon = 16;
 						var placements = [1, 1, 1, 1, 1];
@@ -32,96 +34,101 @@ $group
 							maternalGrandfather: 'El greco'
 						};
 
-					p ${d}{name} was undefeated. Won ${d}{runWon} out of ${d}{runDowns} races.
-					p His father was ${d}{pedigree.father} and his mother ${d}{pedigree.mother}.
-					p His placements are boring: ${d}{placements}, ...
+					p ${'$'}{name} was undefeated. Won ${'$'}{runWon} out of ${'$'}{runDowns} races.
+					p His father was ${'$'}{pedigree.father} and his mother ${'$'}{pedigree.mother}.
+					p His placements are boring: ${'$'}{placements}, ...
 
 		item 
 			title Inpute parameters with default values
+			render ittf
 			ittf
 				root
-					${d}params name|stefi, age:integer|61, inlove:boolean|true
-					node ${d}{name}, age ${d}{age}, ${d}{inlove ? 'is' : 'is not'} in love.
+					${'$'}params name|stefi, age:integer|61, inlove:boolean|true
+					node ${'$'}{name}, age ${'$'}{age}, ${'$'}{inlove ? 'is' : 'is not'} in love.
 
 		item
 			title Unary expressions
+			render ittf
 			ittf
 				any
-					any +2 =  ${d}{ +2 }
-					any -2 = ${d}{ -2 }
-					any !(2 == 2) = ${d}{ !(2 == 2) }
-					${d}
+					any +2 =  ${'$'}{ +2 }
+					any -2 = ${'$'}{ -2 }
+					any !(2 == 2) = ${'$'}{ !(2 == 2) }
+					${'$'}
 						var a = 0;
-					any a = = ${d}{ a }
-					any ++a = ${d}{ ++a }
-					any ++a = ${d}{ ++a }
-					any --a = ${d}{ --a }
-					any typeof 3 = ${d}{ typeof 3 }
-					any typeof '3' = ${d}{ typeof '3' }
-					any typeof xyz = ${d}{ typeof xyz }
+					any a = = ${'$'}{ a }
+					any ++a = ${'$'}{ ++a }
+					any ++a = ${'$'}{ ++a }
+					any --a = ${'$'}{ --a }
+					any typeof 3 = ${'$'}{ typeof 3 }
+					any typeof '3' = ${'$'}{ typeof '3' }
+					any typeof xyz = ${'$'}{ typeof xyz }
 
 		item
 			title Expressions
+			render ittf
 			ittf
 				any
-					any 2 + 2 = ${d}{ 2 + 2 }
-					any 5 - 2 = ${d}{ 5 - 2 }
-					any 3 * 3 = ${d}{ 3 * 3 }
-					any 6 / 2 = ${d}{ 6 / 2 }
-					any 5 % 2 = ${d}{ 5 % 2 }
-					any 5 == 2 = ${d}{ 5 == 2 }
-					any 5 != 2 = ${d}{ 5 != 2 }
-					any 5 > 2 = ${d}{ 5 > 2 }
-					any 5 >= 5 = ${d}{ 5 >= 5 }
-					any 5 < 2 = ${d}{ 5 < 2 }
-					any 5 <= 5 = ${d}{ 5 <= 5 }
-					any "a" in { a: 1} = ${d}{ "a" in { a: 1} }
-					any typeof 5 === 'string' = ${d}{ typeof 5 === 'string' }
-					any String(5) = ${d}{ String(5) }
-					any Number('5.5') = ${d}{ Number('5.5') }
-					any Date(2013,6,12) = ${d}{ Date(2013,6,12) }
-					any 5 << 5 = ${d}{ 5 << 5 }
-					any 5 >> 5 = ${d}{ 5 >> 5 }
-					any 5 >>> 5 = ${d}{ 5 >>> 5 }
-					any 5 | 5 = ${d}{ 5 | 5 }
-					any 5 & 5 = ${d}{ 5 & 5 }
-					any 5 ^ 5 = ${d}{ 5 ^ 5 }
+					any 2 + 2 = ${'$'}{ 2 + 2 }
+					any 5 - 2 = ${'$'}{ 5 - 2 }
+					any 3 * 3 = ${'$'}{ 3 * 3 }
+					any 6 / 2 = ${'$'}{ 6 / 2 }
+					any 5 % 2 = ${'$'}{ 5 % 2 }
+					any 5 == 2 = ${'$'}{ 5 == 2 }
+					any 5 != 2 = ${'$'}{ 5 != 2 }
+					any 5 > 2 = ${'$'}{ 5 > 2 }
+					any 5 >= 5 = ${'$'}{ 5 >= 5 }
+					any 5 < 2 = ${'$'}{ 5 < 2 }
+					any 5 <= 5 = ${'$'}{ 5 <= 5 }
+					any "a" in { a: 1} = ${'$'}{ "a" in { a: 1} }
+					any typeof 5 === 'string' = ${'$'}{ typeof 5 === 'string' }
+					any String(5) = ${'$'}{ String(5) }
+					any Number('5.5') = ${'$'}{ Number('5.5') }
+					any Date(2013,6,12) = ${'$'}{ Date(2013,6,12) }
+					any 5 << 5 = ${'$'}{ 5 << 5 }
+					any 5 >> 5 = ${'$'}{ 5 >> 5 }
+					any 5 >>> 5 = ${'$'}{ 5 >>> 5 }
+					any 5 | 5 = ${'$'}{ 5 | 5 }
+					any 5 & 5 = ${'$'}{ 5 & 5 }
+					any 5 ^ 5 = ${'$'}{ 5 ^ 5 }
 
 
 		item 
 			title Conditional operator
+			render ittf
 			ittf
 				root
-					node (3 == 3 ? 1 : 0) = ${d}{ 3 == 3 ? 1 : 0 }
-					node (true ? 5 : 2) = ${d}{ true ? 5 : 2 }
+					node (3 == 3 ? 1 : 0) = ${'$'}{ 3 == 3 ? 1 : 0 }
+					node (true ? 5 : 2) = ${'$'}{ true ? 5 : 2 }
 
 
 		item 
 			title Assignments
+			render ittf
 			ittf
 				root
-					${d} var a = 0;
-					node var a = 0; a += 2; -> ${d}{ a += 2 }
-					${d} var a = 0;
-					node var a = 0; a -= 2; -> ${d}{ a -= 2 }
-					${d} var a = 3;
-					node var a = 3; a *= 2; -> ${d}{ a *= 2 }
-					${d} var a = 3;
-					node var a = 3; a /= 2; -> ${d}{ a /= 2 }
-					${d} var a = 3;
-					node var a = 3; a %= 2; -> ${d}{ a %= 2 }
-					${d} var a = 3;
-					node var a = 3; a <<= 2; -> ${d}{ a <<= 2 }
-					${d} var a = 3;
-					node var a = 3; a >>= 2; -> ${d}{ a >>= 2 }
-					${d} var a = 3;
-					node var a = 3; a >>>= 2; -> ${d}{ a >>>= 2 }
-					${d} var a = 3;
-					node var a = 3; a &= 2; -> ${d}{ a &= 2 }
-					${d} var a = 3;
-					node var a = 3; a |= 2; -> ${d}{ a |= 2 }
-					${d} var a = 3;
-					node var a = 3; a ^= 2; -> ${d}{ a ^= 2 }
+					${'$'} var a = 0;
+					node var a = 0; a += 2; -> ${'$'}{ a += 2 }
+					${'$'} var a = 0;
+					node var a = 0; a -= 2; -> ${'$'}{ a -= 2 }
+					${'$'} var a = 3;
+					node var a = 3; a *= 2; -> ${'$'}{ a *= 2 }
+					${'$'} var a = 3;
+					node var a = 3; a /= 2; -> ${'$'}{ a /= 2 }
+					${'$'} var a = 3;
+					node var a = 3; a %= 2; -> ${'$'}{ a %= 2 }
+					${'$'} var a = 3;
+					node var a = 3; a <<= 2; -> ${'$'}{ a <<= 2 }
+					${'$'} var a = 3;
+					node var a = 3; a >>= 2; -> ${'$'}{ a >>= 2 }
+					${'$'} var a = 3;
+					node var a = 3; a >>>= 2; -> ${'$'}{ a >>>= 2 }
+					${'$'} var a = 3;
+					node var a = 3; a &= 2; -> ${'$'}{ a &= 2 }
+					${'$'} var a = 3;
+					node var a = 3; a |= 2; -> ${'$'}{ a |= 2 }
+					${'$'} var a = 3;
+					node var a = 3; a ^= 2; -> ${'$'}{ a ^= 2 }
 
 
 

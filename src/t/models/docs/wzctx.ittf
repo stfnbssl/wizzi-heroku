@@ -17,7 +17,7 @@ $group
                         url: "/ittf/site/docs/concepts/overview.html.ittf"
                     },
                     {
-                        title: "How to",
+                        title: "Howtos",
                         url: "/ittf/site/docs/howtos/getstarted.html.ittf"
                     },
                     {
@@ -30,7 +30,7 @@ $group
                     },
                     {
                         title: "Cheatsheets",
-                        url: "/docs/cheatsheet/html"
+                        url: "/wizzi/docs/cheatsheet/html"
                     },
                     {
                         title: "Play",
@@ -38,7 +38,7 @@ $group
                     }
                 ]
             },
-            Docs: {
+            Concepts: {
                 items: [
                     {
                         title: "Overview",
@@ -106,7 +106,7 @@ $group
                     }
                 ]
             },
-            HowTos: {
+            Howtos: {
                 items: [
                     {
                         title: "Get started",
@@ -290,6 +290,18 @@ $group
                     "baseUrl": "https://stfnbssl.github.io/wizzi/fonts",
                     "fontWeight": "400",
                     "size": "24px"
+                }
+            },
+            Styles: {
+                shellColors: {
+                    mainHeaderBg: "#0D0D0D",
+                    mainHeader: "#dedede",
+                    mainContentBg: "#2D2D2D",
+                    mainContent: "#dedede",
+                    mainContentLeftBarBg: "#1D1D1D",
+                    mainContentLeftBar: "#dedede",
+                    mainFooterBg: "#0D0D0D",
+                    mainFooter: "#dedede",
                 }
             }
         }

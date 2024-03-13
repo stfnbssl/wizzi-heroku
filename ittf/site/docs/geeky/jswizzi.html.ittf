@@ -1,4 +1,4 @@
-html
+﻿html
     $global
         var dollar = '$';
     $
@@ -7,6 +7,6 @@ html
             title: 'JsWizzi'
         };
     
-    _layouts/geeky(&art)
+    _layouts/concepts(&art)
     
         $include ./jswizzi/introduction

@@ -1,0 +1,88 @@
+$group
+    $params &opt
+    $
+        var ca = 'p-l-xxl p-r-xxl p-t-s p-b-s color-header font-l font-w-xxl';
+        var ca_inverse = 'p-l-xxl p-r-xxl p-t-s p-b-s color-header-inverse /*bg-color-header-inverse*/ font-l font-w-xxl';
+        var ca2 = 'color-header font-x font-w-s';
+    head
+        $if opt.title
+            @title ${opt.title}
+        meta
+            charset utf-8
+        meta
+            name viewport
+            content width=device-width, initial-scale=1
+        link
+            rel preconnect
+            href https://fonts.googleapis.com
+        link
+            rel preconnect
+            href https://fonts.gstatic.com
+            crossorigin
+        link
+            @ rel "stylesheet"
+            @ href "https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+        script
+            module
+                set window.__filename = 'browser'
+        css /ittf/css/main.css.ittf
+        $include ./styles
+        $hook head-styles-0
+        ./site-styles( &opt )
+        $hook head-styles
+        $hook head-styles-2
+        $hook head-scripts
+
+    body
+        . full-page
+            . main-header
+                . flex-row space-between align-items-center width-100
+                    id __main_navbar
+                    . flex-row
+                        html/a( , /, ${ca2}
+                            div
+                                style width: 80px; margin-top: 5px; margin-left: 20px;
+                                html/images/logo(${colors.mainHeader}, ${colors.mainHeaderBg})
+                    . flex-row
+                        $foreach item in wzCtx.Section.items
+                            $if item.title === opt.title
+                                . ${ca_inverse}
+                                    + ${item.title}
+                                    title "Current"
+                            $else
+                                html/a( ${item.title}, ${item.url}, ${ca}
+                    . flex-row m-r-x
+                        $if false
+                            $if locals.user
+                                html/a( Profile, /account/profile, ${ca}
+                                html/a( Log Out, /auth/logout, ${ca}
+                            $else
+                                html/a( Log In, /auth/login, ${ca}
+                        $else
+                            . ${ca}
+                                + Log in
+                                title "Not implemented yet"
+            . main-content
+                . main-content-left-bar
+                    $hook main-content-left-bar
+                . main-content-work-area
+                    $hook main-content-work-area
+                    $hook 
+            . main-footer
+                $hook main-footer
+        $hook body-scripts-0
+        ./site-scripts( &opt )
+        $hook body-scripts
+        $hook body-scripts-2
+        $if opt.useHighlight
+            script
+                _ document.addEventListener
+                    @ 'DOMContentLoaded'
+                    =>
+                        param event
+                        _ document.querySelectorAll
+                            @ 'pre .hljs'
+                            ._ forEach
+                                =>
+                                    param block
+                                    _ hljs.highlightBlock(block)

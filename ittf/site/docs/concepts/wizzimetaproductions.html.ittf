@@ -1,0 +1,10 @@
+html
+    
+    $
+        var art = {
+            section: 'Concepts',
+            title: 'Wizzi Meta Productions'
+        };
+    
+    _layouts/concepts(&art)
+    

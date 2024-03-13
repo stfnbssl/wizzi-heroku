@@ -1,0 +1,29 @@
+$group
+    # root
+        height 100%
+    # content-page
+        height 100%
+        display grid
+        grid-gap 1px
+        grid-template-areas
+            @ content-bar content-bar content-bar
+            @ content-left content-main content-right
+        grid-template-rows 30px 1fr
+        grid-template-columns 700px 350px 1fr
+    # content-page .content-bar
+        grid-area content-bar
+        background-color cyan
+    # content-page .content-left
+        grid-area content-left
+        background-color beige
+    # content-page .content-main
+        grid-area content-main
+        background-color lightgreen
+    # content-page .content-right
+        grid-area content-right
+        background-color pink
+    # content-page .content-left
+        + .content-main
+        + .content-right
+        padding 0.5em
+

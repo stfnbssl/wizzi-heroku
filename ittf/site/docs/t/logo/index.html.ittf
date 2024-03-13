@@ -1,4 +1,4 @@
-$group
+﻿$group
     $params svg_width:float, l:float|0, t:float|0, color|#01579b
     
     $

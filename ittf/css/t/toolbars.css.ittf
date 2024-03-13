@@ -1,0 +1,21 @@
+$group
+    . tlb-button
+        line-height 20px
+        display inline-block
+        padding 0 15px
+        cursor pointer
+        color #000000
+        background #ffffff
+        font-family 'Roboto, Arial, Helvetica Neue, sans-serif'
+        transition all 0.4s ease
+        font-size 12px
+        font-weight 700
+        border 1px solid #ffffff
+    . tlb-button:hover
+        color #ff0000
+    . tlb-button--radius
+        border-radius 3px
+    . tlb-button--green
+        background #57b846
+    . tlb-button--green:hover 
+        background #4dae3c

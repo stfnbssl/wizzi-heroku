@@ -3,4 +3,5 @@ $group
     $ 
         var xname = kind != 'nospace' ? ' ' + name + ' ' : name
     a ${xname}
-        href https://github.com/stfnbssl/wizzi/tree/master/packages/${name}/dist    
+        href https://github.com/stfnbssl/wizzi/tree/main/packages/${name}
+        target _blank

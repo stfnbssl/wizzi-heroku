@@ -1,0 +1,10 @@
+html
+    
+    $
+        var art = {
+            section: 'Concepts',
+            title: 'Wizzi Meta Plugins'
+        };
+    
+    _layouts/concepts(&art)
+    

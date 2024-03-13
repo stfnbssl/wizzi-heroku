@@ -4,11 +4,11 @@ html
     
     $
         var art = {
-            section: 'How to',
+            section: 'Howtos',
             title: 'Get started'
         };
 
-    _layouts/howtos(&art)
+    _layouts/concepts(&art)
 
         $include getstarted/overview
         $include getstarted/background

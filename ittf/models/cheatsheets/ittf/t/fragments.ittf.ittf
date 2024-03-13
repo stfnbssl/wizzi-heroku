@@ -1,0 +1,24 @@
+$group
+
+	element Inline fragments
+		tag $fragment
+		ast 
+		category
+
+		item 
+			title Including and mixing inline fragment
+			render ittf
+			ittf
+				root
+					#
+					# This Feature is not working. TODO.
+					#
+					${'$'}fragment lia
+						$$ ${'$'}params text, href
+						li
+							a ${'$'}{text}
+								href ${'$'}{href}
+
+					ul
+						lia${'('}alfa, #alfa)
+						lia${'('}beta, #beta)

@@ -1,0 +1,62 @@
+html
+
+    $
+        var art = {
+            title: 'Wizzi generation player',
+            section: 'Play'
+        }
+
+    _layouts/play(&art)
+
+        $append head-styles-3
+            css ./main.css.ittf
+        
+        $append body-scripts-3
+            script
+                src ./main.js.ittf
+                type text/babel         
+            script
+                type text/babel
+                module
+                    kind react
+                    
+                    $include js/wz/react/Modal
+                    $include js/wz/react/FlexibleModal
+                    $include js/wz/react/ReactAce
+                    $include common/styled
+                    $include Main
+
+                    const userId = 'stfnbssl'
+                    const labPath = 'ittf/lab/samples'
+
+                    const AppRoot
+                        _ styled.div
+                            => 
+                                param props
+                                (
+                                    { 
+                                        @ width '100%'
+                                        @ height '100%'
+
+                    function App
+                        param props
+
+                        return
+                            < AppRoot
+                                < Main
+
+                    _ require.config
+                        {
+                            @ paths
+                                {
+                                    @ vs '/public/lib/monaco-editor/min/vs'
+                    
+                    log 'rendering'
+                    _ ReactDOM.render
+                        < App
+                        _ document.getElementById
+                            @ 'root'
+
+        # root
+            style height: 100%; width: 100%
+

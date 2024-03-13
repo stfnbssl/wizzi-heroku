@@ -1,0 +1,48 @@
+$group
+
+    $foreach c in scale50
+        . m-${c}
+            margin ${c}px
+        . m-l-${c}
+            margin-left ${c}px
+        . m-r-${c}
+            margin-right ${c}px
+        . m-t-${c}
+            margin-top ${c}px
+        . m-b-${c}
+            margin-bottom ${c}px
+    $foreach c in count
+        . font-${sizes[c]}
+            font-size ${scale[c]}em
+        . m-${sizes[c]}
+            margin ${scale[c]}em
+        . m-t-${sizes[c]}
+            margin-top ${scale[c]}em
+        . m-b-${sizes[c]}
+            margin-bottom ${scale[c]}em
+        . m-l-${sizes[c]}
+            margin-left ${scale[c]}em
+        . m-r-${sizes[c]}
+            margin-right ${scale[c]}em
+        . m-w-${sizes[c]}
+            margin-left ${scale[c]}em
+            margin-right ${scale[c]}em
+        . m-y-${sizes[c]}
+            margin-top ${scale[c]}em
+            margin-bottom ${scale[c]}em
+        . p-${sizes[c]}
+            padding ${scale[c]}em
+        . p-t-${sizes[c]}
+            padding-top ${scale[c]}em
+        . p-b-${sizes[c]}
+            padding-bottom ${scale[c]}em
+        . p-l-${sizes[c]}
+            padding-left ${scale[c]}em
+        . p-r-${sizes[c]}
+            padding-right ${scale[c]}em
+        . p-w-${sizes[c]}
+            padding-left ${scale[c]}em
+            padding-right ${scale[c]}em
+        . p-y-${sizes[c]}
+            padding-top ${scale[c]}em
+            padding-bottom ${scale[c]}em

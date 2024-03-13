@@ -1,12 +1,12 @@
-html
+﻿html
     $global
         var dollar = '$';
     $
         var art = {
-            section: 'How to',   
+            section: 'Howtos',   
             title: 'Wizzi API'
         };
     
-    _layouts/howtos(&art)
+    _layouts/concepts(&art)
     
         $include ./wizziapi/introduction

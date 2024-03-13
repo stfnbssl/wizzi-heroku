@@ -1,4 +1,4 @@
-$group
+﻿$group
     $
         var sect = {
             title: 'Wizzi Glossary'
@@ -31,7 +31,7 @@ $group
                     + An Artifact Generator is a javascript module exported by a Wizzi Plugin
                         \b that takes as input a Wizzi Model Instance and, 
                         \b optionally, a context object, and writes a software artifact.
-                        \b An Artifact Generation is the final action of a Wizzi Production.
+                        \b An Artifact Generation is the main actions of a Wizzi Production.
 
             glo-item( Included ITTF Fragment )
                 span
@@ -72,7 +72,7 @@ $group
                         \b It is a logical line of code that can be broken in many
                         \b phisical lines with line continuations chars. 
                         \b It is a name value pair of text strings, with children ITTF Nodes, and
-                        \b one parent ITTF Node. The ITTF Root Node has no parent nodes.
+                        \b one parent ITTF Node. The ITTF Root Node has no parent node.
             
             glo-item( ITTF Node Name)
                 span
@@ -130,9 +130,9 @@ $group
 
             glo-item( ITTF Template Engine )
                 span 
-                    + The ITTF Template Engine is a Wizzi Kernel Feature that allow
-                        \b an ITTF Document to contain template commands and JsWizzi expressions
-                        \b that can merge ITTF Nodes with context data.
+                    + The ITTF Template Engine is a Wizzi Kernel Feature that manages
+                        \b the template commands and the JsWizzi expressions
+                        \b contained in an ITTF Document.
 
             glo-item( JsWizzi )
                 span 
@@ -143,23 +143,45 @@ $group
             glo-item( JsWizzi Evaluation Context )
                 span 
                     + The JsWizzi Evaluation Context is the evaluation context of JsWizzi during
-                        \b an ITTF Processing. Each ITTF Source Unit has its own evaluation context.
-                        \b There is also a global evaluation context.
+                        \b an ITTF Processing. The properties can be set at various leveles. 1) a global
+                        \b context can be set instantiating a Wizzi Factory Istance; 2) an action context
+                        \b can be set calling the method for the action; 3) Ittf documents can declare
+                        \b global variables (the scope are the fragment of the document) using the \b
+                    high-code( $global )
+                    + command;  3) Ittf documents can declare
+                        \b local variables using the 
+                    high-code( $ )
+                    + command.
 
             glo-item( Language Artifact Generator )
                 span 
                     + A Language Artifact Generator is an Artifact Generator that generates 
-                        \b a generic code file written in a Programming Language (PL).
+                        \b a file written in a Programming Language (PL).
                         \b For example the
                     high-code( js/module )
-                    + ,
+                    + and
                     high-code( ts/module )
-                    + Artifact Generators
+                    + Artifact Generators of the \b
+                    to-plugin( js )
+                    + and
+                    to-plugin( ts )
+                    + plugins.
 
             glo-item( Language Wizzi Schema )
                 span 
                     + A Language Wizzi Schema is a Wizzi Schema that defines an ITTF Document Type
                         \b that an artifact generator can transform in a Programming Language (PL) code file.
+
+            glo-item( Meta generation )
+                span
+                    + A meta generation is a data driven creation of a Wizzi Package. Not only
+                        \b single files but the entire
+                        \b folder and file structure of the package can be templated.
+                        \b The result of a meta generation are Ittf Documents. 
+
+            glo-item( Meta production )
+                span
+                    + A meta generation is a data driven creation of a Wizzi Package. Not only
 
             glo-item( Mix Action )
                 span
@@ -226,7 +248,7 @@ $group
                 span 
                     + Wizzi Actions are the steps of a Wizzi Production.
                     + The main Wizzi Actions are: ITTF Processing, mTree Loading, mTree pre-processing, Wizzi Model Loading,
-                        \b Model Transformation, Artifact Generation.
+                        \b Model Transformation, Artifact Generation, Meta generation.
                     + Wizzi Action are orchestrated by Wizzi Jobs, or programmatically using the Wizzi API.
 
             glo-item( Wizzi API )
@@ -245,7 +267,7 @@ $group
                         \b creating a new Wizzi Package based on a starter, 
                         \b wizzifying an existing artifact or a folder of artifacts.
 
-            glo-item( Wizzi Core Package )
+            glo-item( Wizzi Core Packages )
                 span
                     + The Wizzi Core Packages are the
                     to-wizzi-package( wizzi )
@@ -273,6 +295,22 @@ $group
                     + It is the set of Wizzi features for producing artifacts.
                         \b Wizzi is a software factory!
 
+            glo-item( Wizzi Factory Instance )
+                span
+                    + A Wizzi Factory Instance is the main object of the Wizzi Platform.
+                        \b Declares the methods for executing almost every Wizzi Action.
+                        \b Most Wizzi Actions have a reference to the current Wizzi Factory Instance
+                        \b in their execution context so that they can require services.
+
+            glo-item( Wizzi Hub )
+                span
+                    + Wizzi Hub is a NodeJS / Express / MongoDb / Typescript application
+                        \b running on the the cloud that can be used for \b
+                    high-code( sharing your productions )
+                    + with other developers and \b
+                    high-code( calling generation services )
+                    + over the network.
+            
             glo-item( Wizzi Job )
                 span
                     + The Wizzi Job is the Task Manager of Wizzi. It is implemented as
@@ -298,9 +336,9 @@ $group
                     + A Wizzi Model DOM is an object model implemented in a javascript module
                         \b generate from a Wizzi Schema. The Wizzi Model DOM generation is
                         \b a kernel feature of the \b\
-                    to-plugin( wizzi-core )
-                    + \b plugin and the class structure of the DOM is a Wizzi feature but
-                        \b class methods of schema elements can be user defined in the Wizzi Schema.
+                    to-plugin( wzschema )
+                    + \b plugin and the class structure of the DOM is a Wizzi feature. Class
+                        \b methods instead can be user defined.
 
             glo-item( Wizzi Model Instance )
                 span 
@@ -310,8 +348,8 @@ $group
 
             glo-item( Wizzi Model Loading )
                 span
-                    + The Wizzi Model Loading is the feature implemented by the Wizzi Model Factories 
-                        \b and by the Wizzi Model Doms generated from a Wizzi Schema.
+                    + The Wizzi Model Loading is the action implemented by a Wizzi Model Factory 
+                        \b and a Wizzi Model Doms generated from a Wizzi Schema.
                         \b It creates a Wizzi Model Instance and loads in it an mTree,
                         \b validates the mTree nodes, instantiates the classes of the DOM
                         \b and executes the \b
@@ -324,10 +362,29 @@ $group
             glo-item( Wizzi Package )
                 span
                     + A Wizzi Package is a package that uses Wizzi for generating some, or all, of its artifacts.
-                        \b It must contain a \b
+                        \b A standard Wizzi Package contains a \b
                     high-code( .wizzi )
                     + folder.
             
+            glo-item( Wizzi Platform )
+                span
+                    + The Wizzi Platform is the entire ecosystem of Wizzi. Its main components are the \b
+                    high-code( Wizzi Kernel )
+                    + , the \b
+                    high-code( Wizzi Plugins )
+                    + , the \b
+                    high-code( Wizzi Meta Plugins )
+                    + , the \b
+                    high-code( Wizzi CLI )
+                    + , the \b
+                    high-code( Wizzi API )
+                    + ,
+                    high-code( Wizzi Studio )
+                    + and
+                    high-code( Wizzi Hub )
+                    + .
+
+            $*
             glo-item( Wizzi Package Starter )
                 span
                     + A Wizzi Package Starter is a template of a Wizzi Package,
@@ -341,58 +398,78 @@ $group
                     + , \b 
                     high-code(wizzi-plugin)
                     + .
+            *$
 
             glo-item( Wizzi Plugin )
                 span
-                    + A Wizzi Plugin implements one or more Wizzi Schemas, and their Model Transformers and
-                        \b Artifact Generators, for a specific domain.
-                        \b It must be a NodeJS package, and must export a Wizzi Plugin Interface.
+                    + A Wizzi Plugin implements one or more Wizzi Schemas. For each schema the plugin must implement
+                        \b its Wizzi Model Loader and can implement 
+                        \b Artifact Generators, Model Transformers, a Wizzifier and a documentation Cheatsheet.
+                        \b A Wizzi plugin must be a NodeJS package, and must export a Wizzi Plugin Interface.
 
             glo-item( Wizzi Plugin Interface)
                 span
                     + A Wizzi Plugin Interface is the interface that a Wizzi Pugin must export
                         \b in its index file, so that the Wizzi Plugin Manager can retrieve
-                        \b Wizzi Model Loaders, Model Transformers and Artifact Generators implemnted
-                        \b by the plugin.
+                        \b its Loaders, transformers, generators, wizzifiers
+                        \b and cheatsheets.
 
             glo-item( Wizzi Production )
                 span
-                    + A Wizzi Production is a series of Wizzi Actions 
+                    + A Wizzi Production is a set of Wizzi Actions 
                         \b for generating one or more software artifacts.
 
             glo-item( Wizzi Schema )
                 span 
-                    + Wizzi Schemas are the core modeling tool of Wizzi.
-                        \b In a Wizzi Schema you can define an object model of 
-                        \b named and typed elements and attributes
+                    + A Wizzi Schemas is the core modeling tool of Wizzi.
+                        \b In it you define an object model of 
+                        \b named and typed elements 
                         \b that map the ITTF Nodes of an ITTF Document.
-                        \b From a Wizzi Schema is generated a Wizzi Model DOM, a javascript
-                        \b module that implements the schema object model. Wizzi Model Instances can
-                        \b validate and load mTrees data.
-                        \b Typed elements become javascript classes and in a Wizzi Schema
-                        \b you can write methods of the element classes of a Wizzi Model DOM,
-                        \b for retrieving and manipulating the loaded data.
+                        \b A production transforms a Wizzi Schema in a Wizzi Model DOM, a javascript
+                        \b class that implements the schema object model. Wizzi Model Instances can
+                        \b load and validate mTrees data.
+                        \b Typed elements become classes where you can write methods 
+                        \b for filtering and manipulating the loaded data.
 
             glo-item( Wizzi Store System )
                 span 
                     + A Wizzi Store System implements a Virtual File System
-                        \b for retrieving ITTF Documents. Currently there are three 
-                        \b Wizzi Store System: filesystem, mongodb and json.
+                        \b for retrieving ITTF Documents. Currently the 
+                        \b Wizzi Store Systems are: \b
+                    high-code( filesystem )
+                    + and \b 
+                    high-code( json )
+                    + . The \b
+                    high-code( json )
+                    + Virtual file system is a powerful tool for executing productions in the cloud or
+                        \b behind your own http endpoints. 
 
+            glo-item( Wizzi Studio )
+                span
+                    + Wizzi Studio is a NodeJS / Express / MongoDb / Typescript application
+                        \b for managing Wizzi Productions that must be run locally 
+                        \b accessing the file system of your desktop.
+            
             glo-item( wizzifier )
                 span
-                    + A wizzifier is a tool for converting an artifact to its ITTF Document source.
-                        \b It is available for some common code languages and data structures ( \b
-                    high-code( js )
+                    + A plugin may implement a wizzifier for its schema. A wizzifier converts an artifact to its ITTF Document source.
+                        \b These core plugins have a wizzifier: \b
+                    to-plugin( css )
                     + , \b
-                    high-code( html )
+                    to-plugin( html )
                     + , \b
-                    high-code( css )
+                    to-plugin( js )
                     + , \b
-                    high-code( json )
+                    to-plugin( json )
                     + , \b
-                    high-code( xml )
-                    + \b and others).
+                    to-plugin( ts )
+                    + , \b
+                    to-plugin( svg )
+                    + , \b
+                    to-plugin( yaml )
+                    + and \b
+                    to-plugin( xml )
+                    + .
 
             glo-item( wizzify )
                 span

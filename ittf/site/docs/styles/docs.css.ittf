@@ -1,6 +1,6 @@
-css
+﻿css
     
-    $include models/docs/wzctx
+    $include models/docs/site.wzctx
     
     $include css/reset
 
@@ -253,6 +253,10 @@ css
     . cheatsheet-item-title
         padding 5px 10px 0px 10px
         font-weight 700
+
+    . scrollbar-thin
+        @ scrollbar-color #6D6D6D #4D4D4D
+        @ scrollbar-width thin          
     
     $include highlight
 

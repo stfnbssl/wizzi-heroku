@@ -2,7 +2,10 @@ html
     $
         var opt = {
         }
-    layouts/site( &opt )
+
+    $include models/docs/site.wzctx
+
+    html/layouts/site( &opt )
         $if false
             pre
                 code
@@ -10,17 +13,26 @@ html
                     + ${JSON.stringify(siteCtx, null, 2)}
         . m-l-200 m-r-200
             . flex-column justify-content-center
-                . text-align-center m-t-100 font-w-xxl
-                    style font-size: 72px
+                . text-align-center m-t-50 font-w-xxl
+                    style font-size: 46px
                     + ${siteCtx.name}
-                . text-align-center m-t-100
-                    style font-size: 52px
+                . text-align-center m-t-50
+                    style font-size: 38px
                     + ${siteCtx.title}
                 . text-align-center
-                    style font-size: 52px
+                    style font-size: 38px
                     + ${siteCtx.title2}
-                . text-align-center m-t-100
+                . text-align-center
+                    style font-size: 38px
+                    + ${siteCtx.title3}
+                . text-align-center m-t-50
                     style font-size: 32px
                     $foreach item in siteCtx.subtitles
                         . m-t-s
                             + ${item}
+                . text-align-center m-t-50
+                    style font-size: 32px
+                    $foreach item in siteCtx.subtitles2
+                        . m-t-s
+                            + ${item}
+

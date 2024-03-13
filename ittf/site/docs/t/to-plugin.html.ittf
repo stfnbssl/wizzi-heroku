@@ -1,6 +1,15 @@
 $group
     $params name, kind|@@null
     $ 
-        var xname = kind != 'nospace' ? ' ' + name + ' ' : name
-    a ${xname}
-        href https://github.com/stfnbssl/wizzi/tree/master/packages/${name}/dist    
+        // var xname = kind != 'nospace' ? ' ' + name + ' ' : name
+
+    $if kind != 'nospace'
+        span \b \b
+    code
+        class highlight-code
+        a ${name}
+            href https://github.com/stfnbssl/wizzi.plugins/tree/main/packages/wizzi.plugin.${name}
+            target _blank
+    $if kind != 'nospace'
+        span \b \b
+

@@ -1,4 +1,4 @@
-concept Path resolution of composed documents
+﻿concept Path resolution of composed documents
 
 	summary
 		p The path resolution algoritm for retrieving mixed and included ittf fragments starts from the 

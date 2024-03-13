@@ -1,0 +1,14 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi meta productions'
+        };
+
+    section(&sect)
+
+		p Wizzi meta productions are productions of Wizzi packages that can process
+            \b both document content and folder structure.
+        p Are a powerful tool for creating data driven package starters or tailoring apps
+            \b based on user requirements.
+        p Meta productions are implememted by meta plugins.
+            

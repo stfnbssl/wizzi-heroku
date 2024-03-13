@@ -1,116 +1,69 @@
 html
+
+    $$ TODO For ittf(s) documents, user SHOULD BE set in the global Artifact Generation Context
+
     $
         var opt = {
         }
-        for (var i = 0; i < wzCtx.webapis.length; i++) {
-            var api = wzCtx.webapis[i];
-            api._id = api.method + _.replace(_.replace(api.url, ':', '_'), '/', '_');
-        }
-    layouts/site( &opt )
+		for (var i = 0; i < wzCtx.apis.length; i++) {
+			var api = wzCtx.apis[i];
+			api._id = api.method + _.replace(_.replace(api.url, ':', '_'), '/', '_');
+		}
+
+    html/layouts/site( &opt )
+
         $append head-styles-2
-            style
-                < body
-                    font-size 15px
-                < li
-                    list-style none
-                < a
-                    text-decoration none
-                . d-container
-                    display flex
-                . d-left-aside
-                    position fixed
-                    top 100px
-                    bottom 0
-                    height 100%
-                    left 0
-                    min-width 20rem
-                    overflow auto
-                    padding-right 1rem
-                    < ul
-                        < li
-                            padding 2px
-                            < a
-                                color #000
-                                & :hover
-                                    color #fff
-                                    background-color #555
-                . d-main-content
-                    position fixed
-                    top 100px
-                    bottom 0
-                    height 100%
-                    left 20rem
-                    padding-left 1rem
-                    overflow auto
-                . d-right-aside
-                    position fixed
-                    top 100px
-                    bottom 0
-                    height 100%
-                    right 0
-                    max-width 40rem
-                    overflow auto
-                . d-api-prop
-                    display flex
-                    padding 0.5rem 1rem
-                    font-size 1.2rem
-                . d-api-prop-name
-                    min-width 12rem
-                    font-style italic
-                . d-api-prop-value
-                    font-weight bold
-                . d-params-panel
-                    margin-top 0.2rem
-                    border 1px solid #ddd
-                . d-param
-                    display flex
-                    margin 0.2rem 0
-                    width 100%
-                . d-param-label
-                    min-width 10rem
-                    padding 0.2rem
-                    background-color #ddd
-                . d-param-input
-                    padding 0.2rem
-                    width 100%
-                    < input
-                        padding 0.2rem
-                        width 32rem
-                        font-weight 700
+            css ./styles.css.ittf
+
         . d-container
             . d-left-aside
                 ul
-                    $foreach api in wzCtx.webapis
+                    $foreach api in wzCtx.apis
                         li
                             a ${api.title}
                                 href #api_id_${api.url}
             . d-main-content
-                $foreach api in wzCtx.webapis
+                $foreach api in wzCtx.apis
                     . d-api
                         id api_id_${api.url}
                         h3 ${api.title}
                         d-prop( method, ${api.method}
                         d-prop( url, ${api.url}
+
                         $if api.parameters.length > 0
                             h4 Parameters
                             . d-params-panel
                                 $foreach p in api.parameters
-                                    d-control( ${p.type}, param_${ api._id + '_' + p.name }, ${p.label}, ${_.replace(p.demoValue, ',', '$')}
+                                    d-control( ${p.type},
+                                        \b param_${ api._id + '_' + p.name },
+                                        \b ${p.label},
+                                        \b ${_.replace(p.demoValue, ',', '$')}
+
                         . d-buttons
                             button Exec
                                 id btn_${ api._id }
                     hr
             . d-right-aside
                 . container
+                    textarea 
+                            id output
+                            style background-color: #969696
+                            cols 150
+                            rows 40
+                            wrap soft 
+                            readonly                 
+                    $*
                     pre
                         code
                             id output
+                    *$
+
         $append body-scripts
-            js /public/wz.js
+            js ./main.js.ittf
             script
                 module
                     var btn
-                    $foreach api in wzCtx.webapis
+                    $foreach api in wzCtx.apis
                         set btn = document.querySelector("#" + 'btn_${ api._id }')
                         _ btn.addEventListener
                             @ 'click'
@@ -144,18 +97,20 @@ html
                                     _ exec_with_payload
                                         @ '${api.method}'
                                         @ url
-                                        @ payload
+                                        @ payload 
                                 $else
                                     _ alert('${api.method} ${api.url}')
+
                     function get_value
                         param id
                         var el = document.querySelector("#" + id)
                         return el.value
+
                     function exec_get
                         param url
                         param payload
                         log 'url', url
-                        var output = document.querySelector("#output")
+                        var outputEl = document.querySelector("#output")
                         _ fetch
                             @ url
                             ._ then
@@ -167,22 +122,28 @@ html
                             ._ then
                                 =>
                                     param json
-                                    set output.className = 'container'
-                                    set output.innerHTML = wz.escapeHtml(JSON.stringify(json, null, 2))
+                                    set outputEl.className = 'container'
+                                    $$ set outputEl.value = wz.escapeHtml(JSON.stringify(json, null, 2))
+                                    set outputEl.value = JSON.stringify(json, null, 2)
                                     log 'exec_.response.json', json
+                                    $*
+                                    if getApiId === "/api/studio/document" || getApiId === "/api/studio/fragment"
+                                        set document.getElementById('content').value = json.data.data
+                                    *$
                             ._ catch
-                                function
+                                function 
                                     param err
                                     log 'exec_.response.err', err
-                                    set output.className = 'container text-danger'
-                                    set output.innerHTML = err && err.constructor && err.constructor.name === "Object" ? JSON.stringify(err, null, 2) : err
+                                    set outputEl.className = 'container text-danger'
+                                    set outputEl.value = err && err.constructor && err.constructor.name === "Object" ? JSON.stringify(err, null, 2) : err
+
                     function exec_with_payload
                         param method
                         param url
-                        param payload
+                        param payload 
                         log 'url', url
-                        log 'payload ', payload
-                        var output = document.querySelector("#output")
+                        log 'payload ', payload 
+                        var outputEl = document.querySelector("#output")
                         _ fetch
                             @ url
                             {
@@ -199,10 +160,12 @@ html
                                 =>
                                     param json
                                     log 'exec_with_payload.response.json', json
-                                    set output.className = 'container'
-                                    set output.innerHTML = wz.escapeHtml(JSON.stringify(json, null, 2))
+                                    set outputEl.className = 'container'
+                                    $$ set outputEl.value = wz.escapeHtml(JSON.stringify(json, null, 2))
+                                    set outputEl.value = JSON.stringify(json, null, 2)
                             ._ catch
-                                function
+                                function 
                                     param err
-                                    set output.className = 'container text-danger'
-                                    set output.innerHTML = err.message || JSON.stringify({ err: err.error }, null, 2)
+                                    log 'exec_with_payload.response.err', err
+                                    set outputEl.className = 'container text-danger'
+                                    set outputEl.value = err.message || JSON.stringify({ err: err.error }, null, 2)

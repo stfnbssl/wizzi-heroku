@@ -11,12 +11,7 @@ html
 
     layouts/site( &opt )
     
-        . flex-row space-between m-t-xxl width-full
-            id stickyNavbar
-            . flex-row justify-center m-0-auto
-                a( TODOS, /ittf/site/project/todo.html.ittf, ${ca}
-                a( Issues, /ittf/site/project/issues.html.ittf, ${ca}
-                a( Status, /ittf/site/project/status.html.ittf, ${ca}
+        $include ./head
 
         . container-70 
             . flex-column space-between $$ bg-color-header color-header

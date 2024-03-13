@@ -1,45 +1,44 @@
 html
-    $include models/docs/wzctx
+    $include models/docs/site.wzctx
     $
         var opt = {
             section: 'Docs',
-            title: 'Cheat sheets',
+            title: 'Cheatsheets',
             useHighlight: true,
             stickyNav: 'stickyNavbar',
             stickyNavOffset: 50,
             stickyNavLogo: 'logo',
         }
-        var _schemas = ['ittf', 'js', 'jsx', 'ts', 'html', 'css', 'scss', 'svg', 'graphql', 'json', 'xml', 'text'];
-    layouts/site( &opt )
+        var _schemas = [
+            'css',
+            'html',
+            'ittf',
+            'js',
+            'json',
+            'jswizzi',
+            'jsx',
+            'md',
+            'svg',
+            'text', 
+            'ts',
+            'vtt',
+            'wfschema', 
+            'wfjob',
+            'xml', 
+            'yaml', 
+        ];
+    html/layouts/docs( &opt )
         $if false
             pre
                 code
                     + ${JSON.stringify(cs, null, 2)}
         $append head-styles-2
-            s( /ittf/site/docs/styles/docs.css.ittf )
-            s( /ittf/css/cheatsheet.css.ittf )
-        div
-            id main-container
-            . bg-color-main-content
-                id stickyNavbar
-                div
-                    id header
-                    nav
-                        id top-nav
-                        ul
-                            $foreach item in wzCtx.Section.items
-                                li
-                                    $if item.title === 'Cheatsheets'
-                                        . current
-                                            + ${item.title}
-                                    $else
-                                        a ${item.title}
-                                            href ${item.url}
-        . container-70
-            . grid
+            html/s( /ittf/site/docs/styles/docs.css.ittf )
+            html/s( /ittf/css/cheatsheet.css.ittf )
+        . container-90 height-100
+            . grid height-100
                 style grid-template-columns: 1fr 8fr 1fr;
-                . mc-sidebar-left
-                    style height: 80vh;
+                . mc-sidebar-left scrollbar-thin height-100 overflow-auto
                     ul
                         $foreach e in cs.elements
                             li
@@ -50,8 +49,7 @@ html
                                         li
                                             a ${item.title}
                                                 href #${item.title}
-                . mc-content
-                    style height: 80vh;
+                . mc-content scrollbar-thin height-100 overflow-auto
                     $foreach e in cs.elements
                         $foreach item in e.items
                             h3 ${item.title}
@@ -78,20 +76,13 @@ html
                                         code
                                             class ${opt.language}
                                             + ${item.generated}
-                nav
-                    div
-                        id right-nav
-                        . aside-right
-                            style position: fixed;
-                            div
-                                style padding-top: 40px;
-                            ul
-                                $foreach item in _schemas
-                                    li
-                                        $if item == cs.schema
-                                            class current
-                                            . current
-                                                + ${item}
-                                        $else
-                                            a ${item}
-                                                href /docs/cheatsheet/${item}
+                . scrollbar-thin height-100 overflow-auto p-x
+                    $foreach item in _schemas
+                        div
+                            $if item == cs.schema
+                                class current
+                                . current
+                                    + ${item}
+                            $else
+                                a ${item}
+                                    href /wizzi/docs/cheatsheet/${item}

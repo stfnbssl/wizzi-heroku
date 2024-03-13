@@ -1,18 +1,50 @@
 $group
     $params &art
 
-    $include models/docs/wzctx
+    $include models/docs/site.wzctx
 
     $
         var opt = {
             section: 'Docs',
+            title: art.section,
             useHighlight: true,
             stickyNav: 'stickyNavbar',
             stickyNavOffset: 50,
             stickyNavLogo: 'logo',
         }
-    
-    layouts/site( &opt )
+        // var sectionKey = art.section == "How to" ? "HowTos" : art.section;
+        var sectionItems = wzCtx[art.section].items
+
+    style
+        css
+            . current
+                color yellow
+
+
+    html/layouts/docs( &opt )
+        $append head-styles-2
+            css /ittf/site/docs/styles/docs.css.ittf
+        . flex-row
+            $$ id main-container
+            style height:100%; width:80%; margin: 0 auto; padding-top: 40px;
+            . flex-column scrollbar-thin
+                $$ id middle-container
+                style width:70%; height:100%; overflow: auto;
+                $hook
+            . flex-column
+                style width:30%; padding: 40px;
+                $foreach item in sectionItems
+                    div
+                        $if item.title === art.title
+                            class current
+                            . current
+                                + ${item.title}
+                        $else
+                            a ${item.title}
+                                href ${item.url}        
+
+    $*
+    html/layouts/site( &opt )
 
         $append head-styles-2
             css /ittf/site/docs/styles/docs.css.ittf
@@ -57,3 +89,4 @@ $group
                                         $else
                                             a ${item.title}
                                                 href ${item.url}
+    *$                                                

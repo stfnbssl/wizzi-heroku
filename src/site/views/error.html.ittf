@@ -2,7 +2,7 @@ html
     $
         var opt = {
         }
-    layouts/site( &opt )
+    html/layouts/site( &opt )
         . w3-container
             h1 Sorry, We got an error
             p ${message}

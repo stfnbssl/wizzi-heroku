@@ -1,0 +1,10 @@
+$group
+    
+    $
+        var sides = ['', 'top', 'right', 'bottom', 'left'];
+        var pixels = ['1','2'];
+
+    $foreach s in sides
+        $foreach p in pixels
+            . border-${ s.length > 0 ? s + '-' + p : p }px 
+                @ border${ s.length > 0 ? '-' + s : ''} solid ${p}px #434343

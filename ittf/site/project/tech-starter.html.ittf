@@ -1,0 +1,49 @@
+html
+
+    $
+        var opt = {
+            section: 'Project',
+            stickyNav: 'stickyNavbar',
+            stickyNavOffset: 50,
+        }
+        // var ca = 'm-s color-header font-x font-w-s';
+        var ca = 'm-s font-x font-w-s';
+
+    layouts/site( &opt )
+    
+        $include ./head
+
+        . container-70 
+            . flex-column space-between $$ bg-color-header color-header
+                . m-l-150 m-r-150 font-x font-w-s
+                    h1 Tech starter
+                    h2 Installations
+                    h4 Wizzi CLI
+                    p npm i @wizzi/cli --global
+                    p 
+                    h2 Wizzi packages
+                    h4 wizzi
+                    p The package wizzi is located in .\stfnbssl\wizzi\packages\wizzi
+                    h4 wizzi-mtree
+                    p The package wizzi-mtree is located in .\stfnbssl\wizzi\packages\wizzi-mtree
+                    h4 wizzi-repo
+                    p The package wizzi-repo is located in .\stfnbssl\wizzi\packages\wizzi-repo
+                    h4 wizzi-utils
+                    p The package wizzi-utils is located in .\stfnbssl\wizzi\packages\wizzi-utils
+                    h4 wizzi-helpers
+                    p The package wizzi-helpers is located in .\stfnbssl\wizzi\packages\wizzi-helpers
+                    h4 wizzi.plugin.&lt;schema&gt;
+                    p Wizzi plugin packages are located in .\stfnbssl\wizzi.plugins\packages\wizzi.plugin.&lt;schema&gt;
+                    h4 wizzi.meta.&lt;domain&gt;
+                    p Wizzi metas packages are located in .\stfnbssl\wizzi.metas\packages\wizzi.meta.&lt;domain&gt;
+                    h4 wizzi.cli
+                    p The package wizzi.cli is located in .\stfnbssl\wizzi.cli\packages\wizzi.cli
+                    p wizzi.cli is the wizzi Command Library Interface.
+                        \b You should start here to learn how to create and execute wizzi productions.
+                    h4 wizzi.dev
+                    p The package wizzi.dev is located in .\stfnbssl\wizzi.dev\packages\wizzi.dev
+                    p wizzi.dev contains meta generations in folders: metas, plugins, packages
+                    h4 wizzi.studio
+                    p The package wizzi.studio is located in .\stfnbssl\wizzi.apps\packages\wizzi.studio
+                    p wizzi.studio is the local express application for creating end executing wizzi productions.
+

@@ -1,7 +1,7 @@
 $group
     $params &art
 
-    $include models/docs/wzctx
+    $include models/docs/site.wzctx
 
     $
         var opt = {
@@ -15,7 +15,7 @@ $group
             sectionTitle: 'Geeky'
         };
 
-    layouts/site( &opt )
+    html/layouts/site( &opt )
 
         $append head-styles-2
             css /ittf/site/docs/styles/docs.css.ittf

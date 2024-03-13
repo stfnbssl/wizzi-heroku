@@ -1,6 +1,5 @@
 meta
 	$
-		var d = '$';
 		var cont = '\\';
 		var contb = '\\b';
 		var contn = '\\n';
@@ -14,6 +13,7 @@ meta
 	$include ecma_builtins
 	$include jswizzi_builtins
 	$include magics
+	$include fragments
 
 
 

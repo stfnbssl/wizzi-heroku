@@ -1,4 +1,4 @@
-html
+﻿html
     $global
         var dollar = '$';
     
@@ -8,6 +8,6 @@ html
             title: 'Wizzi Schemas'
         };
     
-    _layouts/geeky(&art)
+    _layouts/concepts(&art)
 
         $include ./wizzischemas/introduction

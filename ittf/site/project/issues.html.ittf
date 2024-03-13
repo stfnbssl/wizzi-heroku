@@ -11,11 +11,7 @@ html
 
     layouts/site( &opt )
     
-        . flex-row space-between m-t-xxl width-full
-            id stickyNavbar
-            . flex-row justify-center m-0-auto
-                a( TODOS, /ittf/site/project/todo.html.ittf, ${ca}
-                a( Issues, /ittf/site/project/issues.html.ittf, ${ca}
+        $include ./head
 
         . container-70 
             . flex-column space-between $$ bg-color-header color-header
@@ -52,13 +48,12 @@ html
                     p Make a decent splitter work between edit content and result pane.
                     p Result pane icons should be inside the pane. And should be decent.
                     p The 'saved' message should be: 'Not modified', or 'Not yet saved' or 'Saved x seconds|minutes|hours ago'.
-                    p SavedPacki and PackiOptions are the same
                     p pageforms: debounce checkname 1 second
                     p pageforms: reset checkname error color when valid
                     p checkname maybe unnecessary in apiv1* controllers
 
                     p
-                        .$
+                        $.
                             C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen wfschema.model.main err [wzError [JsWizziError]: JsWizziRunner Error
                             message: Missing runner for type: ThisExpression
                             node statement: escodegen failed: Unknown node type: undefined
@@ -66,7 +61,7 @@ html
                             parent node statement:
                             parent node inspected: 'runner'
                             currentModel_uri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\t\model\element.js.ittf
-                            currentModel_mixerUri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\wfschema-model.js.ittf (error calling ip, on statement: $.ip('f4', 'this.wzLoadToChildColl(child, _md.${element.acceptAnyTagId}, this.${this.element.acceptAnyTagCollectionId})', 'string', 1128, false), currentModel_uri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\t\model\element.js.ittf, currentModel_mixerUri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\wfschema-model.js.ittf)] {
+                            currentModel_mixerUri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\wfschema-model.js.ittf (error calling ip, on statement: $.ip('f4', 'this.wzLoadToChildColl(child, _md.${'$'}{element.acceptAnyTagId}, this.${'$'}{this.element.acceptAnyTagCollectionId})', 'string', 1128, false), currentModel_uri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\t\model\element.js.ittf, currentModel_mixerUri: c:\my\wizzi\stfnbssl\wizzi\packages\wizzi-core\lib\artifacts\wfschema\model\gen\ittf\wfschema-model.js.ittf)] {
                             inner: null,
                             shortmessage: 'JsWizziRunner Error\n' +
                                 'message: Missing runner for type: ThisExpression\n' +

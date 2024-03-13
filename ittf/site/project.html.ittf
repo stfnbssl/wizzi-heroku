@@ -13,6 +13,8 @@ html
                 { title: 'Day to day topics', items: [
                     { title: 'TODO', href: '/ittf/site/project/todo.html.ittf' },
                     { title: 'Issues', href: '/ittf/site/project/issues.html.ittf' },
+                    { title: 'Status', href: '/ittf/site/project/status.html.ittf' },
+                    { title: 'Tech starter', href: '/ittf/site/project/tech-starter.html.ittf' },
                 ]}, 
             ]
         }

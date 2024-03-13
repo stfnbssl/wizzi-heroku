@@ -1,7 +1,6 @@
-$group
-    $params name, value
-    . d-api-prop
-        . d-api-prop-name
-            + ${name}
-        . d-api-prop-value
-            + ${value}
+﻿. d-api-prop
+	$params name, value
+	. d-api-prop-name
+		+ ${name}
+	. d-api-prop-value
+		+ ${value}

@@ -1,4 +1,5 @@
 meta
 	schema js
+	language javascript
 	$include basic
     $include events

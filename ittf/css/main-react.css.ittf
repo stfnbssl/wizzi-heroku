@@ -1,0 +1,51 @@
+css
+    $
+        var count = [0,1,2,3,4,5];
+        var sizes = ['s','m','l','x','xl','xxl'];
+        var scale = ['0.6','0.8','1','1.3','1.6','2'];
+        var scaleRad = ['3','6','12','18','30','48'];
+        var scaleWidth = [15,25,35,65,75,85];
+        var scale50 = [50,100,150,200];
+
+    $include ./wz-react/root
+    < body
+        margin 0
+        min-height 100vh
+        display grid
+        grid-gap 1px
+        grid-template-areas
+            @ header
+            @ main
+            @ footer
+        grid-template-rows 56.766px 1fr 50px
+        grid-template-columns 1fr      
+    < header
+        grid-area header
+        background-color #eeffff
+    < main
+        grid-area main
+        background-color #ffeeff
+    < footer
+        grid-area footer
+        background-color #ffffee
+    $include ./wz-react/colors
+    $include ./wz-react/fonts
+    $include ./wz-react/layout
+    $include ./margin-padding
+    $include ./borders
+    $include ./layout
+    $include ./links
+    $include ./toolbars
+    . header-m-item
+        margin ${scale[0]}em
+        padding ${scale[0]}em
+    . header-m-item-inverse
+        margin ${scale[0]}em
+        padding ${scale[0]}em
+
+    $*
+        var ca = 'm-s p-s color-header font-l font-w-xxl';
+        var ca_inverse = 'm-s p-s color-header-inverse bg-color-header-inverse font-l font-w-xxl';
+    *$
+
+    

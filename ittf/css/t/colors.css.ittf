@@ -17,7 +17,7 @@ $group
     . bg-color-header
         background-color #434343
     . color-header-inverse
-        color #ffffff
+        color #ff4790
     . bg-color-header-inverse
         background-color #737373
     . color-main
@@ -48,3 +48,7 @@ $group
         color var(--color-warning)
     . bg-warning
         background-color var(--color-warning)
+    . bg-filter
+        background-color #eeeeff
+    . bg-list
+        background-color #eeffee

@@ -7,29 +7,30 @@ html
         var ca = 'm-s color-header font-x font-w-s';
 
     layouts/site( &opt )
+        $append head-styles
+            style
+                css
+                    $include css/cards-2.css
     
         . container-70 m-100
             . flex-column space-between $$ bg-color-header color-header
     
             . flex-column
-                ul
-                    $foreach group in siteCtx.Lab.groups
-                        li
-                            class mt-8
-                            h5
-                                class px-3 mb-3 lg:mb-3 uppercase tracking-wide font-semibold text-sm lg:text-xs text-gray-900
-                                + ${group.title}
-                            ul
-                                $foreach item in group.items
-                                    li
-                                        a
-                                            class px-3 py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500
-                                            href ${item.href}
-                                            span
-                                                class rounded-md absolute inset-0 bg-cyan-50 opacity-0
-                                            span
-                                                class relative
-                                                + ${item.title}   
+                $foreach group in siteCtx.Lab.groups
+                    h2
+                        class px-3 mb-3 uppercase tracking-wide text-gray-900
+                        + ${group.title}
+                    hr
+                    div
+                        class flex-row flex-wrap
+                        $foreach item in group.items
+                            . row
+                                . card
+                                    h4 ${item.title}
+                                    a
+                                        href ${item.href}
+                                        span ${item.abstract}
+
             . flex-colum
                 h3 common urls
                 p Packi Editor -> [host]/~~/[a|p|m|t]/[username]/[production_name]

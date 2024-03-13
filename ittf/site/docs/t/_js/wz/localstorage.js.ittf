@@ -1,4 +1,4 @@
-class LocalStorage
+﻿class LocalStorage
 
 	ctor
 		param keyprefix

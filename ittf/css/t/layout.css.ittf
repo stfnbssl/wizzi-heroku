@@ -2,5 +2,37 @@ $group
     . container-70
         width 70%
         margin 0 auto
+    . container-80
+        width 80%
+        margin 0 auto
+    . container-90
+        width 90%
+        margin 0 auto
+    . flex-row
+        display flex
+        flex-direction row
+    . flex-column
+        display flex
+        flex-direction column
+    . justify-content-start
+        justify-content start
+    . justify-content-center
+        justify-content center
+    . justify-content-space-between
+        justify-content space-between
+    . space-between
+        justify-content space-between
+    . align-items-start
+        align-items start
+    . align-items-center
+        align-items center
     . grid
         display grid
+    . width-100
+        width 100%
+    . width-50
+        width 50%
+    . height-100
+        height 100%
+    . height-50
+        height 50%

@@ -1,12 +1,16 @@
 {
     name "Wizzi"
     version "0.0.1"
-    title "The artifact meta generation service."
-    title2 "With Wizzi you set up model driven productions of code, packages, documents and data files."
+    title "The artifact meta generation platform."
+    title2 "Set up data driven productions of code, configurations, packages, documents."
+    title3 "Set up data driven productions of productions."
     [ subtitles
         "A single machinery, many productions."
-        "Language agnostic."
-        "All productions are managed by plugins."
+        "Language and technology agnostic."
+        "All productions and meta productions are managed by plugins."
+    [ subtitles2
+        "Become a meta analist and meta programmer."
+        "Learn how to teach machines to trasform data into software and documents."
     { author
         name "Stefano Bassoli"
         email "stfn.bssl@gmail.com"
@@ -24,3 +28,4 @@
         {
             title "Webapi"
             href "/ittf/site/webapi/index.html.ittf"
+

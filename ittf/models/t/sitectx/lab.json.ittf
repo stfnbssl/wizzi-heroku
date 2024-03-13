@@ -1,77 +1,75 @@
 $group
-
     { Lab
         [ groups
             {
                 title "Getting started"
                 [ items
-                    { 
+                    {
                         title "Playground"
                         href "/ittf/playground/index.html.ittf"
             {
                 title "Project"
                 [ items
                     {
-                        title "TODO" 
+                        title "TODO"
                         href "/ittf/site/project/todo.html.ittf"
-                    { 
-                        title "Issues" 
+                    {
+                        title "Issues"
                         href "/ittf/site/project/issues.html.ittf"
             {
                 title "Dev"
                 [ items
                     {
-                        title "Styles" 
+                        title "Styles"
                         href "/ittf/styles"
                     {
                         title "Web API"
                         href "/ittf/webapi/index.html.ittf"
-
             {
-                { title "Work in progress" 
+                { title "Work in progress"
                 [ items
-                    { 
-                        title "Demo - Target technologies" 
+                    {
+                        title "Demo - Target technologies"
                         href "/ittf/demo/ttech"
-                    { 
-                        title "Demo - Apps" 
+                    {
+                        title "Demo - Apps"
                         href "/ittf/demo/apps"
                     {
-                        title "Lab" 
+                        title "Lab"
                         href "/ittf/lab"
-                    { 
-                        title "Packi" 
+                    {
+                        title "Packi"
                         href "/public/packi/index.html"
-                    { 
-                        title "Productions" 
+                    {
+                        title "Productions"
                         href "/ittf/test/productions.html.ittf"
-            { 
-                title "Packi" 
+            {
+                title "Packi"
                 [ items
                     {
-                        title "Html packi starter" 
+                        title "Html packi starter"
                         href "/~-/html.starter"
-                    { 
-                        title "Packi editor" 
+                    {
+                        title "Packi editor"
                         href "/~~/stfnbssl"
-                    { 
-                        title "Property editor" 
+                    {
+                        title "Property editor"
                         href "/package/props"
-            { 
-                title "Demos" 
+            {
+                title "Demos"
                 [ items
-                    { 
-                        title "Pure html" 
+                    {
+                        title "Pure html"
                         href "/static/pure.html"
-                    { 
-                        title "Wizzi static pre-generated" 
+                    {
+                        title "Wizzi static pre-generated"
                         href "/static/wizzi.html"
-                    { 
-                        title "Wizzi generated on the fly" 
+                    {
+                        title "Wizzi generated on the fly"
                         href "/ittf/demo.wizzi.html.ittf"
-                    { 
-                        title "Webpack hello" 
+                    {
+                        title "Webpack hello"
                         href "/ittf/demo.hello.webpack.html.ittf"
-                    { 
-                        title "Monaco editor" 
-                        href "/ittf/demo/ttech"   
+                    {
+                        title "Monaco editor"
+                        href "/ittf/demo/ttech"

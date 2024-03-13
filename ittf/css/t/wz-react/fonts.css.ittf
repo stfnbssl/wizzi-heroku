@@ -1,0 +1,8 @@
+$group
+
+    . font-w-s
+        font-weight 300
+    . font-w-x
+        font-weight 500
+    . font-w-xxl
+        font-weight 700
