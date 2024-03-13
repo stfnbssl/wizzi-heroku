@@ -11,18 +11,19 @@ const myname = 'features/wizzi/factory';
 function getWzCtxFactoryPlugins() {
     return {
         items: [
-            '[object Object]',
-            '[object Object]',
-            '[object Object]',
-            '[object Object]',
-            '[object Object]',
-            '[object Object]',
-            '[object Object]',
-            '[object Object]',
-            '[object Object]',
-            '[object Object]',
-            '[object Object]'
-        ]
+            '@wizzi/plugin.css',
+            '@wizzi/plugin.html',
+            '@wizzi/plugin.ittf',
+            '@wizzi/plugin.js',
+            '@wizzi/plugin.json',
+            '@wizzi/plugin.md',
+            '@wizzi/plugin.svg',
+            '@wizzi/plugin.text',
+            '@wizzi/plugin.ts',
+            '@wizzi/plugin.xml',
+            '@wizzi/plugin.yaml'
+        ],
+        pluginsBaseFolder: ''
     };
 }
 function getWzCtxMetaPlugins() {
