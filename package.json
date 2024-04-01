@@ -12,8 +12,8 @@
     },
     "dependencies": {
         "@babel/preset-env": "^7.22.5",
-        "@wizzi/factory": "^0.8.25",
-        "@wizzi/utils": "^0.8.16",
+        "@wizzi/factory": "^0.8.26",
+        "@wizzi/utils": "^0.8.17",
         "@wizzi/plugin.css": "0.8.2",
         "@wizzi/plugin.html": "0.8.2",
         "@wizzi/plugin.ittf": "0.8.3",
@@ -49,6 +49,6 @@
         "tslib": "^2.4.0"
     },
     "engines": {
-        "node": "^16.2.0"
+        "node": "^20.10.0"
     }
 }
