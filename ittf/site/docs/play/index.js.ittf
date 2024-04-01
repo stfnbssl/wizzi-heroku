@@ -1,9 +1,6 @@
 module
 	kind es6
 
-    $global
-        var g_API_URL = 'http://localhost:5110/api/v1';
-
 	$include js/wz/core
 	$include js/wz/node
 	$include js/wz/ace
@@ -14,7 +11,7 @@ module
 	$include js/widgets/editorControl
 	$include js/widgets/treeNode
 	$include js/widgets/treeView
-	$include js/widgets/treeFileSystem
+	$include js/widgets/treeFilesystem
 
 	$include js/appManager
 	$include js/dataManager

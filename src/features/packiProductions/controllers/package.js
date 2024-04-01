@@ -180,6 +180,7 @@ class PackageProductionController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'creating a new package production', err);
                 response.render('error.html.ittf', {
                     message: 'creating a new package production',
                     error: err
@@ -187,6 +188,7 @@ class PackageProductionController {
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getting template packi files while creating a new package production', err);
                 response.render('error.html.ittf', {
                     message: 'getting template packi files while creating a new package production',
                     error: err
@@ -312,6 +314,7 @@ class PackageProductionController {
             return (0, package_1.getWizziMetaFolder)(request.params.owner, request.params.name, {}).then((packiFiles) => (0, sendResponse_1.sendSuccess)(response, packiFiles)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getting wizzi meta folder', err);
                 response.render('error.html.ittf', {
                     message: 'getting wizzi meta folder',
                     error: err

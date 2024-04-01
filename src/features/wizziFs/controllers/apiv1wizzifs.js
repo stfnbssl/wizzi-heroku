@@ -53,8 +53,10 @@ class ApiV1WizziFsController {
             (0, wizziFs_1.getIttfDocument)(hash).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'ApiV1WizziFs.getIttfDocument', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'ApiV1WizziFs.getIttfDocument'
                 }, 501);
             });
         });
@@ -69,8 +71,10 @@ class ApiV1WizziFsController {
             (0, wizziFs_1.putIttfDocument)(hash, content, prettify).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'ApiV1WizziFs.putIttfDocument', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'ApiV1WizziFs.putIttfDocument'
                 }, 501);
             });
         });

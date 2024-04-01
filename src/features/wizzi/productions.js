@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.loadSiteJsonModel = exports.getCodeAST = exports.getCodeASTFs = exports.wizzify = exports.wizzifyFs = exports.packiFilesToFolderFs = exports.folderFsToPackiFiles = exports.folderBrowseToPackiFiles = exports.scanIttfDocumentDb = exports.scanIttfFolder = exports.scanIttfDocumentFs = exports.scanIttfDocument = exports.inferAndLoadContextFs = exports.inferAndLoadContextJson = exports.executeJobFs = exports.executeJobs = exports.executeJob = exports.metaGenerate = exports.loadAndTransformModelFs = exports.transformModel = exports.loadAndTransformModel = exports.generateWizziModelTypes = exports.generateFolderArtifactsFs = exports.generateFolderArtifacts = exports.generateArtifactDb = exports.generateArtifactFs = exports.generateArtifact = exports.wrapIttfText = exports.mTreeDb = exports.mTreeFs = exports.mTree = exports.mTreeBuildUpScriptDb = exports.mTreeBuildUpScriptFs = exports.mTreeBuildUpScript = exports.loadModelFs = exports.loadModel = void 0;
+exports.loadSiteJsonModel = exports.getCodeAST = exports.getCodeASTFs = exports.getCheatsheet = exports.getCheatsheetList = exports.wizzify = exports.wizzifyFs = exports.packiFilesToFolderFs = exports.folderFsToPackiFiles = exports.folderBrowseToPackiFiles = exports.scanIttfDocumentDb = exports.scanIttfFolder = exports.scanIttfDocumentFs = exports.scanIttfDocument = exports.inferAndLoadContextFs = exports.inferAndLoadContextJson = exports.executeJobFs = exports.executeJobs = exports.executeJob = exports.metaGenerate = exports.loadAndTransformModelFs = exports.transformModel = exports.loadAndTransformModel = exports.generateWizziModelTypes = exports.generateFolderArtifactsFs = exports.generateFolderArtifacts = exports.generateArtifactDb = exports.generateArtifactFs = exports.generateArtifact = exports.wrapIttfText = exports.mTreeDb = exports.mTreeFs = exports.mTree = exports.mTreeBuildUpScriptDb = exports.mTreeBuildUpScriptFs = exports.mTreeBuildUpScript = exports.loadModelFs = exports.loadModel = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\wizzi\productions.ts.ittf
-    utc time: Wed, 13 Mar 2024 07:19:41 GMT
+    utc time: Mon, 01 Apr 2024 13:37:59 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const fs_1 = tslib_1.__importDefault(require("fs"));
@@ -106,7 +106,7 @@ function mTreeBuildUpScript(filePath, files, context) {
             let jsonwf = {};
             jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
             ;
-            jsonwf.wf.loadMTreeBuildupScript(ittfDocumentUri, context, (err, buildUpScript) => {
+            jsonwf.wf.loadMTreeBuildUpScript(ittfDocumentUri, context, (err, buildUpScript) => {
                 if (err) {
                     return reject(err);
                 }
@@ -913,6 +913,35 @@ function handleWizzify(wf, extension, codeSnippet) {
         }
     }));
 }
+function getCheatsheetList() {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            var files = {};
+            let jsonwf = {};
+            jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
+            ;
+            return resolve(jsonwf.wf.getCheatsheetList());
+        }));
+    });
+}
+exports.getCheatsheetList = getCheatsheetList;
+function getCheatsheet(schemaName) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            var files = {};
+            let jsonwf = {};
+            jsonwf = yield (0, factory_1.createJsonFsAndFactory)(files);
+            ;
+            jsonwf.wf.getCheatsheet(schemaName, (err, result) => {
+                if (err) {
+                    return reject(err);
+                }
+                return resolve(result);
+            });
+        }));
+    });
+}
+exports.getCheatsheet = getCheatsheet;
 function getCodeASTFs(filePath) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => tslib_1.__awaiter(this, void 0, void 0, function* () {

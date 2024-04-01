@@ -70,8 +70,10 @@ class ApiV1PluginProductionController {
             (result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getCheckPluginName', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getCheckPluginName'
                 }, 501);
             });
         });

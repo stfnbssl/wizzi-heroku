@@ -106,8 +106,10 @@ class ApiV1MetaProductionController {
             (result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getCheckMetaName', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getCheckMetaName'
                 }, 501);
             });
         });

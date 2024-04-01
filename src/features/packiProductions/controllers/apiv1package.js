@@ -72,8 +72,10 @@ class ApiV1PackageProductionController {
             (result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getCheckPackageName', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getCheckPackageName'
                 }, 501);
             });
         });

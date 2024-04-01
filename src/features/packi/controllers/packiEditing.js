@@ -93,8 +93,10 @@ class PackiEditingController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getPackiArtifactProductionByUsername_Name', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getPackiArtifactProductionByUsername_Name'
                 }, 501);
             });
         });
@@ -125,8 +127,10 @@ class PackiEditingController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getPackiPackageProductionByUsername_Name', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getPackiPackageProductionByUsername_Name'
                 }, 501);
             });
         });
@@ -157,8 +161,10 @@ class PackiEditingController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getPackiMetaProductionByUsername_Name', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getPackiMetaProductionByUsername_Name'
                 }, 501);
             });
         });
@@ -189,8 +195,10 @@ class PackiEditingController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getPackiPluginProductionByUsername_Name', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getPackiPluginProductionByUsername_Name'
                 }, 501);
             });
         });
@@ -221,8 +229,10 @@ class PackiEditingController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getPackiTFolderByUsername_Name', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getPackiTFolderByUsername_Name'
                 }, 501);
             });
         });

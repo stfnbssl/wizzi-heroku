@@ -175,6 +175,7 @@ class PluginProductionController {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'creating a new plugin production', err);
                 response.render('error.html.ittf', {
                     message: 'creating a new plugin production',
                     error: err
@@ -182,6 +183,7 @@ class PluginProductionController {
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getting template packi files while creating a new plugin production', err);
                 response.render('error.html.ittf', {
                     message: 'getting template packi files while creating a new plugin production',
                     error: err

@@ -2,8 +2,6 @@
     
     $include models/docs/site.wzctx
     
-    $include css/reset
-
     < body
         margin 0
         padding 0

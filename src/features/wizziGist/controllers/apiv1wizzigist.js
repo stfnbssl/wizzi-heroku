@@ -56,8 +56,10 @@ class ApiV1WizziGistController {
             (0, wizziGist_1.createGist)(kind, name, schema).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'ApiV1WizziGist.execCreateGist', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'ApiV1WizziGist.execCreateGist'
                 }, 501);
             });
         });
@@ -73,8 +75,10 @@ class ApiV1WizziGistController {
             (0, wizziGist_1.updateGist)(hash, content).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'ApiV1WizziGist.execUpdateGist', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'ApiV1WizziGist.execUpdateGist'
                 }, 501);
             });
         });

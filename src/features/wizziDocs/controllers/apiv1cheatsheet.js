@@ -40,14 +40,28 @@ class ApiV1CheatsheetController {
         this.router = (0, express_1.Router)();
         this.initialize = (app, initValues) => {
             console.log("[33m%s[0m", 'Entering ApiV1CheatsheetController.initialize');
+            this.router.get('/', this.getCheatsheetList);
             this.router.get('/:name', this.getCheatsheet);
         };
+        this.getCheatsheetList = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            return (0, cheatsheet_1.getCheatsheetList)().then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'ApiV1Cheatsheet.getCheatsheetList', err);
+                (0, sendResponse_1.sendFailure)(response, {
+                    err: err,
+                    method: 'ApiV1Cheatsheet.getCheatsheetList'
+                }, 501);
+            });
+        });
         this.getCheatsheet = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             return (0, cheatsheet_1.getCheatsheet)(request.params.name).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'ApiV1Cheatsheet.getCheatsheet', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'ApiV1Cheatsheet.getCheatsheet'
                 }, 501);
             });
         });

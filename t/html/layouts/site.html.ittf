@@ -118,12 +118,12 @@ $group
                                 $else
                                     . ${ca_inverse}
                                         + Productions
-                                $if opt.section != 'Project'
-                                    html/a( Project, /ittf/site/project.html.ittf, ${ca}
-                                $else
-                                    . ${ca_inverse}
-                                        + Project
                     . flex-row
+                        $if opt.section != 'Project'
+                            html/a( Project, /ittf/site/project.html.ittf, ${ca}
+                        $else
+                            . ${ca_inverse}
+                                + Project
                         $if opt.section != 'Docs'
                             html/a( Docs, /ittf/site/docs/concepts/overview.html.ittf, ${ca}
                         $else

@@ -6,7 +6,7 @@ $group
         param path
         param data
         $$ const API_URL = 'http://localhost:5100/api/v1' 
-        const API_URL = '${g_API_URL}' 
+        const API_URL = '${ittfCtx.baseUrl}/api/v1' 
         log 'callApi method', method, 'API_URL', API_URL, 'path', path, 'data', data
         return 
             new Promise
@@ -45,4 +45,4 @@ $group
                                 param err
                                 # log 'callApi.err', err
                                 _ reject
-                                    _ err
+                                    @ err

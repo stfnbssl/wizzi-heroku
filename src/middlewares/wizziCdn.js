@@ -33,11 +33,11 @@ function _renderCdn(owner, cdnName, request, response) {
         response.set('Content-Length', result.item.contents.length);
         response.send(result.item.contents);
     }).catch((err) => {
-        console.log("[31m%s[0m", '' + myname + '_renderCdn.resourceApi.getWizziCdnResource.error', err);
         var content = err;
         if (typeof err === 'object' && err !== null) {
             content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
         }
+        console.log("[31m%s[0m", '' + myname + '_renderCdn.resourceApi.getWizziCdnResource.error', err);
         (0, sendResponse_1.sendHtml)(response, content);
     });
 }

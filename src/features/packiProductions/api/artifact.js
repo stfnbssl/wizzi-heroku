@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getContextFromWizziJson = exports.getFragmentsFromWizziJson = exports.prepareGenerationFromWizziJson = exports.getArtifactMTreeBuildupScript_withPrepare = exports.getArtifactMTreeBuildupScript = exports.getArtifactMTree_withPrepare = exports.getArtifactMTree = exports.getArtifactGeneration_withPrepare = exports.getArtifactGeneration = exports.getArtifactTransformation_withPrepare = exports.getArtifactTransformation = exports.getArtifactContextItem = exports.getArtifactContext = exports.getDefaultContext_withCache = exports.invalidateCache = exports.getArtifactProduction_withCache = exports.getArtifactProductionObjectById_stop = exports.getArtifactProductionObject_stop = exports.deleteArtifactProduction = exports.updateArtifactProduction = exports.createArtifactProduction = exports.getArtifactProductionObjectById = exports.getArtifactProductionObject = exports.getArtifactProductionById = exports.getArtifactProduction = exports.getArtifactProductionList = exports.validateArtifactProduction = void 0;
+exports.getContextFromWizziJson = exports.getFragmentsFromWizziJson = exports.prepareGenerationFromWizziJson = exports.getArtifactMTreeBuildUpScript_withPrepare = exports.getArtifactMTreeBuildUpScript = exports.getArtifactMTree_withPrepare = exports.getArtifactMTree = exports.getArtifactGeneration_withPrepare = exports.getArtifactGeneration = exports.getArtifactTransformation_withPrepare = exports.getArtifactTransformation = exports.getArtifactContextItem = exports.getArtifactContext = exports.getDefaultContext_withCache = exports.invalidateCache = exports.getArtifactProduction_withCache = exports.getArtifactProductionObjectById_stop = exports.getArtifactProductionObject_stop = exports.deleteArtifactProduction = exports.updateArtifactProduction = exports.createArtifactProduction = exports.getArtifactProductionObjectById = exports.getArtifactProductionObject = exports.getArtifactProductionById = exports.getArtifactProduction = exports.getArtifactProductionList = exports.validateArtifactProduction = void 0;
 const tslib_1 = require("tslib");
 const node_cache_1 = tslib_1.__importDefault(require("node-cache"));
 const env_1 = require("../../config/env");
@@ -729,7 +729,7 @@ function getArtifactMTree_withPrepare(owner, productionName, queryContext, rootC
     });
 }
 exports.getArtifactMTree_withPrepare = getArtifactMTree_withPrepare;
-function getArtifactMTreeBuildupScript(owner, productionName, rootContext) {
+function getArtifactMTreeBuildUpScript(owner, productionName, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => getArtifactProduction_withCache(owner, productionName).then((ap) => wizzi_1.wizziProds.mTreeBuildUpScript(ap.mainIttf, ap.packiFiles, rootContext).then((result) => {
             const response = {
@@ -745,7 +745,7 @@ function getArtifactMTreeBuildupScript(owner, productionName, rootContext) {
                     artifactName: productionName
                 };
             }
-            console.log("[31m%s[0m", 'getArtifactMTreeBuildupScript.mTree.error', err);
+            console.log("[31m%s[0m", 'getArtifactMTreeBuildUpScript.mTree.error', err);
             return reject(err);
         })).catch((err) => {
             if (typeof err === 'object' && err !== null) {
@@ -754,13 +754,13 @@ function getArtifactMTreeBuildupScript(owner, productionName, rootContext) {
                     artifactName: productionName
                 };
             }
-            console.log("[31m%s[0m", 'getArtifactMTreeBuildupScript.getArtifactProduction.error', err);
+            console.log("[31m%s[0m", 'getArtifactMTreeBuildUpScript.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
 }
-exports.getArtifactMTreeBuildupScript = getArtifactMTreeBuildupScript;
-function getArtifactMTreeBuildupScript_withPrepare(owner, productionName, queryContext, rootContext) {
+exports.getArtifactMTreeBuildUpScript = getArtifactMTreeBuildUpScript;
+function getArtifactMTreeBuildUpScript_withPrepare(owner, productionName, queryContext, rootContext) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => index_1.productionApi.prepareProduction('artifact', owner, productionName, queryContext, rootContext).then((productionObj) => wizzi_1.wizziProds.mTreeBuildUpScript(productionObj.mainIttf, productionObj.packiFiles, productionObj.context).then((result) => {
             const response = {
@@ -776,7 +776,7 @@ function getArtifactMTreeBuildupScript_withPrepare(owner, productionName, queryC
                     artifactName: productionName
                 };
             }
-            console.log("[31m%s[0m", 'getArtifactMTreeBuildupScript.mTree.error', err);
+            console.log("[31m%s[0m", 'getArtifactMTreeBuildUpScript.mTree.error', err);
             return reject(err);
         })).catch((err) => {
             if (typeof err === 'object' && err !== null) {
@@ -785,12 +785,12 @@ function getArtifactMTreeBuildupScript_withPrepare(owner, productionName, queryC
                     artifactName: productionName
                 };
             }
-            console.log("[31m%s[0m", 'getArtifactMTreeBuildupScript.getArtifactProduction.error', err);
+            console.log("[31m%s[0m", 'getArtifactMTreeBuildUpScript.getArtifactProduction.error', err);
             return reject(err);
         }));
     });
 }
-exports.getArtifactMTreeBuildupScript_withPrepare = getArtifactMTreeBuildupScript_withPrepare;
+exports.getArtifactMTreeBuildUpScript_withPrepare = getArtifactMTreeBuildUpScript_withPrepare;
 function prepareGenerationFromWizziJson(req_files) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {

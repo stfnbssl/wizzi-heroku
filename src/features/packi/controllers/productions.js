@@ -51,15 +51,30 @@ class ProductionsController {
         this.mTree = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const id = request.params.id;
             const req_files = request.body;
-            packiProductions_1.artifactApi.prepareGenerationFromWizziJson(req_files).then((result) => wizzi_1.wizziProds.mTree(id, result.packiFiles, result.context).then((value) => (0, sendResponse_1.sendSuccess)(response, {
-                mTreeIttf: value
+            packiProductions_1.artifactApi.prepareGenerationFromWizziJson(req_files).then((result) => wizzi_1.wizziProds.mTree(id, result.packiFiles, result.context).then(
+            // loog 'value.mTreeIttf', value.mTreeIttf
+            (value) => {
+                console.log('value', value, __filename);
+                (0, sendResponse_1.sendSuccess)(response, {
+                    mTreeIttf: value.mTreeIttf
+                });
+            }).catch((err) => {
+                if (typeof err === 'object' && err !== null) {
+                }
+                console.log("[31m%s[0m", 'features.packi.controllers.productions.mTree.wizziProds.mTree', err);
+                (0, sendResponse_1.sendFailure)(response, {
+                    err: err,
+                    method: 'features.packi.controllers.productions.mTree.wizziProds.mTree'
+                }, 501);
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'features.packi.controllers.productions.mTree.prepareGenerationFromWizziJson', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'features.packi.controllers.productions.mTree.prepareGenerationFromWizziJson'
                 }, 501);
-            }));
+            });
         });
         this.mTreeBuildUpScript = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const id = request.params.id;
@@ -69,8 +84,10 @@ class ProductionsController {
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'features.packi.controllers.productions.mTreeBuildUpScript', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'features.packi.controllers.productions.mTreeBuildUpScript'
                 }, 501);
             }));
         });
@@ -82,14 +99,18 @@ class ProductionsController {
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'features.packi.controllers.production.generateArtifact', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'features.packi.controllers.production.generateArtifact'
                 }, 501);
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'features.packi.controllers.production.prepareGenerationPackiFiles', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'features.packi.controllers.production.prepareGenerationPackiFiles'
                 }, 501);
             });
         });
@@ -104,8 +125,10 @@ class ProductionsController {
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'features.packi.controllers.production.transformModel', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'features.packi.controllers.production.transformModel'
                 }, 501);
             }));
         });
@@ -119,8 +142,10 @@ class ProductionsController {
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'features.packi.controllers.production.executeJob', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'features.packi.controllers.production.executeJob'
                 }, 501);
             }));
         });

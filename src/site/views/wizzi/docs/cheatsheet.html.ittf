@@ -9,6 +9,7 @@ html
             stickyNavOffset: 50,
             stickyNavLogo: 'logo',
         }
+        /*
         var _schemas = [
             'css',
             'html',
@@ -27,17 +28,24 @@ html
             'xml', 
             'yaml', 
         ];
+        */
     html/layouts/docs( &opt )
         $if false
             pre
                 code
                     + ${JSON.stringify(cs, null, 2)}
+        $append body-scripts-0
+            script
+                module
+                    kind es6
+                    $if csStatus > 0
+                        _ alert("${csMessage}")
         $append head-styles-2
             html/s( /ittf/site/docs/styles/docs.css.ittf )
             html/s( /ittf/css/cheatsheet.css.ittf )
         . container-90 height-100
             . grid height-100
-                style grid-template-columns: 1fr 8fr 1fr;
+                style grid-template-columns: 1.5fr 8fr 0.5fr;
                 . mc-sidebar-left scrollbar-thin height-100 overflow-auto
                     ul
                         $foreach e in cs.elements
@@ -64,6 +72,17 @@ html
                                             code
                                                 class ${opt.language}
                                                 + ${item.expected}
+                                $foreach f in item.fragments
+                                    h6 Fragment: ${f.name}
+                                    div
+                                        style display: flex;
+                                        pre
+                                            style width: 50%; margin-right: 5px; padding: 15px;
+                                            class code-prettyprint prettyprint source
+                                            + ${f.ittfPretty}
+                                        pre
+                                            style width: 50%; margin-left: 5px;
+                                            class code-prettyprint prettyprint source
                                 div
                                     style display: flex;
                                     pre
@@ -77,12 +96,12 @@ html
                                             class ${opt.language}
                                             + ${item.generated}
                 . scrollbar-thin height-100 overflow-auto p-x
-                    $foreach item in _schemas
+                    $foreach item in csList
                         div
-                            $if item == cs.schema
+                            $if item.name == cs.schema
                                 class current
                                 . current
-                                    + ${item}
+                                    + ${item.name}
                             $else
-                                a ${item}
-                                    href /wizzi/docs/cheatsheet/${item}
+                                a ${item.name}
+                                    href /wizzi/docs/cheatsheet/${item.name}

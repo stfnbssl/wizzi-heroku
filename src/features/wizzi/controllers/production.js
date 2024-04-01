@@ -56,8 +56,10 @@ class ProductionController {
                     wizziProds.generateArtifactFs(path_1.default.join(config_1.config.ittfPath, artifactRequest.ittfDocument.path), context).then(generatedArtifact => (0, sendResponse_1.sendSuccess)(response, generatedArtifact)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
+                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifactFs', err);
                         (0, sendResponse_1.sendFailure)(response, {
-                            err: err
+                            err: err,
+                            method: 'features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifactFs'
                         }, 501);
                     });
                 }
@@ -65,8 +67,10 @@ class ProductionController {
                     wizziProds.generateArtifact(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.packiFiles, context).then((generatedArtifact) => (0, sendResponse_1.sendSuccess)(response, generatedArtifact)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
+                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifact', err);
                         (0, sendResponse_1.sendFailure)(response, {
-                            err: err
+                            err: err,
+                            method: 'features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifact'
                         }, 501);
                     });
                 }
@@ -74,16 +78,20 @@ class ProductionController {
                     wizziProds.generateArtifactDb(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.path, context).then((generatedArtifact) => (0, sendResponse_1.sendSuccess)(response, generatedArtifact)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
+                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifact', err);
                         (0, sendResponse_1.sendFailure)(response, {
-                            err: err
+                            err: err,
+                            method: 'features/wizzi/controller/productions.handler.artifact.wizziProds.generateArtifact'
                         }, 501);
                     });
                 }
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.artifact.resolveContexts', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'features/wizzi/controller/productions.handler.artifact.resolveContexts'
                 }, 501);
             });
         });
@@ -96,8 +104,10 @@ class ProductionController {
                     })).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
+                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTree.wizziProds.mTreeFs', err);
                         (0, sendResponse_1.sendFailure)(response, {
-                            err: err
+                            err: err,
+                            method: 'features/wizzi/controller/productions.handler.mTree.wizziProds.mTreeFs'
                         }, 501);
                     });
                 }
@@ -107,8 +117,10 @@ class ProductionController {
                     })).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
+                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTree.wizziProds.mTree', err);
                         (0, sendResponse_1.sendFailure)(response, {
-                            err: err
+                            err: err,
+                            method: 'features/wizzi/controller/productions.handler.mTree.wizziProds.mTree'
                         }, 501);
                     });
                 }
@@ -118,16 +130,20 @@ class ProductionController {
                     })).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
+                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTree.wizziProds.mTreeDb', err);
                         (0, sendResponse_1.sendFailure)(response, {
-                            err: err
+                            err: err,
+                            method: 'features/wizzi/controller/productions.handler.mTree.wizziProds.mTreeDb'
                         }, 501);
                     });
                 }
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", '} features/wizzi/controller/productions.handler.mTree.resolveContexts', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: '} features/wizzi/controller/productions.handler.mTree.resolveContexts'
                 }, 501);
             });
         });
@@ -138,8 +154,10 @@ class ProductionController {
                     wizziProds.mTreeBuildUpScriptFs(path_1.default.join(config_1.config.ittfPath, artifactRequest.ittfDocument.path), context).then(mTreeBuildUpScript => (0, sendResponse_1.sendSuccess)(response, mTreeBuildUpScript)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
+                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeBuildUpScript.wizziProds.mTreeBuildUpScriptFs', err);
                         (0, sendResponse_1.sendFailure)(response, {
-                            err: err
+                            err: err,
+                            method: 'features/wizzi/controller/productions.handler.mTreeBuildUpScript.wizziProds.mTreeBuildUpScriptFs'
                         }, 501);
                     });
                 }
@@ -147,8 +165,10 @@ class ProductionController {
                     wizziProds.mTreeBuildUpScript(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.packiFiles, context).then((mTreeBuildUpScript) => (0, sendResponse_1.sendSuccess)(response, mTreeBuildUpScript)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
+                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeBuildUpScript.wizziProds.mTreeBuildUpScript', err);
                         (0, sendResponse_1.sendFailure)(response, {
-                            err: err
+                            err: err,
+                            method: 'features/wizzi/controller/productions.handler.mTreeBuildUpScript.wizziProds.mTreeBuildUpScript'
                         }, 501);
                     });
                 }
@@ -156,16 +176,20 @@ class ProductionController {
                     wizziProds.mTreeBuildUpScriptDb(artifactRequest.ittfDocument.mainIttf, artifactRequest.ittfDocument.path, context).then((mTreeBuildUpScript) => (0, sendResponse_1.sendSuccess)(response, mTreeBuildUpScript)).catch((err) => {
                         if (typeof err === 'object' && err !== null) {
                         }
+                        console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeBuildUpScript.wizziProds.mTreeBuildUpScriptDb', err);
                         (0, sendResponse_1.sendFailure)(response, {
-                            err: err
+                            err: err,
+                            method: 'features/wizzi/controller/productions.handler.mTreeBuildUpScript.wizziProds.mTreeBuildUpScriptDb'
                         }, 501);
                     });
                 }
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeBuildUpScript.resolveContexts', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'features/wizzi/controller/productions.handler.mTreeBuildUpScript.resolveContexts'
                 }, 501);
             });
         });
@@ -178,8 +202,10 @@ class ProductionController {
                 })).catch((err) => {
                     if (typeof err === 'object' && err !== null) {
                     }
+                    console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.mTreeScanFs', err);
                     (0, sendResponse_1.sendFailure)(response, {
-                        err: err
+                        err: err,
+                        method: 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.mTreeScanFs'
                     }, 501);
                 });
             }
@@ -190,8 +216,10 @@ class ProductionController {
                 })).catch((err) => {
                     if (typeof err === 'object' && err !== null) {
                     }
+                    console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.mTreeScan', err);
                     (0, sendResponse_1.sendFailure)(response, {
-                        err: err
+                        err: err,
+                        method: 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.mTreeScan'
                     }, 501);
                 });
             }
@@ -202,8 +230,10 @@ class ProductionController {
                 })).catch((err) => {
                     if (typeof err === 'object' && err !== null) {
                     }
+                    console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.mTreeScanDb', err);
                     (0, sendResponse_1.sendFailure)(response, {
-                        err: err
+                        err: err,
+                        method: 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.mTreeScanDb'
                     }, 501);
                 });
             }
@@ -221,8 +251,10 @@ class ProductionController {
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.wrapIttfText', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'features/wizzi/controller/productions.handler.mTreeScan.wizziProds.wrapIttfText'
                 }, 501);
             });
         });

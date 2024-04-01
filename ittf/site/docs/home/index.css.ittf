@@ -1,7 +1,5 @@
 ﻿css
 
-    $include css/reset
-
     < body
         margin 0
         padding 0

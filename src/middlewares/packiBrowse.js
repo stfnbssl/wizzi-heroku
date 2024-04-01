@@ -69,16 +69,16 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactMTree.error', err);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
             }
+            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactMTree.error', err);
             (0, sendResponse_1.sendHtml)(response, content);
         });
     }
     else if (request.query.meta && request.query.meta.toLowerCase() == 'script') {
-        productionApi.getArtifactMTreeBuildupScript_withPrepare(owner, productionName, request.query.context, getPackiBrowseContext(request)).then((result) => {
+        productionApi.getArtifactMTreeBuildUpScript_withPrepare(owner, productionName, request.query.context, getPackiBrowseContext(request)).then((result) => {
             response.status(200);
             response.set('Content-Type', result.contentType);
             response.set('Content-Length', result.contentLength.toString());
@@ -87,11 +87,11 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactMTree.error', err);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
             }
+            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactMTree.error', err);
             (0, sendResponse_1.sendHtml)(response, content);
         });
     }
@@ -105,11 +105,11 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactGeneration.error', err);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
             }
+            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactGeneration.error', err);
             (0, sendResponse_1.sendHtml)(response, content);
         });
     }
@@ -123,11 +123,11 @@ function _executeBrowse(packiProduction, owner, productionName, request, respons
             response.set('Pragma', 'no-cache');
             response.send(result.content);
         }).catch((err) => {
-            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactGeneration.error', err);
             var content = err;
             if (typeof err === 'object' && err !== null) {
                 content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
             }
+            console.log("[31m%s[0m", '' + myname + '_executeBrowse.artifactApi.getArtifactGeneration.error', err);
             (0, sendResponse_1.sendHtml)(response, content);
         });
     }

@@ -8,6 +8,13 @@ const env_1 = require("../config/env");
 const config_1 = require("../config");
 const wizziMaps = tslib_1.__importStar(require("./maps"));
 const myname = 'features/wizzi/factory';
+function getWzCtxGlobalContext() {
+    const retval = {};
+    retval.wzConfigIsHeroku = true;
+    retval.wzConfigPort = 5110;
+    retval.wzConfigIsDevelopment = true;
+    return retval;
+}
 function getWzCtxFactoryPlugins() {
     return {
         items: [
@@ -39,7 +46,7 @@ function createFilesystemFactoryWithParameters(pluginsBaseFolder, plugins, globa
                 items: plugins,
                 pluginsBaseFolder: pluginsBaseFolder
             },
-            globalContext: globalContext
+            globalContext: Object.assign({}, getWzCtxGlobalContext(), globalContext || {})
         }, function (err, wf) {
             if (err) {
                 return reject(err);
@@ -61,7 +68,7 @@ function createFilesystemFactory(factoryPlugins, metaPlugins, globalContext) {
             },
             plugins: factoryPlugins ? factoryPlugins : getWzCtxFactoryPlugins(),
             metaPlugins: metaPlugins ? metaPlugins : getWzCtxMetaPlugins(),
-            globalContext: Object.assign({}, gc, globalContext || {})
+            globalContext: Object.assign({}, getWzCtxGlobalContext(), gc, globalContext || {})
         }, function (err, wf) {
             if (err) {
                 return reject(err);
@@ -112,7 +119,7 @@ function createJsonFsAndFactory(files, factoryPlugins, metaPlugins, globalContex
                 jsonFs,
                 plugins: factoryPlugins ? factoryPlugins : getWzCtxFactoryPlugins(),
                 metaPlugins: metaPlugins ? metaPlugins : getWzCtxMetaPlugins(),
-                globalContext: Object.assign({}, globalContext || {})
+                globalContext: Object.assign({}, getWzCtxGlobalContext(), globalContext || {})
             }, function (err, wf) {
                 if (err) {
                     return reject(err);

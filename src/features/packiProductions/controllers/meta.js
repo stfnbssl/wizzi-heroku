@@ -229,6 +229,7 @@ class MetaProductionController {
                 .catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'MetaProductionController.generateMeta', err);
                 response.render('error.html.ittf', {
                     message: 'MetaProductionController.generateMeta',
                     error: err

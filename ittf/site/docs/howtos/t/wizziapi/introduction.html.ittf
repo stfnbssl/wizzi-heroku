@@ -68,14 +68,14 @@
         js-panel
             title Execute a Load mTree buildup script action
             ittf
-                wizziFactory.loadMTreeBuildupScript (
+                wizziFactory.loadMTreeBuildUpScript (
                     path.join (__dirname, 'ittf', 'mysource.myschema.ittf'),
                     myContextObject,
-                    function (err, loadedMTreeBuildupScript) {
+                    function (err, loadedMTreeBuildUpScript) {
                         if (err) {
                             throw new Error(err.message);
                         }
-                        // ... use the loadedMTreeBuildupScript object
+                        // ... use the loadedMTreeBuildUpScript object
                     });
 
         p You execute this action for debugging purposes. An mTree Debug Info

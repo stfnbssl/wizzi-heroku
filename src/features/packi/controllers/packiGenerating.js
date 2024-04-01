@@ -86,21 +86,27 @@ class PackiGeneratingController {
                     .catch((err) => {
                     if (typeof err === 'object' && err !== null) {
                     }
+                    console.log("[31m%s[0m", 'getPackiPackageGeneration.extractGeneratedFiles', err);
                     (0, sendResponse_1.sendFailure)(response, {
-                        err: err
+                        err: err,
+                        method: 'getPackiPackageGeneration.extractGeneratedFiles'
                     }, 501);
                 });
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getPackiPackageGeneration.executeJobs', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getPackiPackageGeneration.executeJobs'
                 }, 501);
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getPackiPackageGeneration.prepareProduction', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getPackiPackageGeneration.prepareProduction'
                 }, 501);
             });
         });
@@ -137,21 +143,27 @@ class PackiGeneratingController {
                     .catch((err) => {
                     if (typeof err === 'object' && err !== null) {
                     }
+                    console.log("[31m%s[0m", 'getPackiPluginGeneration.extractGeneratedFiles', err);
                     (0, sendResponse_1.sendFailure)(response, {
-                        err: err
+                        err: err,
+                        method: 'getPackiPluginGeneration.extractGeneratedFiles'
                     }, 501);
                 });
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getPackiPluginGeneration.executeJobs', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getPackiPluginGeneration.executeJobs'
                 }, 501);
             })).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'getPackiPluginGeneration.prepareProduction', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'getPackiPluginGeneration.prepareProduction'
                 }, 501);
             });
         });

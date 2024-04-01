@@ -85,6 +85,12 @@
                 @ 'selected'
                 {
                     @ removeOnClass 'sh-bo-lsb-schema-button'
+			js/event_emit( seteditvalue
+				@ key 'gen-ittf'
+				@ value ''
+			js/event_emit( seteditvalue
+				@ key 'snippet-source'
+				@ value ''
             # _ this.setIttfContentFromStore
             # _ this.setSnippetContentFromStore
         
@@ -237,7 +243,6 @@
 				=>
 					param err
 					param result
-                    log 'wizzify', err
 					if err
                         log 'wizzify.err', err
 						js/event_emit( seteditvalue

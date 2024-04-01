@@ -1,18 +1,44 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getCheatsheet = void 0;
+exports.getCheatsheetOld = exports.getCheatsheet = exports.getCheatsheetList = void 0;
 const tslib_1 = require("tslib");
 /*
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\wizziDocs\api\cheatsheet.ts.ittf
-    utc time: Wed, 13 Mar 2024 07:19:41 GMT
+    utc time: Mon, 01 Apr 2024 13:37:59 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const wizzi_utils_1 = require("wizzi-utils");
 const wizzi_1 = require("../../wizzi");
 const json_stringify_safe_1 = tslib_1.__importDefault(require("json-stringify-safe"));
-function getCheatsheet(name) {
+function getCheatsheetList() {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => wizzi_1.wizziProds.getCheatsheetList().then((cheatsheets) => {
+            return resolve(cheatsheets);
+        }).catch((err) => {
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'cheatsheetApi.getCheatsheetList.error', err);
+            return reject(err);
+        }));
+    });
+}
+exports.getCheatsheetList = getCheatsheetList;
+function getCheatsheet(schemaName) {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve, reject) => wizzi_1.wizziProds.getCheatsheet(schemaName).then((cheatsheet) => {
+            return resolve(cheatsheet);
+        }).catch((err) => {
+            if (typeof err === 'object' && err !== null) {
+            }
+            console.log("[31m%s[0m", 'cheatsheetApi.getCheatsheet.error', err);
+            return reject(err);
+        }));
+    });
+}
+exports.getCheatsheet = getCheatsheet;
+function getCheatsheetOld(name) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
             var csPath = path_1.default.join(__dirname, '..', '..', '..', '..', 'ittf', 'models', 'cheatsheets', name, 'index.ittf.ittf');
@@ -187,13 +213,13 @@ function getCheatsheet(name) {
             }).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
-                console.log("[31m%s[0m", 'cheatsheetApi.getCheatsheet.error', err);
+                console.log("[31m%s[0m", 'cheatsheetApi.getCheatsheetOld.error', err);
                 return reject(err);
             });
         });
     });
 }
-exports.getCheatsheet = getCheatsheet;
+exports.getCheatsheetOld = getCheatsheetOld;
 function wrapperForSchema(schema) {
     if (schema === 'js' || schema === 'jsx') {
         return {

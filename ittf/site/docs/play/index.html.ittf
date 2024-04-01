@@ -2,9 +2,6 @@ html
 
     $include models/docs/site.wzctx
 
-    $global
-        var g_API_URL = 'http://localhost:5110/api/v1';
-
 	$
         var opt = {
 		    title: 'Play',
@@ -14,19 +11,20 @@ html
             useEventEmitter: true,
             schemas: [
                 'css',
-                'html',
                 'graphql',
+                'ittf',
+                'html',
                 'js',
                 'json',
                 'md',
                 'scss',
                 'svg',
+                'text',
                 'ts',
                 'vtt',
                 'vue',
                 'xml',
                 'yaml',
-                'text',
             ]
         }
 

@@ -68,6 +68,7 @@
         	background-color #bcbcbc
 
     . sh-bo-co-title        
+		display flex !important
         font-size 1.5em
         font-weight bold
 	

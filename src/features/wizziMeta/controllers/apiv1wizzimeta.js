@@ -52,8 +52,10 @@ class ApiV1WizziMetaController {
             (0, wizziMeta_1.executeMetaProduction)({}).then((result) => (0, sendResponse_1.sendSuccess)(response, result)).catch((err) => {
                 if (typeof err === 'object' && err !== null) {
                 }
+                console.log("[31m%s[0m", 'ApiV1WizziMeta.execute.executeMetaProduction', err);
                 (0, sendResponse_1.sendFailure)(response, {
-                    err: err
+                    err: err,
+                    method: 'ApiV1WizziMeta.execute.executeMetaProduction'
                 }, 501);
             });
         });
