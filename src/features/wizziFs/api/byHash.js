@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.putIttfFileContentByHash = exports.getIttfFileContentByHash = void 0;
 const tslib_1 = require("tslib");
-const wizzi_utils_1 = require("wizzi-utils");
-var fsfile = wizzi_utils_1.fSystem.vfile();
+const utils_1 = require("@wizzi/utils");
+var fsfile = utils_1.fSystem.vfile();
 function getIttfFileContentByHash(hash) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
-            const filePath = wizzi_utils_1.crypto.decrypt(hash);
+            const filePath = utils_1.crypto.decrypt(hash);
             if (fsfile.isFile(filePath)) {
                 return resolve({
                     content: fsfile.read(filePath)
@@ -27,7 +27,7 @@ function putIttfFileContentByHash(hash, content) {
         return new Promise(
         // loog 'putIttfFileContentByHash', hash, filePath
         (resolve, reject) => {
-            var filePath = wizzi_utils_1.crypto.decrypt(hash);
+            var filePath = utils_1.crypto.decrypt(hash);
             try {
                 fsfile.write(filePath, content);
                 return resolve({

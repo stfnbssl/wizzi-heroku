@@ -6,10 +6,10 @@ const tslib_1 = require("tslib");
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\wizziDocs\api\cheatsheet.ts.ittf
-    utc time: Mon, 01 Apr 2024 13:37:59 GMT
+    utc time: Mon, 01 Apr 2024 14:45:47 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
-const wizzi_utils_1 = require("wizzi-utils");
+const utils_1 = require("@wizzi/utils");
 const wizzi_1 = require("../../wizzi");
 const json_stringify_safe_1 = tslib_1.__importDefault(require("json-stringify-safe"));
 function getCheatsheetList() {
@@ -139,7 +139,7 @@ function getCheatsheetOld(name) {
                     if (!item) {
                         return resolve(result);
                     }
-                    wizzi_utils_1.pretty.prettifyIttfHtmlFromString(item.ittf, (err, pretty) => {
+                    utils_1.pretty.prettifyIttfHtmlFromString(item.ittf, (err, pretty) => {
                         if (err) {
                             item.ittfPretty = JSON.stringify(err, null, 4);
                         }
@@ -154,15 +154,15 @@ function getCheatsheetOld(name) {
                                 }
                             }, {}).then((mTreeBuildUpScript) => {
                                 if (mTreeBuildUpScript.__is_error) {
-                                    item.generated = wizzi_utils_1.verify.htmlEscape(JSON.stringify(mTreeBuildUpScript, null, 2));
+                                    item.generated = utils_1.verify.htmlEscape(JSON.stringify(mTreeBuildUpScript, null, 2));
                                 }
                                 else {
-                                    item.generated = wizzi_utils_1.verify.htmlEscape(mTreeBuildUpScript);
+                                    item.generated = utils_1.verify.htmlEscape(mTreeBuildUpScript);
                                 }
                                 item.generated = item.generated ? item.generated.trim() : 'No result. Something went wrong!';
                                 next();
                             }).catch((err) => {
-                                item.generated = wizzi_utils_1.verify.htmlEscape((0, json_stringify_safe_1.default)(err, null, 2));
+                                item.generated = utils_1.verify.htmlEscape((0, json_stringify_safe_1.default)(err, null, 2));
                                 next();
                             });
                         }
@@ -174,15 +174,15 @@ function getCheatsheetOld(name) {
                                 }
                             }, {}).then((result) => {
                                 if (result.__is_error) {
-                                    item.generated = wizzi_utils_1.verify.htmlEscape(JSON.stringify(result, null, 2));
+                                    item.generated = utils_1.verify.htmlEscape(JSON.stringify(result, null, 2));
                                 }
                                 else {
-                                    item.generated = wizzi_utils_1.verify.htmlEscape(result.mTreeIttf);
+                                    item.generated = utils_1.verify.htmlEscape(result.mTreeIttf);
                                 }
                                 item.generated = item.generated ? item.generated.trim() : 'No result. Something went wrong!';
                                 next();
                             }).catch((err) => {
-                                item.generated = wizzi_utils_1.verify.htmlEscape((0, json_stringify_safe_1.default)(err, null, 2));
+                                item.generated = utils_1.verify.htmlEscape((0, json_stringify_safe_1.default)(err, null, 2));
                                 next();
                             });
                         }
@@ -200,11 +200,11 @@ function getCheatsheetOld(name) {
                                     noGeneratorComments: true
                                 }
                             }).then((result) => {
-                                const artifactText = wizzi_utils_1.verify.htmlEscape(result.artifactContent);
+                                const artifactText = utils_1.verify.htmlEscape(result.artifactContent);
                                 item.generated = artifactText ? artifactText.trim() : 'No result. Something went wrong!';
                                 next();
                             }).catch((err) => {
-                                item.generated = wizzi_utils_1.verify.htmlEscape((0, json_stringify_safe_1.default)(err, null, 2));
+                                item.generated = utils_1.verify.htmlEscape((0, json_stringify_safe_1.default)(err, null, 2));
                                 next();
                             });
                         }
@@ -254,7 +254,7 @@ function buildExpected(ittf, sb, indent) {
             item = ittf.children[i];
             buildExpected(item, sb, 0);
         }
-        return wizzi_utils_1.verify.htmlEscape(sb.join(''));
+        return utils_1.verify.htmlEscape(sb.join(''));
     }
     // to avoid ts error
     else {

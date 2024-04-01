@@ -6,15 +6,15 @@ const tslib_1 = require("tslib");
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\wizziGist\api\wizziGist.ts.ittf
-    utc time: Mon, 01 Apr 2024 13:37:59 GMT
+    utc time: Mon, 01 Apr 2024 14:45:47 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
-const wizzi_utils_1 = require("wizzi-utils");
+const utils_1 = require("@wizzi/utils");
 const gistFs = tslib_1.__importStar(require("./gistFs"));
 const wizziFs = tslib_1.__importStar(require("../../../utils/wizziFs"));
 const scriptManager = tslib_1.__importStar(require("../../../utils/scripts/scriptManager"));
 const wizzi_1 = require("../../wizzi");
-var fsfile = wizzi_utils_1.fSystem.vfile();
+var fsfile = utils_1.fSystem.vfile();
 var GIST_KINDS = ['gist', 'fragment', 'context'];
 function isGistKind(kind) {
     return GIST_KINDS.indexOf(kind) > -1;
@@ -143,7 +143,7 @@ exports.createGist = createGist;
 function updateGist(hash, content) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
-            var filePath = wizzi_utils_1.crypto.decrypt(hash);
+            var filePath = utils_1.crypto.decrypt(hash);
             var name = path_1.default.basename(filePath);
             var kind = gistFs.gistKindFromFilePath(filePath);
             console.log('updateGist.kind', kind, 'name', name, 'filePath', filePath, __filename);
@@ -167,7 +167,7 @@ exports.updateGist = updateGist;
 function deleteGist(hash) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
-            var filePath = wizzi_utils_1.crypto.decrypt(hash);
+            var filePath = utils_1.crypto.decrypt(hash);
             var kind = gistFs.gistKindFromFilePath(filePath);
             wizziFs.deleteFsItem(filePath).then((result) => getGistList(kind).then((result) => {
                 if (isGistKind(kind)) {
@@ -204,7 +204,7 @@ exports.deleteGist = deleteGist;
 function duplicateGist(hash, newname) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
-            var filePath = wizzi_utils_1.crypto.decrypt(hash);
+            var filePath = utils_1.crypto.decrypt(hash);
             var kind = gistFs.gistKindFromFilePath(filePath);
             wizziFs.duplicateFsItem(filePath, path_1.default.join(path_1.default.dirname(filePath), newname)).then((result) => getGistList(kind).then((result) => {
                 if (isGistKind(kind)) {
@@ -241,7 +241,7 @@ exports.duplicateGist = duplicateGist;
 function renameGist(hash, newname) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
-            var filePath = wizzi_utils_1.crypto.decrypt(hash);
+            var filePath = utils_1.crypto.decrypt(hash);
             var kind = gistFs.gistKindFromFilePath(filePath);
             wizziFs.renameFsItem(filePath, path_1.default.join(path_1.default.dirname(filePath), newname)).then((result) => getGistList(kind).then((result) => {
                 if (isGistKind(kind)) {
@@ -278,7 +278,7 @@ exports.renameGist = renameGist;
 function getGist(hash) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
-            var filePath = wizzi_utils_1.crypto.decrypt(hash);
+            var filePath = utils_1.crypto.decrypt(hash);
             var kind = gistFs.gistKindFromFilePath(filePath);
             var gist = gistFs.gistInfoByPath(filePath);
             wizziFs.readFsItem(filePath).then((result) => {
@@ -310,7 +310,7 @@ exports.getGist = getGist;
 function executeGist(hash) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
-            var filePath = wizzi_utils_1.crypto.decrypt(hash);
+            var filePath = utils_1.crypto.decrypt(hash);
             var kind = gistFs.gistKindFromFilePath(filePath);
             var fileInfo = gistFs.gistInfoByPath(filePath);
             if (fileInfo.isIttfDocument && fileInfo.schema === 'js') {

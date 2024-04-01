@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.executeMetaProduction = void 0;
 const tslib_1 = require("tslib");
-const wizzi_utils_1 = require("wizzi-utils");
+const utils_1 = require("@wizzi/utils");
 const wizzi_1 = require("../../wizzi");
-const file = wizzi_utils_1.fSystem.vfile();
+const file = utils_1.fSystem.vfile();
 function executeMetaProduction(options) {
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => {
@@ -57,7 +57,7 @@ function createMetaCtx(options) {
             if (options.metaCtx) {
                 return resolve(options.metaCtx);
             }
-            if (wizzi_utils_1.verify.isEmpty(options.metaCtxFilepath)) {
+            if (utils_1.verify.isEmpty(options.metaCtxFilepath)) {
                 return reject('wizziMeta.createMetaCtx. Missing both metaCtx and metaCtxFilepath: ' + options.metaCtxFilepath);
             }
             console.log('createMetaCtx.options.metaCtxFilepath', options.metaCtxFilepath, __filename);

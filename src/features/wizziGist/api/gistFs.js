@@ -6,10 +6,10 @@ const tslib_1 = require("tslib");
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\wizziGist\api\gistFs.ts.ittf
-    utc time: Mon, 01 Apr 2024 13:37:59 GMT
+    utc time: Mon, 01 Apr 2024 14:45:47 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
-const wizzi_utils_1 = require("wizzi-utils");
+const utils_1 = require("@wizzi/utils");
 const config_1 = require("../../config");
 const wizziFs = tslib_1.__importStar(require("../../../utils/wizziFs"));
 var GIST_KINDS = ['gist', 'fragment', 'context'];
@@ -17,7 +17,7 @@ function isGistKind(kind) {
     return GIST_KINDS.indexOf(kind) > -1;
 }
 function normalize(filepath) {
-    return wizzi_utils_1.verify.replaceAll(filepath, '\\', '/');
+    return utils_1.verify.replaceAll(filepath, '\\', '/');
 }
 const gistFolderNameFromKind = function (kind) {
     if (kind === 'gist') {

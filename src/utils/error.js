@@ -5,7 +5,7 @@ exports.NOT_REGISTERED_YET = exports.CONTEST_NOT_FOUND = exports.SEND_EMAIL_ERRO
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\utils\error.ts.ittf
-    utc time: Mon, 01 Apr 2024 13:37:59 GMT
+    utc time: Mon, 01 Apr 2024 14:45:47 GMT
 */
 const MISSING_REQUIRED_FIELDS = 1000;
 exports.MISSING_REQUIRED_FIELDS = MISSING_REQUIRED_FIELDS;
