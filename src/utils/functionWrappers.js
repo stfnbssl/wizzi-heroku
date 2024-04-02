@@ -5,7 +5,7 @@ exports.promisify = void 0;
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\utils\functionWrappers.ts.ittf
-    utc time: Tue, 02 Apr 2024 15:36:39 GMT
+    utc time: Tue, 02 Apr 2024 15:51:56 GMT
 */
 const promisify = (f, self) => {
     return function (...args) {

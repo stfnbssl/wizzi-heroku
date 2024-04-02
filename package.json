@@ -16,7 +16,7 @@
         "@wizzi/utils": "^0.8.17",
         "@wizzi/plugin.css": "0.8.6",
         "@wizzi/plugin.html": "0.8.9",
-        "@wizzi/plugin.ittf": "0.8.7",
+        "@wizzi/plugin.ittf": "0.8.8",
         "@wizzi/plugin.js": "0.8.6",
         "@wizzi/plugin.json": "0.8.7",
         "@wizzi/plugin.md": "0.8.6",
