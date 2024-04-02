@@ -5,7 +5,7 @@ exports.TFolderModelBuilder = exports.GetTFolderModel = void 0;
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\packiProductions\mongo\tfolder.ts.ittf
-    utc time: Tue, 02 Apr 2024 11:01:54 GMT
+    utc time: Tue, 02 Apr 2024 11:11:17 GMT
 */
 const mongoose_1 = require("mongoose");
 const TFolderSchema = new mongoose_1.Schema({
