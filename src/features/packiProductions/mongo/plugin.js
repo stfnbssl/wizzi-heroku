@@ -5,7 +5,7 @@ exports.PluginProductionModelBuilder = exports.GetPluginProductionModel = void 0
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\features\packiProductions\mongo\plugin.ts.ittf
-    utc time: Mon, 01 Apr 2024 15:09:26 GMT
+    utc time: Tue, 02 Apr 2024 07:56:31 GMT
 */
 const mongoose_1 = require("mongoose");
 const PluginProductionSchema = new mongoose_1.Schema({
