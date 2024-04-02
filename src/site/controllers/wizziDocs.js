@@ -41,22 +41,23 @@ class DocsController {
             console.log("[33m%s[0m", 'Entering DocsController.initialize');
             this.router.get("/cheatsheet/:name", makeHandlerAwareOfAsyncErrors(this.cheatsheet));
         };
-        this.cheatsheet = (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
-            console.log('*** calling cheatsheetApi.getCheatsheetList', __filename);
-            wizziDocs_1.cheatsheetApi.getCheatsheetList().then((csList) => {
-                console.log('*** csList', csList, __filename);
+        this.cheatsheet = 
+        // loog '*** calling cheatsheetApi.getCheatsheetList'
+        (request, response) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            return wizziDocs_1.cheatsheetApi.getCheatsheetList().then(
+            // loog '*** csList', csList
+            // loog '*** exists', exists
+            (csList) => {
                 const exists = csList.filter(item => item.name == request.params.name);
-                console.log('*** exists', exists, __filename);
+                // loog '*** calling cheatsheetApi.getCheatsheetList', request.params.name
                 if (exists.length > 0) {
-                    console.log('*** calling cheatsheetApi.getCheatsheetList', request.params.name, __filename);
-                    wizziDocs_1.cheatsheetApi.getCheatsheet(request.params.name).then((result) => {
-                        console.log('*** 0 result', result, __filename);
-                        response.render('wizzi/docs/cheatsheet.html.ittf', {
-                            csList: csList,
-                            cs: result,
-                            csStatus: 0
-                        });
-                    }).catch((err) => {
+                    wizziDocs_1.cheatsheetApi.getCheatsheet(request.params.name).then(
+                    // loog '*** 0 result', result
+                    (result) => response.render('wizzi/docs/cheatsheet.html.ittf', {
+                        csList: csList,
+                        cs: result,
+                        csStatus: 0
+                    })).catch((err) => {
                         var content = err;
                         if (typeof err === 'object' && err !== null) {
                             content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
@@ -65,17 +66,16 @@ class DocsController {
                         (0, sendResponse_1.sendHtml)(response, content);
                     });
                 }
+                // loog '*** calling cheatsheetApi.getCheatsheetList', csList[0].name
                 else if (csList.length > 0) {
-                    console.log('*** calling cheatsheetApi.getCheatsheetList', csList[0].name, __filename);
-                    wizziDocs_1.cheatsheetApi.getCheatsheet(csList[0].name).then((result) => {
-                        console.log('*** 1 result', result, __filename);
-                        response.render('wizzi/docs/cheatsheet.html.ittf', {
-                            csList: csList,
-                            cs: result,
-                            csStatus: 1,
-                            csMessage: "Cheatsheet for schema " + request.params.name + " unavailable"
-                        });
-                    }).catch((err) => {
+                    wizziDocs_1.cheatsheetApi.getCheatsheet(csList[0].name).then(
+                    // loog '*** 1 result', result
+                    (result) => response.render('wizzi/docs/cheatsheet.html.ittf', {
+                        csList: csList,
+                        cs: result,
+                        csStatus: 1,
+                        csMessage: "Cheatsheet for schema " + request.params.name + " unavailable"
+                    })).catch((err) => {
                         var content = err;
                         if (typeof err === 'object' && err !== null) {
                             content = '<html><body><pre><code>' + JSON.stringify(err, null, 4) + '</code></pre></body></html>';
@@ -84,8 +84,8 @@ class DocsController {
                         (0, sendResponse_1.sendHtml)(response, content);
                     });
                 }
+                // loog '*** 3 render'
                 else {
-                    console.log('*** 3 render', __filename);
                     response.render('wizzi/docs/cheatsheet.html.ittf', {
                         csList: [],
                         cs: {
