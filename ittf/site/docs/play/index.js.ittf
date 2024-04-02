@@ -11,7 +11,7 @@ module
 	$include js/widgets/editorControl
 	$include js/widgets/treeNode
 	$include js/widgets/treeView
-	$include js/widgets/treeFilesystem
+	$include js/widgets/treeFileSystem
 
 	$include js/appManager
 	$include js/dataManager
