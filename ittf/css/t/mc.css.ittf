@@ -73,9 +73,11 @@ $group
                 color ${c_0}
                 display block
                 font-size 0.8rem
-                padding 0.3rem 0 0.3rem 1rem
+                padding 0.3rem 0 0.3rem 0.3rem
                 < a
                     color ${c_0}
+                < ul
+                    @ padding-inline-start 10px
             < li:last-child
                 border-bottom 0
     media (min-width: 750px)

@@ -75,7 +75,7 @@ $group
 			ittf
 				root
 					node how do you insert a "${'$'}${'$'}" or "${'$'}*" in a value?
-					node you must use jsWizzi (see later) variables
+					node you must use JsWizzi (see later) variables
 					${'$'}
 						var dd = '$' + '$';
 						var da = '$' + '*';

@@ -12,7 +12,7 @@
     },
     "dependencies": {
         "@babel/preset-env": "^7.22.5",
-        "@wizzi/factory": "^0.8.27",
+        "@wizzi/factory": "^0.8.28",
         "@wizzi/utils": "^0.8.17",
         "@wizzi/plugin.css": "0.8.6",
         "@wizzi/plugin.html": "0.8.9",

@@ -11,20 +11,26 @@ html
             useEventEmitter: true,
             schemas: [
                 'css',
-                'graphql',
-                'ittf',
                 'html',
+                /*
+                'graphql',
+                */
+                'ittf',
                 'js',
                 'json',
                 'md',
+                /*
                 'scss',
+                */
                 'svg',
-                'text',
                 'ts',
+                /*
                 'vtt',
                 'vue',
+                */
                 'xml',
                 'yaml',
+                'text',
             ]
         }
 
@@ -42,7 +48,7 @@ html
 
                 . sh-he
                     . m2
-                        h1 Generate from ittf, wizzify snippets
+                        h1 Generate from ittf, wizzify snippets 
                 
                 . sh-bo
                     . sh-bo-lsb
@@ -61,7 +67,10 @@ html
                         
                             . sh-bo-co-ge-ittf
                                 . sh-bo-co-title
-                                    + Ittf
+                                    div Ittf source
+                                    select
+                                        id ittfSelect
+                                        class sh-bar-select
                                 # gen-ittf-editor
 
                             . sh-bo-co-ge-result
@@ -74,6 +83,9 @@ html
                             . sh-bo-co-wi-snippet
                                 . sh-bo-co-title
                                     + Snippet
+                                    select
+                                        id snippetSelect
+                                        class sh-bar-select
                                 # snippet-source-editor
 
                             . sh-bo-co-wi-result

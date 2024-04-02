@@ -11,9 +11,72 @@
 		m initialize
 			
 			js/event_on( schema-selected-ready
-				_ this.getSchemaTreeView
-					@ data.name
-					@ data.json
+				let ittfSelectTag = wz.element("ittfSelect")
+				set ittfSelectTag.onchange
+					=>
+						param ev
+						log 'ittfSelectTag.click', ev.target.value
+						js/event_emit( ittf-cheatsheet-item-changed
+							@ id ev.target.value
+				let snippetSelectTag = wz.element("snippetSelect")
+				set snippetSelectTag.onchange
+					=>
+						param ev
+						log 'snippetSelectTag.click', ev.target.value
+						js/event_emit( snippet-cheatsheet-item-changed
+							@ id ev.target.value
+				var 
+					decl i
+					decl L = ittfSelectTag.options.length - 1
+				for i=L; i >= 0; i--
+					_ ittfSelectTag.remove(i)
+				let opt = document.createElement("option")
+				set opt.value = -1
+				set opt.innerHTML = ""
+				_ ittfSelectTag.append(opt)
+				_ data.json.elements.map
+					=> 
+						param element
+						param i
+						# log "TreeManager", "initialize", "element", element
+						_ element.items.map
+							=> 
+								param item
+								param j
+								# log "TreeManager", "initialize", "item", item
+								set opt = document.createElement("option")
+								set opt.value = item.id
+								set opt.innerHTML = item.title
+								_ ittfSelectTag.append(opt)
+				
+				var 
+					decl i
+					decl L = snippetSelectTag.options.length - 1
+				for i=L; i >= 0; i--
+					_ snippetSelectTag.remove(i)
+				set opt = document.createElement("option")
+				set opt.value = -1
+				set opt.innerHTML = ""
+				_ snippetSelectTag.append(opt)
+				_ data.json.elements.map
+					=> 
+						param element
+						param i
+						# log "TreeManager", "initialize", "element", element
+						_ element.items.map
+							=> 
+								param item
+								param j
+								log "TreeManager", "initialize", "item", item
+								set opt = document.createElement("option")
+								set opt.value = item.id
+								set opt.innerHTML = item.title
+								_ snippetSelectTag.append(opt)
+
+				if false
+					_ this.getSchemaTreeView
+						@ data.name
+						@ data.json
 
 		m getSchemaTreeView
 			param name

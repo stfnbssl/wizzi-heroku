@@ -6,7 +6,7 @@ const tslib_1 = require("tslib");
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: wizzi.plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.heroku-1010\.wizzi-override\src\utils\scripts\scriptManager.ts.ittf
-    utc time: Tue, 02 Apr 2024 11:11:17 GMT
+    utc time: Tue, 02 Apr 2024 11:34:36 GMT
 */
 const path_1 = tslib_1.__importDefault(require("path"));
 const cp = tslib_1.__importStar(require("child_process"));

@@ -20,7 +20,6 @@ $group
             . current
                 color yellow
 
-
     html/layouts/docs( &opt )
         $append head-styles-2
             css /ittf/site/docs/styles/docs.css.ittf
@@ -43,50 +42,3 @@ $group
                             a ${item.title}
                                 href ${item.url}        
 
-    $*
-    html/layouts/site( &opt )
-
-        $append head-styles-2
-            css /ittf/site/docs/styles/docs.css.ittf
-
-        div
-            id main-container
-            . bg-color-main-content
-                id stickyNavbar
-                div
-                    id header
-                    $include logo
-                    nav 
-                        id top-nav
-                        ul
-                            $foreach item in wzCtx.Section.items
-                                li
-                                    $if item.title === art.section
-                                        . current
-                                            + ${item.title}
-                                    $else
-                                        a ${item.title}
-                                            href ${item.url}
-            div
-                id middle-container
-                div 
-                    id content
-                    $hook
-                nav
-                    div 
-                        id right-nav
-                        . aside-right
-                            style position: fixed;
-                            div
-                                style padding-top: 40px;
-                            ul
-                                $foreach item in wzCtx.Docs.items
-                                    li
-                                        $if item.title === art.title
-                                            class current
-                                            . current
-                                                + ${item.title}
-                                        $else
-                                            a ${item.title}
-                                                href ${item.url}
-    *$                                                

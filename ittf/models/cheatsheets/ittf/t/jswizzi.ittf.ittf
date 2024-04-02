@@ -1,12 +1,12 @@
 $group
 
-	element jsWizzi
+	element JsWizzi
 		tag
 		ast 
 		category
 
 		item
-			title jsWizzi variable declaration and interpolation
+			title JsWizzi variable declaration and interpolation
 			render ittf
 			ittf
 				root

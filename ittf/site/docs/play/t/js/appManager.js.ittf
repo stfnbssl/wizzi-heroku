@@ -89,7 +89,13 @@
 				@ key 'gen-ittf'
 				@ value ''
 			js/event_emit( seteditvalue
+				@ key 'gen-result'
+				@ value ''
+			js/event_emit( seteditvalue
 				@ key 'snippet-source'
+				@ value ''
+			js/event_emit( seteditvalue
+				@ key 'snippet-result'
 				@ value ''
             # _ this.setIttfContentFromStore
             # _ this.setSnippetContentFromStore
@@ -147,6 +153,28 @@
 			_ this.snippetResultEditor.initialize
 
 		m setEvents
+			js/event_on( ittf-cheatsheet-item-changed
+				var content
+					_ this.dataManager.getIttfCheatsheetItem
+						@ data.id
+				# _ alert(content);
+				js/event_emit( seteditvalue
+					@ key 'gen-ittf'
+					@ value content
+				_ this.generate
+					@ content
+
+			js/event_on( snippet-cheatsheet-item-changed
+				var content
+					_ this.dataManager.getSnippetCheatsheetItem
+						@ data.id
+				# _ alert(content);
+				js/event_emit( seteditvalue
+					@ key 'snippet-source'
+					@ value content
+				_ this.wizzify
+					@ content
+
 			js/event_on( editvaluechanged
 				set this.lastKey = data.key
                 set this.lastValue = data.value
@@ -216,7 +244,10 @@
 
         m generate
 			param value
-			_ wz.genFromText
+			var genFunc = "genFromText"
+			if this.selectedSchema == 'ittf'
+				set genFunc = "mTreeFromText"
+			_ wz[genFunc]
 				@ value
 				{
 					@ schema this.selectedSchema || 'js'
@@ -243,6 +274,7 @@
 				=>
 					param err
 					param result
+                    log 'wizzify', err
 					if err
                         log 'wizzify.err', err
 						js/event_emit( seteditvalue

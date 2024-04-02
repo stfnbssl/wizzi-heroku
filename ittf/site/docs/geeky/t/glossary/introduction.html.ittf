@@ -1,12 +1,173 @@
 ﻿$group
     $
         var sect = {
-            title: 'Wizzi Glossary'
+            title: 'Wizzi Technical Glossary'
         };
 
     section(&sect)
 
 		table-doc( glo )
 
-            glo-item( TODO )
+            glo-item( JsWizziContext )
+            
+            glo-item( JWizziRunner )
+            
+            glo-item( ittfMacro )
+                ittf-panel
+                    title The '$params' command
+                    ittf
+                        #   Macro expressions are enclosed by ${'$'}{ and } delimiters.
+                        #   example: ${'$'}{name}.
+                        #   A macro expression can be escaped and used as a literal,
+                        #   example: \${'$'}\{name}.
+                        #   A macro expression may contain paired graphs { },
+                        #   example: ${'$'}{ for { var i=0; i<10; i++} ; return i; }.
+                        #   An empty macro ${} is treated as a literal, it is not replaced.
+                        #   An unclosed delimiter ${ is treated as a literal, it is not an error.
+            glo-item( ittf template command )
+            
+            glo-item( mTree )
+                span An in-memory tree data structure of name-valued nodes that is built loading and
+                    \b processing an ittf document 
 
+            glo-item( mTreeBrick )
+                span A nodified ittf document.
+                    + mTreeBricks are the items that compose an mTree.
+                    + They can mix (or include) other bricks and be mixed (or included). 
+                    + The same brick can be reused in many branches of the mTree, 
+                    + so a brick is loaded once and then cloned.
+
+            glo-item( included mTreeBrick )
+                span An mTree brick included in an including mTree brick
+                    + using the command <bold>$include [path]</bold>.
+                p Both the tree structure and the value context are included.
+                    + Context values declared in the included nodes are created in 
+                    + the scope of the includer.
+
+            glo-item( mixed mTreeBrick )
+                span An mTree brick mixed in a mixing mTree brick
+                    + using the command <bold>[path]([params])</bold>.
+                p The tree structure is mixed but the value context remain distinct.
+                    + Context values declared in the mixed nodes are created in 
+                    + the scope of the mixed mTreeBrick and do not interfere with the mixer.
+
+            glo-item( mTreeBuildUpScript )
+                span The jsWizzi script that, once executed by the
+                    + jsWizziRunner, will give as result the final mTree
+                    + of the source ittf document. 
+
+            md/glo-item( mTreeBuildUpScriptCoder)
+                span A module of the wizzi.mtree package that generates the 
+                    + mTreeBuildUpScript.
+
+            glo-item( mTree loading )
+                span The creation of an `mTree` from a primary Ittf document.
+                ul Loading steps
+                    li line parsing (of a source ittf document)
+                    li nodification (produces one mTreeBrick from every source Ittf document/fragment)
+                    li mix-composition (mix of Ittf fragments, recursive on mixed and included mTreeBricks)
+                    li include-composition (inclusion of Ittf fragments, recursive on mixed and included mTreeBricks)
+                    li append-resolution (resolution of `$append/$hook`, `$virtual/$override` and `$group` ittf template commands)
+                    li evaluation (on the mixed and appended mTreePartial(s))
+
+            glo-item( mTree loading - source line parsing )
+                span The source text of the primary ittf document is parsed into name-valued lines,
+                    + eliminating comments, resolving line continuations, detecting indentation
+                    + and managing chars that interfere with variable interpolation.
+
+            glo-item( mTree loading - nodification )
+                span The lines parsed in the previous step are transformed in a tree
+                    + structure, an mTreeBrick, respecting the indentation of the source. 
+                    + One root node only is allowed. 
+
+            glo-item( mTree loading - mix composition )
+                span The mTreeBrick, produced by the previous step, is traversed and
+                    + all the 'mix commands' encountered are recursively resolved.
+                    + The result is an mTreePartial composed by one or many bricks.
+
+            glo-item( mTree loading - include composition )
+                span The mTreePartial, produced by the previous step, is traversed and
+                    + all the '$include [path]' commands encountered are recursively resolved.
+                    + The recursion manages the mix-composition of included bricks too.
+
+            glo-item( mTree loading - append resolution )
+                span The mTreePartial resulting from composition is traversed again and
+                    + child branches (of mix commands), declared with the '$append [hook-name]' 
+                    + command node, are appended to the mixed mTreeBrick replacing the related '$hook [hook-name]' 
+                    + command node. Idem whith child branches of the `$override` command node that replaces
+                    + the `$virtual` command node of the mixed mTreeBrick.
+
+            glo-item( mTree loading - evaluation )
+                span The last step of an mTree loading. From the mTreePartial produced
+                    + by the previous steps is created a mTreeBuildUpScript that, interacting
+                    + with the JsWizziContext of the JsWizziRunner, evaluates
+                    + the ittf template commands and the JsWizzi scripts of its nodes, and builds the final mTree.
+            
+            glo-item( mTreeNode )
+
+            glo-item( multi ittf documents context management )
+            
+            glo-item( `$params` command )
+                ittf-panel
+                    title The '$params' command
+                    ittf
+                        #
+                            # Rules
+                            # `$params` node command format
+                            #   > $params param1 [,param2 [,param-n]]
+                            #   param   : [&]name[:type][|[&]default]
+                            #   &name   : the paramater is an object passed by reference, the name can be used in IttfMacro expressions
+                            #   name    : the paramater is a value, the name can be used in IttfMacro expressions
+                            #   type    : the parameter type
+                            #             one-of : string(default), integer, float, boolean, date, object (implicit
+                            #                      when '&' declared), macro (implicit, detected from IttfMacro delimiters
+                            #                      contained in the default value)
+                            #   &default : the default is an object in the global context, default is its name
+                            #   default  : typed-value | @@null | @@empty | @@undefined
+                            #             // warning! `title|null` becomes title = "null" (the quoted string null)
+                            #             // if you want title to be null then : `title|@@null`
+                            #   string  : quotes are optional, example: `title|"my way"` and `title|my way` are the same
+                            #   boolean : true | false
+                            #   date    : yyyy/mm/dd
+                            #   macro   : an IttfMacro can be passed as a parameter to a mixin, when the parameter
+                            #             is referenced we have a double macro substitution 
+                            #             TODO verify, explain how this works, macro or macros can be partial 
+                            #                  insides of the default value?
+
+            glo-item( Wizzi Errors )
+                ittf-panel
+                    title The '$params' command
+                    ittf
+                        errors
+                            FragmentParamsError packages/wizzi-mtree/.wizzi/lib/loader/t/mTreeBrick/parseFragmentParamsValues.js.ittf
+                            IttfIncludeError packages/wizzi-mtree/.wizzi/lib/loader/includer.js.ittf
+                            IttfMixError packages/wizzi-mtree/.wizzi/lib/loader/mixer.js.ittf
+                            IttfEvaluationError packages/wizzi-mtree/.wizzi/lib/loader/evaluator.js.ittf
+                            InvalidIttfError packages/wizzi-mtree/.wizzi/lib/loader/appender.js.ittf
+                            idem             packages/wizzi-mtree/.wizzi/lib/loader/nodifier.js.ittf
+                            +
+                            InterpolationError packages/wizzi-mtree/.wizzi/lib/jswizzi/t/jsWizziEvalHelper/getMTreeBrickEvalContext.js.ittf
+                            NodeError packages/wizzi-utils/lib/errors.js
+                            NodeError packages/wizzi-mtree/lib/errors.js
+                            IttfNotFoundError packages/wizzi-mtree/lib/errors.js
+                            IttfLoadError packages/wizzi-mtree/lib/errors.js
+                            RepoIOError packages/wizzi-mtree/lib/errors.js
+                            WizziError packages/wizzi-mtree/lib/errors.js
+                            InternalError packages/wizzi-mtree/lib/errors.js
+                            NotImplementedError packages/wizzi-repo/lib/errors.js                            
+                            InvalidRequestError packages/wizzi-repo/lib/errors.js                            
+                            FsItemNotFoundError packages/wizzi-repo/lib/errors.js
+                            IttfNotFoundError packages/wizzi-repo/lib/errors.js
+                            WizziPluginError
+                            WizziMetaError
+                            NotImplementedError packages/wizzi/lib/errors.js                            
+                            InvalidRequestError packages/wizzi/lib/errors.js
+                            NotFoundError packages/wizzi/lib/errors.js
+                            IttfNotFoundError packages/wizzi/lib/errors.js
+                            IttfLoadError packages/wizzi/lib/errors.js
+                            WizziModelLoadError packages/wizzi/lib/errors.js
+                            ModelTransformationError packages/wizzi/lib/errors.js
+                            ArtifactGenerationError packages/wizzi/lib/errors.js
+                            WizziInvalidRequestError packages/wizzi/lib/errors.js
+                            RunnerServerError packages/wizzi/lib/errors.js
+                            FileError packages/wizzi/lib/errors.js

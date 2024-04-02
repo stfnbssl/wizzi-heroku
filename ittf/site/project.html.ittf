@@ -1,5 +1,7 @@
 html
 
+    $include models/docs/site.wzctx
+    
     $
         var opt = {
             section: 'Project',
@@ -20,7 +22,7 @@ html
         }
         
 
-    layouts/site( &opt )
+    html/layouts/site( &opt )
     
         . flex-row space-between m-t-xxl width-full
             id stickyNavbar

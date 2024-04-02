@@ -155,8 +155,8 @@
 
             glo-item( Language Artifact Generator )
                 span 
-                    + A Language Artifact Generator is an Artifact Generator that generates 
-                        \b a file written in a Programming Language (PL).
+                    + A Language Artifact Generator is an Artifact Generator that generate 
+                        \b code files written in a Programming Language (PL).
                         \b For example the
                     high-code( js/module )
                     + and
@@ -174,14 +174,14 @@
 
             glo-item( Meta generation )
                 span
-                    + A meta generation is a data driven creation of a Wizzi Package. Not only
-                        \b single files but the entire
-                        \b folder and file structure of the package can be templated.
-                        \b The result of a meta generation are Ittf Documents. 
+                    + See `Meta production`
 
             glo-item( Meta production )
                 span
-                    + A meta generation is a data driven creation of a Wizzi Package. Not only
+
+                    + A meta production is a data driven creation of a Wizzi Package. 
+                        \b The entire folder and file structure of the package can be templated.
+                        \b The result of a meta generation are Ittf Documents. 
 
             glo-item( Mix Action )
                 span
@@ -203,7 +203,7 @@
 
             glo-item( mTree )
                 span 
-                    + An mTree is the result of the mTree Loading of an ITTF Document.
+                    + An mTree is the result of the mTree Loading of a ITTF Document.
                         \b mTrees are tree data structures, in-memory objects that are not persisted.
                         \b mTrees are verified and loaded into Wizzi Model Instances.
                         \b A Wizzi Model Loader, optionally, can pre-process an mTree before loading it.
@@ -246,10 +246,25 @@
 
             glo-item( Wizzi Action )
                 span 
-                    + Wizzi Actions are the steps of a Wizzi Production.
-                    + The main Wizzi Actions are: ITTF Processing, mTree Loading, mTree pre-processing, Wizzi Model Loading,
-                        \b Model Transformation, Artifact Generation, Meta generation.
-                    + Wizzi Action are orchestrated by Wizzi Jobs, or programmatically using the Wizzi API.
+                    + Wizzi Actions are the steps of a Wizzi Production. The main Wizzi Actions are: \b
+                    high-code( ITTF Processing
+                    + , 
+                    high-code( mTree Loading
+                    + , 
+                    high-code( mTree pre-processing
+                    + ,
+                    high-code( Wizzi Model Loading
+                    + ,
+                    high-code( Model Transformation
+                    + , 
+                    high-code( Artifact Generation
+                    + . Wizzi Actions are orchestrated by \b
+                    high-code( Wizzi Jobs
+                    + ,
+                    high-code( wizziHub Jobs
+                    + , or programmatically using the
+                    high-code( Wizzi API
+                    + .
 
             glo-item( Wizzi API )
                 span
@@ -425,10 +440,12 @@
                         \b In it you define an object model of 
                         \b named and typed elements 
                         \b that map the ITTF Nodes of an ITTF Document.
-                        \b A production transforms a Wizzi Schema in a Wizzi Model DOM, a javascript
+                        \b A production of the core plugin 
+                    to-plugin( wzschema
+                    + transforms a Wizzi Schema into a Wizzi Model DOM, a javascript
                         \b class that implements the schema object model. Wizzi Model Instances can
                         \b load and validate mTrees data.
-                        \b Typed elements become classes where you can write methods 
+                        \b Typed elements become classes and you can write methods 
                         \b for filtering and manipulating the loaded data.
 
             glo-item( Wizzi Store System )

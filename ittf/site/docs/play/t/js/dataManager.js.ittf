@@ -4,7 +4,7 @@
 		ctor
 			param props
 			set this.props = props
-			set this.schemaDatas = {}
+			set this.cheatsheetDatas = {}
 			set this.selectedSchema = null
 			_ this.initialize
 
@@ -12,9 +12,10 @@
 			
 			js/event_on( schema-selected
 				set this.selectedSchema = data.name
-				_ this.getSchemaData
+				_ this.getCheatsheetData
 					@ data.name
 
+			$*
 			js/event_on( select-tree-node
 				if data.treeNode.item.isFolder
 					return
@@ -40,20 +41,22 @@
 					@ value
 						_ wz.unescapeHtml
 							_ wz.replace(item.generated, '\\n', '\n')
+			*$
 
-		m getSchemaData
+		m getCheatsheetData
 			param name
 			
-			if this.schemaDatas[name]
+			if this.cheatsheetDatas[name]
 			
-				js/event_emit( schema-selected-ready
+				if true
+					js/event_emit( schema-selected-ready
 						@ name name
-						@ data this.schemaDatas[name]
+						@ json this.cheatsheetDatas[name]
 			
 			else
 			
 				_ fetch
-					@ 'https://stfnbssl.github.io/wizzi/cheatsheets/' + name + '.json'
+					@ '${ittfCtx.baseUrl}/api/v1/docs/cheatsheet/' + name
 					._ then
 						=>
 							param response
@@ -61,19 +64,34 @@
 					._ then
 						=>
 							param json
+							# _ alert(JSON.stringify(json,null, 2))
 							set json = this.setIds(json)
-							set this.schemaDatas[name] = json
-							js/event_emit( schema-selected-ready
-								@ name name
-								@ json json
+							set this.cheatsheetDatas[name] = json
+							if true
+								js/event_emit( schema-selected-ready
+									@ name name
+									@ json json
 					._ catch
 						=>
 							param err
 							# FIXME
-							log 'getSchemaData error', err
+							log 'getcheatsheetData error', err
 
 		m setIds
 			param json
+			set json.itemsDict = {}
+			var c = 1
+			_ json.elements.map
+				=> 
+					param element
+					param i
+					_ element.items.map
+						=>
+							param item
+							param j
+							set item.id = 'k' + c++
+							set json.itemsDict[item.id] = item
+
 			set json.itemsDict = {}
 			var c = 1
 			foreach e in json.elements
@@ -81,3 +99,14 @@
 					set item.id = 'k' + c++
 					set json.itemsDict[item.id] = item
 			return json
+
+		m getIttfCheatsheetItem
+			param id 
+			if this.selectedSchema && this.cheatsheetDatas[this.selectedSchema]
+			return this.cheatsheetDatas[this.selectedSchema].itemsDict[id].ittfWrapped
+
+		m getSnippetCheatsheetItem
+			param id 
+			if this.selectedSchema && this.cheatsheetDatas[this.selectedSchema]
+			return this.cheatsheetDatas[this.selectedSchema].itemsDict[id].generated
+

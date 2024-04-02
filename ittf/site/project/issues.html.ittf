@@ -1,5 +1,7 @@
 html
 
+    $include models/docs/site.wzctx
+    
     $
         var opt = {
             section: 'Project',
@@ -9,7 +11,7 @@ html
         // var ca = 'm-s color-header font-x font-w-s';
         var ca = 'm-s font-x font-w-s';
 
-    layouts/site( &opt )
+    html/layouts/site( &opt )
     
         $include ./head
 
@@ -19,14 +21,18 @@ html
 
                     h1 ISSUES
                     p In the Packi Editor the '$' ITTF Command must be followed by a space otherwise sinthax highlighting does not work correctly.
-            
                     h1 Core
+                    p In wizzi.WizziFactory.generateFolderArtifacts error callbacks should report the file path on which error occurred.
                     p (Ok for message, but there are unnecessary actions?) get free of crypto/endec.ENCRYPTION_KEY message/action
                     p Is the package wizzi-helpers still used ???
                     p wizzi-legacy-v5 can be integrated in wizzi-core? Should be documented.
                     p A wizzi macro expression should work even if there are spaces between graphs and expression ${'$'}{ '()' }
                     p Delete UTC time from generation headings, they produce false changes to commit.
                     
+                    h1 ALL PLUGINS
+                    p check all plugins in files lib/wizzi/schemas/t/*.ittf.
+                        \b The $hook command could be missing.
+
                     h1 wizzi-js
                     p in lib\artifacts\js\module\gen\codegen\statements\objects.js.ittf when a statement node inside an object '{' is
                         \b an empty line "+   " it causes a comma ", " to be written, the same as it were a property. 

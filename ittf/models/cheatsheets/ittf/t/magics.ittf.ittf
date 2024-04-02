@@ -12,7 +12,7 @@ $group
 				root
 					${'$'}
 						var commands = [ { name: 'alpha' }, { name: 'beta' }, { name: 'gamma' } ];
-					node We perform an interpolation of a multistatement jsWizzi expression.
+					node We perform an interpolation of a multistatement JsWizzi expression.
 					node We intersperse command names with dashes.
 					${'$'}foreach command in commands
 						node  ${'$'}{ command.name.toUpperCase()[0] + ' - ' + command.name }

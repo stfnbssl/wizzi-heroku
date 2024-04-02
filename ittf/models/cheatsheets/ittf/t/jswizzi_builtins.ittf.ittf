@@ -1,6 +1,6 @@
 $group
 
-	element jsWizzi builtin objects
+	element JsWizzi builtin objects
 		tag
 		ast 
 		category
@@ -33,14 +33,14 @@ $group
 					node '4'.ordinalize = ${'$'}{ '4'.ordinalize }
 
 		item
-			title 'jsWizzi _' builtin functions
+			title 'JsWizzi _' builtin functions
 			render ittf
 			ittf
 				root
 					node inflect : 'message-properties'.camelize = ${'$'}{ 'message-properties'.camelize }
-					node jsWizzi _ : _.dashToCamelCase('message-properties') = ${'$'}{ _.dashToCamelCase('message-properties') }
+					node JsWizzi _ : _.dashToCamelCase('message-properties') = ${'$'}{ _.dashToCamelCase('message-properties') }
 					node inflect : 'message_properties'.camelize = ${'$'}{ 'message_properties'.camelize }
-					node jsWizzi _ : _.camelize('message_properties') = ${'$'}{ _.camelize('message_properties') }
+					node JsWizzi _ : _.camelize('message_properties') = ${'$'}{ _.camelize('message_properties') }
 					${'$'} var text = 'alfa\\t " " \\n'
 					node "_.escape( text )" = "${'$'}{ _.escape( text ) }"
 					node _.isString( '3' ) = ${'$'}{ _.isString( '3' ) }
