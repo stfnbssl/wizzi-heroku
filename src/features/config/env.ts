@@ -2,7 +2,7 @@
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.hub.backend\.wizzi-override\src\features\config\env.ts.ittf
-    utc time: Fri, 24 Jan 2025 13:13:17 GMT
+    utc time: Fri, 24 Jan 2025 15:11:51 GMT
 */
 import path from 'path';
 import dotenv from 'dotenv';
@@ -17,8 +17,8 @@ function validateEnv() {
         MONGO_USER: str(), 
         MONGO_PASSWORD: str(), 
         MONGO_PATH: str(), 
-        IS_WIZZI_DEV: bool(), 
         PACKI_CONFIG_PATH: str(), 
+        IS_WIZZI_DEV: bool(), 
         PORT: port()
      });
     return checkedEnv;
@@ -37,8 +37,8 @@ export default function create():  ConfigType {
                 mongoUser: checkedEnv.MONGO_USER, 
                 mongoPassword: checkedEnv.MONGO_PASSWORD, 
                 mongoPath: checkedEnv.MONGO_PATH, 
-                isWizziDev: checkedEnv.IS_WIZZI_DEV, 
                 packiConfigPath: checkedEnv.PACKI_CONFIG_PATH, 
+                isWizziDev: checkedEnv.IS_WIZZI_DEV, 
                 port: checkedEnv.PORT, 
                 userUserName: "stfnbssl", 
                 userDisplayName: "Stefano Bassoli", 

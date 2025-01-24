@@ -2,7 +2,7 @@
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.hub.backend\.wizzi-override\src\features\wizziProductions\factory.ts.ittf
-    utc time: Fri, 24 Jan 2025 13:13:17 GMT
+    utc time: Fri, 24 Jan 2025 15:11:51 GMT
 */
 import path from 'path';
 import wizzi, {constants} from '@wizzi/factory';
@@ -17,22 +17,22 @@ const myname = 'features/wizzi/factory';
 function getWzCtxFactoryPlugins() {
     return {
             items: [
-                './wizzi.plugin.css/index.js', 
-                './wizzi.plugin.html/index.js', 
-                './wizzi.plugin.ittf/index.js', 
-                './wizzi.plugin.js/index.js', 
-                './wizzi.plugin.json/index.js', 
-                './wizzi.plugin.logbot/index.js', 
-                './wizzi.plugin.md/index.js', 
-                './wizzi.plugin.svg/index.js', 
-                './wizzi.plugin.text/index.js', 
-                './wizzi.plugin.ts/index.js', 
-                './wizzi.plugin.wzjob/index.js', 
-                './wizzi.plugin.wzschema/index.js', 
-                './wizzi.plugin.xml/index.js', 
-                './wizzi.plugin.yaml/index.js'
-            ], 
-            pluginsBaseFolder: 'C:/My/wizzi/stfnbssl/wizzi.plugins/packages'
+                '@wizzi/plugin.ai', 
+                '@wizzi/plugin.css', 
+                '@wizzi/plugin.html', 
+                '@wizzi/plugin.ittf', 
+                '@wizzi/plugin.js', 
+                '@wizzi/plugin.json', 
+                '@wizzi/plugin.logbot', 
+                '@wizzi/plugin.md', 
+                '@wizzi/plugin.svg', 
+                '@wizzi/plugin.text', 
+                '@wizzi/plugin.ts', 
+                '@wizzi/plugin.wzjob', 
+                '@wizzi/plugin.wzschema', 
+                '@wizzi/plugin.xml', 
+                '@wizzi/plugin.yaml'
+            ]
          };
 }
 
