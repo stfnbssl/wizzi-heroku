@@ -66,7 +66,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\MonacoEditor.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -481,7 +481,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\languages\ittf.language.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 // export * from 'monaco-editor-core';
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -622,7 +622,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\colors-dark.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const syntax = {
@@ -671,7 +671,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\colors-light.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const syntax = {
@@ -822,7 +822,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\monaco-overrides.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -851,7 +851,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\monaco.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -1057,7 +1057,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ResizeDetector.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -1171,7 +1171,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\prettier\index.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -1200,7 +1200,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\prettier\prettierCode.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 async function prettierCode(path, code) {

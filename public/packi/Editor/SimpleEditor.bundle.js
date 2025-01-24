@@ -23,7 +23,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\SimpleEditor.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
 

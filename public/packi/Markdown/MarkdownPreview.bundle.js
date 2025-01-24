@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\colors-dark.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const syntax = {
@@ -66,7 +66,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\colors-light.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const syntax = {
@@ -122,7 +122,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\simple-editor.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -209,7 +209,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Markdown\MarkdownPreview.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 

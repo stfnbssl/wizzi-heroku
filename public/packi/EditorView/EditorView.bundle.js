@@ -24,7 +24,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\AstIcon.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const AstIcon = _ref => {
@@ -79,7 +79,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\BrowserIcon.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const BrowserIcon = _ref => {
@@ -150,7 +150,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\CloseIcon.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const CloseIcon = _ref => {
@@ -199,7 +199,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\DebugIcon.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const DebugIcon = _ref => {
@@ -248,7 +248,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\EditIcon.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const EditIcon = _ref => {
@@ -303,7 +303,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\SaveIcon.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const SaveIcon = _ref => {
@@ -354,7 +354,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\WizziIcon.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const WizziIcon = _ref => {
@@ -429,7 +429,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\WizzifiedIcon.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 const WizzifiedIcon = _ref => {
@@ -500,7 +500,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\CodeView\SyntaxHighlighter.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -601,7 +601,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorFooter.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -887,7 +887,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorPanels.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -1058,7 +1058,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorToolbar.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -1320,7 +1320,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorView.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -1533,7 +1533,7 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         onCodeASTPreview
       } = this.props;
       const annotations = this.props.annotations;
-      const testPreviewURL = "".concat("http://localhost:3003", "/~/").concat(encodeURIComponent(owner), "/").concat(encodeURIComponent(name));
+      const testPreviewURL = "".concat("https://www.wizzihub.com", "/~/").concat(encodeURIComponent(owner), "/").concat(encodeURIComponent(name));
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_shell_ContentShell__WEBPACK_IMPORTED_MODULE_12__.ContentShell, null, this.state.loadedEditor ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_ProgressIndicator__WEBPACK_IMPORTED_MODULE_20__.ProgressIndicator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_PageMetadata__WEBPACK_IMPORTED_MODULE_10__.default, {
         name: name,
         description: description,
@@ -1920,7 +1920,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\GeneratedView.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -2175,7 +2175,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\GenerationErrors.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -2356,7 +2356,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\KeyboardShortcuts.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -2487,7 +2487,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\ModalProductionDetails.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -2689,7 +2689,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\NoFileSelected.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -2757,7 +2757,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\ProblemsPanel.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -2993,7 +2993,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\UserMenu.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -3080,19 +3080,19 @@ let UserMenuComp = /*#__PURE__*/function (_React$Component) {
         visible: this.state.visible,
         actions: loggedUser ? [{
           label: 'Artifacts',
-          handler: () => window.open("".concat("http://localhost:3003", "/productions/artifacts"))
+          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/artifacts"))
         }, {
           label: 'Packages',
-          handler: () => window.open("".concat("http://localhost:3003", "/productions/packages"))
+          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/packages"))
         }, {
           label: 'Metas',
-          handler: () => window.open("".concat("http://localhost:3003", "/productions/metas"))
+          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/metas"))
         }, {
           label: 'tFolders',
-          handler: () => window.open("".concat("http://localhost:3003", "/productions/tfolders"))
+          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/tfolders"))
         }, {
           label: 'Settings',
-          handler: () => window.open("".concat("http://localhost:3003", "/settings"))
+          handler: () => window.open("".concat("https://www.wizzihub.com", "/settings"))
         }] : [{
           label: 'Log in to Wizzi',
           handler: () => window.location.href = '#'
@@ -3206,7 +3206,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileList.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -3738,7 +3738,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListChildren.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -3887,7 +3887,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntry.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -4331,7 +4331,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntryBase.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -4645,7 +4645,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntryDropTarget.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -4819,7 +4819,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntryIcon.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -4974,7 +4974,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListOpenEntry.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -5167,7 +5167,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListPane.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -5297,7 +5297,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListPaneButton.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -5372,7 +5372,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\closeEntry.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 function closeEntry(entry) {
@@ -5420,7 +5420,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\createEntryAtPath.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -5468,7 +5468,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\createNewEntry.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -5533,7 +5533,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\expandEntry.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 function expandEntry(entries, path, expand = true) {
@@ -5568,7 +5568,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\openEntry.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 function openEntry(entries, path, focus = false) {
@@ -5645,7 +5645,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\pasteEntry.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -5685,7 +5685,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\recursivelyCreateParents.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 function recursivelyCreateParents(entries, path, expand) {
@@ -5738,7 +5738,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\renameEntry.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -5793,7 +5793,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\selectEntry.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 function selectEntry(entries, path) {
@@ -5827,7 +5827,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\updateEntry.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 function updateEntry(entry, updates) {
   return _objectSpread(_objectSpread({}, entry), {}, {
@@ -5861,7 +5861,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\utils\convertFileStructure.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -6034,7 +6034,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Packi\ModalGithubClone.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -6222,7 +6222,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Packi\PackiPanel.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -6311,14 +6311,14 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\PageMetadata.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
 function getPageMetadata(props) {
   const title = "".concat(props.name, " - Packi");
   const description = props.description;
-  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"http://localhost:3003","API_SERVER_URL":"http://localhost:3003","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1723218803656}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
+  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"https://www.wizzihub.com","API_SERVER_URL":"https://www.wizzihub.com","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1737747300855}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
   const image = 'https://s3.amazonaws.com/exp-brand-assets/PackiIcon_200.png';
   const meta = [{
     name: 'description',
@@ -6405,7 +6405,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Avatar.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
 
@@ -6479,7 +6479,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Banner.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -6597,7 +6597,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ContextMenu.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -6747,7 +6747,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\FooterButton.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -6829,7 +6829,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\IconButton.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -6983,7 +6983,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\KeybindingsManager.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 ;
@@ -7128,7 +7128,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\LargeInput.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -7267,7 +7267,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\LargeTextArea.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -7319,7 +7319,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\LoadingText.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -7390,7 +7390,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\MenuButton.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -7504,7 +7504,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Modal.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
@@ -7634,7 +7634,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ModalDialog.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
 
@@ -7689,7 +7689,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ModalSheet.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
 
@@ -7755,7 +7755,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ResizablePane.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -7945,7 +7945,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ShortcutLabel.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -8049,7 +8049,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Toast.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -8256,7 +8256,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ToggleSwitch.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -8348,7 +8348,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\WebFrame.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -8943,7 +8943,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\EditorForm.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -9255,7 +9255,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\Form.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 ;
@@ -9368,7 +9368,7 @@ __webpack_require__.r(__webpack_exports__);
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\index.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -9397,7 +9397,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\withStatus.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
@@ -9463,7 +9463,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
     package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\withValidation.tsx.ittf
-    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+    utc time: Fri, 24 Jan 2025 19:32:08 GMT
 */
 
 
