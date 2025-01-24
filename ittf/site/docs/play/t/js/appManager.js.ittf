@@ -25,6 +25,7 @@
 			_ this.createEditors
 			_ this.setEvents
 			_ this.createOptions
+			_ this.dataManager.getCheatsheetList
 
 		m initStore
 			set this.store = new LocalStorage('wizzify')

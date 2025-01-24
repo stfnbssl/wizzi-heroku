@@ -87,8 +87,16 @@ $group
                         url: "./wizzijobs.html.ittf"
                     },
                     {
+                        title: "Wizzi Meta Productions",
+                        url: "./wizzimetaproductions.html.ittf"
+                    },
+                    {
                         title: "Wizzi Plugins",
                         url: "./wizziplugins.html.ittf"
+                    },
+                    {
+                        title: "Wizzi Meta Plugins",
+                        url: "./wizzimetaplugins.html.ittf"
                     },
                     {
                         title: "Wizzi API",

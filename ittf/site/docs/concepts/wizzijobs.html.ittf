@@ -10,5 +10,5 @@
     _layouts/concepts(&art)
     
         $include ./wizzijobs/introduction
-        $include ./wizzijobs/wfjob
+        $include ./wizzijobs/wzjob
         $include ./wizzijobs/runnerServer

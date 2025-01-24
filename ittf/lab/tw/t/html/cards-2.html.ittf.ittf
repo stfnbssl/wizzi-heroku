@@ -1,0 +1,5 @@
+$group
+    . row
+        . card
+            h4 What is a Frontend Develoment?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam porro similique aliquid debitis ipsam soluta dolorum ipsa! Voluptate, suscipit iure.

@@ -21,9 +21,10 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\AstIcon.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 const AstIcon = _ref => {
@@ -42,18 +43,11 @@ const AstIcon = _ref => {
     width: width,
     height: height,
     viewBox: "0 0 400 180"
-  }, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("text", {
-    x: "200",
-    y: "141",
-    "font-size": "130",
-    "font-family": "Helvetica,Arial,Sans",
-    "font-weight": "bold",
-    "text-anchor": "middle"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+  }, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
     fill: "none",
     stroke: stroke,
     d: "m199-90a180,180 0 1,0 2,0",
-    "stroke-width": "40"
+    strokeWidth: "40"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
     d: "M88,15a135,135 0 0,0 0,150h32a114,114 0 0,1 0-150M280,15a114,114 0 0,1 0,150h32a135,135 0 0,0 0-150"
   }));
@@ -82,9 +76,10 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\BrowserIcon.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 const BrowserIcon = _ref => {
@@ -131,6 +126,55 @@ const BrowserIcon = _ref => {
 
 /***/ }),
 
+/***/ "./src/assets/CloseIcon.tsx":
+/*!**********************************!*\
+  !*** ./src/assets/CloseIcon.tsx ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CloseIcon": () => (/* binding */ CloseIcon)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+const _excluded = ["height", "width", "theme"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+/*
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\CloseIcon.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+*/
+
+const CloseIcon = _ref => {
+  let {
+    height = "24px",
+    width = "24px",
+    theme = "light"
+  } = _ref,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  const fill = theme == 'light' ? '#ffffff' : '#000000';
+  const stroke = theme == 'light' ? '#000000' : '#ffffff';
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: width,
+    height: height,
+    viewBox: "0 0 122.88 122.88"
+  }, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M61.44,0A61.44,61.44,0,1,1,0,61.44,61.44,61.44,0,0,1,61.44,0ZM74.58,36.8c1.74-1.77,2.83-3.18,5-1l7,7.13c2.29,2.26,2.17,3.58,0,5.69L73.33,61.83,86.08,74.58c1.77,1.74,3.18,2.83,1,5l-7.13,7c-2.26,2.29-3.58,2.17-5.68,0L61.44,73.72,48.63,86.53c-2.1,2.15-3.42,2.27-5.68,0l-7.13-7c-2.2-2.15-.79-3.24,1-5l12.73-12.7L36.35,48.64c-2.15-2.11-2.27-3.43,0-5.69l7-7.13c2.15-2.2,3.24-.79,5,1L61.44,49.94,74.58,36.8Z"
+  }));
+};
+
+/***/ }),
+
 /***/ "./src/assets/DebugIcon.tsx":
 /*!**********************************!*\
   !*** ./src/assets/DebugIcon.tsx ***!
@@ -152,9 +196,10 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\DebugIcon.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 const DebugIcon = _ref => {
@@ -200,9 +245,10 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\EditIcon.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 const EditIcon = _ref => {
@@ -233,6 +279,57 @@ const EditIcon = _ref => {
 
 /***/ }),
 
+/***/ "./src/assets/SaveIcon.tsx":
+/*!*********************************!*\
+  !*** ./src/assets/SaveIcon.tsx ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "SaveIcon": () => (/* binding */ SaveIcon)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+const _excluded = ["height", "width", "theme"];
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+/*
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
+    primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\SaveIcon.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
+*/
+
+const SaveIcon = _ref => {
+  let {
+    height = "24px",
+    width = "24px",
+    theme = "light"
+  } = _ref,
+      props = _objectWithoutProperties(_ref, _excluded);
+
+  const fill = theme == 'light' ? '#ffffff' : '#000000';
+  const stroke = theme == 'light' ? '#000000' : '#ffffff';
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: width,
+    height: height,
+    viewBox: "0 0 352.198 352.197"
+  }, props), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M338.377,49.572c-13.464-14.688-30.6-25.092-45.899-37.944c1.224-3.06,0-6.732-3.672-7.344 c-29.376-6.12-56.916-3.672-86.292-1.836C166.406,4.896,129.687,0,92.966,0C50.738,0,12.183,6.732,8.51,55.692 c-5.508,63.648-7.344,128.521-6.12,192.167c0.612,41.617-4.896,83.844,42.84,95.473c29.376,7.344,66.708-0.611,96.696-1.836 c36.72-1.836,72.828,7.955,109.548,10.404c40.392,2.447,77.724-9.793,86.292-52.633c4.896-24.48,3.06-50.184,4.284-74.664 c2.447-39.168,7.344-77.724,7.956-116.892C350.006,88.74,352.454,64.872,338.377,49.572z M47.678,201.961 c0-5.51,0.612-10.404,0.612-15.912c0,5.508,0.612,11.627,0.612,17.135C48.902,202.572,48.291,202.572,47.678,201.961z M263.714,112.608c-0.612,23.868-7.956,22.644-29.988,22.644c-18.36-0.612-36.72-1.224-55.08,0.612 c-20.808,2.448-93.636,29.376-94.859-10.404c-1.224-31.824,3.06-61.812,1.224-93.636c19.584,0.612,38.556-0.612,41.616-0.612 c26.928-1.224,53.855,0.612,80.783,2.448c15.3,1.224,36.108,3.672,54.468,1.224C260.654,60.588,263.714,86.904,263.714,112.608z M280.238,273.564c-0.612,2.447-1.224,4.896-2.448,7.344c0.612-3.061,0.612-6.119,1.225-8.568c0.611-2.447,1.224-4.283,1.836-6.732 C280.85,268.057,280.238,270.504,280.238,273.564z"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M222.709,41.004c-9.18,0.612-17.748,0.612-26.928,1.836h-0.611l0,0h-0.612h-0.612c-2.448,0.612-3.672,2.448-3.672,4.284 c0,0.612-0.612,0.612-0.612,1.224c-6.12,22.032-4.283,45.288,0,67.32c0.612,3.06,3.061,4.896,5.509,5.508 c7.344,2.448,17.136,2.448,24.479,0c3.672-1.224,5.508-4.284,6.12-7.956c1.836-21.42,3.672-43.452,5.508-64.872 C230.666,44.676,226.382,41.004,222.709,41.004z"
+  }));
+};
+
+/***/ }),
+
 /***/ "./src/assets/WizziIcon.tsx":
 /*!**********************************!*\
   !*** ./src/assets/WizziIcon.tsx ***!
@@ -254,9 +351,10 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\WizziIcon.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 const WizziIcon = _ref => {
@@ -328,9 +426,10 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\assets\WizzifiedIcon.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 const WizzifiedIcon = _ref => {
@@ -398,14 +497,16 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\CodeView\SyntaxHighlighter.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
 
+;
 let SyntaxHighlighter = /*#__PURE__*/function (_React$Component) {
   _inherits(SyntaxHighlighter, _React$Component);
 
@@ -497,9 +598,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_ShortcutLabel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../widgets/ShortcutLabel */ "./src/components/widgets/ShortcutLabel.tsx");
 /* harmony import */ var _widgets_ToggleSwitch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../widgets/ToggleSwitch */ "./src/components/widgets/ToggleSwitch.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorFooter.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -512,6 +614,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+;
 
 function EditorFooterComp(props) {
   var _text;
@@ -781,9 +884,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorPanels.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -945,13 +1049,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_WizziIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/WizziIcon */ "./src/assets/WizziIcon.tsx");
 /* harmony import */ var _assets_EditIcon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/EditIcon */ "./src/assets/EditIcon.tsx");
 /* harmony import */ var _assets_BrowserIcon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../assets/BrowserIcon */ "./src/assets/BrowserIcon.tsx");
-/* harmony import */ var _widgets_IconButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../widgets/IconButton */ "./src/components/widgets/IconButton.tsx");
-/* harmony import */ var _UserMenu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./UserMenu */ "./src/components/EditorView/UserMenu.tsx");
-/* harmony import */ var _ModalProductionDetails__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ModalProductionDetails */ "./src/components/EditorView/ModalProductionDetails.tsx");
+/* harmony import */ var _assets_SaveIcon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../assets/SaveIcon */ "./src/assets/SaveIcon.tsx");
+/* harmony import */ var _assets_CloseIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../assets/CloseIcon */ "./src/assets/CloseIcon.tsx");
+/* harmony import */ var _widgets_IconButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../widgets/IconButton */ "./src/components/widgets/IconButton.tsx");
+/* harmony import */ var _UserMenu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./UserMenu */ "./src/components/EditorView/UserMenu.tsx");
+/* harmony import */ var _ModalProductionDetails__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ModalProductionDetails */ "./src/components/EditorView/ModalProductionDetails.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorToolbar.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -962,6 +1069,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+;
 function EditorToolbar(props) {
   const [preferences] = (0,_features_preferences__WEBPACK_IMPORTED_MODULE_2__.usePreferences)();
   const {
@@ -975,6 +1085,7 @@ function EditorToolbar(props) {
     saveStatus,
     isDownloading,
     isEditModalVisible,
+    isLocalFolder,
     onSubmitMetadata,
     onShowEditModal,
     onDismissEditModal,
@@ -986,13 +1097,16 @@ function EditorToolbar(props) {
     isWizziJobWaiting,
     generatedPreviewURL,
     onExecuteWizziJob,
-    onExecuteWizziMetaFolder
+    onExecuteWizziMetaFolder,
+    onSaveLocalFolder,
+    onCloseLocalFolder
   } = props;
   const {
     theme
   } = preferences;
   const isPublishing = saveStatus === 'publishing';
   const isPublished = saveStatus === 'published';
+  const productionLabel = isLocalFolder ? "Filesystem folder" : packiProduction;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.ve_top_bar)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -1007,13 +1121,15 @@ function EditorToolbar(props) {
     className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.ve_top_bar_control)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.ve_top_bar_label)
-  }, packiProduction, " Production"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }, productionLabel, " Production"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.ve_top_bar_label)
+  }, "File ... todo ..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.ve_top_bar_field)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.ve_top_bar_field_editor)
-  }, name + (readOnly ? ' (generated, readonly)' : '')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }, name + (readOnly ? ' (generated, readonly)' : '')), !isLocalFolder && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.ve_top_bar_field_button)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
     responsive: true,
     title: "Edit production metadata",
     onClick: onShowEditModal
@@ -1023,11 +1139,11 @@ function EditorToolbar(props) {
     height: "20"
   }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.ve_top_bar_icons)
-  }, packiProduction == 'artifact' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
     responsive: true,
     title: "Browse generated",
     onClick: () => window.open(generatedPreviewURL)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_assets_BrowserIcon__WEBPACK_IMPORTED_MODULE_5__.BrowserIcon, null)), packiProduction == 'package' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_assets_BrowserIcon__WEBPACK_IMPORTED_MODULE_5__.BrowserIcon, null)), packiProduction == 'package' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
     responsive: true,
     title: "Generate .wizzi-meta folder",
     onClick: onExecuteWizziMetaFolder
@@ -1051,7 +1167,7 @@ function EditorToolbar(props) {
     d: "M18.7,16.1a.92.92,0,0,1-.36-.07L8.14,12.1a1,1,0,0,1,.72-1.87l10.2,3.94a1,1,0,0,1-.36,1.93Z"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("path", {
     d: "M12.21,18.5a1,1,0,0,1-.6-.2L6,14.1a1,1,0,1,1,1.19-1.6l5.62,4.2a1,1,0,0,1,.2,1.4A1,1,0,0,1,12.21,18.5Z"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
     responsive: true,
     title: "Generate package",
     onClick: onExecuteWizziJob
@@ -1065,9 +1181,25 @@ function EditorToolbar(props) {
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round"
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_UserMenu__WEBPACK_IMPORTED_MODULE_7__.default, {
+  })))), isLocalFolder && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+    responsive: true,
+    title: "Save",
+    onClick: onSaveLocalFolder
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_assets_SaveIcon__WEBPACK_IMPORTED_MODULE_6__.SaveIcon, {
+    theme: theme,
+    width: "20",
+    height: "20"
+  }))), isLocalFolder && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_widgets_IconButton__WEBPACK_IMPORTED_MODULE_8__.default, {
+    responsive: true,
+    title: "Close",
+    onClick: onCloseLocalFolder
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_assets_CloseIcon__WEBPACK_IMPORTED_MODULE_7__.CloseIcon, {
+    theme: theme,
+    width: "20",
+    height: "20"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_UserMenu__WEBPACK_IMPORTED_MODULE_9__.default, {
     loggedUser: loggedUser
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_ModalProductionDetails__WEBPACK_IMPORTED_MODULE_8__.default, {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_ModalProductionDetails__WEBPACK_IMPORTED_MODULE_10__.default, {
     title: "Edit Production Details",
     action: "Done",
     visible: isEditModalVisible,
@@ -1185,9 +1317,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\EditorView.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -1216,6 +1349,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const EDITOR_LOAD_FALLBACK_TIMEOUT = 3000;
+;
 const BANNER_TIMEOUT_SHORT = 1500;
 const BANNER_TIMEOUT_LONG = 5000;
 
@@ -1375,14 +1509,17 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         mainIttf,
         wizziSchema,
         packiProduction,
+        isLocalFolder,
         previewRef,
         previewURL,
         loggedUser,
         onExecuteWizziJob,
         onExecuteWizziMetaFolder,
+        onSaveLocalFolder,
+        onCloseLocalFolder,
         previewKind,
         generatedArtifact,
-        mTreeBuildupScript,
+        mTreeBuildUpScript,
         mTreeIttf,
         isWizziJobWaiting,
         wizzifiedIttfContent,
@@ -1396,7 +1533,7 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         onCodeASTPreview
       } = this.props;
       const annotations = this.props.annotations;
-      const testPreviewURL = "".concat("https://www.wizzihub.com", "/~/").concat(encodeURIComponent(owner), "/").concat(encodeURIComponent(name));
+      const testPreviewURL = "".concat("http://localhost:3003", "/~/").concat(encodeURIComponent(owner), "/").concat(encodeURIComponent(name));
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_shell_ContentShell__WEBPACK_IMPORTED_MODULE_12__.ContentShell, null, this.state.loadedEditor ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_widgets_ProgressIndicator__WEBPACK_IMPORTED_MODULE_20__.ProgressIndicator, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_PageMetadata__WEBPACK_IMPORTED_MODULE_10__.default, {
         name: name,
         description: description,
@@ -1426,6 +1563,7 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         saveStatus: saveStatus,
         loggedUser: loggedUser,
         isEditModalVisible: currentModal === 'edit-info',
+        isLocalFolder: isLocalFolder,
         isWizziJobWaiting: isWizziJobWaiting,
         onChangeSplitViewKind: this._handleChangeSplitViewKind,
         splitViewKind: this.state.splitViewKind,
@@ -1435,6 +1573,8 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         onDismissEditModal: this._handleDismissEditModal,
         onExecuteWizziJob: onExecuteWizziJob,
         onExecuteWizziMetaFolder: onExecuteWizziMetaFolder,
+        onSaveLocalFolder: onSaveLocalFolder,
+        onCloseLocalFolder: onCloseLocalFolder,
         onSubmitMetadata: this.props.onSubmitMetadata,
         onDownloadCode: this.props.onDownloadAsync,
         onPublishAsync: onPublishAsync
@@ -1584,7 +1724,7 @@ let EditorViewComp = /*#__PURE__*/function (_React$Component) {
         selectedFile: this.props.selectedFile,
         generatedContent: generatedArtifact ? generatedArtifact.artifactContent : undefined,
         generatedSourcePath: generatedArtifact ? generatedArtifact.sourcePath : undefined,
-        mTreeBuildupScript: mTreeBuildupScript,
+        mTreeBuildUpScript: mTreeBuildUpScript,
         mTreeIttf: mTreeIttf,
         wizzifiedIttfContent: wizzifiedIttfContent,
         codeASTContent: codeASTContent,
@@ -1777,9 +1917,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\GeneratedView.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -1848,16 +1989,16 @@ let GeneratedView = /*#__PURE__*/function (_React$Component) {
         code: this.props.mTreeIttf || '',
         filePath: 'mTree.ittf',
         lineNumbers: true
-      })), previewKind === 'mTreeBuildupScript' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      })), previewKind === 'mTreeBuildUpScript' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.editor
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CodeView_SyntaxHighlighter__WEBPACK_IMPORTED_MODULE_5__.default, {
         className: classes.syntaxHigh,
-        code: this.props.mTreeBuildupScript || '',
-        filePath: 'mTreeBuildupScript.js',
+        code: this.props.mTreeBuildUpScript || '',
+        filePath: 'mTreeBuildUpScript.js',
         lineNumbers: true
       })), previewKind === 'browser' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.browserOuter
-      }, this.props.generatedSourcePath.endsWith('.html.ittf') || this.props.generatedSourcePath.endsWith('.svg.ittf') ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_WebFrame__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }, this.props.generatedSourcePath.endsWith('.html.ittf') || this.props.generatedSourcePath.endsWith('.logbot.ittf') || this.props.generatedSourcePath.endsWith('.svg.ittf') ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_WebFrame__WEBPACK_IMPORTED_MODULE_6__.default, {
         previewURL: this.props.generatedPreviewURL
       }) : this.props.generatedSourcePath.endsWith('.md.ittf') ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_widgets_LazyLoad__WEBPACK_IMPORTED_MODULE_7__.default, {
         load: () => Promise.all(/*! import() | Markdown/MarkdownPreview */[__webpack_require__.e("vendors-node_modules_escape-html_index_js-node_modules_marked_lib_marked_js-node_modules_pris-17ca71"), __webpack_require__.e("Markdown/MarkdownPreview")]).then(__webpack_require__.bind(__webpack_require__, /*! ../Markdown/MarkdownPreview */ "./src/components/Markdown/MarkdownPreview.tsx"))
@@ -2031,12 +2172,14 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\GenerationErrors.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
+;
 let GenerationErrors = /*#__PURE__*/function (_React$Component) {
   _inherits(GenerationErrors, _React$Component);
 
@@ -2055,6 +2198,7 @@ let GenerationErrors = /*#__PURE__*/function (_React$Component) {
         classes,
         error
       } = this.props;
+      console.log("[31m%s[0m", error);
       var {
         name,
         message,
@@ -2113,7 +2257,7 @@ let GenerationErrors = /*#__PURE__*/function (_React$Component) {
         className: classes.container
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.errorName
-      }, name), method && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      }, "Error ", name), method && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.errorMethod
       }, "Method: ", method), ittfDocumentUri && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: classes.errorUri
@@ -2209,9 +2353,10 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\KeyboardShortcuts.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -2339,9 +2484,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\ModalProductionDetails.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -2540,9 +2686,10 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\NoFileSelected.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -2607,14 +2754,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\ProblemsPanel.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
 
+;
 function ProblemsPanel({
   annotations,
   onSelectFile
@@ -2841,15 +2990,17 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\EditorView\UserMenu.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
 
 
+;
 let UserMenuComp = /*#__PURE__*/function (_React$Component) {
   _inherits(UserMenuComp, _React$Component);
 
@@ -2929,19 +3080,19 @@ let UserMenuComp = /*#__PURE__*/function (_React$Component) {
         visible: this.state.visible,
         actions: loggedUser ? [{
           label: 'Artifacts',
-          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/artifacts"))
+          handler: () => window.open("".concat("http://localhost:3003", "/productions/artifacts"))
         }, {
           label: 'Packages',
-          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/packages"))
+          handler: () => window.open("".concat("http://localhost:3003", "/productions/packages"))
         }, {
           label: 'Metas',
-          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/metas"))
+          handler: () => window.open("".concat("http://localhost:3003", "/productions/metas"))
         }, {
           label: 'tFolders',
-          handler: () => window.open("".concat("https://www.wizzihub.com", "/productions/tfolders"))
+          handler: () => window.open("".concat("http://localhost:3003", "/productions/tfolders"))
         }, {
           label: 'Settings',
-          handler: () => window.open("".concat("https://www.wizzihub.com", "/settings"))
+          handler: () => window.open("".concat("http://localhost:3003", "/settings"))
         }] : [{
           label: 'Log in to Wizzi',
           handler: () => window.location.href = '#'
@@ -3052,9 +3203,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileList.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -3081,6 +3233,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+;
 
 const AddIcon = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", {
   transform: "translate(7.000000, 7.000000)"
@@ -3582,9 +3735,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListChildren.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -3604,8 +3758,8 @@ let FileListChildren = /*#__PURE__*/function (_React$PureComponent) {
 
     _this = _super.call(this, ...args);
 
-    _defineProperty(_assertThisInitialized(_this), "_getImmediateChildren", () => _this.props.entries.filter(e => !e.item.path.replace(new RegExp("^".concat(escape_string_regexp__WEBPACK_IMPORTED_MODULE_1___default()(_this.props.parent), "/")), '').includes('/') // Filter-out non-immediate children
-    ));
+    _defineProperty(_assertThisInitialized(_this), "_getImmediateChildren", () => _this.props.entries.filter(e => // Filter-out non-immediate children
+    !e.item.path.replace(new RegExp("^".concat(escape_string_regexp__WEBPACK_IMPORTED_MODULE_1___default()(_this.props.parent), "/")), '').includes('/')));
 
     return _this;
   }
@@ -3730,9 +3884,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntry.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -3742,6 +3897,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+;
 
 const toggleTSExt = name => name.replace(/(\.[^.]+$)/, (_, $1) => $1 === '.js' ? '.tsx' : '.js');
 
@@ -4172,9 +4328,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntryBase.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -4485,9 +4642,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntryDropTarget.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -4658,9 +4816,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _features_file__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../features/file */ "./src/features/file/index.tsx");
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListEntryIcon.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -4812,9 +4971,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListOpenEntry.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -5004,9 +5164,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aphrodite__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! aphrodite */ "./node_modules/aphrodite/no-important.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListPane.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -5133,9 +5294,10 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\FileListPaneButton.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -5207,9 +5369,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\closeEntry.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 function closeEntry(entry) {
@@ -5254,9 +5417,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _features_file__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../features/file */ "./src/features/file/index.tsx");
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\createEntryAtPath.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -5301,9 +5465,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _createEntryAtPath__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createEntryAtPath */ "./src/components/FileList/actions/createEntryAtPath.tsx");
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\createNewEntry.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -5365,9 +5530,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\expandEntry.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 function expandEntry(entries, path, expand = true) {
@@ -5399,9 +5565,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\openEntry.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 function openEntry(entries, path, focus = false) {
@@ -5475,9 +5642,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _createEntryAtPath__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createEntryAtPath */ "./src/components/FileList/actions/createEntryAtPath.tsx");
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\pasteEntry.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -5514,9 +5682,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _features_file__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../features/file */ "./src/features/file/index.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\recursivelyCreateParents.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 function recursivelyCreateParents(entries, path, expand) {
@@ -5566,9 +5735,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _recursivelyCreateParents__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./recursivelyCreateParents */ "./src/components/FileList/actions/recursivelyCreateParents.tsx");
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\renameEntry.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -5620,9 +5790,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _updateEntry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./updateEntry */ "./src/components/FileList/actions/updateEntry.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\selectEntry.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 function selectEntry(entries, path) {
@@ -5653,9 +5824,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\actions\updateEntry.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 function updateEntry(entry, updates) {
   return _objectSpread(_objectSpread({}, entry), {}, {
@@ -5686,9 +5858,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\FileList\utils\convertFileStructure.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -5858,9 +6031,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Packi\ModalGithubClone.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -6045,9 +6219,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Packi\PackiPanel.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -6133,16 +6308,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_helmet_async__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-helmet-async */ "./node_modules/react-helmet-async/lib/index.module.js");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\PageMetadata.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 function getPageMetadata(props) {
   const title = "".concat(props.name, " - Packi");
   const description = props.description;
-  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"https://www.wizzihub.com","API_SERVER_URL":"https://www.wizzihub.com","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1666193470771}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
+  const url = "".concat(({"NODE_ENV":"development","SERVER_URL":"http://localhost:3003","API_SERVER_URL":"http://localhost:3003","PACKI_SEGMENT_KEY":"","PACKI_AMPLITUDE_KEY":"","PACKI_WEBPLAYER_URL":"","DEPLOY_ENVIRONMENT":"staging","BUILD_TIMESTAMP":1723218803656}).PACKI_SERVER_URL).concat(props.id ? "/".concat(props.id) : '', "\n    ");
   const image = 'https://s3.amazonaws.com/exp-brand-assets/PackiIcon_200.png';
   const meta = [{
     name: 'description',
@@ -6226,9 +6402,10 @@ var _templateObject, _templateObject2;
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Avatar.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
 
@@ -6299,15 +6476,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Banner.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
 
 
-const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    padding: 0 10px;\n    z-index: 999;\n    text-align: center;\n    pointer-events: none;\n    \n"])));
+const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    padding: 0 10px;\n    z-index: 999;\n    text-align: center;\n    pointer-events: none;\n"])));
 const StyledBanner = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: inline-block;\n    margin: auto;\n    padding: 1em;\n    max-width: 100%;\n    background-color: ", ";\n    color: ", ";\n    -webkit-border-radius: 0 0 4px 4px;\n    -khtml-border-radius: 0 0 4px 4px;\n    -moz-border-radius: 0 0 4px 4px;\n    -o-border-radius: 0 0 4px 4px;\n    border-radius: 0 0 4px 4px;\n    transition-duration: 200ms;\n    pointer-events: ", ";\n    -webkit-box-shadow: ", ";\n    -moz-box-shadow: ", ";\n    -o-box-shadow: ", ";\n    box-shadow: ", ";\n    -webkit-transform: ", ";\n    -ms-transition: ", ";\n    transform: ", ";\n"])), props => props.type === 'success' ? (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_1__.c)('success') : props.type === 'error' ? (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_1__.c)('error') : (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_1__.c)('primary'), props => props.type === 'success' ? (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_1__.c)('success-text') : props.type === 'error' ? (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_1__.c)('error-text') : (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_1__.c)('primary-text'), props => props.visible ? "auto" : "none", props => (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_1__.s)('popover'), props => (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_1__.s)('popover'), props => (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_1__.s)('popover'), props => (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_1__.s)('popover'), props => props.visible ? "translateY(0)" : "translateY(-100%)", props => props.visible ? "translateY(0)" : "translateY(-100%)", props => props.visible ? "translateY(0)" : "translateY(-100%)");
 let Banner = /*#__PURE__*/function (_PureComponent) {
   _inherits(Banner, _PureComponent);
@@ -6416,15 +6594,18 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ContextMenu.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
 
 
+;
+;
 const BOTTOM_OFFSET = 35;
 const MENU_ITEM_HEIGHT = 28;
 let ContextMenu = /*#__PURE__*/function (_React$PureComponent) {
@@ -6563,9 +6744,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\FooterButton.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -6644,13 +6826,15 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\IconButton.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
+;
 function IconButton(_ref) {
   let {
     title,
@@ -6796,11 +6980,13 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\KeybindingsManager.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
+;
 const isMac = 'navigator' in __webpack_require__.g && /Mac/i.test(navigator.platform);
 const KeyMap = {
   C: 67,
@@ -6939,13 +7125,15 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\LargeInput.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
+;
 let LargeInput = /*#__PURE__*/function (_React$Component) {
   _inherits(LargeInput, _React$Component);
 
@@ -7076,14 +7264,16 @@ __webpack_require__.r(__webpack_exports__);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\LargeTextArea.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
 
+;
 function LargeTextArea(_ref) {
   let rest = _extends({}, _ref);
 
@@ -7126,9 +7316,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\LoadingText.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -7196,14 +7387,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /* harmony import */ var _FooterButton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FooterButton */ "./src/components/widgets/FooterButton.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\MenuButton.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
 
+;
 function MenuButton({
   icon,
   label,
@@ -7308,16 +7501,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Modal.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
 
 
 const StyledRoot = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    -webkit-font-smoothing: antialiased;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    color: #fff;\n    z-index: 999;\n    transition-property: opacity;\n    transition-duration: 200ms;\n    background-color: ", ";\n    opacity: ", ";\n    pointer-events: ", ";\n"])), props => props.initial ? "rgba(24, 29, 37, 0.8)" : "inherit", props => props.visible ? "1" : "0", props => props.visible ? "auto" : "none");
-const StyledContent = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 100%;\n    display: -ms-flexbox;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-align-items: center;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    -webkit-justify-content: center;\n    justify-content: center;\n    \n"])));
+const StyledContent = styled_components__WEBPACK_IMPORTED_MODULE_2__.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 100%;\n    display: -ms-flexbox;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-align-items: center;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    -webkit-justify-content: center;\n    justify-content: center;\n"])));
 let Modal = /*#__PURE__*/function (_PureComponent) {
   _inherits(Modal, _PureComponent);
 
@@ -7437,16 +7631,17 @@ var _templateObject, _templateObject2, _templateObject3;
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ModalDialog.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
 
 
 
 
-const StyledModalSheet = (0,styled_components__WEBPACK_IMPORTED_MODULE_3__.default)(_ModalSheet__WEBPACK_IMPORTED_MODULE_1__.ModalSheet)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    min-width: 360px;\n    min-height: 0;\n    max-width: 420px;\n    max-height: calc(100% - 100px);\n    \n"])));
+const StyledModalSheet = (0,styled_components__WEBPACK_IMPORTED_MODULE_3__.default)(_ModalSheet__WEBPACK_IMPORTED_MODULE_1__.ModalSheet)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    min-width: 360px;\n    min-height: 0;\n    max-width: 420px;\n    max-height: calc(100% - 100px);\n"])));
 const StyledTitle = styled_components__WEBPACK_IMPORTED_MODULE_3__.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    height: 72px;\n    font-size: 24px;\n    width: 100%;\n    line-height: 24px;\n    display: -ms-flexbox;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-flex-shrink: 0;\n    -ms-flex-negative: 0;\n    flex-shrink: 0;\n    -webkit-align-items: center;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    -webkit-justify-content: center;\n    justify-content: center;\n    border-bottom: ", ";\n"])), props => "1px solid " + (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_2__.c)('border'));
 const StyledContent = styled_components__WEBPACK_IMPORTED_MODULE_3__.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    padding: ", ";\n    overflow: auto;\n"])), props => props.title ? "16px 24px 24px 24px" : "24px");
 const ModalDialog = ({
@@ -7491,9 +7686,10 @@ var _templateObject, _templateObject2;
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ModalSheet.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
  // see https://mxstbr.blog/2016/11/styled-components-magic-explained/
 
@@ -7556,9 +7752,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ResizablePane.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -7745,9 +7942,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /* harmony import */ var _KeybindingsManager__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./KeybindingsManager */ "./src/components/widgets/KeybindingsManager.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ShortcutLabel.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -7755,6 +7953,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+;
 const isMac = 'navigator' in __webpack_require__.g && /Mac/i.test(navigator.platform);
 const KeyLabels = {
   Cmd: '⌘',
@@ -7847,14 +8046,16 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\Toast.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
 
+;
 const TOAST_GROUP_ID = '__toast_group__container';
 let Toast = /*#__PURE__*/function (_React$Component) {
   _inherits(Toast, _React$Component);
@@ -8052,14 +8253,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ToggleSwitch.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
 
+;
 function ToggleSwitch(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("label", {
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()((0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.container), props.className)
@@ -8142,13 +8345,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\WebFrame.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
 
+;
 function WebFrame({
   previewURL
 }) {
@@ -8735,9 +8940,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\EditorForm.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -8756,6 +8962,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function validationOk(value) {
   return null;
 }
+
+;
 
 function stateDefaultValues(fields) {
   const ret = {};
@@ -9044,11 +9252,13 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\Form.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
+;
 const FormValidationContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(undefined);
 
 let Form = /*#__PURE__*/function (_React$Component) {
@@ -9155,9 +9365,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _withValidation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./withValidation */ "./src/features/form/withValidation.tsx");
 /* harmony import */ var _withStatus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./withStatus */ "./src/features/form/withStatus.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\index.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -9183,9 +9394,10 @@ __webpack_require__.r(__webpack_exports__);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\withStatus.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -9248,9 +9460,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\form\withValidation.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 

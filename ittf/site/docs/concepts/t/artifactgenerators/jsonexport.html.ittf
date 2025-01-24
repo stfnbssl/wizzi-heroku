@@ -12,9 +12,9 @@
 			+ declares the `export-to json` element.
 
 		ittf-panel
-            title Sample wfjob artifact element using the json/export artifact.
+            title Sample wzjob artifact element using the json/export artifact.
             ittf
-                wfjob
+                wzjob
                     ...
                     artifact json export of model sample.form.ittf
                         src sample.form.ittf

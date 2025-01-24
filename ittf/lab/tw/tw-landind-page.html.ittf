@@ -1,0 +1,28 @@
+html 
+    lang en
+    head 
+        @title Tailwind CSS Landing Page
+        meta 
+            charset UTF-8
+        meta 
+            http-equiv X-UA-Compatible
+            content IE=edge
+        meta 
+            name viewport
+            content width=device-width, initial-scale=1.0
+        $$ js https://cdn.tailwindcss.com
+        js https://buttons.github.io/buttons.js
+        css /public/tailwind.css
+    body 
+        header 
+            class fixed w-full
+            tw/lp-nav()
+        tw/lp-hero()
+        tw/lp-who()
+        tw/lp-tools()
+        tw/lp-trusted()
+        tw/lp-top-testimony()
+        tw/lp-designed-for()
+        tw/lp-faq()
+        tw/lp-start-trial()
+        js https://unpkg.com/flowbite@1.4.1/dist/flowbite.js

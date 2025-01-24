@@ -8,4 +8,4 @@ html
             p ${message}
             pre
                 code
-                    + ${JSON.stringify(error, null, 2)}
+                    + ${_.stringify(error, null, 2)}

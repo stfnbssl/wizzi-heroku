@@ -123,8 +123,8 @@
 		h4 Object returned by the getSchemaDefinition method
 		p The object returned is a JSON representation of the
 			\b  requested schema. See the
-            a `wfjob` JSON schema definition
-                href https://github.com/wizzifactory/wizzi/blob/master/packages/wizzi-core/dist/lib/wizzi/models/wfjob-schema.g.json
+            a `wzjob` JSON schema definition
+                href https://github.com/wizzifactory/wizzi/blob/master/packages/wizzi-core/dist/lib/wizzi/models/wzjob-schema.g.json
             span .
 
 		h4 View the code

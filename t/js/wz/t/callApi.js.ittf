@@ -13,36 +13,41 @@ $group
                 =>
                     param resolve
                     param reject
-                    _ fetch
-                        `lit 
-                            + 
-                            @ API_URL
-                            + /
-                            @ path
-                            + 
-                        { 
-                            @ method
-                            { headers
-                                @ Accept 'application/json'
-                                @ 'Content-Type' 'application/json'
-                            @ body JSON.stringify(data)
-                        ._ then
-                            =>
-                                param response
-                                # log 'callApi.response', response
-                                if response.ok
-                                    _ resolve
+                    try
+                        _ fetch
+                            `lit 
+                                + 
+                                @ API_URL
+                                + /
+                                @ path
+                                + 
+                            { 
+                                @ method
+                                { headers
+                                    @ Accept 'application/json'
+                                    @ 'Content-Type' 'application/json'
+                                @ body JSON.stringify(data)
+                            ._ then
+                                =>
+                                    param response
+                                    # log 'callApi.response', response
+                                    if response.ok
+                                        _ resolve
+                                            _ response.json
+                                    else
                                         _ response.json
-                                else
-                                    _ response.json
-                                        ._ then
-                                            =>
-                                                param errorJson
-                                                _ reject
-                                                    @ errorJson
-                        ._ catch
-                            =>
-                                param err
-                                # log 'callApi.err', err
-                                _ reject
-                                    @ err
+                                            ._ then
+                                                =>
+                                                    param errorJson
+                                                    _ reject
+                                                        @ errorJson
+                            ._ catch
+                                =>
+                                    param err
+                                    # log 'callApi.err', err
+                                    _ reject
+                                        @ err
+                    catch ex
+                        # log 'callApi.ex', ex
+                        _ reject
+                            @ ex                                        

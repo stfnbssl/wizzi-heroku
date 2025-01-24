@@ -53,14 +53,14 @@
 		p This artifact key must be unique in the plugins configuration
 			\b of the wizzi.WizziFactory instance that is executing the generation.
 		
-		h4 Example of 'generator' attribute in a 'wfjob'
+		h4 Example of 'generator' attribute in a 'wzjob'
 		p The artifact key
 			\b must be the value to be declared in the `generator` attribute of the 
 			\b `artifact` element of a Wizzi Job.
 		ittf-panel
             title Use of an artifact generator in a Wizzi job
             ittf
-                wfjob {job-name}
+                wzjob {job-name}
                     ...
                     line {line-name}
                         artifact {artifact-generation-description}

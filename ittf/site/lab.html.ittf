@@ -6,7 +6,7 @@ html
         }
         var ca = 'm-s color-header font-x font-w-s';
 
-    layouts/site( &opt )
+    html/layouts/site( &opt )
         $append head-styles
             style
                 css

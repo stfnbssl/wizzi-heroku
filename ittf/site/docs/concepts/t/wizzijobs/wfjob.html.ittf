@@ -1,18 +1,18 @@
 ﻿$group
     $
         var sect = {
-            title: 'The "wfjob" schema'
+            title: 'The "wzjob" schema'
         };
 
     section(&sect)
 
-		p The `wfjob` Wizzi schema, implemented by the `wizzi-core` plugin,
+		p The `wzjob` Wizzi schema, implemented by the `wizzi-core` plugin,
 			\b is the configuration schema of a Wizzi job.
 
 		ittf-panel
-            title Sample `wfjob` ITTF document.
+            title Sample `wzjob` ITTF document.
             ittf
-                wfjob wizzi-docs-concepts
+                wzjob wizzi-docs-concepts
                     $
                         var models_folder     = path.join(__dirname, 'models');
                         var html_folder       = path.join(__dirname, 'html');
@@ -26,7 +26,7 @@
 
                     line html
                         cwd-folder ${'$'}{html_folder}
-                        $raw wfjob/art-wo-html( docs.html.ittf )
+                        $raw wzjob/art-wo-html( docs.html.ittf )
                             model-ref concepts
                                 transformer docs/preprint
                     
@@ -34,7 +34,7 @@
                         dest-folder ${'$'}{dest_folder}
                         line-ref html            
 
-		ul The `wfjob` Wizzi Schema elements are
+		ul The `wzjob` Wizzi Schema elements are
 			li Wfjob
 			li Model
 			li ModelRef
@@ -46,7 +46,7 @@
 		h3 The WfJob element
 		ittf-panel
             ittf
-                wfjob {wzName}
+                wzjob {wzName}
                     string title `short-description`
                         # For info and error messages
                     string models-base-folder `path`

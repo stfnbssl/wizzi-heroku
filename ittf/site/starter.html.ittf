@@ -1,12 +1,13 @@
 html
 
+    
     $
         var opt = {
             section: 'Starter',
         }
         var ca = 'm-s color-header font-x font-w-s';
 
-    layouts/site( &opt )
+    html/layouts/site( &opt )
 
         . flex-row space-between bg-color-header color-header
             . flex-row

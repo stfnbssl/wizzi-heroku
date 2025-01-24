@@ -7,6 +7,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+var __filename = "/index.js";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MonacoEditor": () => (/* binding */ MonacoEditor),
@@ -18,17 +19,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
 /* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! monaco-editor/esm/vs/editor/editor.main */ "./node_modules/monaco-editor/esm/vs/editor/editor.main.js");
-/* harmony import */ var monaco_editor_esm_vs_editor_standalone_browser_simpleServices__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! monaco-editor/esm/vs/editor/standalone/browser/simpleServices */ "./node_modules/monaco-editor/esm/vs/editor/standalone/browser/simpleServices.js");
-/* harmony import */ var monaco_editor_esm_vs_editor_standalone_browser_standaloneServices__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! monaco-editor/esm/vs/editor/standalone/browser/standaloneServices */ "./node_modules/monaco-editor/esm/vs/editor/standalone/browser/standaloneServices.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _features_prettier_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../features/prettier/index */ "./src/features/prettier/index.tsx");
-/* harmony import */ var _features_preferences_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../features/preferences/index */ "./src/features/preferences/index.tsx");
-/* harmony import */ var _widgets_ResizeDetector__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../widgets/ResizeDetector */ "./src/components/widgets/ResizeDetector.tsx");
-/* harmony import */ var _themes_monaco__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./themes/monaco */ "./src/components/Editor/themes/monaco.tsx");
-/* harmony import */ var _languages_ittf_language__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./languages/ittf.language */ "./src/components/Editor/languages/ittf.language.tsx");
-/* harmony import */ var _themes_ittf_dark_theme__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./themes/ittf.dark.theme */ "./src/components/Editor/themes/ittf.dark.theme.tsx");
-/* harmony import */ var _themes_ittf_light_theme__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./themes/ittf.light.theme */ "./src/components/Editor/themes/ittf.light.theme.tsx");
-/* harmony import */ var _themes_monaco_overrides__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./themes/monaco-overrides */ "./src/components/Editor/themes/monaco-overrides.tsx");
+/* harmony import */ var monaco_editor_esm_vs_editor_standalone_browser_standaloneServices__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! monaco-editor/esm/vs/editor/standalone/browser/standaloneServices */ "./node_modules/monaco-editor/esm/vs/editor/standalone/browser/standaloneServices.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _features_prettier_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../features/prettier/index */ "./src/features/prettier/index.tsx");
+/* harmony import */ var _features_preferences_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../features/preferences/index */ "./src/features/preferences/index.tsx");
+/* harmony import */ var _widgets_ResizeDetector__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../widgets/ResizeDetector */ "./src/components/widgets/ResizeDetector.tsx");
+/* harmony import */ var _themes_monaco__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./themes/monaco */ "./src/components/Editor/themes/monaco.tsx");
+/* harmony import */ var _languages_ittf_language__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./languages/ittf.language */ "./src/components/Editor/languages/ittf.language.tsx");
+/* harmony import */ var _themes_ittf_dark_theme__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./themes/ittf.dark.theme */ "./src/components/Editor/themes/ittf.dark.theme.tsx");
+/* harmony import */ var _themes_ittf_light_theme__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./themes/ittf.light.theme */ "./src/components/Editor/themes/ittf.light.theme.tsx");
+/* harmony import */ var _themes_monaco_overrides__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./themes/monaco-overrides */ "./src/components/Editor/themes/monaco-overrides.tsx");
 const _excluded = ["files", "selectedFile", "autoFocus", "updateFiles", "onSelectFile", "readOnly"],
       _excluded2 = ["selectedFile", "files", "autoFocus", "theme", "updateFiles", "onSelectFile"];
 
@@ -63,9 +63,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\MonacoEditor.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -81,19 +82,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-/**
-    * 
-    * Monkeypatch to make 'Find All References' work across multiple files
-    * https://github.com/Microsoft/monaco-editor/issues/779#issuecomment-374258435
-    * 
-*/
-// @ts-ignore
-
-monaco_editor_esm_vs_editor_standalone_browser_simpleServices__WEBPACK_IMPORTED_MODULE_4__.SimpleEditorModelResolverService.prototype.findModel = function (_, resource) {
-  return monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.getModels().find(model => model.uri.toString() === resource.toString());
-}; // @ts-ignore
-
+console.log('MonacoEditor', 1, __filename); // @ts-ignore
 
 __webpack_require__.g.MonacoEnvironment = {
   getWorkerUrl(moduleId, label) {
@@ -129,14 +118,16 @@ __webpack_require__.g.MonacoEnvironment = {
   }
 
 };
+console.log('MonacoEditor', 2, __filename);
 monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.languages.register({
   id: 'ittf'
 });
-monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.languages.setMonarchTokensProvider('ittf', _languages_ittf_language__WEBPACK_IMPORTED_MODULE_11__.default);
-monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.defineTheme('ittfLight', _themes_ittf_light_theme__WEBPACK_IMPORTED_MODULE_13__.default);
-monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.defineTheme('ittfDark', _themes_ittf_dark_theme__WEBPACK_IMPORTED_MODULE_12__.default);
-monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.defineTheme('light', _themes_monaco__WEBPACK_IMPORTED_MODULE_10__.light);
-monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.defineTheme('dark', _themes_monaco__WEBPACK_IMPORTED_MODULE_10__.dark);
+monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.languages.setMonarchTokensProvider('ittf', _languages_ittf_language__WEBPACK_IMPORTED_MODULE_10__.default);
+monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.defineTheme('ittfLight', _themes_ittf_light_theme__WEBPACK_IMPORTED_MODULE_12__.default);
+monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.defineTheme('ittfDark', _themes_ittf_dark_theme__WEBPACK_IMPORTED_MODULE_11__.default);
+monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.defineTheme('light', _themes_monaco__WEBPACK_IMPORTED_MODULE_9__.light);
+monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.defineTheme('dark', _themes_monaco__WEBPACK_IMPORTED_MODULE_9__.dark);
+console.log('MonacoEditor', 3, __filename);
 /**
     * 
     * Use prettier to format code.
@@ -146,7 +137,7 @@ monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.defi
 
 const documentFormattingProvider = {
   async provideDocumentFormattingEdits(model) {
-    const text = await (0,_features_prettier_index__WEBPACK_IMPORTED_MODULE_7__.prettierCode)(model.uri.path, model.getValue());
+    const text = await (0,_features_prettier_index__WEBPACK_IMPORTED_MODULE_6__.prettierCode)(model.uri.path, model.getValue());
     return [{
       range: model.getFullModelRange(),
       text
@@ -154,15 +145,19 @@ const documentFormattingProvider = {
   }
 
 };
+console.log('MonacoEditor', 4, __filename);
 monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.languages.registerDocumentFormattingEditProvider('javascript', documentFormattingProvider);
 monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.languages.registerDocumentFormattingEditProvider('typescript', documentFormattingProvider);
 monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.languages.registerDocumentFormattingEditProvider('markdown', documentFormattingProvider);
+console.log('MonacoEditor', 5, __filename);
+;
 // Store editor states such as cursor position, selection and scroll position for each model
 const editorStates = new Map(); // Store details about typings we have requested and loaded
 
 const requestedTypings = new Map();
 const extraLibs = new Map();
-const codeEditorService = monaco_editor_esm_vs_editor_standalone_browser_standaloneServices__WEBPACK_IMPORTED_MODULE_5__.StaticServices.codeEditorService.get();
+const codeEditorService = monaco_editor_esm_vs_editor_standalone_browser_standaloneServices__WEBPACK_IMPORTED_MODULE_4__.StaticServices.codeEditorService.get();
+console.log('MonacoEditor', 6, __filename);
 
 const findModel = path => monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_3__.editor.getModels().find(model => model.uri.path === "/".concat(path));
 
@@ -267,9 +262,9 @@ let MonacoEditorComp = /*#__PURE__*/function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "_editor", null);
 
-    _defineProperty(_assertThisInitialized(_this), "_node", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createRef());
+    _defineProperty(_assertThisInitialized(_this), "_node", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.createRef());
 
-    _defineProperty(_assertThisInitialized(_this), "_statusbar", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createRef());
+    _defineProperty(_assertThisInitialized(_this), "_statusbar", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.createRef());
 
     return _this;
   }
@@ -403,16 +398,16 @@ let MonacoEditorComp = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.createElement("div", {
         className: (0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.container)
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("style", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.createElement("style", {
         type: "text/css",
         dangerouslySetInnerHTML: {
-          __html: _themes_monaco_overrides__WEBPACK_IMPORTED_MODULE_14__.default
+          __html: _themes_monaco_overrides__WEBPACK_IMPORTED_MODULE_13__.default
         }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(_widgets_ResizeDetector__WEBPACK_IMPORTED_MODULE_9__.default, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.createElement(_widgets_ResizeDetector__WEBPACK_IMPORTED_MODULE_8__.default, {
         onResize: this._handleResize
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.createElement("div", {
         ref: this._node,
         className: classnames__WEBPACK_IMPORTED_MODULE_1___default()((0,aphrodite__WEBPACK_IMPORTED_MODULE_0__.css)(styles.editor), 'packi-monaco-editor', "theme-".concat(this.props.theme))
       })));
@@ -439,7 +434,7 @@ let MonacoEditorComp = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return MonacoEditorComp;
-}(react__WEBPACK_IMPORTED_MODULE_6__.Component);
+}(react__WEBPACK_IMPORTED_MODULE_5__.Component);
 
 _defineProperty(MonacoEditorComp, "defaultProps", {
   lineNumbers: 'on',
@@ -452,8 +447,8 @@ _defineProperty(MonacoEditorComp, "defaultProps", {
   fontLigatures: true
 });
 
-const MonacoEditor = (0,_features_preferences_index__WEBPACK_IMPORTED_MODULE_8__.withThemeName)(MonacoEditorComp);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_features_preferences_index__WEBPACK_IMPORTED_MODULE_8__.withThemeName)(MonacoEditorComp));
+const MonacoEditor = (0,_features_preferences_index__WEBPACK_IMPORTED_MODULE_7__.withThemeName)(MonacoEditorComp);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_features_preferences_index__WEBPACK_IMPORTED_MODULE_7__.withThemeName)(MonacoEditorComp));
 const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
   container: {
     display: 'flex',
@@ -467,6 +462,7 @@ const styles = aphrodite__WEBPACK_IMPORTED_MODULE_0__.StyleSheet.create({
     width: '100%'
   }
 });
+console.log('MonacoEditor', 100, __filename);
 
 /***/ }),
 
@@ -482,10 +478,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\languages\ittf.language.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
+// export * from 'monaco-editor-core';
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   defaultToken: 'invalid',
   tokenizer: {
@@ -603,7 +601,7 @@ __webpack_require__.r(__webpack_exports__);
     scriptLine: [[/.*$/, 'interpolation', '@pop']],
     scriptMultiLine: [[/[^\/\/\.]+/, 'interpolation'], [/\/\/$/, 'interpolation', '@pop']]
   }
-}); // export * from 'monaco-editor-core';
+});
 
 /***/ }),
 
@@ -621,9 +619,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\colors-dark.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 const syntax = {
@@ -669,9 +668,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../ThemeProvider */ "./src/components/ThemeProvider.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\colors-light.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 const syntax = {
@@ -700,6 +700,8 @@ const ui = {
     inactive: '#ecebec'
   }
 };
+;
+;
 
 /***/ }),
 
@@ -817,9 +819,10 @@ var _templateObject;
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\monaco-overrides.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -845,9 +848,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _colors_dark__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./colors-dark */ "./src/components/Editor/themes/colors-dark.tsx");
 /* harmony import */ var _colors_light__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./colors-light */ "./src/components/Editor/themes/colors-light.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\Editor\themes\monaco.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -1050,9 +1054,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\components\widgets\ResizeDetector.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -1163,9 +1168,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _prettierCode__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./prettierCode */ "./src/features/prettier/prettierCode.tsx");
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\prettier\index.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 
@@ -1191,9 +1197,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /*
-    artifact generator: C:\My\wizzi\stfnbssl\wizzi\packages\wizzi-js\lib\artifacts\ts\module\gen\main.js
-    package: wizzi-js@0.7.13
+    artifact generator: C:\My\wizzi\stfnbssl\wizzi.plugins\packages\wizzi.plugin.ts\lib\artifacts\ts\module\gen\main.js
+    package: @wizzi/plugin.ts@
     primary source IttfDocument: C:\My\wizzi\stfnbssl\wizzi.apps\packages\wizzi.editor\.wizzi\src\features\prettier\prettierCode.tsx.ittf
+    utc time: Fri, 09 Aug 2024 15:52:24 GMT
 */
 
 async function prettierCode(path, code) {

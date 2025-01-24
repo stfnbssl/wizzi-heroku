@@ -1,0 +1,98 @@
+﻿$group
+    $
+        var sect = {
+            title: 'Wizzi Plugins'
+        };
+
+    section(&sect)
+
+		p Wizzi is a generation framework
+			\b implemented by plugins.
+				
+		p Kernel modules themself have a 
+			\b pluggable architecture. The \b
+            to-plugin( wizzi-mtree )
+            span \b package is a plugin
+                \b that implements an api for building \b
+                to-docs( tree structures )
+                span \b from \b
+                    to-docs( ITTF documents)
+                    span .
+                        \b The \b
+                        to-plugin( wizzi-repo )
+                        span \b package is a plugin that implements
+                            \b an api for locating and retrieving ITTF documents.
+			
+		p A Wizzi Plugin exposes to the Wizzi factory the methods for retrieving its:
+		ul 
+			li Wizzi Schema definitions
+			li Wizzi Models and their factories
+			li Wizzi Model transformers
+			li Artifact generators
+
+		p A plugin package must export the
+            high-code( createFactoryPlugin )
+            span method in its
+            high-code( index.js )
+            span file. The
+                high-code( FactoryPlugin )
+                span class instance returned to the caller
+			        \b must implement the
+                high-code( wizzi-plugin.factoryPlugin )
+                span \b API (see below).
+
+		ittf-panel
+            title ITTF pseudo-code implementation of the createFactoryPlugin method
+            ittf
+                set module.exports
+                    {
+                        ...
+                        @ createFactoryPlugin
+                            function
+                                { wizziPackage
+                                { options
+                                    [ items
+                                        string pluginNameOrFile
+                                    string pluginsBaseFolder
+                                        default process.cwd()
+                                callback
+                                ...
+                                return
+                                    _ callback
+                                        @ null
+                                        { factoryPlugin
+                                            api-ref wizzi-plugin.factoryPlugin
+
+
+		p A Wizzi Plugin should have a standard folder structure so that
+		    \b modules can be located given the short public name of
+			\b the required item.
+
+		ittf-panel
+            title Wizzi Plugin standard folder structure
+            ittf
+                ...
+                    {package-name}
+                        package.json
+                        ...
+                        lib
+                            artifacts
+                                {schema-name}
+                                    {artifact-name}
+                                        gen
+                                            main.js
+                                    ...
+                                    {transformer-name}
+                                        trans
+                                            main.js
+                                    ...
+                                ...
+                            utils
+                                ...
+                            wizzi
+                                models
+                                    {schema-name}-model.g.js
+                                    {schema-name}-factory.g.js
+                                    {schema-name}-schema.g.json
+                                    ...
+                        index.js

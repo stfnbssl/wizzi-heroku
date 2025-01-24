@@ -14,8 +14,8 @@
             \b api for scheduling complex jobs. It is the wizzi factory
             \b task manager.
 
-        p A Wizzi Model type implemented by the 'wizzi-core' plugin , the 'wfjob' schema,
-            \b can be used to describe wizzi factory jobs. A 'wfjob' model organizes models processing
+        p A Wizzi Model type implemented by the 'wizzi-core' plugin , the 'wzjob' schema,
+            \b can be used to describe wizzi factory jobs. A 'wzjob' model organizes models processing
             \b and artifact generations in production lines that are executed in 
             \b sequence, so that a line can prepare models and artifacts for the next one.
 
@@ -31,7 +31,7 @@
                             string name
                                 # for info and error messages
                             string path
-                                # path to the 'wfjob' ITTF Document that the wizzi.production.productionManager will load.
+                                # path to the 'wzjob' ITTF Document that the wizzi.production.productionManager will load.
                             { productionOptions
                                 boolean verbose
                                     # not implemented yet

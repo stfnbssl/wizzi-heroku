@@ -12,9 +12,9 @@
 			+ declares the `export-to xml` element.
 
 		ittf-panel
-            title Sample wfjob artifact element using the xml/export artifact.
+            title Sample wzjob artifact element using the xml/export artifact.
             ittf
-                wfjob
+                wzjob
                     ...
                     artifact xml export of model sample.form.ittf
                         src sample.form.ittf

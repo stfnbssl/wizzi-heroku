@@ -45,10 +45,10 @@
                         \b declaring a textual representation of
                         \b a tree data structure of name-valued nodes.
                         \b It is the source format of Wizzi Models.
-                        \b It consists of one ITTF Main Document and,
+                        \b It consists of one Primary ITTF Document and,
                         \b optionally, one or more ITTF Fragments mixed or included.
 
-            glo-item( ITTF Document path resolution )
+            glo-item( ITTF Fragment path resolution )
                 span Include commands and mix actions declare the path of the ITTF Document
                     \b that must be mixed or included. At first the path to match is built
                     \b joining the current folder path of the includer document and the declared path
@@ -56,15 +56,14 @@
                     \b starting from the current folder path and going up on the folder tree.
                     \b See 't folder'.
             
-            glo-item( ITTF Main Document )
+            glo-item( Primary ITTF Document )
                 span
-                    + An ITTF Main Document is the root branch node of an ITTF Document.
-                        \b It is the entry point of an mTree Loading action.
-                        \b It must be contained in a text file and may include and mix
-                        \b ITTF Fragments. The ITTF Root Node of an ITTF Main Document
-                        \b may not be the root node of the mTree resulting after ITTF Processing,
-                        \b because an ITTF Root Node can be a Mix Action that append its childs
-                        \b to a node that is child of the ITTF Root Node of the mixed ITTF Fragment.
+                    + A Primary ITTF Document acts as the starting point for loading an mTree. 
+                        \b It's a text file that can contain and combine smaller ITTF Fragments. 
+                        \b However, the main root of the Primary ITTF Document might not become the 
+                        \b final root node of the mTree after processing. 
+                        \b This is because the Primary ITTF Document's root can be a Mix Action
+                        \b that inserts its content beneath another node within a mixed ITTF Fragment.
 
             glo-item( ITTF Node )
                 span
@@ -85,7 +84,7 @@
             glo-item( ITTF Fragment )
                 span
                     + An ITTF Fragment is a branch ITTF Node that can be included or mixed
-                        \b in an ITTF Main Document or in another ITTF Fragment.
+                        \b in an Primary ITTF Document or in another ITTF Fragment.
                         \b It can be defined in a separate file, and retrieved using
                         \b the ITTF Document path resolution or can be inlined, 
                         \b using the Template Command
@@ -112,7 +111,7 @@
                 span
                     + An ITTF Source Unit is an ITTF Node branch with a name,
                         \b that can be referenced in a Wizzi Action.
-                        \b ITTF Main Documents (files) and ITTF Fragments (files or inlined) are
+                        \b Primary ITTF Documents (files) and ITTF Fragments (files or inlined) are
                         \b the ITTF Source Units of Wizzi. An ITTF Source Unit must have a single ITTF Root Node.
                         \b You can define an ITTF Fragment with many root nodes using the convenience
                         \b ITTF Template Command \b
@@ -210,15 +209,22 @@
 
             glo-item( mTree Loader)
                 span
-                    + An mTree Loader executes the ITTF Processing of an ITTF Document and
-                        \b loads the result into an mTree.
+                    + An mTree loader processes a primary ITTF document and all its associated fragments using ITTF Processing standards. 
+                        \b Then, it loads the resulting data structure into an mTree.
 
             glo-item( mTree Pre-processor)
                 span
                     + An mTree Pre-processor can modify an mTree after its loading and
-                        \b before it is passed to a Wizzi Model Loader.
+                        \b before its processing by a Wizzi Model Loader.
                         \b It must be declared in a Wizzi Schema and must be written
                         \b in the 'lib\wizzi\models' folder of a Wizzi Plugin.
+
+            glo-item( Semantic Ittf Node )
+                span
+                    + A Semantic Ittf Node contains a name value pair that has a meaning
+                        \b in the document type (Wizzi Schema). An mTree contains
+                        \b Semantic Ittf Nodes only. See
+                    high-code( Template Ittf Node )
 
             glo-item( t folder )
                 span Folders named 't' have special rules for the path resolution
@@ -227,6 +233,12 @@
                     \b can be referenced with the same rules that apply to NodeJs packages
                     \b in 'node_modules' folders. They are searched up on the folder tree, until the  
                     \b relative path of the mix or include call is matched or the path resolution fails.
+
+            glo-item( Template Ittf Node )
+                span
+                    + A Template Ittf Node contains instructions for building the mTree Semantic Nodes structure.
+                        \b See
+                    high-code( Semantic Ittf Node )
 
             glo-item( Virtual Store System )
                 span 
@@ -330,7 +342,7 @@
                 span
                     + The Wizzi Job is the Task Manager of Wizzi. It is implemented as
                         \b a Wizzi Kernel Schema of type \b
-                    high-code( wfjob )
+                    high-code( wzjob )
                     + \b where you can define Wizzi Productions. A Wizzi Job can be executed
                         \b using the \b
                     high-code( wizzi )

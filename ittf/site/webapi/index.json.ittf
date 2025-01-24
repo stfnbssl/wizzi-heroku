@@ -449,7 +449,7 @@
 					type "string"
 					name "uri"
 					label "Schema uri"
-					demoValue "v5-plugins/wizzi-core/wfjob"
+					demoValue "v5-plugins/wizzi-core/wzjob"
 		{
 			title 'Studio - packages'
 			method 'get'
@@ -663,9 +663,9 @@
 					demoValue ""
 					description "The hash is returned by ... "
 		{
-			title 'Wizzi - wfjob'
+			title 'Wizzi - wzjob'
 			method 'get'
-			url '/api/wizzi/wfjob'
+			url '/api/wizzi/wzjob'
 			[ parameters
 				{
 					type "string"

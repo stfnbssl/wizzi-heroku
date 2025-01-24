@@ -15,7 +15,7 @@
 		ittf-panel
             title Sample Wizzi Job using the 'ittf/document' artifact.
             ittf
-                wfjob
+                wzjob
                     model styles
                         src styles.json.ittf
                         schema json

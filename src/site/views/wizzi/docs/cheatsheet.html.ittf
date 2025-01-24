@@ -24,7 +24,7 @@ html
             'ts',
             'vtt',
             'wfschema', 
-            'wfjob',
+            'wzjob',
             'xml', 
             'yaml', 
         ];

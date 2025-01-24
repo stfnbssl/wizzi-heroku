@@ -13,7 +13,7 @@
             to-docs( artifact generations )
             span .
 
-        p They are configured using `wfjob` ITTF documents, and are execute using
+        p They are configured using `wzjob` ITTF documents, and are execute using
             \b the `executeWizziJob` method of a 
             to-docs( wizzi.WizziFactory )
             span \b instance or the `wizzi`

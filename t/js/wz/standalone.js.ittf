@@ -38,11 +38,15 @@ $group
 
                 _ callApi
                     @ 'POST'
-                    @ 'productions/artifactFS/' + encodeURIComponent(filePath)
+                    @ 'wizzi/production/artifactFS/' + encodeURIComponent(filePath)
                     @ options
                     ._ then
                         =>
                             param result
+                            if result .error || result.err
+                                return
+                                    _ callback
+                                        @ result .error || result.err
                             if wz.isString(result)
                                 const json = JSON.parse(result)
                                 if json.__is_error
@@ -81,11 +85,19 @@ $group
 
                 _ callApi
                     @ 'POST'
-                    @ 'productions/artifact/' + encodeURIComponent(filePath)
-                    @ files
+                    @ 'wizzi/production/artifact'
+                    {
+                        { ittfDocument
+                            @ source 'packi'
+                            @ mainIttf filePath
+                            @ packiFiles files
                     ._ then
                         =>
                             param result
+                            if result .error || result.err
+                                return
+                                    _ callback
+                                        @ result .error || result.err
                             if wz.isString(result)
                                 const json = JSON.parse(result)
                                 if json.__is_error
@@ -93,12 +105,16 @@ $group
                                         _ callback
                                             @ json
                                 else
+                                    error "Error: wz.genFromText.result", result
                                     throw new Error('Invalid result: ' + result)
+                            elif !result.artifactContent
+                                error "Error: wz.genFromText.result", result
+                                throw new Error('Invalid result: ' + result)
                             else
                                 # log 'wz.genFromText.result', result
                                 _ callback
                                     @ null
-                                    @ result.generatedArtifact.artifactContent
+                                    @ result.artifactContent
                     ._ catch
                         => 
                             param err
@@ -106,6 +122,63 @@ $group
                                 @ err
 		
 		
+		set wz.mTreeFromText
+			function
+				param ittfContent
+				param options
+				param callback
+
+				if typeof callback === 'undefined'
+					set callback = options
+					set options = {}
+
+                var filePath = 'x.' + options.schema + '.ittf'
+                var files
+                    {
+                        @ ['x.' + options.schema + '.ittf']
+                            { 
+                                @ type 'CODE'
+                                @ contents ittfContent
+
+                _ callApi
+                    @ 'POST'
+                    @ 'wizzi/production/mtree'
+                    {
+                        { ittfDocument
+                            @ source 'packi'
+                            @ mainIttf filePath
+                            @ packiFiles files
+                    ._ then
+                        =>
+                            param result
+                            if result .error || result.err
+                                return
+                                    _ callback
+                                        @ result .error || result.err
+                            if wz.isString(result)
+                                const json = JSON.parse(result)
+                                if json.__is_error
+                                    return
+                                        _ callback
+                                            @ json
+                                else
+                                    error "Error: wz.genFromText.result", result
+                                    throw new Error('Invalid result: ' + result)
+                            elif !result.mTree
+                                error "Error: wz.genFromText.result", result
+                                throw new Error('Invalid result: ' + result)
+                            else
+                                log 'wz.mTreeFromText.result', result
+                                _ callback
+                                    @ null
+                                    @ result.mTree
+                    ._ catch
+                        => 
+                            param err
+                            _ callback
+                                @ err
+		
+
         set wz.genArtifact
 			function
 				param filePath
@@ -114,11 +187,15 @@ $group
 
                 _ callApi
                     @ 'POST'
-                    @ 'productions/artifact/' + encodeURIComponent(filePath)
+                    @ 'wizzi/production/artifact/' + encodeURIComponent(filePath)
                     @ packiFiles
                     ._ then
                         =>
                             param result
+                            if result .error || result.err
+                                return
+                                    _ callback
+                                        @ result .error || result.err
                             if wz.isString(result)
                                 const json = JSON.parse(result)
                                 if json.__is_error
@@ -147,11 +224,15 @@ $group
 
                 _ callApi
                     @ 'POST'
-                    @ 'productions/transform/' + encodeURIComponent(filePath) + '/' + encodeURIComponent(transformationName)
+                    @ 'wizzi/production/transform/' + encodeURIComponent(filePath) + '/' + encodeURIComponent(transformationName)
                     @ packiFiles
                     ._ then
                         =>
                             param result
+                            if result .error || result.err
+                                return
+                                    _ callback
+                                        @ result .error || result.err
                             log 'wz.transformModel', result
                             if wz.isString(result)
                                 const json = JSON.parse(result)
@@ -180,11 +261,15 @@ $group
 
                 _ callApi
                     @ 'POST'
-                    @ 'productions/mtreescript/' + encodeURIComponent(filePath)
+                    @ 'wizzi/production/mtreescript/' + encodeURIComponent(filePath)
                     @ packiFiles
                     ._ then
                         =>
                             param result
+                            if result .error || result.err
+                                return
+                                    _ callback
+                                        @ result .error || result.err
                             if wz.isString(result)
                                 const json = JSON.parse(result)
                                 if json.__is_error
@@ -216,6 +301,10 @@ $group
                     ._ then
                         =>
                             param result
+                            if result .error || result.err
+                                return
+                                    _ callback
+                                        @ result .error || result.err
                             log 'result', result
                             if wz.isString(result)
                                 const json = JSON.parse(result)
@@ -257,11 +346,18 @@ $group
                 
                 _ callApi
                     @ 'POST'
-                    @ 'productions/wizzify'
-                    @ files
+                    @ 'wizzi/production/wizzify'
+                    {
+                        { wizzifiable
+                            @ source 'packi'
+                            @ packiFiles files
                     ._ then
                         =>
                             param result
+                            if result .error || result.err
+                                return
+                                    _ callback
+                                        @ result .error || result.err
                             if wz.isString(result)
                                 const json = JSON.parse(result)
                                 if json.__is_error
@@ -271,7 +367,7 @@ $group
                                 else
                                     throw new Error('Invalid result: ' + result)
                             else
-                                var json = result.packiResult
+                                var json = result.wizzifiedPackiFiles
                                 log 'wz.wizzify.json', json
                                 _ callback
                                     @ null

@@ -1,0 +1,20 @@
+$group
+    # mc-wrapper
+        position fixed
+        width 100%
+        height 100%
+        $if opt.debug_css
+            border 1px solid blue
+    . mc-wrapper-layout
+        top ${opt.l_mc_top}rem
+        height calc(100% - ${opt.l_mc_top + 10}rem)
+    . mc-frame
+        display flex
+        flex-direction row
+        height 100%
+        $if opt.debug_css
+            border 1px solid red
+    . mc-content
+        padding 20px 20px
+        height calc(100% - 10rem)
+        overflow auto

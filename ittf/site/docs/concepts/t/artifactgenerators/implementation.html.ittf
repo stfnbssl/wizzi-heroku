@@ -46,7 +46,7 @@
 			\b a powerfull model composer and transformer. 
 			\b Model transformations can be 
 			\b chained: an output mTree can become the input context for the next
-			\b mTree loading. A 'wfjob' model can orchestrate any number of cascading
+			\b mTree loading. A 'wzjob' model can orchestrate any number of cascading
 			\b transformations.
 			\b The models passed to the artifact generator are the final
 			\b models, ready for generating the textual artifact.

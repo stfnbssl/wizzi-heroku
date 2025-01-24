@@ -12,9 +12,7 @@ html
             schemas: [
                 'css',
                 'html',
-                /*
                 'graphql',
-                */
                 'ittf',
                 'js',
                 'json',

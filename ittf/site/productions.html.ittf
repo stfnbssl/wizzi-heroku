@@ -9,7 +9,7 @@ html
         }
         var ca = 'm-s font-x font-w-s';
 
-    layouts/site( &opt )
+    html/layouts/site( &opt )
         $append head-styles-2
             style
                 . t-grid 
@@ -31,6 +31,8 @@ html
                 a( Metas, /packi/productions/metas, ${ca}
                 a( tFolders, /packi/productions/tfolders, ${ca}
                 a( Jobs, /packi/productions/jobs, ${ca}
+                a( Hub productions, /~/stfnbssl/lab-meta.html?savecount=5&filepath=hubProductions.html.ittf, ${ca}
+                a( Meta productions, /~/stfnbssl/lab-meta.html?savecount=5&filepath=metaProduction.html.ittf, ${ca}
 
         . m-200 t-grid
             . t-item-l

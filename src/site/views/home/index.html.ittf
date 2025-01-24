@@ -3,7 +3,7 @@ html
         var opt = {
         }
 
-    $include models/docs/site.wzctx
+    $$ $include models/docs/site.wzctx
 
     html/layouts/site( &opt )
         $if false

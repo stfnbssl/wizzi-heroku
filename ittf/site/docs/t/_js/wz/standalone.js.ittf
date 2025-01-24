@@ -187,7 +187,7 @@
 							@ isIttfDocument true
 							@ isFragment path.indexOf('/t/') > -1 
 							@ schema ss[ss.length-2]
-							@ isJob ss[ss.length-2] === 'wfjob'
+							@ isJob ss[ss.length-2] === 'wzjob'
 							@ isSchema ss[ss.length-2] === 'wfschema'
 							@ mime isFolder ? '' : ss[ss.length-2]
 				else

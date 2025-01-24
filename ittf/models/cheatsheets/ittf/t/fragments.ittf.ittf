@@ -20,5 +20,5 @@ $group
 								href ${'$'}{href}
 
 					ul
-						lia${'('}alfa, #alfa)
-						lia${'('}beta, #beta)
+						lia(alfa, #alfa)
+						lia(beta, #beta)

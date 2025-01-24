@@ -1,5 +1,6 @@
 $group
     $params &opt
+    $include models/docs/site.wzctx
     $
         var ca = 'm-s p-s color-header font-l font-w-xxl';
         var ca_inverse = 'm-s p-s color-header-inverse bg-color-header-inverse font-l font-w-xxl';
@@ -101,7 +102,7 @@ $group
                                 style width: 80px; margin-top: 5px; margin-left: 20px;
                                 html/images/logo(${colors.mainHeader}, ${colors.mainHeaderBg})
                     . flex-row
-                        $if false
+                        $if true
                             $if locals.user
                                 $if opt.section != 'Starter'
                                     html/a( Starter, /ittf/site/starter.html.ittf, ${ca}
@@ -118,6 +119,11 @@ $group
                                 $else
                                     . ${ca_inverse}
                                         + Productions
+                                $if opt.section != 'Play'
+                                    html/a( Play, /public/play, ${ca}
+                                $else
+                                    . ${ca_inverse}
+                                        + Play
                     . flex-row
                         $if opt.section != 'Project'
                             html/a( Project, /ittf/site/project.html.ittf, ${ca}
